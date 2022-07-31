@@ -675,7 +675,7 @@ export MissileCarriage_BMP_1P_reco_DDR_Showroom is TMissileCarriageConnoisseur
         ),
     ]
 )
-// BMP_1P_reco_SOV : ['ATGM 9M14 MalyutkaP']
+// BMP_1P_reco_SOV : ['ATGM 9K111 Fagot']
 export MissileCarriage_BMP_1P_reco_SOV is TMissileCarriageConnoisseur
 (
     MeshDescriptor = Modele_BMP_1P_reco_SOV
@@ -6543,7 +6543,7 @@ export MissileCarriage_Su_24M_nplm_SOV_Showroom is TMissileCarriageConnoisseur
         ),
     ]
 )
-// Su_25_SOV : ['AGM Kh29T'] ['AA R60M Vympel']
+// Su_25_SOV : ['AGM Kh25ML'] ['AA R60M Vympel']
 export MissileCarriage_Su_25_SOV is TMissileCarriageConnoisseur
 (
     MeshDescriptor = Modele_Su_25_SOV
@@ -6552,7 +6552,7 @@ export MissileCarriage_Su_25_SOV is TMissileCarriageConnoisseur
     [
         TMissileCarriageWeaponInfo
         (
-            Count = 2
+            Count = 4
             MissileType = eAGM
             WeaponIndex = 2
         ),
@@ -6572,7 +6572,7 @@ export MissileCarriage_Su_25_SOV_Showroom is TMissileCarriageConnoisseur
     [
         TMissileCarriageWeaponInfo
         (
-            Count = 2
+            Count = 4
             MissileType = eAGM
             WeaponIndex = 2
         ),

@@ -194,8 +194,8 @@ export Descriptor_Deck_RFA_2_PzGrenadier_multi is TDeckDescriptor
         ),
         TDeckPackDescription
         (
-            ExperienceLevel = 1
-            DeckPack = ~/Descriptor_Deck_Pack_TOE_RFA_2_PzGrenadier_multi_MAN_Kat_6x6_RFA
+            ExperienceLevel = 2
+            DeckPack = ~/Descriptor_Deck_Pack_TOE_RFA_2_PzGrenadier_multi_Iltis_RFA
         ),
     ]
     DeckCombatGroupList =
@@ -2249,8 +2249,8 @@ export Descriptor_Deck_RFA_TerrKdo_Sud_multi is TDeckDescriptor
         ),
         TDeckPackDescription
         (
-            ExperienceLevel = 1
-            DeckPack = ~/Descriptor_Deck_Pack_TOE_RFA_TerrKdo_Sud_multi_MAN_Kat_6x6_RFA
+            ExperienceLevel = 2
+            DeckPack = ~/Descriptor_Deck_Pack_TOE_RFA_TerrKdo_Sud_multi_Iltis_RFA
         ),
         TDeckPackDescription
         (

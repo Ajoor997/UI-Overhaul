@@ -10388,7 +10388,7 @@ Gfx_Su_25_SOV_Autogen is TacticAerialDepictionTemplate
         ]
         Actions = MAP[
                     ( [ "weapon_effet_tag1" ], Weapon_GatlingAir_Gsh_30_2_30mm_x2 ),
-                    ( [ "weapon_effet_tag2" ], Weapon_AGM_Kh29T ),
+                    ( [ "weapon_effet_tag2" ], Weapon_AGM_Kh25ML ),
                     ( [ "weapon_effet_tag3" ], Weapon_AA_R60M_Vympel ),
                     ( [ "weapon_effet_tag4" ], Weapon_GatlingAir_AP_Gsh_30_2_30mm_x2 ),
                 ]

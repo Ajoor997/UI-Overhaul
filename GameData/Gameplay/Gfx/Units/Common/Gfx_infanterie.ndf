@@ -2041,8 +2041,10 @@ export ModelFile_Chasseurs_FR_LOW is FR_Chasseur_LOW
 //Rifles_Aero_CMD_FR
 export ModelFile_Rifles_Aero_CMD_FR is FR_Chasseur_1
 export ModelFile_Rifles_Aero_CMD_FR_02 is FR_Chasseur_Officer
-export ModelFile_Rifles_Aero_CMD_FR_03 is FR_RCAM
-export ModelFile_Rifles_Aero_CMD_FR_04 is FR_Chasseur_Sniper
+export ModelFile_Rifles_Aero_CMD_FR_03 is FR_Chasseur_1
+export ModelFile_Rifles_Aero_CMD_FR_04 is FR_RCAM
+export ModelFile_Rifles_Aero_CMD_FR_05 is FR_Chasseur_1
+export ModelFile_Rifles_Aero_CMD_FR_06 is FR_Chasseur_Sniper
 export ModelFile_Rifles_Aero_CMD_FR_LOW is FR_Chasseur_LOW
 
 //Rifles_CMD_FR
@@ -2071,7 +2073,7 @@ export ModelFile_Gendarmerie_FR_LOW is FR_Gendarme_LOW
 //Rifles_Aero_FR
 export ModelFile_Rifles_Aero_FR is FR_Chasseur_1
 export ModelFile_Rifles_Aero_FR_02 is FR_Chasseur_2
-export ModelFile_Rifles_Aero_FR_03 is FR_RCAM
+export ModelFile_Rifles_Aero_FR_03 is FR_Chasseur_1
 export ModelFile_Rifles_Aero_FR_04 is FR_Chasseur_Sniper
 export ModelFile_Rifles_Aero_FR_05 is FR_RCAM
 export ModelFile_Rifles_Aero_FR_06 is FR_Chasseur_2

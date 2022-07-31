@@ -1236,6 +1236,16 @@ GhostDepiction_UAZ_469_Konkurs_VDV_SOV is GhostVehicleDepictionTemplate
     Selector = Selector_UAZ_469_Konkurs_VDV_SOV
     Alternatives = Alternatives_UAZ_469_Konkurs_VDV_SOV
 )
+GhostDepiction_UAZ_469_Reco_DDR is GhostVehicleDepictionTemplate
+(
+    Selector = Selector_UAZ_469_Reco_DDR
+    Alternatives = Alternatives_UAZ_469_Reco_DDR
+)
+GhostDepiction_UAZ_469_Reco_SOV is GhostVehicleDepictionTemplate
+(
+    Selector = Selector_UAZ_469_Reco_SOV
+    Alternatives = Alternatives_UAZ_469_Reco_SOV
+)
 GhostDepiction_UAZ_469_SOV is GhostVehicleDepictionTemplate
 (
     Selector = Selector_UAZ_469_SOV

@@ -1589,6 +1589,24 @@ HumanSubDepictions_UAZ_469_Konkurs_VDV_SOV is
     ),
 ]
 HumanSubDepictionsShowroom_UAZ_469_Konkurs_VDV_SOV is []
+HumanSubDepictions_UAZ_469_Reco_DDR is 
+[
+    SubDepiction_Driver
+    (
+        MeshDescriptorHigh = MeshDescriptor_Driver_SOV
+        MeshDescriptorLow = MeshDescriptor_Driver_SOV_LOW
+    ),
+]
+HumanSubDepictionsShowroom_UAZ_469_Reco_DDR is []
+HumanSubDepictions_UAZ_469_Reco_SOV is 
+[
+    SubDepiction_Driver
+    (
+        MeshDescriptorHigh = MeshDescriptor_Driver_SOV
+        MeshDescriptorLow = MeshDescriptor_Driver_SOV_LOW
+    ),
+]
+HumanSubDepictionsShowroom_UAZ_469_Reco_SOV is []
 HumanSubDepictions_UAZ_469_SOV is 
 [
     SubDepiction_Driver
@@ -1809,6 +1827,8 @@ MAP[
     ("UAZ_469_Fagot_DDR", 1),
     ("UAZ_469_Konkurs_SOV", 1),
     ("UAZ_469_Konkurs_VDV_SOV", 1),
+    ("UAZ_469_Reco_DDR", 1),
+    ("UAZ_469_Reco_SOV", 1),
     ("UAZ_469_SOV", 1),
     ("UAZ_469_SPG9_DDR", 1),
     ("UAZ_469_SPG9_FJ_DDR", 1),
@@ -1966,6 +1986,8 @@ TransportedServantAlternatives is
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Driver_SOV SelectorId = [ "UAZ_469_Fagot_DDR", "01" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Driver_SOV SelectorId = [ "UAZ_469_Konkurs_SOV", "01" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Driver_VdV_SOV SelectorId = [ "UAZ_469_Konkurs_VDV_SOV", "01" ] ),
+    TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Driver_SOV SelectorId = [ "UAZ_469_Reco_DDR", "01" ] ),
+    TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Driver_SOV SelectorId = [ "UAZ_469_Reco_SOV", "01" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Driver_SOV SelectorId = [ "UAZ_469_SOV", "01" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Driver_SOV SelectorId = [ "UAZ_469_SPG9_DDR", "01" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Driver_VdV_SOV SelectorId = [ "UAZ_469_SPG9_FJ_DDR", "01" ] ),

@@ -515,8 +515,8 @@ MinMaxValuesInterfaceHelper is TWeaponsMinMaxValuesInterfaceHelper
           (
                // PhysicalDamages x weapon_count_ (Number of weapons)
                PhysicalDamages = TMinMaxValue (
-                       Min = 1.0 // Grenade Satchel Charge
-                       Max = 1.0 // Grenade Satchel Charge
+                       Min = 2.0 // Grenade Satchel Charge
+                       Max = 2.0 // Grenade Satchel Charge
                )
                // SuppressDamages x weapon_count_ (Number of weapons)
                SuppressDamages = TMinMaxValue (
@@ -564,8 +564,8 @@ MinMaxValuesInterfaceHelper is TWeaponsMinMaxValuesInterfaceHelper
                        Max = 15.0 // Grenade Satchel Charge
                )
                Penetration = TMinMaxValue (
-                       Min = 1 // Grenade Satchel Charge
-                       Max = 1 // Grenade Satchel Charge
+                       Min = 2 // Grenade Satchel Charge
+                       Max = 2 // Grenade Satchel Charge
                )
                TimeBetweenTwoShots = TMinMaxValue (
                        Min = 2.0 // Grenade Satchel Charge
@@ -1025,7 +1025,7 @@ MinMaxValuesInterfaceHelper is TWeaponsMinMaxValuesInterfaceHelper
                )
                MaxRange = TMinMaxValue (
                        Min = 8000.0 // AGM AGM114A x8
-                       Max = 12000.0 // AGM AS30
+                       Max = 12000.0 // AGM Kh23M
                )
                MaxRangeTBA = TMinMaxValue (
                        Min = 0.0 // AGM AGM114A x8

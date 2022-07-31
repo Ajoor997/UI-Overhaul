@@ -2350,6 +2350,14 @@ Weapon_GatlingAir_Gsh_30_2_30mm_x2 is TCompositeHappening
         SFXWeapon_GatlingAir_Gsh_30_2_30mm_x2,
     ]
 )
+Weapon_AGM_Kh25ML is TCompositeHappening
+(
+    SubHappenings = 
+    [
+        FXWeapon_AGM_Kh25ML,
+        SFXWeapon_AGM_Kh25ML,
+    ]
+)
 Weapon_GatlingAir_AP_Gsh_30_2_30mm_x2 is TCompositeHappening
 (
     SubHappenings = 

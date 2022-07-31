@@ -2800,6 +2800,16 @@ TagWrapper_UNITE_UAZ_469_Konkurs_VDV_SOV is TTagWrapper
     DescriptorId = GUID:{e9ad43d1-50fd-4ec9-858c-9c5ba63bf057}
     Tag = "UNITE_UAZ_469_Konkurs_VDV_SOV"
 )
+TagWrapper_UNITE_UAZ_469_Reco_DDR is TTagWrapper
+(
+    DescriptorId = GUID:{8b0522ba-e24a-4575-9471-005d340a1f94}
+    Tag = "UNITE_UAZ_469_Reco_DDR"
+)
+TagWrapper_UNITE_UAZ_469_Reco_SOV is TTagWrapper
+(
+    DescriptorId = GUID:{e127298b-3819-4d46-89d5-c0d3c0f81daf}
+    Tag = "UNITE_UAZ_469_Reco_SOV"
+)
 TagWrapper_UNITE_UAZ_469_SOV is TTagWrapper
 (
     DescriptorId = GUID:{e29edba7-b5eb-4f6c-8570-8df787879859}
@@ -5554,6 +5564,16 @@ TagWrapper_OnProduction_UAZ_469_Konkurs_VDV_SOV is TTagWrapper
 (
     DescriptorId = GUID:{f8dc71ec-78b0-4a9a-b547-7ceb4b8ee2f2}
     Tag = "OnProduction_UAZ_469_Konkurs_VDV_SOV"
+)
+TagWrapper_OnProduction_UAZ_469_Reco_DDR is TTagWrapper
+(
+    DescriptorId = GUID:{26b7e526-46a0-4c30-aa6c-6d34073a0c3c}
+    Tag = "OnProduction_UAZ_469_Reco_DDR"
+)
+TagWrapper_OnProduction_UAZ_469_Reco_SOV is TTagWrapper
+(
+    DescriptorId = GUID:{1ad8e482-056a-4ee9-bf35-6eb26c03d38e}
+    Tag = "OnProduction_UAZ_469_Reco_SOV"
 )
 TagWrapper_OnProduction_UAZ_469_SOV is TTagWrapper
 (

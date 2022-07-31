@@ -18858,7 +18858,7 @@ export Descriptor_ShowRoomUnit_Luchs_A1_RFA is TEntityDescriptor
             (
                 Default            = TTypeUnitModuleDescriptor
                 (
-                    TypeUnitValue                    = ETypeUnit/Vehicle
+                    TypeUnitValue                    = ETypeUnit/MBT
                     Nationalite                      = ENationalite/Allied
                     MotherCountry                    = 'RFA'
                     AcknowUnitType                   = ~/TAcknowUnitType_Recon_Vehicle
@@ -18872,7 +18872,7 @@ export Descriptor_ShowRoomUnit_Luchs_A1_RFA is TEntityDescriptor
                         (
                             MotherCountry                    = 'RFA'
                             Nationalite                      = ENationalite/Allied
-                            TypeUnitValue                    = ETypeUnit/Vehicle
+                            TypeUnitValue                    = ETypeUnit/MBT
                         )
                     )
                 ]
@@ -19814,7 +19814,7 @@ export Descriptor_ShowRoomUnit_M113A1G_reco_RFA is TEntityDescriptor
             (
                 Default            = TTypeUnitModuleDescriptor
                 (
-                    TypeUnitValue                    = ETypeUnit/Vehicle
+                    TypeUnitValue                    = ETypeUnit/MBT
                     Nationalite                      = ENationalite/Allied
                     MotherCountry                    = 'RFA'
                     AcknowUnitType                   = ~/TAcknowUnitType_Recon_Vehicle
@@ -19828,7 +19828,7 @@ export Descriptor_ShowRoomUnit_M113A1G_reco_RFA is TEntityDescriptor
                         (
                             MotherCountry                    = 'RFA'
                             Nationalite                      = ENationalite/Allied
-                            TypeUnitValue                    = ETypeUnit/Vehicle
+                            TypeUnitValue                    = ETypeUnit/MBT
                         )
                     )
                 ]
@@ -35376,7 +35376,7 @@ export Descriptor_ShowRoomUnit_TPZ_Fuchs_RASIT_RFA is TEntityDescriptor
             (
                 Default            = TTypeUnitModuleDescriptor
                 (
-                    TypeUnitValue                    = ETypeUnit/Vehicle
+                    TypeUnitValue                    = ETypeUnit/MBT
                     Nationalite                      = ENationalite/Allied
                     MotherCountry                    = 'RFA'
                     AcknowUnitType                   = ~/TAcknowUnitType_Recon_Vehicle
@@ -35390,7 +35390,7 @@ export Descriptor_ShowRoomUnit_TPZ_Fuchs_RASIT_RFA is TEntityDescriptor
                         (
                             MotherCountry                    = 'RFA'
                             Nationalite                      = ENationalite/Allied
-                            TypeUnitValue                    = ETypeUnit/Vehicle
+                            TypeUnitValue                    = ETypeUnit/MBT
                         )
                     )
                 ]
@@ -36474,6 +36474,182 @@ export Descriptor_ShowRoomUnit_UAZ_469_Konkurs_VDV_SOV is TEntityDescriptor
             TModuleSelector
             (
                 Default        = $/GFX/Everything/WeaponDescriptor_UAZ_469_Konkurs_VDV_SOV
+                Selection      = [~/NilDescriptorIfGhostOrCadavre]
+            ),
+
+        // LinkTeam
+            ~/LinkTeamModuleDescriptor,
+
+        // EffectApplier
+            ~/EffectApplierModuleSelector,
+
+        // Experience
+            TExperienceModuleDescriptor
+            (
+                ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple
+                CanWinExperience = True
+                ExperienceGainBySecond = ~/ExperienceGainBySecond
+                ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+            ),
+
+        // CameraShowroom
+        TCameraShowroomModuleDescriptor
+        (
+            Token = 'MBT'
+        ),
+
+    ]
+)
+export Descriptor_ShowRoomUnit_UAZ_469_Reco_DDR is TEntityDescriptor
+(
+    DescriptorId        = GUID:{09fa69f9-d271-46d8-a039-bfb7fcb58387}
+    ClassNameForDebug   = "ShowRoomUnit_UAZ_469_Reco_DDR"
+    ModulesDescriptors = [
+        // TypeUnit
+            TModuleSelector
+            (
+                Default            = TTypeUnitModuleDescriptor
+                (
+                    TypeUnitValue                    = ETypeUnit/Vehicle
+                    Nationalite                      = ENationalite/Axis
+                    MotherCountry                    = 'DDR'
+                    AcknowUnitType                   = ~/TAcknowUnitType_Recon_Vehicle
+                    TypeUnitFormation                = 'Reconnaissance'
+                )
+                Selection = [
+                    NilDescriptorIfCadavre,
+                    TModuleSelectorFilterIfGhost
+                    (
+                        Descriptor = TTypeUnitModuleDescriptor
+                        (
+                            MotherCountry                    = 'DDR'
+                            Nationalite                      = ENationalite/Axis
+                            TypeUnitValue                    = ETypeUnit/Vehicle
+                        )
+                    )
+                ]
+            ),
+
+        // Position
+        (
+            TPositionModuleDescriptor
+            (
+                UseFollowCam               = False
+                StickToGround              = True
+                InGeoDb                    = False
+                PorteurMustBeVisible       = True
+                ClampInWorld               = True
+                ClampOutMap                = False
+                HasNearlyNullBBox          = False
+                GfxDescriptorPorteur       = ~/GfxPorteurUnite
+                Radius                     = ((30) * Metre)
+                RelativeScanningPosition   = ~/DecalageParDefautDuPointDeVision
+                LowAltitudeFlyingAltitude  = ((0) * Metre)
+                NearGroundFlyingAltitude   = ((0) * Metre)
+            )
+        ),
+
+        // ApparenceModel
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject                     = True
+            Depiction                          = ~/Gfx_UAZ_469_Reco_DDR_Showroom_Autogen
+            GameplayBBoxBoneName               = 'chassis'
+        ),
+
+        // WeaponManager
+        WeaponManager is
+            TModuleSelector
+            (
+                Default        = $/GFX/Everything/WeaponDescriptor_UAZ_469_Reco_DDR
+                Selection      = [~/NilDescriptorIfGhostOrCadavre]
+            ),
+
+        // LinkTeam
+            ~/LinkTeamModuleDescriptor,
+
+        // EffectApplier
+            ~/EffectApplierModuleSelector,
+
+        // Experience
+            TExperienceModuleDescriptor
+            (
+                ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple
+                CanWinExperience = True
+                ExperienceGainBySecond = ~/ExperienceGainBySecond
+                ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+            ),
+
+        // CameraShowroom
+        TCameraShowroomModuleDescriptor
+        (
+            Token = 'MBT'
+        ),
+
+    ]
+)
+export Descriptor_ShowRoomUnit_UAZ_469_Reco_SOV is TEntityDescriptor
+(
+    DescriptorId        = GUID:{53424e66-402c-40a4-9d9d-ef7383483027}
+    ClassNameForDebug   = "ShowRoomUnit_UAZ_469_Reco_SOV"
+    ModulesDescriptors = [
+        // TypeUnit
+            TModuleSelector
+            (
+                Default            = TTypeUnitModuleDescriptor
+                (
+                    TypeUnitValue                    = ETypeUnit/Vehicle
+                    Nationalite                      = ENationalite/Axis
+                    MotherCountry                    = 'SOV'
+                    AcknowUnitType                   = ~/TAcknowUnitType_Reco
+                    TypeUnitFormation                = 'Reconnaissance'
+                )
+                Selection = [
+                    NilDescriptorIfCadavre,
+                    TModuleSelectorFilterIfGhost
+                    (
+                        Descriptor = TTypeUnitModuleDescriptor
+                        (
+                            MotherCountry                    = 'SOV'
+                            Nationalite                      = ENationalite/Axis
+                            TypeUnitValue                    = ETypeUnit/Vehicle
+                        )
+                    )
+                ]
+            ),
+
+        // Position
+        (
+            TPositionModuleDescriptor
+            (
+                UseFollowCam               = False
+                StickToGround              = True
+                InGeoDb                    = False
+                PorteurMustBeVisible       = True
+                ClampInWorld               = True
+                ClampOutMap                = False
+                HasNearlyNullBBox          = False
+                GfxDescriptorPorteur       = ~/GfxPorteurUnite
+                Radius                     = ((30) * Metre)
+                RelativeScanningPosition   = ~/DecalageParDefautDuPointDeVision
+                LowAltitudeFlyingAltitude  = ((0) * Metre)
+                NearGroundFlyingAltitude   = ((0) * Metre)
+            )
+        ),
+
+        // ApparenceModel
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject                     = True
+            Depiction                          = ~/Gfx_UAZ_469_Reco_SOV_Showroom_Autogen
+            GameplayBBoxBoneName               = 'chassis'
+        ),
+
+        // WeaponManager
+        WeaponManager is
+            TModuleSelector
+            (
+                Default        = $/GFX/Everything/WeaponDescriptor_UAZ_469_Reco_SOV
                 Selection      = [~/NilDescriptorIfGhostOrCadavre]
             ),
 
@@ -39110,10 +39286,10 @@ export Descriptor_ShowRoomUnit_Wiesel_20mm_RFA is TEntityDescriptor
             (
                 Default            = TTypeUnitModuleDescriptor
                 (
-                    TypeUnitValue                    = ETypeUnit/MBT
+                    TypeUnitValue                    = ETypeUnit/Vehicle
                     Nationalite                      = ENationalite/Allied
                     MotherCountry                    = 'RFA'
-                    AcknowUnitType                   = ~/TAcknowUnitType_Tank
+                    AcknowUnitType                   = ~/TAcknowUnitType_TankDestroyerMissile
                     TypeUnitFormation                = 'Char'
                 )
                 Selection = [
@@ -39124,7 +39300,7 @@ export Descriptor_ShowRoomUnit_Wiesel_20mm_RFA is TEntityDescriptor
                         (
                             MotherCountry                    = 'RFA'
                             Nationalite                      = ENationalite/Allied
-                            TypeUnitValue                    = ETypeUnit/MBT
+                            TypeUnitValue                    = ETypeUnit/Vehicle
                         )
                     )
                 ]

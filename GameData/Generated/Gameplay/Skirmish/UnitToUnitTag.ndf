@@ -362,6 +362,8 @@ private UnitToUnitTag is TUnitToUnitTagForIAStrat
         ( ~/Descriptor_Unit_UAZ_469_Fagot_DDR, "UNITE_UAZ_469_Fagot_DDR" ),
         ( ~/Descriptor_Unit_UAZ_469_Konkurs_SOV, "UNITE_UAZ_469_Konkurs_SOV" ),
         ( ~/Descriptor_Unit_UAZ_469_Konkurs_VDV_SOV, "UNITE_UAZ_469_Konkurs_VDV_SOV" ),
+        ( ~/Descriptor_Unit_UAZ_469_Reco_DDR, "UNITE_UAZ_469_Reco_DDR" ),
+        ( ~/Descriptor_Unit_UAZ_469_Reco_SOV, "UNITE_UAZ_469_Reco_SOV" ),
         ( ~/Descriptor_Unit_UAZ_469_SOV, "UNITE_UAZ_469_SOV" ),
         ( ~/Descriptor_Unit_UAZ_469_SPG9_DDR, "UNITE_UAZ_469_SPG9_DDR" ),
         ( ~/Descriptor_Unit_UAZ_469_SPG9_FJ_DDR, "UNITE_UAZ_469_SPG9_FJ_DDR" ),

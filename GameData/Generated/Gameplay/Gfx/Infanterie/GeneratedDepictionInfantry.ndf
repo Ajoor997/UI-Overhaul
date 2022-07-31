@@ -1853,7 +1853,7 @@ Gfx_Fallschirm_B1_RFA is TemplateInfantryDepictionSquad
   SoundOperator = DepictionOperator_MovementSound_SM_Infanterie_GER
 )
 AllWeaponAlternatives_Fallschirm_B1_RFA is [
-  AlternativeWithId( SelectorId = ['MeshAlternative_1'] ModelFile = ModelFile_MP5A3 ),
+  AlternativeWithId( SelectorId = ['MeshAlternative_1'] ModelFile = ModelFile_MP5SD3 ),
   AlternativeWithId( SelectorId = ['MeshAlternative_2'] ModelFile = ModelFile_HK21 ),
   AlternativeWithId( SelectorId = ['MeshAlternative_3'] ModelFile = ModelFile_MainNue ),
 ]
@@ -2477,7 +2477,7 @@ Gfx_Fernspaher_RFA is TemplateInfantryDepictionSquad
   SoundOperator = DepictionOperator_MovementSound_SM_Infanterie_GER
 )
 AllWeaponAlternatives_Fernspaher_RFA is [
-  AlternativeWithId( SelectorId = ['MeshAlternative_1'] ModelFile = ModelFile_MP5A3 ),
+  AlternativeWithId( SelectorId = ['MeshAlternative_1'] ModelFile = ModelFile_MP5SD3 ),
   AlternativeWithId( SelectorId = ['MeshAlternative_2'] ModelFile = ModelFile_HK21 ),
   AlternativeWithId( SelectorId = ['MeshAlternative_3'] ModelFile = ModelFile_MainNue ),
 ]
@@ -4607,12 +4607,14 @@ AllWeaponSubDepictionBackpack_Rifles_Aero_CMD_FR is TemplateAllSubBackpackWeapon
 (
   Alternatives = AllWeaponAlternatives_Rifles_Aero_CMD_FR
 )
-TacticDepiction_Rifles_Aero_CMD_FR_Surrogates is [['high', '01'], ['high', '02'], ['high', '03'], ['high', '04']]
+TacticDepiction_Rifles_Aero_CMD_FR_Surrogates is [['high', '01'], ['high', '02'], ['high', '03'], ['high', '04'], ['high', '05'], ['high', '06']]
 TacticDepiction_Rifles_Aero_CMD_FR_Alternatives is [
   TDepictionDescriptor( SelectorId = ['high', '01'] MeshDescriptor = TemplateMeshDescriptor( ModelFile = ModelFile_Rifles_Aero_CMD_FR ) ),
   TDepictionDescriptor( SelectorId = ['high', '02'] MeshDescriptor = TemplateMeshDescriptor( ModelFile = ModelFile_Rifles_Aero_CMD_FR_02 ) ),
   TDepictionDescriptor( SelectorId = ['high', '03'] MeshDescriptor = TemplateMeshDescriptor( ModelFile = ModelFile_Rifles_Aero_CMD_FR_03 ) ),
   TDepictionDescriptor( SelectorId = ['high', '04'] MeshDescriptor = TemplateMeshDescriptor( ModelFile = ModelFile_Rifles_Aero_CMD_FR_04 ) ),
+  TDepictionDescriptor( SelectorId = ['high', '05'] MeshDescriptor = TemplateMeshDescriptor( ModelFile = ModelFile_Rifles_Aero_CMD_FR_05 ) ),
+  TDepictionDescriptor( SelectorId = ['high', '06'] MeshDescriptor = TemplateMeshDescriptor( ModelFile = ModelFile_Rifles_Aero_CMD_FR_06 ) ),
   TDepictionDescriptor( SelectorId = ['low']  MeshDescriptor = TemplateMeshDescriptor( ModelFile = ModelFile_Rifles_Aero_CMD_FR_LOW ) ),
 ]
 TacticDepiction_Rifles_Aero_CMD_FR_Soldier is TemplateInfantryDepictionFactoryTactic
@@ -6859,7 +6861,7 @@ TransportedInfantryAlternativesCount is MAP[
   ('PzGrenadier_RFA', 6),
   ('Ranger_US', 10),
   ('Rangers_CMD_US', 10),
-  ('Rifles_Aero_CMD_FR', 4),
+  ('Rifles_Aero_CMD_FR', 6),
   ('Rifles_Aero_FR', 6),
   ('Rifles_CMD_FR', 4),
   ('Rifles_CMD_US', 10),
@@ -7421,6 +7423,8 @@ TransportedInfantryAlternatives is [
   AlternativeWithId( SelectorId = ['Rifles_Aero_CMD_FR', '02'] ModelFile = ModelFile_Rifles_Aero_CMD_FR_02 ),
   AlternativeWithId( SelectorId = ['Rifles_Aero_CMD_FR', '03'] ModelFile = ModelFile_Rifles_Aero_CMD_FR_03 ),
   AlternativeWithId( SelectorId = ['Rifles_Aero_CMD_FR', '04'] ModelFile = ModelFile_Rifles_Aero_CMD_FR_04 ),
+  AlternativeWithId( SelectorId = ['Rifles_Aero_CMD_FR', '05'] ModelFile = ModelFile_Rifles_Aero_CMD_FR_05 ),
+  AlternativeWithId( SelectorId = ['Rifles_Aero_CMD_FR', '06'] ModelFile = ModelFile_Rifles_Aero_CMD_FR_06 ),
   AlternativeWithId( SelectorId = ['Rifles_Aero_FR', '01'] ModelFile = ModelFile_Rifles_Aero_FR ),
   AlternativeWithId( SelectorId = ['Rifles_Aero_FR', '02'] ModelFile = ModelFile_Rifles_Aero_FR_02 ),
   AlternativeWithId( SelectorId = ['Rifles_Aero_FR', '03'] ModelFile = ModelFile_Rifles_Aero_FR_03 ),

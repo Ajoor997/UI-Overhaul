@@ -9731,20 +9731,6 @@ export Descriptor_Deck_Pack_TOE_US_3rd_Arm_multi_M113A2_supply_US is TDeckPackDe
         ),
     ]
 )
-export Descriptor_Deck_Pack_TOE_US_3rd_Arm_multi_M113_ACAV_US is TDeckPackDescriptor
-(
-    DescriptorId = GUID:{d7645eae-3439-4190-ab02-f418faf6dcd1}
-    TransporterAndUnitsList =
-    [
-        TDeckTransporterAndUnitsDescriptor
-        (
-            UnitDescriptorList =
-            [
-                ~/Descriptor_Unit_M113_ACAV_US,
-            ]
-        ),
-    ]
-)
 export Descriptor_Deck_Pack_TOE_US_3rd_Arm_multi_M151_MUTT_CMD_US is TDeckPackDescriptor
 (
     DescriptorId = GUID:{ed0ddc30-7cf3-4cc7-a256-7b02ec3d95e7}
@@ -10669,20 +10655,6 @@ export Descriptor_Deck_Pack_TOE_US_82nd_Airborne_multi_M1025_Humvee_TOW_para_US 
         ),
     ]
 )
-export Descriptor_Deck_Pack_TOE_US_82nd_Airborne_multi_M1025_Humvee_scout_US is TDeckPackDescriptor
-(
-    DescriptorId = GUID:{b709c73b-94b8-4cf9-8ad1-5af9478199f2}
-    TransporterAndUnitsList =
-    [
-        TDeckTransporterAndUnitsDescriptor
-        (
-            UnitDescriptorList =
-            [
-                ~/Descriptor_Unit_M1025_Humvee_scout_US,
-            ]
-        ),
-    ]
-)
 export Descriptor_Deck_Pack_TOE_US_82nd_Airborne_multi_M109A2_HOWZ_US is TDeckPackDescriptor
 (
     DescriptorId = GUID:{0d2f46c2-9718-45b4-b862-de415ed5b874}
@@ -11369,20 +11341,6 @@ export Descriptor_Deck_Pack_TOE_US_8th_Inf_multi_M113A2_supply_US is TDeckPackDe
         ),
     ]
 )
-export Descriptor_Deck_Pack_TOE_US_8th_Inf_multi_M113_ACAV_US is TDeckPackDescriptor
-(
-    DescriptorId = GUID:{2d987b8d-52c5-4e78-aac6-39ac1bde84bc}
-    TransporterAndUnitsList =
-    [
-        TDeckTransporterAndUnitsDescriptor
-        (
-            UnitDescriptorList =
-            [
-                ~/Descriptor_Unit_M113_ACAV_US,
-            ]
-        ),
-    ]
-)
 export Descriptor_Deck_Pack_TOE_US_8th_Inf_multi_M125_HOWZ_US is TDeckPackDescriptor
 (
     DescriptorId = GUID:{f38ee906-05a0-4ae1-bb79-d808be81c78f}
@@ -11393,20 +11351,6 @@ export Descriptor_Deck_Pack_TOE_US_8th_Inf_multi_M125_HOWZ_US is TDeckPackDescri
             UnitDescriptorList =
             [
                 ~/Descriptor_Unit_M125_HOWZ_US,
-            ]
-        ),
-    ]
-)
-export Descriptor_Deck_Pack_TOE_US_8th_Inf_multi_M151A2_scout_US is TDeckPackDescriptor
-(
-    DescriptorId = GUID:{7cd5b567-d4f9-423c-a50b-7e8ade464e05}
-    TransporterAndUnitsList =
-    [
-        TDeckTransporterAndUnitsDescriptor
-        (
-            UnitDescriptorList =
-            [
-                ~/Descriptor_Unit_M151A2_scout_US,
             ]
         ),
     ]

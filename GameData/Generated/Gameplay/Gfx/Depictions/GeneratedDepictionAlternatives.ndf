@@ -1236,6 +1236,16 @@ Alternatives_UAZ_469_Konkurs_VDV_SOV is [
     DepictionDescriptor_LOD_Mid( MeshDescriptor = Modele_UAZ_469_Konkurs_VDV_SOV_MID ),
     DepictionDescriptor_LOD_Low( MeshDescriptor = Modele_UAZ_469_Konkurs_VDV_SOV_LOW ),
 ]
+Alternatives_UAZ_469_Reco_DDR is [
+    DepictionDescriptor_LOD_High( MeshDescriptor = Modele_UAZ_469_Reco_DDR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = Modele_UAZ_469_Reco_DDR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = Modele_UAZ_469_Reco_DDR_LOW DisabledOperators = [ 'tourelle1' ] ),
+]
+Alternatives_UAZ_469_Reco_SOV is [
+    DepictionDescriptor_LOD_High( MeshDescriptor = Modele_UAZ_469_Reco_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = Modele_UAZ_469_Reco_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = Modele_UAZ_469_Reco_SOV_LOW DisabledOperators = [ 'tourelle1' ] ),
+]
 Alternatives_UAZ_469_SOV is [
     DepictionDescriptor_LOD_High( MeshDescriptor = Modele_UAZ_469_SOV ),
     DepictionDescriptor_LOD_Mid( MeshDescriptor = Modele_UAZ_469_SOV_MID ),

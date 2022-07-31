@@ -2149,6 +2149,18 @@ export Texture_Button_Unit_UAZ_469_Konkurs_VDV_SOV is TUIResourceTextureWithUsef
     CivMask  = CivMask/Common
     FileName = 'Assets\2D\Interface\Common\UnitsIcons\Allemagne\UAZ_469_Konkurs_VDV_SOV.png'
 )
+export Texture_Button_Unit_UAZ_469_Reco_DDR is TUIResourceTextureWithUsefulnessMask
+(
+    TypeMask = TypeMask/BuildMenu
+    CivMask  = CivMask/Common
+    FileName = 'Assets\2D\Interface\Common\UnitsIcons\Allemagne\default.png'
+)
+export Texture_Button_Unit_UAZ_469_Reco_SOV is TUIResourceTextureWithUsefulnessMask
+(
+    TypeMask = TypeMask/BuildMenu
+    CivMask  = CivMask/Common
+    FileName = 'Assets\2D\Interface\Common\UnitsIcons\Allemagne\default.png'
+)
 export Texture_Button_Unit_UAZ_469_SOV is TUIResourceTextureWithUsefulnessMask
 (
     TypeMask = TypeMask/BuildMenu
@@ -3650,6 +3662,8 @@ UnitButtonTextureAdditionalBank is TBUCKToolAdditionalTextureBank
         ("Texture_Button_Unit_UAZ_469_Fagot_DDR", MAP [( ~/ComponentState/Normal, ~/Texture_Button_Unit_UAZ_469_Fagot_DDR), ]),
         ("Texture_Button_Unit_UAZ_469_Konkurs_SOV", MAP [( ~/ComponentState/Normal, ~/Texture_Button_Unit_UAZ_469_Konkurs_SOV), ]),
         ("Texture_Button_Unit_UAZ_469_Konkurs_VDV_SOV", MAP [( ~/ComponentState/Normal, ~/Texture_Button_Unit_UAZ_469_Konkurs_VDV_SOV), ]),
+        ("Texture_Button_Unit_UAZ_469_Reco_DDR", MAP [( ~/ComponentState/Normal, ~/Texture_Button_Unit_UAZ_469_Reco_DDR), ]),
+        ("Texture_Button_Unit_UAZ_469_Reco_SOV", MAP [( ~/ComponentState/Normal, ~/Texture_Button_Unit_UAZ_469_Reco_SOV), ]),
         ("Texture_Button_Unit_UAZ_469_SOV", MAP [( ~/ComponentState/Normal, ~/Texture_Button_Unit_UAZ_469_SOV), ]),
         ("Texture_Button_Unit_UAZ_469_SPG9_DDR", MAP [( ~/ComponentState/Normal, ~/Texture_Button_Unit_UAZ_469_SPG9_DDR), ]),
         ("Texture_Button_Unit_UAZ_469_SPG9_FJ_DDR", MAP [( ~/ComponentState/Normal, ~/Texture_Button_Unit_UAZ_469_SPG9_FJ_DDR), ]),

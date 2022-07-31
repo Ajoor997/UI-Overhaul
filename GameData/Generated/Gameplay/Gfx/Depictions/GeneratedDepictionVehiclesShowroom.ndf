@@ -1709,6 +1709,38 @@ Gfx_UAZ_469_Konkurs_VDV_SOV_Showroom_Autogen is ShowroomVehicleDepictionTemplate
     Selector = Selector_UAZ_469_Konkurs_VDV_SOV
     SubDepictions = HumanSubDepictionsShowroom_UAZ_469_Konkurs_VDV_SOV
 )
+Gfx_UAZ_469_Reco_DDR_Showroom_Autogen is ShowroomVehicleDepictionTemplate
+(
+    Alternatives = Alternatives_UAZ_469_Reco_DDR
+    Selector = Selector_UAZ_469_Reco_DDR
+    SubDepictions = HumanSubDepictionsShowroom_UAZ_469_Reco_DDR + 
+    [
+        TSubDepiction
+        (
+            Anchor = "base_tourelle_01"
+            Depiction = ShowroomDepictionTemplateInternal
+            (
+                MeshDescriptor = Modele_UAZ_469_Reco_DDR_Tourelle_01
+            )
+        ),
+    ]
+)
+Gfx_UAZ_469_Reco_SOV_Showroom_Autogen is ShowroomVehicleDepictionTemplate
+(
+    Alternatives = Alternatives_UAZ_469_Reco_SOV
+    Selector = Selector_UAZ_469_Reco_SOV
+    SubDepictions = HumanSubDepictionsShowroom_UAZ_469_Reco_SOV + 
+    [
+        TSubDepiction
+        (
+            Anchor = "base_tourelle_01"
+            Depiction = ShowroomDepictionTemplateInternal
+            (
+                MeshDescriptor = Modele_UAZ_469_Reco_SOV_Tourelle_01
+            )
+        ),
+    ]
+)
 Gfx_UAZ_469_SOV_Showroom_Autogen is ShowroomVehicleDepictionTemplate
 (
     Alternatives = Alternatives_UAZ_469_SOV

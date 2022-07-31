@@ -78,16 +78,13 @@ private PanelInfoPartie is BUCKListDescriptor
     ElementName = "ListeDesRessources"
     ComponentFrame = TUIFramePropertyRTTI
     (
-        AlignementToFather = [0.828, 0.0]
-        AlignementToAnchor = [0.828, 0.0]
+        MagnifiableOffset = [-330,0] 
     )
 
     FitStyle = ~/ContainerFitStyle/FitToContentVertically
 
-
-
     Axis = ~/ListAxis/Horizontal
-
+    BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
     Elements =
     [
         BUCKListElementDescriptor
@@ -106,18 +103,19 @@ private PanelInfoPartie is BUCKListDescriptor
 
     BackgroundComponents =
     [
-        PanelRoundedCorner
+        BUCKListDescriptor
         (
             ComponentFrame = TUIFramePropertyRTTI
             (
                 MagnifiableWidthHeight = [MinimapMagnifiableSize, 30]
             )
+            Axis = ~/ListAxis/Vertical
             BackgroundBlockColorToken = 'UnitLabelInfo_Mod'
             BorderLineColorToken = 'White_Mod'
             BorderThicknessToken = '2'
-
+            HasBackground = true
+            HasBorder = true
             //RoundedVertexes = [false,false,false,false]
-
             
         )
     ]

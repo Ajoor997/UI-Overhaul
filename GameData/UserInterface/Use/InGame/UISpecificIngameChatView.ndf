@@ -421,10 +421,8 @@ FlarePanelChatContainer is BUCKContainerDescriptor
     UniqueName = "UICommonFlarePanelViewMainContainer"
     ComponentFrame = TUIFramePropertyRTTI
     (
-        AlignementToFather = [0.828, 0.0]
-        AlignementToAnchor = [0.828, 0.0]
+        MagnifiableOffset = [-330,0] 
     )
-
     FitStyle = ~/ContainerFitStyle/FitToContentVertically
 
     HasBackground = false

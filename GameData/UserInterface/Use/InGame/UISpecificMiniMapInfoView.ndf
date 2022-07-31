@@ -28,14 +28,15 @@ BUCKSpecificMiniMapInfoMainComponentDescriptor is BUCKListDescriptor
                 )
 
                 HidePointerEvents = true
+
+                HasBackground = true
+                HasBorder = true
+                BackgroundBlockColorToken = 'AirUnitMiniCard'
+                BorderLineColorToken = 'White_Mod'
+                BorderThicknessToken = '2'
+
                 Components =
                 [
-                    PanelRoundedCorner(
-                        //RoundedVertexes = [false,false,false,false]
-                        BackgroundBlockColorToken = "AirUnitMiniCard"
-                        BorderLineColorToken = "White_Mod"
-                        BorderThicknessToken = '2'
-                    ),
                     ~/MinimapPanelDescriptor, // MUST BE A SQUARE!!!,
                 ]
             )

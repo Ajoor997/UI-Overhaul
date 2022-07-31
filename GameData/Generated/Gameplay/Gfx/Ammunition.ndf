@@ -24357,7 +24357,7 @@ export Ammo_DCA_2_canons_S60_57mm is TAmmunitionDescriptor
     Name                              = 'BEGNJMRWDP'
     TypeName                          = 'NA'
     TypeCategoryName                  = 'YNDLJFDBIK'
-    Caliber                           = 'MTTKEHLQZM'
+    Caliber                           = 'MNVLAHRDYK'
     WeaponDescriptionToken            = 'BGKHTMZYRF'
     TraitsToken                       = [ 'MOTION', ]
     WeaponCursorType                  = Weapon_Cursor_FastCanon
@@ -29721,7 +29721,7 @@ export Ammo_Grenade_SMOKE is TAmmunitionDescriptor
     WeaponCursorType                  = Weapon_Cursor_None
     MinMaxCategory                    = MinMax_smoke
     Level                             = 3
-    Arme                              = TDamageTypeRTTI(Family="cac" Index=1)
+    Arme                              = TDamageTypeRTTI(Family="cac" Index=2)
     ProjectileType                    = EProjectileType/ArtillerieAnimated
     FxWeaponType                      = ~/TFxWeaponType_GrenadeANM16Smoke
     FxPower                           = EFXPower/Moyen
@@ -29744,7 +29744,7 @@ export Ammo_Grenade_SMOKE is TAmmunitionDescriptor
     DispersionWithoutSorting          = False
     CorrectedShotAimtimeMultiplier    = 1.0
     RadiusSplashPhysicalDamages       = ((500) * Metre)
-    PhysicalDamages                   = 1.0
+    PhysicalDamages                   = 2.0
     RadiusSplashSuppressDamages       = ((25) * Metre)
     SuppressDamages                   = 50.0
     RayonPinned                       = ((50) * Metre)
@@ -29820,7 +29820,7 @@ export Ammo_Grenade_Satchel_Charge is TAmmunitionDescriptor
     WeaponCursorType                  = Weapon_Cursor_None
     MinMaxCategory                    = MinMax_Grenade
     Level                             = 3
-    Arme                              = TDamageTypeRTTI(Family="cac" Index=1)
+    Arme                              = TDamageTypeRTTI(Family="cac" Index=2)
     ProjectileType                    = EProjectileType/ArtillerieAnimated
     FxWeaponType                      = ~/TFxWeaponType_GrenadePineapple
     FxPower                           = EFXPower/Moyen
@@ -29844,7 +29844,7 @@ export Ammo_Grenade_Satchel_Charge is TAmmunitionDescriptor
     DispersionWithoutSorting          = False
     CorrectedShotAimtimeMultiplier    = 1.0
     RadiusSplashPhysicalDamages       = ((500) * Metre)
-    PhysicalDamages                   = 1.0
+    PhysicalDamages                   = 2.0
     RadiusSplashSuppressDamages       = ((25) * Metre)
     SuppressDamages                   = 50.0
     RayonPinned                       = ((50) * Metre)
@@ -29923,7 +29923,7 @@ export Ammo_Grenade_UK_M36 is TAmmunitionDescriptor
     WeaponCursorType                  = Weapon_Cursor_None
     MinMaxCategory                    = MinMax_EXPLOSIF
     Level                             = 3
-    Arme                              = TDamageTypeRTTI(Family="cac" Index=1)
+    Arme                              = TDamageTypeRTTI(Family="cac" Index=2)
     ProjectileType                    = EProjectileType/ArtillerieAnimated
     FxWeaponType                      = ~/TFxWeaponType_GrenadePineapple
     FxPower                           = EFXPower/Moyen
@@ -29946,7 +29946,7 @@ export Ammo_Grenade_UK_M36 is TAmmunitionDescriptor
     DispersionWithoutSorting          = False
     CorrectedShotAimtimeMultiplier    = 1.0
     RadiusSplashPhysicalDamages       = ((500) * Metre)
-    PhysicalDamages                   = 1.0
+    PhysicalDamages                   = 2.0
     RadiusSplashSuppressDamages       = ((25) * Metre)
     SuppressDamages                   = 50.0
     RayonPinned                       = ((50) * Metre)
@@ -30022,7 +30022,7 @@ export Ammo_Grenade_US_mk2 is TAmmunitionDescriptor
     WeaponCursorType                  = Weapon_Cursor_None
     MinMaxCategory                    = MinMax_Grenade
     Level                             = 3
-    Arme                              = TDamageTypeRTTI(Family="cac" Index=1)
+    Arme                              = TDamageTypeRTTI(Family="cac" Index=2)
     ProjectileType                    = EProjectileType/ArtillerieAnimated
     FxWeaponType                      = ~/TFxWeaponType_GrenadePineapple
     FxPower                           = EFXPower/Moyen
@@ -30046,7 +30046,7 @@ export Ammo_Grenade_US_mk2 is TAmmunitionDescriptor
     DispersionWithoutSorting          = False
     CorrectedShotAimtimeMultiplier    = 1.0
     RadiusSplashPhysicalDamages       = ((500) * Metre)
-    PhysicalDamages                   = 1.0
+    PhysicalDamages                   = 2.0
     RadiusSplashSuppressDamages       = ((25) * Metre)
     SuppressDamages                   = 50.0
     RayonPinned                       = ((50) * Metre)
@@ -59794,7 +59794,7 @@ export Ammo_AGM_AS30 is TAmmunitionDescriptor
     TempsEntreDeuxTirs_Min             = -1.0
     TempsEntreDeuxTirs_Max             = -1.0
     TempsEntreDeuxFx                  = 1.0
-    PorteeMaximale                    = ((12000) * Metre)
+    PorteeMaximale                    = ((9500) * Metre)
     PorteeMinimaleTBA                 = ((0) * Metre)
     PorteeMaximaleTBA                 = ((0) * Metre)
     PorteeMinimaleHA                  = ((0) * Metre)
@@ -59813,8 +59813,8 @@ export Ammo_AGM_AS30 is TAmmunitionDescriptor
     TirIndirect                       = False
     TirReflexe                        = True
     InterdireTirReflexe               = True
-    FX_vitesse_de_depart              = 6000 * Metre
-    FX_acceleration_max               = 2000 * Metre
+    FX_vitesse_de_depart              = 4000 * Metre
+    FX_acceleration_max               = 1000 * Metre
     FX_tir_sans_physic                = True
     FX_frottement                     = 0.0
     TempsAnimation                    = 0.0
@@ -59876,9 +59876,9 @@ export Ammo_AGM_AS30L is TAmmunitionDescriptor
     Name                              = 'HIKHLYMCGU'
     TypeName                          = 'SACLOSM'
     TypeCategoryName                  = 'GAOXFGOOJS'
-    Caliber                           = 'EFHVSBLNQK'
+    Caliber                           = 'QQPLEPBINP'
     WeaponDescriptionToken            = ''
-    TraitsToken                       = [ 'MOTION', 'F&F', 'HEAT', ]
+    TraitsToken                       = [ 'MOTION', 'semiAuto', 'HEAT', ]
     WeaponCursorType                  = Weapon_Cursor_GroundMissile
     MinMaxCategory                    = MinMax_AGM
     Level                             = 1
@@ -59887,11 +59887,11 @@ export Ammo_AGM_AS30L is TAmmunitionDescriptor
     FxWeaponType                      = ~/TFxWeaponType_MissileAGMGros
     FxPower                           = EFXPower/UltraLourd
     Puissance                         = 500.0
-    TempsEntreDeuxTirs                = 2.0
+    TempsEntreDeuxTirs                = 1.0
     TempsEntreDeuxTirs_Min             = -1.0
     TempsEntreDeuxTirs_Max             = -1.0
-    TempsEntreDeuxFx                  = 2.0
-    PorteeMaximale                    = ((12000) * Metre)
+    TempsEntreDeuxFx                  = 1.0
+    PorteeMaximale                    = ((9500) * Metre)
     PorteeMinimaleTBA                 = ((0) * Metre)
     PorteeMaximaleTBA                 = ((0) * Metre)
     PorteeMinimaleHA                  = ((0) * Metre)
@@ -59917,7 +59917,6 @@ export Ammo_AGM_AS30L is TAmmunitionDescriptor
     TempsAnimation                    = 0.0
     NoiseDissimulationMalus           = 2.0
     ShotsBeforeMaxNoise               = 2
-    IsFireAndForget                   = True
     TargetsDistricts                  = True
         // DiceHitRollRule
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
@@ -59943,7 +59942,7 @@ export Ammo_AGM_AS30L is TAmmunitionDescriptor
     )
 
     TempsDeVisee                      = 0.0
-    TempsEntreDeuxSalves              = 2.5
+    TempsEntreDeuxSalves              = 1.0
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
     NbTirParSalves                    = 1
@@ -60665,7 +60664,7 @@ export Ammo_AGM_Kh23M is TAmmunitionDescriptor
     Name                              = 'RWJUTISBZH'
     TypeName                          = 'SACLOSM'
     TypeCategoryName                  = 'GAOXFGOOJS'
-    Caliber                           = 'RBFFIJWRCV'
+    Caliber                           = 'RVWPIOIWBN'
     WeaponDescriptionToken            = ''
     TraitsToken                       = [ 'MOTION', 'semiAuto', 'HEAT', ]
     WeaponCursorType                  = Weapon_Cursor_GroundMissile
@@ -60699,8 +60698,8 @@ export Ammo_AGM_Kh23M is TAmmunitionDescriptor
     TirIndirect                       = False
     TirReflexe                        = True
     InterdireTirReflexe               = True
-    FX_vitesse_de_depart              = 6000 * Metre
-    FX_acceleration_max               = 2000 * Metre
+    FX_vitesse_de_depart              = 4000 * Metre
+    FX_acceleration_max               = 1000 * Metre
     FX_tir_sans_physic                = True
     FX_frottement                     = 0.0
     TempsAnimation                    = 0.0
@@ -60762,9 +60761,9 @@ export Ammo_AGM_Kh25ML is TAmmunitionDescriptor
     Name                              = 'YLFHPAAUQR'
     TypeName                          = 'SACLOSM'
     TypeCategoryName                  = 'GAOXFGOOJS'
-    Caliber                           = 'EFHVSBLNQK'
+    Caliber                           = 'QQPLEPBINP'
     WeaponDescriptionToken            = ''
-    TraitsToken                       = [ 'MOTION', 'F&F', 'HEAT', ]
+    TraitsToken                       = [ 'MOTION', 'semiAuto', 'HEAT', ]
     WeaponCursorType                  = Weapon_Cursor_GroundMissile
     MinMaxCategory                    = MinMax_AGM
     Level                             = 1
@@ -60773,11 +60772,11 @@ export Ammo_AGM_Kh25ML is TAmmunitionDescriptor
     FxWeaponType                      = ~/TFxWeaponType_MissileAGMGros
     FxPower                           = EFXPower/UltraLourd
     Puissance                         = 500.0
-    TempsEntreDeuxTirs                = 2.0
+    TempsEntreDeuxTirs                = 1.0
     TempsEntreDeuxTirs_Min             = -1.0
     TempsEntreDeuxTirs_Max             = -1.0
-    TempsEntreDeuxFx                  = 2.0
-    PorteeMaximale                    = ((12000) * Metre)
+    TempsEntreDeuxFx                  = 1.0
+    PorteeMaximale                    = ((9500) * Metre)
     PorteeMinimaleTBA                 = ((0) * Metre)
     PorteeMaximaleTBA                 = ((0) * Metre)
     PorteeMinimaleHA                  = ((0) * Metre)
@@ -60803,7 +60802,6 @@ export Ammo_AGM_Kh25ML is TAmmunitionDescriptor
     TempsAnimation                    = 0.0
     NoiseDissimulationMalus           = 2.0
     ShotsBeforeMaxNoise               = 2
-    IsFireAndForget                   = True
     TargetsDistricts                  = True
         // DiceHitRollRule
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
@@ -60829,7 +60827,7 @@ export Ammo_AGM_Kh25ML is TAmmunitionDescriptor
     )
 
     TempsDeVisee                      = 0.0
-    TempsEntreDeuxSalves              = 2.5
+    TempsEntreDeuxSalves              = 1.0
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
     NbTirParSalves                    = 1
@@ -61054,7 +61052,7 @@ export Ammo_AGM_Kh29T is TAmmunitionDescriptor
     Name                              = 'ISDQZQPFVK'
     TypeName                          = 'SACLOSM'
     TypeCategoryName                  = 'GAOXFGOOJS'
-    Caliber                           = 'RBFFIJWRCV'
+    Caliber                           = 'RVWPIOIWBN'
     WeaponDescriptionToken            = ''
     TraitsToken                       = [ 'MOTION', 'semiAuto', 'HEAT', ]
     WeaponCursorType                  = Weapon_Cursor_GroundMissile

@@ -6786,14 +6786,14 @@ export Descriptor_Missile_AGM_AS30 is TEntityDescriptor
             (
                 DefaultConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 6000.0 * Metre
-                    MaxAcceleration = 2000.0 * Metre
+                    MaxSpeed        = 4000.0 * Metre
+                    MaxAcceleration = 1000.0 * Metre
                     AutoGyr         = 0.5235987755982988
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 6000.0 * Metre
-                    MaxAcceleration = 2000.0 * Metre
+                    MaxSpeed        = 4000.0 * Metre
+                    MaxAcceleration = 1000.0 * Metre
                     AutoGyr         = 1.7453292519943295
                 )
                 AscendantPhaseConfig = nil
@@ -6802,7 +6802,7 @@ export Descriptor_Missile_AGM_AS30 is TEntityDescriptor
                 TimeMaxBetweenRandomMoveWhenUncontrollable = 2
                 TimeMinBetweenRandomMoveWhenUncontrollable = 1.0
                 TimeBetweenChaosUpdates = 0.1
-                RangeChaos = 1600
+                RangeChaos = 3000
                 AngleMaxForRandomMouvUncontrollable = 6.0
                 RotationSpeedWhenUncontrollable = 30
                 TempsDemiTour = 0.1
@@ -8172,14 +8172,14 @@ export Descriptor_Missile_AGM_Kh23M is TEntityDescriptor
             (
                 DefaultConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 6000.0 * Metre
-                    MaxAcceleration = 2000.0 * Metre
+                    MaxSpeed        = 4000.0 * Metre
+                    MaxAcceleration = 1000.0 * Metre
                     AutoGyr         = 0.5235987755982988
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 6000.0 * Metre
-                    MaxAcceleration = 2000.0 * Metre
+                    MaxSpeed        = 4000.0 * Metre
+                    MaxAcceleration = 1000.0 * Metre
                     AutoGyr         = 1.7453292519943295
                 )
                 AscendantPhaseConfig = nil
@@ -8188,7 +8188,7 @@ export Descriptor_Missile_AGM_Kh23M is TEntityDescriptor
                 TimeMaxBetweenRandomMoveWhenUncontrollable = 2
                 TimeMinBetweenRandomMoveWhenUncontrollable = 1.0
                 TimeBetweenChaosUpdates = 0.1
-                RangeChaos = 1600
+                RangeChaos = 3000
                 AngleMaxForRandomMouvUncontrollable = 6.0
                 RotationSpeedWhenUncontrollable = 30
                 TempsDemiTour = 0.1

@@ -5293,6 +5293,7 @@ Descriptor_UnitCadavre_BMP_1P_reco_DDR is TEntityDescriptor
                    $/GFX/Everything/Descriptor_Unit_BMP_1P_reco_DDR/LandMovement,
                    $/GFX/Everything/Descriptor_Unit_BMP_1P_reco_DDR/GenericMovement,
                    $/GFX/Everything/Descriptor_Unit_BMP_1P_reco_DDR/FacingInfos,
+                   $/GFX/Everything/Descriptor_Unit_BMP_1P_reco_DDR/Transporter,
                    $/GFX/Everything/Descriptor_Unit_BMP_1P_reco_DDR/MissileCarriage,
                 ]
             ),
@@ -5301,6 +5302,7 @@ Descriptor_UnitCadavre_BMP_1P_reco_DDR is TEntityDescriptor
             $/GFX/Everything/Descriptor_Unit_BMP_1P_reco_DDR/LandMovement,
             $/GFX/Everything/Descriptor_Unit_BMP_1P_reco_DDR/GenericMovement,
             $/GFX/Everything/Descriptor_Unit_BMP_1P_reco_DDR/FacingInfos,
+            $/GFX/Everything/Descriptor_Unit_BMP_1P_reco_DDR/Transporter,
             $/GFX/Everything/Descriptor_Unit_BMP_1P_reco_DDR/MissileCarriage,
 
         // PackSignaux
@@ -16569,7 +16571,7 @@ Descriptor_UnitCadavre_Luchs_A1_RFA is TEntityDescriptor
         // TypeUnit
             TTypeUnitModuleDescriptor
             (
-                TypeUnitValue                    = ETypeUnit/Vehicle
+                TypeUnitValue                    = ETypeUnit/MBT
                 Nationalite                      = ENationalite/Allied
                 MotherCountry                    = 'RFA'
                 AcknowUnitType                   = ~/TAcknowUnitType_Recon_Vehicle
@@ -17576,7 +17578,7 @@ Descriptor_UnitCadavre_M113A1G_reco_RFA is TEntityDescriptor
         // TypeUnit
             TTypeUnitModuleDescriptor
             (
-                TypeUnitValue                    = ETypeUnit/Vehicle
+                TypeUnitValue                    = ETypeUnit/MBT
                 Nationalite                      = ENationalite/Allied
                 MotherCountry                    = 'RFA'
                 AcknowUnitType                   = ~/TAcknowUnitType_Recon_Vehicle
@@ -17643,6 +17645,7 @@ Descriptor_UnitCadavre_M113A1G_reco_RFA is TEntityDescriptor
                    $/GFX/Everything/Descriptor_Unit_M113A1G_reco_RFA/LandMovement,
                    $/GFX/Everything/Descriptor_Unit_M113A1G_reco_RFA/GenericMovement,
                    $/GFX/Everything/Descriptor_Unit_M113A1G_reco_RFA/FacingInfos,
+                   $/GFX/Everything/Descriptor_Unit_M113A1G_reco_RFA/Transporter,
                 ]
             ),
             $/GFX/Everything/Descriptor_Unit_M113A1G_reco_RFA/WeaponManager,
@@ -17650,6 +17653,7 @@ Descriptor_UnitCadavre_M113A1G_reco_RFA is TEntityDescriptor
             $/GFX/Everything/Descriptor_Unit_M113A1G_reco_RFA/LandMovement,
             $/GFX/Everything/Descriptor_Unit_M113A1G_reco_RFA/GenericMovement,
             $/GFX/Everything/Descriptor_Unit_M113A1G_reco_RFA/FacingInfos,
+            $/GFX/Everything/Descriptor_Unit_M113A1G_reco_RFA/Transporter,
 
         // PackSignaux
             ~/PackSignauxModuleDescriptor,
@@ -18098,6 +18102,7 @@ Descriptor_UnitCadavre_M113_ACAV_US is TEntityDescriptor
                    $/GFX/Everything/Descriptor_Unit_M113_ACAV_US/LandMovement,
                    $/GFX/Everything/Descriptor_Unit_M113_ACAV_US/GenericMovement,
                    $/GFX/Everything/Descriptor_Unit_M113_ACAV_US/FacingInfos,
+                   $/GFX/Everything/Descriptor_Unit_M113_ACAV_US/Transporter,
                 ]
             ),
             $/GFX/Everything/Descriptor_Unit_M113_ACAV_US/WeaponManager,
@@ -18105,6 +18110,7 @@ Descriptor_UnitCadavre_M113_ACAV_US is TEntityDescriptor
             $/GFX/Everything/Descriptor_Unit_M113_ACAV_US/LandMovement,
             $/GFX/Everything/Descriptor_Unit_M113_ACAV_US/GenericMovement,
             $/GFX/Everything/Descriptor_Unit_M113_ACAV_US/FacingInfos,
+            $/GFX/Everything/Descriptor_Unit_M113_ACAV_US/Transporter,
 
         // PackSignaux
             ~/PackSignauxModuleDescriptor,
@@ -18559,6 +18565,7 @@ Descriptor_UnitCadavre_M151A2_scout_US is TEntityDescriptor
                    $/GFX/Everything/Descriptor_Unit_M151A2_scout_US/LandMovement,
                    $/GFX/Everything/Descriptor_Unit_M151A2_scout_US/GenericMovement,
                    $/GFX/Everything/Descriptor_Unit_M151A2_scout_US/FacingInfos,
+                   $/GFX/Everything/Descriptor_Unit_M151A2_scout_US/Transporter,
                 ]
             ),
             $/GFX/Everything/Descriptor_Unit_M151A2_scout_US/WeaponManager,
@@ -18566,6 +18573,7 @@ Descriptor_UnitCadavre_M151A2_scout_US is TEntityDescriptor
             $/GFX/Everything/Descriptor_Unit_M151A2_scout_US/LandMovement,
             $/GFX/Everything/Descriptor_Unit_M151A2_scout_US/GenericMovement,
             $/GFX/Everything/Descriptor_Unit_M151A2_scout_US/FacingInfos,
+            $/GFX/Everything/Descriptor_Unit_M151A2_scout_US/Transporter,
 
         // PackSignaux
             ~/PackSignauxModuleDescriptor,
@@ -18830,6 +18838,7 @@ Descriptor_UnitCadavre_M151_MUTT_Reco_DDR is TEntityDescriptor
                    $/GFX/Everything/Descriptor_Unit_M151_MUTT_Reco_DDR/LandMovement,
                    $/GFX/Everything/Descriptor_Unit_M151_MUTT_Reco_DDR/GenericMovement,
                    $/GFX/Everything/Descriptor_Unit_M151_MUTT_Reco_DDR/FacingInfos,
+                   $/GFX/Everything/Descriptor_Unit_M151_MUTT_Reco_DDR/Transporter,
                 ]
             ),
             $/GFX/Everything/Descriptor_Unit_M151_MUTT_Reco_DDR/WeaponManager,
@@ -18837,6 +18846,7 @@ Descriptor_UnitCadavre_M151_MUTT_Reco_DDR is TEntityDescriptor
             $/GFX/Everything/Descriptor_Unit_M151_MUTT_Reco_DDR/LandMovement,
             $/GFX/Everything/Descriptor_Unit_M151_MUTT_Reco_DDR/GenericMovement,
             $/GFX/Everything/Descriptor_Unit_M151_MUTT_Reco_DDR/FacingInfos,
+            $/GFX/Everything/Descriptor_Unit_M151_MUTT_Reco_DDR/Transporter,
 
         // PackSignaux
             ~/PackSignauxModuleDescriptor,
@@ -31476,7 +31486,7 @@ Descriptor_UnitCadavre_TPZ_Fuchs_RASIT_RFA is TEntityDescriptor
         // TypeUnit
             TTypeUnitModuleDescriptor
             (
-                TypeUnitValue                    = ETypeUnit/Vehicle
+                TypeUnitValue                    = ETypeUnit/MBT
                 Nationalite                      = ENationalite/Allied
                 MotherCountry                    = 'RFA'
                 AcknowUnitType                   = ~/TAcknowUnitType_Recon_Vehicle
@@ -32552,6 +32562,192 @@ Descriptor_UnitCadavre_UAZ_469_Konkurs_VDV_SOV is TEntityDescriptor
             $/GFX/Everything/Descriptor_Unit_UAZ_469_Konkurs_VDV_SOV/GenericMovement,
             $/GFX/Everything/Descriptor_Unit_UAZ_469_Konkurs_VDV_SOV/FacingInfos,
             $/GFX/Everything/Descriptor_Unit_UAZ_469_Konkurs_VDV_SOV/MissileCarriage,
+
+        // PackSignaux
+            ~/PackSignauxModuleDescriptor,
+
+        // Debug
+            ~/DebugModuleDescriptor,
+
+    ]
+)
+Descriptor_UnitCadavre_UAZ_469_Reco_DDR is TEntityDescriptor
+(
+    DescriptorId       = GUID:{dccbddcf-3708-411c-96e1-de5958702298}
+    ClassNameForDebug  = 'Unit_CadavreUAZ_469_Reco_DDR'
+    ModulesDescriptors = [
+        // TypeUnit
+            TTypeUnitModuleDescriptor
+            (
+                TypeUnitValue                    = ETypeUnit/Vehicle
+                Nationalite                      = ENationalite/Axis
+                MotherCountry                    = 'DDR'
+                AcknowUnitType                   = ~/TAcknowUnitType_Recon_Vehicle
+                TypeUnitFormation                = 'Reconnaissance'
+            ),
+
+        // Tags
+            TTagsModuleDescriptor
+            (
+            ),
+
+        // Flags
+            TFlagsModuleDescriptor
+            (
+                InitialFlagSet =
+                [
+                    Flag_Detectable,
+                    Flag_LdDetectable,
+                ]
+            ),
+
+        // Position
+            TPositionModuleDescriptor
+            (
+                UseFollowCam               = False
+                StickToGround              = True
+                InGeoDb                    = False
+                PorteurMustBeVisible       = True
+                ClampInWorld               = True
+                ClampOutMap                = False
+                HasNearlyNullBBox          = False
+                GfxDescriptorPorteur       = ~/GfxPorteurUnite
+                Radius                     = ((30) * Metre)
+                RelativeScanningPosition   = ~/DecalageParDefautDuPointDeVision
+                LowAltitudeFlyingAltitude  = ((0) * Metre)
+                NearGroundFlyingAltitude   = ((0) * Metre)
+            ),
+
+        // LinkTeam
+            ~/LinkTeamModuleDescriptor,
+
+        // Cadavre
+            TCadavreModuleDescriptor
+            (
+                ExplodeAtEnd = True
+                KillAsVehicule = True
+                KillAsInfanterie = False
+                KillAsHelico = False
+                KillAsAirplane = False
+                KillAsBatiment = False
+                CadavreDuration = $/GFX/Everything/CadavreDurationApresFeu
+                DisappearanceDuration = 0.0
+                CadavreFireDurationMin = $/GFX/Everything/CadavrePeriodeEnFeu_Minimum
+                CadavreFireDurationMax = $/GFX/Everything/CadavrePeriodeEnFeu_Maximum
+                FadingDuration = 1
+                DamageRatio = 1.
+                DeathExplosionAmmo = ~/Ammo_Mort_Unite_faible
+                SecondaryDeathExplosionAmmo = nil
+                InvulnerablePeriod = $/GFX/Everything/CadavreInvulnerablePeriode
+                ModuleDescriptorsToSteal =
+                [
+                   $/GFX/Everything/Descriptor_Unit_UAZ_469_Reco_DDR/WeaponManager,
+                   $/GFX/Everything/Descriptor_Unit_UAZ_469_Reco_DDR/ApparenceModel,
+                   $/GFX/Everything/Descriptor_Unit_UAZ_469_Reco_DDR/LandMovement,
+                   $/GFX/Everything/Descriptor_Unit_UAZ_469_Reco_DDR/GenericMovement,
+                   $/GFX/Everything/Descriptor_Unit_UAZ_469_Reco_DDR/FacingInfos,
+                   $/GFX/Everything/Descriptor_Unit_UAZ_469_Reco_DDR/Transporter,
+                ]
+            ),
+            $/GFX/Everything/Descriptor_Unit_UAZ_469_Reco_DDR/WeaponManager,
+            $/GFX/Everything/Descriptor_Unit_UAZ_469_Reco_DDR/ApparenceModel,
+            $/GFX/Everything/Descriptor_Unit_UAZ_469_Reco_DDR/LandMovement,
+            $/GFX/Everything/Descriptor_Unit_UAZ_469_Reco_DDR/GenericMovement,
+            $/GFX/Everything/Descriptor_Unit_UAZ_469_Reco_DDR/FacingInfos,
+            $/GFX/Everything/Descriptor_Unit_UAZ_469_Reco_DDR/Transporter,
+
+        // PackSignaux
+            ~/PackSignauxModuleDescriptor,
+
+        // Debug
+            ~/DebugModuleDescriptor,
+
+    ]
+)
+Descriptor_UnitCadavre_UAZ_469_Reco_SOV is TEntityDescriptor
+(
+    DescriptorId       = GUID:{3a15a565-d049-4a72-9f4d-4f5930f71cf2}
+    ClassNameForDebug  = 'Unit_CadavreUAZ_469_Reco_SOV'
+    ModulesDescriptors = [
+        // TypeUnit
+            TTypeUnitModuleDescriptor
+            (
+                TypeUnitValue                    = ETypeUnit/Vehicle
+                Nationalite                      = ENationalite/Axis
+                MotherCountry                    = 'SOV'
+                AcknowUnitType                   = ~/TAcknowUnitType_Reco
+                TypeUnitFormation                = 'Reconnaissance'
+            ),
+
+        // Tags
+            TTagsModuleDescriptor
+            (
+            ),
+
+        // Flags
+            TFlagsModuleDescriptor
+            (
+                InitialFlagSet =
+                [
+                    Flag_Detectable,
+                    Flag_LdDetectable,
+                ]
+            ),
+
+        // Position
+            TPositionModuleDescriptor
+            (
+                UseFollowCam               = False
+                StickToGround              = True
+                InGeoDb                    = False
+                PorteurMustBeVisible       = True
+                ClampInWorld               = True
+                ClampOutMap                = False
+                HasNearlyNullBBox          = False
+                GfxDescriptorPorteur       = ~/GfxPorteurUnite
+                Radius                     = ((30) * Metre)
+                RelativeScanningPosition   = ~/DecalageParDefautDuPointDeVision
+                LowAltitudeFlyingAltitude  = ((0) * Metre)
+                NearGroundFlyingAltitude   = ((0) * Metre)
+            ),
+
+        // LinkTeam
+            ~/LinkTeamModuleDescriptor,
+
+        // Cadavre
+            TCadavreModuleDescriptor
+            (
+                ExplodeAtEnd = True
+                KillAsVehicule = True
+                KillAsInfanterie = False
+                KillAsHelico = False
+                KillAsAirplane = False
+                KillAsBatiment = False
+                CadavreDuration = $/GFX/Everything/CadavreDurationApresFeu
+                DisappearanceDuration = 0.0
+                CadavreFireDurationMin = $/GFX/Everything/CadavrePeriodeEnFeu_Minimum
+                CadavreFireDurationMax = $/GFX/Everything/CadavrePeriodeEnFeu_Maximum
+                FadingDuration = 1
+                DamageRatio = 1.
+                DeathExplosionAmmo = ~/Ammo_Mort_Unite_faible
+                SecondaryDeathExplosionAmmo = nil
+                InvulnerablePeriod = $/GFX/Everything/CadavreInvulnerablePeriode
+                ModuleDescriptorsToSteal =
+                [
+                   $/GFX/Everything/Descriptor_Unit_UAZ_469_Reco_SOV/WeaponManager,
+                   $/GFX/Everything/Descriptor_Unit_UAZ_469_Reco_SOV/ApparenceModel,
+                   $/GFX/Everything/Descriptor_Unit_UAZ_469_Reco_SOV/LandMovement,
+                   $/GFX/Everything/Descriptor_Unit_UAZ_469_Reco_SOV/GenericMovement,
+                   $/GFX/Everything/Descriptor_Unit_UAZ_469_Reco_SOV/FacingInfos,
+                   $/GFX/Everything/Descriptor_Unit_UAZ_469_Reco_SOV/Transporter,
+                ]
+            ),
+            $/GFX/Everything/Descriptor_Unit_UAZ_469_Reco_SOV/WeaponManager,
+            $/GFX/Everything/Descriptor_Unit_UAZ_469_Reco_SOV/ApparenceModel,
+            $/GFX/Everything/Descriptor_Unit_UAZ_469_Reco_SOV/LandMovement,
+            $/GFX/Everything/Descriptor_Unit_UAZ_469_Reco_SOV/GenericMovement,
+            $/GFX/Everything/Descriptor_Unit_UAZ_469_Reco_SOV/FacingInfos,
+            $/GFX/Everything/Descriptor_Unit_UAZ_469_Reco_SOV/Transporter,
 
         // PackSignaux
             ~/PackSignauxModuleDescriptor,
@@ -34820,10 +35016,10 @@ Descriptor_UnitCadavre_Wiesel_20mm_RFA is TEntityDescriptor
         // TypeUnit
             TTypeUnitModuleDescriptor
             (
-                TypeUnitValue                    = ETypeUnit/MBT
+                TypeUnitValue                    = ETypeUnit/Vehicle
                 Nationalite                      = ENationalite/Allied
                 MotherCountry                    = 'RFA'
-                AcknowUnitType                   = ~/TAcknowUnitType_Tank
+                AcknowUnitType                   = ~/TAcknowUnitType_TankDestroyerMissile
                 TypeUnitFormation                = 'Char'
             ),
 
@@ -34877,7 +35073,7 @@ Descriptor_UnitCadavre_Wiesel_20mm_RFA is TEntityDescriptor
                 CadavreFireDurationMax = $/GFX/Everything/CadavrePeriodeEnFeu_Maximum
                 FadingDuration = 1
                 DamageRatio = 1.
-                DeathExplosionAmmo = ~/Ammo_Mort_Unite_forte
+                DeathExplosionAmmo = ~/Ammo_Mort_Unite_faible
                 SecondaryDeathExplosionAmmo = nil
                 InvulnerablePeriod = $/GFX/Everything/CadavreInvulnerablePeriode
                 ModuleDescriptorsToSteal =

@@ -638,7 +638,7 @@ SubGenerators_BMP_1P_reco_SOV is TMissileCarriageSubDepictionGenerator
             (
                 MissileNumber = 0
                 PhysicalProperty = "Tourelle4_MissileCount"
-                ProjectileModelFile = ModelFile_Missile_Malyutka
+                ProjectileModelFile = ModelFile_Missile_Konkurs
             )
             MissileIndex = 1
             WeaponIndex = 4
@@ -649,7 +649,7 @@ SubGenerators_BMP_1P_reco_SOV is TMissileCarriageSubDepictionGenerator
             (
                 MissileNumber = 1
                 PhysicalProperty = "Tourelle4_MissileCount"
-                ProjectileModelFile = ModelFile_Missile_Malyutka
+                ProjectileModelFile = ModelFile_Missile_Konkurs
             )
             MissileIndex = 2
             WeaponIndex = 4
@@ -660,7 +660,7 @@ SubGenerators_BMP_1P_reco_SOV is TMissileCarriageSubDepictionGenerator
             (
                 MissileNumber = 2
                 PhysicalProperty = "Tourelle4_MissileCount"
-                ProjectileModelFile = ModelFile_Missile_Malyutka
+                ProjectileModelFile = ModelFile_Missile_Konkurs
             )
             MissileIndex = 3
             WeaponIndex = 4
@@ -671,7 +671,7 @@ SubGenerators_BMP_1P_reco_SOV is TMissileCarriageSubDepictionGenerator
             (
                 MissileNumber = 3
                 PhysicalProperty = "Tourelle4_MissileCount"
-                ProjectileModelFile = ModelFile_Missile_Malyutka
+                ProjectileModelFile = ModelFile_Missile_Konkurs
             )
             MissileIndex = 4
             WeaponIndex = 4
@@ -691,7 +691,7 @@ SubGenerators_Showroom_BMP_1P_reco_SOV is TMissileCarriageSubDepictionGenerator
         (
             Depiction = TemplateDepictionMissileShowroom
             (
-                ProjectileModelFile = ModelFile_Missile_Malyutka
+                ProjectileModelFile = ModelFile_Missile_Konkurs
             )
             MissileIndex = 1
             WeaponIndex = 4
@@ -700,7 +700,7 @@ SubGenerators_Showroom_BMP_1P_reco_SOV is TMissileCarriageSubDepictionGenerator
         (
             Depiction = TemplateDepictionMissileShowroom
             (
-                ProjectileModelFile = ModelFile_Missile_Malyutka
+                ProjectileModelFile = ModelFile_Missile_Konkurs
             )
             MissileIndex = 2
             WeaponIndex = 4
@@ -709,7 +709,7 @@ SubGenerators_Showroom_BMP_1P_reco_SOV is TMissileCarriageSubDepictionGenerator
         (
             Depiction = TemplateDepictionMissileShowroom
             (
-                ProjectileModelFile = ModelFile_Missile_Malyutka
+                ProjectileModelFile = ModelFile_Missile_Konkurs
             )
             MissileIndex = 3
             WeaponIndex = 4
@@ -718,7 +718,7 @@ SubGenerators_Showroom_BMP_1P_reco_SOV is TMissileCarriageSubDepictionGenerator
         (
             Depiction = TemplateDepictionMissileShowroom
             (
-                ProjectileModelFile = ModelFile_Missile_Malyutka
+                ProjectileModelFile = ModelFile_Missile_Konkurs
             )
             MissileIndex = 4
             WeaponIndex = 4
@@ -12748,7 +12748,7 @@ SubGenerators_Su_25_SOV is TMissileCarriageSubDepictionGenerator
             (
                 MissileNumber = 0
                 PhysicalProperty = "Tourelle2_MissileCount"
-                ProjectileModelFile = ModelFile_Missile_Kh_29L
+                ProjectileModelFile = ModelFile_Missile_AS_30L
             )
             MissileIndex = 1
             WeaponIndex = 2
@@ -12759,9 +12759,31 @@ SubGenerators_Su_25_SOV is TMissileCarriageSubDepictionGenerator
             (
                 MissileNumber = 1
                 PhysicalProperty = "Tourelle2_MissileCount"
-                ProjectileModelFile = ModelFile_Missile_Kh_29L
+                ProjectileModelFile = ModelFile_Missile_AS_30L
             )
             MissileIndex = 2
+            WeaponIndex = 2
+        ),
+        TMissileCarriageSubDepictionMissileInfo
+        (
+            Depiction = TemplateDepictionMissileAirUnit
+            (
+                MissileNumber = 2
+                PhysicalProperty = "Tourelle2_MissileCount"
+                ProjectileModelFile = ModelFile_Missile_AS_30L
+            )
+            MissileIndex = 3
+            WeaponIndex = 2
+        ),
+        TMissileCarriageSubDepictionMissileInfo
+        (
+            Depiction = TemplateDepictionMissileAirUnit
+            (
+                MissileNumber = 3
+                PhysicalProperty = "Tourelle2_MissileCount"
+                ProjectileModelFile = ModelFile_Missile_AS_30L
+            )
+            MissileIndex = 4
             WeaponIndex = 2
         ),
         TMissileCarriageSubDepictionMissileInfo
@@ -12801,7 +12823,7 @@ SubGenerators_Showroom_Su_25_SOV is TMissileCarriageSubDepictionGenerator
         (
             Depiction = TemplateDepictionMissileShowroom
             (
-                ProjectileModelFile = ModelFile_Missile_Kh_29L
+                ProjectileModelFile = ModelFile_Missile_AS_30L
             )
             MissileIndex = 1
             WeaponIndex = 2
@@ -12810,9 +12832,27 @@ SubGenerators_Showroom_Su_25_SOV is TMissileCarriageSubDepictionGenerator
         (
             Depiction = TemplateDepictionMissileShowroom
             (
-                ProjectileModelFile = ModelFile_Missile_Kh_29L
+                ProjectileModelFile = ModelFile_Missile_AS_30L
             )
             MissileIndex = 2
+            WeaponIndex = 2
+        ),
+        TMissileCarriageSubDepictionMissileInfo
+        (
+            Depiction = TemplateDepictionMissileShowroom
+            (
+                ProjectileModelFile = ModelFile_Missile_AS_30L
+            )
+            MissileIndex = 3
+            WeaponIndex = 2
+        ),
+        TMissileCarriageSubDepictionMissileInfo
+        (
+            Depiction = TemplateDepictionMissileShowroom
+            (
+                ProjectileModelFile = ModelFile_Missile_AS_30L
+            )
+            MissileIndex = 4
             WeaponIndex = 2
         ),
         TMissileCarriageSubDepictionMissileInfo

@@ -1490,20 +1490,18 @@ DefaultStyleGuide is TUISpecificDefaultStyleGuide
                                                             ( ~/ComponentState/ToggleHighlighted,     TColorRTTI( Color = [220,220,220,153] ) ),
                                                         ]),
         ("playerHelper/Otan_line",                      MAP [
-                                                            ( ~/ComponentState/Grayed,                TColorRTTI( Color = [120,120,120,128] ) ),
-                                                            ( ~/ComponentState/Normal,                TColorRTTI( Color = Otan ) ),
+                                                            ( ~/ComponentState/Grayed,                TColorRTTI( Color = [120,120,120,0] ) ),
+                                                            ( ~/ComponentState/Normal,                TColorRTTI( Color = Transparent ) ),
                                                             ( ~/ComponentState/Highlighted,           TColorRTTI( Color = Otan ) ),
-                                                            ( ~/ComponentState/Clicked,               TColorRTTI( Color = [220,220,220,255] ) ),
-                                                            ( ~/ComponentState/Toggled,               TColorRTTI( Color = [220,220,220,255] ) ),
+                                                            ( ~/ComponentState/Clicked,               TColorRTTI( Color = [220,220,220,0] ) ),
+                                                            ( ~/ComponentState/Toggled,               TColorRTTI( Color = [220,220,220,0] ) ),
                                                             ( ~/ComponentState/ToggleHighlighted,     TColorRTTI( Color = [220,220,220,255] ) ),
                                                         ]),
-        ("playerHelper/Cover/Otan_line",                      MAP [
-                                                            ( ~/ComponentState/Grayed,                TColorRTTI( Color = [120,120,120,128] ) ),
-                                                            ( ~/ComponentState/Normal,                TColorRTTI( Color = Cyan ) ),
-                                                            ( ~/ComponentState/Highlighted,           TColorRTTI( Color = Cyan ) ),
-                                                            ( ~/ComponentState/Clicked,               TColorRTTI( Color = [220,220,220,255] ) ),
-                                                            ( ~/ComponentState/Toggled,               TColorRTTI( Color = Cyan ) ),
-                                                            ( ~/ComponentState/ToggleHighlighted,     TColorRTTI( Color = [220,220,220,255] ) ),
+
+        ("playerHelper/Cover/Otan_line",                MAP [
+                                                            ( ~/ComponentState/Normal,                TColorRTTI( Color = [42,42,42,255] ) ),
+                                                            ( ~/ComponentState/Highlighted,           TColorRTTI( Color = [42,42,42,255] ) ),
+                                                            ( ~/ComponentState/Toggled,               TColorRTTI( Color = [42,42,42,255] ) ),
                                                         ]),
 
         ("playerHelper/Otan_element",                      MAP [

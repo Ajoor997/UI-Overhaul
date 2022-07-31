@@ -25,8 +25,8 @@ SpecificInGameHUDTimePanelViewMainComponent is BUCKListDescriptor
         MagnifiableOffset = [-10,0] 
     )
     FirstMargin = TRTTILength ( Magnifiable = 5)
-    InterItemMargin = TRTTILength( Magnifiable = 5 )
-    LastMargin = TRTTILength ( Magnifiable = 5)
+    InterItemMargin = TRTTILength( Magnifiable = 10 )
+    LastMargin = TRTTILength ( Magnifiable = 10)
     Axis = ~/ListAxis/Vertical
     BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
     Elements =
@@ -38,19 +38,16 @@ SpecificInGameHUDTimePanelViewMainComponent is BUCKListDescriptor
         BUCKListElementDescriptor
         (
             // replace buttons with different texture
-            ComponentDescriptor = ~/TimePanelSpeedButtons
+            ComponentDescriptor =  ~/TimePanelSpeedButtons
+
         ),
     ]
 
-    BackgroundComponents =
-    [
-        PanelRoundedCorner(
-            //RoundedVertexes = [false,false,false,false]
-            BackgroundBlockColorToken = 'AirUnitMiniCard'
-            BorderLineColorToken = 'White_Mod'
-            BorderThicknessToken = '2'
-        )
-    ]
+    HasBackground = true
+    HasBorder = true
+    BackgroundBlockColorToken = 'AirUnitMiniCard'
+    BorderLineColorToken = 'White_Mod'
+    BorderThicknessToken = '2'
 )
 
 //-------------------------------------------------------------------------------------
@@ -158,6 +155,7 @@ private TimePanelSpeedButtons is BUCKListDescriptor
     ComponentFrame = TUIFramePropertyRTTI
     (
         MagnifiableWidthHeight = [0.0, 25.0]
+        MagnifiableOffset = [80,0] 
     )
 
     Axis = ~/ListAxis/Horizontal
@@ -379,5 +377,3 @@ UISpecificInGameHUDTimePanelViewDescriptor is TUISpecificInGameHUDTimePanelViewD
 
     ShortcutUILayer = $/M3D/Input/UserInputLayerHandler/InputLayer_InGameShortcuts
 )
-
-

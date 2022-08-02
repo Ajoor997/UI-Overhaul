@@ -1410,12 +1410,7 @@ private template RightLabel
             (
                 ElementName = "UnitIconSensibleArea"
 
-                ComponentFrame = TUIFramePropertyRTTI
-                (
-                    AlignementToFather = [0.0, 0.5]
-                    AlignementToAnchor = [0.0, 0.5]
-                )
-
+                ComponentFrame = TUIFramePropertyRTTI()
                 FitStyle = ~/ContainerFitStyle/FitToContent
 
                 Components =
@@ -1427,7 +1422,7 @@ private template RightLabel
                         AlignementToAnchor = [0.0, 0.5]
                         HasBorder = false
                         LocalRenderLayer = 3
-                    )
+                    ),
                 ] 
             )
         ),
@@ -1460,6 +1455,10 @@ private SupplyFeedbackIcons is TBUCKSpecificLabelFeedbackIconsDescriptor
         TextureDrawer = 'ColorMultiply'
         TextureFrame = TUIFramePropertyRTTI(RelativeWidthHeight = [1.0, 1.0])
 
+        UniformDrawer = $/UserInterface/UIUniformDrawer
+        BackgroundBlockColorToken = 'UnitLabelInfo_Mod'
+        HasBackground = true
+
         FeedbackTexture = "icone_fuel"
         FeedbackRefillTexture = "icone_fuel_refill"
     )
@@ -1471,6 +1470,10 @@ private SupplyFeedbackIcons is TBUCKSpecificLabelFeedbackIconsDescriptor
         IsClippable = true
         TextureDrawer = 'ColorMultiply'
         TextureFrame = TUIFramePropertyRTTI(RelativeWidthHeight = [1.0, 1.0])
+
+        UniformDrawer = $/UserInterface/UIUniformDrawer
+        BackgroundBlockColorToken = 'Supply_Yellow_Mod'
+        HasBackground = true
 
         FeedbackTexture = "icone_bullets"
         FeedbackRefillTexture = "icone_bullets_refill"
@@ -1484,6 +1487,10 @@ private SupplyFeedbackIcons is TBUCKSpecificLabelFeedbackIconsDescriptor
         TextureDrawer = 'ColorMultiply'
         TextureFrame = TUIFramePropertyRTTI(RelativeWidthHeight = [1.0, 1.0])
 
+        UniformDrawer = $/UserInterface/UIUniformDrawer
+        BackgroundBlockColorToken = 'Supply_Orange_Mod'
+        HasBackground = true
+
         FeedbackTexture = "icone_shell"
         FeedbackRefillTexture = "icone_shell_refill"
     )
@@ -1495,6 +1502,10 @@ private SupplyFeedbackIcons is TBUCKSpecificLabelFeedbackIconsDescriptor
         IsClippable = true
         TextureDrawer = 'ColorMultiply'
         TextureFrame = TUIFramePropertyRTTI( RelativeWidthHeight = [1.0, 1.0] )
+
+        UniformDrawer = $/UserInterface/UIUniformDrawer
+        BackgroundBlockColorToken = 'Supply_Purple_Mod'
+        HasBackground = true
 
         FeedbackTexture = "icone_missile"
         FeedbackRefillTexture = "icone_missile_refill"
@@ -1508,6 +1519,10 @@ private SupplyFeedbackIcons is TBUCKSpecificLabelFeedbackIconsDescriptor
         TextureDrawer = 'ColorMultiply'
         TextureFrame = TUIFramePropertyRTTI(RelativeWidthHeight = [1.0, 1.0])
 
+        UniformDrawer = $/UserInterface/UIUniformDrawer
+        BackgroundBlockColorToken = 'Supply_Gray_Mod'
+        HasBackground = true
+
         FeedbackTexture = "icone_shell"
         FeedbackRefillTexture = "icone_shell_refill"
     )
@@ -1519,6 +1534,10 @@ private SupplyFeedbackIcons is TBUCKSpecificLabelFeedbackIconsDescriptor
         IsClippable = true
         TextureDrawer = 'ColorMultiply'
         TextureFrame = TUIFramePropertyRTTI(RelativeWidthHeight = [1.0, 1.0])
+
+        UniformDrawer = $/UserInterface/UIUniformDrawer
+        BackgroundBlockColorToken = 'Supply_Orange_Mod'
+        HasBackground = true
 
         FeedbackTexture = "icone_shell"
         FeedbackRefillTexture = "icone_shell_refill"
@@ -1532,6 +1551,10 @@ private SupplyFeedbackIcons is TBUCKSpecificLabelFeedbackIconsDescriptor
         TextureDrawer = 'ColorMultiply'
         TextureFrame = TUIFramePropertyRTTI(RelativeWidthHeight = [1.0, 1.0])
 
+        UniformDrawer = $/UserInterface/UIUniformDrawer
+        BackgroundBlockColorToken = 'Supply_Orange_Mod'
+        HasBackground = true
+
         FeedbackTexture = "icone_shell"
         FeedbackRefillTexture = "icone_shell_refill"
     )
@@ -1544,6 +1567,10 @@ private SupplyFeedbackIcons is TBUCKSpecificLabelFeedbackIconsDescriptor
         TextureDrawer = 'ColorMultiply'
         TextureFrame = TUIFramePropertyRTTI(RelativeWidthHeight = [1.0, 1.0])
 
+        UniformDrawer = $/UserInterface/UIUniformDrawer
+        BackgroundBlockColorToken = 'Supply_Orange_Mod'
+        HasBackground = true
+
         FeedbackTexture = "icone_shell"
         FeedbackRefillTexture = "icone_shell"
     )
@@ -1555,6 +1582,10 @@ private SupplyFeedbackIcons is TBUCKSpecificLabelFeedbackIconsDescriptor
         IsClippable = true
         TextureDrawer = 'ColorMultiply'
         TextureFrame = TUIFramePropertyRTTI(RelativeWidthHeight = [1.0, 1.0])
+
+        UniformDrawer = $/UserInterface/UIUniformDrawer
+        BackgroundBlockColorToken = 'Supply_Red_Mod'
+        HasBackground = true
 
         FeedbackTexture = "icone_life"
         FeedbackRefillTexture = "icone_life"
@@ -1714,6 +1745,28 @@ is BUCKListDescriptor
                 LocalRenderLayer = 1
             )
         ),
+        {BUCKListElementDescriptor
+        (
+            ComponentDescriptor = BUCKSensibleAreaDescriptor
+            (
+                ElementName = "UnitIconSensibleArea"
+
+                ComponentFrame = TUIFramePropertyRTTI()
+                FitStyle = ~/ContainerFitStyle/FitToContent
+
+                Components =
+                [
+                    UnitLabelUnitIcon
+                    (
+                        IsForMultiSelection = <IsForMultiSelection>
+                        AlignementToFather = [0.0, 0.5]
+                        AlignementToAnchor = [0.0, 0.5]
+                        HasBorder = false
+                        LocalRenderLayer = 3
+                    ),
+                ] 
+            )
+        ),}
         BUCKListElementDescriptor
         (
             ComponentDescriptor = UnitLabelUnitMoraleGaugeBUCKComponent

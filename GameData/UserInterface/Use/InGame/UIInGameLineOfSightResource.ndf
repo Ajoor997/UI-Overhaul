@@ -22,7 +22,7 @@ FeedbackLineOfSightDescriptor is TFeedbackLineOfSightDescriptor
 (
     DistanceVisionMax = 10000 * Metre // distance d'affichache
     TheoreticalMaxVision = 10000 * Metre // utilisé pour les calculs
-    AnimationDuration = 0.35*5
+    AnimationDuration = 0.05*6
 
     VisionOffset = DecalageParDefautDuPointDeVision
 
@@ -48,54 +48,39 @@ FeedbackLineOfSightDescriptor is TFeedbackLineOfSightDescriptor
     CirclesDescriptors =
     [
         Template_CircleDescriptor(
-            Radius = 100 * 2.83 * Metre //2000
+            Radius = 100 * Metre div MultiplicateurMetreRTSVersDistanceFeedbackTactique
             Thickness = 1000
             ShowDistanceText = true
-            TextSize = 2000
+            TextSize = 2500
             Color = [0, 153, 0, 100]
          ),
         Template_CircleDescriptor(
-            Radius = 500 * 2.83 * Metre //2000
-            Thickness = 1200
+            Radius = 500 * Metre div MultiplicateurMetreRTSVersDistanceFeedbackTactique
+            Thickness = 1000
             ShowDistanceText = true
-            TextSize = 2500
+            TextSize = 3000
             Color = [0, 201, 0, 150]
          ),
         Template_CircleDescriptor(
-            Radius = 1000 * 2.83 * Metre //2000
-            Thickness = 1400
+            Radius = 1000 * Metre div MultiplicateurMetreRTSVersDistanceFeedbackTactique
+            Thickness = 1000
             ShowDistanceText = true
-            TextSize = 3000
             Color = [0, 153, 0, 200]
          ),
         Template_CircleDescriptor(
-            Radius = 1500 * 2.83 * Metre //2000
-            Thickness = 1600
+            Radius = 1500 * Metre div MultiplicateurMetreRTSVersDistanceFeedbackTactique
+            Thickness = 1000
             ShowDistanceText = true
             TextSize = 3500
             Color = [255, 69, 0, 100]
          ),
         Template_CircleDescriptor(
-            Radius = 2000 * 2.83 * Metre //2000
-            Thickness = 1800
+            Radius = 2000 * Metre div MultiplicateurMetreRTSVersDistanceFeedbackTactique
+            Thickness = 1200
             ShowDistanceText = true
             TextSize = 4000
-            Color = [255, 69, 0, 200]
-         ),
-        Template_CircleDescriptor(
-            Radius = 2500 * 2.83 * Metre //2000
-            Thickness = 2000
-            ShowDistanceText = true
-            TextSize = 4500
-            Color = [255, 0, 0, 100]
-         ),
-        Template_CircleDescriptor(
-            Radius = 3250 * 2.83 * Metre //2000
-            Thickness = 2200
-            ShowDistanceText = true
-            TextSize = 5000
             Color = [255, 0, 0, 200]
-         ),
+        )
     ]
 
     CircleOverrideDescriptor = TFeedbackLineOfSightCircleDescriptor(

@@ -706,6 +706,31 @@ UnitLabelUnitSupplyGaugeBUCKComponent is TBUCKSpecificLabelGaugeDescriptor
     ]
 )
 
+UnitLabelUnitHPGaugeBUCKComponent is TBUCKSpecificLabelGaugeDescriptor
+(
+    ElementName = 'UnitDamage'
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [10.0, 32.0]
+        MagnifiableOffset = [0.0, 0.0]
+        AlignementToFather = [0.0, 0.5]
+        AlignementToAnchor = [0.0, 0.5]
+    )
+    IsClippable = true
+
+    UniformAntiAliasedDrawer = $/UserInterface/UIUniformAntiAliasedDrawer
+    Vertical = true
+    BackgroundColorToken = "UnitLabel/GaugeBackground"
+    GaugeColorToken = "UnitLabel/SupplyGauge"
+    GaugeFillerSize = [6.0, 30.0]
+
+    TextureDrawer = 'ColorMultiply'
+
+    TextureFrame = TUIFramePropertyRTTI(RelativeWidthHeight = [1.0, 1.0])
+
+)
+
+
 // -------------------------------------------------------------------------------------------------
 // Liste des icones additionnels
 
@@ -1427,6 +1452,7 @@ private template RightLabel
             )
         ),
        BUCKListElementDescriptor(ComponentDescriptor = ~/UnitLabelUnitSupplyGaugeBUCKComponent),
+       //BUCKListElementDescriptor(ComponentDescriptor = ~/UnitLabelUnitHPGaugeBUCKComponent),
        BUCKListElementDescriptor(ComponentDescriptor = ~/SupplyFeedbackIcons)
     ]
 )
@@ -1459,6 +1485,10 @@ private SupplyFeedbackIcons is TBUCKSpecificLabelFeedbackIconsDescriptor
         BackgroundBlockColorToken = 'UnitLabelInfo_Mod'
         HasBackground = true
 
+        HasBorder = true
+        BorderThicknessToken = "2"
+        BorderLineColorToken = "White_Mod"
+
         FeedbackTexture = "icone_fuel"
         FeedbackRefillTexture = "icone_fuel_refill"
     )
@@ -1474,6 +1504,10 @@ private SupplyFeedbackIcons is TBUCKSpecificLabelFeedbackIconsDescriptor
         UniformDrawer = $/UserInterface/UIUniformDrawer
         BackgroundBlockColorToken = 'Supply_Yellow_Mod'
         HasBackground = true
+
+        HasBorder = true
+        BorderThicknessToken = "2"
+        BorderLineColorToken = "White_Mod"
 
         FeedbackTexture = "icone_bullets"
         FeedbackRefillTexture = "icone_bullets_refill"
@@ -1491,6 +1525,10 @@ private SupplyFeedbackIcons is TBUCKSpecificLabelFeedbackIconsDescriptor
         BackgroundBlockColorToken = 'Supply_Orange_Mod'
         HasBackground = true
 
+        HasBorder = true
+        BorderThicknessToken = "2"
+        BorderLineColorToken = "White_Mod"
+
         FeedbackTexture = "icone_shell"
         FeedbackRefillTexture = "icone_shell_refill"
     )
@@ -1506,6 +1544,10 @@ private SupplyFeedbackIcons is TBUCKSpecificLabelFeedbackIconsDescriptor
         UniformDrawer = $/UserInterface/UIUniformDrawer
         BackgroundBlockColorToken = 'Supply_Purple_Mod'
         HasBackground = true
+
+        HasBorder = true
+        BorderThicknessToken = "2"
+        BorderLineColorToken = "White_Mod"
 
         FeedbackTexture = "icone_missile"
         FeedbackRefillTexture = "icone_missile_refill"
@@ -1523,6 +1565,10 @@ private SupplyFeedbackIcons is TBUCKSpecificLabelFeedbackIconsDescriptor
         BackgroundBlockColorToken = 'Supply_Gray_Mod'
         HasBackground = true
 
+        HasBorder = true
+        BorderThicknessToken = "2"
+        BorderLineColorToken = "White_Mod"
+
         FeedbackTexture = "icone_shell"
         FeedbackRefillTexture = "icone_shell_refill"
     )
@@ -1538,6 +1584,10 @@ private SupplyFeedbackIcons is TBUCKSpecificLabelFeedbackIconsDescriptor
         UniformDrawer = $/UserInterface/UIUniformDrawer
         BackgroundBlockColorToken = 'Supply_Orange_Mod'
         HasBackground = true
+
+        HasBorder = true
+        BorderThicknessToken = "2"
+        BorderLineColorToken = "White_Mod"
 
         FeedbackTexture = "icone_shell"
         FeedbackRefillTexture = "icone_shell_refill"
@@ -1555,6 +1605,10 @@ private SupplyFeedbackIcons is TBUCKSpecificLabelFeedbackIconsDescriptor
         BackgroundBlockColorToken = 'Supply_Orange_Mod'
         HasBackground = true
 
+        HasBorder = true
+        BorderThicknessToken = "2"
+        BorderLineColorToken = "White_Mod"
+
         FeedbackTexture = "icone_shell"
         FeedbackRefillTexture = "icone_shell_refill"
     )
@@ -1571,8 +1625,12 @@ private SupplyFeedbackIcons is TBUCKSpecificLabelFeedbackIconsDescriptor
         BackgroundBlockColorToken = 'Supply_Orange_Mod'
         HasBackground = true
 
+        HasBorder = true
+        BorderThicknessToken = "2"
+        BorderLineColorToken = "White_Mod"
+
         FeedbackTexture = "icone_shell"
-        FeedbackRefillTexture = "icone_shell"
+        FeedbackRefillTexture = "icone_shell_refill"
     )
 
     RepairIcon = TBUCKSpecificLabelFeedbackIconDescriptor
@@ -1587,8 +1645,12 @@ private SupplyFeedbackIcons is TBUCKSpecificLabelFeedbackIconsDescriptor
         BackgroundBlockColorToken = 'Supply_Red_Mod'
         HasBackground = true
 
+        HasBorder = true
+        BorderThicknessToken = "2"
+        BorderLineColorToken = "White_Mod"
+
         FeedbackTexture = "icone_life"
-        FeedbackRefillTexture = "icone_life"
+        FeedbackRefillTexture = "icone_life_refill"
     )
 )
 

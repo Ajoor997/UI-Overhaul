@@ -83,7 +83,7 @@ export Constantes is TTunableConstante
     RegenerationPinnedEnCombat = 0 //0.5
     TimerRechercheDeCibleRiposte = -1
     TagRadioArtillerie = "Radio"
-    PorteeRadioArtillerie = 8000 * Metre //7500
+    PorteeRadioArtillerie = 6000 * Metre //7500
     EfficiencyShotSearchDistanceTolerance = 100.0
 
     PerteDeSuppressParPointDeVieEntierPerdu = 100.0
@@ -129,7 +129,17 @@ export Constantes is TTunableConstante
     RadiusRevealUnites = 1000.0
     RevealUnitesRestantes = true
 
-    TagsRequiredToAvoidDefeat = []
+    TagsRequiredToAvoidDefeat = MAP
+    [
+        (CombatRule/NotSpecified,   []),
+        (CombatRule/Destruction,    ["InfmapCommander"]),
+    ]
+    TimeBeforeSuddenDeathInSeconds = MAP
+    [
+        (CombatRule/NotSpecified,   0),
+        (CombatRule/Destruction,   60),
+    ]
+
 
     TagControleZone = "InfmapCommander"
     DureeDeploiementControleZone = 0.2
@@ -314,7 +324,7 @@ ModernWarfareConstantes is TModernWarfareTunableConstante
 
 //---------------------------- Constantes Affichage ---------------------------------------//
 
-    MultiplicateurMetreRTSVersDistanceFeedbackTactique = 1.0 div 2.83
+    MultiplicateurMetreRTSVersDistanceFeedbackTactique = MultiplicateurMetreRTSVersDistanceFeedbackTactique
 
 //---------------------------- Constantes Anti SW -----------------------------------------//
     BonusFactorForAntiSW = 50.0// Score bonus max possible
@@ -417,15 +427,6 @@ ModernWarfareConstantes is TModernWarfareTunableConstante
     MoteurHelicos_TempsArret = 8 * Seconde  // 4
     MoteurHelicos_TempsDemarrage = 4 * Seconde  // 1
     MultiplicateurConsommationUnitesArretees = 0.0 // Entre 0 et 1
-
-//------------------------- Constantes Option_Graphique -----------------------------------//
-
-    // Valeur de 0 à 255
-    AlphaCerclePorteeVisionSelection = 130
-    AlphaGhostProdBatimentDeplace = 100
-    AlphaGhostProdBatimentPose = 100
-    AlphaGhostProdUniteDeplace = 100
-    AlphaGhostProdUnitePose = 100
 
 //--------------------------- Constantes SpreadOrder --------------------------------------//
 

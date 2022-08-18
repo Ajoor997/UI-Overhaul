@@ -93,7 +93,7 @@ MinMaxValuesInterfaceHelper is TWeaponsMinMaxValuesInterfaceHelper
                )
                SplashDamageRadius = TMinMaxValue (
                        Min = 5.0 * Metre // Howz Canon 2A18 Howitzer 122mm SMOKE
-                       Max = 330.0 * Metre // RocketArt 9M55K5 300mm
+                       Max = 454.0 * Metre // RocketArt M26 227mm
                )
                MaxRange = TMinMaxValue (
                        Min = 10004.0 // RocketArt thermobaric 220mm x30
@@ -108,15 +108,15 @@ MinMaxValuesInterfaceHelper is TWeaponsMinMaxValuesInterfaceHelper
                        Max = 0.0 // Howz Canon 2A18 Howitzer 122mm
                )
                AimTime = TMinMaxValue (
-                       Min = 15.0 // Howz Canon 2A18 Howitzer 122mm
-                       Max = 20.0 // RocketArt M21OF 122mm x12
+                       Min = 20.0 // Howz Canon 2A18 Howitzer 122mm
+                       Max = 20.0 // Howz Canon 2A18 Howitzer 122mm
                )
                ReloadTime = TMinMaxValue (
                        Min = 12.0 // RocketArt M21OF 122mm x12
                        Max = 60.0 // RocketArt thermobaric 220mm x30
                )
                TurretSpeed = TMinMaxValue (
-                       Min = 30.0 // RocketArt M21OF 122mm
+                       Min = 30.0 // RocketArt M26 227mm
                        Max = 120.0 // Howz Canon 2A18 Howitzer 122mm SMOKE
                )
                Accuracy = TMinMaxValue (
@@ -128,7 +128,7 @@ MinMaxValuesInterfaceHelper is TWeaponsMinMaxValuesInterfaceHelper
                        Max = 0.0 // Howz Canon 2A18 Howitzer 122mm
                )
                RateOfFire = TMinMaxValue (
-                       Min = 3.870967741935484 // Howz Canon 2A44 Howitzer 203mm late
+                       Min = 3.3333333333333335 // Howz Canon 2A44 Howitzer 203mm late
                        Max = 21.176470588235293 // RocketArt M21OF 122mm x12
                )
                TimeBetweenTwoShots = TMinMaxValue (
@@ -161,11 +161,11 @@ MinMaxValuesInterfaceHelper is TWeaponsMinMaxValuesInterfaceHelper
                // SuppressDamages x weapon_count_ (Number of weapons)
                SuppressDamages = TMinMaxValue (
                        Min = 1.0 // Canon AP 2A18 122mm
-                       Max = 198.0 // Canon HE 165mm AVRE
+                       Max = 219.0 // Canon HE 165mm AVRE
                )
                SplashDamageRadius = TMinMaxValue (
                        Min = 1.0 * Metre // Canon AP 2A18 122mm
-                       Max = 213.0 * Metre // Canon HE 152mm Sheridan
+                       Max = 304.0 * Metre // Canon HE 152mm Sheridan
                )
                MaxRange = TMinMaxValue (
                        Min = 4004.0 // RocketInf M40A1 RCL 106mm TOWED
@@ -256,7 +256,7 @@ MinMaxValuesInterfaceHelper is TWeaponsMinMaxValuesInterfaceHelper
                        Max = 1.0 // MMG M60 7 62mm
                )
                ReloadTime = TMinMaxValue (
-                       Min = 1.25 // SAW RPK_74 5_56mm
+                       Min = 1.85 // SAW RPK_74 5_56mm
                        Max = 3.0 // MMG PKT 7 62mm
                )
                TurretSpeed = TMinMaxValue (
@@ -325,7 +325,7 @@ MinMaxValuesInterfaceHelper is TWeaponsMinMaxValuesInterfaceHelper
                )
                AimTime = TMinMaxValue (
                        Min = 1.0 // ATGM 9M117 Bastion
-                       Max = 1.0 // ATGM 9M117 Bastion
+                       Max = 2.0 // ATGM BGM71C ITOW
                )
                ReloadTime = TMinMaxValue (
                        Min = 5.0 // ATGM 9M117 Bastion
@@ -400,8 +400,8 @@ MinMaxValuesInterfaceHelper is TWeaponsMinMaxValuesInterfaceHelper
                        Max = 1.0 // FM M16
                )
                ReloadTime = TMinMaxValue (
-                       Min = 0.4 // PM AKSU_74
-                       Max = 1.95 // FM G3KA4
+                       Min = 0.6 // PM AKSU_74
+                       Max = 2.1 // FM G3KA4
                )
                TurretSpeed = TMinMaxValue (
                        Min = 360.0 // FM M16
@@ -416,16 +416,16 @@ MinMaxValuesInterfaceHelper is TWeaponsMinMaxValuesInterfaceHelper
                        Max = 40.0 // PM AKSU_74
                )
                RateOfFire = TMinMaxValue (
-                       Min = 92.3076923076923 // FM G3KA4
-                       Max = 450.0 // PM AKSU_74
+                       Min = 85.71428571428571 // FM G3KA4
+                       Max = 300.0 // PM AKSU_74
                )
                Penetration = TMinMaxValue (
                        Min = 3 // FM M16
                        Max = 4 // PM AKSU_74
                )
                TimeBetweenTwoShots = TMinMaxValue (
-                       Min = 0.4 // PM AKSU_74
-                       Max = 1.95 // FM G3KA4
+                       Min = 0.6 // PM AKSU_74
+                       Max = 2.1 // FM G3KA4
                )
                NbShotsBySalvo = TMinMaxValue (
                        Min = 1.0 // FM M16
@@ -444,7 +444,7 @@ MinMaxValuesInterfaceHelper is TWeaponsMinMaxValuesInterfaceHelper
                // PhysicalDamages x weapon_count_ (Number of weapons)
                PhysicalDamages = TMinMaxValue (
                        Min = 1.0 // RocketInf M72 LAW 66mm
-                       Max = 1.68 // RocketInf M202 Flash 66mm
+                       Max = 1.4 // RocketInf M202 Flash 66mm
                )
                // SuppressDamages x weapon_count_ (Number of weapons)
                SuppressDamages = TMinMaxValue (
@@ -556,8 +556,8 @@ MinMaxValuesInterfaceHelper is TWeaponsMinMaxValuesInterfaceHelper
                        Max = 40.0 // Grenade Satchel Charge
                )
                AccuracyMovement = TMinMaxValue (
-                       Min = 20.0 // Grenade Satchel Charge
-                       Max = 20.0 // Grenade Satchel Charge
+                       Min = 0.0 // Grenade Satchel Charge
+                       Max = 0.0 // Grenade Satchel Charge
                )
                RateOfFire = TMinMaxValue (
                        Min = 15.0 // Grenade Satchel Charge
@@ -587,13 +587,13 @@ MinMaxValuesInterfaceHelper is TWeaponsMinMaxValuesInterfaceHelper
           (
                // PhysicalDamages x weapon_count_ (Number of weapons)
                PhysicalDamages = TMinMaxValue (
-                       Min = 0.26 // HMG 12 7 mm M2HB
+                       Min = 0.26 // HMG 14 5 mm KPVT
                        Max = 1.0 // AutoCanon AP 30mm 24A2 BMP2
                )
                // SuppressDamages x weapon_count_ (Number of weapons)
                SuppressDamages = TMinMaxValue (
                        Min = 1.0 // AutoCanon AP 30mm 24A2 BMP2
-                       Max = 30.0 // AutoCanon HE 30mm 24A2 BMP2
+                       Max = 33.0 // AutoCanon HE 30mm 24A2 BMP2
                )
                SplashDamageRadius = TMinMaxValue (
                        Min = 1.0 * Metre // AutoCanon AP 30mm 24A2 BMP2
@@ -621,7 +621,7 @@ MinMaxValuesInterfaceHelper is TWeaponsMinMaxValuesInterfaceHelper
                )
                TurretSpeed = TMinMaxValue (
                        Min = 60.0 // HMG 14 5 mm KPVT
-                       Max = 360.0 // AutoCanon HE 30mm M230
+                       Max = 360.0 // AutoCanon HE 30mm 24A2
                )
                Accuracy = TMinMaxValue (
                        Min = 15.0 // AutoCanon HE 20mm M621 GIAT
@@ -636,19 +636,19 @@ MinMaxValuesInterfaceHelper is TWeaponsMinMaxValuesInterfaceHelper
                        Max = 1384.6153846153845 // HMG 12 7 mm avenger M3P
                )
                Penetration = TMinMaxValue (
-                       Min = 1 // HMG 14 5 mm KPVT
+                       Min = 7 // AutoCanon AP 23mm Bitube Gsh23L
                        Max = 13 // AutoCanon AP 30mm 2A72 BMP3
                )
                TimeBetweenTwoShots = TMinMaxValue (
                        Min = 0.1 // HMG 12 7 mm avenger M3P
-                       Max = 0.8 // AutoCanon AP 30mm M230
+                       Max = 0.6 // AutoCanon AP 30mm 24A2 BMP2
                )
                NbShotsBySalvo = TMinMaxValue (
                        Min = 2.0 // AutoCanon AP 20mm M621 GIAT
                        Max = 5.0 // AutoCanon AP 30mm 2A72 BMP3
                )
                SupplyCost = TMinMaxValue (
-                       Min = 6.0 // AutoCanon HE 20mm MK 20 Rh 202
+                       Min = 5.0 // HMG 14 5 mm KPVT
                        Max = 130.0 // AutoCanon AP 30mm 2A72 BMP3
               )
          )
@@ -669,7 +669,7 @@ MinMaxValuesInterfaceHelper is TWeaponsMinMaxValuesInterfaceHelper
                )
                SplashDamageRadius = TMinMaxValue (
                        Min = 5.0 * Metre // SMOKE_Vehicle_Grenadex8
-                       Max = 171.0 * Metre // Mortier Tampella 120mm
+                       Max = 244.0 * Metre // Mortier Tampella 120mm
                )
                MaxRange = TMinMaxValue (
                        Min = 495.0 // SMOKE_Vehicle_Grenadex8
@@ -700,8 +700,8 @@ MinMaxValuesInterfaceHelper is TWeaponsMinMaxValuesInterfaceHelper
                        Max = 30.0 // Lance grenade AGS17
                )
                AccuracyMovement = TMinMaxValue (
-                       Min = 0.0 // Mortier Tampella 120mm
-                       Max = 10.0 // Lance grenade AGS17
+                       Min = 0.0 // Lance grenade AGS17
+                       Max = 10.0 // Pod GUV AGS17 2x
                )
                RateOfFire = TMinMaxValue (
                        Min = 16.363636363636363 // Mortier Tampella 120mm
@@ -752,8 +752,8 @@ MinMaxValuesInterfaceHelper is TWeaponsMinMaxValuesInterfaceHelper
                        Max = 8504.0 // DCA 2 canons Oerlikon GDF 35mm
                )
                AimTime = TMinMaxValue (
-                       Min = 0.5 // DCA 2 canon ZU23_2 23mm
-                       Max = 0.5 // DCA 2 canon ZU23_2 23mm
+                       Min = 0.5 // Gatling M61 Vulcan 20mm late TOWED
+                       Max = 2.0 // DCA 1 canon Bofors 40mm
                )
                ReloadTime = TMinMaxValue (
                        Min = 0.4 // DCA 4 canons APZ23 23mm
@@ -768,7 +768,7 @@ MinMaxValuesInterfaceHelper is TWeaponsMinMaxValuesInterfaceHelper
                        Max = 50.0 // DCA 2 canons 2A38M 30mm
                )
                AccuracyMovement = TMinMaxValue (
-                       Min = 5.0 // DCA 2 canon ZU23_2 23mm
+                       Min = 0.0 // DCA 1 canon Bofors 40mm
                        Max = 35.0 // DCA 2 canons 2A38M 30mm
                )
                RateOfFire = TMinMaxValue (
@@ -799,8 +799,8 @@ MinMaxValuesInterfaceHelper is TWeaponsMinMaxValuesInterfaceHelper
           (
                // PhysicalDamages x weapon_count_ (Number of weapons)
                PhysicalDamages = TMinMaxValue (
-                       Min = 1.68 // flamethrower LPO
-                       Max = 1.68 // flamethrower LPO
+                       Min = 1.4 // flamethrower LPO
+                       Max = 1.4 // flamethrower LPO
                )
                // SuppressDamages x weapon_count_ (Number of weapons)
                SuppressDamages = TMinMaxValue (
@@ -840,8 +840,8 @@ MinMaxValuesInterfaceHelper is TWeaponsMinMaxValuesInterfaceHelper
                        Max = 60.0 // flamethrower LPO
                )
                AccuracyMovement = TMinMaxValue (
-                       Min = 30.0 // flamethrower LPO
-                       Max = 30.0 // flamethrower LPO
+                       Min = 0.0 // flamethrower LPO
+                       Max = 30.0 // Canon FLAMME ATO54
                )
                RateOfFire = TMinMaxValue (
                        Min = 16.0 // flamethrower LPO
@@ -868,7 +868,7 @@ MinMaxValuesInterfaceHelper is TWeaponsMinMaxValuesInterfaceHelper
                // PhysicalDamages x weapon_count_ (Number of weapons)
                PhysicalDamages = TMinMaxValue (
                        Min = 0.28 // Gatling m134 7 62mm x2
-                       Max = 1.18 // GatlingAir GAU8 30mm
+                       Max = 1.5 // GatlingAir GAU8 30mm
                )
                // SuppressDamages x weapon_count_ (Number of weapons)
                SuppressDamages = TMinMaxValue (
@@ -877,7 +877,7 @@ MinMaxValuesInterfaceHelper is TWeaponsMinMaxValuesInterfaceHelper
                )
                SplashDamageRadius = TMinMaxValue (
                        Min = 1.0 * Metre // Gatling AP M197 20mm
-                       Max = 45.0 * Metre // Pod GUV Gatling 7 62mm 12 7mm x2
+                       Max = 54.0 * Metre // GatlingAir GAU8 30mm
                )
                MaxRange = TMinMaxValue (
                        Min = 3000.0 // Gatling M197 20mm
@@ -916,7 +916,7 @@ MinMaxValuesInterfaceHelper is TWeaponsMinMaxValuesInterfaceHelper
                        Max = 7384.615384615385 // GatlingAir GAU8 30mm
                )
                Penetration = TMinMaxValue (
-                       Min = 1 // GatlingAir GAU8 30mm
+                       Min = 3 // Gatling M197 20mm
                        Max = 6 // GatlingAir AP GAU8 30mm
                )
                TimeBetweenTwoShots = TMinMaxValue (
@@ -1000,7 +1000,7 @@ MinMaxValuesInterfaceHelper is TWeaponsMinMaxValuesInterfaceHelper
                        Max = 2660.0 // RocketAir Hydra 70mm x76
                )
                TurretSpeed = TMinMaxValue (
-                       Min = 100.0 // RocketAir Hydra 70mm x14
+                       Min = 100.0 // RocketAir Hydra 70mm x19
                        Max = 360.0 // RocketAir Zuni 1272mm x8
               )
          )
@@ -1044,8 +1044,8 @@ MinMaxValuesInterfaceHelper is TWeaponsMinMaxValuesInterfaceHelper
                        Max = 5.0 // AGM AGM114A x8
                )
                TurretSpeed = TMinMaxValue (
-                       Min = 100.0 // AGM AGM114A x8
-                       Max = 360.0 // AGM AGM114A x16
+                       Min = 100.0 // AGM 9K121 Vikhr x12
+                       Max = 360.0 // AGM AGM114A x8
                )
                Accuracy = TMinMaxValue (
                        Min = 35.0 // AGM AS30
@@ -1100,7 +1100,7 @@ MinMaxValuesInterfaceHelper is TWeaponsMinMaxValuesInterfaceHelper
                        Max = 0.0 // AA R60 Vympel
                )
                MaxRangeTBA = TMinMaxValue (
-                       Min = 0.0 // AA AIM120A AMRAAM
+                       Min = 0.0 // AA AIM7M Sparrow
                        Max = 6000.0 // AA R60 Vympel
                )
                MaxRangeHA = TMinMaxValue (
@@ -1151,7 +1151,7 @@ MinMaxValuesInterfaceHelper is TWeaponsMinMaxValuesInterfaceHelper
           (
                // PhysicalDamages x weapon_count_ (Number of weapons)
                PhysicalDamages = TMinMaxValue (
-                       Min = 2.16 // Bomb CBU Mk20 Rockeye II 250kg x2
+                       Min = 2.16 // Bomb CBU Mk20 Rockeye II 250kg x8
                        Max = 27.75 // Bomb GBU 10 x4
                )
                // SuppressDamages x weapon_count_ (Number of weapons)
@@ -1161,7 +1161,7 @@ MinMaxValuesInterfaceHelper is TWeaponsMinMaxValuesInterfaceHelper
                )
                SplashDamageRadius = TMinMaxValue (
                        Min = 60.0 * Metre // Bomb Mk81 119kg x4
-                       Max = 900.0 * Metre // Bomb CLU RBK 500kg x2
+                       Max = 630.0 * Metre // Bomb CLU RBK 500kg x2
                )
                MaxRange = TMinMaxValue (
                        Min = 495.0 // Bomb Mk82 250kg x8
@@ -1184,7 +1184,7 @@ MinMaxValuesInterfaceHelper is TWeaponsMinMaxValuesInterfaceHelper
                        Max = 1.0 // Bomb Mk82 250kg x8
                )
                TurretSpeed = TMinMaxValue (
-                       Min = 0.0 // Bomb CBU Mk20 Rockeye II 250kg x2
+                       Min = 0.0 // Bomb Mk82 250kg x2
                        Max = 360.0 // Bomb Mk82 250kg x8
                )
                Accuracy = TMinMaxValue (
@@ -1196,7 +1196,7 @@ MinMaxValuesInterfaceHelper is TWeaponsMinMaxValuesInterfaceHelper
                        Max = 100.0 // Bomb GBU 10 x4
                )
                RateOfFire = TMinMaxValue (
-                       Min = 109.09090909090908 // Bomb CBU Mk20 Rockeye II 250kg x2
+                       Min = 109.09090909090908 // Bomb Mk82 250kg x2
                        Max = 342.85714285714283 // Bomb Mk82 250kg x12
                )
                TimeBetweenTwoShots = TMinMaxValue (
@@ -1204,16 +1204,16 @@ MinMaxValuesInterfaceHelper is TWeaponsMinMaxValuesInterfaceHelper
                        Max = 0.1 // Bomb Mk82 250kg x8
                )
                NbShotsBySalvo = TMinMaxValue (
-                       Min = 2.0 // Bomb CBU Mk20 Rockeye II 250kg x2
+                       Min = 2.0 // Bomb Mk82 250kg x2
                        Max = 12.0 // Bomb Mk82 250kg x12
                )
                SupplyCost = TMinMaxValue (
-                       Min = 500.0 // Bomb CBU Mk20 Rockeye II 250kg x2
+                       Min = 500.0 // Bomb Mk82 250kg x2
                        Max = 6000.0 // Bomb ZB500 500kg Napalm x6
                )
                Penetration = TMinMaxValue (
-                       Min = 9 // Bomb CBU Mk20 Rockeye II 250kg x2
-                       Max = 9 // Bomb CBU Mk20 Rockeye II 250kg x2
+                       Min = 9 // Bomb CBU Mk20 Rockeye II 250kg x8
+                       Max = 9 // Bomb CBU Mk20 Rockeye II 250kg x8
               )
          )
        ),

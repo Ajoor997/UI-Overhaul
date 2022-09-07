@@ -362,24 +362,6 @@ CubeAction_Capacity_Ordre_Unload_NonArmes is TCubeActionCapacityButtonInformatio
     Descriptor                   = ~/Capacite_Ordre_Unload_NonArmes
 )
 
-CubeAction_Capacity_Reddition is TCubeActionCapacityButtonInformationsDescriptor
-(
-    CubeActionName               = "CubeAction_Capacity_Reddition"
-    CubeActionFunctionType       = ~/TacticCubeActionFunctionType/Orders
-    BackgroundTexture            = "Texture_Button_Capacity_Reddition"
-    HoverSound                   = CubeActionButtonHoverSound_IfEnabled
-    ClickSound                   = CubeActionButtonClickSound_IfEnabled
-    ButtonTextToken              = ""
-    HintDico                     = ~/LocalisationConstantes/dico_interface_ingame
-    HintTitleToken               = ""
-    HintBodyToken                = ""
-    HintExtendedToken            = ""
-    DependanciesToIgnore         =
-    [
-    ]
-    Descriptor                   = ~/Capacite_Reddition
-)
-
 CubeAction_Capacity_Soutien_Allie_Proche is TCubeActionCapacityButtonInformationsDescriptor
 (
     CubeActionName               = "CubeAction_Capacity_Soutien_Allie_Proche"

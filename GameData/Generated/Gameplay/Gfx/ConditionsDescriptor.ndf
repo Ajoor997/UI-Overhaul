@@ -6,12 +6,6 @@ ConditionTagRaisedInUnit_Camion_autodestruction_1 is TConditionTagRaisedInUnit
     Tag             = "Camion_autodestruction"
     Amount          = 1
 )
-ConditionTagRaisedInUnit_Ennemi_Proche_1 is TConditionTagRaisedInUnit
-(
-    DescriptorId    = GUID:{e8ff8013-e9d1-4254-889e-cb3b221bc7ff}
-    Tag             = "Ennemi_Proche"
-    Amount          = 1
-)
 ConditionTagRaisedInUnit_GroundUnit_Engaged_1 is TConditionTagRaisedInUnit
 (
     DescriptorId    = GUID:{b98c3452-5d42-4a45-be78-c51ffda30814}
@@ -34,18 +28,6 @@ ConditionTagRaisedInUnit_Infanterie_Engaged_1 is TConditionTagRaisedInUnit
 (
     DescriptorId    = GUID:{00869483-bfcc-4e90-b883-7e32ca257cbe}
     Tag             = "Infanterie_Engaged"
-    Amount          = 1
-)
-ConditionTagRaisedInUnit_Panique_1 is TConditionTagRaisedInUnit
-(
-    DescriptorId    = GUID:{00c7764b-770b-4016-a9e8-8bc1eba30d38}
-    Tag             = "Panique"
-    Amount          = 1
-)
-ConditionTagNotRaisedInUnit_Allie_Proche_1 is TConditionTagNotRaisedInUnit
-(
-    DescriptorId    = GUID:{2fc80f19-2b64-42da-abb0-a5819bf134f7}
-    Tag             = "Allie_Proche"
     Amount          = 1
 )
 ConditionTagNotRaisedInUnit_Discipline_1 is TConditionTagNotRaisedInUnit

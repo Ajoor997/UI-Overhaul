@@ -2490,59 +2490,6 @@ export UnitEffect_Precision_plus_50 is TEffectsPackDescriptor
 
     ]
 )
-export UnitEffect_Reddition_Effet is TEffectsPackDescriptor
-(
-    DescriptorId       = GUID:{80d7dab3-eabb-405b-9c8b-e7e3aff56d2e}
-    NameForDebug       = 'Reddition_Effet'
-    EffectsDescriptors = [
-        // BonusInfluenceValue
-        TUnitEffectIncreaseInfluenceValueDescriptor
-        (
-            ModifierType       = ~/ModifierType_Multiplicatif
-            Bonus              = 0
-        ),
-
-        // BonusInfluenceValueMin
-        TUnitEffectIncreaseInfluenceValueMinDescriptor
-        (
-            ModifierType       = ~/ModifierType_Multiplicatif
-            Bonus              = 0
-        ),
-
-        // BonusVitesse
-        TUnitEffectIncreaseSpeedDescriptor
-        (
-            ModifierType             = ~/ModifierType_Multiplicatif
-            BonusSpeedBaseInPercent  = 0
-        ),
-
-        // ChangeTeam
-        TUnitEffectChangeTeamDescriptor
-        (
-            FutureTeam = TTeamIdentifierForUnitEffect(
-                TeamType = ~/ETeamTypeForUnitEffect/Neutral
-            )
-        ),
-
-        // TransportSlotNumberModification
-        TUnitEffectTransportSlotNumberModificationDescriptor
-        (
-            ModifierType                 = ~/ModifierType_Remplacement
-            EffectOnTransportSlotNumber  = 0
-        ),
-
-    ]
-)
-export UnitEffect_Reddition_Effet_kill is TEffectsPackDescriptor
-(
-    DescriptorId       = GUID:{98143206-dcae-4ec6-8432-6c042620bdbb}
-    NameForDebug       = 'Reddition_Effet_kill'
-    EffectsDescriptors = [
-        // EffectSurrender
-        TEffectSurrenderUnitDescriptor(),
-
-    ]
-)
 export UnitEffect_Resistance_plus_15pourcent is TEffectsPackDescriptor
 (
     DescriptorId       = GUID:{06431459-7239-48ba-b08a-299a2a33bb9b}

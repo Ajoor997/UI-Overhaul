@@ -102,8 +102,6 @@ private EffectsPacksList is TGameplayEffectsPacksList
         ~/UnitEffect_Precision_plus_25,
         ~/UnitEffect_Precision_plus_33,
         ~/UnitEffect_Precision_plus_50,
-        ~/UnitEffect_Reddition_Effet,
-        ~/UnitEffect_Reddition_Effet_kill,
         ~/UnitEffect_Resistance_plus_15pourcent,
         ~/UnitEffect_Resistance_plus_25pourcent,
         ~/UnitEffect_Resistance_plus_33pourcent,

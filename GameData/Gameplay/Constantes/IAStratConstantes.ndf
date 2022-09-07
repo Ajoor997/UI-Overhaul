@@ -78,7 +78,6 @@ export IAStratConstantes is TIAStratConstantesDescriptor_Specific
     MinDistanceToRequireTransport = 10000 * Metre //un peu plus de 3.5KM in game (conversion MetreRTS)
     MaxDistanceToAcceptTransportRequest = 30000 * Metre //un peu plus de 10KM in game (conversion MetreRTS)
     ForbidToLoadNewUnits = false // Ce paramètre a true empêche de charger une unité qu'on ne transporte pas à la base (applicable aux transports qui spawnent préchargés)
-    UnloadWhenNoTransportRequest = false
 
     //--------------- Defense Macro ----------------------------------------//
     //--------------- Multiplicateur appliqué à la défense de base (on essaie de défendre multiplicateur*menace). Ca permet de donner un bonus ou malus à notre réaction
@@ -136,7 +135,7 @@ export IAStratConstantes is TIAStratConstantesDescriptor_Specific
     [
         (EDefensePointType/NearCover, ["Helo", "Helo_Gunship"]),
         (EDefensePointType/Hidden, ["InfmapCommander"]),
-        (EDefensePointType/HardCover | EDefensePointType/GunnerNest | EDefensePointType/Trench, ["Infanterie", "Canon_AT", "ChasseurDeChar", "Canon_AA", "Char"]),
+        (EDefensePointType/HardCover | EDefensePointType/GunnerNest | EDefensePointType/Trench, ["Infanterie", "Canon_AT", "ChasseurDeChar", "Canon_AA", "Char", "Infanterie_Reco", "Vehicule_Reco"]),
     ]
 
     MaxDistanceForNearCoverDefensePoint = 2.0
@@ -389,6 +388,7 @@ AirstrikeConstantes is TIAStratAirstrikeConstantes
         (["Avion_Assaut"], 3),
         (["Avion_AT"], 3),
         (["Avion_Chasseur_Bombardier"], 1),
+        (["Avion_SEAD"], 3)
     ]
     OpportunisticTargetInGroupAirstrikeSettings = [
         (["Avion_Bombardier"], 3),
@@ -402,7 +402,8 @@ AirstrikeConstantes is TIAStratAirstrikeConstantes
     // Les avions avec des limitations sur leurs cibles sont renseignés ici. Ceux qui n'en ont pas non.
     // Ex: les avions AT ne peuvent attaquer que les blindés
     StrikeLimitations = [
-        ("Avion_AT", ["Char", "ChasseurDeChar", "Vehicule_Appui", "Vehicule_CMD", "Vehicule_Reco", "Artillerie", "Canon_AA"])
+        ("Avion_AT", ["Char", "ChasseurDeChar", "Vehicule_Appui", "Vehicule_CMD", "Vehicule_Reco", "Artillerie"]),
+        ("Avion_SEAD", ["Canon_AA"]),
     ]
 
     AirplaneWaitForDecisionTime = 5
@@ -446,9 +447,6 @@ ArtilleryStrikeConstantes is TIAStratArtilleryStrikeConstantes
 
 VisionConstantes is TIAStratVisionConstantes
 (
-    //Triche de vision ou pas
-    InfluenceMapAlwaysKnowAllUnits = false // NB : ce parametre ne sert a rien si IgnoreInvisibleUnit = false. IgnoreInvisibleUnit a false desactive entierement le code anti triche
-
     //--------------- Réglage de la connaissance des unités non visibles -------------//
 
     VisionParametersByDifficulty = MAP
@@ -524,21 +522,21 @@ FakeGunThreatDescriptor is TFakeGunThreatDescriptor
     GunList = [
         TFakeGunDescriptor(
 
-            CurrentRange = 10000.0 * Metre
+            CurrentRange = 5000.0 * Metre
             TirIndirect = false
             TypeArme = TDamageTypeRTTI(Family="balle" Index=1)
             ColPlan = ~/ECollisionPlane/Ground
             ),
         TFakeGunDescriptor(
 
-            CurrentRange = 10000.0 * Metre
+            CurrentRange = 5000.0 * Metre
             TirIndirect = false
             TypeArme = TDamageTypeRTTI(Family="he" Index=1)
             ColPlan = ~/ECollisionPlane/Ground
             ),
         TFakeGunDescriptor(
 
-            CurrentRange = 10000.0 * Metre
+            CurrentRange = 5000.0 * Metre
             TirIndirect = false
             TypeArme = TDamageTypeRTTI(Family="ap" Index=10)
             ColPlan = ~/ECollisionPlane/Ground

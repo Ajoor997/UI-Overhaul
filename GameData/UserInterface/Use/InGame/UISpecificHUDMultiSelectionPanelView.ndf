@@ -74,10 +74,10 @@ BUCKSpecificHUDMultiSelectionPanelMainComponentDescriptor is BUCKContainerDescri
                 )
             ]
 
-            BackgroundComponents =
-            [
-                PanelRoundedCorner(),
-            ]
+            //BackgroundComponents =
+            //[
+            //    PanelRoundedCorner(),
+            //]
         )
     ]
 )

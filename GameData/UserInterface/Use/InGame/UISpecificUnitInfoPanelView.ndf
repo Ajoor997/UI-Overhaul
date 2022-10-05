@@ -647,6 +647,8 @@ private template PawnCategoryPower
     ContentExtendWeight : float,
     ShowDetails : bool,
 
+    LastMargin = TRTTILength(Magnifiable = 0.0),
+
     TextSize : string,
 ]
 is BUCKListDescriptor
@@ -662,12 +664,9 @@ is BUCKListDescriptor
     )
 
     Axis = ~/ListAxis/Horizontal
-    HasBorder = false
-    BorderLineColorToken = 'SD2_LigneBleuGris'
-    BorderThicknessToken = '1'
-    BordersToDraw = ~/TBorderSide/Bottom
-
     BreadthComputationMode = (<ContentExtendWeight> == 0.0 ? ~/BreadthComputationMode/ComputeBreadthFromLargestChild : ~/BreadthComputationMode/ComputeBreadthFromFrameProperty)
+
+    LastMargin = <LastMargin>
 
     Elements =
     [
@@ -1691,6 +1690,9 @@ is TUISpecificUnitInfoPanelViewDescriptor
     WeakTopToken = "UIP_RFWK"
     StrongTopToken = "UIP_RFST"
 
+    YesValueToken = "UIP_YES"
+    NoValueToken = "UIP_NO"
+
     BlindageToToken = MAP
     [
         ("infanterie_1", "UIP_INF1"),
@@ -1733,13 +1735,14 @@ is TUISpecificUnitInfoPanelViewDescriptor
         ("AttributeAgility",          UnitInfoPanelAttribute(ElementName = "AttributeAgility" Token = "UIP_AGIL" ValueToken = "UIP_VAL" HintToken = "HIP_AGIL" Scale = Scale)),
         ("AttributeCategory",         UnitInfoPanelAttribute(IsTransparent = true ElementName = "AttributeCategory" Token = "UIPA_CAT" Scale = Scale DicoToken = ~/LocalisationConstantes/dico_interface_outgame )),
 
-        ("AttributeShowInfluence",    UnitInfoPanelAttribute(ElementName = "AttributeShowInfluence" Token = "UIP_SHINF" ValueToken = "UIP_VAL" HintToken = "HIP_SHINF" Scale = Scale)),
+        ("AttributeAdvanceDeployment",UnitInfoPanelAttribute(ElementName = "AttributeAdvanceDeployment" Token = "UIP_DPDST" ValueToken = "UIPW_METER" HintToken = "HIP_DPDST" Scale = Scale)),
+
     ]
 
-    // branché sur la colonne Info_Panel_Configuration_Token des unités
+    // Branché sur la colonne Info_Panel_Configuration_Token des unités
     AttributeTypeConfiguration = MAP
     [
-        ("Default", listeAffichageInfoUnit_default),
+        ("Default", listeAffichageInfoUnit_Default),
 
         ("avion", listeAffichageInfoUnit_Air),
 
@@ -1747,11 +1750,13 @@ is TUISpecificUnitInfoPanelViewDescriptor
 
         ("Infantry",listeAffichageInfoUnit_Infanterie),
 
-        ("Vehicule", ["AttributeSpeed",  "AttributeRoadSpeed", "AttributeStealth", "AttributeOptics", "AttributeAirOptics", "AttributeFuel", "AttributeAutonomy"]),
+        ("VehiculeSupplier", listeAffichageInfoUnit_Supply),
 
-        ("VehiculeSupplier", listeAffichageInfoUnit_supply),
+        ("HelicoDefault", listeAffichageInfoUnit_HelicoDefault),
 
-        ("VehiculeTransporterSupplier", ["AttributeSpeed",  "AttributeRoadSpeed", "AttributeStealth", "AttributeOptics", "AttributeAirOptics", "AttributeTransportSize", "AttributeSupply", ]),
+        ("HelicoTransporter", listeAffichageInfoUnit_HelicoTransport),
+
+        ("HelicoSupplier", listeAffichageInfoUnit_HelicoSupply),
     ]
 
     DivisionEmblemDescriptor = BUCKTextureDescriptor
@@ -1790,44 +1795,65 @@ is TUISpecificUnitInfoPanelViewDescriptor
 
 // Note : 'AttributeCategory' and 'AttributeProductionYear' are hidden (see IsTransparent = true), and are only used to get empty cells in the final result
 
-listeAffichageInfoUnit_default is
+//Penser à répliquer les modifications dans listeAffichageInfoUnit_HelicoDefault ci-dessous
+listeAffichageInfoUnit_Default is
 [
     "AttributeMaxDamages","AttributeOptics", "AttributeStealth",
     "AttributeAmphibious","AttributeSpeed",  "AttributeRoadSpeed",
-    "AttributeAutonomy","AttributeFuel","AttributeShowInfluence",
+    "AttributeAutonomy","AttributeFuel","AttributeAdvanceDeployment",
 ]
 
+//Penser à répliquer les modifications dans listeAffichageInfoUnit_HelicoTransport ci-dessous
 listeAffichageInfoUnit_VehiculeTransport is
 [
     "AttributeMaxDamages","AttributeOptics", "AttributeStealth",
     "AttributeAmphibious","AttributeSpeed",  "AttributeRoadSpeed",
-    "AttributeAutonomy","AttributeFuel","AttributeShowInfluence",
+    "AttributeAutonomy","AttributeFuel","AttributeAdvanceDeployment",
     "AttributeTransportSize", "AttributeCategory", "AttributeProductionYear",
 ]
 
 listeAffichageInfoUnit_Infanterie is
 [
     "AttributeStrength","AttributeOptics","AttributeStealth",
-    "AttributeShowInfluence","AttributeSpeed", "AttributeCategory",
+    "AttributeAdvanceDeployment","AttributeSpeed", "AttributeCategory",
 ]
 
-listeAffichageInfoUnit_supply is
+//Penser à répliquer les modifications dans listeAffichageInfoUnit_HelicoSupply ci-dessous
+listeAffichageInfoUnit_Supply is
 [
     "AttributeMaxDamages","AttributeOptics", "AttributeStealth",
     "AttributeAmphibious","AttributeSpeed",  "AttributeRoadSpeed",
-    "AttributeShowInfluence", "AttributeSupply", "AttributeCategory",
-]
-
-listeAffichageInfoUnit_AA is
-[
-    "AttributeMaxDamages","AttributeAirOptics", "AttributeStealth",
-    "AttributeAmphibious","AttributeSpeed",  "AttributeRoadSpeed",
-    "AttributeAutonomy","AttributeFuel","AttributeShowInfluence",
+    "AttributeAdvanceDeployment", "AttributeSupply", "AttributeCategory",
 ]
 
 listeAffichageInfoUnit_Air is
 [
     "AttributeMaxDamages", "AttributeAirOptics", "AttributeECM", ,
     "AttributeAgility","AttributeTravelDuration", "AttributeSpeed",
-    "AttributeFuelMoveDuration", "AttributeFuel", "AttributeShowInfluence",
+    "AttributeFuelMoveDuration", "AttributeFuel", "AttributeAdvanceDeployment",
+]
+
+
+//Pour les hélicos, c'est comme pour les unités terrestres sauf qu'on remplace AttributeAmphibious par AttributeECM
+
+listeAffichageInfoUnit_HelicoDefault is
+[
+    "AttributeMaxDamages","AttributeOptics", "AttributeStealth",
+    "AttributeECM","AttributeSpeed",  "AttributeRoadSpeed",
+    "AttributeAutonomy","AttributeFuel","AttributeAdvanceDeployment",
+]
+
+listeAffichageInfoUnit_HelicoTransport is
+[
+    "AttributeMaxDamages","AttributeOptics", "AttributeStealth",
+    "AttributeECM","AttributeSpeed",  "AttributeRoadSpeed",
+    "AttributeAutonomy","AttributeFuel","AttributeAdvanceDeployment",
+    "AttributeTransportSize", "AttributeCategory", "AttributeProductionYear",
+]
+
+listeAffichageInfoUnit_HelicoSupply is
+[
+    "AttributeMaxDamages","AttributeOptics", "AttributeStealth",
+    "AttributeECM","AttributeSpeed",  "AttributeRoadSpeed",
+    "AttributeAdvanceDeployment", "AttributeSupply", "AttributeCategory",
 ]

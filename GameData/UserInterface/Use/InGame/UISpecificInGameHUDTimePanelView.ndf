@@ -39,8 +39,11 @@ SpecificInGameHUDTimePanelViewMainComponent is BUCKListDescriptor
         (
             // replace buttons with different texture
             ComponentDescriptor =  ~/TimePanelSpeedButtons
-
         ),
+        //BUCKListElementDescriptor
+        //(
+        //    ComponentDescriptor = ~/NombreSecteur
+        //),
     ]
 
     HasBackground = true
@@ -187,6 +190,7 @@ private TimePanelSpeedButtons is BUCKListDescriptor
                 HasBorder = false
                 BorderLineColorToken = 'TimePanel/ButtonBorder'
                 BorderThickness = "1"
+
 
                 BackgroundTexture = "vitesse01"
                 TextureColorToken = "White_Mod"

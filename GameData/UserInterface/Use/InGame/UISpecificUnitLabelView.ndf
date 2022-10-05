@@ -63,22 +63,22 @@ is BUCKTextDescriptor
     ElementName = <IsForCarriedUnit> ? 'CarriedUnitName' : 'UnitName'
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableOffset = [0.0, 0.0]
+        MagnifiableWidthHeight = <IsForMultiSelection> ? [60+30, 0.0] : [0.0, 0.0]
         AlignementToFather = <Alignement>
         AlignementToAnchor = <Alignement>
     )
 
     ParagraphStyle = TParagraphStyleRTTI
     (
-        Alignment = UIText_Left
+        Alignment = <IsForMultiSelection> ? UIText_Center : UIText_Left
         VerticalAlignment = UIText_VerticalCenter
         InterLine = 0
     )
 
     HasBackground = <IsForMultiSelection> ? true : true
-    TextPadding = <IsForMultiSelection> ? TRTTILength4(Magnifiable = [3.0, 0.0, 3.0, 0.0]) : TRTTILength4(Magnifiable = [3.0, 1.0, 3.0, 1.0])
+    TextPadding = <IsForMultiSelection> ? TRTTILength4(Magnifiable = [0.0, 0.0, 0.0, 0.0]) : TRTTILength4(Magnifiable = [3.0, 1.0, 3.0, 1.0])
 
-    HorizontalFitStyle = ~/FitStyle/FitToContent
+    HorizontalFitStyle = <IsForMultiSelection> ? ~/FitStyle/UserDefined : ~/FitStyle/FitToContent
     VerticalFitStyle = ~/FitStyle/FitToContent
 
     BigLineAction = ~/BigLineAction/CutByDots
@@ -130,7 +130,9 @@ is BUCKTextureDescriptor
         RelativeWidthHeight = [1.0, 1.0]
     )
 
-    TextureDrawer = 'ColorMultiply_Additive'
+
+    TextureDrawer = 'ColorMultiply'
+    TextureColorToken = 'BoutonTemps'
     ClipTextureToComponent = true
 
     Components =
@@ -157,10 +159,10 @@ is BUCKTextureDescriptor
                 BUCKListElementDescriptor(ComponentDescriptor = UnitLabelUnitMoraleGaugeBUCKComponent(LocalRenderLayer = <LocalRenderLayer>+1))
             ])
         ),
-        UnitLabelUnitExperienceIconsBUCKComponent(LocalRenderLayer = <LocalRenderLayer>+1),
-        UnitLabelSpecialtyIcon(LocalRenderLayer = <LocalRenderLayer>+1),
-        RadarActivityIcon(LocalRenderLayer = <LocalRenderLayer>+1),
-        SmartChipList(LocalRenderLayer = <LocalRenderLayer>+1),
+        UnitLabelUnitExperienceIconsBUCKComponent(LocalRenderLayer = <LocalRenderLayer>+1), //experience
+        UnitLabelSpecialtyIcon(LocalRenderLayer = <LocalRenderLayer>+1),  // unit quality
+        RadarActivityIcon(LocalRenderLayer = <LocalRenderLayer>+1), // radarIcon
+        SmartChipList(LocalRenderLayer = <LocalRenderLayer>+1),  //smartOrders icon
     ]
 )
 
@@ -834,6 +836,7 @@ template UnitLabelUnitCountIconBUCKComponent
     Alignement : float2 = [0.0, 0.0],
     LocalRenderLayer : int,
     IsForCarriedUnit : bool = false,
+    IsForMultiSelection : bool = false,
 ]
 is BUCKTextDescriptor
 (
@@ -842,6 +845,8 @@ is BUCKTextDescriptor
     (
         AlignementToAnchor = <Alignement>
         AlignementToFather = <Alignement>
+
+        MagnifiableOffset = <IsForMultiSelection> ? (<IsForCarriedUnit> ? [0, 35.0] : [0, 50]) : [0.0, 0.0]
     )
 
     ParagraphStyle = TParagraphStyleRTTI
@@ -853,20 +858,21 @@ is BUCKTextDescriptor
 
     UseLocalRenderLayer = true
     BackgroundLocalRenderLayer = <LocalRenderLayer> - 1
-    LocalRenderLayer = <LocalRenderLayer>
+    LocalRenderLayer = <LocalRenderLayer> + 2
 
-    HorizontalFitStyle = ~/FitStyle/FitToContent
-    VerticalFitStyle = ~/FitStyle/FitToContent
+    HorizontalFitStyle = <IsForMultiSelection> ? ~/FitStyle/UserDefined : ~/FitStyle/FitToContent
+    VerticalFitStyle = <IsForMultiSelection> ? ~/FitStyle/UserDefined : ~/FitStyle/FitToContent
 
     BigLineAction = ~/BigLineAction/ResizeFont
-    TextPadding = TRTTILength4(Magnifiable = [1.0, 1.0, 2.0, 1.0])
-    HasBackground = true
+
+    TextPadding =  <IsForMultiSelection> ? TRTTILength4(Magnifiable = [1.0, 1.0, 1.0, 1.0]) : TRTTILength4(Magnifiable = [1.0, 1.0, 2.0, 1.0])
+    HasBackground = <IsForMultiSelection> ? false : true
     BackgroundBlockColorToken = "SD2_Gris80"
 
     TextStyle = "LabelUnitNameStroke"
     TypefaceToken = "UISecondFont"
     TextColor = "Blanc"
-    TextSize = ( <IsForCarriedUnit> ? "10" : "14")
+    TextSize = <IsForMultiSelection> ? ( <IsForCarriedUnit> ? "18" : "18") : ( <IsForCarriedUnit> ? "10" : "14")
 )
 
 //----------------------------------------------------------------------
@@ -1214,8 +1220,9 @@ private MultiSelectionLabelList is
 
                                     LocalRenderLayer = 2
                                     Radius = 3
-                                    BackgroundBlockColorToken = 'BoutonTemps'
-                                    BorderLineColorToken = 'BoutonTemps'
+                                    BackgroundBlockColorToken = 'BoutonTemps_Selection_MOD'
+                                    BorderLineColorToken = 'BoutonTemps_Selection_MOD'
+                                    HasBorder = false
                                 ),
                             ]
                         )
@@ -1371,6 +1378,14 @@ private SupplyFeedbackIcons is TBUCKSpecificLabelFeedbackIconsDescriptor
         TextureDrawer = 'ColorMultiply'
         TextureFrame = TUIFramePropertyRTTI(RelativeWidthHeight = [1.0, 1.0])
 
+        UniformDrawer = $/UserInterface/UIUniformDrawer
+        BackgroundBlockColorToken = 'UnitLabelInfo_Mod'
+        HasBackground = true
+
+        HasBorder = true
+        BorderThicknessToken = "1"
+        BorderLineColorToken = "White_Mod"
+
         FeedbackTexture = "icone_fuel"
         FeedbackRefillTexture = "icone_fuel_refill"
     )
@@ -1382,6 +1397,14 @@ private SupplyFeedbackIcons is TBUCKSpecificLabelFeedbackIconsDescriptor
         IsClippable = true
         TextureDrawer = 'ColorMultiply'
         TextureFrame = TUIFramePropertyRTTI(RelativeWidthHeight = [1.0, 1.0])
+
+        UniformDrawer = $/UserInterface/UIUniformDrawer
+        BackgroundBlockColorToken = 'Supply_Yellow_Mod'
+        HasBackground = true
+
+        HasBorder = true
+        BorderThicknessToken = "1"
+        BorderLineColorToken = "White_Mod"
 
         FeedbackTexture = "icone_bullets"
         FeedbackRefillTexture = "icone_bullets_refill"
@@ -1395,6 +1418,14 @@ private SupplyFeedbackIcons is TBUCKSpecificLabelFeedbackIconsDescriptor
         TextureDrawer = 'ColorMultiply'
         TextureFrame = TUIFramePropertyRTTI(RelativeWidthHeight = [1.0, 1.0])
 
+        UniformDrawer = $/UserInterface/UIUniformDrawer
+        BackgroundBlockColorToken = 'Supply_Orange_Mod'
+        HasBackground = true
+
+        HasBorder = true
+        BorderThicknessToken = "1"
+        BorderLineColorToken = "White_Mod"
+
         FeedbackTexture = "icone_shell"
         FeedbackRefillTexture = "icone_shell_refill"
     )
@@ -1406,6 +1437,14 @@ private SupplyFeedbackIcons is TBUCKSpecificLabelFeedbackIconsDescriptor
         IsClippable = true
         TextureDrawer = 'ColorMultiply'
         TextureFrame = TUIFramePropertyRTTI( RelativeWidthHeight = [1.0, 1.0] )
+
+        UniformDrawer = $/UserInterface/UIUniformDrawer
+        BackgroundBlockColorToken = 'Supply_Purple_Mod'
+        HasBackground = true
+
+        HasBorder = true
+        BorderThicknessToken = "1"
+        BorderLineColorToken = "White_Mod"
 
         FeedbackTexture = "icone_missile"
         FeedbackRefillTexture = "icone_missile_refill"
@@ -1419,6 +1458,14 @@ private SupplyFeedbackIcons is TBUCKSpecificLabelFeedbackIconsDescriptor
         TextureDrawer = 'ColorMultiply'
         TextureFrame = TUIFramePropertyRTTI(RelativeWidthHeight = [1.0, 1.0])
 
+        UniformDrawer = $/UserInterface/UIUniformDrawer
+        BackgroundBlockColorToken = 'Supply_Gray_Mod'
+        HasBackground = true
+
+        HasBorder = true
+        BorderThicknessToken = "1"
+        BorderLineColorToken = "White_Mod"
+
         FeedbackTexture = "icone_shell"
         FeedbackRefillTexture = "icone_shell_refill"
     )
@@ -1430,6 +1477,14 @@ private SupplyFeedbackIcons is TBUCKSpecificLabelFeedbackIconsDescriptor
         IsClippable = true
         TextureDrawer = 'ColorMultiply'
         TextureFrame = TUIFramePropertyRTTI(RelativeWidthHeight = [1.0, 1.0])
+
+        UniformDrawer = $/UserInterface/UIUniformDrawer
+        BackgroundBlockColorToken = 'Supply_Orange_Mod'
+        HasBackground = true
+
+        HasBorder = true
+        BorderThicknessToken = "1"
+        BorderLineColorToken = "White_Mod"
 
         FeedbackTexture = "icone_shell"
         FeedbackRefillTexture = "icone_shell_refill"
@@ -1443,6 +1498,14 @@ private SupplyFeedbackIcons is TBUCKSpecificLabelFeedbackIconsDescriptor
         TextureDrawer = 'ColorMultiply'
         TextureFrame = TUIFramePropertyRTTI(RelativeWidthHeight = [1.0, 1.0])
 
+        UniformDrawer = $/UserInterface/UIUniformDrawer
+        BackgroundBlockColorToken = 'Supply_Orange_Mod'
+        HasBackground = true
+
+        HasBorder = true
+        BorderThicknessToken = "1"
+        BorderLineColorToken = "White_Mod"
+
         FeedbackTexture = "icone_shell"
         FeedbackRefillTexture = "icone_shell_refill"
     )
@@ -1455,6 +1518,14 @@ private SupplyFeedbackIcons is TBUCKSpecificLabelFeedbackIconsDescriptor
         TextureDrawer = 'ColorMultiply'
         TextureFrame = TUIFramePropertyRTTI(RelativeWidthHeight = [1.0, 1.0])
 
+        UniformDrawer = $/UserInterface/UIUniformDrawer
+        BackgroundBlockColorToken = 'Supply_Orange_Mod'
+        HasBackground = true
+
+        HasBorder = true
+        BorderThicknessToken = "1"
+        BorderLineColorToken = "White_Mod"
+
         FeedbackTexture = "icone_shell"
         FeedbackRefillTexture = "icone_shell_refill"
     )
@@ -1466,6 +1537,14 @@ private SupplyFeedbackIcons is TBUCKSpecificLabelFeedbackIconsDescriptor
         IsClippable = true
         TextureDrawer = 'ColorMultiply'
         TextureFrame = TUIFramePropertyRTTI(RelativeWidthHeight = [1.0, 1.0])
+
+        UniformDrawer = $/UserInterface/UIUniformDrawer
+        BackgroundBlockColorToken = 'Supply_Red_Mod'
+        HasBackground = true
+
+        HasBorder = true
+        BorderThicknessToken = "1"
+        BorderLineColorToken = "White_Mod"
 
         FeedbackTexture = "icone_life"
         FeedbackRefillTexture = "icone_life_refill"
@@ -1504,6 +1583,7 @@ private template UnitNameList
             ComponentDescriptor = UnitLabelUnitCountIconBUCKComponent
             (
                 //Alignement = [0.0, 0.5]
+                IsForMultiSelection = <IsForMultiSelection>
                 IsForCarriedUnit = <IsForCarriedUnit>
                 LocalRenderLayer = <LocalRenderLayer>
             )
@@ -1620,13 +1700,14 @@ is BUCKListDescriptor
             (
                 ComponentFrame = TUIFramePropertyRTTI
                 (
-                    MagnifiableWidthHeight = [100,14]
+                    //MagnifiableWidthHeight = [100,30]
                     AlignementToFather = [0.5, 0.0]
                     AlignementToAnchor = [0.5, 0.0]
                 )
 
-                FitStyle = (<IsForMultiSelection> ? ~/ContainerFitStyle/None : ~/ContainerFitStyle/MaxBetweenUserDefinedAndContent)
-                ClipContent = true
+                FitStyle = (<IsForMultiSelection> ? ~/ContainerFitStyle/FitToContent : ~/ContainerFitStyle/MaxBetweenUserDefinedAndContent)
+                //ClipContent = true
+
                 Components =
                 [
 
@@ -1642,20 +1723,6 @@ is BUCKListDescriptor
                         LocalRenderLayer = 1
                     )
                 ]
-            )
-        ),
-        BUCKListElementDescriptor
-        (
-            ComponentDescriptor = UnitLabelUnitMoraleGaugeBUCKComponent
-            (
-                ElementName = "MoraleGaugeNameOnly"
-            )
-        ),
-        BUCKListElementDescriptor
-        (
-            ComponentDescriptor = RightLabel
-            (
-                IsForMultiSelection = true
             )
         ),
         BUCKListElementDescriptor
@@ -1686,6 +1753,48 @@ is BUCKListDescriptor
                 ]
             )
         ),
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = UnitLabelUnitMoraleGaugeBUCKComponent
+            (
+                ElementName = "MoraleGaugeNameOnly"
+            )
+        ),
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = RightLabel
+            (
+                IsForMultiSelection = true
+            )
+        ),
+        {BUCKListElementDescriptor
+        (
+            ComponentDescriptor = BUCKContainerDescriptor
+            (
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    AlignementToFather = [0.5, 0.0]
+                    AlignementToAnchor = [0.5, 0.0]
+                )
+
+                FitStyle = ~/ContainerFitStyle/FitToContent
+
+                Components =
+                [
+                    <IsForMultiSelection> ? UnitNameList
+                    (
+                        IsForMultiSelection = true
+                        IsForCarriedUnit = true
+                        LocalRenderLayer = 1
+                    )
+                    : UnitNameListSensibleArea
+                    (
+                        IsForCarriedUnit = true
+                        LocalRenderLayer = 1
+                    )
+                ]
+            )
+        ),}
     ]
 )
 

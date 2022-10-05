@@ -36,8 +36,8 @@ template BUCKSpecificSkirmishProductionMenuMainComponentDescriptor
             Axis = ~/ListAxis/Horizontal
             BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
 
-            FirstMargin = TRTTILength(Magnifiable = 10.0)
-            InterItemMargin = TRTTILength(Magnifiable = 30.0)
+            FirstMargin = TRTTILength(Magnifiable = 0.0)
+            InterItemMargin = TRTTILength(Magnifiable = 5.0)
             LastMargin = TRTTILength(Magnifiable = 10.0)
 
             ChildFitToContent = true
@@ -78,7 +78,7 @@ private PanelInfoPartie is BUCKListDescriptor
     ElementName = "ListeDesRessources"
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableOffset = [-330,0] 
+        MagnifiableOffset = [ -10,0] 
     )
 
     FitStyle = ~/ContainerFitStyle/FitToContentVertically
@@ -114,8 +114,8 @@ private PanelInfoPartie is BUCKListDescriptor
             BorderLineColorToken = 'White_Mod'
             BorderThicknessToken = '2'
             HasBackground = true
-            HasBorder = true
-            //RoundedVertexes = [false,false,false,false]
+            HasBorder = false
+            //RoundedVertexes = [false,true,false,true]
             
         )
     ]
@@ -135,7 +135,7 @@ private PointsCommandement is BUCKListDescriptor
     InterItemMargin = TRTTILength( Magnifiable = 5.0 )
     LastMargin = TRTTILength( Magnifiable = 10.0 )
 
-    HasBorder = true
+    HasBorder = false
     BorderThicknessToken = "1"
     BorderLineColorToken = "White_Mod"
     BordersToDraw =  ~/TBorderSide/Right
@@ -264,7 +264,7 @@ private ChronoPointCommandement is BUCKListDescriptor
     FirstMargin = TRTTILength( Magnifiable = 10.0 )
     InterItemMargin = TRTTILength( Magnifiable = 5.0 )
     LastMargin = TRTTILength( Magnifiable = 10.0 )
-    HasBorder = true
+    HasBorder = false
     BorderThicknessToken = "1"
     BorderLineColorToken = "White_Mod"
     BordersToDraw =  ~/TBorderSide/Right

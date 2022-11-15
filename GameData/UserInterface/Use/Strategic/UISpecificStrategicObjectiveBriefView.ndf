@@ -4,7 +4,6 @@ BUCKSpecificStrategicObjectiveBriefMainComponentDescriptor is BUCKListDescriptor
     ComponentFrame = TUIFramePropertyRTTI
     (
         RelativeWidthHeight = [1.0, 0.0]
-        MagnifiableOffset = [10,0]
     )
 
     FirstMargin  = TRTTILength (Magnifiable = 8.0)
@@ -33,11 +32,11 @@ BUCKSpecificStrategicObjectiveBriefMainComponentDescriptor is BUCKListDescriptor
                 TextPadding = TRTTILength4(Magnifiable = [10.0, 0.0, 4.0, 0.0])
 
                 TextStyle = 'Default'
-                TypefaceToken = "Liberator"
+                TypefaceToken = "Eurostyle_Medium"
 
-                TextToken = 'Obj_ti'
+                TextToken = 'Obj_ti2'
                 TextDico = ~/LocalisationConstantes/dico_interface_ingame
-                TextSize = '18'
+                TextSize = '16'
                 TextColor = 'SM_paleSilver'
             )
         ),
@@ -62,10 +61,8 @@ BUCKSpecificStrategicObjectiveBriefMainComponentDescriptor is BUCKListDescriptor
                 BigLineAction = ~/BigLineAction/MultiLine
                 ColorMode = ~/ColorMode/Override
 
-                UniformDrawer = $/UserInterface/UIUniformDrawer
-
                 TextColor = "SM_paleSilver"
-                TextSize = "15"
+                TextSize = "14"
             )
         ),
     ]
@@ -74,14 +71,14 @@ BUCKSpecificStrategicObjectiveBriefMainComponentDescriptor is BUCKListDescriptor
         //OmbrePanel
         PanelRoundedCorner
         (
-            RoundedVertexes = [true, true, false, false]
+            RoundedVertexes = [true, false, false, false]
             BackgroundBlockColorToken = 'SM_RifleGreen_75'
             BorderLineColorToken = 'SM_Grullo'
         )
     ]
 )
 
-UISpecificStrategicObjectiveBriefViewDescriptor is TUISpecificStrategicObjectiveBriefViewDescriptor
+UISpecificStrategicObjectiveBriefViewDescriptor is TUISpecificObjectiveBriefViewDescriptor
 (
     MainComponentDescriptor = ~/BUCKSpecificStrategicObjectiveBriefMainComponentDescriptor
     MainComponentContainerUniqueName = "StrategicGlobalObjectivesContainer" // Permet d'indiquer l'endroit ou le composant doit s'insérer

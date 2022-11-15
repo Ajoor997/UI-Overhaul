@@ -5,33 +5,21 @@ BUCKSpecificStrategicObjectiveScoreMainComponentDescriptor is BUCKRackDescriptor
     ComponentFrame = TUIFramePropertyRTTI
     (
         MagnifiableWidthHeight = [0.0, 25.0]
+        AlignementToFather = [0.0, 0.5]
+        AlignementToAnchor = [0.0, 0.5]
     )
-
     Axis = ~/ListAxis/Horizontal
-
-    //HasBackground = true
-
-    //HasBorder = true
-        BorderThicknessToken = "2"
-        BorderLineColorToken = "LigneSeparatricePanelRessources"
-        BordersToDraw = ~/TBorderSide/Right
-
-    //FirstMargin = TRTTILength(Magnifiable = 10.0
 
     BladeDescriptor = BUCKListDescriptor
     (
         ComponentFrame = TUIFramePropertyRTTI
         (
             MagnifiableWidthHeight = [0.0, 25.0]
-            AlignementToFather = [0.0, 0.5]
-            AlignementToAnchor = [0.0, 0.5]
+
         )
         Axis = ~/ListAxis/Horizontal
 
-
-
-        FirstMargin = TRTTILength(Magnifiable = 10.0)
-        LastMargin = TRTTILength(Magnifiable = 10.0)
+        LastMargin = TRTTILength(Magnifiable = 50.0)
 
         Elements =
         [
@@ -42,7 +30,9 @@ BUCKSpecificStrategicObjectiveScoreMainComponentDescriptor is BUCKRackDescriptor
                     ElementName = 'Flag'
                     ComponentFrame = TUIFramePropertyRTTI
                     (
-                        MagnifiableWidthHeight = [45.0, 25.0]
+                        MagnifiableWidthHeight = [45.0, 20.0]
+                        AlignementToFather = [0.0, 0.5]
+                        AlignementToAnchor = [0.0, 0.5]
 
                     )
 
@@ -57,7 +47,9 @@ BUCKSpecificStrategicObjectiveScoreMainComponentDescriptor is BUCKRackDescriptor
                     ElementName = 'Score'
                     ComponentFrame = TUIFramePropertyRTTI
                     (
-                        MagnifiableWidthHeight = [0.0, 25.0]
+                        MagnifiableWidthHeight = [0.0, 20.0]
+                        AlignementToFather = [0.0, 0.5]
+                        AlignementToAnchor = [0.0, 0.5]
                     )
 
                     ParagraphStyle = ~/LDHintParagraphStyleLeftAlignedExact
@@ -71,8 +63,6 @@ BUCKSpecificStrategicObjectiveScoreMainComponentDescriptor is BUCKRackDescriptor
                     BigLineAction = ~/BigLineAction/MultiLine
                     ColorMode = ~/ColorMode/Override
 
-                    UniformDrawer = $/UserInterface/UIUniformDrawer
-
                     TextColor = "SD2_Blanc184"
                     TextSize = "15"
                     TextDico = ~/LocalisationConstantes/dico_interface_ingame
@@ -80,17 +70,6 @@ BUCKSpecificStrategicObjectiveScoreMainComponentDescriptor is BUCKRackDescriptor
             )
         ]
     )
-
-    BackgroundComponents =
-    [
-        PanelRoundedCorner
-        (
-            RoundedVertexes = [false, false, true, true]
-            BackgroundBlockColorToken = 'SM_RifleGreen_75'
-            BorderLineColorToken = 'SM_Grullo'
-        )
-    ]
-
 )
 //-------------------------------------------------------------------------------------
 UISpecificStrategicObjectiveScoreViewDescriptor is TUISpecificStrategicObjectiveScoreViewDescriptor

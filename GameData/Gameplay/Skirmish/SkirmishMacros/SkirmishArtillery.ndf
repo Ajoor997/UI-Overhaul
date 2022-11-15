@@ -34,7 +34,6 @@ is TMacroActionDescriptor_Artillery_Specific
 
         TMacroActionLifetimeSettingHolder(MinimumResourceForLaunch = <MinimumResourceForLaunch>),
         TArtilleryDeployOnRoadSettingHolder(),
-        TIgnoreSafePathSettingHolder(), //on esquive pas la menace sur le chemin
     ]
     +
     <ParametresDeMission>
@@ -124,7 +123,6 @@ export Artillery_Sniper is TMacroActionDescriptor_Artillery_Specific
             ]
         ),
         TArtilleryDeployOnRoadSettingHolder(),
-        TIgnoreSafePathSettingHolder(),
     ]
 )
 //-------------------------------------------------------------------------
@@ -191,7 +189,6 @@ export Artillery_Support is TMacroActionDescriptor_Artillery_Specific
 
         TMacroActionProductionSettingHolder(PoolModelList = [~/Pool_Artillery_Support] DistanceToOptimumStartDuringDeployment = 3000*Metre),
         TArtilleryDeployOnRoadSettingHolder(),
-        TIgnoreSafePathSettingHolder(), //on esquive pas la menace sur le chemin
     ]
 )
 //-------------------------------------------------------------------------
@@ -228,7 +225,6 @@ export GenBTAtk_Artillery_Support is TMacroActionDescriptor_Artillery_Specific
 
         TMacroActionProductionSettingHolder(PoolModelList = [~/Pool_Artillery_Support] DistanceToOptimumStartDuringDeployment = 3000*Metre),
         TArtilleryDeployOnRoadSettingHolder(),
-        TIgnoreSafePathSettingHolder(), //on esquive pas la menace sur le chemin
     ]
 )
 //-------------------------------------------------------------------------
@@ -258,7 +254,6 @@ is TMacroActionDescriptor_Artillery_Specific
 
         TMacroActionLifetimeSettingHolder(MinimumResourceForLaunch = <MinimumResourceForLaunch>),
         TArtilleryDeployOnRoadSettingHolder(),
-        TIgnoreSafePathSettingHolder(), //on esquive pas la menace sur le chemin
     ] + <ArtilleryStrikeSettingHolder>
 )
 //-------------------------------------------------------------------------
@@ -357,7 +352,6 @@ export GenBTDef_Artillery_FrontLane is TMacroActionDescriptor_Artillery_Specific
         TMacroActionProductionSettingHolder(PoolModelList = [~/Pool_Artillery_Support] DistanceToOptimumStartDuringDeployment = 3000*Metre),
         TForcedPlacementSettingHolder(OrderedPrioritaryZoneWeightList = [1]),
         TArtilleryDeployOnRoadSettingHolder(),
-        TIgnoreSafePathSettingHolder(), //on esquive pas la menace sur le chemin
     ]
 )
 //-------------------------------------------------------------------------

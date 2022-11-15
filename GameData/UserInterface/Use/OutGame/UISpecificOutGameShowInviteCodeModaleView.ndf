@@ -80,6 +80,7 @@ private ShowInviteCloseButton is ModalButtonCyan
     ElementName = "CloseButton"
     TextToken = "BTN_CLOSE"
     IsFilled = false
+    Mapping = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ESCAPE ) )
 )
 
 BUCKSpecificOutGameShowInviteCodeModaleMainComponentDescriptor is SpecificModaleWindowFrame

@@ -291,7 +291,6 @@ BUCKSpecificMultiLobbyShortcutsMainComponentDescriptor is BUCKContainerDescripto
             TypefaceToken = "Liberator"
             BigLineAction = ~/BigLineAction/MultiLine
 
-            UniformDrawer = $/UserInterface/UIUniformDrawer
 
             TextToken = 'QCK_Tlt'
             TextDico = ~/LocalisationConstantes/dico_interface_outgame

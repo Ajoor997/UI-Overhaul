@@ -18,7 +18,6 @@ template HUDArtilleryButton
 
     HasBackground : bool = true,
     BackgroundBlockColorToken : string = "ButtonHUD/Background2",
-    UniformDrawer : string = $/UserInterface/UIUniformDrawer,
 
     BackgroundTexture : string = "",
     ResizeMode : int = ~/TextureResizeMode/UserDefined,
@@ -451,8 +450,6 @@ BUCKSpecificOffMapArtilleryMainComponentDescriptor is BUCKSpecificOffMapButton
                             AlignementToAnchor     = [0.0, 0.5]
                             AlignementToFather     = [0.0, 0.5]
                         )
-
-                        UniformDrawer = $/UserInterface/UIUniformDrawer
 
                         HasBackground = true
                         BackgroundBlockColorToken = "Gray"

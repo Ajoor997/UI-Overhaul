@@ -64,8 +64,6 @@ private NameHeader is BUCKContainerDescriptor
             TypefaceToken = "Liberator"
             BigLineAction = ~/BigLineAction/CutByDots
 
-            UniformDrawer = $/UserInterface/UIUniformDrawer
-
             TextDico = ~/LocalisationConstantes/dico_interface_ingame
 
             TextColor = "Blanc"
@@ -95,8 +93,6 @@ private NameHeader is BUCKContainerDescriptor
 
             TypefaceToken = "Liberator"
             BigLineAction = ~/BigLineAction/CutByDots
-
-            UniformDrawer = $/UserInterface/UIUniformDrawer
 
             TextDico = ~/LocalisationConstantes/dico_interface_ingame
 

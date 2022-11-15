@@ -38,7 +38,6 @@ private PlayerLinePlayerLevel is BUCKTextDescriptor
     TextDico        = ~/LocalisationConstantes/dico_interface_outgame
 
     TypefaceToken   = "UIMainFont"
-    UniformDrawer   = $/UserInterface/UIUniformDrawer
 
     Components =
     [
@@ -84,7 +83,6 @@ private PlayerLinePlayerName is BUCKTextDescriptor
     TextDico        = ~/LocalisationConstantes/dico_interface_outgame
 
     TypefaceToken   = "Liberator"
-    UniformDrawer   = $/UserInterface/UIUniformDrawer
 )
 
 //-------------------------------------------------------------------------------------
@@ -112,7 +110,6 @@ private PlayerLineHostIndication is BUCKTextDescriptor
     TextDico        = ~/LocalisationConstantes/dico_interface_outgame
 
     TypefaceToken   = "Liberator"
-    UniformDrawer   = $/UserInterface/UIUniformDrawer
 )
 
 //-------------------------------------------------------------------------------------
@@ -137,7 +134,6 @@ private deckNameDescription is BUCKTextDescriptor
 
     BigLineAction = ~/BigLineAction/MultiLine
 
-    UniformDrawer = $/UserInterface/UIUniformDrawer
     TextDico = ~/LocalisationConstantes/dico_interface_outgame
 
     TextPadding = TRTTILength4( Magnifiable = [2.0, 0.0, 2.0, 0.0] )
@@ -525,7 +521,6 @@ OpenSlotText is BUCKTextDescriptor
     TextDico        = ~/LocalisationConstantes/dico_interface_outgame
 
     TypefaceToken   = "Liberator"
-    UniformDrawer   = $/UserInterface/UIUniformDrawer
 )
 
 //-------------------------------------------------------------------------------------

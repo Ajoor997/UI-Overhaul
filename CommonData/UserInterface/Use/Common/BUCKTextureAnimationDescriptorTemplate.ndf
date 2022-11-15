@@ -27,8 +27,6 @@ template BUCKTextureAnimationDescriptor
 
     SpotlightComponent : TBUCKContainerDescriptor = nil,
 
-    UniformDrawer : TUIUniformDrawer = $/UserInterface/UIUniformDrawer,
-
     HasBackground : bool = false,
     BackgroundBlockColorToken : string = "",
 
@@ -84,7 +82,7 @@ is TBUCKTextureAnimationDescriptor
 
     SpotlightComponent = <SpotlightComponent>
 
-    UniformDrawer = <UniformDrawer>
+    UniformDrawer = $/UserInterface/UIUniformDrawer
 
     HasBackground = <HasBackground>
     BackgroundBlockColorToken = <BackgroundBlockColorToken>

@@ -13,7 +13,6 @@ MoveTowardTarget                is 10
 Crashing                        is 11
 Sinking                         is 12
 Crashed                         is 13
-UserPilot                       is 14
-NotInWorldStoppedInShowRoom     is 15
-StoppedInShowRoom               is 16
-Count                           is 17
+NotInWorldStoppedInShowRoom     is 14
+StoppedInShowRoom               is 15
+Count                           is 16

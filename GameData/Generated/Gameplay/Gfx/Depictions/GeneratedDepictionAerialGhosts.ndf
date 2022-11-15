@@ -216,6 +216,11 @@ GhostDepiction_F15C_Eagle_AA_US is GhostAerialDepictionTemplate
     Alternatives = Alternatives_F15C_Eagle_AA_US
     Selector = SpecificAirplaneDepictionSelector
 )
+GhostDepiction_F16C_LGB_US is GhostAerialDepictionTemplate
+(
+    Alternatives = Alternatives_F16C_LGB_US
+    Selector = SpecificAirplaneDepictionSelector
+)
 GhostDepiction_F16E_AA_US is GhostAerialDepictionTemplate
 (
     Alternatives = Alternatives_F16E_AA_US
@@ -539,6 +544,11 @@ GhostDepiction_MiG_25BM_SOV is GhostAerialDepictionTemplate
 GhostDepiction_MiG_25RBF_SOV is GhostAerialDepictionTemplate
 (
     Alternatives = Alternatives_MiG_25RBF_SOV
+    Selector = SpecificAirplaneDepictionSelector
+)
+GhostDepiction_MiG_27K_LGB_SOV is GhostAerialDepictionTemplate
+(
+    Alternatives = Alternatives_MiG_27K_LGB_SOV
     Selector = SpecificAirplaneDepictionSelector
 )
 GhostDepiction_MiG_27M_SOV is GhostAerialDepictionTemplate
@@ -974,6 +984,11 @@ GhostDepiction_Tornado_IDS_RFA is GhostAerialDepictionTemplate
 GhostDepiction_UH1D_RFA is GhostAerialDepictionTemplate
 (
     Alternatives = Alternatives_UH1D_RFA
+    Selector = SpecificHelicoDepictionSelector
+)
+GhostDepiction_UH1D_Supply_NL is GhostAerialDepictionTemplate
+(
+    Alternatives = Alternatives_UH1D_Supply_NL
     Selector = SpecificHelicoDepictionSelector
 )
 GhostDepiction_UH1D_Supply_RFA is GhostAerialDepictionTemplate

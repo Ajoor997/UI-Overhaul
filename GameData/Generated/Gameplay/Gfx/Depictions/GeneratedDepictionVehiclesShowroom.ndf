@@ -286,6 +286,12 @@ Gfx_ATteam_Milan_2_para_RFA_Showroom_Autogen is ShowroomVehicleDepictionTemplate
     Selector = Selector_ATteam_Milan_2_para_RFA
     SubDepictions = HumanSubDepictionsShowroom_ATteam_Milan_2_para_RFA
 )
+Gfx_ATteam_Milan_2_para_UK_Showroom_Autogen is ShowroomVehicleDepictionTemplate
+(
+    Alternatives = Alternatives_ATteam_Milan_2_para_UK
+    Selector = Selector_ATteam_Milan_2_para_UK
+    SubDepictions = HumanSubDepictionsShowroom_ATteam_Milan_2_para_UK
+)
 Gfx_ATteam_RCL_M40A1_RFA_Showroom_Autogen is ShowroomVehicleDepictionTemplate
 (
     Alternatives = Alternatives_ATteam_RCL_M40A1_RFA
@@ -627,6 +633,13 @@ Gfx_DCA_M167_Vulcan_20mm_US_Showroom_Autogen is ShowroomVehicleDepictionTemplate
     Selector = Selector_DCA_M167_Vulcan_20mm_US
     SubDepictions = HumanSubDepictionsShowroom_DCA_M167_Vulcan_20mm_US
 )
+Gfx_DCA_Rapier_FSA_UK_Showroom_Autogen is ShowroomVehicleDepictionTemplate
+(
+    Alternatives = Alternatives_DCA_Rapier_FSA_UK
+    Selector = Selector_DCA_Rapier_FSA_UK
+    SubDepictions = HumanSubDepictionsShowroom_DCA_Rapier_FSA_UK
+    SubDepictionGenerators = [ SubGenerators_Showroom_DCA_Rapier_FSA_UK ]
+)
 Gfx_DCA_Rapier_UK_Showroom_Autogen is ShowroomVehicleDepictionTemplate
 (
     Alternatives = Alternatives_DCA_Rapier_UK
@@ -812,44 +825,6 @@ Gfx_FV721_Fox_UK_Showroom_Autogen is ShowroomVehicleDepictionTemplate
     Alternatives = Alternatives_FV721_Fox_UK
     Selector = Selector_FV721_Fox_UK
 )
-Gfx_Faun_Kraka_20mm_RFA_Showroom_Autogen is ShowroomVehicleDepictionTemplate
-(
-    Alternatives = Alternatives_Faun_Kraka_20mm_RFA
-    Selector = Selector_Faun_Kraka_20mm_RFA
-    SubDepictions = HumanSubDepictionsShowroom_Faun_Kraka_20mm_RFA + 
-    [
-        TSubDepiction
-        (
-            Anchor = "base_tourelle_01"
-            Depiction = ShowroomDepictionTemplateInternal
-            (
-                MeshDescriptor = Modele_Faun_Kraka_20mm_RFA_Tourelle_01
-            )
-        ),
-    ]
-)
-Gfx_Faun_Kraka_Log_RFA_Showroom_Autogen is ShowroomVehicleDepictionTemplate
-(
-    Alternatives = Alternatives_Faun_Kraka_Log_RFA
-    Selector = Selector_Faun_Kraka_Log_RFA
-    SubDepictions = HumanSubDepictionsShowroom_Faun_Kraka_Log_RFA
-)
-Gfx_Faun_Kraka_TOW_RFA_Showroom_Autogen is ShowroomVehicleDepictionTemplate
-(
-    Alternatives = Alternatives_Faun_Kraka_TOW_RFA
-    Selector = Selector_Faun_Kraka_TOW_RFA
-    SubDepictions = HumanSubDepictionsShowroom_Faun_Kraka_TOW_RFA + 
-    [
-        TSubDepiction
-        (
-            Anchor = "base_tourelle_01"
-            Depiction = ShowroomDepictionTemplateInternal
-            (
-                MeshDescriptor = Modele_Faun_Kraka_TOW_RFA_Tourelle_01
-            )
-        ),
-    ]
-)
 Gfx_Faun_kraka_RFA_Showroom_Autogen is ShowroomVehicleDepictionTemplate
 (
     Alternatives = Alternatives_Faun_kraka_RFA
@@ -920,12 +895,6 @@ Gfx_HMGteam_AGS17_VDV_SOV_Showroom_Autogen is ShowroomVehicleDepictionTemplate
     Selector = Selector_HMGteam_AGS17_VDV_SOV
     SubDepictions = HumanSubDepictionsShowroom_HMGteam_AGS17_VDV_SOV
 )
-Gfx_HMGteam_KPVT_SOV_Showroom_Autogen is ShowroomVehicleDepictionTemplate
-(
-    Alternatives = Alternatives_HMGteam_KPVT_SOV
-    Selector = Selector_HMGteam_KPVT_SOV
-    SubDepictions = HumanSubDepictionsShowroom_HMGteam_KPVT_SOV
-)
 Gfx_HMGteam_M2HB_AB_US_Showroom_Autogen is ShowroomVehicleDepictionTemplate
 (
     Alternatives = Alternatives_HMGteam_M2HB_AB_US
@@ -950,12 +919,6 @@ Gfx_HMGteam_M2HB_para_FR_Showroom_Autogen is ShowroomVehicleDepictionTemplate
     Selector = Selector_HMGteam_M2HB_para_FR
     SubDepictions = HumanSubDepictionsShowroom_HMGteam_M2HB_para_FR
 )
-Gfx_HMGteam_M2HB_para_UK_Showroom_Autogen is ShowroomVehicleDepictionTemplate
-(
-    Alternatives = Alternatives_HMGteam_M2HB_para_UK
-    Selector = Selector_HMGteam_M2HB_para_UK
-    SubDepictions = HumanSubDepictionsShowroom_HMGteam_M2HB_para_UK
-)
 Gfx_HMGteam_M60_AB_US_Showroom_Autogen is ShowroomVehicleDepictionTemplate
 (
     Alternatives = Alternatives_HMGteam_M60_AB_US
@@ -974,12 +937,6 @@ Gfx_HMGteam_MAG_UK_Showroom_Autogen is ShowroomVehicleDepictionTemplate
     Selector = Selector_HMGteam_MAG_UK
     SubDepictions = HumanSubDepictionsShowroom_HMGteam_MAG_UK
 )
-Gfx_HMGteam_MAG_para_UK_Showroom_Autogen is ShowroomVehicleDepictionTemplate
-(
-    Alternatives = Alternatives_HMGteam_MAG_para_UK
-    Selector = Selector_HMGteam_MAG_para_UK
-    SubDepictions = HumanSubDepictionsShowroom_HMGteam_MAG_para_UK
-)
 Gfx_HMGteam_MG3_FJ_RFA_Showroom_Autogen is ShowroomVehicleDepictionTemplate
 (
     Alternatives = Alternatives_HMGteam_MG3_FJ_RFA
@@ -997,12 +954,6 @@ Gfx_HMGteam_Mk19_AB_US_Showroom_Autogen is ShowroomVehicleDepictionTemplate
     Alternatives = Alternatives_HMGteam_Mk19_AB_US
     Selector = Selector_HMGteam_Mk19_AB_US
     SubDepictions = HumanSubDepictionsShowroom_HMGteam_Mk19_AB_US
-)
-Gfx_HMGteam_Mk19_US_Showroom_Autogen is ShowroomVehicleDepictionTemplate
-(
-    Alternatives = Alternatives_HMGteam_Mk19_US
-    Selector = Selector_HMGteam_Mk19_US
-    SubDepictions = HumanSubDepictionsShowroom_HMGteam_Mk19_US
 )
 Gfx_HMGteam_NSV_DDR_Showroom_Autogen is ShowroomVehicleDepictionTemplate
 (
@@ -1105,12 +1056,6 @@ Gfx_Howz_M46_130mm_DDR_Showroom_Autogen is ShowroomVehicleDepictionTemplate
     Selector = Selector_Howz_M46_130mm_DDR
     SubDepictions = HumanSubDepictionsShowroom_Howz_M46_130mm_DDR
 )
-Gfx_Howz_M46_130mm_SOV_Showroom_Autogen is ShowroomVehicleDepictionTemplate
-(
-    Alternatives = Alternatives_Howz_M46_130mm_SOV
-    Selector = Selector_Howz_M46_130mm_SOV
-    SubDepictions = HumanSubDepictionsShowroom_Howz_M46_130mm_SOV
-)
 Gfx_Iltis_MILAN_RFA_Showroom_Autogen is ShowroomVehicleDepictionTemplate
 (
     Alternatives = Alternatives_Iltis_MILAN_RFA
@@ -1197,6 +1142,12 @@ Gfx_LandRover_CMD_UK_Showroom_Autogen is ShowroomVehicleDepictionTemplate
     Alternatives = Alternatives_LandRover_CMD_UK
     Selector = Selector_LandRover_CMD_UK
     SubDepictions = HumanSubDepictionsShowroom_LandRover_CMD_UK
+)
+Gfx_LandRover_MILAN_Para_UK_Showroom_Autogen is ShowroomVehicleDepictionTemplate
+(
+    Alternatives = Alternatives_LandRover_MILAN_Para_UK
+    Selector = Selector_LandRover_MILAN_Para_UK
+    SubDepictions = HumanSubDepictionsShowroom_LandRover_MILAN_Para_UK
 )
 Gfx_LandRover_MILAN_UK_Showroom_Autogen is ShowroomVehicleDepictionTemplate
 (
@@ -1315,6 +1266,12 @@ Gfx_M1025_Humvee_AGL_US_Showroom_Autogen is ShowroomVehicleDepictionTemplate
     Alternatives = Alternatives_M1025_Humvee_AGL_US
     Selector = Selector_M1025_Humvee_AGL_US
     SubDepictions = HumanSubDepictionsShowroom_M1025_Humvee_AGL_US
+)
+Gfx_M1025_Humvee_AGL_nonPara_US_Showroom_Autogen is ShowroomVehicleDepictionTemplate
+(
+    Alternatives = Alternatives_M1025_Humvee_AGL_nonPara_US
+    Selector = Selector_M1025_Humvee_AGL_nonPara_US
+    SubDepictions = HumanSubDepictionsShowroom_M1025_Humvee_AGL_nonPara_US
 )
 Gfx_M1025_Humvee_CMD_para_US_Showroom_Autogen is ShowroomVehicleDepictionTemplate
 (
@@ -1592,11 +1549,6 @@ Gfx_M1A1_Abrams_US_Showroom_Autogen is ShowroomVehicleDepictionTemplate
 (
     Alternatives = Alternatives_M1A1_Abrams_US
     Selector = Selector_M1A1_Abrams_US
-)
-Gfx_M1IP_Abrams_CMD_US_Showroom_Autogen is ShowroomVehicleDepictionTemplate
-(
-    Alternatives = Alternatives_M1IP_Abrams_CMD_US
-    Selector = Selector_M1IP_Abrams_CMD_US
 )
 Gfx_M1IP_Abrams_US_Showroom_Autogen is ShowroomVehicleDepictionTemplate
 (
@@ -1916,17 +1868,6 @@ Gfx_Mortier_Tampella_120mm_RFA_Showroom_Autogen is ShowroomVehicleDepictionTempl
     Selector = Selector_Mortier_Tampella_120mm_RFA
     SubDepictions = HumanSubDepictionsShowroom_Mortier_Tampella_120mm_RFA
 )
-Gfx_OT_62_TOPAS_JOD_POL_Showroom_Autogen is ShowroomVehicleDepictionTemplate
-(
-    Alternatives = Alternatives_OT_62_TOPAS_JOD_POL
-    Selector = Selector_OT_62_TOPAS_JOD_POL
-    SubDepictions = HumanSubDepictionsShowroom_OT_62_TOPAS_JOD_POL
-)
-Gfx_OT_62_TOPAS_SPG9_POL_Showroom_Autogen is ShowroomVehicleDepictionTemplate
-(
-    Alternatives = Alternatives_OT_62_TOPAS_SPG9_POL
-    Selector = Selector_OT_62_TOPAS_SPG9_POL
-)
 Gfx_Osa_9K33M3_DDR_Showroom_Autogen is ShowroomVehicleDepictionTemplate
 (
     Alternatives = Alternatives_Osa_9K33M3_DDR
@@ -1983,6 +1924,11 @@ Gfx_SPW_152K_DDR_Showroom_Autogen is ShowroomVehicleDepictionTemplate
             )
         ),
     ]
+)
+Gfx_Saxon_CMD_UK_Showroom_Autogen is ShowroomVehicleDepictionTemplate
+(
+    Alternatives = Alternatives_Saxon_CMD_UK
+    Selector = Selector_Saxon_CMD_UK
 )
 Gfx_Saxon_UK_Showroom_Autogen is ShowroomVehicleDepictionTemplate
 (
@@ -2075,22 +2021,6 @@ Gfx_T64B_SOV_Showroom_Autogen is ShowroomVehicleDepictionTemplate
 (
     Alternatives = Alternatives_T64B_SOV
     Selector = Selector_T64B_SOV
-)
-Gfx_T72B_DDR_Showroom_Autogen is ShowroomVehicleDepictionTemplate
-(
-    Alternatives = Alternatives_T72B_DDR
-    Selector = Selector_T72B_DDR
-    SubDepictions = 
-    [
-        TSubDepiction
-        (
-            Anchor = "base_tourelle_02"
-            Depiction = ShowroomDepictionTemplateInternal
-            (
-                MeshDescriptor = Modele_T72B_DDR_Tourelle_02
-            )
-        ),
-    ]
 )
 Gfx_T72M1_CMD_DDR_Showroom_Autogen is ShowroomVehicleDepictionTemplate
 (
@@ -2643,32 +2573,6 @@ Gfx_W50_LA_A_DDR_Showroom_Autogen is ShowroomVehicleDepictionTemplate
     Alternatives = Alternatives_W50_LA_A_DDR
     Selector = Selector_W50_LA_A_DDR
     SubDepictions = HumanSubDepictionsShowroom_W50_LA_A_DDR
-)
-Gfx_Wiesel_20mm_RFA_Showroom_Autogen is ShowroomVehicleDepictionTemplate
-(
-    Alternatives = Alternatives_Wiesel_20mm_RFA
-    Selector = Selector_Wiesel_20mm_RFA
-)
-Gfx_Wiesel_RFA_Showroom_Autogen is ShowroomVehicleDepictionTemplate
-(
-    Alternatives = Alternatives_Wiesel_RFA
-    Selector = Selector_Wiesel_RFA
-)
-Gfx_Wiesel_TOW_RFA_Showroom_Autogen is ShowroomVehicleDepictionTemplate
-(
-    Alternatives = Alternatives_Wiesel_TOW_RFA
-    Selector = Selector_Wiesel_TOW_RFA
-    SubDepictions = 
-    [
-        TSubDepiction
-        (
-            Anchor = "base_tourelle_02"
-            Depiction = ShowroomDepictionTemplateInternal
-            (
-                MeshDescriptor = Modele_Wiesel_TOW_RFA_Tourelle_02
-            )
-        ),
-    ]
 )
 Gfx_ZSU_23_Shilka_Afghan_SOV_Showroom_Autogen is ShowroomVehicleDepictionTemplate
 (

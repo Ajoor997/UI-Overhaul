@@ -10,121 +10,157 @@ private StrategicBattlePlanningButtons is StrategicSecondaryCubeActionPanel
     ContentComponents = MAP
     [
         ([0, 0],
-            test
-           {StrategicSecondaryCubeActionButton
-                      (
-                           MagnifiableWidth = 600
-                           MagnifiableHeight = 50
-                           ElementName = 'ValidateButton'
-
-                           HintTitleToken = "BtnValPlan"
-                           HintBodyToken = "BtnValPlaH"
-                           HintExtendedToken = ""
-                           HintDico = ~/LocalisationConstantes/dico_interface_ingame
-                           TextToken = "BtnValPlan"
-                       )}
+            AttackPreparation
         ),
 
-
-
-
-        {([0, 1],
-            StrategicSecondaryCubeActionButton
-            (
-                ElementName = 'CancelButton'
-
-                MagnifiableOffset = [
-                    CubeActionStrategicButtonDims[0] + CubeActionStrategicButtonSpacing[0],
-                    0.0
-                ]
-
-                HintTitleToken = "BtnCanPlan"
-                HintBodyToken = "BtnCanPlaH"
-                HintExtendedToken = ""
-                HintDico = ~/LocalisationConstantes/dico_interface_ingame
-                TextToken = "BtnCanPlan"
-            )
-        ),}
     ]
 )
-test is PanelRoundedCorner
+AttackPreparation is PanelRoundedCorner
 (
+
+    ElementName = "AttackPreparation"
+
     BackgroundBlockColorToken = 'SM_RifleGreen_75'
     BorderLineColorToken = 'SM_Grullo'
     BorderThicknessToken = '2'
     Radius = 10
 
-    ComponentFrame = TUIFramePropertyRTTI ( MagnifiableWidthHeight = [600,100])
+    ComponentFrame = TUIFramePropertyRTTI ( MagnifiableWidthHeight = [600,0])
+    FitStyle = ~/ContainerFitStyle/FitToContentVertically
     Components =
 
     [
-        BUCKTextDescriptor
+
+        BUCKListDescriptor
         (
-
-
             ComponentFrame = TUIFramePropertyRTTI
             (
-                MagnifiableWidthHeight = [0,20]
-                AlignementToFather = [0.5, 0.0]
-                AlignementToAnchor = [0.5, 0.0]
-                MagnifiableOffset = [0,10]
+                RelativeWidthHeight = [1,0]
+
             )
-
-            ParagraphStyle = paragraphStyleTextLeftAlign
-            TextStyle = "Default"
-
-            HorizontalFitStyle = ~/FitStyle/FitToContent
-            VerticalFitStyle = ~/FitStyle/UserDefined
-
-            TypefaceToken = "Eurostyle_Heavy"
-            BigLineAction = ~/BigLineAction/MultiLine
-
-            UniformDrawer = $/UserInterface/UIUniformDrawer
-
-            TextToken = 'CUR_ASSAUL'
-            TextDico = ~/LocalisationConstantes/dico_interface_ingame
-
-            TextColor = "BlancEquipe"
-            TextSize = "24"
-        ),
+            //BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
+            FirstMargin = TRTTILength (Magnifiable = 15)
+            InterItemMargin = TRTTILength( Magnifiable = 5.0 )
+            LastMargin = TRTTILength( Magnifiable = 15.0 )
+            Axis = ~/ListAxis/Vertical
+            Elements =
+            [
+                BUCKListElementDescriptor
+                (
+                    ComponentDescriptor = BUCKTextDescriptor
+                    (
 
 
+                        ComponentFrame = TUIFramePropertyRTTI
+                        (
+                            MagnifiableWidthHeight = [0,20]
+                            AlignementToFather = [0.5, 0.0]
+                            AlignementToAnchor = [0.5, 0.0]
 
-    BUCKListDescriptor
-    (
-        ComponentFrame = TUIFramePropertyRTTI
-        (
-            AlignementToFather = [0.5, 0.0]
-            AlignementToAnchor = [0.5, 0.0]
-            MagnifiableOffset = [0,45]
-        )
-        Axis = ~/ListAxis/Horizontal
-        InterItemMargin = TRTTILength ( Magnifiable = 10)
-        Elements =
-        [
-            BUCKListElementDescriptor
-            (
-                ComponentDescriptor = BoutonStartBattle
+                        )
+
+                        ParagraphStyle = paragraphStyleTextLeftAlign
+                        TextStyle = "Default"
+
+                        HorizontalFitStyle = ~/FitStyle/FitToContent
+                        VerticalFitStyle = ~/FitStyle/UserDefined
+
+                        TypefaceToken = "Eurostyle_Heavy"
+                        BigLineAction = ~/BigLineAction/MultiLine
+
+                        TextToken = 'CUR_ASSAUL'
+                        TextDico = ~/LocalisationConstantes/dico_interface_ingame
+
+                        TextColor = "BlancEquipe"
+                        TextSize = "24"
+                    )
+                ),
+                BUCKListElementDescriptor
+                (
+                    ComponentDescriptor = BUCKTextDescriptor
+                    (
+
+
+                        ComponentFrame = TUIFramePropertyRTTI
+                        (
+                            RelativeWidthHeight = [1,0]
+                            //MagnifiableWidthHeight = [0,20]
+                            AlignementToFather = [0.5, 0.0]
+                            AlignementToAnchor = [0.5, 0.0]
+
+                        )
+
+                        ParagraphStyle = TParagraphStyleRTTI
+                        (
+                            Alignment = UIText_Center
+                            VerticalAlignment = UIText_VerticalCenter
+                        )
+
+                        TextStyle = "Default"
+                        TextPadding =  TRTTILength4( Magnifiable = [20.0, 2.0, 20.0, 20.0] )
+                        HorizontalFitStyle = ~/FitStyle/UserDefined
+                        VerticalFitStyle = ~/FitStyle/FitToContent
+
+                        TypefaceToken = "Eurostyle_Italic"
+                        BigLineAction = ~/BigLineAction/MultiLine
+
+                        TextToken = 'CUR_Atth'
+                        TextDico = ~/LocalisationConstantes/dico_interface_ingame
+
+                        TextColor = "BlancEquipe"
+                        TextSize = "14"
+                    )
+                ),
+                BUCKListElementDescriptor
+                (
+                    ComponentDescriptor = BUCKListDescriptor
+                    (
+                        ComponentFrame = TUIFramePropertyRTTI
+                        (
+                            AlignementToFather = [0.5, 0.0]
+                            AlignementToAnchor = [0.5, 0.0]
+                        )
+
+                        BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
+
+                        Axis = ~/ListAxis/Horizontal
+                        InterItemMargin = TRTTILength ( Magnifiable = 10)
+                        Elements =
+                        [
+                            BUCKListElementDescriptor
                             (
-                                MagnifiableWidthHeight =  [160,40]
-                                ElementName = 'ValidateButton'
-                                TextToken = "BtnValPlan"
-                                HintBodyToken = "BtnValPlaH"
-                            )
-            ),
-            BUCKListElementDescriptor
-            (
-                ComponentDescriptor = BoutonStartBattle
+                                ComponentDescriptor = BoutonStartBattle
+                                            (
+                                                MagnifiableWidthHeight =  [160,40]
+                                                ElementName = 'ValidateButton'
+                                                TextToken = "BtnValPlan"
+                                                HintBodyToken = "BtnValPlaH"
+                                            )
+                            ),
+                            BUCKListElementDescriptor
                             (
-                                MagnifiableWidthHeight =  [160,40]
-                                ElementName = 'CancelButton'
-                                TextToken = "BTL_SHOCAN"
-                                HintBodyToken = "BtnCanPreH"
-                            )
-            ),
+                                ComponentDescriptor = BoutonStartBattle
+                                            (
+                                                MagnifiableWidthHeight =  [160,40]
+                                                ElementName = 'CancelButton'
+                                                TextToken = "BTL_SHOCAN"
+                                                HintBodyToken = "BtnCanPreH"
+                                            )
+                            ),
 
-        ]
-    )
+                         ]
+                    )
+                ),
+            ]
+    ),
+
+
+
+
+
+
+
+
     ]
 )
 StrategicBattlePlanningResources is TStrategicBattlePlanningResources

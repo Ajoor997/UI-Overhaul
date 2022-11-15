@@ -107,7 +107,6 @@ private EscapePanelSaveButton is ConfirmButton
             ParagraphStyle = ~/paragraphStyleTextCenter
             TextStyle = "Default"
             TypefaceToken = "Liberator"
-            UniformDrawer = $/UserInterface/UIUniformDrawer
 
             HorizontalFitStyle = ~/FitStyle/FitToContent
 

@@ -380,14 +380,16 @@ private DeckListModalImportButton is ModalButtonCyan
     ElementName = 'ImportButton'
     TextToken = 'AB_DCKIMPO'
     IsFilled = true
+    Mapping = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ENTER ) )
 )
 
 //Modale export deck
-private DeckListModalOkButton is ModalButtonCyan
+private DeckListModalExportOkButton is ModalButtonCyan
 (
     ElementName = 'OkButton'
     TextToken = 'BTN_OK'
     IsFilled = true
+    Mapping = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ENTER ) )
 )
 
 //Modale creation deck
@@ -701,7 +703,7 @@ BattlegroupsBriefMultiListTitle is BUCKListDescriptor
                 HidePointerEvents = true
                 Components =
                 [
-                    TextListe( TextToken = 'DB_RATE' ),
+                    TextListe( TextToken = 'DB_NAME' ),
                     BUCKSpecificHintableArea
                     (
                         DicoToken = ~/LocalisationConstantes/dico_interface_outgame
@@ -729,7 +731,7 @@ BattlegroupsBriefMultiListTitle is BUCKListDescriptor
                 HidePointerEvents = true
                 Components =
                                        [
-                                           TextListe( TextToken = 'DB_UTYPE' ),
+                                           TextListe( TextToken = 'DB_RATE' ),
                                            BUCKSpecificHintableArea
                                            (
                                                DicoToken = ~/LocalisationConstantes/dico_interface_outgame
@@ -757,7 +759,7 @@ BattlegroupsBriefMultiListTitle is BUCKListDescriptor
                 HidePointerEvents = true
                 Components =
                                         [
-                                            TextListe( TextToken = 'DB_NAME' ),
+                                            TextListe( TextToken = 'DB_UTYPE' ),
                                             BUCKSpecificHintableArea
                                             (
                                                 DicoToken = ~/LocalisationConstantes/dico_interface_outgame
@@ -1083,7 +1085,7 @@ private DeckListModalExportDeckWindowFrame is SpecificModaleWindowFrame
 
     ButtonList =
     [
-        BUCKListElementDescriptor( ComponentDescriptor = ~/DeckListModalOkButton ),
+        BUCKListElementDescriptor( ComponentDescriptor = ~/DeckListModalExportOkButton ),
     ]
 
     ContentComponents =

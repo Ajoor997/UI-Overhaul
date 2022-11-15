@@ -179,7 +179,6 @@ StatusUnite is BUCKTextDescriptor
     TypefaceToken = "IBM"
     BigLineAction = ~/BigLineAction/CutByDots
 
-    UniformDrawer = $/UserInterface/UIUniformDrawer
     HasBackground = false
 
     TextDico = ~/LocalisationConstantes/dico_interface_ingame

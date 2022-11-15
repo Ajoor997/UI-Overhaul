@@ -195,8 +195,6 @@ private template DebriefKillUnitComponent
                             TypefaceToken = TacticalEndgameKillLossTextFont
                             BigLineAction = ~/BigLineAction/CutByDots
 
-                            UniformDrawer = $/UserInterface/UIUniformDrawer
-
                             TextDico = ~/LocalisationConstantes/dico_interface_ingame
 
                             TextColor = "GrisTexte"
@@ -242,8 +240,6 @@ private template DebriefKillUnitComponent
                 TypefaceToken = TacticalEndgameKillLossTextFont
                 BigLineAction = ~/BigLineAction/CutByDots
 
-                UniformDrawer = $/UserInterface/UIUniformDrawer
-
                 TextDico = ~/LocalisationConstantes/dico_interface_ingame
 
                 TextColor = "GrisTexte" //(<ElementName> == "Left" ? "NatoTexte" : "PacteTexte")
@@ -266,6 +262,7 @@ private template DebriefKillUnitComponent
 
                 ComponentFrame = TUIFramePropertyRTTI
                 (
+
                     RelativeWidthHeight = [0.0, 1.0]
                     MagnifiableWidthHeight = [125, 0.0]
                 )
@@ -279,14 +276,11 @@ private template DebriefKillUnitComponent
 
                 //HasBackground = true
                 TextStyle = "Default"
-
                 HorizontalFitStyle = ~/FitStyle/UserDefined //MinBetweenUserDefinedAndContent 
 
                 TypefaceToken = TacticalEndgameKillLossTextFont
                 BigLineAction = ~/BigLineAction/CutByDots
-
-                UniformDrawer = $/UserInterface/UIUniformDrawer
-
+                //UniformDrawer = $/UserInterface/UIUniformDrawer
                 TextDico = ~/LocalisationConstantes/dico_interface_ingame
 
                 TextColor = "GrisTexte" //(<ElementName> == "Left" ? "NatoTexte" : "PacteTexte")

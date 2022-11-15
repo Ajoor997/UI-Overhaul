@@ -14,8 +14,8 @@ private LaunchBattleMainComponent is BUCKContainerDescriptor
 (
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableOffset = [0.0, 65.0]
-        MagnifiableWidthHeight = [440.0, 210.0-50]
+        MagnifiableOffset = [0.0, 78.0]
+        MagnifiableWidthHeight = [440.0, 168]
         AlignementToFather = [0.5, 0.0]
         AlignementToAnchor = [0.5, 0.0]
     )
@@ -207,8 +207,6 @@ private LaunchBattleTimerComponent is TContainerDarkStyle
 
             TypefaceToken = "UIMainFont"
             BigLineAction = ~/BigLineAction/MultiLine
-
-            UniformDrawer = $/UserInterface/UIUniformDrawer
 
             TextColor = "SD2_Blanc184"
             TextSize = "SD2_Moyen"

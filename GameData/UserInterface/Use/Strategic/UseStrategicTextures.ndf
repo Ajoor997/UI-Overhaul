@@ -46,6 +46,12 @@ UseStrategic_AdditionalTextureBank is TBUCKToolAdditionalTextureBank
         ("UseStrategic_Labels_Terrain_TerrainForet",                 MAP [(~/ComponentState/Normal, ~/UseStrategic_Labels_Terrain_TerrainForet)] ),
         ("UseStrategic_Labels_Terrain_TerrainPlaine",                       MAP [(~/ComponentState/Normal, TUIResourceTexture_InGame(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Icons/terrain_plaine.png"))] ),
 
+
+        ("renfort_end", MAP [(~/ComponentState/Normal, TUIResourceTexture_InGame(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Renfort/renfort_end.png"))] ),
+        ("renfort_mid", MAP [(~/ComponentState/Normal, TUIResourceTexture_InGame(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Renfort/renfort_mid.png"))] ),
+        ("renfort_start", MAP [(~/ComponentState/Normal, TUIResourceTexture_InGame(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Renfort/renfort_start.png"))] ),
+        ("renfort_date", MAP [(~/ComponentState/Normal, TUIResourceTexture_InGame(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Renfort/renfort_date.png"))] ),
+
         ("UseStrategic_SelectionPanel_Deploy",                       MAP [(~/ComponentState/Normal, ~/UseStrategic_SelectionPanel_Deploy)] ),
         ("UseStrategic_SelectionPanel_Command",                      MAP [(~/ComponentState/Normal, ~/UseStrategic_SelectionPanel_Command)] ),
         ("UseStrategic_SelectionPanel_Assault",                      MAP [(~/ComponentState/Normal, ~/UseStrategic_SelectionPanel_Assault)] ),
@@ -58,11 +64,6 @@ UseStrategic_AdditionalTextureBank is TBUCKToolAdditionalTextureBank
         ("UseStrategic_SelectionPanel_PA",                           MAP [(~/ComponentState/Normal, TUIResourceTexture_InGame(FileName = "GameData:/Assets/2D/Interface/UseStrategic/SelectionPanel/PA.png"))] ),
         ("UseStrategic_SelectionPanel_fatigue",                      MAP [(~/ComponentState/Normal, TUIResourceTexture_InGame(FileName = "GameData:/Assets/2D/Interface/UseStrategic/SelectionPanel/fatigue.png"))] ),
 
-        ("UseStrategic_EndTurnButton",                               MAP [
-                                                                          (~/ComponentState/Normal,      ~/UseStrategic_EndTurnButton_Normal),
-                                                                          (~/ComponentState/Highlighted, ~/UseStrategic_EndTurnButton_Highlight),
-                                                                          (~/ComponentState/Clicked,     ~/UseStrategic_EndTurnButton_Clicked),
-                                                                     ]),
 
         ("UseStrategic_BoutonMission",                               MAP [
                                                                           (~/ComponentState/Normal,      TUIResourceTexture_InGame(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Icons/objectif3.png")),
@@ -78,20 +79,8 @@ UseStrategic_AdditionalTextureBank is TBUCKToolAdditionalTextureBank
                                                                           (~/ComponentState/Normal,      TUIResourceTexture_InGame(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Icons/Kills2.png")),
 
                                                                      ]),
-        ("UseStrategic_BoutonShowHideLabel",                         MAP [
-                                                                          (~/ComponentState/Normal,      TUIResourceTexture_InGame(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Icons/ShowLabel.png")),
-                                                                          (~/ComponentState/Highlighted, TUIResourceTexture_InGame(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Icons/ShowLabel_h.png")),
-                                                                          (~/ComponentState/Clicked,     TUIResourceTexture_InGame(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Icons/ShowLabel.png")),
-                                                                          (~/ComponentState/Toggled,     TUIResourceTexture_InGame(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Icons/HideLabel.png")),
-                                                                          (~/ComponentState/ToggleHighlighted,     TUIResourceTexture_InGame(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Icons/HideLabel_h.png")),
-                                                                     ]),
-        ("UseStrategic_BoutonShowHideCV",                         MAP [
-                                                                          (~/ComponentState/Normal,      TUIResourceTexture_InGame(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Icons/HideCV.png")),
-                                                                          (~/ComponentState/Highlighted, TUIResourceTexture_InGame(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Icons/HideCV_h.png")),
-                                                                          (~/ComponentState/Clicked,     TUIResourceTexture_InGame(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Icons/HideCV.png")),
-                                                                          (~/ComponentState/Toggled,     TUIResourceTexture_InGame(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Icons/ShowCV.png")),
-                                                                          (~/ComponentState/ToggleHighlighted,     TUIResourceTexture_InGame(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Icons/ShowCV_h.png")),
-                                                                      ]),
+
+
 
         ("vitesse03Strat", MAP [
                             (~/ComponentState/Normal, TUIResourceTexture_InGame( FileName='GameData:/Assets/2D/Interface/UseStrategic/Icons/TimeSpeed2.png' )),
@@ -170,9 +159,7 @@ UseStrategic_SelectionPanel_Evasion                      is TUIResourceTexture_I
 UseStrategic_SelectionPanel_Attack                       is TUIResourceTexture_InGame(FileName = "GameData:/Assets/2D/Interface/UseStrategic/SelectionPanel/Attack.png")
 UseStrategic_SelectionPanel_Defense                      is TUIResourceTexture_InGame(FileName = "GameData:/Assets/2D/Interface/UseStrategic/SelectionPanel/Defense.png")
 
-UseStrategic_EndTurnButton_Normal                        is TUIResourceTexture_InGame(FileName = "GameData:/Assets/2D/Interface/UseStrategic/EndTurn/NextTurn_Normal.png")
-UseStrategic_EndTurnButton_Highlight                     is TUIResourceTexture_InGame(FileName = "GameData:/Assets/2D/Interface/UseStrategic/EndTurn/NextTurn_Highlight.png")
-UseStrategic_EndTurnButton_Clicked                       is TUIResourceTexture_InGame(FileName = "GameData:/Assets/2D/Interface/UseStrategic/EndTurn/NextTurn_Clicked.png")
+
 
 UseStrategic_SelectionPanel_Wrench                       is TUIResourceTexture_InGame(FileName = "GameData:/Assets/2D/Interface/UseStrategic/SelectionPanel/icone_molette.png")
 UseStrategic_SelectionPanel_Skull                        is TUIResourceTexture_InGame(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Icons/Kills_normal.png")

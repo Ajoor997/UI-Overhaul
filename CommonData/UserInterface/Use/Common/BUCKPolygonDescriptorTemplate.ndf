@@ -27,8 +27,6 @@ template BUCKPolygonDescriptor
 
     SpotlightComponent : TBUCKContainerDescriptor = nil,
 
-    UniformDrawer : TUIUniformDrawer = $/UserInterface/UIUniformDrawer,
-
     HasBackground : bool = false,
     BackgroundBlockColorToken : string = "",
 
@@ -85,7 +83,7 @@ is TBUCKPolygonDescriptor
 
     SpotlightComponent = <SpotlightComponent>
 
-    UniformDrawer = <UniformDrawer>
+    UniformDrawer = $/UserInterface/UIUniformDrawer
 
     // On utilise plutot les propriétés Color0 et Color1 du Polygon (Background remplit un carre plutot que notre forme voulue)
     HasBackground = false

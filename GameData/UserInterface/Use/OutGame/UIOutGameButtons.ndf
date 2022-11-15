@@ -13,8 +13,6 @@ template ImageButton
 
     Mapping : TEugBMutablePBaseClass = nil,
 
-    UniformDrawer : TUIUniformDrawer = $/UserInterface/UIUniformDrawer,
-
     Components : LIST<TBUCKContainerDescriptor> = [],
     HintTitleToken : string = "",
     HintBodyToken : string = "",
@@ -48,8 +46,6 @@ is BUCKButtonDescriptor
     FocusMapping = <FocusMapping>
 
     Mapping = <Mapping>
-
-    UniformDrawer = <UniformDrawer>
 
     SpotlightComponent = <SpotlightComponent>
 
@@ -110,8 +106,6 @@ template HUBButton
 
     Mapping : TEugBMutablePBaseClass = nil,
 
-    UniformDrawer : TUIUniformDrawer = $/UserInterface/UIUniformDrawer,
-
     Components : LIST<TBUCKContainerDescriptor> = [],
     HintTitleToken : string = "",
     HintBodyToken : string = "",
@@ -141,8 +135,6 @@ is BUCKButtonDescriptor
     FocusMapping = <FocusMapping>
 
     Mapping = <Mapping>
-
-    UniformDrawer = <UniformDrawer>
 
     SpotlightComponent = <SpotlightComponent>
 
@@ -190,7 +182,6 @@ is BUCKButtonDescriptor
             )
             TextStyle = "Default"
             TypefaceToken = "UIMainFont"
-            UniformDrawer = $/UserInterface/UIUniformDrawer
 
             HorizontalFitStyle = ~/FitStyle/FitToContent
             VerticalFitStyle = ~/FitStyle/FitToContent
@@ -239,8 +230,6 @@ template HUBActionButtonResizeWithMax
 
     Mapping : TEugBMutablePBaseClass = nil,
 
-    UniformDrawer : TUIUniformDrawer = $/UserInterface/UIUniformDrawer,
-
     Components : LIST<TBUCKContainerDescriptor> = [],
     HintTitleToken : string = "",
     HintBodyToken : string = "",
@@ -279,8 +268,6 @@ is BUCKButtonDescriptor
     Mapping = <Mapping>
     LeftClickSound = <LeftClickSound>
 
-    UniformDrawer = <UniformDrawer>
-
     SpotlightComponent = <SpotlightComponent>
 
     Components =
@@ -305,7 +292,6 @@ is BUCKButtonDescriptor
 
             TextStyle = "Default"
             TypefaceToken = "Liberator"
-            UniformDrawer = $/UserInterface/UIUniformDrawer
 
             ChildFitToContent = true
 
@@ -356,8 +342,6 @@ template HUBActionButton
 
     Mapping : TEugBMutablePBaseClass = nil,
 
-    UniformDrawer : TUIUniformDrawer = $/UserInterface/UIUniformDrawer,
-
     Components : LIST<TBUCKContainerDescriptor> = [],
     HintTitleToken : string = "",
     HintBodyToken : string = "",
@@ -392,8 +376,6 @@ is BUCKButtonDescriptor
     Mapping = <Mapping>
     LeftClickSound = <LeftClickSound>
 
-    UniformDrawer = <UniformDrawer>
-
     SpotlightComponent = <SpotlightComponent>
 
     Components =
@@ -418,7 +400,6 @@ is BUCKButtonDescriptor
             )
             TextStyle = "Default"
             TypefaceToken = "Liberator"
-            UniformDrawer = $/UserInterface/UIUniformDrawer
 
             HorizontalFitStyle = ~/FitStyle/UserDefined
             VerticalFitStyle = ~/FitStyle/FitToContent
@@ -459,8 +440,6 @@ template TURLButton
 
     Mapping : TEugBMutablePBaseClass = nil,
 
-    UniformDrawer : TUIUniformDrawer = $/UserInterface/UIUniformDrawer,
-
     Components : LIST<TBUCKContainerDescriptor> = [],
     HintTitleToken : string = "",
     HintBodyToken : string = "",
@@ -492,8 +471,6 @@ is BUCKButtonDescriptor
 
     Mapping = <Mapping>
 
-    UniformDrawer = <UniformDrawer>
-
     SpotlightComponent = <SpotlightComponent>
 
     Components =
@@ -510,7 +487,6 @@ is BUCKButtonDescriptor
             ParagraphStyle = ~/paragraphStyleTextCenter
             TextStyle = "Default"
             TypefaceToken = "Liberator"
-            UniformDrawer = $/UserInterface/UIUniformDrawer
 
             TextToken = <TextToken>
             TextDico = ~/LocalisationConstantes/dico_interface_outgame
@@ -553,8 +529,6 @@ ModaleButtonForMissingDLCs is BUCKButtonDescriptor
         MagnifiableWidthHeight = DefaultButtonDims
     )
 
-    UniformDrawer = $/UserInterface/UIUniformDrawer
-
     BorderThicknessToken = "BoutonsDAction/MissingDLCs"
     BackgroundBlockColorToken = "BoutonsDAction/MissingDLCs"
     BorderLineColorToken = "BoutonsDAction/MissingDLCs"
@@ -573,7 +547,6 @@ ModaleButtonForMissingDLCs is BUCKButtonDescriptor
             ParagraphStyle = ~/paragraphStyleTextCenter
             TextStyle = "Default"
             TypefaceToken = "UIMainFont"
-            UniformDrawer = $/UserInterface/UIUniformDrawer
 
             TextDico = ~/LocalisationConstantes/dico_interface_outgame
 

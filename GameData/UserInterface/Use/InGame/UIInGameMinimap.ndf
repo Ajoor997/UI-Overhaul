@@ -58,8 +58,9 @@ MinimapPanelDescriptor is TUISpecificBUCKMinimapDescriptor
     ComponentFrame = TUIFramePropertyRTTI
     (
         RelativeWidthHeight = [1.0, 1.0]
-        AlignementToFather = [0.5, 0.0]
-        AlignementToAnchor = [0.5, 0.0]
+        MagnifiableWidthHeight = [-5.0, -5.0]
+        AlignementToFather = [0.5, 0.5]
+        AlignementToAnchor = [0.5, 0.5]
     )
 
     UniformDrawer = $/UserInterface/UIUniformDrawer
@@ -80,7 +81,7 @@ InGameMinimap is TUISpecificInGameMinimapResources
 
     UniformAntiAliasedDrawer            = $/UserInterface/UIUniformAntiAliasedDrawer
 
-    BackgroundDrawer = "ColorMultiply_Additive"
+    BackgroundDrawer = "ColorMultiply"
 
     TextureForPingType = MAP[
         ( MinimapPing_Beep, ~/Texture_Minimap_Alert ),
@@ -102,10 +103,12 @@ InGameMinimap is TUISpecificInGameMinimapResources
     UncontrolledCommandZoneBorderColor      = RGBA[255, 255, 255, 255]
     UncontrolledCommandZoneZoneColor        = RGBA[255, 255, 255, 75]
 
+    CameraTrapezoidOriginColor          = RGBA[255, 255, 255, 120]
+
     ScaleUnitInsideMinimap              = 1.0
     ScaleObjectiveInsideMinimap         = 0.8
 
-    CommandZoneBorderWidth              = 2.0
+    CommandZoneBorderWidth              = 0.5
 
     // Les layers sont répartis en 5 couches de 4 layers, soit 20 au total. Le layer 0 est tout au fond et le 19 est au sommet, le plus visible.
     // 'SortOrderList' définit la couche. C'est la catégorie de trucs qu'on affiche, histoire de dire "les flares c'est au-dessus des unités"

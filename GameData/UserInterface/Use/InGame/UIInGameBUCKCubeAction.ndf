@@ -16,7 +16,12 @@ template CubeActionButton
     LineBorderColor : string = "Fulda2_Orange100",
     BorderColor : string = "ButtonHUD/BigBorder",
     TextColor : string = "ButtonHUD/Text2",
-    TextSize : string = "18"
+    TextSize : string = "18",
+
+    BackgroundBlockColorToken : string = "BoutonTemps",
+    BorderLineColorToken : string = "BoutonTemps",
+    RoundedVertexes : LIST< bool > = [true, true, true, true], // le 1er est en bas à gauche
+
 ] is TCommonInGameCubeActionButtonDescriptor
 (
     ComponentFrame = TUIFramePropertyRTTI
@@ -55,8 +60,9 @@ template CubeActionButton
             PanelRoundedCorner
             (
                 Radius = 3
-                BackgroundBlockColorToken = "BoutonTemps"
-                BorderLineColorToken = "BoutonTemps"
+                BackgroundBlockColorToken = <BackgroundBlockColorToken>
+                BorderLineColorToken = <BorderLineColorToken>
+                RoundedVertexes = <RoundedVertexes>
             )
             ]
         ),
@@ -96,7 +102,6 @@ template CubeActionButton
             TextDico        = ~/LocalisationConstantes/dico_interface_outgame
 
             TypefaceToken   = "Liberator"
-            UniformDrawer   = $/UserInterface/UIUniformDrawer
         ),
 
         BUCKSpecificHintableArea
@@ -191,7 +196,6 @@ template CubeActionToggleButton
             TextDico        = ~/LocalisationConstantes/dico_interface_outgame
 
             TypefaceToken   = "Liberator"
-            UniformDrawer   = $/UserInterface/UIUniformDrawer
         ),
 
         BUCKSpecificHintableArea
@@ -275,7 +279,6 @@ CubeActionEmptyButton is TCommonInGameCubeActionButtonDescriptor
             TextDico        = ~/LocalisationConstantes/dico_interface_outgame
 
             TypefaceToken   = "UIMainFont"
-            UniformDrawer   = $/UserInterface/UIUniformDrawer
         ),
 
         BUCKSpecificHintableArea

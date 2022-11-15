@@ -4,10 +4,6 @@
 
 //Ex : StyleCockpitTexture_Blablabla is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/StyleCockpit/Blablabla.png")
 
-StyleDeskTexture_ScrollBarCursor is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/StyleDesk/ScrollBarCursor.png")
-StyleDeskTexture_ScrollBarCursorHighlight is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/StyleDesk/ScrollBarCursorHighlight.png")
-StyleDeskTexture_ScrollBarCursorSelection is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/StyleDesk/ScrollBarCursorSelection.png")
-
 StyleDeskTexture_CheckBox_Vide     is TUIResourceTexture_OutGame(FileName = "GameData:/Assets/2D/Interface/StyleDesk/CheckBox_vide.png")
 StyleDeskTexture_CheckBox_Carre     is TUIResourceTexture_OutGame(FileName = "GameData:/Assets/2D/Interface/StyleDesk/CheckBox_carre.png")
 StyleDeskTexture_CheckBox_Tick      is TUIResourceTexture_OutGame(FileName = "GameData:/Assets/2D/Interface/StyleDesk/CheckBox_tick.png")
@@ -17,14 +13,11 @@ StyleDeskTexture_CheckBox_UpArrow   is TUIResourceTexture_OutGame(FileName = "Ga
 StyleDeskTexture_CheckBox_Tick_Black is TUIResourceTexture_OutGame(FileName = "GameData:/Assets/2D/Interface/StyleDesk/CheckBox_tick_black.png")
 StyleDeskTexture_CheckBox_Point_Black is TUIResourceTexture_OutGame(FileName = "GameData:/Assets/2D/Interface/StyleDesk/CheckBox_point_black.png")
 
-StyleCockpitTexture_ScrollBarArrowDown is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/StyleCockpit/ScrollBarArrowDown.png")
-StyleCockpitTexture_ScrollBarArrowUp is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/StyleCockpit/ScrollBarArrowUp.png")
 StyleCockpitTexture_ScrollBarArrowLeft is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/StyleCockpit/ScrollBarArrowLeft.png")
 StyleCockpitTexture_ScrollBarArrowRight is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/StyleCockpit/ScrollBarArrowRight.png")
 StyleCockpitTexture_DropDownArrow is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/StyleCockpit/DropDownArrow.png")
 StyleCockpitTexture_DropDownArrow2 is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/StyleCockpit/DropDownArrow2.png")
 StyleCockpitTexture_DropDownArrow_Selected is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/StyleCockpit/DropDownArrow_s.png")
-
 
 // Bouton HUD
 StyleCockpitTexture_HUDButton_Selection is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/StyleCockpit/bkg_btn_blue.png")
@@ -43,7 +36,6 @@ Style_Icon_DLC_1 is TUIResourceTexture_Common( FileName='GameData:/Assets/2D/Int
 Style_Icon_Eugen is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/UseOutGame/IconEugen.png")
 Style_Icon_Steam is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/UseOutGame/IconSteam.png")
 Style_Icon_GOG is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/UseOutGame/IconGOG.png")
-Style_Icon_Wargaming is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/UseOutGame/IconWargaming.png")
 Style_Icon_Epic is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/UseOutGame/IconEpic.png")
 
 
@@ -56,12 +48,6 @@ StyleCockpit_AdditionalTextureBank is TBUCKToolAdditionalTextureBank
                                                                                        (~/ComponentState/Normal, ~/StyleCockpitTexture_DropDownArrow2),
                                                                                     ]),
 
-        ("StyleCockpitTexture_ScrollBarArrowDown",                                 MAP [
-                                                                                       (~/ComponentState/Normal, ~/StyleCockpitTexture_ScrollBarArrowDown),
-                                                                                   ]),
-        ("StyleCockpitTexture_ScrollBarArrowUp",                                   MAP [
-                                                                                       (~/ComponentState/Normal, ~/StyleCockpitTexture_ScrollBarArrowUp),
-                                                                                   ]),
         ("StyleCockpitTexture_ScrollBarArrowLeft",                                 MAP [
                                                                                        (~/ComponentState/Normal, ~/StyleCockpitTexture_ScrollBarArrowLeft),
                                                                                    ]),
@@ -84,7 +70,6 @@ StyleCockpit_AdditionalTextureBank is TBUCKToolAdditionalTextureBank
         ("Icon_Eugen",                                                              MAP [(~/ComponentState/Normal, ~/Style_Icon_Eugen)]),
         ("Icon_Steam",                                                              MAP [(~/ComponentState/Normal, ~/Style_Icon_Steam)]),
         ("Icon_GOG",                                                                MAP [(~/ComponentState/Normal, ~/Style_Icon_GOG)]),
-        ("Icon_Wargaming",                                                          MAP [(~/ComponentState/Normal, ~/Style_Icon_Wargaming)]),
         ("Icon_Epic",                                                               MAP [(~/ComponentState/Normal, ~/Style_Icon_Epic)]),
     ]
 )

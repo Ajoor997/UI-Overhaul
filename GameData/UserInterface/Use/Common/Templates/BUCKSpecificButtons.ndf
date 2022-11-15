@@ -32,7 +32,6 @@ template BoutonFulda
     RadioButtonManager = <RadioButtonManager>
 
     ElementName = <ElementName>
-    UniformDrawer = $/UserInterface/UIUniformDrawer
 
     HasBackground = false
     BackgroundBlockColorToken = <BackgroundColor>
@@ -102,7 +101,6 @@ template BoutonFulda
             TextToken       = <TextToken>
 
             TypefaceToken   = "UIMainFont"
-            UniformDrawer   = $/UserInterface/UIUniformDrawer
         ),
 
         BUCKSpecificHintableArea
@@ -117,6 +115,7 @@ template BoutonFulda
 template BoutonFulda_AvecIcone
 [
 
+    IsFromStrategic : bool = false,
     BackgroundColor : string = "ButtonHUD/Background2",
     LineBorderColor : string = "ButtonHUD/Border",
     BorderColor : string = "ButtonHUD/BigBorder",
@@ -141,7 +140,6 @@ template BoutonFulda_AvecIcone
     RadioButtonManager = <RadioButtonManager>
 
     ElementName = <ElementName>
-    UniformDrawer = $/UserInterface/UIUniformDrawer
 
     HasBackground = false
     BackgroundBlockColorToken = <BackgroundColor>
@@ -174,8 +172,8 @@ template BoutonFulda_AvecIcone
                 (
                     Radius = 3
                     NbOfPoints = 3
-                    BackgroundBlockColorToken = "BoutonFlares"
-                    BorderLineColorToken = "BoutonTemps"
+                    BackgroundBlockColorToken = (<IsFromStrategic> == true ? "SM_RifleGreen_75" : "BoutonFlares")
+                    BorderLineColorToken = (<IsFromStrategic> == true ? "SM_Grullo" : "BoutonTemps")
                 )
             ]
         ),
@@ -271,8 +269,6 @@ template BUCKSpecificButton
     HintableAreaElementName : string = "",
     UseInGameHintStyle : bool = true,
 
-    UniformDrawer : TUIUniformDrawer = $/UserInterface/UIUniformDrawer,
-
     HoverSound : TSoundDescriptor = nil,
     LeftClickSound : TSoundDescriptor = nil,
 
@@ -350,8 +346,6 @@ is BUCKButtonDescriptor
     RadioButtonManager = <RadioButtonManager>
 
     Mapping = <Mapping>
-
-    UniformDrawer = <UniformDrawer>
 
     HoverSound = <HoverSound>
     LeftClickSound = <LeftClickSound>
@@ -438,7 +432,6 @@ is BUCKButtonDescriptor
             TextStyle = <TextStyle>
             TextPadding = <TextPadding>
             TypefaceToken = <TextTypefaceToken>
-            UniformDrawer = $/UserInterface/UIUniformDrawer
 
             UseLocalRenderLayer = <UseLocalRenderLayer>
             LocalRenderLayer = <TextLocalRenderLayer>
@@ -553,8 +546,6 @@ template StandardButton
     HintDico : string = ~/LocalisationConstantes/dico_interface_outgame,
     HintableAreaElementName : string = "",
     UseInGameHintStyle : bool = true,
-
-    UniformDrawer : TUIUniformDrawer = $/UserInterface/UIUniformDrawer,
 
     HoverSound : TSoundDescriptor = nil,
     LeftClickSound : TSoundDescriptor = nil,
@@ -688,8 +679,6 @@ template ConfirmButton
     HintDico : string = ~/LocalisationConstantes/dico_interface_outgame,
     HintableAreaElementName : string = "",
     UseInGameHintStyle : bool = true,
-
-    UniformDrawer : TUIUniformDrawer = $/UserInterface/UIUniformDrawer,
 
     HoverSound : TSoundDescriptor = nil,
     LeftClickSound : TSoundDescriptor = nil,
@@ -833,8 +822,6 @@ template CancelButton
     HintableAreaElementName : string = "",
     UseInGameHintStyle : bool = true,
 
-    UniformDrawer : TUIUniformDrawer = $/UserInterface/UIUniformDrawer,
-
     HoverSound : TSoundDescriptor = nil,
     LeftClickSound : TSoundDescriptor = nil,
 
@@ -951,8 +938,6 @@ template HUDButton
     HintableAreaElementName : string = "",
     UseInGameHintStyle : bool = true,
 
-    UniformDrawer : TUIUniformDrawer = $/UserInterface/UIUniformDrawer,
-
     HoverSound : TSoundDescriptor = nil,
     LeftClickSound : TSoundDescriptor = nil,
 
@@ -1038,7 +1023,6 @@ is BUCKButtonDescriptor
             ParagraphStyle = <TextParagraphStyle>
             TextStyle = <TextStyle>
             TypefaceToken = <TextTypefaceToken>
-            UniformDrawer = $/UserInterface/UIUniformDrawer
 
             UseLocalRenderLayer = <UseLocalRenderLayer>
             LocalRenderLayer = <BorderLocalRenderLayer>
@@ -1067,7 +1051,6 @@ is BUCKButtonDescriptor
             LocalRenderLayer = <OverBlockLocalRenderLayer>
 
             HasBackground = <OverBlockColorToken> != "" ? true : false
-            UniformDrawer = <UniformDrawer>
             BackgroundBlockColorToken = <OverBlockColorToken>
 
             TextureToken = <OverBlockTexture>
@@ -1113,8 +1096,6 @@ is BUCKButtonDescriptor
     MaskEvents = <MaskEvents>
 
     Mapping = <Mapping>
-
-    UniformDrawer = <UniformDrawer>
 
     HasBackground = <HasBackground>
     BackgroundBlockColorToken = <BackgroundColorToken>
@@ -1168,8 +1149,6 @@ template HUDDarkButton
     HintExtendedToken : string = "HUD_UNKN",
     HintDico : string = ~/LocalisationConstantes/dico_interface_ingame,
     HintableAreaElementName : string = "",
-
-    UniformDrawer : TUIUniformDrawer = $/UserInterface/UIUniformDrawer,
 
     HoverSound : TSoundDescriptor = nil,
     LeftClickSound : TSoundDescriptor = nil,
@@ -1229,8 +1208,6 @@ is HUDButton
     TextStyle = <TextStyle>
     TextToken = <TextToken>
     TextDico = <TextDico>
-
-    UniformDrawer = <UniformDrawer>
 
     HoverSound = <HoverSound>
     LeftClickSound = <LeftClickSound>
@@ -1323,7 +1300,6 @@ is BUCKButtonDescriptor
             ParagraphStyle = ~/paragraphStyleTextCenter
             TextStyle = "Default"
             TypefaceToken = "UIMainFont"
-            UniformDrawer = $/UserInterface/UIUniformDrawer
 
             TextToken = <TextToken>
             TextDico = ~/LocalisationConstantes/dico_interface_ingame
@@ -1392,7 +1368,6 @@ is BUCKButtonDescriptor
             ParagraphStyle = ~/paragraphStyleTextCenter
             TextStyle = "Default"
             TypefaceToken = "UIMainFont"
-            UniformDrawer = $/UserInterface/UIUniformDrawer
 
             TextToken = <TextToken>
             TextDico = ~/LocalisationConstantes/dico_interface_ingame

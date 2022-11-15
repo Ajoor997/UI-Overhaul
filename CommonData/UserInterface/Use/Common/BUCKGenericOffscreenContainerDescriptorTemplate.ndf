@@ -28,8 +28,6 @@ template BUCKGenericReflectiveContainerDescriptor
 
     SpotlightComponent : TBUCKContainerDescriptor = nil,
 
-    UniformDrawer : TUIUniformDrawer = $/UserInterface/UIUniformDrawer,
-
     HasBackground : bool = false,
     BackgroundBlockColorToken : string = "",
 
@@ -81,7 +79,7 @@ is TBUCKGenericReflectiveContainerDescriptor
 
     SpotlightComponent = <SpotlightComponent>
 
-    UniformDrawer = <UniformDrawer>
+    UniformDrawer = $/UserInterface/UIUniformDrawer
 
     HasBackground = <HasBackground>
     BackgroundBlockColorToken = <BackgroundBlockColorToken>
@@ -137,8 +135,6 @@ template BUCKGenericOffscreenContainer_Sample_DistortDescriptor
 
     SpotlightComponent : TBUCKContainerDescriptor = nil,
 
-    UniformDrawer : TUIUniformDrawer = $/UserInterface/UIUniformDrawer,
-
     HasBackground : bool = false,
     BackgroundBlockColorToken : string = "",
 
@@ -189,7 +185,7 @@ is TBUCKGenericOffscreenContainer_Sample_DistortDescriptor
 
     SpotlightComponent = <SpotlightComponent>
 
-    UniformDrawer = <UniformDrawer>
+    UniformDrawer = $/UserInterface/UIUniformDrawer
 
     HasBackground = <HasBackground>
     BackgroundBlockColorToken = <BackgroundBlockColorToken>
@@ -244,8 +240,6 @@ template BUCKPerspectiveWarpOffscreenContainerDescriptor
     IsClippable :bool = true,
 
     SpotlightComponent : TBUCKContainerDescriptor = nil,
-
-    UniformDrawer : TUIUniformDrawer = $/UserInterface/UIUniformDrawer,
 
     HasBackground : bool = false,
     BackgroundBlockColorToken : string = "",
@@ -312,7 +306,7 @@ is TBUCKPerspectiveWarpOffscreenContainerDescriptor
 
     SpotlightComponent = <SpotlightComponent>
 
-    UniformDrawer = <UniformDrawer>
+    UniformDrawer = $/UserInterface/UIUniformDrawer
 
     HasBackground = <HasBackground>
     BackgroundBlockColorToken = <BackgroundBlockColorToken>

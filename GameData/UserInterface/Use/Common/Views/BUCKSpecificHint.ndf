@@ -4,6 +4,28 @@ private HintInGameMaxMagnifiableWidth is 430.0
 // -------------------------------------------------------------------------------------------------
 // -------------------------------------------------------------------------------------------------
 
+private HintParagraphStyle is TParagraphStyleRTTI
+(
+    Alignment         = UIText_Left
+    VerticalAlignment = UIText_Up
+    BigWordAction     = ~/BigWordAction/BigWordNewLine
+    Balanced          = false
+    InterLine         = 0.5
+)
+
+private HintComponentFrame is TUIFramePropertyRTTI
+(
+    RelativeWidthHeight = [0.0, 0.0]
+    MagnifiableWidthHeight = [HintInGameMaxMagnifiableWidth, 0.0]
+    AlignementToFather = [0.5, 0.0]
+    AlignementToAnchor = [0.5, 0.0]
+)
+
+private HintComponentPadding is TRTTILength4
+(
+    Magnifiable = [10, 0, 10, 0]
+)
+
 // Texte pour le titre du hint
 private HintInGameTitleTextBUCKComponent is BUCKContainerDescriptor
 (
@@ -19,48 +41,17 @@ private HintInGameTitleTextBUCKComponent is BUCKContainerDescriptor
     [
         HintTitleTextBUCKComponent
         (
-            ComponentFrame = TUIFramePropertyRTTI
-            (
-                RelativeWidthHeight = [0.0, 0.0]
-                MagnifiableWidthHeight = [HintInGameMaxMagnifiableWidth, 0.0]
-                AlignementToFather = [0.5, 0.0]
-                AlignementToAnchor = [0.5, 0.0]
-            )
-
-
-            ParagraphStyle = TParagraphStyleRTTI
-            (
-                Alignment         = UIText_Left
-                VerticalAlignment = UIText_Up
-                BigWordAction     = ~/BigWordAction/BigWordNewLine
-                Balanced          = false
-                InterLine         = 0.3
-            )
-
-            TextStyle = "Default"
+            ComponentFrame = ~/HintComponentFrame
+            ParagraphStyle = ~/HintParagraphStyle
 
             HorizontalFitStyle = ~/FitStyle/MinBetweenUserDefinedAndContent
-            TextPadding = TRTTILength4 (Magnifiable = [15,7+8,15,0])
+            TextPadding = ~/HintComponentPadding
             TypefaceToken = "Eurostyle_Heavy"
             BigLineAction = ~/BigLineAction/MultiLine
-
-            UniformDrawer = $/UserInterface/UIUniformDrawer
 
             TextDico = ~/LocalisationConstantes/dico_interface_ingame
             TextSize = "17"
             TextColor = "BlancEquipe" //"Hint/InGame/Title"
-
-            {Components =
-                        [
-                        PanelRoundedCorner
-                    (
-                        BackgroundBlockColorToken = 'H2_bleu_2'
-                        //BorderLineColorToken = 'MarronPanel_noir'
-                        RoundedVertexes = [false, false,true,false]
-                        Radius = 10
-                    ),
-            ]
-            }
         )
     ]
 
@@ -84,31 +75,14 @@ private HintInGameBodyTextBUCKComponent is BUCKContainerDescriptor
     [
         HintBodyTextBUCKComponent
         (
-            ComponentFrame = TUIFramePropertyRTTI
-            (
-                RelativeWidthHeight = [0.0, 0.0]
-                MagnifiableWidthHeight = [HintInGameMaxMagnifiableWidth, 0.0]
-                AlignementToFather = [0.5, 0.0]
-                AlignementToAnchor = [0.5, 0.0]
-            )
+            ComponentFrame = ~/HintComponentFrame
+            ParagraphStyle = ~/HintParagraphStyle
 
-            ParagraphStyle = TParagraphStyleRTTI
-            (
-                Alignment         = UIText_Left
-                VerticalAlignment = UIText_Up
-                BigWordAction     = ~/BigWordAction/BigWordNewLine
-                Balanced          = false
-                InterLine         = 0.5
-            )
-
-            TextStyle = "Default"
-            TextPadding = TRTTILength4 (Magnifiable = [15,10,15,10])
+            TextPadding = ~/HintComponentPadding
             HorizontalFitStyle = ~/FitStyle/MinBetweenUserDefinedAndContent
 
             TypefaceToken = "Eurostyle_Medium"
             BigLineAction = ~/BigLineAction/MultiLine
-
-            UniformDrawer = $/UserInterface/UIUniformDrawer
 
             TextDico = ~/LocalisationConstantes/dico_interface_ingame
             TextSize = "13"
@@ -119,53 +93,45 @@ private HintInGameBodyTextBUCKComponent is BUCKContainerDescriptor
 
 // -------------------------------------------------------------------------------------------------
 // -------------------------------------------------------------------------------------------------
-
-// Texte pour le séparateur entre le corps et le corps étendu du hint
-private HintInGameSeparatorTextBUCKComponent is BUCKContainerDescriptor
+template HintSeparatorComponent
+[
+    ElementName : string,
+    ComponentFrame : TUIFramePropertyRTTI
+]
+is HintSeparatorTextBUCKComponent
 (
-    ComponentFrame = TUIFramePropertyRTTI
+    ElementName = <ElementName>
+    ComponentFrame = <ComponentFrame>
+    ParagraphStyle = ~/HintParagraphStyle
+
+    HorizontalFitStyle = ~/FitStyle/MinBetweenUserDefinedAndContent
+    TypefaceToken = "UIMainFont"
+    BigLineAction = ~/BigLineAction/MultiLine
+    TextDico = ~/LocalisationConstantes/dico_interface_outgame
+)
+
+private HintInGameSeparatorTitleBodyTextBUCKComponent is HintSeparatorComponent
+(
+    ElementName = "SeparatorTitleBodyText"
+    ComponentFrame =  TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = [20.0, 0.0]
+        RelativeWidthHeight = [0.0, 0.0]
+        MagnifiableWidthHeight = [HintInGameMaxMagnifiableWidth, 10.0]
+        AlignementToFather = [0.5, 0.0]
+        AlignementToAnchor = [0.5, 0.0]
     )
+)
 
-    FitStyle = ~/ContainerFitStyle/FitToContent
-
-    Components =
-    [
-        HintSeparatorTextBUCKComponent
-        (
-            ComponentFrame = TUIFramePropertyRTTI
-            (
-                RelativeWidthHeight = [0.0, 0.0]
-                MagnifiableWidthHeight = [HintInGameMaxMagnifiableWidth - 20.0, 0.0]
-                AlignementToFather = [0.5, 0.0]
-                AlignementToAnchor = [0.5, 0.0]
-            )
-
-            ParagraphStyle = TParagraphStyleRTTI
-            (
-                Alignment         = UIText_Left
-                VerticalAlignment = UIText_Up
-                BigWordAction     = ~/BigWordAction/BigWordNewLine
-                Balanced          = false
-                InterLine         = 0.3
-            )
-
-            TextStyle = "Default"
-
-            HorizontalFitStyle = ~/FitStyle/MinBetweenUserDefinedAndContent
-
-            TypefaceToken = "UIMainFont"
-            BigLineAction = ~/BigLineAction/MultiLine
-
-            UniformDrawer = $/UserInterface/UIUniformDrawer
-
-            TextDico = ~/LocalisationConstantes/dico_interface_outgame
-            TextToken = "HINT_EX_SP"
-            TextSize = "14"
-            TextColor = "Blanc" //"Hint/InGame/Separator"
-        )
-    ]
+private HintInGameSeparatorBodyExtendedTextBUCKComponent is HintSeparatorComponent
+(
+    ElementName = "SeparatorBodyExtendedText"
+    ComponentFrame =  TUIFramePropertyRTTI
+    (
+        RelativeWidthHeight = [0.0, 0.0]
+        MagnifiableWidthHeight = [HintInGameMaxMagnifiableWidth, 20.0]
+        AlignementToFather = [0.5, 0.0]
+        AlignementToAnchor = [0.5, 0.0]
+    )
 )
 
 // -------------------------------------------------------------------------------------------------
@@ -206,13 +172,11 @@ private HintInGameExtendedTextBUCKComponent is BUCKContainerDescriptor
             )
 
             TextStyle = "Default"
-            TextPadding = TRTTILength4 (Magnifiable = [15,10,15,15])
+            TextPadding = ~/HintComponentPadding
             HorizontalFitStyle = ~/FitStyle/MinBetweenUserDefinedAndContent
 
             TypefaceToken = "Eurostyle_Italic"
             BigLineAction = ~/BigLineAction/MultiLine
-
-            UniformDrawer = $/UserInterface/UIUniformDrawer
 
             TextDico = ~/LocalisationConstantes/dico_interface_ingame
             TextSize = "12"
@@ -233,12 +197,13 @@ private HintInGameBUCKComponent is HintBUCKComponent
     )
 
     TitleBUCKTextComponent = ~/HintInGameTitleTextBUCKComponent
+    SeparatorTitleBodyTextComponent = ~/HintInGameSeparatorTitleBodyTextBUCKComponent
     BodyBUCKTextComponent = ~/HintInGameBodyTextBUCKComponent
-    SeparatorBUCKTextComponent = nil
+    SeparatorBodyExtendedTextComponent = ~/HintInGameSeparatorBodyExtendedTextBUCKComponent
     ExtendedBUCKTextComponent = ~/HintInGameExtendedTextBUCKComponent
 
-    ListFirstMargin = TRTTILength( Magnifiable = 0.0 )
-    ListLastMargin = TRTTILength( Magnifiable = 0.0 )
+    ListFirstMargin = TRTTILength( Magnifiable = 10.0 )
+    ListLastMargin = TRTTILength( Magnifiable = 10.0 )
     ListInterTextVerticalMargin = TRTTILength( Magnifiable = 0.0 )
 
     ListHasBackground = false
@@ -254,24 +219,9 @@ private HintInGameBUCKComponent is HintBUCKComponent
         PanelRoundedCorner
         (
             BackgroundBlockColorToken = "hint_fond_meilleureLecture"
-            //BorderLineColorToken = "MarronPanel_noir"
             Radius = 5
             RoundedVertexes = [true, true, true,true]
         ),
-        {BUCKTextureDescriptor
-                        (
-                            ComponentFrame = TUIFramePropertyRTTI
-                            (
-                                RelativeWidthHeight = [1,1]
-                                AlignementToAnchor = [0.0, 0.0]
-                                AlignementToFather = [0.0, 0.0]
-                                )
-                            TextureToken = 'Hint_fond_texture'
-                            TextureDrawer = 'ColorMultiply_Additive'
-                            TextureFrame   = TUIFramePropertyRTTI( MagnifiableWidthHeight = [1400.0, 1980.0] )
-                            ClipTextureToComponent = true
-                        )}
-
     ]
 
     ListForegroundComponents = []

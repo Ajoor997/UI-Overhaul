@@ -61,8 +61,6 @@ is PanelRoundedCorner
             TypefaceToken = "UIMainFont"
             BigLineAction = ~/BigLineAction/CutByDots
 
-            UniformDrawer = $/UserInterface/UIUniformDrawer
-
             TextDico = ~/LocalisationConstantes/dico_interface_outgame
 
             TextColor = "SD2_Blanc184"
@@ -130,8 +128,6 @@ NombreUniteDansLigne is PanelRoundedCorner
                         TypefaceToken = "UIMainFont"
                         BigLineAction = ~/BigLineAction/CutByDots
 
-                        UniformDrawer = $/UserInterface/UIUniformDrawer
-
                         TextToken = 'DCKO_UNIT'
                         TextDico = ~/LocalisationConstantes/dico_interface_outgame
 
@@ -164,8 +160,6 @@ NombreUniteDansLigne is PanelRoundedCorner
 
                         TypefaceToken = "UISecondFont"
                         BigLineAction = ~/BigLineAction/CutByDots
-
-                        UniformDrawer = $/UserInterface/UIUniformDrawer
 
                         TextToken = ''
                         TextDico = ~/LocalisationConstantes/dico_interface_outgame
@@ -226,8 +220,6 @@ is BUCKContainerDescriptor
             HorizontalFitStyle = ~/FitStyle/FitToContent
             VerticalFitStyle = ~/FitStyle/FitToContent
 
-            UniformDrawer = $/UserInterface/UIUniformDrawer
-
             TextToken = ""
             TextDico = ~/LocalisationConstantes/dico_interface_outgame
 
@@ -249,8 +241,6 @@ is BUCKContainerDescriptor
 
             HorizontalFitStyle = ~/FitStyle/FitToContent
             VerticalFitStyle = ~/FitStyle/FitToContent
-
-            UniformDrawer = $/UserInterface/UIUniformDrawer
 
             TextToken = "DCKO_ACTIV"
             TextDico = ~/LocalisationConstantes/dico_interface_outgame
@@ -329,8 +319,6 @@ TransportsListTitle is BUCKTextDescriptor
     HorizontalFitStyle = ~/ContainerFitStyle/FitToContent
     VerticalFitStyle = ~/ContainerFitStyle/FitToContent
     TextPadding = TRTTILength4( Magnifiable = [10.0, 0.0, 10.0, 0.0])
-
-    UniformDrawer = $/UserInterface/UIUniformDrawer
 
     TextToken = 'DES_UE_TR'
     TextDico = ~/LocalisationConstantes/dico_interface_ingame
@@ -555,8 +543,6 @@ ActivationPointsComponent is BUCKListDescriptor
                 TypefaceToken = "UIMainFont"
                 BigLineAction = ~/BigLineAction/CutByDots
 
-                UniformDrawer = $/UserInterface/UIUniformDrawer
-
                 TextToken = "DCKO_FMTC"
                 TextDico = ~/LocalisationConstantes/dico_interface_outgame
 
@@ -590,8 +576,6 @@ ActivationPointsComponent is BUCKListDescriptor
                 TypefaceToken = "UIMainFont"
                 BigLineAction = ~/BigLineAction/CutByDots
 
-                UniformDrawer = $/UserInterface/UIUniformDrawer
-
                 TextToken = "DCKO_FMTT"
                 TextDico = ~/LocalisationConstantes/dico_interface_outgame
 
@@ -624,8 +608,6 @@ ActivationPointsComponent is BUCKListDescriptor
 
                 TypefaceToken = "UIMainFont"
                 BigLineAction = ~/BigLineAction/CutByDots
-
-                UniformDrawer = $/UserInterface/UIUniformDrawer
 
                 TextToken = "DCKO_FMTM"
                 TextDico = ~/LocalisationConstantes/dico_interface_outgame
@@ -661,8 +643,6 @@ ActivationPointsComponent is BUCKListDescriptor
 
                 TypefaceToken = "Liberator"
                 BigLineAction = ~/BigLineAction/MultiLine
-
-                UniformDrawer = $/UserInterface/UIUniformDrawer
 
                 TextToken = 'DCKO_ACTIV'
                 TextDico = ~/LocalisationConstantes/dico_interface_outgame
@@ -700,8 +680,6 @@ ListeDesUnitesDuDeck is BUCKListDescriptor
     Axis = ~/ListAxis/Horizontal
 
     MagnifierMultiplication = 1
-
-    UniformDrawer = $/UserInterface/UIUniformDrawer
 
     // => FreeCaseDescriptor()
 
@@ -761,8 +739,6 @@ AffichageNomDuDeck is BUCKListDescriptor
 
                 TypefaceToken = "Liberator"
                 BigLineAction = ~/BigLineAction/MultiLine
-
-                UniformDrawer = $/UserInterface/UIUniformDrawer
 
                 TextToken = 'DC_DCKNAM'
                 TextDico = ~/LocalisationConstantes/dico_interface_outgame
@@ -1063,8 +1039,6 @@ private DeckPanelContentList is BUCKListDescriptor
 
                                             TypefaceToken = "Liberator"
                                             BigLineAction = ~/BigLineAction/MultiLine
-
-                                            UniformDrawer = $/UserInterface/UIUniformDrawer
 
                                             TextToken = 'deck_pa'
                                             TextDico = ~/LocalisationConstantes/dico_interface_outgame
@@ -1956,6 +1930,16 @@ NoTransportButtonDescriptor is BUCKButtonDescriptor
 DeckCreatorUnitButtonRadioManager is TBUCKRadioButtonManager()
 DeckCreatorTransportUnitButtonRadioManager is TBUCKRadioButtonManager()
 
+ShowroomLightPresetsList is [
+    TLightingEnvironmentSwitcherEntry( LightingPreset = 'Hangar Showroom 1' ColorGrading = $/M3D/GraphicSettings/ColorGrading/ColorGrading_Hangar),
+    TLightingEnvironmentSwitcherEntry( LightingPreset = 'Hangar Showroom 5' ColorGrading = $/M3D/GraphicSettings/ColorGrading/ColorGrading_FULDA_Realistic_IFleuve),
+    TLightingEnvironmentSwitcherEntry( LightingPreset = 'Hangar Showroom 3' ColorGrading = $/M3D/GraphicSettings/ColorGrading/ColorGrading_FULDA_Realistic_Rock),
+    TLightingEnvironmentSwitcherEntry( LightingPreset = 'Hangar Showroom 4' ColorGrading = $/M3D/GraphicSettings/ColorGrading/ColorGrading_FULDA_Realistic_Rift_Hangar),
+    TLightingEnvironmentSwitcherEntry( LightingPreset = 'Hangar Showroom 6' ColorGrading = $/M3D/GraphicSettings/ColorGrading/ColorGrading_FULDA_Realistic_Meandre),
+    TLightingEnvironmentSwitcherEntry( LightingPreset = 'Hangar Showroom 2' ColorGrading = $/M3D/GraphicSettings/ColorGrading/ColorGrading_FULDA_Realistic_HighwayToBerlin),
+]
+DefaultShowroomLight is "Hangar Showroom 1"
+
 DeckCreatorScreenComponentDescriptor is TUISpecificShowRoomDeckCreatorScreenComponentDescriptor
 (
     MainComponentDescriptor = ~/DeckCreatorScreenMainComponent
@@ -2032,6 +2016,8 @@ DeckCreatorScreenComponentDescriptor is TUISpecificShowRoomDeckCreatorScreenComp
     AddUnitSound = SoundEvent_DeckEditorAddUnit
     RemoveUnitSound = SoundEvent_DeckEditorRemoveUnit
     MaxUnitByLineInUnitDivisionGrid = MaxUnitByLineInUnitDivisionGridDeckCreator
+    LightPresetsList = ShowroomLightPresetsList
+    DefaultLightingEnvironmentName = DefaultShowroomLight
 )
 
 //-------------------------------------------------------------------------------------

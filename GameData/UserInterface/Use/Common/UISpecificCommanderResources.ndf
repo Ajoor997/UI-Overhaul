@@ -1,13 +1,12 @@
 template TFeedbackRenderToolboxStyleDescriptorForCommander
 [
-    Thickness : float = 800.0,
     BorderColor : color,
     FillColor : color,
     Effect : int = ~/FeedbackEffectMode/Solid
 ]
 is TFeedbackRenderToolboxStyleDescriptor
 (
-    Thickness = <Thickness>
+    Thickness = 800.0
     BorderColor = <BorderColor>
     FillColor = <FillColor>
     Effect = <Effect>
@@ -19,13 +18,13 @@ CommanderResources is TUISpecificCommanderResources
     (
         BorderColor = [245, 230, 185, 190]
         FillColor = [245, 230, 185, 190]
-        Effect = ~/FeedbackEffectMode/Pulse
+        Effect = ~/FeedbackEffectMode/Solid //pas utilisé dans warno
     )
     SuperCommanderSelectionArrowStyleDescriptor = TFeedbackRenderToolboxStyleDescriptorForCommander
     (
         BorderColor = [235, 220, 140, 230]
         FillColor = [235, 220, 140, 230]
-        Effect = ~/FeedbackEffectMode/Pulse
+        Effect = ~/FeedbackEffectMode/Solid //pas utilisé dans warno
     )
     CommanderEffectAreaStyleDescriptor = TFeedbackRenderToolboxStyleDescriptorForCommander
     (

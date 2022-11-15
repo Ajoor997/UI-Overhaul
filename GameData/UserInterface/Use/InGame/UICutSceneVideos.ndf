@@ -32,8 +32,6 @@ export DefaultSubtitleDescriptor is BUCKTextDescriptor
 
     TypefaceToken = "Subtitles"
 
-    UniformDrawer = $/UserInterface/UIUniformDrawer
-
     BigLineAction = ~/BigLineAction/MultiLine
 
     TextColor = "Subtitle/Text"

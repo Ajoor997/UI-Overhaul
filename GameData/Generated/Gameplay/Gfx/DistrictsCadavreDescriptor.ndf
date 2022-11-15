@@ -11,7 +11,6 @@ export Descriptor_UnitCadavre_Quartier_Gros is TEntityDescriptor(
             (
                 Default            = TTypeUnitModuleDescriptor
                 (
-                    TypeUnitValue                    = ETypeUnit/Undef
                 )
                 Selection = [ ~/NilDescriptorIfCadavre ]
             ),
@@ -87,7 +86,6 @@ export Descriptor_UnitCadavre_Quartier_Gros is TEntityDescriptor(
                 FadingDuration = 6
                 DeathExplosionAmmo = nil
                 SecondaryDeathExplosionAmmo = nil
-                InvulnerablePeriod = $/GFX/Everything/CadavreInvulnerablePeriode
                 ModuleDescriptorsToSteal =
                 [
                    $/GFX/Everything/Descriptor_District_Quartier_Gros/ApparenceModel,
@@ -107,7 +105,6 @@ export Descriptor_UnitCadavre_Quartier_HLM is TEntityDescriptor(
             (
                 Default            = TTypeUnitModuleDescriptor
                 (
-                    TypeUnitValue                    = ETypeUnit/Undef
                 )
                 Selection = [ ~/NilDescriptorIfCadavre ]
             ),
@@ -183,7 +180,6 @@ export Descriptor_UnitCadavre_Quartier_HLM is TEntityDescriptor(
                 FadingDuration = 6
                 DeathExplosionAmmo = nil
                 SecondaryDeathExplosionAmmo = nil
-                InvulnerablePeriod = $/GFX/Everything/CadavreInvulnerablePeriode
                 ModuleDescriptorsToSteal =
                 [
                    $/GFX/Everything/Descriptor_District_Quartier_HLM/ApparenceModel,
@@ -203,7 +199,6 @@ export Descriptor_UnitCadavre_Quartier_Moyen is TEntityDescriptor(
             (
                 Default            = TTypeUnitModuleDescriptor
                 (
-                    TypeUnitValue                    = ETypeUnit/Undef
                 )
                 Selection = [ ~/NilDescriptorIfCadavre ]
             ),
@@ -279,7 +274,6 @@ export Descriptor_UnitCadavre_Quartier_Moyen is TEntityDescriptor(
                 FadingDuration = 6
                 DeathExplosionAmmo = nil
                 SecondaryDeathExplosionAmmo = nil
-                InvulnerablePeriod = $/GFX/Everything/CadavreInvulnerablePeriode
                 ModuleDescriptorsToSteal =
                 [
                    $/GFX/Everything/Descriptor_District_Quartier_Moyen/ApparenceModel,
@@ -299,7 +293,6 @@ export Descriptor_UnitCadavre_Quartier_Petit is TEntityDescriptor(
             (
                 Default            = TTypeUnitModuleDescriptor
                 (
-                    TypeUnitValue                    = ETypeUnit/Undef
                 )
                 Selection = [ ~/NilDescriptorIfCadavre ]
             ),
@@ -375,7 +368,6 @@ export Descriptor_UnitCadavre_Quartier_Petit is TEntityDescriptor(
                 FadingDuration = 6
                 DeathExplosionAmmo = nil
                 SecondaryDeathExplosionAmmo = nil
-                InvulnerablePeriod = $/GFX/Everything/CadavreInvulnerablePeriode
                 ModuleDescriptorsToSteal =
                 [
                    $/GFX/Everything/Descriptor_District_Quartier_Petit/ApparenceModel,

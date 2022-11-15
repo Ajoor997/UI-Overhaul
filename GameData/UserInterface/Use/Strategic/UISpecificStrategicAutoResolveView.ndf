@@ -46,7 +46,6 @@ PertesSurTerrainBlade is BUCKContainerDescriptor
             BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromFrameProperty
             FirstMargin  = TRTTILength (Magnifiable = 5.0)
             LastMargin  = TRTTILength (Magnifiable = 5.0)
-            UniformDrawer = $/UserInterface/UIUniformDrawer
 
             Elements =
             [
@@ -186,7 +185,6 @@ is BUCKContainerDescriptor
             BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromFrameProperty
             FirstMargin  = TRTTILength (Magnifiable = 10.0)
             LastMargin  = TRTTILength (Magnifiable = 10.0)
-            UniformDrawer = $/UserInterface/UIUniformDrawer
 
             Elements =
             [
@@ -367,7 +365,6 @@ private RapportDeForceMainComponent is BUCKContainerDescriptor
             BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromFrameProperty
             FirstMargin  = TRTTILength (Magnifiable = 5.0)
             LastMargin  = TRTTILength (Magnifiable = 5.0)
-            UniformDrawer = $/UserInterface/UIUniformDrawer
 
             Elements =
             [
@@ -441,7 +438,6 @@ private AvantageDeCombatMainComponent is BUCKContainerDescriptor
             BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromFrameProperty
             FirstMargin  = TRTTILength (Magnifiable = 5.0)
             LastMargin  = TRTTILength (Magnifiable = 5.0)
-            UniformDrawer = $/UserInterface/UIUniformDrawer
 
             Elements =
             [
@@ -533,7 +529,6 @@ private ResultatDuCombatMainComponent is BUCKContainerDescriptor
             BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromFrameProperty
             FirstMargin  = TRTTILength (Magnifiable = 5.0)
             LastMargin  = TRTTILength (Magnifiable = 5.0)
-            UniformDrawer = $/UserInterface/UIUniformDrawer
 
             Elements =
             [
@@ -609,7 +604,6 @@ private PertesSurTerrainMainComponent is BUCKContainerDescriptor
             BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromFrameProperty
             FirstMargin  = TRTTILength (Magnifiable = 5.0)
             LastMargin  = TRTTILength (Magnifiable = 5.0)
-            UniformDrawer = $/UserInterface/UIUniformDrawer
 
             Elements =
             [
@@ -743,7 +737,6 @@ private DetailDesPertesMainComponent is BUCKContainerDescriptor
             BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromFrameProperty
             FirstMargin  = TRTTILength (Magnifiable = 5.0)
             LastMargin  = TRTTILength (Magnifiable = 5.0)
-            UniformDrawer = $/UserInterface/UIUniformDrawer
 
             Elements =
             [
@@ -919,10 +912,56 @@ private ResultOfBattleMainComponent_2 is BUCKListDescriptor
     FirstMargin  = TRTTILength (Magnifiable = 0.0)
     InterItemMargin  = TRTTILength (Magnifiable = 0.0)
     LastMargin  = TRTTILength (Magnifiable = 10.0)
-    UniformDrawer = $/UserInterface/UIUniformDrawer
 
     Elements =
     [
+        //-------------------------------------------------------------------------------------
+        // résultat
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = BUCKTextDescriptor
+            (
+                ElementName = 'AutoResolveTitleText'
+
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    RelativeWidthHeight = [1,0]
+                    AlignementToFather = [0.5, 0.0]
+                    AlignementToAnchor = [0.5, 0.0]
+                )
+
+                ParagraphStyle = TParagraphStyleRTTI
+                (
+                    Alignment = ~/UIText_Center
+                    VerticalAlignment = ~/UIText_VerticalCenter
+                )
+
+                VerticalFitStyle = ~/FitStyle/FitToContent
+                HorizontalFitStyle = ~/FitStyle/UserDefined
+                TextPadding = TRTTILength4(Magnifiable = [4.0, 10.0, 4.0, 0.0])
+                BigLineAction = ~/BigLineAction/MultiLine
+                TextStyle = 'Default'
+                TypefaceToken = "Eurostyle_Heavy"
+
+                TextToken = 'AR_Result'
+                TextDico = ~/LocalisationConstantes/dico_interface_ingame
+                TextSize = 'AutoResolve/Title'
+                TextColor = 'BlancEquipe'
+            )
+        ),
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = DisplayTextBattleResultDetails
+        ),
+        //-------------------------------------------------------------------------------------
+        // titre détail du rapport de force
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = AutoresolveSousTitre(TextToken = 'AR_fr')
+        ),
+
+
+        // titre des joueurs
         BUCKListElementDescriptor
         (
             ComponentDescriptor = BUCKListDescriptor
@@ -974,45 +1013,23 @@ private ResultOfBattleMainComponent_2 is BUCKListDescriptor
         (
             ComponentDescriptor = ~/ResultatDuCombatMainComponent
         ),
-        // résultat
+        //-------------------------------------------------------------------------------------
+        // titre répartition des pertes
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = BUCKTextDescriptor
-            (
-                ElementName = 'AutoResolveTitleText'
-
-                ComponentFrame = TUIFramePropertyRTTI
-                (
-                    AlignementToFather = [0.5, 0.0]
-                    AlignementToAnchor = [0.5, 0.0]
-                )
-
-                ParagraphStyle = TParagraphStyleRTTI
-                (
-                    Alignment = ~/UIText_Center
-                    VerticalAlignment = ~/UIText_VerticalCenter
-                )
-
-                VerticalFitStyle = ~/FitStyle/FitToContent
-                HorizontalFitStyle = ~/FitStyle/FitToContent
-                TextPadding = TRTTILength4(Magnifiable = [4.0, 0.0, 4.0, 0.0])
-
-                TextStyle = 'Default'
-                TypefaceToken = "UIMainFont"
-
-                TextToken = 'AR_Result'
-                TextDico = ~/LocalisationConstantes/dico_interface_ingame
-                TextSize = 'AutoResolve/Title'
-                TextColor = 'SM_Noir'
-            )
+            ComponentDescriptor = AutoresolveSousTitre( TextToken = 'AR_distl')
         ),
-        BUCKListElementDescriptor
-        (
-            ComponentDescriptor = DisplayTextBattleResultDetails
-        ),
+
+
+
         BUCKListElementDescriptor
         (
             ComponentDescriptor = ~/PertesSurTerrainMainComponent
+        ),
+        // titre détails des pertes
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = AutoresolveSousTitre(TextToken = 'AR_lossd')
         ),
         BUCKListElementDescriptor
         (
@@ -1025,9 +1042,38 @@ private ResultOfBattleMainComponent_2 is BUCKListDescriptor
                 ),}
 
     ]
+)
+//-------------------------------------------------------------------------------------
+template AutoresolveSousTitre
+[
+ TextToken : string = 'AR_TITLE'
+]
+is BUCKTextDescriptor
+(
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        RelativeWidthHeight = [1,0]
+        AlignementToFather = [0.5, 0.0]
+        AlignementToAnchor = [0.5, 0.0]
+    )
 
+    ParagraphStyle = TParagraphStyleRTTI
+    (
+        Alignment = ~/UIText_Center
+        VerticalAlignment = ~/UIText_VerticalCenter
+    )
 
+    VerticalFitStyle = ~/FitStyle/FitToContent
+    HorizontalFitStyle = ~/FitStyle/UserDefined
+    TextPadding = TRTTILength4(Magnifiable = [4.0, 10.0, 4.0, 0.0])
+    BigLineAction = ~/BigLineAction/MultiLine
+    TextStyle = 'Default'
+    TypefaceToken = "Eurostyle_Medium"
 
+    TextToken = <TextToken>
+    TextDico = ~/LocalisationConstantes/dico_interface_ingame
+    TextSize = '26'
+    TextColor = 'SM_paleSilver'
 )
 //-------------------------------------------------------------------------------------
 DisplayTextBattleResultDetails is BUCKTextDescriptor
@@ -1040,6 +1086,9 @@ DisplayTextBattleResultDetails is BUCKTextDescriptor
         AlignementToFather = [0.5, 0.0]
         AlignementToAnchor = [0.5, 0.0]
     )
+
+    TextPadding = TRTTILength4 (Magnifiable = [10,10,10,20])
+
     ParagraphStyle = CenteredParagraphStyle
     TextStyle = "Default"
     HorizontalFitStyle = ~/FitStyle/UserDefined
@@ -1226,7 +1275,8 @@ private StrategicBattleResultMainComponent is BUCKListDescriptor
     ElementName = 'StrategicBattleResultMainComponent'
     ComponentFrame = TUIFramePropertyRTTI
     (
-        RelativeWidthHeight= [1.0, 0.0]
+        MagnifiableWidthHeight = [LargeurMainComponent, 0]
+        //RelativeWidthHeight= [1.0, 0.0]
     )
 
     Axis = ~/ListAxis/Vertical
@@ -1234,7 +1284,6 @@ private StrategicBattleResultMainComponent is BUCKListDescriptor
     FirstMargin  = TRTTILength (Magnifiable = 10.0)
     InterItemMargin  = TRTTILength (Magnifiable = 10.0)
     LastMargin  = TRTTILength (Magnifiable = 15.0)
-    UniformDrawer = $/UserInterface/UIUniformDrawer
 
     Elements =
     [
@@ -1256,7 +1305,7 @@ private StrategicBattleResultMainComponent is BUCKListDescriptor
                     VerticalAlignment = ~/UIText_VerticalCenter
                 )
 
-                //TextPadding = TRTTILength4(Magnifiable = [4.0, 0.0, 4.0, 0.0])
+                TextPadding = TRTTILength4(Magnifiable = [4.0, 10.0, 4.0, 10.0])
                 VerticalFitStyle = ~/FitStyle/FitToContent
                 HorizontalFitStyle = ~/FitStyle/FitToContent
                 TextStyle = 'Default'
@@ -1304,7 +1353,7 @@ private StrategicBattleResultMainComponent is BUCKListDescriptor
     PanelRoundedCorner(
         Radius = 10
 
-        BackgroundBlockColorToken = 'SM_RifleGreen_75'
+        BackgroundBlockColorToken = 'SM_RifleGreen'
         BorderLineColorToken = 'SM_Grullo'
         )
     ]
@@ -1436,11 +1485,15 @@ BUCKSpecificStrategicAutoResolveMainComponentDescriptor is BUCKContainerDescript
     ElementName = 'AutoResolveMainComponent'
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = [LargeurMainComponent, 900.0]
+        //MagnifiableWidthHeight = [LargeurMainComponent, 900.0]
         AlignementToAnchor = [0, 0.5]
         AlignementToFather = [0, 0.5]
         MagnifiableOffset = [10,0]
     )
+
+
+    FitStyle = ~/ContainerFitStyle/FitToContent
+
 
     Components =
     [
@@ -1466,12 +1519,7 @@ UISpecificStrategicAutoResolveViewDescriptor is TUISpecificStrategicAutoResolveV
 
     LossRackWidth = LargeurMainComponent * RelativeLossRackPercent
 
-    TerrainTypeTokens = MAP
-    [
-        ( ~/ETerrainType/Default, "TER_DEF" ), // obligatoire, fallback si on ne trouve pas le terrain
-        ( ~/ETerrainType/Urbain, "TERR_06T" ),
-        ( ~/ETerrainType/StrategicPlain, "terr_rout" ),
-    ]
+    TerrainTypeTokens = ~/StrategicTerrainTypeTokens
 
     DefaultVictoryTokens = MAP
     [

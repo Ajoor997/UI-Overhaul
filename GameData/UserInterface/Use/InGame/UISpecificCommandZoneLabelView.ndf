@@ -19,7 +19,7 @@ BUCKSpecificCommandZoneLabelMainComponentDescriptor is BUCKListDescriptor
         (
             ComponentDescriptor = BUCKTextDescriptor
             (
-                ElementName = "CommandPointsGenerated"
+                ElementName = "ConquestPointsGenerated"
 
                 ComponentFrame = TUIFramePropertyRTTI
                 (
@@ -163,6 +163,11 @@ UISpecificCommandZoneLabelViewDescriptor is TUISpecificCommandZoneLabelViewDescr
 
     OpacityControlByFloat = $/M3D/Shader/AreaFillOpacity
 
-    TokenFormatCommandPoints = "FRM_COM_AR"
+    TokenFormatCommandPointsByCombatRule = MAP
+    [
+        (CombatRule/CaptureTheFlag,  "FRM_CNQ_AR"),
+        (CombatRule/Destruction,     "FRM_COM_AR")
+    ]
+
     TokenFormatAreaOwningPercent = "FRM_OWN_AR"
 )

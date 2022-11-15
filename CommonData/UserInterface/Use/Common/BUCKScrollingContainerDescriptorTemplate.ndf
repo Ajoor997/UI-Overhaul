@@ -25,8 +25,6 @@ template BUCKScrollbarDescriptor
 
     SpotlightComponent : TBUCKContainerDescriptor = nil,
 
-    UniformDrawer : TUIUniformDrawer = $/UserInterface/UIUniformDrawer,
-
     HasBackground : bool = false,
     BackgroundBlockColorToken : string = "",
 
@@ -95,7 +93,7 @@ is TBUCKScrollbarDescriptor
 
     SpotlightComponent = <SpotlightComponent>
 
-    UniformDrawer = <UniformDrawer>
+    UniformDrawer = $/UserInterface/UIUniformDrawer
 
     HasBackground = <HasBackground>
     BackgroundBlockColorToken = <BackgroundBlockColorToken>
@@ -160,6 +158,8 @@ is TBUCKScrollbarDescriptor
     ] : [])
 )
 
+// -------------------------------------------------------------------------------------------------
+
 template BUCKSliderDescriptor
 [
     // ++ BUCKContainerDescriptor
@@ -186,8 +186,6 @@ template BUCKSliderDescriptor
     IsClippable : bool = true,
 
     SpotlightComponent : TBUCKContainerDescriptor = nil,
-
-    UniformDrawer : TUIUniformDrawer = $/UserInterface/UIUniformDrawer,
 
     HasBackground : bool = false,
     BackgroundBlockColorToken : string = "",
@@ -258,7 +256,7 @@ is TBUCKSliderDescriptor
 
     SpotlightComponent = <SpotlightComponent>
 
-    UniformDrawer = <UniformDrawer>
+    UniformDrawer = $/UserInterface/UIUniformDrawer
 
     HasBackground = <HasBackground>
     BackgroundBlockColorToken = <BackgroundBlockColorToken>
@@ -325,6 +323,8 @@ is TBUCKSliderDescriptor
     // -- BUCKScrollbarDescriptor
 )
 
+// -------------------------------------------------------------------------------------------------
+
 template BUCKScrollingContainerDescriptor
 [
     // ++ BUCKContainerDescriptor
@@ -353,8 +353,6 @@ template BUCKScrollingContainerDescriptor
     IsClippable : bool = true,
 
     SpotlightComponent : TBUCKContainerDescriptor = nil,
-
-    UniformDrawer : TUIUniformDrawer = $/UserInterface/UIUniformDrawer,
 
     HasBackground : bool = false,
     BackgroundBlockColorToken : string = "",
@@ -417,7 +415,7 @@ is TBUCKScrollingContainerDescriptor
 
     SpotlightComponent = <SpotlightComponent>
 
-    UniformDrawer = <UniformDrawer>
+    UniformDrawer = $/UserInterface/UIUniformDrawer
 
     HasBackground = <HasBackground>
     BackgroundBlockColorToken = <BackgroundBlockColorToken>

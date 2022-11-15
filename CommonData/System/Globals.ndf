@@ -84,6 +84,7 @@ SDMode_WaterFeedback        is 0x4000
 SDMode_FXModel              is 0x8000
 SDMode_StaticFX             is 0x10000
 SDMode_FXBank               is 0x20000
+SDMode_DummyElements        is 0x40000
 SDMode_OnlyBaked            is 0x80000 // PaulQ(24/01/12): ces objets ne sont visibles que lors du baking
 SDMode_LevelDesignTag       is 0x100000 // PaulQ(16/05/14) pour les tags LD des bâtiments qui seront exportées dans LBH (entree/sortie par ex)
 
@@ -119,16 +120,10 @@ SceneryPurpose is TBaseClass
 
 // mask raytrace aspect
 // /!\ Doit matcher avec SceneryDescriptorRaytraceAspect.h /!\
-RAMask_Default              is 1
-RAMask_Building             is 2
-
-// mode de snap :
-SnapMode is TBaseClass
-(
-    Hexa is 1
-    Node is 2
-    Center is 3
-)
+RAMask_Default                  is 1
+RAMask_BuildingWithSlope        is 2
+RAMask_HighBuilding             is 4
+RAMask_HighBuildingWithSlope    is RAMask_BuildingWithSlope + RAMask_HighBuilding
 
 
 //-----------------------------------------------------------------------------
@@ -360,8 +355,6 @@ CommandName is TBaseClass
 
     CommonDepictionOnOptionChange is "CommonDepictionOnOptionChange::OnOptionChange"   // ceci correspond au nom donné dans DepictionDistanceToCameraBasedSelector.cpp
 
-    DecorsHabilleurManagerResetOptions is "DecorsHabilleurManager::ResetOptions"   // ceci correspond au nom donné dans DecorsHabilleurCase.cpp
-
     LightManagerFactoryOnOptionChanged is "LightManagerFactoryOnOptionChanged"
 
     LevelBuildViewManagerResetOptions is "UnitLevelBuildInstanceManager::ResetOptions"   // ceci correspond au nom donné dans UnitLevelBuildView.cpp
@@ -493,21 +486,15 @@ PatternInstanciationType is TBaseClass
     Random                is 2
 )
 
-RegularLoadingTokenID is 1
-AutoSettingLoadingTokenID is 2
-
 LayerSettings_Visible                   is 0x01
 LayerSettings_Editable                  is 0x02
 LayerSettings_VisibilityLocked          is 0x04
 LayerSettings_EditabilityLocked         is 0x08
-LayerSettings_OnlyOneSubLayerEditable   is 0x10
-LayerSettings_OnlyOneSubLayerVisible    is 0x20
 
 MaskedEditorFeedbackLayerSettings   is LayerSettings_EditabilityLocked
-EditorFeedbackLayerSettings         is LayerSettings_Visible | LayerSettings_EditabilityLocked
+EditorFeedbackLayerSettings         is LayerSettings_Visible | LayerSettings_Editable | LayerSettings_EditabilityLocked
 EditableEditorFeedbackLayerSettings is LayerSettings_Visible | LayerSettings_Editable
 RenderLayerSettings                 is LayerSettings_Visible | LayerSettings_EditabilityLocked
-EditionLayerSettings                is LayerSettings_Visible | LayerSettings_Editable
 
 // /!\ Doit rester synchronisé avec l'enum dans UserInputKeyCode.h
 UserInputKeyboard is TBaseClass // namespace

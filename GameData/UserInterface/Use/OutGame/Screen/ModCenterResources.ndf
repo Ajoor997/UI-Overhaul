@@ -117,7 +117,6 @@ private ModCenterInactiveContainerDescriptor is BUCKContainerDescriptor
         MagnifiableOffset = [1, 0]
     )
 
-    UniformDrawer = $/UserInterface/UIUniformDrawer
     HasBackground = true
     BackgroundBlockColorToken = "ModCenter"
 )
@@ -162,7 +161,6 @@ private ModCenterSaveCheckBoxDescriptor is BUCKContainerDescriptor
             TextToken       = "SR_SAVE"
 
             TypefaceToken   = "Liberator"
-            UniformDrawer   = $/UserInterface/UIUniformDrawer
         ),
     ]
 )

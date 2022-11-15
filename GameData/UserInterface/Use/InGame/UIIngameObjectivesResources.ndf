@@ -177,8 +177,6 @@ private CapturePointObjectiveLabel is TUIObjectiveLabelDescriptor
                 RelativeWidthHeight = [1.0, 1.0]
             )
 
-            UniformDrawer = $/UserInterface/UIUniformDrawer
-
             HasBorder = true
             BorderLineColorToken = ""
             BorderThicknessToken = "ObjectiveLabel/CapturePoint/Border"

@@ -139,7 +139,6 @@ BUCKSpecificLinkAccountMainComponentDescriptor is LoginTvContainer
                                 BigLineAction = ~/BigLineAction/MultiLine
 
                                 TypefaceToken   = "Liberator"
-                                UniformDrawer   = $/UserInterface/UIUniformDrawer
                             ),
                         ]
                     )

@@ -20,8 +20,6 @@ is BUCKContainerDescriptor
 
     ComponentFrame = <ComponentFrame>
 
-    UniformDrawer = $/UserInterface/UIUniformDrawer
-
     HasBackground = true
     BackgroundBlockColorToken = <BackgroundBlockColorToken>
 
@@ -63,8 +61,6 @@ is BUCKContainerDescriptor
                 AlignementToFather = [0.5, 0.5]
                 AlignementToAnchor = [0.5, 0.5]
             )
-
-            UniformDrawer = $/UserInterface/UIUniformDrawer
 
             HasBorder = <HasInternalBorders>
             BorderLineColorToken = <BorderLineColorToken>
@@ -141,8 +137,6 @@ template PanelRoundedCorner
 
     SpotlightComponent : TBUCKContainerDescriptor = nil,
     SpotlightLayer : TUILayer = nil,
-
-    UniformDrawer : TUIUniformDrawer = $/UserInterface/UIUniformDrawer,
 
     HasBackground : bool = true,
     BackgroundBlockColorToken : string = "H2_bleu_2",

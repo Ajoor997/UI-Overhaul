@@ -31,8 +31,6 @@ template BUCKHintDescriptor
 
     SpotlightComponent : TBUCKContainerDescriptor = nil,
 
-    UniformDrawer : TUIUniformDrawer = $/UserInterface/UIUniformDrawer,
-
     HasBackground : bool = false,
     BackgroundBlockColorToken : string = "",
 
@@ -68,8 +66,9 @@ template BUCKHintDescriptor
     // -- BUCKListDescriptor
 
     TitleElementName : string = "",                                                          // L'ElementName du composant de titre du hint
+    SeparatorTitleBodyElementName : string = "",                                             // L'ElementName du composant de séparateur entre le titre et le body
     BodyElementName : string = "",                                                           // L'ElementName du composant de corps du hint
-    SeparatorElementName : string = "",                                                      // L'ElementName du composant de séparateur entre le corps et la partie étendue du hint
+    SeparatorBodyExtendedElementName : string = "",                                          // L'ElementName du composant de séparateur entre le corps et la partie étendue du hint
     ExtendedElementName : string = "",                                                       // L'ElementName du composant de la partie étendue du hint
 ]
 is TBUCKHintDescriptor
@@ -101,7 +100,7 @@ is TBUCKHintDescriptor
 
     SpotlightComponent = <SpotlightComponent>
 
-    UniformDrawer = <UniformDrawer>
+    UniformDrawer = $/UserInterface/UIUniformDrawer
 
     HasBackground = <HasBackground>
     BackgroundBlockColorToken = <BackgroundBlockColorToken>
@@ -138,7 +137,8 @@ is TBUCKHintDescriptor
     // -- BUCKListDescriptor
 
     TitleElementName = <TitleElementName>
+    SeparatorTitleBodyElementName = <SeparatorTitleBodyElementName>
     BodyElementName = <BodyElementName>
-    SeparatorElementName = <SeparatorElementName>
+    SeparatorBodyExtendedElementName = <SeparatorBodyExtendedElementName>
     ExtendedElementName = <ExtendedElementName>
 )

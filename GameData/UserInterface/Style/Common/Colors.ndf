@@ -411,19 +411,19 @@ Otan is [30,54,104,255]
 Otan_vert is [77,105,60,255]
 
 
-Otan_fond is [30,54,104,153]
+Otan_fond is [30,54,104,255]
 Otan_fond_vert is [77,105,60,200]
 
 Otan_fond70 is [30,54,104,80]
 Otan_fond70_vert is [77,105,60,130]
 
-Otan_fond_plus30 is [60,84,134,153]
+Otan_fond_plus30 is [60,84,134,255]
 Otan_fond_plus30_vert is [107,135,90,200]
 
 Pact is             [159,40,40,255]
-Pact_fond is        [159,40,40,153]
+Pact_fond is        [159,40,40,255]
 Pact_fond70 is      [159,40,40,80]
-Pact_fond_plus30 is [189,70,70,153]
+Pact_fond_plus30 is [189,70,70,255]
 
 Pact_blanc is       [140,111,111,255]
 Pact_blanc_fond is  [220,220,220,153]

@@ -25,37 +25,11 @@ Modele_F111E_Aardvark_US_train is TResourceMultiMaterialMeshWithLod
 )
 //-------------------------------------------------------------------------------------
 //-------------------------------------------------------------------------------------
-Gfx_Modele_F111E_Aardvark_US is TTimelyReceiverFactoryCarrier
+
+Gfx_Modele_F111E_Aardvark_US is StrategicPawnDepictionTemplate
 (
-    DepictionTemplate = TDepictionTemplate
-    (
-        Scaler = TConstantScaler( Scale = 7)
-        Selector = OnlyHighDepictionSelector
-        DepictionAlternatives = [ DepictionDescriptor_LOD_High( MeshDescriptor = MeshModele_Socle_USA ) ]
-
-        SubDepictions = [ TSubDepiction
-        (
-            Depiction = TDepictionTemplate
-            (
-                Scaler = CommonIdentityScaler
-                Selector = OnlyHighDepictionSelector
-                DepictionAlternatives = [ DepictionDescriptor_LOD_High( MeshDescriptor = MeshModele_Tige_longue ) ]
-
-                SubDepictions = [ TSubDepiction
-                (
-                    Anchor = "avion"
-                    Depiction = TDepictionTemplate
-                    (
-                        Scaler = TConstantScaler( Scale = 7)
-                        Selector = CommonDepictionSelector
-                        DepictionAlternatives = [
-                            DepictionDescriptor_LOD_High( MeshDescriptor = Modele_F111E_Aardvark_US ),
-                            DepictionDescriptor_LOD_Mid ( MeshDescriptor = Modele_F111E_Aardvark_US ),
-                            DepictionDescriptor_LOD_Low ( MeshDescriptor = Modele_F111E_Aardvark_US DisabledOperators = ['tourelle3'] ),
-                        ]
-                    )
-                ) ]
-            )
-        ) ]
-    )
+    MeshSocle = MeshModele_Socle_USA
+    MeshTige = MeshModele_Tige_longue
+    MeshPawn = Modele_F111E_Aardvark_US
+    Anchor = "avion"
 )

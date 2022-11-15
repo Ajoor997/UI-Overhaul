@@ -182,7 +182,6 @@ PerformanceAlertListDescriptor is BUCKListDescriptor
 
     HasBackground = true
     BackgroundBlockColorToken = "PerformanceAlertPanel/Background"
-    UniformDrawer = $/UserInterface/UIUniformDrawer
 
     FirstMargin = TRTTILength()
     InterItemMargin = TRTTILength()

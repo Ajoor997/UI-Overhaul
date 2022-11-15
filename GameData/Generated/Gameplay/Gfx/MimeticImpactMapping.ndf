@@ -5,19 +5,19 @@
 // -------------------------------------------------------------------------- //
 
 
-    export FxImpact2A38Autocanon__Connector                          is ImpactConnector
+    FxImpact2A38Autocanon__Connector                          is ImpactConnector
     (
         Action1 = $/GFX/GameFx/Fx_impact_2A38_Autocanon_1
         Action2 = $/GFX/GameFx/Fx_impact_2A38_Autocanon_2
         Action3 = $/GFX/GameFx/Fx_impact_2A38_Autocanon_3
     )
-    export FxImpactFK20Autocanon__Connector                          is ImpactConnector
+    FxImpactFK20Autocanon__Connector                          is ImpactConnector
     (
         Action1 = $/GFX/GameFx/Fx_impact_FK20_Autocanon_1
         Action2 = $/GFX/GameFx/Fx_impact_FK20_Autocanon_2
         Action3 = $/GFX/GameFx/Fx_impact_FK20_Autocanon_3
     )
-    export FxImpactGAU8Gatling__Connector                            is ImpactConnector
+    FxImpactGAU8Gatling__Connector                            is ImpactConnector
     (
         Action1 = $/GFX/GameFx/Fx_impact_GAU8_Gatling_1
         Action2 = $/GFX/GameFx/Fx_impact_GAU8_Gatling_2
@@ -28,7 +28,7 @@
         Action7 = $/GFX/GameFx/Fx_impact_GAU8_Gatling_7
         Action8 = $/GFX/GameFx/Fx_impact_GAU8_Gatling_8
     )
-    export FxImpactM168Gatling__Connector                            is ImpactConnector
+    FxImpactM168Gatling__Connector                            is ImpactConnector
     (
         Action1 = $/GFX/GameFx/Fx_impact_M168_Gatling_1
         Action2 = $/GFX/GameFx/Fx_impact_M168_Gatling_2
@@ -36,74 +36,71 @@
         Action4 = $/GFX/GameFx/Fx_impact_M168_Gatling_4
         Action5 = $/GFX/GameFx/Fx_impact_M168_Gatling_5
     )
-    export FxImpactM197Gatling__Connector                            is ImpactConnector
+    FxImpactM197Gatling__Connector                            is ImpactConnector
     (
         Action1 = $/GFX/GameFx/Fx_impact_M197_Gatling_1
         Action2 = $/GFX/GameFx/Fx_impact_M197_Gatling_2
         Action3 = $/GFX/GameFx/Fx_impact_M197_Gatling_3
         Action4 = $/GFX/GameFx/Fx_impact_M197_Gatling_4
     )
-    export FxImpactM61A1Vulcan__Connector                            is ImpactConnector
+    FxImpactM61A1Vulcan__Connector                            is ImpactConnector
     (
         Action1 = $/GFX/GameFx/Fx_impact_M61A1_Vulcan_1
         Action2 = $/GFX/GameFx/Fx_impact_M61A1_Vulcan_2
         Action3 = $/GFX/GameFx/Fx_impact_M61A1_Vulcan_3
         Action4 = $/GFX/GameFx/Fx_impact_M61A1_Vulcan_4
     )
-    export FxImpactMK27Canon__Connector                              is ImpactConnector
+    FxImpactMK27Canon__Connector                              is ImpactConnector
     (
         Action1 = $/GFX/GameFx/Fx_impact_MK27_Canon_1
         Action2 = $/GFX/GameFx/Fx_impact_MK27_Canon_2
         Action3 = $/GFX/GameFx/Fx_impact_MK27_Canon_3
     )
-    export FxImpactVehiculeGAU8Gatling_Connector                     is ImpactConnector
+    FxImpactVehiculeGAU8Gatling_Connector                     is ImpactConnector
     (
         Action1 = $/GFX/GameFx/Fx_impact_Vehicule_GAU8_Gatling
     )
-    export FxImpactVehiculeM61A1Vulcan__Connector                    is ImpactConnector
+    FxImpactVehiculeM61A1Vulcan__Connector                    is ImpactConnector
     (
         Action1 = $/GFX/GameFx/Fx_impact_Vehicule_M61A1_Vulcan_1
         Action2 = $/GFX/GameFx/Fx_impact_Vehicule_M61A1_Vulcan_2
         Action3 = $/GFX/GameFx/Fx_impact_Vehicule_M61A1_Vulcan_3
         Action4 = $/GFX/GameFx/Fx_impact_Vehicule_M61A1_Vulcan_4
     )
-    export FxImpactBallesCal50Eau_Connector                          is ImpactConnector
+    FxImpactBallesCal50Eau__Connector                         is ImpactConnector
     (
-        Action1 = $/GFX/GameFx/Fx_impact_balles_Cal50_Eau
+        Action1 = $/GFX/GameFx/Fx_impact_balles_Cal50_Eau_1
+        Action2 = $/GFX/GameFx/Fx_impact_balles_Cal50_Eau_2
     )
-    export OrientationWrapperFxImpact2A38Autocanon_Connector         is ImpactConnector
+    OrientationWrapperFxImpact2A38Autocanon_Connector         is ImpactConnector
     (
         Action1 = $/GFX/GameFx/OrientationWrapper_Fx_impact_2A38_Autocanon
     )
-    export OrientationWrapperFxImpactM168Gatling_Connector           is ImpactConnector
+    OrientationWrapperFxImpactM168Gatling_Connector           is ImpactConnector
     (
         Action1 = $/GFX/GameFx/OrientationWrapper_Fx_impact_M168_Gatling
     )
-    export OrientationWrapperFxImpactM197Gatling_Connector           is ImpactConnector
+    OrientationWrapperFxImpactM197Gatling_Connector           is ImpactConnector
     (
         Action1 = $/GFX/GameFx/OrientationWrapper_Fx_impact_M197_Gatling
     )
-    export OrientationWrapperFxImpactVehicule2A38Autocanon_Connector is ImpactConnector
+    OrientationWrapperFxImpactVehicule2A38Autocanon_Connector is ImpactConnector
     (
         Action1 = $/GFX/GameFx/OrientationWrapper_Fx_impact_Vehicule_2A38_Autocanon
     )
-    export OrientationWrapperFxImpactVehiculeM168Gatling_Connector   is ImpactConnector
+    OrientationWrapperFxImpactVehiculeM168Gatling_Connector   is ImpactConnector
     (
         Action1 = $/GFX/GameFx/OrientationWrapper_Fx_impact_Vehicule_M168_Gatling
     )
-    export OrientationWrapperFxImpactVehiculeM197Gatling_Connector   is ImpactConnector
+    OrientationWrapperFxImpactVehiculeM197Gatling_Connector   is ImpactConnector
     (
         Action1 = $/GFX/GameFx/OrientationWrapper_Fx_impact_Vehicule_M197_Gatling
     )
-    export OrientationWrapperFxImpactBallesCal50Eau_Connector        is ImpactConnector
-    (
-        Action1 = $/GFX/GameFx/OrientationWrapper_Fx_impact_balles_Cal50_Eau
-    )
-    export OrientationWrapperFxImpactSolAvion_Connector              is ImpactConnector
+    OrientationWrapperFxImpactSolAvion_Connector              is ImpactConnector
     (
         Action1 = $/GFX/GameFx/OrientationWrapper_fx_impact_sol_avion
     )
-    export OrientationWrapperFxImpactSolAvionGros__Connector         is ImpactConnector
+    OrientationWrapperFxImpactSolAvionGros__Connector         is ImpactConnector
     (
         Action1 = $/GFX/GameFx/OrientationWrapper_fx_impact_sol_avion_gros_1
         Action2 = $/GFX/GameFx/OrientationWrapper_fx_impact_sol_avion_gros_2
@@ -114,21 +111,21 @@
         Action7 = $/GFX/GameFx/OrientationWrapper_fx_impact_sol_avion_gros_7
         Action8 = $/GFX/GameFx/OrientationWrapper_fx_impact_sol_avion_gros_8
     )
-    export FxOuvertureBombeCluster_Connector                         is ImpactConnector
+    FxOuvertureBombeCluster_Connector                         is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_Ouverture_Bombe_Cluster
     )
-    export FxOuvertureBombletesNoAirBurstMW1__Connector              is ImpactConnector
+    FxOuvertureBombletesNoAirBurstMW1__Connector              is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_Ouverture_Bombletes_NoAirBurst_MW1_1
         Action2 = $/GFX/GameFx/fx_Ouverture_Bombletes_NoAirBurst_MW1_2
         Action3 = $/GFX/GameFx/fx_Ouverture_Bombletes_NoAirBurst_MW1_3
     )
-    export FxOuvertureRoquetteCluster_Connector                      is ImpactConnector
+    FxOuvertureRoquetteCluster_Connector                      is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_Ouverture_Roquette_Cluster
     )
-    export FxDestructionUniteMBT__Connector                          is ImpactConnector
+    FxDestructionUniteMBT__Connector                          is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_destruction_unite_MBT_1
         Action2 = $/GFX/GameFx/fx_destruction_unite_MBT_10
@@ -146,99 +143,99 @@
         Action14 = $/GFX/GameFx/fx_destruction_unite_MBT_8
         Action15 = $/GFX/GameFx/fx_destruction_unite_MBT_9
     )
-    export FxDestructionUnitePetite__Connector                       is ImpactConnector
+    FxDestructionUnitePetite__Connector                       is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_destruction_unite_petite_1
         Action2 = $/GFX/GameFx/fx_destruction_unite_petite_2
         Action3 = $/GFX/GameFx/fx_destruction_unite_petite_3
     )
-    export FxImpactDCAM168GatlingAir__Connector                      is ImpactConnector
+    FxImpactDCAM168GatlingAir__Connector                      is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_DCA_M168_Gatling_air_1
         Action2 = $/GFX/GameFx/fx_impact_DCA_M168_Gatling_air_2
         Action3 = $/GFX/GameFx/fx_impact_DCA_M168_Gatling_air_3
         Action4 = $/GFX/GameFx/fx_impact_DCA_M168_Gatling_air_4
     )
-    export FxImpactDCAM168GatlingVehiculeAir_Connector               is ImpactConnector
+    FxImpactDCAM168GatlingVehiculeAir_Connector               is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_DCA_M168_Gatling_vehicule_air
     )
-    export FxImpactDCAM197GatlingAir__Connector                      is ImpactConnector
+    FxImpactDCAM197GatlingAir__Connector                      is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_DCA_M197_Gatling_air_1
         Action2 = $/GFX/GameFx/fx_impact_DCA_M197_Gatling_air_2
         Action3 = $/GFX/GameFx/fx_impact_DCA_M197_Gatling_air_3
         Action4 = $/GFX/GameFx/fx_impact_DCA_M197_Gatling_air_4
     )
-    export FxImpactDCAM197GatlingVehiculeAir_Connector               is ImpactConnector
+    FxImpactDCAM197GatlingVehiculeAir_Connector               is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_DCA_M197_Gatling_vehicule_air
     )
-    export FxImpactDCAAir_Connector                                  is ImpactConnector
+    FxImpactDCAAir_Connector                                  is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_DCA_air
     )
-    export FxImpactDCAAirGros_Connector                              is ImpactConnector
+    FxImpactDCAAirGros_Connector                              is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_DCA_air_gros
     )
-    export FxImpactDCAAirMoyen_Connector                             is ImpactConnector
+    FxImpactDCAAirMoyen_Connector                             is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_DCA_air_moyen
     )
-    export FxImpactDCAAirPetit_Connector                             is ImpactConnector
+    FxImpactDCAAirPetit_Connector                             is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_DCA_air_petit
     )
-    export FxImpactDCAAirPetit__Connector                            is ImpactConnector
+    FxImpactDCAAirPetit__Connector                            is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_DCA_air_petit_1
         Action2 = $/GFX/GameFx/fx_impact_DCA_air_petit_2
         Action3 = $/GFX/GameFx/fx_impact_DCA_air_petit_3
     )
-    export FxImpactLanceFlammes_Connector                            is ImpactConnector
+    FxImpactLanceFlammes_Connector                            is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_Lance_Flammes
     )
-    export FxImpactVehiculeClusterM712155MmCOPPERHEAD_Connector      is ImpactConnector
+    FxImpactVehiculeClusterM712155MmCOPPERHEAD_Connector      is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_Vehicule_Cluster_M712_155mm_COPPERHEAD
     )
-    export FxImpactApVehiculeAirGros_Connector                       is ImpactConnector
+    FxImpactApVehiculeAirGros_Connector                       is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_ap_vehicule_air_gros
     )
-    export FxImpactBalleBatimentTresPetitFMSection__Connector        is ImpactConnector
+    FxImpactBalleBatimentTresPetitFMSection__Connector        is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_balle_batiment_tres_petit_FM_section_1
     )
-    export FxImpactBalleBatimentTresPetitMMGSection__Connector       is ImpactConnector
+    FxImpactBalleBatimentTresPetitMMGSection__Connector       is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_balle_batiment_tres_petit_MMG_section_1
     )
-    export FxImpactBalleBatimentTresPetitMitrailleuse__Connector     is ImpactConnector
+    FxImpactBalleBatimentTresPetitMitrailleuse__Connector     is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_balle_batiment_tres_petit_mitrailleuse_1
     )
-    export FxImpactBalleEauMoyen_Connector                           is ImpactConnector
+    FxImpactBalleEauMoyen_Connector                           is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_balle_eau_moyen
     )
-    export FxImpactBalleSolTresPetitFMSection__Connector             is ImpactConnector
+    FxImpactBalleSolTresPetitFMSection__Connector             is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_balle_sol_tres_petit_FM_section_1
         Action2 = $/GFX/GameFx/fx_impact_balle_sol_tres_petit_FM_section_2
         Action3 = $/GFX/GameFx/fx_impact_balle_sol_tres_petit_FM_section_3
         Action4 = $/GFX/GameFx/fx_impact_balle_sol_tres_petit_FM_section_4
     )
-    export FxImpactBalleSolTresPetitMG3Section__Connector            is ImpactConnector
+    FxImpactBalleSolTresPetitMG3Section__Connector            is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_balle_sol_tres_petit_MG3_section_2
         Action2 = $/GFX/GameFx/fx_impact_balle_sol_tres_petit_MG3_section_3
         Action3 = $/GFX/GameFx/fx_impact_balle_sol_tres_petit_MG3_section_4
         Action4 = $/GFX/GameFx/fx_impact_balle_sol_tres_petit_MG3_section_5
     )
-    export FxImpactBalleSolTresPetitMMGSection__Connector            is ImpactConnector
+    FxImpactBalleSolTresPetitMMGSection__Connector            is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_balle_sol_tres_petit_MMG_section_1
         Action2 = $/GFX/GameFx/fx_impact_balle_sol_tres_petit_MMG_section_2
@@ -246,7 +243,7 @@
         Action4 = $/GFX/GameFx/fx_impact_balle_sol_tres_petit_MMG_section_4
         Action5 = $/GFX/GameFx/fx_impact_balle_sol_tres_petit_MMG_section_5
     )
-    export FxImpactBalleSolTresPetitMitrailleuse__Connector          is ImpactConnector
+    FxImpactBalleSolTresPetitMitrailleuse__Connector          is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_balle_sol_tres_petit_mitrailleuse_1
         Action2 = $/GFX/GameFx/fx_impact_balle_sol_tres_petit_mitrailleuse_2
@@ -254,18 +251,18 @@
         Action4 = $/GFX/GameFx/fx_impact_balle_sol_tres_petit_mitrailleuse_4
         Action5 = $/GFX/GameFx/fx_impact_balle_sol_tres_petit_mitrailleuse_5
     )
-    export FxImpactBalleVehiculeMoyen_Connector                      is ImpactConnector
+    FxImpactBalleVehiculeMoyen_Connector                      is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_balle_vehicule_moyen
     )
-    export FxImpactBalleVehiculeTresPetitMitrailleuse__Connector     is ImpactConnector
+    FxImpactBalleVehiculeTresPetitMitrailleuse__Connector     is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_balle_vehicule_tres_petit_mitrailleuse_1
         Action2 = $/GFX/GameFx/fx_impact_balle_vehicule_tres_petit_mitrailleuse_2
         Action3 = $/GFX/GameFx/fx_impact_balle_vehicule_tres_petit_mitrailleuse_3
         Action4 = $/GFX/GameFx/fx_impact_balle_vehicule_tres_petit_mitrailleuse_5
     )
-    export FxImpactBallesAirTresPetit__Connector                     is ImpactConnector
+    FxImpactBallesAirTresPetit__Connector                     is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_balles_air_tres_petit_1
         Action2 = $/GFX/GameFx/fx_impact_balles_air_tres_petit_2
@@ -274,7 +271,7 @@
         Action5 = $/GFX/GameFx/fx_impact_balles_air_tres_petit_5
         Action6 = $/GFX/GameFx/fx_impact_balles_air_tres_petit_6
     )
-    export FxImpactBallesVehiculeAirTresPetit__Connector             is ImpactConnector
+    FxImpactBallesVehiculeAirTresPetit__Connector             is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_balles_vehicule_air_tres_petit_1
         Action2 = $/GFX/GameFx/fx_impact_balles_vehicule_air_tres_petit_2
@@ -283,154 +280,158 @@
         Action5 = $/GFX/GameFx/fx_impact_balles_vehicule_air_tres_petit_5
         Action6 = $/GFX/GameFx/fx_impact_balles_vehicule_air_tres_petit_6
     )
-    export FxImpactBatApGros_Connector                               is ImpactConnector
+    FxImpactBatApGros_Connector                               is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_bat_ap_gros
     )
-    export FxImpactBatApPetit_Connector                              is ImpactConnector
+    FxImpactBatApPetit_Connector                              is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_bat_ap_petit
     )
-    export FxImpactBatHeGros_Connector                               is ImpactConnector
+    FxImpactBatHeGros_Connector                               is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_bat_he_gros
     )
-    export FxImpactBatHeMoyen_Connector                              is ImpactConnector
+    FxImpactBatHeMoyen_Connector                              is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_bat_he_moyen
     )
-    export FxImpactBatHePetit_Connector                              is ImpactConnector
+    FxImpactBatHePetit_Connector                              is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_bat_he_petit
     )
-    export FxImpactBatHeTresgros_Connector                           is ImpactConnector
+    FxImpactBatHeTresgros_Connector                           is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_bat_he_tresgros
     )
-    export FxImpactBatimentCal50Solo__Connector                      is ImpactConnector
+    FxImpactBatimentCal50Solo__Connector                      is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_batiment_Cal50_solo_1
     )
-    export FxImpactBatimentBombMoyen_Connector                       is ImpactConnector
+    FxImpactBatimentBombMoyen_Connector                       is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_batiment_bomb_moyen
     )
-    export FxImpactDestructionUniteRavitaillement_Connector          is ImpactConnector
+    FxImpactDestructionUniteRavitaillement_Connector          is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_destruction_unite__ravitaillement
     )
-    export FxImpactDestructionUniteOld_Connector                     is ImpactConnector
+    FxImpactDestructionUniteOld_Connector                     is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_destruction_unite_old
     )
-    export FxImpactEauHEGrand_Connector                              is ImpactConnector
+    FxImpactEauHEGrand_Connector                              is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_eau_HE_grand
     )
-    export FxImpactEauHEGros_Connector                               is ImpactConnector
+    FxImpactEauHEGros_Connector                               is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_eau_HE_gros
     )
-    export FxImpactEauHEMoyen_Connector                              is ImpactConnector
+    FxImpactEauHEMoyen_Connector                              is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_eau_HE_moyen
     )
-    export FxImpactEauHEPetit_Connector                              is ImpactConnector
+    FxImpactEauHEPetit_Connector                              is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_eau_HE_petit
     )
-    export FxImpactEauHeTresgros2_Connector                          is ImpactConnector
+    FxImpactEauHeTresgros2_Connector                          is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_eau_he_tresgros2
     )
-    export FxImpactEauHeTrestresgros_Connector                       is ImpactConnector
-    (
-        Action1 = $/GFX/GameFx/fx_impact_eau_he_trestresgros
-    )
-    export FxImpactHeVehiculeAirGros_Connector                       is ImpactConnector
+    FxImpactHeVehiculeAirGros_Connector                       is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_he_vehicule_air_gros
     )
-    export FxImpactHeVehiculeAirMoyen_Connector                      is ImpactConnector
+    FxImpactHeVehiculeAirMoyen_Connector                      is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_he_vehicule_air_moyen
     )
-    export FxImpactHeVehiculeAirPetit_Connector                      is ImpactConnector
+    FxImpactHeVehiculeAirPetit_Connector                      is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_he_vehicule_air_petit
     )
-    export FxImpactHeVehiculeAirPetit__Connector                     is ImpactConnector
+    FxImpactHeVehiculeAirPetit__Connector                     is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_he_vehicule_air_petit_1
         Action2 = $/GFX/GameFx/fx_impact_he_vehicule_air_petit_4
     )
-    export FxImpactMissileAir_Connector                              is ImpactConnector
+    FxImpactMissileAir_Connector                              is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_missile_air
     )
-    export FxImpactMissileAirGros_Connector                          is ImpactConnector
+    FxImpactMissileAirGros_Connector                          is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_missile_air_gros
     )
-    export FxImpactMissileAirMoyen_Connector                         is ImpactConnector
+    FxImpactMissileAirMoyen_Connector                         is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_missile_air_moyen
     )
-    export FxImpactMissileAirPetit_Connector                         is ImpactConnector
+    FxImpactMissileAirPetit_Connector                         is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_missile_air_petit
     )
-    export FxImpactMissileSol_Connector                              is ImpactConnector
+    FxImpactMissileSol_Connector                              is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_missile_sol
     )
-    export FxImpactMissileSolGros_Connector                          is ImpactConnector
+    FxImpactMissileSolGros_Connector                          is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_missile_sol_gros
     )
-    export FxImpactMissileVehiculeGros_Connector                     is ImpactConnector
+    FxImpactMissileVehiculeGros__Connector                    is ImpactConnector
     (
-        Action1 = $/GFX/GameFx/fx_impact_missile_vehicule_gros
+        Action1 = $/GFX/GameFx/fx_impact_missile_vehicule_gros_1
+        Action2 = $/GFX/GameFx/fx_impact_missile_vehicule_gros_2
+        Action3 = $/GFX/GameFx/fx_impact_missile_vehicule_gros_3
     )
-    export FxImpactMissileVehiculeMoyen_Connector                    is ImpactConnector
+    FxImpactMissileVehiculeMoyen_Connector                    is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_missile_vehicule_moyen
     )
-    export FxImpactMissileVehiculePetit_Connector                    is ImpactConnector
+    FxImpactMissileVehiculePetit_Connector                    is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_missile_vehicule_petit
     )
-    export FxImpactObusVehiculeGros__Connector                       is ImpactConnector
+    FxImpactMissileVehiculePetit__Connector                   is ImpactConnector
+    (
+        Action1 = $/GFX/GameFx/fx_impact_missile_vehicule_petit_1
+        Action2 = $/GFX/GameFx/fx_impact_missile_vehicule_petit_2
+        Action3 = $/GFX/GameFx/fx_impact_missile_vehicule_petit_3
+    )
+    FxImpactObusVehiculeGros__Connector                       is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_obus_vehicule_gros_1
         Action2 = $/GFX/GameFx/fx_impact_obus_vehicule_gros_2
         Action3 = $/GFX/GameFx/fx_impact_obus_vehicule_gros_3
         Action4 = $/GFX/GameFx/fx_impact_obus_vehicule_gros_4
     )
-    export FxImpactObusVehiculeMoyen__Connector                      is ImpactConnector
+    FxImpactObusVehiculeMoyen__Connector                      is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_obus_vehicule_moyen_1
         Action2 = $/GFX/GameFx/fx_impact_obus_vehicule_moyen_2
         Action3 = $/GFX/GameFx/fx_impact_obus_vehicule_moyen_3
         Action4 = $/GFX/GameFx/fx_impact_obus_vehicule_moyen_4
     )
-    export FxImpactSolAGS17HE__Connector                             is ImpactConnector
+    FxImpactSolAGS17HE__Connector                             is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_sol_AGS17_HE_1
         Action2 = $/GFX/GameFx/fx_impact_sol_AGS17_HE_2
     )
-    export FxImpactSolAPGros_Connector                               is ImpactConnector
+    FxImpactSolAPGros_Connector                               is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_sol_AP_gros
     )
-    export FxImpactSolAutocanonHE__Connector                         is ImpactConnector
+    FxImpactSolAutocanonHE__Connector                         is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_sol_Autocanon_HE_1
         Action2 = $/GFX/GameFx/fx_impact_sol_Autocanon_HE_2
         Action3 = $/GFX/GameFx/fx_impact_sol_Autocanon_HE_3
         Action4 = $/GFX/GameFx/fx_impact_sol_Autocanon_HE_4
     )
-    export FxImpactSolBombFAB250__Connector                          is ImpactConnector
+    FxImpactSolBombFAB250__Connector                          is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_sol_Bomb_FAB250_1
         Action2 = $/GFX/GameFx/fx_impact_sol_Bomb_FAB250_2
@@ -441,13 +442,13 @@
         Action7 = $/GFX/GameFx/fx_impact_sol_Bomb_FAB250_7
         Action8 = $/GFX/GameFx/fx_impact_sol_Bomb_FAB250_8
     )
-    export FxImpactSolBombGBU12__Connector                           is ImpactConnector
+    FxImpactSolBombGBU12__Connector                           is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_sol_Bomb_GBU12_1
         Action2 = $/GFX/GameFx/fx_impact_sol_Bomb_GBU12_2
         Action3 = $/GFX/GameFx/fx_impact_sol_Bomb_GBU12_3
     )
-    export FxImpactSolBombM117__Connector                            is ImpactConnector
+    FxImpactSolBombM117__Connector                            is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_sol_Bomb_M117_1
         Action2 = $/GFX/GameFx/fx_impact_sol_Bomb_M117_2
@@ -458,11 +459,11 @@
         Action7 = $/GFX/GameFx/fx_impact_sol_Bomb_M117_7
         Action8 = $/GFX/GameFx/fx_impact_sol_Bomb_M117_8
     )
-    export FxImpactSolBombMk77__Connector                            is ImpactConnector
+    FxImpactSolBombMk77__Connector                            is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_sol_Bomb_Mk77_1
     )
-    export FxImpactSolBombMk82__Connector                            is ImpactConnector
+    FxImpactSolBombMk82__Connector                            is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_sol_Bomb_Mk82_1
         Action2 = $/GFX/GameFx/fx_impact_sol_Bomb_Mk82_2
@@ -474,7 +475,7 @@
         Action8 = $/GFX/GameFx/fx_impact_sol_Bomb_Mk82_8
         Action9 = $/GFX/GameFx/fx_impact_sol_Bomb_Mk82_9
     )
-    export FxImpactSolBombMk83__Connector                            is ImpactConnector
+    FxImpactSolBombMk83__Connector                            is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_sol_Bomb_Mk83_1
         Action2 = $/GFX/GameFx/fx_impact_sol_Bomb_Mk83_2
@@ -483,7 +484,7 @@
         Action5 = $/GFX/GameFx/fx_impact_sol_Bomb_Mk83_5
         Action6 = $/GFX/GameFx/fx_impact_sol_Bomb_Mk83_6
     )
-    export FxImpactSolBombMk84__Connector                            is ImpactConnector
+    FxImpactSolBombMk84__Connector                            is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_sol_Bomb_Mk84_1
         Action2 = $/GFX/GameFx/fx_impact_sol_Bomb_Mk84_2
@@ -494,26 +495,26 @@
         Action7 = $/GFX/GameFx/fx_impact_sol_Bomb_Mk84_7
         Action8 = $/GFX/GameFx/fx_impact_sol_Bomb_Mk84_8
     )
-    export FxImpactSolBombletNoAirBurstMW1__Connector                is ImpactConnector
+    FxImpactSolBombletNoAirBurstMW1__Connector                is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_sol_Bomblet_NoAirBurst_MW1_1
         Action2 = $/GFX/GameFx/fx_impact_sol_Bomblet_NoAirBurst_MW1_2
     )
-    export FxImpactSolCal50Solo__Connector                           is ImpactConnector
+    FxImpactSolCal50Solo__Connector                           is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_sol_Cal50_solo_1
         Action2 = $/GFX/GameFx/fx_impact_sol_Cal50_solo_2
         Action3 = $/GFX/GameFx/fx_impact_sol_Cal50_solo_3
     )
-    export FxImpactSolClusterM712155MmCOPPERHEAD_Connector           is ImpactConnector
+    FxImpactSolClusterM712155MmCOPPERHEAD_Connector           is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_sol_Cluster_M712_155mm_COPPERHEAD
     )
-    export FxImpactSolClusterMK20RockeyeIISalve_Connector            is ImpactConnector
+    FxImpactSolClusterMK20RockeyeIISalve_Connector            is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_sol_Cluster_MK20_Rockeye_II_Salve
     )
-    export FxImpactSolHE122Mm__Connector                             is ImpactConnector
+    FxImpactSolHE122Mm__Connector                             is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_sol_HE_122mm_1
         Action2 = $/GFX/GameFx/fx_impact_sol_HE_122mm_2
@@ -521,7 +522,7 @@
         Action4 = $/GFX/GameFx/fx_impact_sol_HE_122mm_4
         Action5 = $/GFX/GameFx/fx_impact_sol_HE_122mm_5
     )
-    export FxImpactSolHEBuratino220Mm__Connector                     is ImpactConnector
+    FxImpactSolHEBuratino220Mm__Connector                     is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_sol_HE_Buratino_220mm_1
         Action2 = $/GFX/GameFx/fx_impact_sol_HE_Buratino_220mm_2
@@ -529,7 +530,7 @@
         Action4 = $/GFX/GameFx/fx_impact_sol_HE_Buratino_220mm_4
         Action5 = $/GFX/GameFx/fx_impact_sol_HE_Buratino_220mm_5
     )
-    export FxImpactSolHEM185155Mm__Connector                         is ImpactConnector
+    FxImpactSolHEM185155Mm__Connector                         is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_sol_HE_M185_155mm_1
         Action2 = $/GFX/GameFx/fx_impact_sol_HE_M185_155mm_10
@@ -542,7 +543,7 @@
         Action9 = $/GFX/GameFx/fx_impact_sol_HE_M185_155mm_8
         Action10 = $/GFX/GameFx/fx_impact_sol_HE_M185_155mm_9
     )
-    export FxImpactSolHEM201203Mm__Connector                         is ImpactConnector
+    FxImpactSolHEM201203Mm__Connector                         is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_sol_HE_M201_203mm_1
         Action2 = $/GFX/GameFx/fx_impact_sol_HE_M201_203mm_10
@@ -555,7 +556,7 @@
         Action9 = $/GFX/GameFx/fx_impact_sol_HE_M201_203mm_8
         Action10 = $/GFX/GameFx/fx_impact_sol_HE_M201_203mm_9
     )
-    export FxImpactSolHEM270227Mm__Connector                         is ImpactConnector
+    FxImpactSolHEM270227Mm__Connector                         is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_sol_HE_M270_227mm_1
         Action2 = $/GFX/GameFx/fx_impact_sol_HE_M270_227mm_2
@@ -563,11 +564,11 @@
         Action4 = $/GFX/GameFx/fx_impact_sol_HE_M270_227mm_4
         Action5 = $/GFX/GameFx/fx_impact_sol_HE_M270_227mm_5
     )
-    export FxImpactSolHEM270227MmCluster__Connector                  is ImpactConnector
+    FxImpactSolHEM270227MmCluster__Connector                  is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_sol_HE_M270_227mm_Cluster_1
     )
-    export FxImpactSolHEMortierM30107Mm__Connector                   is ImpactConnector
+    FxImpactSolHEMortierM30107Mm__Connector                   is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_sol_HE_Mortier_M30_107mm_1
         Action2 = $/GFX/GameFx/fx_impact_sol_HE_Mortier_M30_107mm_2
@@ -578,15 +579,15 @@
         Action7 = $/GFX/GameFx/fx_impact_sol_HE_Mortier_M30_107mm_7
         Action8 = $/GFX/GameFx/fx_impact_sol_HE_Mortier_M30_107mm_8
     )
-    export FxImpactSolHEGrand_Connector                              is ImpactConnector
+    FxImpactSolHEGrand_Connector                              is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_sol_HE_grand
     )
-    export FxImpactSolHEGros_Connector                               is ImpactConnector
+    FxImpactSolHEGros_Connector                               is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_sol_HE_gros
     )
-    export FxImpactSolHEGros__Connector                              is ImpactConnector
+    FxImpactSolHEGros__Connector                              is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_sol_HE_gros_1
         Action2 = $/GFX/GameFx/fx_impact_sol_HE_gros_2
@@ -595,22 +596,22 @@
         Action5 = $/GFX/GameFx/fx_impact_sol_HE_gros_5
         Action6 = $/GFX/GameFx/fx_impact_sol_HE_gros_6
     )
-    export FxImpactSolHEMoyen_Connector                              is ImpactConnector
+    FxImpactSolHEMoyen_Connector                              is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_sol_HE_moyen
     )
-    export FxImpactSolHEPetit_Connector                              is ImpactConnector
+    FxImpactSolHEPetit_Connector                              is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_sol_HE_petit
     )
-    export FxImpactSolHEPetit__Connector                             is ImpactConnector
+    FxImpactSolHEPetit__Connector                             is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_sol_HE_petit_1
         Action2 = $/GFX/GameFx/fx_impact_sol_HE_petit_2
         Action3 = $/GFX/GameFx/fx_impact_sol_HE_petit_3
         Action4 = $/GFX/GameFx/fx_impact_sol_HE_petit_4
     )
-    export FxImpactSolHERoquette110Mm130Mm__Connector                is ImpactConnector
+    FxImpactSolHERoquette110Mm130Mm__Connector                is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_sol_HE_roquette_110mm_130mm_1
         Action2 = $/GFX/GameFx/fx_impact_sol_HE_roquette_110mm_130mm_2
@@ -621,7 +622,7 @@
         Action7 = $/GFX/GameFx/fx_impact_sol_HE_roquette_110mm_130mm_7
         Action8 = $/GFX/GameFx/fx_impact_sol_HE_roquette_110mm_130mm_8
     )
-    export FxImpactSolHETresGros__Connector                          is ImpactConnector
+    FxImpactSolHETresGros__Connector                          is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_sol_HE_tres_gros_1
         Action2 = $/GFX/GameFx/fx_impact_sol_HE_tres_gros_2
@@ -632,7 +633,7 @@
         Action7 = $/GFX/GameFx/fx_impact_sol_HE_tres_gros_7
         Action8 = $/GFX/GameFx/fx_impact_sol_HE_tres_gros_8
     )
-    export FxImpactSolLightS5__Connector                             is ImpactConnector
+    FxImpactSolLightS5__Connector                             is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_sol_Light_S5_1
         Action2 = $/GFX/GameFx/fx_impact_sol_Light_S5_2
@@ -640,11 +641,11 @@
         Action4 = $/GFX/GameFx/fx_impact_sol_Light_S5_4
         Action5 = $/GFX/GameFx/fx_impact_sol_Light_S5_5
     )
-    export FxImpactSolM242APFDS_Connector                            is ImpactConnector
+    FxImpactSolM242APFDS_Connector                            is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_sol_M242_APFDS
     )
-    export FxImpactSolM261Hydras__Connector                          is ImpactConnector
+    FxImpactSolM261Hydras__Connector                          is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_sol_M261_Hydras_1
         Action2 = $/GFX/GameFx/fx_impact_sol_M261_Hydras_10
@@ -659,7 +660,7 @@
         Action11 = $/GFX/GameFx/fx_impact_sol_M261_Hydras_8
         Action12 = $/GFX/GameFx/fx_impact_sol_M261_Hydras_9
     )
-    export FxImpactSolM261LightHydras__Connector                     is ImpactConnector
+    FxImpactSolM261LightHydras__Connector                     is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_sol_M261_Light_Hydras_1
         Action2 = $/GFX/GameFx/fx_impact_sol_M261_Light_Hydras_10
@@ -674,7 +675,7 @@
         Action11 = $/GFX/GameFx/fx_impact_sol_M261_Light_Hydras_8
         Action12 = $/GFX/GameFx/fx_impact_sol_M261_Light_Hydras_9
     )
-    export FxImpactSolS13__Connector                                 is ImpactConnector
+    FxImpactSolS13__Connector                                 is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_sol_S13_1
         Action2 = $/GFX/GameFx/fx_impact_sol_S13_2
@@ -685,7 +686,7 @@
         Action7 = $/GFX/GameFx/fx_impact_sol_S13_7
         Action8 = $/GFX/GameFx/fx_impact_sol_S13_8
     )
-    export FxImpactSolS5__Connector                                  is ImpactConnector
+    FxImpactSolS5__Connector                                  is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_sol_S5_1
         Action2 = $/GFX/GameFx/fx_impact_sol_S5_2
@@ -693,79 +694,79 @@
         Action4 = $/GFX/GameFx/fx_impact_sol_S5_4
         Action5 = $/GFX/GameFx/fx_impact_sol_S5_5
     )
-    export FxImpactSolSmokeDispenser__Connector                      is ImpactConnector
+    FxImpactSolSmokeDispenser__Connector                      is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_sol_Smoke_Dispenser_1
         Action2 = $/GFX/GameFx/fx_impact_sol_Smoke_Dispenser_2
         Action3 = $/GFX/GameFx/fx_impact_sol_Smoke_Dispenser_3
     )
-    export FxImpactSolSmokeMortarShell__Connector                    is ImpactConnector
+    FxImpactSolSmokeMortarShell__Connector                    is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_sol_Smoke_Mortar_Shell_1
         Action2 = $/GFX/GameFx/fx_impact_sol_Smoke_Mortar_Shell_2
         Action3 = $/GFX/GameFx/fx_impact_sol_Smoke_Mortar_Shell_3
     )
-    export FxImpactSolSmokeShell__Connector                          is ImpactConnector
+    FxImpactSolSmokeShell__Connector                          is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_sol_Smoke_Shell_1
         Action2 = $/GFX/GameFx/fx_impact_sol_Smoke_Shell_2
         Action3 = $/GFX/GameFx/fx_impact_sol_Smoke_Shell_3
     )
-    export FxImpactSolTacticalNuke_Connector                         is ImpactConnector
+    FxImpactSolTacticalNuke_Connector                         is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_sol_Tactical_Nuke
     )
-    export FxImpactSolHeTresgros_Connector                           is ImpactConnector
+    FxImpactSolHeTresgros_Connector                           is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_sol_he_tresgros
     )
-    export FxImpactSolHelicoMoyen__Connector                         is ImpactConnector
+    FxImpactSolHelicoMoyen__Connector                         is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_sol_helico_moyen_1
         Action2 = $/GFX/GameFx/fx_impact_sol_helico_moyen_2
         Action3 = $/GFX/GameFx/fx_impact_sol_helico_moyen_3
     )
-    export FxImpactSolHelicoPetit__Connector                         is ImpactConnector
+    FxImpactSolHelicoPetit__Connector                         is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_sol_helico_petit_1
         Action2 = $/GFX/GameFx/fx_impact_sol_helico_petit_2
         Action3 = $/GFX/GameFx/fx_impact_sol_helico_petit_3
     )
-    export FxImpactSolHelicoTresPetit__Connector                     is ImpactConnector
+    FxImpactSolHelicoTresPetit__Connector                     is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_sol_helico_tres_petit_1
         Action2 = $/GFX/GameFx/fx_impact_sol_helico_tres_petit_2
         Action3 = $/GFX/GameFx/fx_impact_sol_helico_tres_petit_3
     )
-    export FxImpactVehiculeM242APFDS_Connector                       is ImpactConnector
+    FxImpactVehiculeM242APFDS_Connector                       is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_vehicule_M242_APFDS
     )
-    export FxImpactVehiculeM242HEIT_Connector                        is ImpactConnector
+    FxImpactVehiculeM242HEIT_Connector                        is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_vehicule_M242_HEIT
     )
-    export FxImpactVehiculeM261Hydras_Connector                      is ImpactConnector
+    FxImpactVehiculeM261Hydras_Connector                      is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_vehicule_M261_Hydras
     )
-    export FxImpactVehiculeHeTresgros2_Connector                     is ImpactConnector
+    FxImpactVehiculeHeTresgros2_Connector                     is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_impact_vehicule_he_tresgros2
     )
-    export FxMortInfanterie_Connector                                is ImpactConnector
+    FxMortInfanterie_Connector                                is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_mort_infanterie
     )
-    export FxRebondObusGros_Connector                                is ImpactConnector
+    FxRebondObusGros_Connector                                is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_rebond_obus_gros
     )
-    export FxRebondObusMoyen_Connector                               is ImpactConnector
+    FxRebondObusMoyen_Connector                               is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_rebond_obus_moyen
     )
-    export FxRebondObusPetit_Connector                               is ImpactConnector
+    FxRebondObusPetit_Connector                               is ImpactConnector
     (
         Action1 = $/GFX/GameFx/fx_rebond_obus_petit
     )
@@ -926,7 +927,7 @@ AllImpactHappenings is TImpactHappening
         (   TFxWeaponType_BombMatra250Kg , MAP
             [
                 ( EImpactSurface/Ground        , FxImpactSolBombMk82__Connector ),
-                ( EImpactSurface/Water         , FxImpactEauHeTrestresgros_Connector ),
+                ( EImpactSurface/Water         , FxImpactEauHeTresgros2_Connector ),
                 ( EImpactSurface/Air           , FxImpactDCAAirGros_Connector ),
                 ( EImpactSurface/Wall          , FxImpactSolBombMk82__Connector ),
                 ( EImpactSurface/Vehicle       , FxImpactSolBombMk82__Connector ),
@@ -938,7 +939,7 @@ AllImpactHappenings is TImpactHappening
         (   TFxWeaponType_BombMatra400Kg , MAP
             [
                 ( EImpactSurface/Ground        , FxImpactSolBombMk83__Connector ),
-                ( EImpactSurface/Water         , FxImpactEauHeTrestresgros_Connector ),
+                ( EImpactSurface/Water         , FxImpactEauHeTresgros2_Connector ),
                 ( EImpactSurface/Air           , FxImpactDCAAirGros_Connector ),
                 ( EImpactSurface/Wall          , FxImpactSolBombMk83__Connector ),
                 ( EImpactSurface/Vehicle       , FxImpactSolBombMk83__Connector ),
@@ -962,7 +963,7 @@ AllImpactHappenings is TImpactHappening
         (   TFxWeaponType_BombeBLU100Mk83 , MAP
             [
                 ( EImpactSurface/Ground        , FxImpactSolBombMk83__Connector ),
-                ( EImpactSurface/Water         , FxImpactEauHeTrestresgros_Connector ),
+                ( EImpactSurface/Water         , FxImpactEauHeTresgros2_Connector ),
                 ( EImpactSurface/Air           , FxImpactDCAAirGros_Connector ),
                 ( EImpactSurface/Wall          , FxImpactSolBombMk83__Connector ),
                 ( EImpactSurface/Vehicle       , FxImpactSolBombMk83__Connector ),
@@ -974,7 +975,7 @@ AllImpactHappenings is TImpactHappening
         (   TFxWeaponType_BombeFAB250 , MAP
             [
                 ( EImpactSurface/Ground        , FxImpactSolBombFAB250__Connector ),
-                ( EImpactSurface/Water         , FxImpactEauHeTrestresgros_Connector ),
+                ( EImpactSurface/Water         , FxImpactEauHeTresgros2_Connector ),
                 ( EImpactSurface/Air           , FxImpactDCAAirGros_Connector ),
                 ( EImpactSurface/Wall          , FxImpactSolBombFAB250__Connector ),
                 ( EImpactSurface/Vehicle       , FxImpactSolBombFAB250__Connector ),
@@ -986,7 +987,7 @@ AllImpactHappenings is TImpactHappening
         (   TFxWeaponType_BombeFAB500 , MAP
             [
                 ( EImpactSurface/Ground        , FxImpactSolBombMk83__Connector ),
-                ( EImpactSurface/Water         , FxImpactEauHeTrestresgros_Connector ),
+                ( EImpactSurface/Water         , FxImpactEauHeTresgros2_Connector ),
                 ( EImpactSurface/Air           , FxImpactDCAAirGros_Connector ),
                 ( EImpactSurface/Wall          , FxImpactSolBombMk83__Connector ),
                 ( EImpactSurface/Vehicle       , FxImpactSolBombMk83__Connector ),
@@ -998,7 +999,7 @@ AllImpactHappenings is TImpactHappening
         (   TFxWeaponType_BombeGBU10 , MAP
             [
                 ( EImpactSurface/Ground        , FxImpactSolBombMk84__Connector ),
-                ( EImpactSurface/Water         , FxImpactEauHeTrestresgros_Connector ),
+                ( EImpactSurface/Water         , FxImpactEauHeTresgros2_Connector ),
                 ( EImpactSurface/Air           , FxImpactDCAAirGros_Connector ),
                 ( EImpactSurface/Wall          , FxImpactSolBombMk84__Connector ),
                 ( EImpactSurface/Vehicle       , FxImpactSolBombMk84__Connector ),
@@ -1010,7 +1011,7 @@ AllImpactHappenings is TImpactHappening
         (   TFxWeaponType_BombeGBU12 , MAP
             [
                 ( EImpactSurface/Ground        , FxImpactSolBombGBU12__Connector ),
-                ( EImpactSurface/Water         , FxImpactEauHeTrestresgros_Connector ),
+                ( EImpactSurface/Water         , FxImpactEauHeTresgros2_Connector ),
                 ( EImpactSurface/Air           , FxImpactDCAAirGros_Connector ),
                 ( EImpactSurface/Wall          , FxImpactSolBombGBU12__Connector ),
                 ( EImpactSurface/Vehicle       , FxImpactSolBombGBU12__Connector ),
@@ -1022,7 +1023,7 @@ AllImpactHappenings is TImpactHappening
         (   TFxWeaponType_BombeGBU24 , MAP
             [
                 ( EImpactSurface/Ground        , FxImpactSolBombMk84__Connector ),
-                ( EImpactSurface/Water         , FxImpactEauHeTrestresgros_Connector ),
+                ( EImpactSurface/Water         , FxImpactEauHeTresgros2_Connector ),
                 ( EImpactSurface/Air           , FxImpactDCAAirGros_Connector ),
                 ( EImpactSurface/Wall          , FxImpactSolBombMk84__Connector ),
                 ( EImpactSurface/Vehicle       , FxImpactSolBombMk84__Connector ),
@@ -1034,7 +1035,7 @@ AllImpactHappenings is TImpactHappening
         (   TFxWeaponType_BombeGBU49 , MAP
             [
                 ( EImpactSurface/Ground        , FxImpactSolBombMk82__Connector ),
-                ( EImpactSurface/Water         , FxImpactEauHeTrestresgros_Connector ),
+                ( EImpactSurface/Water         , FxImpactEauHeTresgros2_Connector ),
                 ( EImpactSurface/Air           , FxImpactDCAAirGros_Connector ),
                 ( EImpactSurface/Wall          , FxImpactSolBombMk82__Connector ),
                 ( EImpactSurface/Vehicle       , FxImpactSolBombMk82__Connector ),
@@ -1046,7 +1047,7 @@ AllImpactHappenings is TImpactHappening
         (   TFxWeaponType_BombeGBU58 , MAP
             [
                 ( EImpactSurface/Ground        , FxImpactSolBombMk82__Connector ),
-                ( EImpactSurface/Water         , FxImpactEauHeTrestresgros_Connector ),
+                ( EImpactSurface/Water         , FxImpactEauHeTresgros2_Connector ),
                 ( EImpactSurface/Air           , FxImpactDCAAirGros_Connector ),
                 ( EImpactSurface/Wall          , FxImpactSolBombMk82__Connector ),
                 ( EImpactSurface/Vehicle       , FxImpactSolBombMk82__Connector ),
@@ -1058,7 +1059,7 @@ AllImpactHappenings is TImpactHappening
         (   TFxWeaponType_BombeM117 , MAP
             [
                 ( EImpactSurface/Ground        , FxImpactSolBombM117__Connector ),
-                ( EImpactSurface/Water         , FxImpactEauHeTrestresgros_Connector ),
+                ( EImpactSurface/Water         , FxImpactEauHeTresgros2_Connector ),
                 ( EImpactSurface/Air           , FxImpactDCAAirGros_Connector ),
                 ( EImpactSurface/Wall          , FxImpactSolBombM117__Connector ),
                 ( EImpactSurface/Vehicle       , FxImpactSolBombM117__Connector ),
@@ -1082,7 +1083,7 @@ AllImpactHappenings is TImpactHappening
         (   TFxWeaponType_BombeMk77 , MAP
             [
                 ( EImpactSurface/Ground        , FxImpactSolBombMk77__Connector ),
-                ( EImpactSurface/Water         , FxImpactEauHeTrestresgros_Connector ),
+                ( EImpactSurface/Water         , FxImpactEauHeTresgros2_Connector ),
                 ( EImpactSurface/Air           , FxImpactDCAAirGros_Connector ),
                 ( EImpactSurface/Wall          , FxImpactSolBombM117__Connector ),
                 ( EImpactSurface/Vehicle       , FxImpactSolBombM117__Connector ),
@@ -1094,7 +1095,7 @@ AllImpactHappenings is TImpactHappening
         (   TFxWeaponType_BombeMk81 , MAP
             [
                 ( EImpactSurface/Ground        , FxImpactSolBombMk82__Connector ),
-                ( EImpactSurface/Water         , FxImpactEauHeTrestresgros_Connector ),
+                ( EImpactSurface/Water         , FxImpactEauHeTresgros2_Connector ),
                 ( EImpactSurface/Air           , FxImpactDCAAirGros_Connector ),
                 ( EImpactSurface/Wall          , FxImpactSolBombMk82__Connector ),
                 ( EImpactSurface/Vehicle       , FxImpactSolBombMk82__Connector ),
@@ -1106,7 +1107,7 @@ AllImpactHappenings is TImpactHappening
         (   TFxWeaponType_BombeMk82 , MAP
             [
                 ( EImpactSurface/Ground        , FxImpactSolBombMk82__Connector ),
-                ( EImpactSurface/Water         , FxImpactEauHeTrestresgros_Connector ),
+                ( EImpactSurface/Water         , FxImpactEauHeTresgros2_Connector ),
                 ( EImpactSurface/Air           , FxImpactDCAAirGros_Connector ),
                 ( EImpactSurface/Wall          , FxImpactSolBombMk82__Connector ),
                 ( EImpactSurface/Vehicle       , FxImpactSolBombMk82__Connector ),
@@ -1118,7 +1119,7 @@ AllImpactHappenings is TImpactHappening
         (   TFxWeaponType_BombeMk83 , MAP
             [
                 ( EImpactSurface/Ground        , FxImpactSolBombMk83__Connector ),
-                ( EImpactSurface/Water         , FxImpactEauHeTrestresgros_Connector ),
+                ( EImpactSurface/Water         , FxImpactEauHeTresgros2_Connector ),
                 ( EImpactSurface/Air           , FxImpactDCAAirGros_Connector ),
                 ( EImpactSurface/Wall          , FxImpactSolBombMk83__Connector ),
                 ( EImpactSurface/Vehicle       , FxImpactSolBombMk83__Connector ),
@@ -1130,7 +1131,7 @@ AllImpactHappenings is TImpactHappening
         (   TFxWeaponType_BombeMk84 , MAP
             [
                 ( EImpactSurface/Ground        , FxImpactSolBombMk84__Connector ),
-                ( EImpactSurface/Water         , FxImpactEauHeTrestresgros_Connector ),
+                ( EImpactSurface/Water         , FxImpactEauHeTresgros2_Connector ),
                 ( EImpactSurface/Air           , FxImpactDCAAirGros_Connector ),
                 ( EImpactSurface/Wall          , FxImpactSolBombMk84__Connector ),
                 ( EImpactSurface/Vehicle       , FxImpactSolBombMk84__Connector ),
@@ -1214,7 +1215,7 @@ AllImpactHappenings is TImpactHappening
         (   TFxWeaponType_CanonGrosHEAVRE , MAP
             [
                 ( EImpactSurface/Ground        , FxImpactSolHEMortierM30107Mm__Connector ),
-                ( EImpactSurface/Water         , FxImpactEauHeTresgros2_Connector ),
+                ( EImpactSurface/Water         , FxImpactEauHEGros_Connector ),
                 ( EImpactSurface/Air           , nil ),
                 ( EImpactSurface/Wall          , FxImpactSolHEMortierM30107Mm__Connector ),
                 ( EImpactSurface/Vehicle       , FxImpactSolHEMortierM30107Mm__Connector ),
@@ -1238,7 +1239,7 @@ AllImpactHappenings is TImpactHappening
         (   TFxWeaponType_CanonGrosHESHERIDAN , MAP
             [
                 ( EImpactSurface/Ground        , FxImpactSolHEMortierM30107Mm__Connector ),
-                ( EImpactSurface/Water         , FxImpactEauHeTresgros2_Connector ),
+                ( EImpactSurface/Water         , FxImpactEauHEGros_Connector ),
                 ( EImpactSurface/Air           , nil ),
                 ( EImpactSurface/Wall          , FxImpactSolHEMortierM30107Mm__Connector ),
                 ( EImpactSurface/Vehicle       , FxImpactSolHEMortierM30107Mm__Connector ),
@@ -1274,7 +1275,7 @@ AllImpactHappenings is TImpactHappening
         (   TFxWeaponType_CanonMoyenAPPT76 , MAP
             [
                 ( EImpactSurface/Ground        , FxImpactSolHEPetit__Connector ),
-                ( EImpactSurface/Water         , FxImpactEauHEGros_Connector ),
+                ( EImpactSurface/Water         , FxImpactEauHEMoyen_Connector ),
                 ( EImpactSurface/Air           , FxImpactDCAAirGros_Connector ),
                 ( EImpactSurface/Wall          , FxImpactBatHeGros_Connector ),
                 ( EImpactSurface/Vehicle       , FxImpactObusVehiculeMoyen__Connector ),
@@ -1286,7 +1287,7 @@ AllImpactHappenings is TImpactHappening
         (   TFxWeaponType_CanonMoyenBOFORHEFI , MAP
             [
                 ( EImpactSurface/Ground        , FxImpactSolHEPetit__Connector ),
-                ( EImpactSurface/Water         , FxImpactEauHEGros_Connector ),
+                ( EImpactSurface/Water         , FxImpactEauHEMoyen_Connector ),
                 ( EImpactSurface/Air           , FxImpactDCAAirGros_Connector ),
                 ( EImpactSurface/Wall          , FxImpactBatHeGros_Connector ),
                 ( EImpactSurface/Vehicle       , FxImpactObusVehiculeMoyen__Connector ),
@@ -1298,7 +1299,7 @@ AllImpactHappenings is TImpactHappening
         (   TFxWeaponType_CanonMoyenHEBMP3 , MAP
             [
                 ( EImpactSurface/Ground        , FxImpactSolHEGros__Connector ),
-                ( EImpactSurface/Water         , FxImpactEauHEGros_Connector ),
+                ( EImpactSurface/Water         , FxImpactEauHEMoyen_Connector ),
                 ( EImpactSurface/Air           , FxImpactDCAAirGros_Connector ),
                 ( EImpactSurface/Wall          , FxImpactBatHeGros_Connector ),
                 ( EImpactSurface/Vehicle       , FxImpactSolHEGros_Connector ),
@@ -1310,7 +1311,7 @@ AllImpactHappenings is TImpactHappening
         (   TFxWeaponType_CanonMoyenHEPT76 , MAP
             [
                 ( EImpactSurface/Ground        , FxImpactSolHEPetit__Connector ),
-                ( EImpactSurface/Water         , FxImpactEauHEGros_Connector ),
+                ( EImpactSurface/Water         , FxImpactEauHEMoyen_Connector ),
                 ( EImpactSurface/Air           , FxImpactDCAAirGros_Connector ),
                 ( EImpactSurface/Wall          , FxImpactBatHeGros_Connector ),
                 ( EImpactSurface/Vehicle       , FxImpactObusVehiculeMoyen__Connector ),
@@ -1322,7 +1323,7 @@ AllImpactHappenings is TImpactHappening
         (   TFxWeaponType_CanonMoyenS60HEFI , MAP
             [
                 ( EImpactSurface/Ground        , FxImpactSolHEPetit__Connector ),
-                ( EImpactSurface/Water         , FxImpactEauHEGros_Connector ),
+                ( EImpactSurface/Water         , FxImpactEauHEMoyen_Connector ),
                 ( EImpactSurface/Air           , FxImpactDCAAirGros_Connector ),
                 ( EImpactSurface/Wall          , FxImpactBatHeGros_Connector ),
                 ( EImpactSurface/Vehicle       , FxImpactObusVehiculeMoyen__Connector ),
@@ -1382,7 +1383,7 @@ AllImpactHappenings is TImpactHappening
         (   TFxWeaponType_CanonPetit2A38HEFI , MAP
             [
                 ( EImpactSurface/Ground        , FxImpact2A38Autocanon__Connector ),
-                ( EImpactSurface/Water         , OrientationWrapperFxImpactBallesCal50Eau_Connector ),
+                ( EImpactSurface/Water         , FxImpactBallesCal50Eau__Connector ),
                 ( EImpactSurface/Air           , FxImpactDCAM197GatlingAir__Connector ),
                 ( EImpactSurface/Wall          , OrientationWrapperFxImpact2A38Autocanon_Connector ),
                 ( EImpactSurface/Vehicle       , OrientationWrapperFxImpactVehicule2A38Autocanon_Connector ),
@@ -1418,7 +1419,7 @@ AllImpactHappenings is TImpactHappening
         (   TFxWeaponType_CanonPetitAPZ23HEFI , MAP
             [
                 ( EImpactSurface/Ground        , FxImpact2A38Autocanon__Connector ),
-                ( EImpactSurface/Water         , OrientationWrapperFxImpactBallesCal50Eau_Connector ),
+                ( EImpactSurface/Water         , FxImpactBallesCal50Eau__Connector ),
                 ( EImpactSurface/Air           , FxImpactDCAM197GatlingAir__Connector ),
                 ( EImpactSurface/Wall          , OrientationWrapperFxImpact2A38Autocanon_Connector ),
                 ( EImpactSurface/Vehicle       , OrientationWrapperFxImpactVehicule2A38Autocanon_Connector ),
@@ -1430,7 +1431,7 @@ AllImpactHappenings is TImpactHappening
         (   TFxWeaponType_CanonPetitDualFK20HEFI , MAP
             [
                 ( EImpactSurface/Ground        , FxImpact2A38Autocanon__Connector ),
-                ( EImpactSurface/Water         , OrientationWrapperFxImpactBallesCal50Eau_Connector ),
+                ( EImpactSurface/Water         , FxImpactBallesCal50Eau__Connector ),
                 ( EImpactSurface/Air           , FxImpactDCAM197GatlingAir__Connector ),
                 ( EImpactSurface/Wall          , OrientationWrapperFxImpact2A38Autocanon_Connector ),
                 ( EImpactSurface/Vehicle       , OrientationWrapperFxImpactVehicule2A38Autocanon_Connector ),
@@ -1442,7 +1443,7 @@ AllImpactHappenings is TImpactHappening
         (   TFxWeaponType_CanonPetitFK20HEFI , MAP
             [
                 ( EImpactSurface/Ground        , FxImpactFK20Autocanon__Connector ),
-                ( EImpactSurface/Water         , OrientationWrapperFxImpactBallesCal50Eau_Connector ),
+                ( EImpactSurface/Water         , FxImpactBallesCal50Eau__Connector ),
                 ( EImpactSurface/Air           , FxImpactDCAM197GatlingAir__Connector ),
                 ( EImpactSurface/Wall          , OrientationWrapperFxImpact2A38Autocanon_Connector ),
                 ( EImpactSurface/Vehicle       , OrientationWrapperFxImpactVehicule2A38Autocanon_Connector ),
@@ -1514,7 +1515,7 @@ AllImpactHappenings is TImpactHappening
         (   TFxWeaponType_CanonPetitM693HEFI , MAP
             [
                 ( EImpactSurface/Ground        , FxImpact2A38Autocanon__Connector ),
-                ( EImpactSurface/Water         , OrientationWrapperFxImpactBallesCal50Eau_Connector ),
+                ( EImpactSurface/Water         , FxImpactBallesCal50Eau__Connector ),
                 ( EImpactSurface/Air           , FxImpactDCAM197GatlingAir__Connector ),
                 ( EImpactSurface/Wall          , OrientationWrapperFxImpact2A38Autocanon_Connector ),
                 ( EImpactSurface/Vehicle       , OrientationWrapperFxImpactVehicule2A38Autocanon_Connector ),
@@ -1526,7 +1527,7 @@ AllImpactHappenings is TImpactHappening
         (   TFxWeaponType_CanonPetitOerlikonGPFHEFI , MAP
             [
                 ( EImpactSurface/Ground        , FxImpact2A38Autocanon__Connector ),
-                ( EImpactSurface/Water         , OrientationWrapperFxImpactBallesCal50Eau_Connector ),
+                ( EImpactSurface/Water         , FxImpactBallesCal50Eau__Connector ),
                 ( EImpactSurface/Air           , FxImpactDCAM197GatlingAir__Connector ),
                 ( EImpactSurface/Wall          , OrientationWrapperFxImpact2A38Autocanon_Connector ),
                 ( EImpactSurface/Vehicle       , OrientationWrapperFxImpactVehicule2A38Autocanon_Connector ),
@@ -1682,7 +1683,7 @@ AllImpactHappenings is TImpactHappening
         (   TFxWeaponType_FusilMitrailleurM16556Mm , MAP
             [
                 ( EImpactSurface/Ground        , FxImpactBalleSolTresPetitFMSection__Connector ),
-                ( EImpactSurface/Water         , OrientationWrapperFxImpactBallesCal50Eau_Connector ),
+                ( EImpactSurface/Water         , FxImpactBallesCal50Eau__Connector ),
                 ( EImpactSurface/Air           , FxImpactBallesAirTresPetit__Connector ),
                 ( EImpactSurface/Wall          , FxImpactBalleBatimentTresPetitFMSection__Connector ),
                 ( EImpactSurface/Vehicle       , FxImpactBalleSolTresPetitFMSection__Connector ),
@@ -1694,7 +1695,7 @@ AllImpactHappenings is TImpactHappening
         (   TFxWeaponType_GAU8Gatling , MAP
             [
                 ( EImpactSurface/Ground        , FxImpactGAU8Gatling__Connector ),
-                ( EImpactSurface/Water         , FxImpactBallesCal50Eau_Connector ),
+                ( EImpactSurface/Water         , FxImpactBallesCal50Eau__Connector ),
                 ( EImpactSurface/Air           , FxImpactDCAM197GatlingAir__Connector ),
                 ( EImpactSurface/Wall          , FxImpactGAU8Gatling__Connector ),
                 ( EImpactSurface/Vehicle       , FxImpactVehiculeGAU8Gatling_Connector ),
@@ -1706,7 +1707,7 @@ AllImpactHappenings is TImpactHappening
         (   TFxWeaponType_GrenadePineapple , MAP
             [
                 ( EImpactSurface/Ground        , FxImpactSolHEPetit_Connector ),
-                ( EImpactSurface/Water         , FxImpactSolHEMoyen_Connector ),
+                ( EImpactSurface/Water         , FxImpactEauHEMoyen_Connector ),
                 ( EImpactSurface/Air           , FxImpactDCAAirMoyen_Connector ),
                 ( EImpactSurface/Wall          , FxImpactBatHeMoyen_Connector ),
                 ( EImpactSurface/Vehicle       , FxImpactMissileVehiculeMoyen_Connector ),
@@ -1766,7 +1767,7 @@ AllImpactHappenings is TImpactHappening
         (   TFxWeaponType_Gsh301 , MAP
             [
                 ( EImpactSurface/Ground        , FxImpactM61A1Vulcan__Connector ),
-                ( EImpactSurface/Water         , OrientationWrapperFxImpactBallesCal50Eau_Connector ),
+                ( EImpactSurface/Water         , FxImpactBallesCal50Eau__Connector ),
                 ( EImpactSurface/Air           , FxImpactDCAM197GatlingAir__Connector ),
                 ( EImpactSurface/Wall          , FxImpactM61A1Vulcan__Connector ),
                 ( EImpactSurface/Vehicle       , FxImpactVehiculeM61A1Vulcan__Connector ),
@@ -1802,7 +1803,7 @@ AllImpactHappenings is TImpactHappening
         (   TFxWeaponType_M134Gatling , MAP
             [
                 ( EImpactSurface/Ground        , FxImpactM168Gatling__Connector ),
-                ( EImpactSurface/Water         , OrientationWrapperFxImpactBallesCal50Eau_Connector ),
+                ( EImpactSurface/Water         , FxImpactBallesCal50Eau__Connector ),
                 ( EImpactSurface/Air           , FxImpactDCAM168GatlingAir__Connector ),
                 ( EImpactSurface/Wall          , OrientationWrapperFxImpactM168Gatling_Connector ),
                 ( EImpactSurface/Vehicle       , OrientationWrapperFxImpactVehiculeM168Gatling_Connector ),
@@ -1814,7 +1815,7 @@ AllImpactHappenings is TImpactHappening
         (   TFxWeaponType_M168Gatling , MAP
             [
                 ( EImpactSurface/Ground        , FxImpactM168Gatling__Connector ),
-                ( EImpactSurface/Water         , OrientationWrapperFxImpactBallesCal50Eau_Connector ),
+                ( EImpactSurface/Water         , FxImpactBallesCal50Eau__Connector ),
                 ( EImpactSurface/Air           , FxImpactDCAM168GatlingAir__Connector ),
                 ( EImpactSurface/Wall          , OrientationWrapperFxImpactM168Gatling_Connector ),
                 ( EImpactSurface/Vehicle       , OrientationWrapperFxImpactVehiculeM168Gatling_Connector ),
@@ -1826,7 +1827,7 @@ AllImpactHappenings is TImpactHappening
         (   TFxWeaponType_M197Gatling , MAP
             [
                 ( EImpactSurface/Ground        , FxImpactM197Gatling__Connector ),
-                ( EImpactSurface/Water         , OrientationWrapperFxImpactBallesCal50Eau_Connector ),
+                ( EImpactSurface/Water         , FxImpactBallesCal50Eau__Connector ),
                 ( EImpactSurface/Air           , FxImpactDCAM197GatlingAir__Connector ),
                 ( EImpactSurface/Wall          , OrientationWrapperFxImpactM197Gatling_Connector ),
                 ( EImpactSurface/Vehicle       , OrientationWrapperFxImpactVehiculeM197Gatling_Connector ),
@@ -1838,7 +1839,7 @@ AllImpactHappenings is TImpactHappening
         (   TFxWeaponType_M61A1Vulcan , MAP
             [
                 ( EImpactSurface/Ground        , FxImpactM61A1Vulcan__Connector ),
-                ( EImpactSurface/Water         , OrientationWrapperFxImpactBallesCal50Eau_Connector ),
+                ( EImpactSurface/Water         , FxImpactBallesCal50Eau__Connector ),
                 ( EImpactSurface/Air           , FxImpactDCAM197GatlingAir__Connector ),
                 ( EImpactSurface/Wall          , FxImpactM61A1Vulcan__Connector ),
                 ( EImpactSurface/Vehicle       , FxImpactVehiculeM61A1Vulcan__Connector ),
@@ -1853,7 +1854,7 @@ AllImpactHappenings is TImpactHappening
                 ( EImpactSurface/Water         , FxImpactEauHEGros_Connector ),
                 ( EImpactSurface/Air           , FxImpactMissileAirMoyen_Connector ),
                 ( EImpactSurface/Wall          , FxImpactBatHeGros_Connector ),
-                ( EImpactSurface/Vehicle       , FxImpactMissileVehiculeGros_Connector ),
+                ( EImpactSurface/Vehicle       , FxImpactMissileVehiculeGros__Connector ),
                 ( EImpactSurface/FlyingVehicle , FxImpactMissileAirMoyen_Connector ),
                 ( EImpactSurface/Missile       , nil ),
                 ( EImpactSurface/Ricochet      , nil ),
@@ -1865,7 +1866,7 @@ AllImpactHappenings is TImpactHappening
                 ( EImpactSurface/Water         , FxImpactEauHEGros_Connector ),
                 ( EImpactSurface/Air           , FxImpactMissileAirGros_Connector ),
                 ( EImpactSurface/Wall          , FxImpactBatHeGros_Connector ),
-                ( EImpactSurface/Vehicle       , FxImpactMissileVehiculeGros_Connector ),
+                ( EImpactSurface/Vehicle       , FxImpactMissileVehiculeGros__Connector ),
                 ( EImpactSurface/FlyingVehicle , FxImpactMissileAirGros_Connector ),
                 ( EImpactSurface/Missile       , nil ),
                 ( EImpactSurface/Ricochet      , nil ),
@@ -1873,11 +1874,11 @@ AllImpactHappenings is TImpactHappening
         ),
         (   TFxWeaponType_MIssileAABUKM1 , MAP
             [
-                ( EImpactSurface/Ground        , FxImpactMissileSol_Connector ),
+                ( EImpactSurface/Ground        , FxImpactMissileSolGros_Connector ),
                 ( EImpactSurface/Water         , FxImpactEauHEGros_Connector ),
                 ( EImpactSurface/Air           , FxImpactMissileAirGros_Connector ),
                 ( EImpactSurface/Wall          , FxImpactBatHeGros_Connector ),
-                ( EImpactSurface/Vehicle       , FxImpactMissileVehiculeGros_Connector ),
+                ( EImpactSurface/Vehicle       , FxImpactMissileVehiculeGros__Connector ),
                 ( EImpactSurface/FlyingVehicle , FxImpactMissileAirGros_Connector ),
                 ( EImpactSurface/Missile       , nil ),
                 ( EImpactSurface/Ricochet      , nil ),
@@ -1889,7 +1890,7 @@ AllImpactHappenings is TImpactHappening
                 ( EImpactSurface/Water         , FxImpactEauHEGros_Connector ),
                 ( EImpactSurface/Air           , FxImpactMissileAirMoyen_Connector ),
                 ( EImpactSurface/Wall          , FxImpactBatHeGros_Connector ),
-                ( EImpactSurface/Vehicle       , FxImpactMissileVehiculeGros_Connector ),
+                ( EImpactSurface/Vehicle       , FxImpactMissileVehiculeGros__Connector ),
                 ( EImpactSurface/FlyingVehicle , FxImpactMissileAirMoyen_Connector ),
                 ( EImpactSurface/Missile       , nil ),
                 ( EImpactSurface/Ricochet      , nil ),
@@ -1901,7 +1902,7 @@ AllImpactHappenings is TImpactHappening
                 ( EImpactSurface/Water         , FxImpactEauHEGros_Connector ),
                 ( EImpactSurface/Air           , FxImpactMissileAirMoyen_Connector ),
                 ( EImpactSurface/Wall          , FxImpactBatHeGros_Connector ),
-                ( EImpactSurface/Vehicle       , FxImpactMissileVehiculeGros_Connector ),
+                ( EImpactSurface/Vehicle       , FxImpactMissileVehiculeGros__Connector ),
                 ( EImpactSurface/FlyingVehicle , FxImpactMissileAirMoyen_Connector ),
                 ( EImpactSurface/Missile       , nil ),
                 ( EImpactSurface/Ricochet      , nil ),
@@ -1913,7 +1914,7 @@ AllImpactHappenings is TImpactHappening
                 ( EImpactSurface/Water         , FxImpactEauHEGros_Connector ),
                 ( EImpactSurface/Air           , FxImpactMissileAirGros_Connector ),
                 ( EImpactSurface/Wall          , FxImpactBatHeGros_Connector ),
-                ( EImpactSurface/Vehicle       , FxImpactMissileVehiculeGros_Connector ),
+                ( EImpactSurface/Vehicle       , FxImpactMissileVehiculeGros__Connector ),
                 ( EImpactSurface/FlyingVehicle , FxImpactMissileAirGros_Connector ),
                 ( EImpactSurface/Missile       , nil ),
                 ( EImpactSurface/Ricochet      , nil ),
@@ -1922,7 +1923,7 @@ AllImpactHappenings is TImpactHappening
         (   TFxWeaponType_MauserBK27 , MAP
             [
                 ( EImpactSurface/Ground        , FxImpactMK27Canon__Connector ),
-                ( EImpactSurface/Water         , OrientationWrapperFxImpactBallesCal50Eau_Connector ),
+                ( EImpactSurface/Water         , FxImpactBallesCal50Eau__Connector ),
                 ( EImpactSurface/Air           , FxImpactDCAM197GatlingAir__Connector ),
                 ( EImpactSurface/Wall          , FxImpactMK27Canon__Connector ),
                 ( EImpactSurface/Vehicle       , FxImpactVehiculeM61A1Vulcan__Connector ),
@@ -1937,7 +1938,7 @@ AllImpactHappenings is TImpactHappening
                 ( EImpactSurface/Water         , FxImpactEauHEGros_Connector ),
                 ( EImpactSurface/Air           , FxImpactMissileAirMoyen_Connector ),
                 ( EImpactSurface/Wall          , FxImpactBatHeGros_Connector ),
-                ( EImpactSurface/Vehicle       , FxImpactMissileVehiculeGros_Connector ),
+                ( EImpactSurface/Vehicle       , FxImpactMissileVehiculeGros__Connector ),
                 ( EImpactSurface/FlyingVehicle , FxImpactMissileAirPetit_Connector ),
                 ( EImpactSurface/Missile       , nil ),
                 ( EImpactSurface/Ricochet      , nil ),
@@ -1946,10 +1947,10 @@ AllImpactHappenings is TImpactHappening
         (   TFxWeaponType_MissileATPetit , MAP
             [
                 ( EImpactSurface/Ground        , FxImpactMissileSol_Connector ),
-                ( EImpactSurface/Water         , FxImpactEauHEMoyen_Connector ),
+                ( EImpactSurface/Water         , FxImpactEauHEPetit_Connector ),
                 ( EImpactSurface/Air           , FxImpactMissileAir_Connector ),
                 ( EImpactSurface/Wall          , FxImpactBatHeMoyen_Connector ),
-                ( EImpactSurface/Vehicle       , FxImpactMissileVehiculePetit_Connector ),
+                ( EImpactSurface/Vehicle       , FxImpactMissileVehiculePetit__Connector ),
                 ( EImpactSurface/FlyingVehicle , FxImpactHeVehiculeAirPetit_Connector ),
                 ( EImpactSurface/Missile       , nil ),
                 ( EImpactSurface/Ricochet      , FxImpactMissileVehiculePetit_Connector ),
@@ -1961,7 +1962,7 @@ AllImpactHappenings is TImpactHappening
                 ( EImpactSurface/Water         , FxImpactEauHEMoyen_Connector ),
                 ( EImpactSurface/Air           , FxImpactMissileAir_Connector ),
                 ( EImpactSurface/Wall          , FxImpactBatHeMoyen_Connector ),
-                ( EImpactSurface/Vehicle       , FxImpactMissileVehiculePetit_Connector ),
+                ( EImpactSurface/Vehicle       , FxImpactMissileVehiculePetit__Connector ),
                 ( EImpactSurface/FlyingVehicle , FxImpactHeVehiculeAirPetit_Connector ),
                 ( EImpactSurface/Missile       , nil ),
                 ( EImpactSurface/Ricochet      , FxImpactMissileVehiculePetit_Connector ),
@@ -1973,7 +1974,7 @@ AllImpactHappenings is TImpactHappening
                 ( EImpactSurface/Water         , FxImpactEauHEMoyen_Connector ),
                 ( EImpactSurface/Air           , FxImpactMissileAir_Connector ),
                 ( EImpactSurface/Wall          , FxImpactBatHeMoyen_Connector ),
-                ( EImpactSurface/Vehicle       , FxImpactMissileVehiculePetit_Connector ),
+                ( EImpactSurface/Vehicle       , FxImpactMissileVehiculeGros__Connector ),
                 ( EImpactSurface/FlyingVehicle , FxImpactHeVehiculeAirPetit_Connector ),
                 ( EImpactSurface/Missile       , nil ),
                 ( EImpactSurface/Ricochet      , FxImpactMissileVehiculePetit_Connector ),
@@ -1985,7 +1986,7 @@ AllImpactHappenings is TImpactHappening
                 ( EImpactSurface/Water         , FxImpactEauHEMoyen_Connector ),
                 ( EImpactSurface/Air           , FxImpactMissileAir_Connector ),
                 ( EImpactSurface/Wall          , FxImpactBatHeMoyen_Connector ),
-                ( EImpactSurface/Vehicle       , FxImpactMissileVehiculePetit_Connector ),
+                ( EImpactSurface/Vehicle       , FxImpactMissileVehiculeGros__Connector ),
                 ( EImpactSurface/FlyingVehicle , FxImpactHeVehiculeAirPetit_Connector ),
                 ( EImpactSurface/Missile       , nil ),
                 ( EImpactSurface/Ricochet      , FxImpactMissileVehiculePetit_Connector ),
@@ -1993,11 +1994,11 @@ AllImpactHappenings is TImpactHappening
         ),
         (   TFxWeaponType_MissileAGMGros , MAP
             [
-                ( EImpactSurface/Ground        , FxImpactMissileSolGros_Connector ),
+                ( EImpactSurface/Ground        , FxImpactMissileSol_Connector ),
                 ( EImpactSurface/Water         , FxImpactEauHEGros_Connector ),
                 ( EImpactSurface/Air           , FxImpactMissileAirGros_Connector ),
                 ( EImpactSurface/Wall          , FxImpactBatHeGros_Connector ),
-                ( EImpactSurface/Vehicle       , FxImpactMissileVehiculeGros_Connector ),
+                ( EImpactSurface/Vehicle       , FxImpactMissileVehiculeGros__Connector ),
                 ( EImpactSurface/FlyingVehicle , FxImpactHeVehiculeAirGros_Connector ),
                 ( EImpactSurface/Missile       , nil ),
                 ( EImpactSurface/Ricochet      , FxImpactMissileVehiculePetit_Connector ),
@@ -2009,7 +2010,7 @@ AllImpactHappenings is TImpactHappening
                 ( EImpactSurface/Water         , FxImpactEauHEMoyen_Connector ),
                 ( EImpactSurface/Air           , FxImpactMissileAir_Connector ),
                 ( EImpactSurface/Wall          , FxImpactBatHeMoyen_Connector ),
-                ( EImpactSurface/Vehicle       , FxImpactMissileVehiculePetit_Connector ),
+                ( EImpactSurface/Vehicle       , FxImpactMissileVehiculePetit__Connector ),
                 ( EImpactSurface/FlyingVehicle , FxImpactHeVehiculeAirPetit_Connector ),
                 ( EImpactSurface/Missile       , nil ),
                 ( EImpactSurface/Ricochet      , FxImpactMissileVehiculePetit_Connector ),
@@ -2021,7 +2022,7 @@ AllImpactHappenings is TImpactHappening
                 ( EImpactSurface/Water         , FxImpactEauHEMoyen_Connector ),
                 ( EImpactSurface/Air           , FxImpactMissileAir_Connector ),
                 ( EImpactSurface/Wall          , FxImpactBatHeMoyen_Connector ),
-                ( EImpactSurface/Vehicle       , FxImpactMissileVehiculePetit_Connector ),
+                ( EImpactSurface/Vehicle       , FxImpactMissileVehiculePetit__Connector ),
                 ( EImpactSurface/FlyingVehicle , FxImpactHeVehiculeAirPetit_Connector ),
                 ( EImpactSurface/Missile       , nil ),
                 ( EImpactSurface/Ricochet      , FxImpactMissileVehiculePetit_Connector ),
@@ -2033,10 +2034,58 @@ AllImpactHappenings is TImpactHappening
                 ( EImpactSurface/Water         , FxImpactEauHEMoyen_Connector ),
                 ( EImpactSurface/Air           , FxImpactMissileAir_Connector ),
                 ( EImpactSurface/Wall          , FxImpactBatHeMoyen_Connector ),
-                ( EImpactSurface/Vehicle       , FxImpactMissileVehiculePetit_Connector ),
+                ( EImpactSurface/Vehicle       , FxImpactMissileVehiculeGros__Connector ),
                 ( EImpactSurface/FlyingVehicle , FxImpactHeVehiculeAirPetit_Connector ),
                 ( EImpactSurface/Missile       , nil ),
                 ( EImpactSurface/Ricochet      , FxImpactMissileVehiculePetit_Connector ),
+            ]
+        ),
+        (   TFxWeaponType_MissileBombeGBU1000Kg , MAP
+            [
+                ( EImpactSurface/Ground        , FxImpactSolBombMk84__Connector ),
+                ( EImpactSurface/Water         , FxImpactEauHeTresgros2_Connector ),
+                ( EImpactSurface/Air           , FxImpactSolBombMk84__Connector ),
+                ( EImpactSurface/Wall          , FxImpactSolBombMk84__Connector ),
+                ( EImpactSurface/Vehicle       , FxImpactSolBombMk84__Connector ),
+                ( EImpactSurface/FlyingVehicle , FxImpactSolBombMk84__Connector ),
+                ( EImpactSurface/Missile       , nil ),
+                ( EImpactSurface/Ricochet      , nil ),
+            ]
+        ),
+        (   TFxWeaponType_MissileBombeGBU1500Kg , MAP
+            [
+                ( EImpactSurface/Ground        , FxImpactSolBombMk84__Connector ),
+                ( EImpactSurface/Water         , FxImpactEauHeTresgros2_Connector ),
+                ( EImpactSurface/Air           , FxImpactSolBombMk84__Connector ),
+                ( EImpactSurface/Wall          , FxImpactSolBombMk84__Connector ),
+                ( EImpactSurface/Vehicle       , FxImpactSolBombMk84__Connector ),
+                ( EImpactSurface/FlyingVehicle , FxImpactSolBombMk84__Connector ),
+                ( EImpactSurface/Missile       , nil ),
+                ( EImpactSurface/Ricochet      , nil ),
+            ]
+        ),
+        (   TFxWeaponType_MissileBombeGBU250Kg , MAP
+            [
+                ( EImpactSurface/Ground        , FxImpactSolBombMk82__Connector ),
+                ( EImpactSurface/Water         , FxImpactEauHeTresgros2_Connector ),
+                ( EImpactSurface/Air           , FxImpactSolBombMk82__Connector ),
+                ( EImpactSurface/Wall          , FxImpactSolBombMk82__Connector ),
+                ( EImpactSurface/Vehicle       , FxImpactSolBombMk82__Connector ),
+                ( EImpactSurface/FlyingVehicle , FxImpactSolBombMk82__Connector ),
+                ( EImpactSurface/Missile       , nil ),
+                ( EImpactSurface/Ricochet      , nil ),
+            ]
+        ),
+        (   TFxWeaponType_MissileBombeGBU500Kg , MAP
+            [
+                ( EImpactSurface/Ground        , FxImpactSolBombGBU12__Connector ),
+                ( EImpactSurface/Water         , FxImpactEauHeTresgros2_Connector ),
+                ( EImpactSurface/Air           , FxImpactSolBombGBU12__Connector ),
+                ( EImpactSurface/Wall          , FxImpactSolBombGBU12__Connector ),
+                ( EImpactSurface/Vehicle       , FxImpactSolBombGBU12__Connector ),
+                ( EImpactSurface/FlyingVehicle , FxImpactSolBombGBU12__Connector ),
+                ( EImpactSurface/Missile       , nil ),
+                ( EImpactSurface/Ricochet      , nil ),
             ]
         ),
         (   TFxWeaponType_MitrailleuseCal50Externe , MAP
@@ -2054,7 +2103,7 @@ AllImpactHappenings is TImpactHappening
         (   TFxWeaponType_MitrailleuseM240Externe , MAP
             [
                 ( EImpactSurface/Ground        , FxImpactBalleSolTresPetitMitrailleuse__Connector ),
-                ( EImpactSurface/Water         , OrientationWrapperFxImpactBallesCal50Eau_Connector ),
+                ( EImpactSurface/Water         , FxImpactBallesCal50Eau__Connector ),
                 ( EImpactSurface/Air           , FxImpactBallesAirTresPetit__Connector ),
                 ( EImpactSurface/Wall          , FxImpactBalleBatimentTresPetitMitrailleuse__Connector ),
                 ( EImpactSurface/Vehicle       , FxImpactBalleVehiculeTresPetitMitrailleuse__Connector ),
@@ -2066,7 +2115,7 @@ AllImpactHappenings is TImpactHappening
         (   TFxWeaponType_MitrailleuseM240Interne , MAP
             [
                 ( EImpactSurface/Ground        , FxImpactBalleSolTresPetitMitrailleuse__Connector ),
-                ( EImpactSurface/Water         , OrientationWrapperFxImpactBallesCal50Eau_Connector ),
+                ( EImpactSurface/Water         , FxImpactBallesCal50Eau__Connector ),
                 ( EImpactSurface/Air           , FxImpactBallesAirTresPetit__Connector ),
                 ( EImpactSurface/Wall          , FxImpactBalleBatimentTresPetitMitrailleuse__Connector ),
                 ( EImpactSurface/Vehicle       , FxImpactBalleVehiculeTresPetitMitrailleuse__Connector ),
@@ -2078,7 +2127,7 @@ AllImpactHappenings is TImpactHappening
         (   TFxWeaponType_MitrailleuseMG3Inf , MAP
             [
                 ( EImpactSurface/Ground        , FxImpactBalleSolTresPetitMG3Section__Connector ),
-                ( EImpactSurface/Water         , OrientationWrapperFxImpactBallesCal50Eau_Connector ),
+                ( EImpactSurface/Water         , FxImpactBallesCal50Eau__Connector ),
                 ( EImpactSurface/Air           , FxImpactBallesAirTresPetit__Connector ),
                 ( EImpactSurface/Wall          , FxImpactBalleBatimentTresPetitMMGSection__Connector ),
                 ( EImpactSurface/Vehicle       , FxImpactBalleSolTresPetitMG3Section__Connector ),
@@ -2090,7 +2139,7 @@ AllImpactHappenings is TImpactHappening
         (   TFxWeaponType_MitrailleuseMMGInf , MAP
             [
                 ( EImpactSurface/Ground        , FxImpactBalleSolTresPetitMMGSection__Connector ),
-                ( EImpactSurface/Water         , OrientationWrapperFxImpactBallesCal50Eau_Connector ),
+                ( EImpactSurface/Water         , FxImpactBallesCal50Eau__Connector ),
                 ( EImpactSurface/Air           , FxImpactBallesAirTresPetit__Connector ),
                 ( EImpactSurface/Wall          , FxImpactBalleBatimentTresPetitMMGSection__Connector ),
                 ( EImpactSurface/Vehicle       , FxImpactBalleSolTresPetitMMGSection__Connector ),
@@ -2102,7 +2151,7 @@ AllImpactHappenings is TImpactHappening
         (   TFxWeaponType_MortierVasilek , MAP
             [
                 ( EImpactSurface/Ground        , FxImpactSolHEMortierM30107Mm__Connector ),
-                ( EImpactSurface/Water         , FxImpactEauHeTresgros2_Connector ),
+                ( EImpactSurface/Water         , FxImpactEauHEGros_Connector ),
                 ( EImpactSurface/Air           , nil ),
                 ( EImpactSurface/Wall          , FxImpactSolHEMortierM30107Mm__Connector ),
                 ( EImpactSurface/Vehicle       , FxImpactSolHEMortierM30107Mm__Connector ),
@@ -2114,7 +2163,7 @@ AllImpactHappenings is TImpactHappening
         (   TFxWeaponType_MortierM30107Mm , MAP
             [
                 ( EImpactSurface/Ground        , FxImpactSolHEMortierM30107Mm__Connector ),
-                ( EImpactSurface/Water         , FxImpactEauHeTresgros2_Connector ),
+                ( EImpactSurface/Water         , FxImpactEauHEGros_Connector ),
                 ( EImpactSurface/Air           , nil ),
                 ( EImpactSurface/Wall          , FxImpactSolHEMortierM30107Mm__Connector ),
                 ( EImpactSurface/Vehicle       , FxImpactSolHEMortierM30107Mm__Connector ),
@@ -2150,7 +2199,7 @@ AllImpactHappenings is TImpactHappening
         (   TFxWeaponType_Roquette110Mm130Mm , MAP
             [
                 ( EImpactSurface/Ground        , FxImpactSolHERoquette110Mm130Mm__Connector ),
-                ( EImpactSurface/Water         , FxImpactEauHeTresgros2_Connector ),
+                ( EImpactSurface/Water         , FxImpactEauHEGros_Connector ),
                 ( EImpactSurface/Air           , nil ),
                 ( EImpactSurface/Wall          , FxImpactSolHERoquette110Mm130Mm__Connector ),
                 ( EImpactSurface/Vehicle       , FxImpactSolHERoquette110Mm130Mm__Connector ),
@@ -2162,7 +2211,7 @@ AllImpactHappenings is TImpactHappening
         (   TFxWeaponType_Roquette110Mm130MmCluster , MAP
             [
                 ( EImpactSurface/Ground        , FxImpactSolHEM270227MmCluster__Connector ),
-                ( EImpactSurface/Water         , FxImpactEauHeTresgros2_Connector ),
+                ( EImpactSurface/Water         , FxImpactEauHEGros_Connector ),
                 ( EImpactSurface/Air           , FxOuvertureRoquetteCluster_Connector ),
                 ( EImpactSurface/Wall          , FxImpactSolHEM270227MmCluster__Connector ),
                 ( EImpactSurface/Vehicle       , FxImpactSolHEM270227MmCluster__Connector ),
@@ -2342,7 +2391,7 @@ AllImpactHappenings is TImpactHappening
         (   TFxWeaponType_YakBGatling , MAP
             [
                 ( EImpactSurface/Ground        , FxImpactM168Gatling__Connector ),
-                ( EImpactSurface/Water         , OrientationWrapperFxImpactBallesCal50Eau_Connector ),
+                ( EImpactSurface/Water         , FxImpactBallesCal50Eau__Connector ),
                 ( EImpactSurface/Air           , FxImpactDCAM168GatlingAir__Connector ),
                 ( EImpactSurface/Wall          , OrientationWrapperFxImpactM168Gatling_Connector ),
                 ( EImpactSurface/Vehicle       , OrientationWrapperFxImpactVehiculeM168Gatling_Connector ),

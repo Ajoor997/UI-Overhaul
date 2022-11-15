@@ -13,6 +13,7 @@ Base_AdditionalTextureBank is TBUCKToolAdditionalTextureBank
                                                                             (~/ComponentState/Intermediate,             ~/StyleDeskTexture_CheckBox_Point_Black),
                                                                             (~/ComponentState/IntermediateHighlighted,  ~/StyleDeskTexture_CheckBox_Point_Black),
                                                                             (~/ComponentState/Toggled,                  ~/StyleDeskTexture_CheckBox_Tick),
+                                                                            (~/ComponentState/ToggleGrayed,             ~/StyleDeskTexture_CheckBox_Tick),
                                                                             (~/ComponentState/ToggleHighlighted,        ~/StyleDeskTexture_CheckBox_Tick),
                                                                             (~/ComponentState/ToggleClicked,            ~/StyleDeskTexture_CheckBox_Tick),
                                                                      ]),
@@ -78,15 +79,8 @@ Base_AdditionalTextureBank is TBUCKToolAdditionalTextureBank
         ("OutgameTexture_GameRoomList_Observable",                                  MAP [(~/ComponentState/Normal, ~/OutgameTexture_GameRoomList_Observable)]),
         ("OutgameTexture_Division_Dlc_Corner",                                      MAP [(~/ComponentState/Normal, ~/OutgameTexture_Division_Dlc_Corner)]),
         ("OutgameTexture_Division_Dlc_Seal",                                        MAP [(~/ComponentState/Normal, ~/OutgameTexture_Division_Dlc_Seal)]),
-        ("OutgameTexture_Bg_Credits",                                               MAP [(~/ComponentState/Normal, ~/OutgameTexture_Bg_Credits)]),
-        ("OutGameTexture_Category_Support",                                         MAP [(~/ComponentState/Normal, ~/OutGameTexture_Category_Support)]),
-        ("OutGameTexture_Category_Infanterie",                                      MAP [(~/ComponentState/Normal, ~/OutGameTexture_Category_Infanterie)]),
-        ("OutGameTexture_Category_Artillerie",                                      MAP [(~/ComponentState/Normal, ~/OutGameTexture_Category_Artillerie)]),
-        ("OutGameTexture_Category_Tank",                                            MAP [(~/ComponentState/Normal, ~/OutGameTexture_Category_Tank)]),
-        ("OutGameTexture_Category_Reco",                                            MAP [(~/ComponentState/Normal, ~/OutGameTexture_Category_Reco)]),
-        ("OutGameTexture_Category_AT",                                              MAP [(~/ComponentState/Normal, ~/OutGameTexture_Category_AT)]),
-        ("OutGameTexture_Category_DCA",                                             MAP [(~/ComponentState/Normal, ~/OutGameTexture_Category_DCA)]),
-        ("OutGameTexture_Category_Aviation",                                        MAP [(~/ComponentState/Normal, ~/OutGameTexture_Category_Aviation)]),
+
+
 
         ("OutgameTexture_PlayerBanner",                                             MAP [(~/ComponentState/Normal, ~/OutgameTexture_PlayerBanner)]),
         ("OutgameTexture_UnknownMap",                                               MAP [(~/ComponentState/Normal, ~/OutgameTexture_UnknownMap)]),
@@ -273,14 +267,5 @@ Base_AdditionalTextureBank is TBUCKToolAdditionalTextureBank
         ("UseOutGameTexture_WaitAnimation_57",                                               MAP [(~/ComponentState/Normal, ~/UseOutGameTexture_WaitAnimation_57)]),
         ("UseOutGameTexture_WaitAnimation_58",                                               MAP [(~/ComponentState/Normal, ~/UseOutGameTexture_WaitAnimation_58)]),
         ("UseOutGameTexture_WaitAnimation_59",                                               MAP [(~/ComponentState/Normal, ~/UseOutGameTexture_WaitAnimation_59)]),
-
-        ("UseOutGameTexture_DefeatAnimation_89",                                             MAP [(~/ComponentState/Normal, ~/UseOutGameTexture_DefeatAnimation_89)]),
-
-        ("UseOutGameTexture_AlliesVictoryAnimation_89",                                             MAP [(~/ComponentState/Normal, ~/UseOutGameTexture_AlliesVictoryAnimation_89)]),
-
-        ("UseOutGameTexture_AxisVictoryAnimation_89",                                             MAP [(~/ComponentState/Normal, ~/UseOutGameTexture_AxisVictoryAnimation_89)]),
-
-
-
     ]
 )

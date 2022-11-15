@@ -120,8 +120,6 @@ private NotificationAvatarTextFrame is NotificationFrame
                         TypefaceToken = "Liberator"
                         BigLineAction = ~/BigLineAction/MultiLine
 
-                        UniformDrawer = $/UserInterface/UIUniformDrawer
-
                         TextColor = "BlancEquipe"
                         TextSize = "14"
 
@@ -155,8 +153,6 @@ private NotificationTextFrame is NotificationFrame
 
             TypefaceToken = "UIMainFont"
             BigLineAction = ~/BigLineAction/MultiLine
-
-            UniformDrawer = $/UserInterface/UIUniformDrawer
 
             TextColor = "Blanc"
             TextSize = "InfoSecondaire"

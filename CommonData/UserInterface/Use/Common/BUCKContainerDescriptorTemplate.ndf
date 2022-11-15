@@ -44,8 +44,6 @@ template BUCKContainerDescriptor
     SpotlightComponent : TBUCKContainerDescriptor = nil,                // Défini le SpotlightComponent a afficher pour la fonctionnalité de Spotlight
     SpotlightLayer : TUILayer = nil,                                    // Le layer pour faire apparaître le spotlight (doit être au dessus de tout le monde)
 
-    UniformDrawer : TUIUniformDrawer = $/UserInterface/UIUniformDrawer, // Défini le drawer pour les bordures et background
-
     HasBackground : bool = false,                                       // Affiche le background
     BackgroundBlockColorToken : string = "",                            // Token de couleur du background
 
@@ -93,7 +91,7 @@ is TBUCKContainerDescriptor
     SpotlightComponent = <SpotlightComponent>
     SpotlightLayer = <SpotlightLayer>
 
-    UniformDrawer = <UniformDrawer>
+    UniformDrawer = $/UserInterface/UIUniformDrawer
 
     HasBackground = <HasBackground>
     BackgroundBlockColorToken = <BackgroundBlockColorToken>

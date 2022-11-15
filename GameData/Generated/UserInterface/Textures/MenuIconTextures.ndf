@@ -7,7 +7,7 @@
 
 
 
-export Texture_MenuIcon_default is TUIResourceTexture_InGame
+Texture_MenuIcon_default is TUIResourceTexture_InGame
 (
     FileName = "GameData:/Assets/2D/Interface/UseInGame/LabelIcons/MenuIcons/default.png"
 )

@@ -30,7 +30,7 @@
 //-------------------------------------------------------------------------
 // Settings
 //-------------------------------------------------------------------------
-Default_Attack_Settings is
+Default_Support_Request_Attack_Settings is
 [
     TAirStrikeSettingHolder(Setting = ~/BasicAirstrikeSupport),
     TSupportSettingHolder(SettingList = [Renfort_AT, Renfort_TransportsAbandonnes]),
@@ -74,7 +74,7 @@ private template Template_Objective_Attack
 is TMacroActionDescriptor_ObjectiveAttack_Specific
 (
     ParametresDeMission =
-    ~/Default_Attack_Settings
+    ~/Default_Support_Request_Attack_Settings
     +
     ~/Blitzkrieg_Attack_Settings
     +
@@ -105,7 +105,7 @@ private template Template_Main_Attack
 is TMacroActionDescriptor_CorridorAttack_Specific
 (
     ParametresDeMission =
-    ~/Default_Attack_Settings
+    ~/Default_Support_Request_Attack_Settings
     +
     ~/Blitzkrieg_Attack_Settings
     +
@@ -119,7 +119,7 @@ is TMacroActionDescriptor_CorridorAttack_Specific
             TaggedPoolModelList = [(["AttackMain"], [~/Pool_Main_Attack]),] PrioritizeCorridorsForTaggedPoolModels = true LaunchASAP_RatioMin = 0.01),
         TMacroActionProductionSettingHolder(DifficultyList = [IADifficulty/Facile] ProdProperties = [TProdProperty_LaunchAsSoonAsPossible] PoolModelList = [~/Pool_Main_Attack_Easy] TaggedPoolModelList = [(["AttackMain"], [~/Pool_Main_Attack_Easy]),] PrioritizeCorridorsForTaggedPoolModels = true LaunchASAP_RatioMin = 0.01),
 
-        TAttackRatioSettingHolder(RatioMinimumPourAttaquer = 1.2 RatioPourAttaquerPerduAChaqueTick = 0.00084 CompterLesUnitesEnZoneExtendedDansLaMenace = true), // Perte de 0.1 de ratio toutes les 2 minutes
+        TAttackRatioSettingHolder(RatioMinimumPourAttaquer = 1.0 RatioPourAttaquerPerduAChaqueTick = 0.00084 CompterLesUnitesEnZoneExtendedDansLaMenace = true), // Perte de 0.1 de ratio toutes les 2 minutes
         TMacroActionLifetimeSettingHolder(MinimumResourceForLaunch = <MinimumResourceForLaunch>),
         TCorridorPlacementSettingHolder(StayInCorridorIfp = true MargeDeRegroupementDepuisLaLigneDeFront = 1 ActiveComportementEnBoutDeCouloir = true),
         TCorridorPlacementSettingHolder(GameModeList = [EDeploymentMode/Breakthrough] StayInCorridorIfp = true MargeDeRegroupementDepuisLaLigneDeFront = 1),
@@ -140,8 +140,6 @@ export Attack_Main_Autogen is Template_Main_Attack
 export Attack_Filler is TMacroActionDescriptor_CorridorAttack_Specific
 (
     ParametresDeMission =
-    ~/Default_Attack_Settings
-    +
     [
         TGenerationSettingHolder(GenerationType = TGenerationType_BasedOnNumberOfCorridors NumberLaunchBasedOnGenerationType = 1 ConsiderOnlyAssignedCorridors = true),
         TMacroActionProductionSettingHolder(ProdProperties = [TProdProperty_LaunchAsSoonAsPossible] PoolModelList = [~/Pool_Attack_Filler] LaunchASAP_RatioMin = 0.01),
@@ -149,59 +147,6 @@ export Attack_Filler is TMacroActionDescriptor_CorridorAttack_Specific
         TCorridorPlacementSettingHolder(StayInCorridorIfp = true MargeDeRegroupementDepuisLaLigneDeFront = 1 ActiveComportementEnBoutDeCouloir = true),
         TCorridorPlacementSettingHolder(GameModeList = [EDeploymentMode/Breakthrough] StayInCorridorIfp = true MargeDeRegroupementDepuisLaLigneDeFront = 1),
     ]
-)
-//-------------------------------------------------------------------------
-//-------------------------------------------------------------------------
-//-------------------------------------------------------------------------
-private template Template_Attack_MBT
-[
-    MinimumResourceForLaunch:int = 0,
-    IsSupportingOtherAttacks:bool = false,
-]
-is TMacroActionDescriptor_CorridorDynamicDefense_Specific
-(
-    ParametresDeMission =
-    ~/Default_Attack_Settings
-    +
-    ~/Blitzkrieg_Attack_Settings
-    +
-    ~/AvoidFillerCorridors_Attack_Settings
-    +
-    [
-        TGenerationSettingHolder(GenerationType = TGenerationType_FixedSize NumberLaunchBasedOnGenerationType = 1),
-        TDefensePositionSettingHolder(IgnoreDefensePositionSafety = true),
-        TMacroActionProductionSettingHolder(TaggedPoolModelList = [(["AttackMBT"], [~/Pool_Attack_MBT])] ProdProperties = [TProdProperty_LaunchAsSoonAsPossible]LaunchASAP_RatioMin = 0.01),
-        TMacroActionLifetimeSettingHolder(MinimumResourceForLaunch = <MinimumResourceForLaunch>),
-    ]
-    +
-    (
-        <IsSupportingOtherAttacks> == false ? []:
-        [
-            TCoordinationSettingHolder(CoordinationType = ESupportingStatus/IsSupport),
-        ]
-    )
-)
-//-------------------------------------------------------------------------
-export Attack_MBT_Support is Template_Attack_MBT
-(
-    IsSupportingOtherAttacks = true
-)
-//-------------------------------------------------------------------------
-export Attack_MBT_Support_Autogen is Template_Attack_MBT
-(
-    MinimumResourceForLaunch = ~/MinimumResourceForLaunch_Stage_1
-    IsSupportingOtherAttacks = true
-)
-//-------------------------------------------------------------------------
-export Attack_MBT is Template_Attack_MBT
-(
-    IsSupportingOtherAttacks = false
-)
-//-------------------------------------------------------------------------
-export Attack_MBT_Autogen is Template_Attack_MBT
-(
-    MinimumResourceForLaunch = ~/MinimumResourceForLaunch_Stage_1
-    IsSupportingOtherAttacks = false
 )
 //-------------------------------------------------------------------------
 //-------------------------------------------------------------------------
@@ -214,7 +159,7 @@ private template Template_Attack_Corridor
 is TMacroActionDescriptor_CorridorAttack_Specific
 (
     ParametresDeMission =
-    ~/Default_Attack_Settings
+    ~/Default_Support_Request_Attack_Settings
     +
     ~/Blitzkrieg_Attack_Settings
     +
@@ -235,7 +180,7 @@ is TMacroActionDescriptor_CorridorAttack_Specific
             (["AttackTank"], [ Pool_Tank_Attack_1, Pool_Tank_Attack_2, Pool_Tank_Attack_3 ]),
         ]
         LaunchASAP_RatioMin = 0.01),
-        TAttackRatioSettingHolder(RatioMinimumPourAttaquer = <RatioMinimumPourAttaquer> CompterLesUnitesEnZoneExtendedDansLaMenace = true UtiliserMenaceLaPlusProcheAuLieuDeLaPlusFaible = true),
+        TAttackRatioSettingHolder(RatioMinimumPourAttaquer = <RatioMinimumPourAttaquer> CompterLesUnitesEnZoneExtendedDansLaMenace = true UtiliserMenaceLaPlusProcheAuLieuDeLaPlusFaible = true RatioPourAttaquerPerduAChaqueTick = 0.001),
         TMacroActionLifetimeSettingHolder(MinimumResourceForLaunch = <MinimumResourceForLaunch>),
         TAntiStackingSettingHolder(),
         TCorridorPlacementSettingHolder(StayInCorridorIfp = true MargeDeRegroupementDepuisLaLigneDeFront = 1 ActiveComportementEnBoutDeCouloir = true),
@@ -257,10 +202,12 @@ private template Template_Attack_Helo
 ]
 is TMacroActionDescriptor_CorridorAttack_Specific
 (
-        ParametresDeMission =
-    ~/Default_Attack_Settings
-    + ~/Blitzkrieg_Attack_Settings
-    + ~/AvoidFillerCorridors_Attack_Settings
+    ParametresDeMission =
+    ~/Default_Support_Request_Attack_Settings
+    +
+    ~/Blitzkrieg_Attack_Settings
+    +
+    ~/AvoidFillerCorridors_Attack_Settings
     +
     [
         TGenerationSettingHolder(GenerationType = TGenerationType_FixedSize NumberLaunchBasedOnGenerationType = 1),
@@ -384,35 +331,6 @@ Vehicule_Fallback_Attack is [
             ]
         ),
 ]
-
-//-------------------------------------------------------------------------
-export Pool_Attack_MBT is TPoolModel
-(
-    ModelList = [
-        TPoolElement(
-            DescriptorId = GUID:{80ad8345-d931-11e8-936c-2c56dc4c150d}
-            Required = true
-            Nb = 1
-            PriceComparisonMethod = EPriceComparatorType/MostExpensive
-            TagsPriority = [
-                "Char_Standard",
-                "Char",
-            ]
-        ),
-        TPoolElement(
-            DescriptorId = GUID:{80ad8346-d931-11e8-9afe-2c56dc4c150d}
-            Required = false
-            Nb = 1
-            PriceComparisonMethod = EPriceComparatorType/Cheapest
-            IndexPriorityOverPrice = false
-            TagsPriority = [
-                "Infanterie_Spec_Defense", // Protege ton tank toi
-                "Infanterie_Spec_Attaque",
-                "Infanterie_Standard",
-            ]
-        ),
-    ]
-)
 //-------------------------------------------------------------------------
 export Pool_Attack_Filler is TPoolModel
 (
@@ -553,6 +471,8 @@ export Pool_Main_Attack is TPoolModel
             Nb = 1
             PriceComparisonMethod = EPriceComparatorType/Random
             TagsPriority = [
+                "Helo_Gunship",
+                "helo_AT",
                 "Char_Standard",
                 "Char",
                 "Vehicule_Appui",

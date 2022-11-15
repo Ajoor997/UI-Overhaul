@@ -17,7 +17,7 @@ WargameUnitNames is TModernWarfareUnitNamesDico
         ("EST", "NAMES_USSR"),
         ("POL", "NAMES_POL"),
         ("AWP", "NAMES_POL"),
-        ("TCH", "NAMES_CZ"),
+        ("TCH", "NAMES_TCH"),
         ("CAN", "NAMES_CAN"),
         ("DAN", "NAMES_DAN"),
         ("SWE", "NAMES_SWE"),

@@ -8,7 +8,6 @@ export ModernWarfareModularUnitFireDescriptorForTestIA is TEntityDescriptor
     [
         TTypeUnitModuleDescriptor
         (
-            TypeUnitValue     =  ETypeUnit/Fire
         ),
         TPositionModuleDescriptor
         (
@@ -123,7 +122,6 @@ export Descriptor_FireWithHighSpreadProba is TEntityDescriptor
     ModulesDescriptors           = [
         TTypeUnitModuleDescriptor
         (
-            TypeUnitValue     = ETypeUnit/Fire
         ),
         TPositionModuleDescriptor
         (

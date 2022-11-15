@@ -116,7 +116,6 @@ ModaleWindowText is BUCKTextDescriptor
     TextDico = ~/LocalisationConstantes/dico_interface_outgame
 
     TypefaceToken = "UIMainFont"
-    UniformDrawer = $/UserInterface/UIUniformDrawer
 )
 
 ModaleWindowResourceForPrivacyPolicy is SpecificModaleWindowFrame
@@ -207,7 +206,6 @@ ModaleWindowResourceForPrivacyPolicy is SpecificModaleWindowFrame
                     TextDico = ~/LocalisationConstantes/dico_interface_outgame
 
                     TypefaceToken = "Liberator"
-                    UniformDrawer = $/UserInterface/UIUniformDrawer
                 )
             ]
         )
@@ -278,7 +276,6 @@ ModaleWindowResourceForOutdatedMods is SpecificModaleWindowFrame
                         TextDico = ~/LocalisationConstantes/dico_interface_outgame
 
                         TypefaceToken = "Liberator"
-                        UniformDrawer = $/UserInterface/UIUniformDrawer
                     )
                 ),
                 BUCKListElementDescriptor
@@ -327,7 +324,6 @@ ModaleWindowResourceForOutdatedMods is SpecificModaleWindowFrame
                                     TextDico = ~/LocalisationConstantes/dico_interface_outgame
 
                                     TypefaceToken = "Liberator"
-                                    UniformDrawer = $/UserInterface/UIUniformDrawer
                                 )
                             )
                         ]

@@ -4,73 +4,58 @@ private StrategicHUDHeaderButtonManager is TBUCKRadioButtonManager()
 
 //-------------------------------------------------------------
 
-private SpecificStrategicHUDHeaderViewMainComponent is BUCKListDescriptor
+private SpecificStrategicHUDHeaderViewMainComponent is BUCKContainerDescriptor
 (
     UniqueName = 'HUDTopElement'
-
     ComponentFrame = TUIFramePropertyRTTI
     (
-        RelativeWidthHeight = [1.0, 0.0]
-        MagnifiableOffset = [5,0]
+        RelativeWidthHeight = [1,0]
     )
 
-    Axis = ~/ListAxis/Vertical
+    Components =
+    [
+    SteelmanReinforcementButtonPanel,
+    ]
+)
 
-    FirstMargin = TRTTILength( Magnifiable = 0.0 )
-    //HasBackground = true
-    BackgroundBlockColorToken = 'Orange'
+
+SteelmanReinforcementButtonPanel is BUCKListDescriptor
+(
+    ElementName = "StratHeaderList"
+
+    Axis = ~/ListAxis/Vertical
+    BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
+
+    FirstMargin = TRTTILength( Magnifiable = 8.0 )
+    InterItemMargin = TRTTILength( Magnifiable = 10.0 )
+
     Elements =
     [
-        {BUCKListElementDescriptor
-                (
-                    ComponentDescriptor = PanelInfoDuTour
-                ),}
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = BUCKListDescriptor
+            ComponentDescriptor = BUCKRackDescriptor
             (
-                ElementName = "StratHeaderList"
+                UniqueName = 'tuto_renfort'
+                ElementName = "ReinforcementRack"
 
-                Axis = ~/ListAxis/Vertical
-                BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    MagnifiableWidthHeight = [0.0, 29.0]
+                    MagnifiableOffset = [-10,0]
+                )
 
-                FirstMargin = TRTTILength( Magnifiable = 8.0 )
+                SpotlightComponent = SpotlightDescriptor()
+                SpotlightLayer = $/UserInterface/UILayer_2DInterfaceDropDown_OutGame
+
+                BladeDescriptor = ~/ReinforcementButton
+                Axis = ~/ListAxis/Horizontal
+                BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromFrameProperty
                 InterItemMargin = TRTTILength( Magnifiable = 10.0 )
-
-                Elements =
-                [
-                    {BUCKListElementDescriptor
-                                        (
-                                            ComponentDescriptor =  AffichageMenu
-                                        ),}
-                    BUCKListElementDescriptor
-                    (
-                        ComponentDescriptor = BUCKRackDescriptor
-                        (
-                            UniqueName = 'tuto_renfort'
-                            ElementName = "ReinforcementRack"
-
-                            ComponentFrame = TUIFramePropertyRTTI
-                            (
-                                MagnifiableWidthHeight = [0.0, 29.0]
-                                MagnifiableOffset = [-10,0]
-                            )
-
-                            SpotlightComponent = SpotlightDescriptor()
-                            SpotlightLayer = $/UserInterface/UILayer_2DInterfaceDropDown_OutGame
-
-                            BladeDescriptor = ~/ReinforcementButton
-                            Axis = ~/ListAxis/Horizontal
-                            BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromFrameProperty
-                            InterItemMargin = TRTTILength( Magnifiable = 10.0 )
-                        )
-                    ),
-                    BUCKListElementDescriptor
-                    (
-                        ComponentDescriptor = PanelRenfortsEtDate
-                    ),
-                ]
             )
+        ),
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = PanelRenfortsEtDate
         ),
     ]
 )
@@ -107,16 +92,6 @@ private PanelRenfortsEtDate is BUCKListDescriptor
                 // envoie BUCKSpecificStrategicProductionMenuMainComponentDescriptor
             )
         ),
-
-    ]
-
-    BackgroundComponents =
-    [
-        PanelRoundedCorner
-        (
-            BackgroundBlockColorToken = 'H2_bleu_2_40p'
-            BorderLineColorToken = 'H2_bleu_2_40p'
-        )
     ]
 )
 
@@ -179,8 +154,6 @@ private StrategicProductionMenuStrategicIncomePointsText is BUCKTextDescriptor
     TypefaceToken = "UIMainFont"
     BigLineAction = ~/BigLineAction/CutByDots
 
-    UniformDrawer = $/UserInterface/UIUniformDrawer
-
     TextDico = ~/LocalisationConstantes/dico_interface_ingame
     TextToken = "HPROD_CMDI"
 
@@ -219,8 +192,6 @@ private StrategicProductionMenuStrategicPointsText is BUCKTextDescriptor
 
     TypefaceToken = "UIMainFont"
     BigLineAction = ~/BigLineAction/CutByDots
-
-    UniformDrawer = $/UserInterface/UIUniformDrawer
 
     TextDico = ~/LocalisationConstantes/dico_interface_ingame
     TextToken = "HPROD_CMDP"
@@ -366,7 +337,7 @@ private ReinforcementButton is BUCKSpecificButton
 
 
     ButtonRelativeWidthHeight = [0.0, 0.0]
-    ButtonMagnifiableWidthHeight = [555.0, 30.0]
+    ButtonMagnifiableWidthHeight = [400.0, 30.0]
 
     TextParagraphStyle = ~/paragraphStyleTextCenter //paragraphStyleTextLeftAlign
     HasText = true

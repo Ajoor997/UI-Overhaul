@@ -15,7 +15,7 @@ BUCKSpecificAutoDeployMainComponentDescriptor is BUCKContainerDescriptor
         (
             ComponentFrame = TUIFramePropertyRTTI
             (
-                MagnifiableOffset = [0.0, 56]
+                MagnifiableOffset = [0.0, 56+12]
                 AlignementToFather = [0.5, 0.0]
                 AlignementToAnchor = [0.5, 0.0]
                 MagnifiableWidthHeight = [0,31]
@@ -102,7 +102,7 @@ BUCKSpecificAutoDeployMainComponentDescriptor is BUCKContainerDescriptor
         (
             ComponentFrame = TUIFramePropertyRTTI
             (
-                MagnifiableOffset = [0.0, 100]
+                MagnifiableOffset = [0.0, 100 +12]
                 MagnifiableWidthHeight = [380.0, 31.0]
                 AlignementToFather = [0.5, 0.0]
                 AlignementToAnchor = [0.5, 0.0]

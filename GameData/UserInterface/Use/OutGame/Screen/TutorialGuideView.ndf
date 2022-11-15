@@ -406,26 +406,26 @@ private GuideContainer is BUCKListDescriptor
             // the battalion
         ManuelTexteTitre3(TextToken = 'AGM_14'),
         ManuelTexteCorps(TextToken = 'AGM_15'),
-        ManuelImage(TextureToken = 'UseOutGame_Manual_AG_01' MagnifiableWidthHeight = [555.0, 460.0]),
+
         ManuelTexteCorps(TextToken = 'AGM_16'),
         ManuelTexteCorps(TextToken = 'AGM_17'),
-        ManuelImage(TextureToken = 'UseOutGame_Manual_AG_02' MagnifiableWidthHeight = [477.0, 271.0]),
+
         ManuelTexteCorps(TextToken = 'AGM_18'),
         ManuelTexteCorps(TextToken = 'AGM_19'),
-        ManuelImage(TextureToken = 'UseOutGame_Manual_AG_03' MagnifiableWidthHeight = [401.0, 401.0]),
+
         ManuelTexteCorps(TextToken = 'AGM_20'),
         //
         ManuelTexteTitre3(TextToken = 'AGM_21'),
         ManuelTexteCorps(TextToken = 'AGM_22'),
-        ManuelImage(TextureToken = 'UseOutGame_Manual_AG_04' MagnifiableWidthHeight = [421.0, 226.0]),
+
         ManuelTexteCorps(TextToken = 'AGM_23'),
-        ManuelImage(TextureToken = 'UseOutGame_Manual_AG_05' MagnifiableWidthHeight = [536.0, 558.0]),
+
         ManuelTexteCorps(TextToken = 'AGM_24'),
-        ManuelImage(TextureToken = 'UseOutGame_Manual_AG_06' MagnifiableWidthHeight = [415.0, 203.0]),
+
         ManuelTexteCorps(TextToken = 'AGM_25'),
-        ManuelImage(TextureToken = 'UseOutGame_Manual_AG_07' MagnifiableWidthHeight = [824.0, 726.0]),
+
         ManuelTexteCorps(TextToken = 'AGM_26'),
-        ManuelImage(TextureToken = 'UseOutGame_Manual_AG_08' MagnifiableWidthHeight = [824.0, 89.0]),
+
         ManuelTexteCorps(TextToken = 'AGM_27'),
         ManuelTexteCorps(TextToken = 'AGM_28'),
         ManuelTexteCorps(TextToken = 'AGM_29'),
@@ -443,24 +443,24 @@ private GuideContainer is BUCKListDescriptor
         //
         ManuelTexteTitre2(TextToken = 'AGM_36'),
         ManuelTexteCorps(TextToken = 'AGM_37'),
-        ManuelImage(TextureToken = 'UseOutGame_Manual_AG_09' MagnifiableWidthHeight = [574.0, 619.0]),
+
         ManuelTexteCorps(TextToken = 'AGM_38'),
             //
         ManuelTexteTitre3(TextToken = 'AGM_39'),
         ManuelTexteCorps(TextToken = 'AGM_40'),
-        ManuelImage(TextureToken = 'UseOutGame_Manual_AG_10' MagnifiableWidthHeight = [970.0, 407.0]),
+
         ManuelTexteCorps(TextToken = 'AGM_41'),
         ManuelTexteCorps(TextToken = 'AGM_42'),
         ManuelTexteCorps(TextToken = 'AGM_43'),
             //
         ManuelTexteTitre3(TextToken = 'AGM_44'),
         ManuelTexteCorps(TextToken = 'AGM_45'),
-        ManuelImage(TextureToken = 'UseOutGame_Manual_AG_11' MagnifiableWidthHeight = [856.0, 647.0]),
+
         ManuelTexteCorps(TextToken = 'AGM_46'),
         ManuelGrilleRules,
         ManuelTexteCorps(TextToken = 'AGM_465'),
         ManuelTexteCorps(TextToken = 'AGM_47'),
-        ManuelImage(TextureToken = 'UseOutGame_Manual_AG_115' MagnifiableWidthHeight = [1000.0, 122.0]),
+
         ManuelTexteCorps(TextToken = 'AGM_48'),
         ManuelGrille04,
         ManuelTexteCorps(TextToken = 'AGM_49'),
@@ -471,7 +471,7 @@ private GuideContainer is BUCKListDescriptor
         //Air combat
         ManuelTexteTitre2(TextToken = 'AGM_52'),
         ManuelTexteCorps(TextToken = 'AGM_53'),
-        ManuelImage(TextureToken = 'UseOutGame_Manual_AG_12' MagnifiableWidthHeight = [856.0, 647.0]),
+
         ManuelTexteCorps(TextToken = 'AGM_54'),
         // air squadrons
         ManuelTexteTitre2(TextToken = 'AGM_55'),
@@ -491,7 +491,7 @@ private GuideContainer is BUCKListDescriptor
         // reinforcement
         ManuelTexteTitre2(TextToken = 'AGM_65'),
         ManuelTexteCorps(TextToken = 'AGM_66'),
-        ManuelImage(TextureToken = 'UseOutGame_Manual_AG_13' MagnifiableWidthHeight = [818.0, 309.0]),
+
         // Resupply
         ManuelTexteTitre2(TextToken = 'AGM_67'),
         ManuelTexteCorps(TextToken = 'AGM_68'),

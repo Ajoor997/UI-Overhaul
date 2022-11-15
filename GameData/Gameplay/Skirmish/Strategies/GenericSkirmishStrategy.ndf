@@ -185,10 +185,6 @@ export Gen_Phase_Command is TSequenceGeneratorDescriptor
         ~/Airstrike_Offense,
         ~/Airstrike_Defense,
 
-        ~/SuperCommander,
-
-        ~/Attack_MBT,
-
         //Low prio mais peut servir si on n'a pas de zone dans nos couloirs
         ~/CaptureOneObjectifForAlliance,
 
@@ -224,12 +220,9 @@ export Gen_Phase_LastHope is TSequenceGeneratorDescriptor
         // Support & Supply
         //------------------------------
         ~/Support_Transports,
-
         ~/Supply_Skirmish,
 
         ~/Reco,
-
-
         ~/CaptureAllZoneObjectif,
 
         //------------------------------
@@ -254,10 +247,6 @@ export Gen_Phase_LastHope is TSequenceGeneratorDescriptor
         ~/Airstrike_Offense,
         ~/Airstrike_Defense,
 
-        ~/SuperCommander,
-
-        ~/Attack_MBT,
-
         //------------------------------
         // Défenses Avions Arti
         //------------------------------
@@ -281,7 +270,6 @@ export Gen_Phase_LastHope is TSequenceGeneratorDescriptor
 // les situations et appuyer le reste des missions
 Defenses_Airstrike_Arti_Shuffle_Deploy is
 [
-    ~/AirReco,
     ~/Defense_Static_Adaptive,
     ~/Airstrike_Assault,
     ~/Artillery_Expensive,
@@ -299,15 +287,12 @@ Airstrike_Arti_Shuffle is
     ~/Airstrike_SEAD,
     ~/Airstrike_Assault,
     ~/Artillery_Expensive,
-    ~/AirReco,
-    ~/Airstrike_Offense,
-    ~/Airstrike_Defense,
     ~/Artillery_TriggerHappy_1for4Corridors,
 ]
 
 Medium_Scaling is
 [
-    ~/Reco,
+    ~/Reco_Autogen,
     ~/Attack_Main_Autogen,
     ~/Attack_Helo_Autogen,
     ~/Attack_Adaptive_Autogen,
@@ -327,7 +312,7 @@ Medium_Scaling is
 
 Medium_Scaling_Attack is
 [
-    ~/Reco,
+    ~/Reco_Autogen,
     ~/Attack_Main_Autogen,
     ~/Attack_Helo_Autogen,
     ~/Attack_Adaptive_Autogen,

@@ -37,6 +37,9 @@ SubDepictionTowedUnit is TacticTowedSubDepictionTemplate
         TDepictionDescriptor(SelectorId = ['high', 'DCA_M167_Vulcan_20mm_US'] MeshDescriptor = Modele_DCA_M167_Vulcan_20mm_US ),
         TDepictionDescriptor(SelectorId = ['mid', 'DCA_M167_Vulcan_20mm_US'] MeshDescriptor = Modele_DCA_M167_Vulcan_20mm_US_MID ),
         TDepictionDescriptor(SelectorId = ['low', 'DCA_M167_Vulcan_20mm_US'] MeshDescriptor = Modele_DCA_M167_Vulcan_20mm_US_LOW ),
+        TDepictionDescriptor(SelectorId = ['high', 'DCA_Rapier_FSA_UK'] MeshDescriptor = Modele_DCA_Rapier_FSA_UK ),
+        TDepictionDescriptor(SelectorId = ['mid', 'DCA_Rapier_FSA_UK'] MeshDescriptor = Modele_DCA_Rapier_FSA_UK_MID ),
+        TDepictionDescriptor(SelectorId = ['low', 'DCA_Rapier_FSA_UK'] MeshDescriptor = Modele_DCA_Rapier_FSA_UK_LOW ),
         TDepictionDescriptor(SelectorId = ['high', 'DCA_Rapier_UK'] MeshDescriptor = Modele_DCA_Rapier_UK ),
         TDepictionDescriptor(SelectorId = ['mid', 'DCA_Rapier_UK'] MeshDescriptor = Modele_DCA_Rapier_UK_MID ),
         TDepictionDescriptor(SelectorId = ['low', 'DCA_Rapier_UK'] MeshDescriptor = Modele_DCA_Rapier_UK_LOW ),
@@ -82,9 +85,6 @@ SubDepictionTowedUnit is TacticTowedSubDepictionTemplate
         TDepictionDescriptor(SelectorId = ['high', 'Howz_M46_130mm_DDR'] MeshDescriptor = Modele_Howz_M46_130mm_DDR ),
         TDepictionDescriptor(SelectorId = ['mid', 'Howz_M46_130mm_DDR'] MeshDescriptor = Modele_Howz_M46_130mm_DDR_MID ),
         TDepictionDescriptor(SelectorId = ['low', 'Howz_M46_130mm_DDR'] MeshDescriptor = Modele_Howz_M46_130mm_DDR_LOW ),
-        TDepictionDescriptor(SelectorId = ['high', 'Howz_M46_130mm_SOV'] MeshDescriptor = Modele_Howz_M46_130mm_SOV ),
-        TDepictionDescriptor(SelectorId = ['mid', 'Howz_M46_130mm_SOV'] MeshDescriptor = Modele_Howz_M46_130mm_SOV_MID ),
-        TDepictionDescriptor(SelectorId = ['low', 'Howz_M46_130mm_SOV'] MeshDescriptor = Modele_Howz_M46_130mm_SOV_LOW ),
         TDepictionDescriptor(SelectorId = ['high', 'Mortier_2B9_Vasilek_SOV'] MeshDescriptor = Modele_Mortier_2B9_Vasilek_SOV ),
         TDepictionDescriptor(SelectorId = ['mid', 'Mortier_2B9_Vasilek_SOV'] MeshDescriptor = Modele_Mortier_2B9_Vasilek_SOV_MID ),
         TDepictionDescriptor(SelectorId = ['low', 'Mortier_2B9_Vasilek_SOV'] MeshDescriptor = Modele_Mortier_2B9_Vasilek_SOV_LOW ),
@@ -101,6 +101,7 @@ SubDepictionTowedUnit is TacticTowedSubDepictionTemplate
         ('DCA_I_Hawk_RFA', TInitialPoseAngle( MeshDescriptor = Modele_DCA_I_Hawk_RFA Angle = 0.0 )),
         ('DCA_I_Hawk_US', TInitialPoseAngle( MeshDescriptor = Modele_DCA_I_Hawk_US Angle = 0.0 )),
         ('DCA_M167_Vulcan_20mm_US', TInitialPoseAngle( MeshDescriptor = Modele_DCA_M167_Vulcan_20mm_US Angle = 0.0 )),
+        ('DCA_Rapier_FSA_UK', TInitialPoseAngle( MeshDescriptor = Modele_DCA_Rapier_FSA_UK Angle = 0.0 )),
         ('DCA_Rapier_UK', TInitialPoseAngle( MeshDescriptor = Modele_DCA_Rapier_UK Angle = 0.0 )),
         ('DCA_ZU_23_2_DDR', TInitialPoseAngle( MeshDescriptor = Modele_DCA_ZU_23_2_DDR Angle = 0.0 )),
         ('DCA_ZU_23_2_SOV', TInitialPoseAngle( MeshDescriptor = Modele_DCA_ZU_23_2_SOV Angle = 0.0 )),
@@ -116,12 +117,12 @@ SubDepictionTowedUnit is TacticTowedSubDepictionTemplate
         ('Howz_M101_105mm_RFA', TInitialPoseAngle( MeshDescriptor = Modele_Howz_M101_105mm_RFA Angle = 0.3490658503988659 )),
         ('Howz_M102_105mm_US', TInitialPoseAngle( MeshDescriptor = Modele_Howz_M102_105mm_US Angle = 0.3490658503988659 )),
         ('Howz_M46_130mm_DDR', TInitialPoseAngle( MeshDescriptor = Modele_Howz_M46_130mm_DDR Angle = 0.4363323129985824 )),
-        ('Howz_M46_130mm_SOV', TInitialPoseAngle( MeshDescriptor = Modele_Howz_M46_130mm_SOV Angle = 0.4363323129985824 )),
         ('Mortier_2B9_Vasilek_SOV', TInitialPoseAngle( MeshDescriptor = Modele_Mortier_2B9_Vasilek_SOV Angle = 0.5235987755982988 )),
     ]
     SubDepictionGenerators = [
         SubGeneratorsTowed_DCA_I_Hawk_RFA,
         SubGeneratorsTowed_DCA_I_Hawk_US,
+        SubGeneratorsTowed_DCA_Rapier_FSA_UK,
         SubGeneratorsTowed_DCA_Rapier_UK,
     ]
 )

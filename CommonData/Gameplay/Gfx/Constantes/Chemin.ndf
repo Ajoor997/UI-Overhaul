@@ -19,6 +19,6 @@ private Standard_FeedbackPorteeWidth is 200
 private PathAndArrowSizeMultiplierHelper is TPathAndArrowSizeMultiplierHelper
 (
     Camera = $/M3D/Camera/CameraPrincipale
-    LineSizeMultiplierParam = $/M3D/Shader/uniLineSizeMultiplierParam.Value
+    LineSizeMultiplierParam = $/M3D/Shader/LineSizeMultiplierParamVector
 )
 

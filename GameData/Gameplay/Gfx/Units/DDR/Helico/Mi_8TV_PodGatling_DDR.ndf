@@ -18,19 +18,18 @@ Modele_Mi_8TV_PodGatling_DDR_LOW is TResourceMultiMaterialMeshWithLod
     CivMask =  CivMask/Common
 )
 
-export ModelFile_Mi_8TV_PodGatling_DDR_Tourelle_01 is 'GameData:/Assets/3D/Units/Ammo/Tourelles/SOV/GUV/GUV_Gatling_t1.fbx'
+export ModelFile_Pod_GUV_Gatling_t1 is 'GameData:/Assets/3D/Units/Ammo/Tourelles/SOV/GUV/GUV_Gatling_t1.fbx'
 
 Modele_Mi_8TV_PodGatling_DDR_Tourelle_01 is TResourceMultiMaterialMeshWithLod
 (
-    FileName = ModelFile_Mi_8TV_PodGatling_DDR_Tourelle_01
+    FileName = ModelFile_Pod_GUV_Gatling_t1
     CivMask =  CivMask/Common
 )
 
-
-export ModelFile_Mi_8TV_PodGatling_DDR_Tourelle_02 is 'GameData:/Assets/3D/Units/Ammo/Tourelles/SOV/GUV/GUV_Gatling_t2.fbx'
+export ModelFile_Pod_GUV_Gatling_t2 is 'GameData:/Assets/3D/Units/Ammo/Tourelles/SOV/GUV/GUV_Gatling_t2.fbx'
 
 Modele_Mi_8TV_PodGatling_DDR_Tourelle_02 is TResourceMultiMaterialMeshWithLod
 (
-    FileName = ModelFile_Mi_8TV_PodGatling_DDR_Tourelle_02
+    FileName = ModelFile_Pod_GUV_Gatling_t2
     CivMask =  CivMask/Common
 )

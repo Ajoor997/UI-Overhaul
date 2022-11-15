@@ -1,5 +1,5 @@
-//A maintenir synchro avec EnumAllegiance.h
-template EAllegianceCommon
+//A maintenir synchro avec EnumAllianceStyle.h
+template EAllianceStyleCommon
 [
 ]
 is TBaseClass
@@ -11,8 +11,8 @@ is TBaseClass
     StartSpecificValue is 4
 )
 
-template EAllegianceModernWarfare [] is EAllegianceCommon
+template EAllianceStyleModernWarfare [] is EAllianceStyleCommon
 (
-    Otan    is StartSpecificValue
-    Pacte   is StartSpecificValue + 1
+    BLUFOR    is StartSpecificValue
+    REDFOR    is StartSpecificValue + 1
 )

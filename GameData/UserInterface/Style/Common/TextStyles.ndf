@@ -119,6 +119,29 @@ TextStyleWithStroke2 is TTextStyleRTTI
     FontSize = 1
     AllowSmallFont = true
 )
+TitreChallenge_strokeBig is TTextStyleRTTI
+(
+    ColorBottom = [255, 255, 255, 255]
+    ColorUp     = [255, 255, 255, 255]
+    ColorStroke = [  0,   0,   0, 180]
+    Stroke = true
+    //StrokeHardness = 1
+    StrokeSize = 1
+    FontSize = 1
+    AllowSmallFont = true
+)
+TextStyleDefaultWithStroke_labelVille is TTextStyleRTTI
+(
+    ColorBottom = [255, 255, 255, 255]
+    ColorUp     = [255, 255, 255, 255]
+    ColorStroke = [  0,   0,   0, 180]
+    Stroke = true
+    StrokeSize = 0.916
+    StrokeHardness = 1
+    TextThickness = 0.39
+    FontSize = 1
+    AllowSmallFont = true
+)
 
 TextStyleWithStrokeLoading is TTextStyleRTTI
 (

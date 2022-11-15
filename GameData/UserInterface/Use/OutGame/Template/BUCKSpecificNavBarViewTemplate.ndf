@@ -3,6 +3,10 @@ template MainBackButtonContainer
     ButtonDefaultToken  : string,
     BackMapping : TEugBMutablePBaseClass,
     ButtonLeftClickSound : TSoundDescriptor = SoundEvent_BackToMainMenu,
+
+    AlignementToAnchor : float2  = [0.0, 1.0],
+    AlignementToFather : float2 = [0.0, 1.0],
+    MagnifiableOffset : float2 = [0, 0.0],
 ]
  is BUCKContainerDescriptor
 (
@@ -17,10 +21,10 @@ template MainBackButtonContainer
             ElementName = "GlobalBackButton"
             ComponentFrame = TUIFramePropertyRTTI
             (
-                RelativeOffset = [0, 0.0]
+                MagnifiableOffset = <MagnifiableOffset>
                 MagnifiableWidthHeight = [200, 60]
-                AlignementToAnchor = [0.0, 1.0]
-                AlignementToFather = [0.0, 1.0]
+                AlignementToAnchor = <AlignementToAnchor>
+                AlignementToFather = <AlignementToFather>
             )
             HasBackground = true
             BackgroundBlockColorToken = "HUBOutGameNavBar/ButtonOverlay"

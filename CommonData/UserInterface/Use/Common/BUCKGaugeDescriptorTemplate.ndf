@@ -27,8 +27,6 @@ template BUCKGaugeValueDescriptor
 
     SpotlightComponent : TBUCKContainerDescriptor = nil,
 
-    UniformDrawer : TUIUniformDrawer = $/UserInterface/UIUniformDrawer,
-
     HasBackground : bool = false,
     BackgroundBlockColorToken : string = "",
 
@@ -87,7 +85,7 @@ is TBUCKGaugeValueDescriptor
 
     SpotlightComponent = <SpotlightComponent>
 
-    UniformDrawer = <UniformDrawer>
+    UniformDrawer = $/UserInterface/UIUniformDrawer
 
     HasBackground = <HasBackground>
     BackgroundBlockColorToken = <BackgroundBlockColorToken>
@@ -147,8 +145,6 @@ template BUCKGaugeDescriptor
     IsClippable :bool = true,
 
     SpotlightComponent : TBUCKContainerDescriptor = nil,
-
-    UniformDrawer : TUIUniformDrawer = $/UserInterface/UIUniformDrawer,
 
     HasBackground : bool = false,
     BackgroundBlockColorToken : string = "",
@@ -215,7 +211,7 @@ is TBUCKGaugeDescriptor
 
     SpotlightComponent = <SpotlightComponent>
 
-    UniformDrawer = <UniformDrawer>
+    UniformDrawer = $/UserInterface/UIUniformDrawer
 
     HasBackground = <HasBackground>
     BackgroundBlockColorToken = <BackgroundBlockColorToken>

@@ -75,8 +75,6 @@ SmartGroupPanelHeadList is BUCKListDescriptor
                 TypefaceToken = "UISecondFont"
                 BigLineAction = ~/BigLineAction/CutByDots
 
-                UniformDrawer = $/UserInterface/UIUniformDrawer
-
                 TextDico = ~/LocalisationConstantes/dico_interface_ingame
 
                 TextColor = "Cyan"
@@ -157,8 +155,6 @@ template SmartGroupActionButton
 
             TypefaceToken   = "UIMainFont"
             BigLineAction = ~/BigLineAction/BalancedMultiline
-
-            UniformDrawer = $/UserInterface/UIUniformDrawer
 
             TextDico = ~/LocalisationConstantes/dico_interface_ingame
 

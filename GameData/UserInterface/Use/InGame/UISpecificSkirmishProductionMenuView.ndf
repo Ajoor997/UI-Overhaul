@@ -36,6 +36,8 @@ template BUCKSpecificSkirmishProductionMenuMainComponentDescriptor
             Axis = ~/ListAxis/Horizontal
             BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
 
+            //FirstMargin = TRTTILength(Magnifiable = (<IsFromStrategic> ? 0 : 10.0))
+            //InterItemMargin = TRTTILength(Magnifiable = 30.0)
             FirstMargin = TRTTILength(Magnifiable = 0.0)
             InterItemMargin = TRTTILength(Magnifiable = 5.0)
             LastMargin = TRTTILength(Magnifiable = 10.0)
@@ -146,7 +148,7 @@ private PointsCommandement is BUCKListDescriptor
         (
             ComponentDescriptor = BUCKTextureDescriptor
             (
-                ElementName = "RequisitionPoints"
+                ElementName = "CommandPoints"
 
                 ComponentFrame = TUIFramePropertyRTTI
                 (
@@ -156,7 +158,7 @@ private PointsCommandement is BUCKListDescriptor
                     AlignementToAnchor = [0.0, 0.5]
                 )
 
-                TextureToken = "UseInGame_RequisitionPoints"
+                TextureToken = "UseInGame_CommandPoints"
                 Components =
                  [
                     BUCKSpecificHintableArea
@@ -192,8 +194,6 @@ private PointsCommandement is BUCKListDescriptor
 
                 TypefaceToken = "Liberator"
                 BigLineAction = ~/BigLineAction/CutByDots
-
-                UniformDrawer = $/UserInterface/UIUniformDrawer
 
                 TextDico = ~/LocalisationConstantes/dico_interface_ingame
                 TextToken = "HPROD_CMDP"
@@ -233,8 +233,6 @@ private PointsCommandement is BUCKListDescriptor
 
                 TypefaceToken = "Liberator"
                 BigLineAction = ~/BigLineAction/CutByDots
-
-                UniformDrawer = $/UserInterface/UIUniformDrawer
 
                 TextDico = ~/LocalisationConstantes/dico_interface_ingame
                 TextToken = "HPROD_CMDI"
@@ -348,9 +346,10 @@ private ChronoPointCommandement is BUCKListDescriptor
                 TypefaceToken = "Liberator"
                 BigLineAction = ~/BigLineAction/CutByDots
 
-                UniformDrawer = $/UserInterface/UIUniformDrawer
+                TextColor = "CyanChrono"
+                //"Cyan"
+                //UniformDrawer = $/UserInterface/UIUniformDrawer
 
-                TextColor = "Cyan"
                 TextSize = "16"
 
                 Hint = BUCKSpecificHintableArea
@@ -433,8 +432,6 @@ private NombreSecteur is BUCKListDescriptor
                 TypefaceToken = "Liberator"
                 BigLineAction = ~/BigLineAction/CutByDots
 
-                UniformDrawer = $/UserInterface/UIUniformDrawer
-
                 TextDico = ~/LocalisationConstantes/dico_interface_ingame
                 TextToken = "WIP_5"
 
@@ -454,7 +451,7 @@ private NombreSecteur is BUCKListDescriptor
 
 //-------------------------------------------------------------------------------------
 
-// Container for Requisition points, income and income countdown
+// Container for Command Points, income and income countdown
 private SkirmishProductionMenuCommandPointsAndIncomeContainer is BUCKSpecificButton
 (
     ElementName = "MainButton"
@@ -495,7 +492,7 @@ private SkirmishProductionMenuCombatGroupList is BUCKListDescriptor
     Axis = ~/ListAxis/Horizontal
     BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
 
-    InterItemMargin = TRTTILength(Magnifiable = 1.0)
+    InterItemMargin = TRTTILength(Magnifiable = 3.0)
 
     // envoie SkirmishProductionMenuCombatGroupButton
 )
@@ -510,7 +507,7 @@ private SkirmishFromStrategicProductionMenuPawnList is BUCKListDescriptor
     Axis = ~/ListAxis/Horizontal
     BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
 
-    InterItemMargin = TRTTILength(Magnifiable = 1.0)
+    InterItemMargin = TRTTILength(Magnifiable = 3.0)
 
     // envoie SkirmishProductionMenuCombatGroupButton
 )
@@ -571,7 +568,6 @@ private SmartGroupTypeProductionButton is BUCKSpecificButton
     HasText = true
     TextElementName = ""
     TextToken = "HUD_PRDGRP"
-    UniformDrawer = $/UserInterface/UIUniformDrawer
 
     HintBodyToken  = "deckSGop"
 
@@ -620,7 +616,6 @@ private DeckTypeProductionButton is BUCKSpecificButton
     HasText = true
     TextElementName = ""
     TextToken = "HUD_PRDDCK"
-    UniformDrawer = $/UserInterface/UIUniformDrawer
 
     HintTitleToken  = ""
     HintBodyToken  = "deckOp"
@@ -691,8 +686,6 @@ private SkirmishProductionMenuDivisionText is BUCKTextDescriptor
     TypefaceToken = "UIMainFont"
     BigLineAction = ~/BigLineAction/CutByDots
 
-    UniformDrawer = $/UserInterface/UIUniformDrawer
-
     TextSize = "24"
     TextDico = ~/LocalisationConstantes/dico_unites
     TextColor = "LighterGray"
@@ -727,6 +720,8 @@ SkirmishProductionMenuCategoryButton is BUCKSpecificButton
     ButtonMagnifiableWidthHeight = [55.0, 30.0]
     BigLineAction = ~/BigLineAction/ResizeFont
 
+
+
     IsTogglable = true
     RadioButtonManager = ~/SkirmishProductionMenuCategoryButtonRadioButtonManager
 
@@ -738,8 +733,6 @@ SkirmishProductionMenuCategoryButton is BUCKSpecificButton
 
     HasText = true
     TextElementName = "ButtonTextElement"
-    UniformDrawer = $/UserInterface/UIUniformDrawer
-
     TextDico = ~/LocalisationConstantes/dico_interface_ingame
     HintableAreaElementName = "ButtonHintableArea"
     HintDico = ~/LocalisationConstantes/dico_interface_ingame
@@ -762,15 +755,19 @@ SkirmishProductionMenuCategoryButton is BUCKSpecificButton
 
 private SkirmishProductionMenuPawnButtonRadioButtonManager is TBUCKRadioButtonManager()
 
+// boutons de production en Steelman
 SkirmishProductionMenuPawnButton is BUCKSpecificButton
 (
     RoundedCorner = true
     BackgroundBlockColorToken  = ""
-
-    TextColorToken = "ButtonHUD/Text2"
+    PanelRoundedCorner_BackgroundBlockColorToken = 'BoutonTemps_pawn'
+    RoundedVertexes = [true, false, false, true]
+    TextColorToken = "ButtonHUD/Text2_pawn"
+    TextTypefaceToken = 'Liberator'
     TextSizeToken = '16'
     ButtonRelativeWidthHeight = [0.0, 0.0]
-    ButtonMagnifiableWidthHeight = [84.0, 30.0]
+    ButtonMagnifiableWidthHeight = [158.0, 36.0]
+    ButtonMagnifiableOffset = [0,-5]
 
     IsTogglable = true
     RadioButtonManager = ~/SkirmishProductionMenuPawnButtonRadioButtonManager
@@ -778,10 +775,10 @@ SkirmishProductionMenuPawnButton is BUCKSpecificButton
     HidePointerEvents = true
 
     OverrideTextElementName = true
-
+    BigLineAction = ~/BigLineAction/MultiLine
+    TextPadding = TRTTILength4 ( Magnifiable = [5,2,0,5])
     HasText = true
     TextElementName = "ButtonTextElement"
-    UniformDrawer = $/UserInterface/UIUniformDrawer
 
     TextDico = ~/LocalisationConstantes/dico_interface_ingame
     HintDico = ~/LocalisationConstantes/dico_interface_ingame
@@ -795,7 +792,7 @@ SkirmishProductionMenuPawnButton is BUCKSpecificButton
     TextParagraphStyle = TParagraphStyleRTTI
     (
         Alignment = UIText_Center
-        VerticalAlignment = UIText_VerticalCenter
+        VerticalAlignment = UIText_Up
         InterLine = 0
     )
 )
@@ -809,12 +806,13 @@ SkirmishProductionMenuCombatGroupButton is BUCKSpecificButton
     // style spécial pour ces boutons
     RoundedCorner = true
     BackgroundBlockColorToken  = ""
-
-    TextColorToken = "ButtonHUD/Text2"
-    TextSizeToken = '16'
+    PanelRoundedCorner_BackgroundBlockColorToken = 'BoutonTemps_pawn'
+    TextColorToken = "ButtonHUD/Text2_pawn"
+    TextSizeToken = '14'
     ButtonRelativeWidthHeight = [0.0, 0.0]
-    ButtonMagnifiableWidthHeight = [84.0*2, 30.0]
-
+    ButtonMagnifiableWidthHeight = [158, 30.0]
+    ButtonMagnifiableOffset = [0,-2]
+    TextTypefaceToken = 'Eurostyle_Italic'
     IsTogglable = true
     RadioButtonManager = ~/SkirmishProductionMenuCombatGroupButtonRadioButtonManager
 
@@ -824,7 +822,6 @@ SkirmishProductionMenuCombatGroupButton is BUCKSpecificButton
 
     HasText = true
     TextElementName = "ButtonTextElement"
-    UniformDrawer = $/UserInterface/UIUniformDrawer
 
     TextDico = ~/LocalisationConstantes/dico_interface_ingame
     HintDico = ~/LocalisationConstantes/dico_interface_ingame

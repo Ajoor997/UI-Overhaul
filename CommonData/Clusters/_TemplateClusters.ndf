@@ -523,23 +523,3 @@ template TemplateClusterLoadDirectoryNDF_And_Files_ForNoEditor
         NeedsChecksum = false
     )
 )
-//-----------------------------------------------------------------------------
-//*****************************************************************************
-//-----------------------------------------------------------------------------
-
-template TemplateClusterScenarioLoop
-[
-    ClusterLoadKey = MiscStrConstante/MapLoadType_Std,
-    MapTypeMask = MapTypeMask/All,
-] is TClusterRunAllScenarioLoop
-(
-    MapTypeMask = <MapTypeMask>
-    ClusterMap = TClusterMapChooser
-    (
-        DefaultMapId = $/TestOption/DefaultMapId
-        ClusterLoadKey = <ClusterLoadKey>
-    )
-)
-//-----------------------------------------------------------------------------
-//*****************************************************************************
-//-----------------------------------------------------------------------------

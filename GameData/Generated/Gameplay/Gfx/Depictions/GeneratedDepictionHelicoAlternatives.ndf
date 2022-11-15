@@ -259,6 +259,12 @@ Alternatives_F15C_Eagle_AA_US is
     DepictionDescriptor_LOD_AirplaneMid( MeshDescriptor = Modele_F15C_Eagle_AA_US_MID ),
     DepictionDescriptor_LOD_AirplaneLow( MeshDescriptor = Modele_F15C_Eagle_AA_US_LOW ),
 ]
+Alternatives_F16C_LGB_US is 
+[
+    DepictionDescriptor_LOD_AirplaneHigh( MeshDescriptor = Modele_F16C_LGB_US ),
+    DepictionDescriptor_LOD_AirplaneMid( MeshDescriptor = Modele_F16C_LGB_US_MID ),
+    DepictionDescriptor_LOD_AirplaneLow( MeshDescriptor = Modele_F16C_LGB_US_LOW ),
+]
 Alternatives_F16E_AA_US is 
 [
     DepictionDescriptor_LOD_AirplaneHigh( MeshDescriptor = Modele_F16E_AA_US ),
@@ -648,6 +654,12 @@ Alternatives_MiG_25RBF_SOV is
     DepictionDescriptor_LOD_AirplaneHigh( MeshDescriptor = Modele_MiG_25RBF_SOV ),
     DepictionDescriptor_LOD_AirplaneMid( MeshDescriptor = Modele_MiG_25RBF_SOV_MID ),
     DepictionDescriptor_LOD_AirplaneLow( MeshDescriptor = Modele_MiG_25RBF_SOV_LOW ),
+]
+Alternatives_MiG_27K_LGB_SOV is 
+[
+    DepictionDescriptor_LOD_AirplaneHigh( MeshDescriptor = Modele_MiG_27K_LGB_SOV ),
+    DepictionDescriptor_LOD_AirplaneMid( MeshDescriptor = Modele_MiG_27K_LGB_SOV_MID ),
+    DepictionDescriptor_LOD_AirplaneLow( MeshDescriptor = Modele_MiG_27K_LGB_SOV_LOW ),
 ]
 Alternatives_MiG_27M_SOV is 
 [
@@ -1170,6 +1182,12 @@ Alternatives_UH1D_RFA is
     DepictionDescriptor_LOD_HelicoHigh( MeshDescriptor = Modele_UH1D_RFA ),
     DepictionDescriptor_LOD_HelicoMid( MeshDescriptor = Modele_UH1D_RFA_MID ),
     DepictionDescriptor_LOD_HelicoLow( MeshDescriptor = Modele_UH1D_RFA_LOW ),
+]
+Alternatives_UH1D_Supply_NL is 
+[
+    DepictionDescriptor_LOD_HelicoHigh( MeshDescriptor = Modele_UH1D_Supply_NL ),
+    DepictionDescriptor_LOD_HelicoMid( MeshDescriptor = Modele_UH1D_Supply_NL_MID ),
+    DepictionDescriptor_LOD_HelicoLow( MeshDescriptor = Modele_UH1D_Supply_NL_LOW ),
 ]
 Alternatives_UH1D_Supply_RFA is 
 [

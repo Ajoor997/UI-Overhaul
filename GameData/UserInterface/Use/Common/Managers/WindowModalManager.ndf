@@ -211,8 +211,6 @@ TemporalModal is BaseModal
                             AlignementToFather = [0.0, 0.5]
                         )
 
-                        UniformDrawer = $/UserInterface/UIUniformDrawer
-
                         VerticalFitStyle = ~/FitStyle/FitToContent
                         HorizontalFitStyle = ~/FitStyle/FitToContent
 
@@ -286,6 +284,7 @@ ConfirmModal is BaseModal
                 BackgroundBlockColorToken = 'loginBoutonBackground_cyan'
                 TextSizeToken = '24'
                 BorderThicknessToken = '3'
+                Mapping = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ENTER ) )
             )
         ),
     ]
@@ -341,6 +340,7 @@ CancelModal is BaseModal
                 BackgroundBlockColorToken = 'loginBoutonBackground_vert'
                 TextSizeToken = '24'
                 BorderThicknessToken = '3'
+                Mapping = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ESCAPE ) )
             )
         ),
     ]
@@ -396,6 +396,7 @@ BackModal is BaseModal
                 BackgroundBlockColorToken = 'loginBoutonBackground_vert'
                 TextSizeToken = '24'
                 BorderThicknessToken = '3'
+                Mapping = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ESCAPE ) )
             )
         ),
     ]
@@ -453,6 +454,7 @@ ConfirmCancelModal is BaseModal
                 BackgroundBlockColorToken = 'loginBoutonBackground_cyan'
                 TextSizeToken = '24'
                 BorderThicknessToken = '3'
+                Mapping = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ENTER ) )
             )
         ),
 
@@ -472,6 +474,7 @@ ConfirmCancelModal is BaseModal
                 BackgroundBlockColorToken = 'loginBoutonBackground_vert'
                 TextSizeToken = '24'
                 BorderThicknessToken = '3'
+                Mapping = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ESCAPE ) )
             )
         ),
     ]
@@ -505,7 +508,6 @@ ConfirmStandardCancelModal is BaseModal
             TextDico = ~/LocalisationConstantes/dico_interface_outgame
 
             TypefaceToken = "Liberator"
-            UniformDrawer = $/UserInterface/UIUniformDrawer
         ),
     ]
 
@@ -518,6 +520,7 @@ ConfirmStandardCancelModal is BaseModal
                 ElementName = "ConfirmButton"
                 TextToken = "BTN_CONFIR"
                 ButtonMagnifiableWidthHeight = ModalsButtonsWidthHeight
+                Mapping = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ENTER ) )
             )
         ),
 
@@ -537,6 +540,7 @@ ConfirmStandardCancelModal is BaseModal
                 ElementName = "CancelButton"
                 TextToken = "BTN_CANCEL"
                 ButtonMagnifiableWidthHeight = ModalsButtonsWidthHeight
+                Mapping = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ESCAPE ) )
             )
         ),
     ]

@@ -33,6 +33,7 @@ export colonelAttackDescriptor is TMacroActionDescriptor_Attack_Specific
         TAttackRatioSettingHolder(RatioMinimumPourAttaquer = 0.01 CompterLesUnitesEnZoneExtendedDansLaMenace = true UtiliserMenaceLaPlusProcheAuLieuDeLaPlusFaible = true),
         TMacroActionProductionSettingHolder(DisableReinforcement = true),
         TMacroActionLifetimeSettingHolder(MaintainForever = true), //IMPORTANT
+        TDisableUnitToReleaseSettingHolder(),
     ]
 )
 ///////////////////////////////////////////////////////////////////////////////////////////
@@ -47,6 +48,7 @@ export colonelDefenseDescriptor is TMacroActionDescriptor_Defense_Specific
         TMacroActionProductionSettingHolder(DisableReinforcement = true),
         TMacroActionLifetimeSettingHolder(MaintainForever = true), //IMPORTANT
         TIgnoreSafePathSettingHolder(), //on esquive pas la menace sur le chemin
+        TDisableUnitToReleaseSettingHolder(),
     ]
 )
 ///////////////////////////////////////////////////////////////////////////////////////////
@@ -61,6 +63,7 @@ export colonelArtilleryCounterBatteryDescriptor is TMacroActionDescriptor_Artill
         TArtilleryPlayerMissionSettingHolder(
             AuthorizedTargetTags = ["Artillerie_MLRS", "Artillerie_Longue_Portee", "Artillerie_Courte_Portee"] TargetFilter = ETargetFilter_HasShot MaxDurationForTargetValidity = 60 MinDurationForTargetValidity = 10),
         TArtilleryStrikeSettingHolder(DelaytBetweenTargetDeathAndNewStrike = 3),
+        TDisableUnitToReleaseSettingHolder(),
     ]
 )
 ///////////////////////////////////////////////////////////////////////////////////////////
@@ -74,6 +77,7 @@ export colonelArtilleryDescriptor is TMacroActionDescriptor_Artillery_PlayerMiss
         TMacroActionLifetimeSettingHolder(MaintainForever = true), //IMPORTANT
         TArtilleryPlayerMissionSettingHolder(AuthorizedTargetTags = ["AllUnits"] TargetFilter = ETargetFilter_UnitSeen MinDurationForTargetValidity = 10),
         TArtilleryStrikeSettingHolder(DelaytBetweenTargetDeathAndNewStrike = 3),
+        TDisableUnitToReleaseSettingHolder(),
     ]
 )
 ///////////////////////////////////////////////////////////////////////////////////////////
@@ -85,6 +89,7 @@ export colonelAirstrikeDescriptor is TMacroActionDescriptor_AirStrike_Specific
         TMacroActionProductionSettingHolder(ProdProperties = [TProdProperty_LaunchAsSoonAsPossible] PoolModelList = []),
         TMacroActionLifetimeSettingHolder(MaintainForever = true), //IMPORTANT
         TAirStrikeSettingHolder(AnnulerSupportSiAttaqueEchoue = true TypesDeRequetesAcceptees = ~/EAirStrikeRequestType/All),
+        TDisableUnitToReleaseSettingHolder(),
     ]
 )
 ///////////////////////////////////////////////////////////////////////////////////////////
@@ -95,6 +100,7 @@ export colonelAirRecoDescriptor is TMacroActionDescriptor_AirReco_Specific
         TGenerationSettingHolder(GenerationType = TGenerationType_FixedSize NumberLaunchBasedOnGenerationType = 1),
         TMacroActionLifetimeSettingHolder(MaintainForever = true), //IMPORTANT
         AirRecoMissionLaunchSettingHolderTemplate(MaxAirplaneCountOnBattlefield = 1000 TicksBetweenTwoLaunch = 0 TicksBetweenTwoMissions = 0),
+        TDisableUnitToReleaseSettingHolder(),
     ]
 )
 ///////////////////////////////////////////////////////////////////////////////////////////
@@ -109,6 +115,7 @@ export colonelSupplyDescriptor is TMacroActionDescriptor_Supply_Specific
             (ESupplyableType_Life, 0.5),
         ]),
         TMacroActionLifetimeSettingHolder(MaintainForever = true), //IMPORTANT
+        TDisableUnitToReleaseSettingHolder(),
     ]
 )
 ///////////////////////////////////////////////////////////////////////////////////////////

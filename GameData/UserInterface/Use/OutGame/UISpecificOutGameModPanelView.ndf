@@ -707,8 +707,6 @@ BUCKSpecificOutGameModPanelMainComponentDescriptor is WindowFrame
             TypefaceToken = "Liberator"
             BigLineAction = ~/BigLineAction/MultiLine
 
-            UniformDrawer = $/UserInterface/UIUniformDrawer
-
             TextToken = 'T_MODCENT'
             TextDico = ~/LocalisationConstantes/dico_interface_outgame
 

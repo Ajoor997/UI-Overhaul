@@ -89,7 +89,6 @@ private Titre_channel is BUCKContainerDescriptor
 
     HasBackground = true
     BackgroundBlockColorToken = "ListeExcel/Cartouche"
-    UniformDrawer = $/UserInterface/UIUniformDrawer
 
     Components =
     [

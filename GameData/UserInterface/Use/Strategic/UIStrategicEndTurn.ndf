@@ -4,70 +4,6 @@ private EndTurnVerticalBarOffset is 12.0
 
 //----------------------------------------------------------------------
 
-private StrategicEndTurnContent is BUCKListDescriptor
-(
-    ComponentFrame = TUIFramePropertyRTTI
-    (
-        MagnifiableWidthHeight = [0.0, 0.0]
-        AlignementToFather = [0.5,0]
-        AlignementToAnchor = [0.5,0]
-
-
-    )
-
-    Axis = ~/ListAxis/Vertical
-    BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
-
-    Elements =
-    [
-        BUCKListElementDescriptor
-        (
-            ComponentDescriptor = BUCKContainerDescriptor
-            (
-                UniqueName = "StrategicDateContainer"
-                ComponentFrame = TUIFramePropertyRTTI
-                (
-                    //MagnifiableOffset = [20,0]
-                )
-
-                FitStyle = ~/ContainerFitStyle/FitToContent
-                // envoie BUCKSpecificStrategicDateMainComponentDescriptor
-            )
-        ),
-    ]
-
-    BackgroundComponents =
-    [
-    BUCKTextDescriptor
-    (
-        ElementName = 'NbTurns'
-        ComponentFrame = TUIFramePropertyRTTI
-        (
-            MagnifiableWidthHeight = [80,16]
-            MagnifiableOffset = [62,25]
-
-        )
-
-        ParagraphStyle = CenteredParagraphStyle
-        HorizontalFitStyle = ~/FitStyle/UserDefined
-        VerticalFitStyle = ~/FitStyle/UserDefined
-
-        HasBackground = true
-        BackgroundBlockColorToken = 'SM_Ebony'
-        //TextPadding = TRTTILength4( Magnifiable = [10.0, 0.0, 10.0, 0.0] )
-
-        TextStyle = 'Default'
-
-        TextToken = 'CptTour'
-        TextDico = ~/LocalisationConstantes/dico_interface_ingame
-
-        TypefaceToken = "UIMainFont"
-        TextColor = "SM_paleSilver"
-        TextSize = "14"
-
-    )
-    ]
-)
 
 //----------------------------------------------------------------------
 
@@ -77,7 +13,7 @@ private StrategicEndTurnMainComponent is BUCKContainerDescriptor
     (
         RelativeWidthHeight = [1,0]
         MagnifiableWidthHeight = [0.0, 270.0]
-        MagnifiableOffset = [0,5]
+        MagnifiableOffset = [0,4]
         AlignementToAnchor = [0.5, 1.0]
         AlignementToFather = [0.5, 1.0]
     )
@@ -98,14 +34,14 @@ private StrategicEndTurnMainComponent is BUCKContainerDescriptor
             BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
             Axis = ~/ListAxis/Vertical
             FirstMargin = TRTTILength (Magnifiable = 4)
-            InterItemMargin = TRTTILength ( Magnifiable = 2                             )
+            InterItemMargin = TRTTILength ( Magnifiable = 4                             )
             Elements =
             [
-                // affichage de la date
-                BUCKListElementDescriptor
-                (
-                    ComponentDescriptor = ~/StrategicEndTurnContent
-                ),
+                {// affichage de la date
+                                BUCKListElementDescriptor
+                                (
+                                    ComponentDescriptor = ~/StrategicEndTurnContent
+                                ),}
                 // bouton
                 BUCKListElementDescriptor
                 (
@@ -170,7 +106,8 @@ private BoutonNextTurn is BUCKButtonDescriptor
                         AlignementToFather = [0.0, 0.5]
                     )
 
-                    TextureToken = "UseStrategic_EndTurnButton"
+                    TextureToken = "icone_nextTurn"
+                    TextureColorToken = 'SM_paleSilver'
 
                 )
             ),

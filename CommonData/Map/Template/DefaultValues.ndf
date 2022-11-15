@@ -29,4 +29,5 @@ DefaultValues is TBaseClass
         $/M3D/Scene/World_SparseDBRTex,
     ]
 
+    private SkyMapHighAltitudeColor is float4[0.007, 0.008, 0.007, 1.0]
 )

@@ -71,8 +71,10 @@ private WeaponPanelWeaponButton is BUCKButtonDescriptor
     ComponentFrame = TUIFramePropertyRTTI
     (
         // la componentFrame récupère la valeur de WeaponPanelMinSize de UISpecificUnitSelectionPanelViewDescriptor me semble t il
-        RelativeWidthHeight = [1.0, 0.0]
-        MagnifiableWidthHeight = [0.0, 120.0]
+        RelativeWidthHeight = [1.0, 1.0]
+        MagnifiableWidthHeight = [0.0, -6.0]
+        AlignementToAnchor = [0.0, 0.5]
+        AlignementToFather = [0.0, 0.5]
     )
 
     IsTogglable = true
@@ -146,7 +148,7 @@ is BUCKListDescriptor
 // -------------------------------------------------------------------------------------------------
 
 // Overblock
-private WeaponPanelWeaponButtonOverblock is BUCKContainerDescriptor
+private WeaponPanelWeaponButtonOverblock is PanelRoundedCorner
 (
     ElementName = "WeaponPanelWeaponButtonOverblock"
     ComponentFrame = TUIFramePropertyRTTI
@@ -160,56 +162,107 @@ private WeaponPanelWeaponButtonOverblock is BUCKContainerDescriptor
 
 // -------------------------------------------------------------------------------------------------
 // Weapon status (Reloading, Aiming, Firing...)
-private WeaponPanelWeaponStatus is BUCKTextDescriptor
+
+private WeaponPanelWeaponStatus is BUCKContainerDescriptor
 (
-    ElementName = 'ReloadStateText'
-    ComponentFrame = TUIFramePropertyRTTI(
-        MagnifiableWidthHeight = [100.0, 15.0]
-        MagnifiableOffset = [15, 0]  //container location
-    )
-
-    ParagraphStyle = TParagraphStyleRTTI
+    ElementName = "WeaponPanelWeaponStatusContainer"
+    ComponentFrame = TUIFramePropertyRTTI
     (
-        Alignment = UIText_Center
-        VerticalAlignment = UIText_VerticalCenter
-        InterLine = 0
+        RelativeWidthHeight = [1.0, 0.0]
+        MagnifiableWidthHeight = [-4.0, 18.0]
+        AlignementToAnchor = [0.5, 0.5]
+        AlignementToFather = [0.5, 0.5]
     )
 
-    ChildFitToContent = true
+    HasBackground = true
+    BackgroundBlockColorToken = "H2_bleu_2_hint"
 
-    HasBackground = false
-    BackgroundBlockColorToken = 'Orange'
-    TextStyle = "Default"
-
-    VerticalFitStyle= ~/FitStyle/UserDefined
-    HorizontalFitStyle = ~/FitStyle/UserDefined
-
-    TypefaceToken = "Liberator"
-    BigLineAction = ~/BigLineAction/CutByDots
-    TextPadding = TRTTILength4(Magnifiable = [2.0, 2.0, 2.0, 2.0])
-
-    UniformDrawer = $/UserInterface/UIUniformDrawer
-
-    TextDico = ~/LocalisationConstantes/dico_interface_ingame
-
-    TextColor = "BlancEquipe"
-    TextSize = "12"
-
-    // Hints
-    Hint = BUCKSpecificHintableArea
-    (
-        ElementName = 'WeaponReloadStateHint'
-        DicoToken = ~/LocalisationConstantes/dico_interface_ingame
-        HintTitleToken = "HSL_WGAUGT"
-        HintBodyToken = "HSL_WGAUGB"
-        HintExtendedToken = "HSL_WGAUGE"
-    )
+    //BackgroundBlockColorToken = 'UnitLabelInfo_Mod'
+    //BorderLineColorToken = 'AirUnitMiniCardBorder'
 
     Components =
     [
-        PanelRoundedCorner(
-            BackgroundBlockColorToken = 'UnitLabelInfo_Mod'
-            BorderLineColorToken = 'AirUnitMiniCardBorder'
+        BUCKListDescriptor
+        (
+            ElementName = "WeaponPanelWeaponStatusList"
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                RelativeWidthHeight = [0.0, 1.0]
+                AlignementToAnchor = [0.5, 0.5]
+                AlignementToFather = [0.5, 0.5]
+            )
+            Axis = ~/ListAxis/Horizontal
+
+            Elements =
+            [
+                BUCKListElementDescriptor
+                (
+                    ComponentDescriptor = BUCKChronoAnimatedTextureDescriptor
+                    (
+                        ElementName = "ReloadIcon"
+                        ComponentFrame = TUIFramePropertyRTTI
+                        (
+                            MagnifiableWidthHeight = [16.0, 16.0]
+                            AlignementToFather = [0.0, 0.5]
+                            AlignementToAnchor = [0.0, 0.5]
+                        )
+
+                        ChronoDrawer = $/UserInterface/ChronoDrawerCommon
+
+                        ChronoTexture = "icone_reticule"
+                        TextureToken = "icone_reticule_vide"
+
+                        ChronoTextureColor0 = "Transparent"
+                        ChronoTextureColor1 = "Vert"
+
+                        TextureFrame = TUIFramePropertyRTTI(RelativeWidthHeight = [1.0, 1.0])
+                    )
+                ),
+                BUCKListElementDescriptor
+                (
+                    ComponentDescriptor = BUCKTextDescriptor
+                    (
+                        ElementName = 'ReloadStateText'
+                        ComponentFrame = TUIFramePropertyRTTI
+                        (
+                            AlignementToAnchor = [0.0, 0.5]
+                            AlignementToFather = [0.0, 0.5]
+                        )
+
+                        ParagraphStyle = TParagraphStyleRTTI
+                        (
+                            Alignment = UIText_Center
+                            VerticalAlignment = UIText_VerticalCenter
+                            InterLine = 0
+                        )
+
+                        ChildFitToContent = true
+                        TextStyle = "Default"
+
+                        VerticalFitStyle= ~/FitStyle/FitToContent
+                        HorizontalFitStyle = ~/FitStyle/FitToContent
+
+                        TypefaceToken = "Liberator"
+                        BigLineAction = ~/BigLineAction/CutByDots
+                        TextPadding = TRTTILength4(Magnifiable = [4.0, 0.0, 4.0, 0.0])
+
+                        TextDico = ~/LocalisationConstantes/dico_interface_ingame
+
+                        TextColor = "BlancEquipe"
+                        TextSize = "12"
+
+                        // Hints
+                        Hint = BUCKSpecificHintableArea
+                        (
+                            ElementName = 'WeaponReloadStateHint'
+                            DicoToken = ~/LocalisationConstantes/dico_interface_ingame
+                            HintTitleToken = "HSL_WGAUGT"
+                            HintBodyToken = "HSL_WGAUGB"
+                            HintExtendedToken = "HSL_WGAUGE"
+                        )
+                    )
+                )
+            ]
         )
     ]
 )
@@ -253,46 +306,13 @@ is BUCKContainerDescriptor
     ComponentFrame = TUIFramePropertyRTTI
     (
         RelativeWidthHeight    = [1.0, 0.0]
-        MagnifiableWidthHeight = (<IsSelection> ? [0.0, 28.0] : [0.0, 0.0])
+        MagnifiableWidthHeight = (<IsSelection> ? [0.0, 22.0] : [0.0, 0.0])
     )
 
     Components = [] +
     (<IsSelection> ?
     [
-        BUCKListDescriptor
-        (
-            ElementName = 'infoStatutUnit'
-            ComponentFrame = TUIFramePropertyRTTI
-            (
-                RelativeWidthHeight = [1.0, 0.0]
-            )
-
-            Axis = ~/ListAxis/Vertical
-
-            Elements =
-            [
-                BUCKListElementDescriptor
-                (
-                    ComponentDescriptor = BUCKContainerDescriptor
-                    (
-                        ComponentFrame = TUIFramePropertyRTTI
-                        (
-                            RelativeWidthHeight = [1.0, 0.0]
-                            MagnifiableWidthHeight = [0.0, 10.0]
-                        )
-                        Components =
-                        [
-                            ~/JaugeDeTir
-                        ]
-                    )
-                ),
-                BUCKListElementDescriptor
-                (
-                    ComponentDescriptor = ~/WeaponPanelWeaponStatus
-                ),
-
-            ]
-        )
+        WeaponPanelWeaponStatus
     ] : [])
 )
 
@@ -448,8 +468,6 @@ is BUCKTextDescriptor
 
     TypefaceToken = "Eurostyle"
     BigLineAction = ~/BigLineAction/CutByDots
-
-    UniformDrawer = $/UserInterface/UIUniformDrawer
 
     TextDico = ~/LocalisationConstantes/dico_unites
 

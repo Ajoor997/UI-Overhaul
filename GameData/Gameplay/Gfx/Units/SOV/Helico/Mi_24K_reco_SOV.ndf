@@ -20,6 +20,6 @@ Modele_Mi_24K_reco_SOV_LOW is TResourceMultiMaterialMeshWithLod
 
 Modele_Mi_24K_reco_SOV_Tourelle_02 is TResourceMultiMaterialMeshWithLod
 (
-    FileName = ModelFile_Mi_8TV_UPK_DDR_Tourelle_02
+    FileName = ModelFile_Pod_UPK_t2
     CivMask =  CivMask/Common
 )

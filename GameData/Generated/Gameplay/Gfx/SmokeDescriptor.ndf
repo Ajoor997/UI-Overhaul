@@ -10,7 +10,6 @@ export Descriptor_Smoke_Fumi105mm is TEntityDescriptor
         // TypeUnit
             TTypeUnitModuleDescriptor
             (
-                TypeUnitValue                    = ETypeUnit/Smoke
             ),
 
         // Tags
@@ -71,7 +70,6 @@ export Descriptor_Smoke_Fumi107mm is TEntityDescriptor
         // TypeUnit
             TTypeUnitModuleDescriptor
             (
-                TypeUnitValue                    = ETypeUnit/Smoke
             ),
 
         // Tags
@@ -132,7 +130,6 @@ export Descriptor_Smoke_Fumi120mm is TEntityDescriptor
         // TypeUnit
             TTypeUnitModuleDescriptor
             (
-                TypeUnitValue                    = ETypeUnit/Smoke
             ),
 
         // Tags
@@ -193,7 +190,6 @@ export Descriptor_Smoke_Fumi122mm is TEntityDescriptor
         // TypeUnit
             TTypeUnitModuleDescriptor
             (
-                TypeUnitValue                    = ETypeUnit/Smoke
             ),
 
         // Tags
@@ -254,7 +250,6 @@ export Descriptor_Smoke_Fumi152mm is TEntityDescriptor
         // TypeUnit
             TTypeUnitModuleDescriptor
             (
-                TypeUnitValue                    = ETypeUnit/Smoke
             ),
 
         // Tags
@@ -315,7 +310,6 @@ export Descriptor_Smoke_Fumi155mm is TEntityDescriptor
         // TypeUnit
             TTypeUnitModuleDescriptor
             (
-                TypeUnitValue                    = ETypeUnit/Smoke
             ),
 
         // Tags
@@ -376,7 +370,6 @@ export Descriptor_Smoke_Fumi203mm is TEntityDescriptor
         // TypeUnit
             TTypeUnitModuleDescriptor
             (
-                TypeUnitValue                    = ETypeUnit/Smoke
             ),
 
         // Tags
@@ -437,7 +430,6 @@ export Descriptor_Smoke_Fumi60mm is TEntityDescriptor
         // TypeUnit
             TTypeUnitModuleDescriptor
             (
-                TypeUnitValue                    = ETypeUnit/Smoke
             ),
 
         // Tags
@@ -498,7 +490,6 @@ export Descriptor_Smoke_Fumi81mm is TEntityDescriptor
         // TypeUnit
             TTypeUnitModuleDescriptor
             (
-                TypeUnitValue                    = ETypeUnit/Smoke
             ),
 
         // Tags
@@ -559,7 +550,6 @@ export Descriptor_Smoke_FumiBombe is TEntityDescriptor
         // TypeUnit
             TTypeUnitModuleDescriptor
             (
-                TypeUnitValue                    = ETypeUnit/Smoke
             ),
 
         // Tags
@@ -620,7 +610,6 @@ export Descriptor_Smoke_FumiIncendie is TEntityDescriptor
         // TypeUnit
             TTypeUnitModuleDescriptor
             (
-                TypeUnitValue                    = ETypeUnit/Smoke
             ),
 
         // Tags
@@ -659,7 +648,6 @@ export Descriptor_Smoke_FumiNapalm is TEntityDescriptor
         // TypeUnit
             TTypeUnitModuleDescriptor
             (
-                TypeUnitValue                    = ETypeUnit/Smoke
             ),
 
         // Tags
@@ -698,7 +686,6 @@ export Descriptor_Smoke_FumiNapalmleger is TEntityDescriptor
         // TypeUnit
             TTypeUnitModuleDescriptor
             (
-                TypeUnitValue                    = ETypeUnit/Smoke
             ),
 
         // Tags
@@ -737,7 +724,6 @@ export Descriptor_Smoke_FumiNapalmlourd is TEntityDescriptor
         // TypeUnit
             TTypeUnitModuleDescriptor
             (
-                TypeUnitValue                    = ETypeUnit/Smoke
             ),
 
         // Tags
@@ -776,7 +762,6 @@ export Descriptor_Smoke_FumiTest1 is TEntityDescriptor
         // TypeUnit
             TTypeUnitModuleDescriptor
             (
-                TypeUnitValue                    = ETypeUnit/Smoke
             ),
 
         // Tags

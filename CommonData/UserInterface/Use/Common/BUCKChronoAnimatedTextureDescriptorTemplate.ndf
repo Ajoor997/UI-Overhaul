@@ -27,8 +27,6 @@ template BUCKChronoAnimatedTextureDescriptor
 
     SpotlightComponent : TBUCKContainerDescriptor = nil,
 
-    UniformDrawer : TUIUniformDrawer = $/UserInterface/UIUniformDrawer,
-
     HasBackground : bool = false,
     BackgroundBlockColorToken : string = "",
 
@@ -58,7 +56,7 @@ template BUCKChronoAnimatedTextureDescriptor
     ClipTextureToComponent : bool = false,
     // -- BUCKTextureDescriptor
 
-    ChronoDrawer : TUICommonChronoDrawer = $/UserInterface/ChronoDrawerCommon,        // Drawer utilisé pour le dessin de la texture chrono
+    ChronoDrawer : TUICommonChronoDrawer,                                             // Drawer utilisé pour le dessin de la texture chrono
     ChronoTexture : string = "",                                                      // Le token de texture du chrono
 
     ChronoTextureColor0 : string = "",                                                // Le token de couleur de début de l'animation
@@ -95,7 +93,7 @@ is TBUCKChronoAnimatedTextureDescriptor
 
     SpotlightComponent = <SpotlightComponent>
 
-    UniformDrawer = <UniformDrawer>
+    UniformDrawer = $/UserInterface/UIUniformDrawer
 
     HasBackground = <HasBackground>
     BackgroundBlockColorToken = <BackgroundBlockColorToken>

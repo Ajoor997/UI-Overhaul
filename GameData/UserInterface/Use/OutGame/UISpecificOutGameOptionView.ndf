@@ -481,7 +481,6 @@ private PrivacyPoliciesScrollingDescriptor is BUCKContainerDescriptor
                             TextDico = ~/LocalisationConstantes/dico_interface_outgame
 
                             TypefaceToken = "UIMainFont"
-                            UniformDrawer = $/UserInterface/UIUniformDrawer
                         )
                     ),
 
@@ -519,7 +518,6 @@ private PrivacyPoliciesScrollingDescriptor is BUCKContainerDescriptor
                             TextDico = ~/LocalisationConstantes/dico_interface_outgame
 
                             TypefaceToken = "UIMainFont"
-                            UniformDrawer = $/UserInterface/UIUniformDrawer
                         )
                     ),
                 ]

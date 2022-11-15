@@ -56,11 +56,6 @@ InflammableModuleDescriptorDistrict  is TInflammableModuleDescriptor
     IdleFxStateId                   = ~/FXState/Idle
 )
 
-DefaultShowroomCameraModule is TCameraShowroomModuleDescriptor
-(
-    Token = 'Default'
-)
-
 TargetDataModuleDescriptor is TModuleSelector
 (
     Default        = TTargetDataModuleDescriptor()

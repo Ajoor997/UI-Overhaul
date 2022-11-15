@@ -119,6 +119,7 @@ FeedbackLineOfSightResource is TFeedbackLineOfSightResource
     Descriptor = FeedbackLineOfSightDescriptor
     Camera = $/M3D/Camera/CameraPrincipale
     World3D = $/M3D/Scene/DefaultWorld
+    WorldFloorProxyUnitLoS = $/M3D/Scene/WorldFloorUnitLoSProxy
     RenderLayer = TRenderLayerSelector(RenderLayerName = "Calque_3DLineOfSight")
     MaterialGrid = $/M3D/Shader/Material3DLineOfSightGrid
 
@@ -134,12 +135,12 @@ FeedbackLineOfSightResource is TFeedbackLineOfSightResource
         TFeedbackLineOfSightTerrainsGroup
         (
             TerrainTypes = [ ~/ETerrainType/Batiment]
-            BlockOnEnterInsteadOfExit = true
+            BlockOnEnterInsteadOfExit = false
         ),
         TFeedbackLineOfSightTerrainsGroup
         (
             TerrainTypes = [ ~/ETerrainType/Ruin]
-            BlockOnEnterInsteadOfExit = true
+            BlockOnEnterInsteadOfExit = false
         ),
     ]
 )

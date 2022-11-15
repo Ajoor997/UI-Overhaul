@@ -29,8 +29,6 @@ is HUDButton
             ParagraphStyle = ~/CenteredParagraphStyle
             TextStyle = "Default"
 
-            UniformDrawer = $/UserInterface/UIUniformDrawer
-
             TextToken = ""
             TextDico = ~/LocalisationConstantes/dico_interface_outgame
 
@@ -726,19 +724,41 @@ private ShowroomTopFiltersList is BUCKListElementDescriptor
             ),
             BUCKListElementDescriptor
             (
-                ComponentDescriptor = BUCKRackDescriptor
+                ComponentDescriptor = BUCKSpecificScrollingContainerDescriptor
                 (
-                    ElementName = "DivisionFilterRack"
+
                     ComponentFrame = TUIFramePropertyRTTI
                     (
-                        RelativeWidthHeight = [0.0, 1.0]
+                        MagnifiableWidthHeight= [832,0]
+                        RelativeWidthHeight = [0.0, 1]
+                    )
+                    ScrollStepSize = [44,0]
+                    HasHorizontalScrollbar = true
+                    HorizontalScrollbarComponentFrame = TUIFramePropertyRTTI
+                    (
+                        MagnifiableWidthHeight = [0.0, 10.0]
+                        MagnifiableOffset = [0,10]
+                        AlignementToAnchor = [0.0, 1.0]
+                        AlignementToFather = [0.0, 1.0]
                     )
 
-                    FirstMargin = TRTTILength( Magnifiable = 0.0 )
-                    InterItemMargin = TRTTILength( Pixel = 4.0 )
-                    Axis = ~/ListAxis/Horizontal
+                    Components =
+                    [
+                        BUCKRackDescriptor
+                        (
+                            ElementName = "DivisionFilterRack"
+                            ComponentFrame = TUIFramePropertyRTTI
+                            (
+                                RelativeWidthHeight = [0.0, 1.0]
+                            )
 
-                    BladeDescriptor = ArmoryDivisionFilterButtonDescriptor
+                            FirstMargin = TRTTILength( Magnifiable = 0.0 )
+                            InterItemMargin = TRTTILength( Pixel = 4.0 )
+                            Axis = ~/ListAxis/Horizontal
+
+                            BladeDescriptor = ArmoryDivisionFilterButtonDescriptor
+                        )
+                    ]
                 )
             ),
         ]
@@ -881,8 +901,6 @@ ArmoryUnitListContainer is BUCKContainerDescriptor
             HorizontalFitStyle = ~/FitStyle/FitToContent
 
             TextStyle = "Default"
-
-            UniformDrawer = $/UserInterface/UIUniformDrawer
 
             TextToken = "ARM_NBU"
             TextDico = ~/LocalisationConstantes/dico_interface_outgame
@@ -1212,16 +1230,6 @@ ArmoryComponentDescriptor is TUISpecificShowRoomArmoryComponentDescriptor
 
     DeckUnitButtonDummyDescriptor = UnitDeckListDummyButton()
 
-    DraggableContainerDescriptor = BUCKDraggableContainerDescriptor
-    (
-        ComponentFrame = TUIFramePropertyRTTI
-        (
-            MagnifiableWidthHeight = [172.0, 94.0]
-        )
-
-        PointerDistanceBeforeDrag = 5.0
-    )
-
     SkinRackComponentDescriptor = ~/UISpecificSkinRackView
 
     UnitPackComponentDescriptor = UnitButtonPackDescriptor
@@ -1348,4 +1356,9 @@ ArmoryComponentDescriptor is TUISpecificShowRoomArmoryComponentDescriptor
     SideBySideButtonComponentDescriptor = ~/SideBySideButtonDescriptor
     AnimationButtonComponentDescriptor = ~/AnimationButtonDescriptor
     MaxUnitByLineInUnitDivisionGrid = MaxUnitByLineInUnitDivisionGridArmory
+    CycleToNextLightMapping = $/KeyboardOption/Mapping_NextLightMode
+    ShortcutUserInputLayer = $/M3D/Input/UserInputLayerHandler/InputLayer_InGameShortcuts
+
+    LightPresetsList = ShowroomLightPresetsList
+    DefaultLightingEnvironmentName = DefaultShowroomLight
 )

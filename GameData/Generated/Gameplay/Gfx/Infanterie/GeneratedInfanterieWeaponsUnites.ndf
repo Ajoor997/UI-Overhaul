@@ -1348,58 +1348,6 @@ InfantryWeapon_PM_Skorpion is TIntroduceMobileHappening
         ]
     )
 )
-
-InfantryWeapon_FM_StG_941 is TIntroduceMobileHappening
-(
-    Happening = TCompositeHappening
-    (
-        SubHappenings = 
-        [
-            fx_tir_Fusil_Mitrailleur_M16_tres_petit_douilles_1_2,
-            TRandomHappening
-            (
-                Alternatives = 
-                [
-                    fx_traine_Fusil_Mitrailleur_M16_tres_petite_1_1_2_False_00_00,
-                    fx_traine_Fusil_Mitrailleur_M16_tres_petite_2_1_2_False_00_00,
-                    fx_traine_Fusil_Mitrailleur_M16_tres_petite_3_1_2_False_00_00,
-                    fx_traine_Fusil_Mitrailleur_M16_tres_petite_4_1_2_False_00_00,
-                    fx_traine_Fusil_Mitrailleur_M16_tres_petite_5_1_2_False_00_00,
-                    fx_traine_Fusil_Mitrailleur_M16_tres_petite_6_1_2_False_00_00,
-                    fx_traine_Fusil_Mitrailleur_M16_tres_petite_7_1_2_False_00_00,
-                    fx_traine_Fusil_Mitrailleur_M16_tres_petite_8_1_2_False_00_00,
-                ]
-            ),
-            SFXWeapon_FM_StG_941,
-        ]
-    )
-)
-
-InfantryWeapon_FM_StG_942 is TIntroduceMobileHappening
-(
-    Happening = TCompositeHappening
-    (
-        SubHappenings = 
-        [
-            fx_tir_Fusil_Mitrailleur_M16_tres_petit_douilles_1_2,
-            TRandomHappening
-            (
-                Alternatives = 
-                [
-                    fx_traine_Fusil_Mitrailleur_M16_tres_petite_1_1_2_False_00_00,
-                    fx_traine_Fusil_Mitrailleur_M16_tres_petite_2_1_2_False_00_00,
-                    fx_traine_Fusil_Mitrailleur_M16_tres_petite_3_1_2_False_00_00,
-                    fx_traine_Fusil_Mitrailleur_M16_tres_petite_4_1_2_False_00_00,
-                    fx_traine_Fusil_Mitrailleur_M16_tres_petite_5_1_2_False_00_00,
-                    fx_traine_Fusil_Mitrailleur_M16_tres_petite_6_1_2_False_00_00,
-                    fx_traine_Fusil_Mitrailleur_M16_tres_petite_7_1_2_False_00_00,
-                    fx_traine_Fusil_Mitrailleur_M16_tres_petite_8_1_2_False_00_00,
-                ]
-            ),
-            SFXWeapon_FM_StG_942,
-        ]
-    )
-)
 fx_tir_missile_AT_BGM71TOW_1_5 is InfantryFiringHappening
 (
     Action          = $/GFX/GameFx/fx_tir_missile_AT_BGM71TOW
@@ -1660,8 +1608,6 @@ InfantryHappenings is MAP[
   ( ['FireEffect_FM_Mpi_AKS_74NK'], InfantryWeapon_FM_Mpi_AKS_74NK ),
   ( ['FireEffect_FM_Mpi_AK_74N'], InfantryWeapon_FM_Mpi_AK_74N ),
   ( ['FireEffect_FM_SIG_543'], InfantryWeapon_FM_SIG_543 ),
-  ( ['FireEffect_FM_StG_941'], InfantryWeapon_FM_StG_941 ),
-  ( ['FireEffect_FM_StG_942'], InfantryWeapon_FM_StG_942 ),
   ( ['FireEffect_Grenade_Satchel_Charge'], InfantryWeapon_Grenade_Satchel_Charge ),
   ( ['FireEffect_Javelin'], InfantryWeapon_Javelin ),
   ( ['FireEffect_M47_DRAGON'], InfantryWeapon_M47_DRAGON ),

@@ -120,7 +120,6 @@ private SideInformation is BUCKContainerDescriptor
                         TextDico        = ~/LocalisationConstantes/dico_interface_outgame
 
                         TypefaceToken   = "Liberator"
-                        UniformDrawer   = $/UserInterface/UIUniformDrawer
                     )
                 ),
                 BUCKListElementDescriptor
@@ -150,7 +149,6 @@ private SideInformation is BUCKContainerDescriptor
                         TextDico        = ~/LocalisationConstantes/dico_interface_outgame
 
                         TypefaceToken   = "Liberator"
-                        UniformDrawer   = $/UserInterface/UIUniformDrawer
                     )
                 )
             ]

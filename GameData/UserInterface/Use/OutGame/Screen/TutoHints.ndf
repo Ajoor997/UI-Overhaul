@@ -256,19 +256,3 @@ Hint4 is TTutorialHintDescriptor // Tactical tips
         ("Texture17", "TutoHints_Texture_Shield_and_Sword")
     ]
 )
-
-// Hint5 is TTutorialHintDescriptor
-// (
-//    HintTitle = 'TUTO_HNT5'
-//    DescriptionType = "ResumeCampagneType1"
-//    DescriptionTextElements = MAP
-//    [
-//        ("TexteHautCentre", "OP3TOP"),
-//        ("TextePrincipal", "OP3MID")
-//    ]
-//    DescriptionTextureElements = MAP
-//    [
-//        ("TextureHautGauche", TUIResourceTexture_Common( FileName ="GameData:/Assets/2D/Interface/UseOutGame/Division/Emblem/101st_Airborne"),
-//        ("TextureHautDroite", TUIResourceTexture_Common( FileName ="GameData:/Assets/2D/Interface/UseOutGame/Division/Portrait/Maxwell_Taylor_101_Airborne_portrait") )
-//    ]
-//)

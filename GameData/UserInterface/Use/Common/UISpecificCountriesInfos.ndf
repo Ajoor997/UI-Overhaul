@@ -145,6 +145,14 @@ export SpecificCountriesInfos is MAP [
             LocalisationToken = "COUN_EST"
             Country = "EST"
         )),
+        ("TCH", TUISpecificCountryInfos
+        (
+            FlagTexture = "CommonTexture_MotherCountryFlag_TCH"
+            PawnExpTexture = "CommonTexture_Etoile_Grande"
+            ExpTextures = [ "CommonTexture_Chevron_0", "CommonTexture_Chevron_1", "CommonTexture_Chevron_2", "CommonTexture_Chevron_3"]
+            LocalisationToken = "COUN_TCH"
+            Country = "TCH"
+        )),
 ]
 
 //-----------------------------------------------

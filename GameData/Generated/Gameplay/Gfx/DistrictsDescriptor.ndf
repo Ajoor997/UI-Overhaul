@@ -11,7 +11,6 @@ export Descriptor_District_Quartier_Gros is TEntityDescriptor(
             (
                 Default            = TTypeUnitModuleDescriptor
                 (
-                    TypeUnitValue                    = ETypeUnit/Undef
                 )
                 Selection = [ ~/NilDescriptorIfCadavre ]
             ),
@@ -60,7 +59,7 @@ export Descriptor_District_Quartier_Gros is TEntityDescriptor(
             (
                 Default        = TDistrictUnitsContainerModuleDescriptor
                 (
-                    NbSlots                         = 12
+                    NbSlots                         = 4
                     AllowedTagSet                   = [
                         "Inf_quartier_ok",
                     ]
@@ -119,14 +118,11 @@ export Descriptor_District_Quartier_Gros is TEntityDescriptor(
                     MaxStunDamages = ~/Building_MaxStunDamages
                 )
                 MaxDamages = 36.0
+                KillWhenDamagesReachMax = True
                 HitRollSize = 5.0
                 HitRollECM = 0.0
-                MaxHPForHUD = 36
                 AutoOrientation = False
-                IsTargetableAsBoat = False
-                IsTargetableOutsideCenter = False
                 SkipCadavreCreation  = True
-                UseDamageMultiplierForFirePower = False
                 UseTopArmorAgainstFire = True
                 PhysicalDamageLevelsPack = nil
                 SuppressDamageLevelsPack = nil
@@ -204,7 +200,6 @@ export Descriptor_District_Quartier_HLM is TEntityDescriptor(
             (
                 Default            = TTypeUnitModuleDescriptor
                 (
-                    TypeUnitValue                    = ETypeUnit/Undef
                 )
                 Selection = [ ~/NilDescriptorIfCadavre ]
             ),
@@ -237,6 +232,12 @@ export Descriptor_District_Quartier_HLM is TEntityDescriptor(
                 Default        = TDistrictModuleDescriptor
                 (
                     DamageTakenMultiplier           = MAP [
+                       ("artillerie", 1.0),
+                       ("bombe", 1.0),
+                       ("cluster", 1.0),
+                       ("flamme", 1.0),
+                       ("he", 1.0),
+                       ("roquette", 1.0),
                     ]
                 )
                 Selection      = [ ~/NilDescriptorIfCadavre ]
@@ -247,7 +248,7 @@ export Descriptor_District_Quartier_HLM is TEntityDescriptor(
             (
                 Default        = TDistrictUnitsContainerModuleDescriptor
                 (
-                    NbSlots                         = 12
+                    NbSlots                         = 4
                     AllowedTagSet                   = [
                         "Inf_quartier_ok",
                     ]
@@ -305,15 +306,12 @@ export Descriptor_District_Quartier_HLM is TEntityDescriptor(
                     MaxSuppressionDamages = ~/Building_MaxSuppressionDamages
                     MaxStunDamages = ~/Building_MaxStunDamages
                 )
-                MaxDamages = 999999999.0
+                MaxDamages = 72.0
+                KillWhenDamagesReachMax = False
                 HitRollSize = 5.0
                 HitRollECM = 0.0
-                MaxHPForHUD = 999999999
                 AutoOrientation = False
-                IsTargetableAsBoat = False
-                IsTargetableOutsideCenter = False
                 SkipCadavreCreation  = True
-                UseDamageMultiplierForFirePower = False
                 UseTopArmorAgainstFire = True
                 PhysicalDamageLevelsPack = nil
                 SuppressDamageLevelsPack = nil
@@ -364,6 +362,15 @@ export Descriptor_District_Quartier_HLM is TEntityDescriptor(
         // CadavreGenerator
         TCadavreGeneratorModuleDescriptorUnit( CadavreDescriptor = ~/Descriptor_UnitCadavre_Quartier_HLM ),
 
+        // MinimapDisplay
+            TMinimapDisplayModuleDescriptor
+            (
+                Texture = "Texture_Minimap_Unit_inf"
+                IsAlwaysVisible = False
+                UseTeamColor = True
+                FollowUnitOrientation = True
+            ),
+
         // PackSignaux
             ~/PackSignauxModuleDescriptor,
 
@@ -382,7 +389,6 @@ export Descriptor_District_Quartier_Moyen is TEntityDescriptor(
             (
                 Default            = TTypeUnitModuleDescriptor
                 (
-                    TypeUnitValue                    = ETypeUnit/Undef
                 )
                 Selection = [ ~/NilDescriptorIfCadavre ]
             ),
@@ -431,7 +437,7 @@ export Descriptor_District_Quartier_Moyen is TEntityDescriptor(
             (
                 Default        = TDistrictUnitsContainerModuleDescriptor
                 (
-                    NbSlots                         = 12
+                    NbSlots                         = 4
                     AllowedTagSet                   = [
                         "Inf_quartier_ok",
                     ]
@@ -490,14 +496,11 @@ export Descriptor_District_Quartier_Moyen is TEntityDescriptor(
                     MaxStunDamages = ~/Building_MaxStunDamages
                 )
                 MaxDamages = 12.0
+                KillWhenDamagesReachMax = True
                 HitRollSize = 5.0
                 HitRollECM = 0.0
-                MaxHPForHUD = 12
                 AutoOrientation = False
-                IsTargetableAsBoat = False
-                IsTargetableOutsideCenter = False
                 SkipCadavreCreation  = True
-                UseDamageMultiplierForFirePower = False
                 UseTopArmorAgainstFire = True
                 PhysicalDamageLevelsPack = nil
                 SuppressDamageLevelsPack = nil
@@ -575,7 +578,6 @@ export Descriptor_District_Quartier_Petit is TEntityDescriptor(
             (
                 Default            = TTypeUnitModuleDescriptor
                 (
-                    TypeUnitValue                    = ETypeUnit/Undef
                 )
                 Selection = [ ~/NilDescriptorIfCadavre ]
             ),
@@ -624,7 +626,7 @@ export Descriptor_District_Quartier_Petit is TEntityDescriptor(
             (
                 Default        = TDistrictUnitsContainerModuleDescriptor
                 (
-                    NbSlots                         = 1000
+                    NbSlots                         = 4
                     AllowedTagSet                   = [
                         "Inf_quartier_ok",
                     ]
@@ -683,14 +685,11 @@ export Descriptor_District_Quartier_Petit is TEntityDescriptor(
                     MaxStunDamages = ~/Building_MaxStunDamages
                 )
                 MaxDamages = 12.0
+                KillWhenDamagesReachMax = True
                 HitRollSize = 5.0
                 HitRollECM = 0.0
-                MaxHPForHUD = 12
                 AutoOrientation = False
-                IsTargetableAsBoat = False
-                IsTargetableOutsideCenter = False
                 SkipCadavreCreation  = True
-                UseDamageMultiplierForFirePower = False
                 UseTopArmorAgainstFire = True
                 PhysicalDamageLevelsPack = nil
                 SuppressDamageLevelsPack = nil

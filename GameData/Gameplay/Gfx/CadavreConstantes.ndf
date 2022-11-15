@@ -1,5 +1,3 @@
-export CadavreInvulnerablePeriode is 1 * Seconde
-
 // Temps de vie total = CadavrePeriodeEnFeu + CadavreDurationApresFeu
 export CadavrePeriodeEnFeu_Minimum is 1 * Seconde  //300
 export CadavrePeriodeEnFeu_Maximum is 120 * Seconde  //150

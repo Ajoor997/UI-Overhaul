@@ -181,8 +181,6 @@ is BUCKListDescriptor
                                 TypefaceToken = "UIMainFont"
                                 BigLineAction = ~/BigLineAction/CutByDots
 
-                                UniformDrawer = $/UserInterface/UIUniformDrawer
-
                                 TextDico = ~/LocalisationConstantes/dico_interface_outgame
                                 TextToken = "DLC"
                                 TextColor = "SD2_Blanc184"
@@ -211,8 +209,6 @@ is BUCKListDescriptor
 
                                 TypefaceToken = "UIMainFont"
                                 BigLineAction = ~/BigLineAction/CutByDots
-
-                                UniformDrawer = $/UserInterface/UIUniformDrawer
 
                                 TextDico = ~/LocalisationConstantes/dico_interface_outgame
 
@@ -617,8 +613,6 @@ private UnitButtonUnitNameText is BUCKSpecificTextWithHint
     TypefaceToken = "Liberator"
     BigLineAction = ~/BigLineAction/CutByDots
 
-    UniformDrawer = $/UserInterface/UIUniformDrawer
-
     TextDico = ~/LocalisationConstantes/dico_interface_ingame
 
     TextColor = "White"
@@ -831,8 +825,6 @@ private UnitButtonAdditionalUnitNameText is BUCKTextDescriptor
     TypefaceToken = "UIMainFont"
     BigLineAction = ~/BigLineAction/CutByDots
 
-    UniformDrawer = $/UserInterface/UIUniformDrawer
-
     TextDico = ~/LocalisationConstantes/dico_interface_ingame
 
     TextColor = "SD2_Blanc184"
@@ -928,8 +920,6 @@ is BUCKButtonDescriptor
             TypefaceToken = "UIMainFont"
             BigLineAction = ~/BigLineAction/BalancedMultiline
 
-            UniformDrawer = $/UserInterface/UIUniformDrawer
-
             TextDico = ~/LocalisationConstantes/dico_interface_ingame
             TextColor = "SD2_Blanc184"
             TextSize = "10"
@@ -990,8 +980,6 @@ private UnitButtonUnitAloneNameText is BUCKTextDescriptor
     TypefaceToken = "UIMainFont"
     BigLineAction = ~/BigLineAction/CutByDots
 
-    UniformDrawer = $/UserInterface/UIUniformDrawer
-
     TextDico = ~/LocalisationConstantes/dico_interface_ingame
 
     TextColor = "SD2_Blanc184"
@@ -1031,8 +1019,6 @@ private UnitButtonUnitAloneCostText is BUCKTextDescriptor
 
     TypefaceToken = "UIMainFont"
     BigLineAction = ~/BigLineAction/CutByDots
-
-    UniformDrawer = $/UserInterface/UIUniformDrawer
 
     TextDico = ~/LocalisationConstantes/dico_interface_ingame
     TextToken = "HPROD_ACST"
@@ -1181,8 +1167,6 @@ PrixUnit is BUCKTextDescriptor
     TypefaceToken = "Liberator"
     BigLineAction = ~/BigLineAction/CutByDots
 
-    UniformDrawer = $/UserInterface/UIUniformDrawer
-
     TextDico = ~/LocalisationConstantes/dico_interface_ingame
     TextToken = "HPROD_NBU"
 
@@ -1252,8 +1236,6 @@ NbUnitInThePack is BUCKContainerDescriptor
                         TypefaceToken = "Liberator"
                         BigLineAction = ~/BigLineAction/CutByDots
 
-                        UniformDrawer = $/UserInterface/UIUniformDrawer
-
                         TextDico = ~/LocalisationConstantes/dico_interface_ingame
                         TextToken = "HPROD_NBUX"
 
@@ -1292,8 +1274,6 @@ NbUnitInThePack is BUCKContainerDescriptor
 
                         TypefaceToken = "Liberator"
                         BigLineAction = ~/BigLineAction/CutByDots
-
-                        UniformDrawer = $/UserInterface/UIUniformDrawer
 
                         TextDico = ~/LocalisationConstantes/dico_interface_ingame
                         TextToken = "HPROD_NBU"
@@ -1349,8 +1329,6 @@ NombreDePack is BUCKTextDescriptor
 
     TypefaceToken = "UIMainFont"
     BigLineAction = ~/BigLineAction/CutByDots
-
-    UniformDrawer = $/UserInterface/UIUniformDrawer
 
     TextDico = ~/LocalisationConstantes/dico_interface_ingame
     TextToken = "HPROD_NBUB"
@@ -1429,8 +1407,6 @@ private UnitButtonUnitNumberText is BUCKListDescriptor
                 TypefaceToken = "UIMainFont"
                 BigLineAction = ~/BigLineAction/CutByDots
 
-                UniformDrawer = $/UserInterface/UIUniformDrawer
-
                 TextDico = ~/LocalisationConstantes/dico_interface_ingame
                 TextToken = "HPROD_NBUX"
 
@@ -1460,8 +1436,6 @@ private UnitButtonUnitNumberText is BUCKListDescriptor
 
                 TypefaceToken = "UIMainFont"
                 BigLineAction = ~/BigLineAction/CutByDots
-
-                UniformDrawer = $/UserInterface/UIUniformDrawer
 
                 TextDico = ~/LocalisationConstantes/dico_interface_ingame
                 TextToken = "HPROD_NBU"

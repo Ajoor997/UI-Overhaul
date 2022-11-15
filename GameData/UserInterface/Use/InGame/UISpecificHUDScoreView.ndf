@@ -721,8 +721,6 @@ private PanelScoreMax is BUCKListDescriptor
                 TypefaceToken = "UIMainFont"
                 BigLineAction = ~/BigLineAction/CutByDots
 
-                UniformDrawer = $/UserInterface/UIUniformDrawer
-
                 TextDico = ~/LocalisationConstantes/dico_interface_ingame
                 TextToken = "WIP_8"
 

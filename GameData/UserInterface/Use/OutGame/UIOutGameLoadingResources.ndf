@@ -24,7 +24,6 @@ SpecificOutGameLoadingPanelResource is TUISpecificOutGameLoadingPanelResource
         TypefaceToken = "Subtitles"
         BigLineAction = ~/BigLineAction/MultiLine
 
-        UniformDrawer = $/UserInterface/UIUniformDrawer
 
         TextColor = "SD2_BleuVariable"
         TextSize = "18"
@@ -99,6 +98,15 @@ SpecificOutGameLoadingPanelResource is TUISpecificOutGameLoadingPanelResource
                     TUIResourceVideo ( VideoFile =  "GameData:/Assets/Videos/loading_screen_animated/Video_Loading_Screen_09_.webm"  DicoVideo =  ~/DicoVideoOutGame),
                     TUIResourceVideo ( VideoFile =  "GameData:/Assets/Videos/loading_screen_animated/Video_Loading_Screen_10_.webm"  DicoVideo =  ~/DicoVideoOutGame),
                     TUIResourceVideo ( VideoFile =  "GameData:/Assets/Videos/loading_screen_animated/Video_Loading_Screen_11_.webm"  DicoVideo =  ~/DicoVideoOutGame),
+                    TUIResourceVideo ( VideoFile =  "GameData:/Assets/Videos/loading_screen_animated/Video_Loading_Screen_12_.webm"  DicoVideo =  ~/DicoVideoOutGame),
+                    TUIResourceVideo ( VideoFile =  "GameData:/Assets/Videos/loading_screen_animated/Video_Loading_Screen_13_.webm"  DicoVideo =  ~/DicoVideoOutGame),
+                    TUIResourceVideo ( VideoFile =  "GameData:/Assets/Videos/loading_screen_animated/Video_Loading_Screen_14_.webm"  DicoVideo =  ~/DicoVideoOutGame),
+                    TUIResourceVideo ( VideoFile =  "GameData:/Assets/Videos/loading_screen_animated/Video_Loading_Screen_15_.webm"  DicoVideo =  ~/DicoVideoOutGame),
+                    TUIResourceVideo ( VideoFile =  "GameData:/Assets/Videos/loading_screen_animated/Video_Loading_Screen_16_.webm"  DicoVideo =  ~/DicoVideoOutGame),
+                    TUIResourceVideo ( VideoFile =  "GameData:/Assets/Videos/loading_screen_animated/Video_Loading_Screen_17_.webm"  DicoVideo =  ~/DicoVideoOutGame),
+                    TUIResourceVideo ( VideoFile =  "GameData:/Assets/Videos/loading_screen_animated/Video_Loading_Screen_18_.webm"  DicoVideo =  ~/DicoVideoOutGame),
+                    TUIResourceVideo ( VideoFile =  "GameData:/Assets/Videos/loading_screen_animated/Video_Loading_Screen_19_.webm"  DicoVideo =  ~/DicoVideoOutGame),
+                    TUIResourceVideo ( VideoFile =  "GameData:/Assets/Videos/loading_screen_animated/Video_Loading_Screen_20_.webm"  DicoVideo =  ~/DicoVideoOutGame),
                 ]
             ),
 
@@ -131,7 +139,6 @@ SpecificOutGameLoadingPanelResource is TUISpecificOutGameLoadingPanelResource
                 TextDico = ~/LocalisationConstantes/dico_interface_outgame
 
                 TypefaceToken = "Subtitles"
-                UniformDrawer = $/UserInterface/UIUniformDrawer
             ),
         ]
         ComponentFrame = TUIFramePropertyRTTI( RelativeWidthHeight = [1,1] )

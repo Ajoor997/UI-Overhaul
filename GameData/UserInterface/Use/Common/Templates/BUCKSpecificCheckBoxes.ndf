@@ -22,6 +22,7 @@ template BUCKSpecificCheckBoxDescriptor
     ComponentStateLocked : bool = true,
     LeftClickSound : TSoundDescriptor = nil,
     BackgroundBlockColorToken : string = "Checkbox/Background",
+    BorderLineColorToken : string = "Checkbox/Frame",
     TextureToken : string = "StyleDeskTexture_CheckBox",
     TextureColorToken : string = '',
     HasBackground : bool = true,
@@ -42,13 +43,11 @@ is BUCKCheckBoxDescriptor
     HidePointerEvents = true
     ComponentStateLocked = <ComponentStateLocked>
 
-    UniformDrawer = $/UserInterface/UIUniformDrawer
-
     HasBackground = <HasBackground>
     BackgroundBlockColorToken = <BackgroundBlockColorToken>
 
     HasBorder = <HasBorder>
-    BorderLineColorToken = "Checkbox/Frame"
+    BorderLineColorToken = <BorderLineColorToken>
     BorderThicknessToken = "1"
 
     Components =

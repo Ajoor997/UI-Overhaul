@@ -630,7 +630,7 @@ OnAutomaticBehavior is TUIFeedbackDispatchedMessageDescriptor
         UILayer = $/UserInterface/UILayer_Labels
         Camera = $/M3D/Camera/CameraPrincipale
 
-        TextTypeface = $/M3D/Typefaces/Typeface3D_Default
+        TextTypeface = $/M3D/Typefaces/Typeface_Sixth
 
         TextStyle = TTextStyleRTTI
         (
@@ -672,7 +672,7 @@ OnUnitSold is TUIFeedbackDispatchedMessageDescriptor
         UILayer = $/UserInterface/UILayer_Labels
         Camera = $/M3D/Camera/CameraPrincipale
 
-        TextTypeface = $/M3D/Typefaces/Typeface3D_Default
+        TextTypeface = $/M3D/Typefaces/Typeface_Sixth
 
         TextStyle = TTextStyleRTTI
         (
@@ -714,7 +714,7 @@ OnGainXpLevel is TUIFeedbackDispatchedMessageDescriptor
         UILayer = $/UserInterface/UILayer_Labels
         Camera = $/M3D/Camera/CameraPrincipale
 
-        TextTypeface = $/M3D/Typefaces/Typeface3D_Default
+        TextTypeface = $/M3D/Typefaces/Typeface_Sixth
 
         TextStyle = TTextStyleRTTI
         (

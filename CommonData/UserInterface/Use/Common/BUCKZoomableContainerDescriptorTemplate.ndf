@@ -24,8 +24,6 @@ template BUCKZoomableContentDescriptor
 
     SpotlightComponent : TBUCKContainerDescriptor = nil,
 
-    UniformDrawer : TUIUniformDrawer = $/UserInterface/UIUniformDrawer,
-
     HasBackground : bool = false,
     BackgroundBlockColorToken : string = "",
 
@@ -74,7 +72,7 @@ is TBUCKZoomableContentDescriptor
 
     SpotlightComponent = <SpotlightComponent>
 
-    UniformDrawer = <UniformDrawer>
+    UniformDrawer = $/UserInterface/UIUniformDrawer
 
     HasBackground = <HasBackground>
     BackgroundBlockColorToken = <BackgroundBlockColorToken>
@@ -121,8 +119,6 @@ template BUCKNonZoomableContentDescriptor
     ChildFitToContent : bool = false,
 
     SpotlightComponent : TBUCKContainerDescriptor = nil,
-
-    UniformDrawer : TUIUniformDrawer = $/UserInterface/UIUniformDrawer,
 
     HasBackground : bool = false,
     BackgroundBlockColorToken : string = "",
@@ -172,7 +168,7 @@ is TBUCKNonZoomableContentDescriptor
 
     SpotlightComponent = <SpotlightComponent>
 
-    UniformDrawer = <UniformDrawer>
+    UniformDrawer = $/UserInterface/UIUniformDrawer
 
     HasBackground = <HasBackground>
     BackgroundBlockColorToken = <BackgroundBlockColorToken>
@@ -219,8 +215,6 @@ template BUCKZoomableContainerDescriptor
     ChildFitToContent : bool = false,
 
     SpotlightComponent : TBUCKContainerDescriptor = nil,
-
-    UniformDrawer : TUIUniformDrawer = $/UserInterface/UIUniformDrawer,
 
     HasBackground : bool = false,
     BackgroundBlockColorToken : string = "",
@@ -276,7 +270,7 @@ is TBUCKZoomableContainerDescriptor
 
     SpotlightComponent = <SpotlightComponent>
 
-    UniformDrawer = <UniformDrawer>
+    UniformDrawer = $/UserInterface/UIUniformDrawer
 
     HasBackground = <HasBackground>
     BackgroundBlockColorToken = <BackgroundBlockColorToken>

@@ -26,8 +26,6 @@ template BUCKSpecificTextWithHint
 
     SpotlightComponent : TBUCKContainerDescriptor = nil,
 
-    UniformDrawer : TUIUniformDrawer = $/UserInterface/UIUniformDrawer,
-
     HasBackground : bool = false,
     BackgroundBlockColorToken : string = "",
 
@@ -113,8 +111,6 @@ is BUCKTextDescriptor
     ClipContent = <ClipContent>
 
     SpotlightComponent = <SpotlightComponent>
-
-    UniformDrawer = <UniformDrawer>
 
     HasBackground = <HasBackground>
     BackgroundBlockColorToken = <BackgroundBlockColorToken>

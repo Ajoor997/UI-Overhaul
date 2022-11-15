@@ -4,10 +4,11 @@ template BUCKSpecificDropdownDescriptor
     UniqueName : string = "",
     ComponentFrame : TUIFramePropertyRTTI = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = [250,24]
-        AlignementToFather = [0,0.5]
-        AlignementToAnchor = [0,0.5]
+        MagnifiableWidthHeight = [250.0, 24.0]
+        AlignementToFather = [0.0, 0.5]
+        AlignementToAnchor = [0.0, 0.5]
     ),
+
     HasBackground : bool = true,
     BackgroundBlockColorToken : string = "Transparent",
 
@@ -23,7 +24,6 @@ template BUCKSpecificDropdownDescriptor
     ComponentStateLocked : bool = true,
     IsForModale : bool = false,
 
-    // IsFocusable : bool = false,
     FocusMapping : TEugBMutablePBaseClass = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ENTER ) ),
     ItemFocusable : bool = true,
 
@@ -178,10 +178,9 @@ is BUCKDropdownDescriptor
                 TextPadding = <ItemsTextPadding>
                 TextStyle = "Default"
                 TypefaceToken = <ItemsTextTypefaceToken>
-                UniformDrawer = $/UserInterface/UIUniformDrawer
 
                 TextDico = ~/LocalisationConstantes/dico_interface_outgame
-                TextColor = <ItemsTextColorToken> //"ButtonHUD/Text2"
+                TextColor = <ItemsTextColorToken>
                 TextSize = <ItemsTextSizeToken>
             ),
         ] + <ItemComponents>
@@ -240,6 +239,8 @@ is BUCKDropdownDescriptor
     +  <Components>
 )
 
+//------------------------------------------------------------------------------
+
 template TScrollingDescriptor
 [
     ScrollingElementName : string = "",
@@ -283,25 +284,26 @@ is BUCKContainerDescriptor
 )
 
 //-------------------------------------------------------------------------------------
+
 template DropdownFulda
 [
     ElementName : string = "",
     UniqueName : string = "",
     ComponentFrame : TUIFramePropertyRTTI = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = [250,24]
-        AlignementToFather = [0,0.5]
-        AlignementToAnchor = [0,0.5]
+        MagnifiableWidthHeight = [250.0, 24.0]
+        AlignementToFather = [0.0, 0.5]
+        AlignementToAnchor = [0.0, 0.5]
     ),
 
     HasBackground : bool = false,
-    BackgroundBlockColorToken : string = "Fulda2_Orange100",
+    BackgroundBlockColorToken : string = "",
 
-        HasBorder : bool = false,
-        BordersToDraw : int = ~/TBorderSide/Default,
-        BorderThicknessToken : string = "1",
-        BorderLineColorToken : string = "Fulda2_Orange100",
-        BorderColorTokenBySide : LIST<PAIR<int, string>> = [],
+    HasBorder : bool = false,
+    BordersToDraw : int = ~/TBorderSide/Default,
+    BorderThicknessToken : string = "",
+    BorderLineColorToken : string = "",
+    BorderColorTokenBySide : LIST<PAIR<int, string>> = [],
 
     HidePointerEvents : bool = false,
     PointerEventsToAllow : int = ~/EAllowablePointerEventType/None,
@@ -367,7 +369,7 @@ is BUCKDropdownDescriptor
         ScrollingElementName = <ElementName> + "FloatingContainerScrolling"
         ComponentFrame = TUIFramePropertyRTTI
         (
-            RelativeWidthHeight = [1,0]
+            RelativeWidthHeight = [1.0, 0.0]
             MagnifiableWidthHeight = [0.0 , <FloatingListMagnifiableHeight>]
             AlignementToFather = [0.0, 0.0]
             AlignementToAnchor = [0.0, 0.0]
@@ -425,7 +427,6 @@ is BUCKDropdownDescriptor
                 TextPadding = TRTTILength4( Magnifiable = [5.0, 5.0, 0.0, 5.0] )
                 TextStyle = "Default"
                 TypefaceToken = "UIMainFont"
-                UniformDrawer = $/UserInterface/UIUniformDrawer
 
                 TextDico = ~/LocalisationConstantes/dico_interface_outgame
                 TextColor = "ButtonHUD/Text2"

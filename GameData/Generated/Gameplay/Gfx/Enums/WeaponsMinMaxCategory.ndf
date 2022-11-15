@@ -14,21 +14,20 @@ export MinMax_BOMB is 7
 export MinMax_EXPLOSIF is 8
 export MinMax_inf_MMG is 9
 export MinMax_Gatling is 10
-export MinMax_smoke is 11
-export MinMax_Grenade is 12
-export MinMax_HMG_inf is 13
-export MinMax_MLRS is 14
-export MinMax_Mortier is 15
-export MinMax_MMG is 16
-export MinMax_Cluster is 17
-export MinMax_LAW is 18
-export MinMax_Roquette_AS is 19
+export MinMax_Grenade is 11
+export MinMax_MMG_HMG is 12
+export MinMax_MLRS is 13
+export MinMax_Mortier is 14
+export MinMax_Cluster is 15
+export MinMax_LAW is 16
+export MinMax_smoke is 17
+export MinMax_Roquette_AS is 18
 
-export MinMax_AAM is 20
-export MinMax_AGM is 21
-export MinMax_ATGM is 22
-export MinMax_SEAD is 23
-export MinMax_SAM is 24
+export MinMax_AAM is 19
+export MinMax_AGM is 20
+export MinMax_ATGM is 21
+export MinMax_SEAD is 22
+export MinMax_SAM is 23
 export MinMaxCategory_Enum is TWeaponMinMaxCategory
 (
     Values = [
@@ -43,14 +42,13 @@ export MinMaxCategory_Enum is TWeaponMinMaxCategory
         "EXPLOSIF",
         "inf_MMG",
         "Gatling",
-        "smoke",
         "Grenade",
-        "HMG_inf",
+        "MMG_HMG",
         "MLRS",
         "Mortier",
-        "MMG",
         "Cluster",
         "LAW",
+        "smoke",
         "Roquette_AS",
         "AAM",
         "AGM",

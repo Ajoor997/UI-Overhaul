@@ -156,6 +156,10 @@ export ModelFile_ATGM_Konkurs_SOV_06 is SOV_MotoStrelki_spe
 export ModelFile_ATGM_Konkurs_SOV_LOW is SOV_MotoStrelki_1_LOW
 
 
+//Engineers_paras_Flam_POL
+export ModelFile_Engineers_paras_Flam_POL is SOV_MotoStrelki_1
+export ModelFile_Engineers_paras_Flam_POL_LOW is SOV_MotoStrelki_1_LOW
+
 //Engineers_Flam_SOV
 export ModelFile_Engineers_Flam_SOV is SOV_MotoStrelki_1
 export ModelFile_Engineers_Flam_SOV_02 is SOV_MotoStrelki_2
@@ -246,6 +250,22 @@ export ModelFile_Tuto_MotRifles_SOV_06 is SOV_MotoStrelki_spe
 export ModelFile_Tuto_MotRifles_SOV_LOW is SOV_MotoStrelki_1_LOW
 
 
+//MotRifles_POL
+export ModelFile_MotRifles_POL is SOV_MotoStrelki_1
+export ModelFile_MotRifles_POL_LOW is SOV_MotoStrelki_1_LOW
+
+//MotRifles_SVD_POL
+export ModelFile_MotRifles_SVD_POL is SOV_MotoStrelki_1
+export ModelFile_MotRifles_SVD_POL_LOW is SOV_MotoStrelki_1_LOW
+
+//Naval_Rifle_POL
+export ModelFile_Naval_Rifle_POL is SOV_MotoStrelki_1
+export ModelFile_Naval_Rifle_POL_LOW is SOV_MotoStrelki_1_LOW
+
+//Rifles_POL
+export ModelFile_Rifles_POL is SOV_MotoStrelki_1
+export ModelFile_Rifles_POL_LOW is SOV_MotoStrelki_1_LOW
+
 //MotRifles_SOV
 export ModelFile_MotRifles_SOV is SOV_MotoStrelki_1
 export ModelFile_MotRifles_SOV_02 is SOV_MotoStrelki_2
@@ -265,6 +285,10 @@ export ModelFile_Scout_LRRP_SOV_05 is SOV_MotoStrelki_Sniper
 export ModelFile_Scout_LRRP_SOV_06 is SOV_MotoStrelki_spe
 export ModelFile_Scout_LRRP_SOV_LOW is SOV_MotoStrelki_1_LOW
 
+
+//Scout_POL
+export ModelFile_Scout_POL is SOV_MotoStrelki_1
+export ModelFile_Scout_POL_LOW is SOV_MotoStrelki_1_LOW
 
 //Scout_SOV
 export ModelFile_Scout_SOV is SOV_MotoStrelki_1
@@ -296,6 +320,17 @@ export ModelFile_Engineers_CMD_SOV_05 is SOV_MotoStrelki_Sniper
 export ModelFile_Engineers_CMD_SOV_06 is SOV_MotoStrelki_spe
 export ModelFile_Engineers_CMD_SOV_LOW is SOV_MotoStrelki_1_LOW
 
+//Naval_Rifle_CMD_POL
+export ModelFile_Naval_Rifle_CMD_POL is SOV_MotoStrelki_1
+export ModelFile_Naval_Rifle_CMD_POL_LOW is SOV_MotoStrelki_1_LOW
+
+//Rifles_CMD_POL
+export ModelFile_Rifles_CMD_POL is SOV_MotoStrelki_1
+export ModelFile_Rifles_CMD_POL_LOW is SOV_MotoStrelki_1_LOW
+
+//MotRifles_CMD_POL
+export ModelFile_MotRifles_CMD_POL is SOV_MotoStrelki_1
+export ModelFile_MotRifles_CMD_POL_LOW is SOV_MotoStrelki_1_LOW
 
 //MotRifles_CMD_SOV
 export ModelFile_MotRifles_CMD_SOV is SOV_MotoStrelki_1
@@ -305,7 +340,6 @@ export ModelFile_MotRifles_CMD_SOV_04 is SOV_MotoStrelki_Officer
 export ModelFile_MotRifles_CMD_SOV_05 is SOV_MotoStrelki_Sniper
 export ModelFile_MotRifles_CMD_SOV_06 is SOV_MotoStrelki_spe
 export ModelFile_MotRifles_CMD_SOV_LOW is SOV_MotoStrelki_1_LOW
-
 
 //Spetsnaz_CMD_SOV
 export ModelFile_Spetsnaz_CMD_SOV is SOV_VDV_1
@@ -345,6 +379,10 @@ export ModelFile_DShV_CMD_SOV_05 is SOV_VDV_Sniper
 export ModelFile_DShV_CMD_SOV_06 is SOV_VDV_spe
 export ModelFile_DShV_CMD_SOV_LOW is SOV_VDV_1_LOW
 
+//Para_CMD_POL
+export ModelFile_Para_CMD_POL is SOV_VDV_1
+export ModelFile_Para_CMD_POL_LOW is SOV_VDV_1_LOW
+
 //VDV_CMD_SOV
 export ModelFile_VDV_CMD_SOV is SOV_VDV_1
 export ModelFile_VDV_CMD_SOV_02 is SOV_VDV_2
@@ -355,6 +393,10 @@ export ModelFile_VDV_CMD_SOV_06 is SOV_VDV_spe
 export ModelFile_VDV_CMD_SOV_LOW is SOV_VDV_1_LOW
 
 
+
+//Engineers_paras_CMD_POL
+export ModelFile_Engineers_paras_CMD_POL is SOV_VDV_1
+export ModelFile_Engineers_paras_CMD_POL_LOW is SOV_VDV_1_LOW
 
 //Engineers_CMD_VDV_SOV
 export ModelFile_Engineers_CMD_VDV_SOV is SOV_VDV_1
@@ -375,6 +417,10 @@ export ModelFile_DShV_SOV_05 is SOV_VDV_Sniper
 export ModelFile_DShV_SOV_06 is SOV_VDV_spe
 export ModelFile_DShV_SOV_LOW is SOV_VDV_1_LOW
 
+//Para_HMG_POL
+export ModelFile_Para_HMG_POL is SOV_VDV_1
+export ModelFile_Para_HMG_POL_LOW is SOV_VDV_1_LOW
+
 //VDV_HMG_SOV
 export ModelFile_VDV_HMG_SOV is SOV_VDV_1
 export ModelFile_VDV_HMG_SOV_02 is SOV_VDV_2
@@ -383,6 +429,10 @@ export ModelFile_VDV_HMG_SOV_04 is SOV_VDV_Officer
 export ModelFile_VDV_HMG_SOV_05 is SOV_VDV_Sniper
 export ModelFile_VDV_HMG_SOV_06 is SOV_VDV_spe
 export ModelFile_VDV_HMG_SOV_LOW is SOV_VDV_1_LOW
+
+//Para_POL
+export ModelFile_Para_POL is SOV_VDV_1
+export ModelFile_Para_POL_LOW is SOV_VDV_1_LOW
 
 //VDV_SOV
 export ModelFile_VDV_SOV is SOV_VDV_1
@@ -402,6 +452,10 @@ export ModelFile_Engineers_Flam_VDV_SOV_05 is SOV_VDV_Sniper
 export ModelFile_Engineers_Flam_VDV_SOV_06 is SOV_VDV_spe
 export ModelFile_Engineers_Flam_VDV_SOV_LOW is SOV_VDV_1_LOW
 
+//Para_Metis_POL
+export ModelFile_Para_Metis_POL is SOV_VDV_1
+export ModelFile_Para_Metis_POL_LOW is SOV_VDV_1_LOW
+
 //VDV_Metis_SOV
 export ModelFile_VDV_Metis_SOV is SOV_VDV_1
 export ModelFile_VDV_Metis_SOV_02 is SOV_VDV_2
@@ -410,6 +464,10 @@ export ModelFile_VDV_Metis_SOV_04 is SOV_VDV_Officer
 export ModelFile_VDV_Metis_SOV_05 is SOV_VDV_Sniper
 export ModelFile_VDV_Metis_SOV_06 is SOV_VDV_spe
 export ModelFile_VDV_Metis_SOV_LOW is SOV_VDV_1_LOW
+
+//Engineers_paras_POL
+export ModelFile_Engineers_paras_POL is SOV_VDV_1
+export ModelFile_Engineers_paras_POL_LOW is SOV_VDV_1_LOW
 
 //Engineers_VDV_SOV
 export ModelFile_Engineers_VDV_SOV is SOV_VDV_1
@@ -457,6 +515,10 @@ export ModelFile_VDV_Mech_SOV_05 is SOV_VDV_Sniper
 export ModelFile_VDV_Mech_SOV_06 is SOV_VDV_spe
 export ModelFile_VDV_Mech_SOV_LOW is SOV_VDV_1_LOW
 
+//HvyScout_POL
+export ModelFile_HvyScout_POL is SOV_MotoStrelki_1
+export ModelFile_HvyScout_POL_LOW is SOV_MotoStrelki_1_LOW
+
 //HvyScout_SOV
 export ModelFile_HvyScout_SOV is SOV_MotoStrelki_1
 export ModelFile_HvyScout_SOV_02 is SOV_MotoStrelki_2
@@ -466,6 +528,10 @@ export ModelFile_HvyScout_SOV_05 is SOV_MotoStrelki_Sniper
 export ModelFile_HvyScout_SOV_06 is SOV_MotoStrelki_spe
 export ModelFile_HvyScout_SOV_LOW is SOV_MotoStrelki_1_LOW
 
+
+//Scout_para_POL
+export ModelFile_Scout_para_POL is SOV_VDV_1
+export ModelFile_Scout_para_POL_LOW is SOV_VDV_1_LOW
 
 //Scout_VDV_SOV
 export ModelFile_Scout_VDV_SOV is SOV_VDV_1
@@ -527,6 +593,10 @@ export ModelFile_Airborne_half_M60_US_09 is US_AB_Sniper
 export ModelFile_Airborne_half_M60_US_10 is US_AB_Officer
 export ModelFile_Airborne_half_M60_US_LOW is US_AB_1
 
+//Marines_CMD_NL
+export ModelFile_Marines_CMD_NL is US_AB_1
+export ModelFile_Marines_CMD_NL_LOW is US_AB_1
+
 //Airborne_CMD_US
 export ModelFile_Airborne_CMD_US is US_AB_1
 export ModelFile_Airborne_CMD_US_02 is US_AB_1
@@ -553,6 +623,10 @@ export ModelFile_Airborne_Dragon_US_09 is US_AB_Sniper
 export ModelFile_Airborne_Dragon_US_10 is US_AB_Officer
 export ModelFile_Airborne_Dragon_US_LOW is US_AB_1
 
+//Marine_Scout_NL
+export ModelFile_Marine_Scout_NL is US_AB_1
+export ModelFile_Marine_Scout_NL_LOW is US_AB_1
+
 //Airborne_Scout_US
 export ModelFile_Airborne_Scout_US is US_AB_1
 export ModelFile_Airborne_Scout_US_02 is US_AB_1
@@ -565,6 +639,10 @@ export ModelFile_Airborne_Scout_US_08 is US_AB_spe
 export ModelFile_Airborne_Scout_US_09 is US_AB_Sniper
 export ModelFile_Airborne_Scout_US_10 is US_AB_Officer
 export ModelFile_Airborne_Scout_US_LOW is US_AB_1
+
+//Marines_HMG_NL
+export ModelFile_Marines_HMG_NL is US_AB_1
+export ModelFile_Marines_HMG_NL_LOW is US_AB_1
 
 //Airborne_HMG_US
 export ModelFile_Airborne_HMG_US is US_AB_1
@@ -631,6 +709,10 @@ export ModelFile_Airborne_Engineers_Flash_US_09 is US_AB_Sniper
 export ModelFile_Airborne_Engineers_Flash_US_10 is US_AB_Officer
 export ModelFile_Airborne_Engineers_Flash_US_LOW is US_AB_1
 
+//ParaCmdo_Pionier_BEL
+export ModelFile_ParaCmdo_Pionier_BEL is US_AB_1
+export ModelFile_ParaCmdo_Pionier_BEL_LOW is US_AB_1
+
 //Airborne_Engineers_US
 export ModelFile_Airborne_Engineers_US is US_AB_1
 export ModelFile_Airborne_Engineers_US_02 is US_AB_1
@@ -643,6 +725,10 @@ export ModelFile_Airborne_Engineers_US_08 is US_AB_spe
 export ModelFile_Airborne_Engineers_US_09 is US_AB_Sniper
 export ModelFile_Airborne_Engineers_US_10 is US_AB_Officer
 export ModelFile_Airborne_Engineers_US_LOW is US_AB_1
+
+//Marines_NL
+export ModelFile_Marines_NL is US_AB_1
+export ModelFile_Marines_NL_LOW is US_AB_1
 
 //Airborne_US
 export ModelFile_Airborne_US is US_AB_1
@@ -725,10 +811,6 @@ export ModelFile_Rangers_CMD_US_09 is US_Rangers_NCO
 export ModelFile_Rangers_CMD_US_10 is US_Rangers_NCO
 export ModelFile_Rangers_CMD_US_LOW is US_Rangers_1
 
-
-
-
-
 //HMG_M2_US
 export ModelFile_HMG_M2_US is 'GameData:/Assets/3D/Units/US/Infanterie/GI/GI_1.Ase2NdfBin'
 export ModelFile_HMG_M2_US_LOW is 'GameData:/Assets/3D/Units/US/Infanterie/GI/GI_spe.Ase2NdfBin'
@@ -772,6 +854,14 @@ export ModelFile_MP_US_09 is US_GI_Sniper
 export ModelFile_MP_US_10 is US_GI_Officer
 export ModelFile_MP_US_LOW is US_GI_1
 
+
+//LightRifles_CMD_LUX
+export ModelFile_LightRifles_CMD_LUX is US_GI_1
+export ModelFile_LightRifles_CMD_LUX_LOW is US_GI_1
+
+//Rifles_CMD_NL
+export ModelFile_Rifles_CMD_NL is US_GI_1
+export ModelFile_Rifles_CMD_NL_LOW is US_GI_1
 
 //Rifles_CMD_US
 export ModelFile_Rifles_CMD_US is US_GI_1
@@ -869,6 +959,46 @@ export ModelFile_Tuto_Rifles_US_11 is US_GI_2
 export ModelFile_Tuto_Rifles_US_LOW is US_GI_1
 
 
+//LightRifles_LUX
+export ModelFile_LightRifles_LUX is US_GI_1
+export ModelFile_LightRifles_LUX_LOW is US_GI_1
+
+//Reserve_NL
+export ModelFile_Reserve_NL is US_GI_1
+export ModelFile_Reserve_NL_LOW is US_GI_1
+
+//Engineers_Scout_NL
+export ModelFile_Engineers_Scout_NL is US_GI_1
+export ModelFile_Engineers_Scout_NL_LOW is US_GI_1
+
+//Rifles_M72_LAW_NL
+export ModelFile_Rifles_M72_LAW_NL is US_GI_1
+export ModelFile_Rifles_M72_LAW_NL_LOW is US_GI_1
+
+//Rifles_Carl_NL
+export ModelFile_Rifles_Carl_NL is US_GI_1
+export ModelFile_Rifles_Carl_NL_LOW is US_GI_1
+
+//Rifles_Dragon_NL
+export ModelFile_Rifles_Dragon_NL is US_GI_1
+export ModelFile_Rifles_Dragon_NL_LOW is US_GI_1
+
+//Rifles_Mot_CMD_US
+export ModelFile_Rifles_Mot_CMD_US is US_GI_1
+export ModelFile_Rifles_Mot_CMD_US_LOW is US_GI_1
+
+//Rifles_Mot_Dragon_US
+export ModelFile_Rifles_Mot_Dragon_US is US_GI_1
+export ModelFile_Rifles_Mot_Dragon_US_LOW is US_GI_1
+
+//Rifles_Mot_HMG_US
+export ModelFile_Rifles_Mot_HMG_US is US_GI_1
+export ModelFile_Rifles_Mot_HMG_US_LOW is US_GI_1
+
+//Rifles_Mot_US
+export ModelFile_Rifles_Mot_US is US_GI_1
+export ModelFile_Rifles_Mot_US_LOW is US_GI_1
+
 //Rifles_US
 export ModelFile_Rifles_US is US_GI_1
 export ModelFile_Rifles_US_02 is US_GI_1
@@ -895,7 +1025,6 @@ export ModelFile_Rifles_Dragon_US_08 is US_GI_spe
 export ModelFile_Rifles_Dragon_US_09 is US_GI_Sniper
 export ModelFile_Rifles_Dragon_US_10 is US_GI_Officer
 export ModelFile_Rifles_Dragon_US_LOW is US_GI_1
-
 
 //Rifles_LAW_US
 export ModelFile_Rifles_LAW_US is US_GI_1
@@ -965,6 +1094,10 @@ export ModelFile_Rifles_half_LAW_US_10 is US_GI_Officer
 export ModelFile_Rifles_half_LAW_US_LOW is US_GI_1
 
 
+//Commandos_CMD_POL
+export ModelFile_Commandos_CMD_POL is US_GI_1
+export ModelFile_Commandos_CMD_POL_LOW is US_GI_1
+
 //AeroRifles_CMD_US
 export ModelFile_AeroRifles_CMD_US is US_GI_1
 export ModelFile_AeroRifles_CMD_US_02 is US_GI_1
@@ -1004,6 +1137,10 @@ export ModelFile_CavalryScout_US_LOW is 'GameData:/Assets/3D/Units/US/Infanterie
 //CavalryScout_CMD_US
 export ModelFile_CavalryScout_CMD_US is 'GameData:/Assets/3D/Units/US/Infanterie/GI/GI_Sniper.Ase2NdfBin'
 export ModelFile_CavalryScout_CMD_US_LOW is 'GameData:/Assets/3D/Units/US/Infanterie/GI/GI_Sniper.Ase2NdfBin'
+
+//Scout_LUX
+export ModelFile_Scout_LUX is US_GI_1
+export ModelFile_Scout_LUX_LOW is US_GI_1
 
 //Scout_US
 export ModelFile_Scout_US is US_GI_1
@@ -1134,6 +1271,14 @@ export ModelFile_Engineers_Flash_US_LOW is US_GI_1
 //MANPAD_Stinger_C_para_US
 export ModelFile_MANPAD_Stinger_C_para_US is US_AB_1
 export ModelFile_MANPAD_Stinger_C_para_US_LOW is US_AB_2
+
+//MANPAD_Stinger_C_Marine_NL
+export ModelFile_MANPAD_Stinger_C_Marine_NL is US_GI_1
+export ModelFile_MANPAD_Stinger_C_Marine_NL_LOW is US_GI_2
+
+//MANPAD_Stinger_C_NL
+export ModelFile_MANPAD_Stinger_C_NL is US_GI_1
+export ModelFile_MANPAD_Stinger_C_NL_LOW is US_GI_2
 
 //MANPAD_Stinger_C_US
 export ModelFile_MANPAD_Stinger_C_US is US_GI_1  //'GameData:/Assets/3D/Units/US/Infanterie/Airborne/Airborne_spe.Ase2NdfBin'
@@ -1353,6 +1498,10 @@ export ModelFile_ATGM_Konkurs_DDR_02 is DDR_MotSchutzen_2
 export ModelFile_ATGM_Konkurs_DDR_LOW is DDR_MotSchutzen_LOW
 
 
+//Engineers_CMD_POL
+export ModelFile_Engineers_CMD_POL is DDR_MotSchutzen_1
+export ModelFile_Engineers_CMD_POL_LOW is DDR_MotSchutzen_LOW
+
 //Engineers_CMD_DDR
 export ModelFile_Engineers_CMD_DDR is DDR_MotSchutzen_1
 export ModelFile_Engineers_CMD_DDR_02 is DDR_MotSchutzen_2
@@ -1362,6 +1511,10 @@ export ModelFile_Engineers_CMD_DDR_05 is DDR_MotSchutzen_Sniper
 export ModelFile_Engineers_CMD_DDR_06 is DDR_MotSchutzen_spe
 export ModelFile_Engineers_CMD_DDR_LOW is DDR_MotSchutzen_LOW
 
+//Engineers_POL
+export ModelFile_Engineers_POL is DDR_MotSchutzen_1
+export ModelFile_Engineers_POL_LOW is DDR_MotSchutzen_LOW
+
 //Engineers_DDR
 export ModelFile_Engineers_DDR is DDR_MotSchutzen_1
 export ModelFile_Engineers_DDR_02 is DDR_MotSchutzen_2
@@ -1370,6 +1523,10 @@ export ModelFile_Engineers_DDR_04 is DDR_MotSchutzen_Officer
 export ModelFile_Engineers_DDR_05 is DDR_MotSchutzen_Sniper
 export ModelFile_Engineers_DDR_06 is DDR_MotSchutzen_spe
 export ModelFile_Engineers_DDR_LOW is DDR_MotSchutzen_LOW
+
+//Engineers_Flam_POL
+export ModelFile_Engineers_Flam_POL is DDR_MotSchutzen_1
+export ModelFile_Engineers_Flam_POL_LOW is DDR_MotSchutzen_LOW
 
 //Engineers_Flam_DDR
 export ModelFile_Engineers_Flam_DDR is DDR_MotSchutzen_1
@@ -1425,6 +1582,14 @@ export ModelFile_HvyScout_DDR_05 is DDR_MotSchutzen_Sniper
 export ModelFile_HvyScout_DDR_06 is DDR_MotSchutzen_spe
 export ModelFile_HvyScout_DDR_LOW is DDR_MotSchutzen_LOW
 
+//MANPAD_Strela_2M_POL
+export ModelFile_MANPAD_Strela_2M_POL is DDR_MotSchutzen_1
+export ModelFile_MANPAD_Strela_2M_POL_LOW is DDR_MotSchutzen_LOW
+
+//MANPAD_Strela_2M_Para_POL
+export ModelFile_MANPAD_Strela_2M_Para_POL is DDR_MotSchutzen_1
+export ModelFile_MANPAD_Strela_2M_Para_POL_LOW is DDR_MotSchutzen_LOW
+
 //MANPAD_Strela_2M_DDR
 export ModelFile_MANPAD_Strela_2M_DDR is DDR_MotSchutzen_1
 export ModelFile_MANPAD_Strela_2M_DDR_02 is DDR_MotSchutzen_2
@@ -1452,6 +1617,10 @@ export ModelFile_MotRifles_BTR_DDR_04 is DDR_MotSchutzen_Officer
 export ModelFile_MotRifles_BTR_DDR_05 is DDR_MotSchutzen_Sniper
 export ModelFile_MotRifles_BTR_DDR_06 is DDR_MotSchutzen_spe
 export ModelFile_MotRifles_BTR_DDR_LOW is DDR_MotSchutzen_LOW
+
+//Rifles_HMG_POL
+export ModelFile_Rifles_HMG_POL is DDR_MotSchutzen_1
+export ModelFile_Rifles_HMG_POL_LOW is DDR_MotSchutzen_LOW
 
 //MotRifles_HMG_DDR
 export ModelFile_MotRifles_HMG_DDR is DDR_MotSchutzen_1
@@ -1579,6 +1748,14 @@ export ModelFile_Fallschirm_B1_RFA_05 is RFA_Fallschirm_NCO
 export ModelFile_Fallschirm_B1_RFA_06 is RFA_Fallschirm_spe
 export ModelFile_Fallschirm_B1_RFA_LOW is RFA_Fallschirm_LOW
 
+//ParaCmdo_AT_BEL
+export ModelFile_ParaCmdo_AT_BEL is RFA_Fallschirm_1
+export ModelFile_ParaCmdo_AT_BEL_LOW is RFA_Fallschirm_LOW
+
+//ParaCmdo_BEL
+export ModelFile_ParaCmdo_BEL is RFA_Fallschirm_1
+export ModelFile_ParaCmdo_BEL_LOW is RFA_Fallschirm_LOW
+
 //Fallschirm_RFA
 export ModelFile_Fallschirm_RFA is RFA_Fallschirm_1
 export ModelFile_Fallschirm_RFA_02 is RFA_Fallschirm_1
@@ -1589,6 +1766,10 @@ export ModelFile_Fallschirm_RFA_06 is RFA_Fallschirm_spe
 export ModelFile_Fallschirm_RFA_LOW is RFA_Fallschirm_LOW
 
 //------------------------------------------------------------------------------
+//LRRP_BEL
+export ModelFile_LRRP_BEL is RFA_Fernspaher_1
+export ModelFile_LRRP_BEL_LOW is RFA_Fernspaher_LOW
+
 //Fernspaher_RFA
 export ModelFile_Fernspaher_RFA is RFA_Fernspaher_1
 export ModelFile_Fernspaher_RFA_02 is RFA_Fernspaher_1
@@ -1599,6 +1780,14 @@ export ModelFile_Fernspaher_RFA_06 is RFA_Fernspaher_2
 export ModelFile_Fernspaher_RFA_LOW is RFA_Fernspaher_LOW
 
 //------------------------------------------------------------------------------
+//Provincial_CMD_BEL
+export ModelFile_Provincial_CMD_BEL is RFA_Jager_1
+export ModelFile_Provincial_CMD_BEL_LOW is RFA_Jager_LOW
+
+//Rifles_CMD_BEL
+export ModelFile_Rifles_CMD_BEL is RFA_Jager_1
+export ModelFile_Rifles_CMD_BEL_LOW is RFA_Jager_LOW
+
 //Jager_CMD_RFA
 export ModelFile_Jager_CMD_RFA is RFA_Jager_1
 export ModelFile_Jager_CMD_RFA_02 is RFA_Jager_NCO
@@ -1608,6 +1797,17 @@ export ModelFile_Jager_CMD_RFA_05 is RFA_Jager_1
 export ModelFile_Jager_CMD_RFA_06 is RFA_Jager_1
 export ModelFile_Jager_CMD_RFA_LOW is RFA_Jager_LOW
 
+//Provincial_BEL
+export ModelFile_Provincial_BEL is RFA_Jager_1
+export ModelFile_Provincial_BEL_LOW is RFA_Jager_LOW
+
+//Rifles_AT_BEL
+export ModelFile_Rifles_AT_BEL is RFA_Jager_1
+export ModelFile_Rifles_AT_BEL_LOW is RFA_Jager_LOW
+
+//Rifles_BEL
+export ModelFile_Rifles_BEL is RFA_Jager_1
+export ModelFile_Rifles_BEL_LOW is RFA_Jager_LOW
 
 //Jager_RFA
 export ModelFile_Jager_RFA is RFA_Jager_1
@@ -1667,6 +1867,10 @@ export ModelFile_Scout_RFA_05 is RFA_Jager_1
 export ModelFile_Scout_RFA_06 is RFA_Jager_1
 export ModelFile_Scout_RFA_LOW is RFA_Jager_LOW
 
+//MANPAD_Mistral_BEL
+export ModelFile_MANPAD_Mistral_BEL is RFA_PzGrenadier_1
+export ModelFile_MANPAD_Mistral_BEL_LOW is RFA_PzGrenadier_LOW
+
 //MANPAD_Redeye_RFA
 export ModelFile_MANPAD_Redeye_RFA is RFA_PzGrenadier_1
 export ModelFile_MANPAD_Redeye_RFA_02 is RFA_PzGrenadier_2
@@ -1676,6 +1880,14 @@ export ModelFile_MANPAD_Redeye_RFA_05 is RFA_PzGrenadier_sniper
 export ModelFile_MANPAD_Redeye_RFA_06 is RFA_PzGrenadier_spe
 export ModelFile_MANPAD_Redeye_RFA_LOW is RFA_PzGrenadier_LOW
 
+//Engineers_CMD_BEL
+export ModelFile_Engineers_CMD_BEL is RFA_PzGrenadier_1
+export ModelFile_Engineers_CMD_BEL_LOW is RFA_PzGrenadier_LOW
+
+//Engineers_CMD_NL
+export ModelFile_Engineers_CMD_NL is RFA_PzGrenadier_1
+export ModelFile_Engineers_CMD_NL_LOW is RFA_PzGrenadier_LOW
+
 //Engineers_CMD_RFA
 export ModelFile_Engineers_CMD_RFA is RFA_PzGrenadier_1
 export ModelFile_Engineers_CMD_RFA_02 is RFA_PzGrenadier_2
@@ -1684,6 +1896,10 @@ export ModelFile_Engineers_CMD_RFA_04 is RFA_PzGrenadier_Officer
 export ModelFile_Engineers_CMD_RFA_05 is RFA_PzGrenadier_sniper
 export ModelFile_Engineers_CMD_RFA_06 is RFA_PzGrenadier_spe
 export ModelFile_Engineers_CMD_RFA_LOW is RFA_PzGrenadier_LOW
+
+//Engineers_AT_BEL
+export ModelFile_Engineers_AT_BEL is RFA_PzGrenadier_1
+export ModelFile_Engineers_AT_BEL_LOW is RFA_PzGrenadier_LOW
 
 //Engineers_AT_RFA
 export ModelFile_Engineers_AT_RFA is RFA_PzGrenadier_1
@@ -1731,6 +1947,14 @@ export ModelFile_Feldgendarmerie_RFA_05 is Feldjager_2
 export ModelFile_Feldgendarmerie_RFA_06 is Feldjager_NCO
 export ModelFile_Feldgendarmerie_RFA_LOW is RFA_Jager_LOW
 
+//Engineers_BEL
+export ModelFile_Engineers_BEL is RFA_PzGrenadier_1
+export ModelFile_Engineers_BEL_LOW is RFA_PzGrenadier_LOW
+
+//Engineers_NL
+export ModelFile_Engineers_NL is RFA_PzGrenadier_1
+export ModelFile_Engineers_NL_LOW is RFA_PzGrenadier_LOW
+
 //Engineers_RFA
 export ModelFile_Engineers_RFA is RFA_PzGrenadier_1
 export ModelFile_Engineers_RFA_02 is RFA_PzGrenadier_2
@@ -1739,6 +1963,14 @@ export ModelFile_Engineers_RFA_04 is RFA_PzGrenadier_Officer
 export ModelFile_Engineers_RFA_05 is RFA_PzGrenadier_sniper
 export ModelFile_Engineers_RFA_06 is RFA_PzGrenadier_spe
 export ModelFile_Engineers_RFA_LOW is RFA_PzGrenadier_LOW
+
+//Engineers_Flam_BEL
+export ModelFile_Engineers_Flam_BEL is RFA_PzGrenadier_1
+export ModelFile_Engineers_Flam_BEL_LOW is RFA_PzGrenadier_LOW
+
+//Engineers_Flam_NL
+export ModelFile_Engineers_Flam_NL is RFA_PzGrenadier_1
+export ModelFile_Engineers_Flam_NL_LOW is RFA_PzGrenadier_LOW
 
 //Engineers_Flam_RFA
 export ModelFile_Engineers_Flam_RFA is RFA_PzGrenadier_1
@@ -1755,6 +1987,14 @@ export ModelFile_Engineers_Reserve_RFA_02 is RFA_PzGrenadier_2
 export ModelFile_Engineers_Reserve_RFA_03 is RFA_PzGrenadier_NCO
 export ModelFile_Engineers_Reserve_RFA_04 is RFA_PzGrenadier_sniper
 export ModelFile_Engineers_Reserve_RFA_LOW is RFA_PzGrenadier_LOW
+
+//Scout_Provincial_AT_BEL
+export ModelFile_Scout_Provincial_AT_BEL is RFA_Jager_1
+export ModelFile_Scout_Provincial_AT_BEL_LOW is RFA_Jager_LOW
+
+//Scout_Provincial_BEL
+export ModelFile_Scout_Provincial_BEL is RFA_Jager_1
+export ModelFile_Scout_Provincial_BEL_LOW is RFA_Jager_LOW
 
 //Jager_Aufk_RFA
 export ModelFile_Jager_Aufk_RFA is RFA_Jager_1
@@ -1811,6 +2051,10 @@ export ModelFile_KSM_CMD_RFA_05 is RFA_PzGrenadier_sniper
 export ModelFile_KSM_CMD_RFA_06 is RFA_PzGrenadier_spe
 export ModelFile_KSM_CMD_RFA_LOW is RFA_PzGrenadier_LOW
 
+//ParaCmdo_CMD_BEL
+export ModelFile_ParaCmdo_CMD_BEL is RFA_Fallschirm_1
+export ModelFile_ParaCmdo_CMD_BEL_LOW is RFA_Fallschirm_LOW
+
 //Fallschirmjager_CMD_RFA
 export ModelFile_Fallschirmjager_CMD_RFA is RFA_Fallschirm_1
 export ModelFile_Fallschirmjager_CMD_RFA_02 is RFA_Fallschirm_2
@@ -1819,6 +2063,14 @@ export ModelFile_Fallschirmjager_CMD_RFA_04 is RFA_Fallschirm_Officer
 export ModelFile_Fallschirmjager_CMD_RFA_05 is RFA_Fallschirm_spe
 export ModelFile_Fallschirmjager_CMD_RFA_06 is RFA_Fallschirm_1
 export ModelFile_Fallschirmjager_CMD_RFA_LOW is RFA_Fallschirm_LOW
+
+//Scout_ParaCmdo_BEL
+export ModelFile_Scout_ParaCmdo_BEL is RFA_Fallschirm_1
+export ModelFile_Scout_ParaCmdo_BEL_LOW is RFA_Fallschirm_LOW
+
+//Scout_ParaCmdo_Mech_BEL
+export ModelFile_Scout_ParaCmdo_Mech_BEL is RFA_Fallschirm_1
+export ModelFile_Scout_ParaCmdo_Mech_BEL_LOW is RFA_Fallschirm_LOW
 
 //Fallschirmjager_Scout_RFA
 export ModelFile_Fallschirmjager_Scout_RFA is RFA_Fallschirm_1
@@ -1936,6 +2188,14 @@ export ModelFile_Scout_FR_03 is FR_Chasseur_NCO
 export ModelFile_Scout_FR_04 is FR_Chasseur_spe
 export ModelFile_Scout_FR_LOW is FR_Chasseur_LOW
 
+//Commandos_Marine_POL
+export ModelFile_Commandos_Marine_POL is FR_Chasseur_1
+export ModelFile_Commandos_Marine_POL_LOW is FR_Chasseur_LOW
+
+//Commandos_POL
+export ModelFile_Commandos_POL is FR_Chasseur_1
+export ModelFile_Commandos_POL_LOW is FR_Chasseur_LOW
+
 //Commandos_FR
 export ModelFile_Commandos_FR is FR_Chasseur_1
 export ModelFile_Commandos_FR_02 is FR_Chasseur_2
@@ -1962,6 +2222,10 @@ export ModelFile_Para_CMD_FR_04 is FR_Para_NCO
 export ModelFile_Para_CMD_FR_05 is FR_Chasseur_Sniper
 export ModelFile_Para_CMD_FR_06 is FR_Chasseur_2
 export ModelFile_Para_CMD_FR_LOW is FR_Para_LOW
+
+//Groupe_AT_POL
+export ModelFile_Groupe_AT_POL is FR_Para_NCO
+export ModelFile_Groupe_AT_POL_LOW is FR_Para_LOW
 
 //Groupe_AT_para_FR
 export ModelFile_Groupe_AT_para_FR is FR_Para_NCO
@@ -2031,6 +2295,10 @@ export ModelFile_SAS_CMD_FR_03 is FR_Chasseur_1
 export ModelFile_SAS_CMD_FR_04 is FR_Para_NCO
 export ModelFile_SAS_CMD_FR_LOW is FR_Para_LOW
 
+//Commandos_NL
+export ModelFile_Commandos_NL is FR_Para_NCO
+export ModelFile_Commandos_NL_LOW is FR_Para_LOW
+
 //SAS_FR
 export ModelFile_SAS_FR is FR_Para_NCO
 export ModelFile_SAS_FR_02 is FR_Para_spe
@@ -2039,6 +2307,14 @@ export ModelFile_SAS_FR_04 is FR_Para_NCO
 export ModelFile_SAS_FR_05 is FR_Chasseur_Sniper
 export ModelFile_SAS_FR_06 is FR_Chasseur_2
 export ModelFile_SAS_FR_LOW is FR_Para_LOW
+
+//Sniper_POL
+export ModelFile_Sniper_POL is FR_Para_NCO
+export ModelFile_Sniper_POL_LOW is FR_Para_LOW
+
+//Sniper_paras_POL
+export ModelFile_Sniper_paras_POL is FR_Para_NCO
+export ModelFile_Sniper_paras_POL_LOW is FR_Para_LOW
 
 //SAS_Sniper_FR
 export ModelFile_SAS_Sniper_FR is FR_Para_NCO
@@ -2202,6 +2478,10 @@ export ModelFile_Airmobile_MILAN_UK_05 is UK_Para_Officer
 export ModelFile_Airmobile_MILAN_UK_06 is UK_Para_spe
 export ModelFile_Airmobile_MILAN_UK_LOW is UK_Para_1
 
+//Paratroopers_Engineers_UK
+export ModelFile_Paratroopers_Engineers_UK is UK_Rifleman_1
+export ModelFile_Paratroopers_Engineers_UK_LOW is UK_Rifleman_1
+
 //Engineers_UK
 export ModelFile_Engineers_UK is UK_Rifleman_1
 export ModelFile_Engineers_UK_02 is UK_Rifleman_2
@@ -2253,6 +2533,10 @@ export ModelFile_Airmobile_CMD_UK_05 is UK_Para_Officer
 export ModelFile_Airmobile_CMD_UK_06 is UK_Para_spe
 export ModelFile_Airmobile_CMD_UK_LOW is UK_Para_1
 
+//Paratroopers_Engineers_CMD_UK
+export ModelFile_Paratroopers_Engineers_CMD_UK is UK_Rifleman_1
+export ModelFile_Paratroopers_Engineers_CMD_UK_LOW is UK_Rifleman_1
+
 //Engineers_CMD_UK
 export ModelFile_Engineers_CMD_UK is UK_Rifleman_1
 export ModelFile_Engineers_CMD_UK_02 is UK_Rifleman_2
@@ -2270,6 +2554,10 @@ export ModelFile_Paratroopers_CMD_UK_04 is UK_Para_2
 export ModelFile_Paratroopers_CMD_UK_05 is UK_Para_Officer
 export ModelFile_Paratroopers_CMD_UK_06 is UK_Para_spe
 export ModelFile_Paratroopers_CMD_UK_LOW is UK_Para_1
+
+//Rifles_Gurkhas_CMD_UK
+export ModelFile_Rifles_Gurkhas_CMD_UK is UK_Rifleman_1
+export ModelFile_Rifles_Gurkhas_CMD_UK_LOW is UK_Rifleman_1
 
 //Rifles_CMD_UK
 export ModelFile_Rifles_CMD_UK is UK_Rifleman_1
@@ -2312,12 +2600,20 @@ export ModelFile_Pathfinders_UK_05 is UK_Para_Officer
 export ModelFile_Pathfinders_UK_06 is UK_Para_spe
 export ModelFile_Pathfinders_UK_LOW is UK_Para_1
 
+//LRRP_NL
+export ModelFile_LRRP_NL is UK_SAS_1
+export ModelFile_LRRP_NL_LOW is UK_SAS_1
+
 //LRRP_UK
 export ModelFile_LRRP_UK is UK_SAS_1
 export ModelFile_LRRP_UK_02 is UK_SAS_2
 export ModelFile_LRRP_UK_03 is  UK_SAS_NCO
 export ModelFile_LRRP_UK_LOW is UK_SAS_1
 
+
+//Scout_NL
+export ModelFile_Scout_NL is UK_Rifleman_1
+export ModelFile_Scout_NL_LOW is UK_Rifleman_1
 
 //Scout_UK
 export ModelFile_Scout_UK is UK_Rifleman_1
@@ -2327,6 +2623,14 @@ export ModelFile_Scout_UK_04 is UK_Rifleman_Officer
 export ModelFile_Scout_UK_05 is UK_Rifleman_Sniper
 export ModelFile_Scout_UK_06 is UK_Rifleman_spe
 export ModelFile_Scout_UK_LOW is UK_Rifleman_1
+
+//Scout_AT_BEL
+export ModelFile_Scout_AT_BEL is UK_Rifleman_1
+export ModelFile_Scout_AT_BEL_LOW is UK_Rifleman_1
+
+//Scout_AT_NL
+export ModelFile_Scout_AT_NL is UK_Rifleman_1
+export ModelFile_Scout_AT_NL_LOW is UK_Rifleman_1
 
 //Scout_AT_UK
 export ModelFile_Scout_AT_UK is UK_Rifleman_1
@@ -2351,6 +2655,10 @@ export ModelFile_MANPAD_Blowpipe_UK_05 is UK_Rifleman_Sniper
 export ModelFile_MANPAD_Blowpipe_UK_06 is UK_Rifleman_spe
 export ModelFile_MANPAD_Blowpipe_UK_LOW is UK_Rifleman_1
 
+//MANPAD_Javelin_para_UK
+export ModelFile_MANPAD_Javelin_para_UK is UK_Rifleman_1
+export ModelFile_MANPAD_Javelin_para_UK_LOW is UK_Rifleman_1
+
 //MANPAD_Javelin_UK
 export ModelFile_MANPAD_Javelin_UK is UK_Rifleman_1
 export ModelFile_MANPAD_Javelin_UK_02 is UK_Rifleman_2
@@ -2359,6 +2667,10 @@ export ModelFile_MANPAD_Javelin_UK_04 is UK_Rifleman_Officer
 export ModelFile_MANPAD_Javelin_UK_05 is UK_Rifleman_Sniper
 export ModelFile_MANPAD_Javelin_UK_06 is UK_Rifleman_spe
 export ModelFile_MANPAD_Javelin_UK_LOW is UK_Rifleman_1
+
+//Security_UK
+export ModelFile_Security_UK is UK_Rifleman_1
+export ModelFile_Security_UK_LOW is UK_Rifleman_1
 
 //Rifles_RAF_UK
 export ModelFile_Rifles_RAF_UK is UK_Rifleman_1
@@ -2377,6 +2689,10 @@ export ModelFile_Gun_Group_UK_04 is UK_Rifleman_Officer
 export ModelFile_Gun_Group_UK_05 is UK_Rifleman_Sniper
 export ModelFile_Gun_Group_UK_06 is UK_Rifleman_spe
 export ModelFile_Gun_Group_UK_LOW is UK_Rifleman_1
+
+//Rifles_Gurkhas_UK
+export ModelFile_Rifles_Gurkhas_UK is UK_Rifleman_1
+export ModelFile_Rifles_Gurkhas_UK_LOW is UK_Rifleman_1
 
 //Rifles_UK
 export ModelFile_Rifles_UK is UK_Rifleman_1
@@ -2521,3 +2837,7 @@ NL_MarinierCmdo_1 is 'GameData:/Assets/3D/Units/NL/Infanterie/MarinierCmdo/Marin
 NL_MarinierCmdo_NCO is 'GameData:/Assets/3D/Units/NL/Infanterie/MarinierCmdo/MarinierCmdo_NCO.Ase2NdfBin'
 NL_Natres_1 is 'GameData:/Assets/3D/Units/NL/Infanterie/Natres/Natres_1.Ase2NdfBin'
 NL_Natres_2 is 'GameData:/Assets/3D/Units/NL/Infanterie/Natres/Natres_2.Ase2NdfBin'
+//Scout_LRRP_POL
+export ModelFile_Scout_LRRP_POL is DDR_FJB_1
+export ModelFile_Scout_LRRP_POL_LOW is DDR_FJB_LOW
+

@@ -28,7 +28,6 @@ is BUCKTextDescriptor
     TextDico = <TextDico>
     TextToken  = <TextToken>
 
-    UniformDrawer = $/UserInterface/UIUniformDrawer
     HasBackground = false
 
     TextColor = "MarronPanel_noir"
@@ -409,7 +408,6 @@ AffichageGround is BUCKListDescriptor
 
                 BigLineAction = ~/BigLineAction/CutByDots
 
-                UniformDrawer = $/UserInterface/UIUniformDrawer
                 HasBackground = false
 
                 TextDico = ~/LocalisationConstantes/dico_interface_ingame
@@ -473,7 +471,6 @@ is BUCKListDescriptor
 
                 BigLineAction = ~/BigLineAction/CutByDots
 
-                UniformDrawer = $/UserInterface/UIUniformDrawer
                 HasBackground = false
 
                 TextDico = ~/LocalisationConstantes/dico_interface_ingame
@@ -538,7 +535,6 @@ template titreWarno
 
         BigLineAction = ~/BigLineAction/CutByDots
 
-        UniformDrawer = $/UserInterface/UIUniformDrawer
         HasBackground = false
 
         TextDico = ~/LocalisationConstantes/dico_interface_ingame
@@ -684,8 +680,8 @@ UISpecificDisplayStartingInformationViewDescriptor is TUISpecificDisplayStarting
 
     TeamComponentDescriptorAssociation = MAP
     [
-        (EAllegiance/Otan, DisplayStartingInformationTeamContainer(BackgroundBlockColorToken = "playerHelper/Otan_background")),
-        (EAllegiance/Pacte, DisplayStartingInformationTeamContainer(BackgroundBlockColorToken = "playerHelper/Pact_background")),
+        (EAllianceStyle/BLUFOR, DisplayStartingInformationTeamContainer(BackgroundBlockColorToken = "playerHelper/Otan_background")),
+        (EAllianceStyle/REDFOR, DisplayStartingInformationTeamContainer(BackgroundBlockColorToken = "playerHelper/Pact_background")),
     ]
     DummyDescriptor = DisplayStartingInformationTeamContainer(HasBackground = false)
 )

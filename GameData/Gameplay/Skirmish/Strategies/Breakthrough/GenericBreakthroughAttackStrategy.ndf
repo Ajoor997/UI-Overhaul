@@ -100,7 +100,6 @@ export GenBTAtk_PhaseDeploiement is TSequenceGeneratorDescriptor
         ~/Attack_Adaptive,          // ~100
         ~/Attack_Filler,            // budget 40
         ~/Reco,            // 40 par reco
-        ~/AirReco,
 
         //------------------------------
         // Défenses Avions Arti
@@ -162,10 +161,6 @@ export GenBTAtk_Phase_Command is TSequenceGeneratorDescriptor
         ~/Airstrike_Offense,
         ~/Airstrike_Defense,
 
-        ~/SuperCommander,
-
-        ~/Attack_MBT, // MBT devient low prio en phase A pour éviter de pomper trop de thune
-
         //------------------------------
         // Défenses Avions Arti
         //------------------------------
@@ -194,14 +189,13 @@ GenBTAtk_Defenses_Airstrike_Arti_Shuffle_Deploy is
     ~/GenBTAtk_Artillery_Expensive,
     ~/Defense_Static_AA,
     ~/Airstrike_Offense,
-    ~/AirReco,
     ~/Airstrike_Defense,
     ~/GenBTAtk_Artillery_TriggerHappy_1for4Corridors,
 ]
 
 GenBTAtk_Scaling is
 [
-    ~/Reco,
+    ~/Reco_Autogen,
     ~/Attack_Main_Autogen,
     ~/Attack_Adaptive_Autogen,
     ~/GenBTAtk_Artillery_Expensive_Autogen,

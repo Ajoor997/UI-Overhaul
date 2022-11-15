@@ -8,8 +8,6 @@ template BUCKListElementDescriptor
     PointerEventsToAllow : int = ~/EAllowablePointerEventType/None,
     HidePointerEvents : bool = false,
 
-    UniformDrawer : TUIUniformDrawer = $/UserInterface/UIUniformDrawer,
-
     HasBackground : bool = false,
     BackgroundBlockColorToken : string = "",
 
@@ -63,7 +61,7 @@ is TBUCKListElementDescriptor
 
     SpotlightComponent = nil
 
-    UniformDrawer = <UniformDrawer>
+    UniformDrawer = $/UserInterface/UIUniformDrawer
 
     HasBackground = <HasBackground>
     BackgroundBlockColorToken = <BackgroundBlockColorToken>
@@ -123,8 +121,6 @@ template BUCKListDescriptor
 
     SpotlightComponent : TBUCKContainerDescriptor = nil,
     SpotlightLayer : TUILayer = nil,
-
-    UniformDrawer : TUIUniformDrawer = $/UserInterface/UIUniformDrawer,
 
     HasBackground : bool = false,
     BackgroundBlockColorToken : string = "",
@@ -188,7 +184,7 @@ is TBUCKListDescriptor
 
     SpotlightComponent = <SpotlightComponent>
 
-    UniformDrawer = <UniformDrawer>
+    UniformDrawer = $/UserInterface/UIUniformDrawer
 
     HasBackground = <HasBackground>
     BackgroundBlockColorToken = <BackgroundBlockColorToken>

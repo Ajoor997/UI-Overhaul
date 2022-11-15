@@ -18,30 +18,17 @@ template SmartGroupRackContainerStrategic
     Radius = 15
     HasBackground = true
     BackgroundBlockColorToken =  "SM_Grullo"
-    HasBorder = false
+    HasBorder = true
+    BorderLineColorToken = 'SM_Noir'
+    RoundedVertexes = [false, true, true, false]
 
     Components =
     [
-        BUCKTextureDescriptor
-        (
-            ComponentFrame = TUIFramePropertyRTTI
-            (
-                RelativeWidthHeight = [1.0, 1.0]
-            )
-            TextureFrame   = TUIFramePropertyRTTI( MagnifiableWidthHeight = [900.0, 1000.0] )
-            ResizeMode = ~/TextureResizeMode/UserDefined
-            ClipTextureToComponent = true
-            TileTextureInComponent = true
-            TextureDrawer  = 'ColorMultiply_Additive'
-            TextureToken =  'ShowRoomTexture_foregroundEffetPapier'
-        ),
         BUCKContainerDescriptor
         (
             ComponentFrame = TUIFramePropertyRTTI
             (
                 MagnifiableWidthHeight = [500.0, 0.0]
-                AlignementToAnchor = [0.0, 0.0]
-                AlignementToFather = [0.0, 0.0]
             )
 
             FitStyle = ~/ContainerFitStyle/MaxBetweenUserDefinedAndContent
@@ -74,19 +61,6 @@ template SmartGroupRackContainerStrategic
                 ),
             ]
         ),
-        BUCKTextureDescriptor
-        (
-            ComponentFrame = TUIFramePropertyRTTI
-            (
-                RelativeWidthHeight = [1.0, 1.0]
-            )
-            TextureFrame   = TUIFramePropertyRTTI( MagnifiableWidthHeight = [1000.0, 1000.0] )
-            ResizeMode = ~/TextureResizeMode/UserDefined
-            ClipTextureToComponent = true
-            TileTextureInComponent = true
-            TextureDrawer  = 'ColorMultiply_Additive'
-            TextureToken =  'ShowRoomTexture_foregroundEffetPapier'
-        )
     ]
 )
 

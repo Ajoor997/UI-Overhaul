@@ -129,7 +129,6 @@ export VHard_Phase_Deploiement is TSequenceGeneratorDescriptor
         ~/Defense_Static_Adaptive,
         ~/Defense_Static_Adaptive,
 
-        ~/AirReco,
         ~/Airstrike_Offense,
         ~/Airstrike_Defense,
 
@@ -192,9 +191,6 @@ export VHard_Phase_Command is TSequenceGeneratorDescriptor
         ~/Airstrike_Offense,
         ~/Airstrike_Defense,
 
-        ~/SuperCommander,
-
-
         //Low prio mais peut servir si on n'a pas de zone dans nos couloirs
         ~/CaptureOneObjectifForAlliance,
 
@@ -210,7 +206,6 @@ export VHard_Phase_Command is TSequenceGeneratorDescriptor
         ~/Defense_Static_Adaptive,
         ~/Defense_Static_Adaptive,
 
-        ~/AirReco,
         ~/Airstrike_Offense,
         ~/Airstrike_Defense,
 
@@ -273,9 +268,6 @@ export VHard_Phase_LastHope is TSequenceGeneratorDescriptor
         ~/Airstrike_Offense,
         ~/Airstrike_Defense,
 
-        ~/SuperCommander,
-
-
         //Low prio mais peut servir si on n'a pas de zone dans nos couloirs
         ~/CaptureOneObjectifForAlliance,
 
@@ -286,7 +278,6 @@ export VHard_Phase_LastHope is TSequenceGeneratorDescriptor
         ~/Defense_Static_AA,
         ~/Artillery_TriggerHappy_1for2Corridors,
 
-        ~/AirReco,
         ~/Airstrike_Offense,
         ~/Airstrike_Defense,
 
@@ -305,8 +296,8 @@ export VHard_Phase_LastHope is TSequenceGeneratorDescriptor
 
 VeryHardScaling is
 [
-    ~/Reco,
-    ~/Attack_Objectives,
+    ~/Reco_Autogen,
+    ~/Attack_Objectives_Autogen,
 
     ~/Attack_Main_Autogen,
     ~/Attack_Helo_Autogen,
@@ -327,8 +318,8 @@ VeryHardScaling is
 
 VeryHardScaling_Attack is
 [
-    ~/Reco,
-    ~/Attack_Objectives,
+    ~/Reco_Autogen,
+    ~/Attack_Objectives_Autogen,
 
     ~/Attack_Main_Autogen,
     ~/Attack_Helo_Autogen,

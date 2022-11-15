@@ -56,10 +56,6 @@ export OrderDisplayDefault is TOrderDisplayDrawInfo
     ColorLineEnd                = [240, 0, 0, alpha] //Red
     MaxMetersBetweenColors      = MaxMeter
     LineThickness               = 2000.0
-    //ColorCircleDestination      = [0, 0, 0, 0]
-    //CircleDestinationThickness  = 1000.0
-    //CircleDestinationRadius     = 2000.0
-    //DashLengthInMeters          = 0
     DisplayWaypoints            = true
     HideNextOrders              = false
     MustDrawCircle              = false
@@ -76,10 +72,6 @@ export OrderDisplayMove is TOrderDisplayDrawInfo
     ColorLineEnd                = [128, 187, 255, alpha] //Light blue
     MaxMetersBetweenColors      = MaxMeter
     LineThickness               = 2000.0
-    //ColorCircleDestination      = [0, 0, 0, 0]
-    //CircleDestinationThickness  = 1000.0
-    //CircleDestinationRadius     = 2000.0
-    //DashLengthInMeters          = 0
     DisplayWaypoints            = true
     HideNextOrders              = false
     MustDrawCircle              = false
@@ -101,10 +93,6 @@ export OrderDisplayAirplanePatrol is TOrderDisplayDrawInfo
     ColorLineEnd                = [128, 187, 255, alpha] //Light blue
     MaxMetersBetweenColors      = 0
     LineThickness               = 2000.0
-    //ColorCircleDestination      = [0, 0, 0, 0]
-    //CircleDestinationThickness  = 1000.0
-    //CircleDestinationRadius     = 2000.0
-    //DashLengthInMeters          = 0
     DisplayWaypoints            = true
     HideNextOrders              = false
     MustDrawCircle              = false
@@ -140,10 +128,6 @@ export OrderDisplayQuickMove is TOrderDisplayDrawInfo //Move Fast
     ColorLineEnd                = [0, 119, 255, alpha] //Dark blue
     MaxMetersBetweenColors      = MaxMeter
     LineThickness               = 2000.0
-    //ColorCircleDestination      = [0, 0, 0, 0]
-    //CircleDestinationThickness  = 1000.0
-    //CircleDestinationRadius     = 2000.0
-    //DashLengthInMeters          = 0
     DisplayWaypoints            = true
     HideNextOrders              = false
     MustDrawCircle              = false
@@ -173,14 +157,10 @@ export OrderDisplayReverse is TOrderDisplayDrawInfo //Reverse
 export OrderDisplayAirplaneEvacuate is TOrderDisplayDrawInfo
 (
     OrderToken                  = "AirplaneEvacuate"
-    //ColorLineStart              = [255, 204, 0, 50]
-    //ColorLineEnd                = [255, 204, 0, 220]
-    //MaxMetersBetweenColors      = 0
     LineThickness               = 2000.0
     ColorCircleDestination      = [255, 204, 0, alpha] //Gold
     CircleDestinationThickness  = 1000.0
     CircleDestinationRadius     = 4000.0
-    //DashLengthInMeters          = 0
     DisplayWaypoints            = true
     HideNextOrders              = false
     MustDrawCircle              = true
@@ -378,14 +358,10 @@ export OrderDisplayAirplaneShoot is TOrderDisplayDrawInfo //Fire Pos Direct Fire
 export OrderDisplayUnload is TOrderDisplayDrawInfo
 (
     OrderToken                  = "UnloadFromTransport"
-    //ColorLineStart              = [100, 255, 100, 255]
-    //ColorLineEnd                = [100, 255, 100, 255]
-    //MaxMetersBetweenColors      = 0
     LineThickness               = 2000.0
     ColorCircleDestination      = [150, 209, 79, alpha] //Green
     CircleDestinationThickness  = 1000.0
     CircleDestinationRadius     = 2000.0
-    //DashLengthInMeters          = 0
     DisplayWaypoints            = true
     HideNextOrders              = false
     MustDrawCircle              = true
@@ -403,7 +379,6 @@ export OrderDisplayUnloadAtPosition is TOrderDisplayDrawInfo
     ColorCircleDestination      = [150, 209, 79, 225]
     CircleDestinationThickness  = 1000.0
     CircleDestinationRadius     = 2000.0
-    //DashLengthInMeters          = 0
     DisplayWaypoints            = true
     HideNextOrders              = false
     MustDrawCircle              = true
@@ -423,7 +398,6 @@ export OrderDisplayLoadIntoTransport is TOrderDisplayDrawInfo
     CircleDestinationRadius     = 2000.0
     ColorCircleStart            = [204, 255, 153, 225]
     CircleStartThickness        = 1000.0
-    CircleStartRadius           = 2000.0
     DashLengthInMeters          = 0
     DisplayWaypoints            = true
     HideNextOrders              = false
@@ -445,7 +419,6 @@ export OrderDisplayLoadUnit is TOrderDisplayDrawInfo
     CircleDestinationRadius     = 2000.0
     ColorCircleStart            = [204, 255, 153, 225]
     CircleStartThickness        = 1000.0
-    CircleStartRadius           = 2000.0
     DashLengthInMeters          = 0
     DisplayWaypoints            = true
     HideNextOrders              = false
@@ -505,7 +478,6 @@ export OrderDisplayLand is TOrderDisplayDrawInfo
     ColorCircleDestination      = [128, 187, 255, 220] //Light blue
     CircleDestinationThickness  = 1000.0
     CircleDestinationRadius     = 3000.0
-    //DashLengthInMeters          = 0
     DisplayWaypoints            = true
     HideNextOrders              = false
     MustDrawCircle              = true
@@ -523,7 +495,6 @@ export OrderDisplayGoDown is TOrderDisplayDrawInfo
     ColorCircleDestination      = [128, 187, 255, 220] //Light blue
     CircleDestinationThickness  = 1000.0
     CircleDestinationRadius     = 3000.0
-    //DashLengthInMeters          = 0
     DisplayWaypoints            = true
     HideNextOrders              = false
     MustDrawCircle              = true
@@ -541,7 +512,6 @@ export OrderDisplayGoUp is TOrderDisplayDrawInfo
     ColorCircleDestination      = [128, 187, 255, 220] //Light blue
     CircleDestinationThickness  = 1000.0
     CircleDestinationRadius     = 3000.0
-    //DashLengthInMeters          = 0
     DisplayWaypoints            = true
     HideNextOrders              = false
     MustDrawCircle              = true

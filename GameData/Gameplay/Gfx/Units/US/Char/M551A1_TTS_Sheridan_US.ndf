@@ -18,37 +18,11 @@ Modele_M551A1_TTS_Sheridan_US_LOW is TResourceMultiMaterialMeshWithLod
     CivMask =  CivMask/Common
 )
 //-------------------------------------------------------------------------------------
-Gfx_Modele_M551A1_TTS_Sheridan_US  is TTimelyReceiverFactoryCarrier
+
+Gfx_Modele_M551A1_TTS_Sheridan_US is StrategicPawnDepictionTemplate
 (
-    DepictionTemplate = TDepictionTemplate
-    (
-        Scaler = TConstantScaler( Scale = 7)
-        Selector = OnlyHighDepictionSelector
-        DepictionAlternatives = [ DepictionDescriptor_LOD_High( MeshDescriptor = MeshModele_Socle_USA ) ]
-
-        SubDepictions = [ TSubDepiction
-        (
-            Depiction = TDepictionTemplate
-            (
-                Scaler = CommonIdentityScaler
-                Selector = OnlyHighDepictionSelector
-                DepictionAlternatives = [ DepictionDescriptor_LOD_High( MeshDescriptor = MeshModele_Tige_courte ) ]
-
-                SubDepictions = [ TSubDepiction
-                (
-                    Anchor = "vehicule"
-                    Depiction = TDepictionTemplate
-                    (
-                        Scaler = TConstantScaler( Scale = 7)
-                        Selector = CommonDepictionSelector
-                        DepictionAlternatives = [
-                            DepictionDescriptor_LOD_High( MeshDescriptor = Modele_M551A1_TTS_Sheridan_US ),
-                            DepictionDescriptor_LOD_Mid ( MeshDescriptor = Modele_M551A1_TTS_Sheridan_US ),
-                            DepictionDescriptor_LOD_Low ( MeshDescriptor = Modele_M551A1_TTS_Sheridan_US DisabledOperators = ['tourelle3'] ),
-                        ]
-                    )
-                ) ]
-            )
-        ) ]
-    )
+    MeshSocle = MeshModele_Socle_USA
+    MeshTige = MeshModele_Tige_courte
+    MeshPawn = Modele_M551A1_TTS_Sheridan_US
+    Anchor = "vehicule"
 )

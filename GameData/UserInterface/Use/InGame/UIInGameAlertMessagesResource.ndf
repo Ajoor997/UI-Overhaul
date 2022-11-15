@@ -37,7 +37,6 @@ AlertLine is BUCKButtonDescriptor
         MagnifiableWidthHeight = [0.0, 25.0]
     )
 
-    UniformDrawer = $/UserInterface/UIUniformDrawer
     HasBorder = false
 
     Components =
@@ -49,8 +48,6 @@ AlertLine is BUCKButtonDescriptor
             (
                 RelativeWidthHeight = [1.0, 1.0]
             )
-
-            UniformDrawer = $/UserInterface/UIUniformDrawer
 
             Transition0 = 0.0
             Transition1 = 0.5
@@ -85,8 +82,6 @@ AlertLine is BUCKButtonDescriptor
             TextPadding = TRTTILength4( Magnifiable = [0.0, 7.0, 10.0, 7.0] )
             TypefaceToken = "Liberator"
             BigLineAction = ~/BigLineAction/CutByDots
-
-            UniformDrawer = $/UserInterface/UIUniformDrawer
 
             TextDico = ~/LocalisationConstantes/dico_interface_ingame
 

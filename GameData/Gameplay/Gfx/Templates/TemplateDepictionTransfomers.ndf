@@ -17,7 +17,7 @@ private MeshModele_Socle_USA is TResourceMultiMaterialMeshWithLod
 )
 private MeshModele_Socle_RFA is TResourceMultiMaterialMeshWithLod
 (
-    FileName = 'GameData:/Assets/3D/Units/Common/Strategic/Socle_USA.fbx'
+    FileName = 'GameData:/Assets/3D/Units/Common/Strategic/Socle_RFA.fbx'
     CivMask =  CivMask/Common
 )
 
@@ -28,7 +28,7 @@ private MeshModele_Socle_SOV is TResourceMultiMaterialMeshWithLod
 )
 private MeshModele_Socle_DDR is TResourceMultiMaterialMeshWithLod
 (
-    FileName = 'GameData:/Assets/3D/Units/Common/Strategic/Socle_SOV.fbx'
+    FileName = 'GameData:/Assets/3D/Units/Common/Strategic/Socle_DDR.fbx'
     CivMask =  CivMask/Common
 )
 //------------------------------------------------------------------------------

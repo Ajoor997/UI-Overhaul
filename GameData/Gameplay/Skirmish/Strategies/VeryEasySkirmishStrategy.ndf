@@ -145,9 +145,6 @@ export VEasy_Phase_Command is TSequenceGeneratorDescriptor
         ~/Airstrike_Offense,
         ~/Airstrike_Defense,
 
-        ~/SuperCommander,
-
-
         //------------------------------
         // Défenses Avions Arti
         //------------------------------

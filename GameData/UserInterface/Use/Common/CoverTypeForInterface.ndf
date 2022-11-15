@@ -30,9 +30,9 @@ public coverTypeForInterface is TCoverTypeForInterface(
 
 
         (ETerrainType/Urbain                 , ECoverTypeForInterface/Batiment),
-        (ETerrainType/StrategicForest        , ECoverTypeForInterface/Heavy),
-        (ETerrainType/StrategicPlain         , ECoverTypeForInterface/Light),
-        (ETerrainType/StrategicSemiUrban     , ECoverTypeForInterface/Light),
+        (ETerrainType/StrategicForest        , ECoverTypeForInterface/Light),
+        (ETerrainType/StrategicPlain         , ECoverTypeForInterface/Heavy),
+        (ETerrainType/StrategicSemiUrban     , ECoverTypeForInterface/Batiment),
     ]
 
     CoverTypeForDistricts = ECoverTypeForInterface/Heavy

@@ -14,7 +14,6 @@ is BUCKListDescriptor
 
     )
 
-    UniformDrawer = $/UserInterface/UIUniformDrawer
     Axis = ~/ListAxis/Horizontal
 
     Elements =

@@ -96,8 +96,6 @@ ChatLogMessage is BUCKTextDescriptor
     TypefaceToken = "UIMainFont"
     BigLineAction = ~/BigLineAction/MultiLine
 
-    UniformDrawer = $/UserInterface/UIUniformDrawer
-
     TextColor = "BlancEquipe"
     TextSize = "15"
 

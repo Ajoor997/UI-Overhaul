@@ -241,6 +241,11 @@ GhostDepiction_ATteam_Milan_2_para_RFA is GhostVehicleDepictionTemplate
     Selector = Selector_ATteam_Milan_2_para_RFA
     Alternatives = Alternatives_ATteam_Milan_2_para_RFA
 )
+GhostDepiction_ATteam_Milan_2_para_UK is GhostVehicleDepictionTemplate
+(
+    Selector = Selector_ATteam_Milan_2_para_UK
+    Alternatives = Alternatives_ATteam_Milan_2_para_UK
+)
 GhostDepiction_ATteam_RCL_M40A1_RFA is GhostVehicleDepictionTemplate
 (
     Selector = Selector_ATteam_RCL_M40A1_RFA
@@ -551,6 +556,11 @@ GhostDepiction_DCA_M167_Vulcan_20mm_US is GhostVehicleDepictionTemplate
     Selector = Selector_DCA_M167_Vulcan_20mm_US
     Alternatives = Alternatives_DCA_M167_Vulcan_20mm_US
 )
+GhostDepiction_DCA_Rapier_FSA_UK is GhostVehicleDepictionTemplate
+(
+    Selector = Selector_DCA_Rapier_FSA_UK
+    Alternatives = Alternatives_DCA_Rapier_FSA_UK
+)
 GhostDepiction_DCA_Rapier_UK is GhostVehicleDepictionTemplate
 (
     Selector = Selector_DCA_Rapier_UK
@@ -686,21 +696,6 @@ GhostDepiction_FV721_Fox_UK is GhostVehicleDepictionTemplate
     Selector = Selector_FV721_Fox_UK
     Alternatives = Alternatives_FV721_Fox_UK
 )
-GhostDepiction_Faun_Kraka_20mm_RFA is GhostVehicleDepictionTemplate
-(
-    Selector = Selector_Faun_Kraka_20mm_RFA
-    Alternatives = Alternatives_Faun_Kraka_20mm_RFA
-)
-GhostDepiction_Faun_Kraka_Log_RFA is GhostVehicleDepictionTemplate
-(
-    Selector = Selector_Faun_Kraka_Log_RFA
-    Alternatives = Alternatives_Faun_Kraka_Log_RFA
-)
-GhostDepiction_Faun_Kraka_TOW_RFA is GhostVehicleDepictionTemplate
-(
-    Selector = Selector_Faun_Kraka_TOW_RFA
-    Alternatives = Alternatives_Faun_Kraka_TOW_RFA
-)
 GhostDepiction_Faun_kraka_RFA is GhostVehicleDepictionTemplate
 (
     Selector = Selector_Faun_kraka_RFA
@@ -761,11 +756,6 @@ GhostDepiction_HMGteam_AGS17_VDV_SOV is GhostVehicleDepictionTemplate
     Selector = Selector_HMGteam_AGS17_VDV_SOV
     Alternatives = Alternatives_HMGteam_AGS17_VDV_SOV
 )
-GhostDepiction_HMGteam_KPVT_SOV is GhostVehicleDepictionTemplate
-(
-    Selector = Selector_HMGteam_KPVT_SOV
-    Alternatives = Alternatives_HMGteam_KPVT_SOV
-)
 GhostDepiction_HMGteam_M2HB_AB_US is GhostVehicleDepictionTemplate
 (
     Selector = Selector_HMGteam_M2HB_AB_US
@@ -786,11 +776,6 @@ GhostDepiction_HMGteam_M2HB_para_FR is GhostVehicleDepictionTemplate
     Selector = Selector_HMGteam_M2HB_para_FR
     Alternatives = Alternatives_HMGteam_M2HB_para_FR
 )
-GhostDepiction_HMGteam_M2HB_para_UK is GhostVehicleDepictionTemplate
-(
-    Selector = Selector_HMGteam_M2HB_para_UK
-    Alternatives = Alternatives_HMGteam_M2HB_para_UK
-)
 GhostDepiction_HMGteam_M60_AB_US is GhostVehicleDepictionTemplate
 (
     Selector = Selector_HMGteam_M60_AB_US
@@ -806,11 +791,6 @@ GhostDepiction_HMGteam_MAG_UK is GhostVehicleDepictionTemplate
     Selector = Selector_HMGteam_MAG_UK
     Alternatives = Alternatives_HMGteam_MAG_UK
 )
-GhostDepiction_HMGteam_MAG_para_UK is GhostVehicleDepictionTemplate
-(
-    Selector = Selector_HMGteam_MAG_para_UK
-    Alternatives = Alternatives_HMGteam_MAG_para_UK
-)
 GhostDepiction_HMGteam_MG3_FJ_RFA is GhostVehicleDepictionTemplate
 (
     Selector = Selector_HMGteam_MG3_FJ_RFA
@@ -825,11 +805,6 @@ GhostDepiction_HMGteam_Mk19_AB_US is GhostVehicleDepictionTemplate
 (
     Selector = Selector_HMGteam_Mk19_AB_US
     Alternatives = Alternatives_HMGteam_Mk19_AB_US
-)
-GhostDepiction_HMGteam_Mk19_US is GhostVehicleDepictionTemplate
-(
-    Selector = Selector_HMGteam_Mk19_US
-    Alternatives = Alternatives_HMGteam_Mk19_US
 )
 GhostDepiction_HMGteam_NSV_DDR is GhostVehicleDepictionTemplate
 (
@@ -916,11 +891,6 @@ GhostDepiction_Howz_M46_130mm_DDR is GhostVehicleDepictionTemplate
     Selector = Selector_Howz_M46_130mm_DDR
     Alternatives = Alternatives_Howz_M46_130mm_DDR
 )
-GhostDepiction_Howz_M46_130mm_SOV is GhostVehicleDepictionTemplate
-(
-    Selector = Selector_Howz_M46_130mm_SOV
-    Alternatives = Alternatives_Howz_M46_130mm_SOV
-)
 GhostDepiction_Iltis_MILAN_RFA is GhostVehicleDepictionTemplate
 (
     Selector = Selector_Iltis_MILAN_RFA
@@ -960,6 +930,11 @@ GhostDepiction_LandRover_CMD_UK is GhostVehicleDepictionTemplate
 (
     Selector = Selector_LandRover_CMD_UK
     Alternatives = Alternatives_LandRover_CMD_UK
+)
+GhostDepiction_LandRover_MILAN_Para_UK is GhostVehicleDepictionTemplate
+(
+    Selector = Selector_LandRover_MILAN_Para_UK
+    Alternatives = Alternatives_LandRover_MILAN_Para_UK
 )
 GhostDepiction_LandRover_MILAN_UK is GhostVehicleDepictionTemplate
 (
@@ -1020,6 +995,11 @@ GhostDepiction_M1025_Humvee_AGL_US is GhostVehicleDepictionTemplate
 (
     Selector = Selector_M1025_Humvee_AGL_US
     Alternatives = Alternatives_M1025_Humvee_AGL_US
+)
+GhostDepiction_M1025_Humvee_AGL_nonPara_US is GhostVehicleDepictionTemplate
+(
+    Selector = Selector_M1025_Humvee_AGL_nonPara_US
+    Alternatives = Alternatives_M1025_Humvee_AGL_nonPara_US
 )
 GhostDepiction_M1025_Humvee_CMD_para_US is GhostVehicleDepictionTemplate
 (
@@ -1180,11 +1160,6 @@ GhostDepiction_M1A1_Abrams_US is GhostVehicleDepictionTemplate
 (
     Selector = Selector_M1A1_Abrams_US
     Alternatives = Alternatives_M1A1_Abrams_US
-)
-GhostDepiction_M1IP_Abrams_CMD_US is GhostVehicleDepictionTemplate
-(
-    Selector = Selector_M1IP_Abrams_CMD_US
-    Alternatives = Alternatives_M1IP_Abrams_CMD_US
 )
 GhostDepiction_M1IP_Abrams_US is GhostVehicleDepictionTemplate
 (
@@ -1466,16 +1441,6 @@ GhostDepiction_Mortier_Tampella_120mm_RFA is GhostVehicleDepictionTemplate
     Selector = Selector_Mortier_Tampella_120mm_RFA
     Alternatives = Alternatives_Mortier_Tampella_120mm_RFA
 )
-GhostDepiction_OT_62_TOPAS_JOD_POL is GhostVehicleDepictionTemplate
-(
-    Selector = Selector_OT_62_TOPAS_JOD_POL
-    Alternatives = Alternatives_OT_62_TOPAS_JOD_POL
-)
-GhostDepiction_OT_62_TOPAS_SPG9_POL is GhostVehicleDepictionTemplate
-(
-    Selector = Selector_OT_62_TOPAS_SPG9_POL
-    Alternatives = Alternatives_OT_62_TOPAS_SPG9_POL
-)
 GhostDepiction_Osa_9K33M3_DDR is GhostVehicleDepictionTemplate
 (
     Selector = Selector_Osa_9K33M3_DDR
@@ -1520,6 +1485,11 @@ GhostDepiction_SPW_152K_DDR is GhostVehicleDepictionTemplate
 (
     Selector = Selector_SPW_152K_DDR
     Alternatives = Alternatives_SPW_152K_DDR
+)
+GhostDepiction_Saxon_CMD_UK is GhostVehicleDepictionTemplate
+(
+    Selector = Selector_Saxon_CMD_UK
+    Alternatives = Alternatives_Saxon_CMD_UK
 )
 GhostDepiction_Saxon_UK is GhostVehicleDepictionTemplate
 (
@@ -1590,11 +1560,6 @@ GhostDepiction_T64B_SOV is GhostVehicleDepictionTemplate
 (
     Selector = Selector_T64B_SOV
     Alternatives = Alternatives_T64B_SOV
-)
-GhostDepiction_T72B_DDR is GhostVehicleDepictionTemplate
-(
-    Selector = Selector_T72B_DDR
-    Alternatives = Alternatives_T72B_DDR
 )
 GhostDepiction_T72M1_CMD_DDR is GhostVehicleDepictionTemplate
 (
@@ -1950,21 +1915,6 @@ GhostDepiction_W50_LA_A_DDR is GhostVehicleDepictionTemplate
 (
     Selector = Selector_W50_LA_A_DDR
     Alternatives = Alternatives_W50_LA_A_DDR
-)
-GhostDepiction_Wiesel_20mm_RFA is GhostVehicleDepictionTemplate
-(
-    Selector = Selector_Wiesel_20mm_RFA
-    Alternatives = Alternatives_Wiesel_20mm_RFA
-)
-GhostDepiction_Wiesel_RFA is GhostVehicleDepictionTemplate
-(
-    Selector = Selector_Wiesel_RFA
-    Alternatives = Alternatives_Wiesel_RFA
-)
-GhostDepiction_Wiesel_TOW_RFA is GhostVehicleDepictionTemplate
-(
-    Selector = Selector_Wiesel_TOW_RFA
-    Alternatives = Alternatives_Wiesel_TOW_RFA
 )
 GhostDepiction_ZSU_23_Shilka_Afghan_SOV is GhostVehicleDepictionTemplate
 (

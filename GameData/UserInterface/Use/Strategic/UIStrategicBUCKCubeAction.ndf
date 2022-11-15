@@ -1,7 +1,7 @@
 private CubeActionStrategicButtonWidth is 90.0
-private CubeActionStrategicButtonHeight is 26.0
-private CubeActionStrategicButtonDims is [90.0, 26.0]
-private CubeActionStrategicButtonSpacing is [8.0, 5.0]
+private CubeActionStrategicButtonHeight is 26.0*2
+private CubeActionStrategicButtonDims is [110.0, 42.0]
+private CubeActionStrategicButtonSpacing is [8.0, -2.0]
 private CubeActionStrategicButtonTotalSize is [
     CubeActionStrategicButtonDims[0] + CubeActionStrategicButtonSpacing[0],
     CubeActionStrategicButtonDims[1] + CubeActionStrategicButtonSpacing[1],
@@ -34,17 +34,15 @@ StrategicCubeAction is GenericPanelHUD
 (
     UniqueName = BUCKIdentifiers/IngameCubeActionContainer
     ContentUniqueName = BUCKIdentifiers/IngameCubeActionContainer + "_Content"
-    PanelMagnifiableWidth = 400
+    PanelMagnifiableWidth = 373
 
     TitleVisible = false
-
-    MagnifiableOffset = [0.0, -5.0]
 
     ContentVisible = true
     ContentHeight = CubeActionStrategicContentHeight + (CubeActionStrategicButtonSpacing[1] * 2)
     ContentMagnifiableLeftRightMargins = CubeActionStrategicButtonSpacing[0]
     ContentMagnifiableTopBottomMargins = CubeActionStrategicButtonSpacing[1]
-    ContentBackgroundBlockColorToken =  "SD2_Gris80" //"SD2_Gris39"
+    ContentBackgroundBlockColorToken =  "Orange" //"SD2_Gris39"
     HasBackground = false
     ContentHasGradient = false
     ContentComponents =
@@ -53,7 +51,7 @@ StrategicCubeAction is GenericPanelHUD
         StrategicCubeActionButtonContainer( UniqueName=BUCKIdentifiers/IngameCubeActionButtonContainer2 Coords=[0,1] ),
         StrategicCubeActionButtonContainer( UniqueName=BUCKIdentifiers/IngameCubeActionButtonContainer3 Coords=[0,2] ),
         StrategicCubeActionButtonContainer( UniqueName=BUCKIdentifiers/IngameCubeActionButtonContainer4 Coords=[0,3] ),
-        OmbrePanel()
+        //OmbrePanel()
     ]
 
     SpotlightComponent = SpotlightDescriptor()

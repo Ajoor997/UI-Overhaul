@@ -155,11 +155,6 @@ UICommonResource is TUISpecificResource
     TextureDrawerGrayscale          = "ColorMultiply_Grayscale"
     TextureDrawerHighlight          = "ColorMultiply_Highlight"
 
-    ProductionMenuUserInputLayer    = $/M3D/Input/UserInputLayerHandler/InputLayer_InGameShortcuts
-    ShowProductionMenuMapping       = $/KeyboardOption/Mapping_MainMenu
-
-    FlarePanelUserInputLayer        = $/M3D/Input/UserInputLayerHandler/InputLayer_InGameShortcuts
-
     ButtonClickSound                = ~/ButtonClickSound
     BeepClickSound                  = ~/BeepClickSound
 )

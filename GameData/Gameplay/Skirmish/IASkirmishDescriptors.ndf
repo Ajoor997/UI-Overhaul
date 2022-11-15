@@ -81,7 +81,7 @@ private SkirmishList is TIASkirmishList_Specific
         ]),
         (IADifficulty/Difficile, MAP
         [
-            (EDeploymentMode/NotSpecified, ~/DefaultStrategyList),
+            (EDeploymentMode/NotSpecified, ~/HardStrategyList),
         ]),
         (IADifficulty/TresDifficile, MAP
         [

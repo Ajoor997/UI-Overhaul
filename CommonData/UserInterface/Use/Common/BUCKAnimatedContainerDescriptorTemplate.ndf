@@ -43,8 +43,6 @@ template BUCKAnimatedContainerDescriptor
 
     SpotlightComponent : TBUCKContainerDescriptor = nil,
 
-    UniformDrawer : TUIUniformDrawer = $/UserInterface/UIUniformDrawer,
-
     HasBackground : bool = false,
     BackgroundBlockColorToken : string = "",
 
@@ -100,7 +98,7 @@ is TBUCKAnimatedContainerDescriptor
 
     SpotlightComponent = <SpotlightComponent>
 
-    UniformDrawer = <UniformDrawer>
+    UniformDrawer = $/UserInterface/UIUniformDrawer
 
     HasBackground = <HasBackground>
     BackgroundBlockColorToken = <BackgroundBlockColorToken>
@@ -164,8 +162,6 @@ template BUCKSimpleAnimatedContainerDescriptor
 
     SpotlightComponent : TBUCKContainerDescriptor = nil,
 
-    UniformDrawer : TUIUniformDrawer = $/UserInterface/UIUniformDrawer,
-
     HasBackground : bool = false,
     BackgroundBlockColorToken : string = "",
 
@@ -224,8 +220,6 @@ template BUCKSimpleAnimatedContainerDescriptor
     IsClippable = <IsClippable>
 
     SpotlightComponent = <SpotlightComponent>
-
-    UniformDrawer = <UniformDrawer>
 
     HasBackground = <HasBackground>
     BackgroundBlockColorToken = <BackgroundBlockColorToken>
@@ -315,8 +309,6 @@ template BUCKTranslationAnimatedContainerDescriptor
 
     SpotlightComponent : TBUCKContainerDescriptor = nil,
 
-    UniformDrawer : TUIUniformDrawer = $/UserInterface/UIUniformDrawer,
-
     HasBackground : bool = false,
     BackgroundBlockColorToken : string = "",
 
@@ -376,8 +368,6 @@ template BUCKTranslationAnimatedContainerDescriptor
     IsClippable = <IsClippable>
 
     SpotlightComponent = <SpotlightComponent>
-
-    UniformDrawer = <UniformDrawer>
 
     HasBackground = <HasBackground>
     BackgroundBlockColorToken = <BackgroundBlockColorToken>

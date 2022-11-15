@@ -123,8 +123,7 @@ DepictionOperator_Propulsion_Wheels_TowedCanon is TCosmeticWheelsOperatorDesc( O
 // ***** Chaleur **************************************************************************************************************************
 // ****************************************************************************************************************************************
 
-DepictionOperator_Heat_1 is TCosmeticLaunchActionNotGhostDesc( OperatorId = 'chaleur1' ActionId = ['chaleur1'] )
-DepictionOperator_Heat_2 is TCosmeticLaunchActionNotGhostDesc( OperatorId = 'chaleur2' ActionId = ['chaleur2'] )
+DepictionOperator_Heat is TCosmeticHeatEffectOperatorDesc(OperatorId = 'heat')
 
 // ****************************************************************************************************************************************
 // ***** Radar ****************************************************************************************************************************

@@ -690,7 +690,7 @@ AirplaneCriticalEffect_PilotUnconscious_Desc is TCriticalEffectDescriptor
     Unique = False
     DisplayOnDeath = True
 )
-// Pilot unconscious -> Loose control during 5s
+// Pilot unconscious -> lose control during 5s
 template AirplaneCriticalEffect_PilotUnconscious
 [
     Roll
@@ -710,7 +710,7 @@ AirplaneCriticalEffect_EngineDamaged_Desc is TCriticalEffectDescriptor
     Unique = False
     DisplayOnDeath = True
 )
-// Engine damaged -> Loose control during 5s
+// Engine damaged -> lose control during 5s
 template AirplaneCriticalEffect_EngineDamaged
 [
     Roll
@@ -890,7 +890,7 @@ AirplaneCriticalEffect_FloatCarburatorFailure_Desc is TCriticalEffectDescriptor
     Unique = False
     DisplayOnDeath = True
 )
-// Turbine engine failure -> Loose control during 5s
+// Turbine engine failure -> lose control during 5s
 template AirplaneCriticalEffect_FloatCarburatorFailure
 [
     Roll

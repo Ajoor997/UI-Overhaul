@@ -1,8 +1,8 @@
 //-------------------------------------------------------------------------
 //----------------------------- MISC ---------------------------------
 //-------------------------------------------------------------------------
-export MinimumResourceForLaunch_Stage_1 is 400
-export MinimumResourceForLaunch_Economic is 1000
+MinimumResourceForLaunch_Stage_1 is 400
+MinimumResourceForLaunch_Economic is 1000
 
 //-------------------------------------------------------------------------
 //------------------------------ SUPPLY -----------------------------------
@@ -63,13 +63,20 @@ export Pool_Supply_Skirmish is TPoolModel
 
 // Missions
 //-------------------------------------------------------------------------
-export Reco is TMacroActionDescriptor_CorridorDynamicDefense_Specific
+
+
+private template Template_Reco
+[
+    MinimumResourceForLaunch:int = 0,
+]
+is TMacroActionDescriptor_CorridorDynamicDefense_Specific
 (
     ParametresDeMission =
     [
         TGenerationSettingHolder(GenerationType = TGenerationType_BasedOnNumberOfCorridors NumberLaunchBasedOnGenerationType = 2 AlsoConsiderTheseDescriptorsForMaintain = []),
         TDefensePositionSettingHolder(IgnoreEnemyDirectionForDefensePosition = true),
         TMacroActionProductionSettingHolder(PoolModelList = [~/Pool_Reco_Skirmish]),
+        TMacroActionLifetimeSettingHolder(MinimumResourceForLaunch = <MinimumResourceForLaunch>),
         TDefenseBehaviorSettingHolder(
             DisableAttackDuringZoneDefense = true
             DefensePointScoringFeature =
@@ -95,16 +102,18 @@ export Reco is TMacroActionDescriptor_CorridorDynamicDefense_Specific
         ),
     ]
 )
+
 //-------------------------------------------------------------------------
-export AirReco is TMacroActionDescriptor_AirReco_Specific
+export Reco is Template_Reco
 (
-    ParametresDeMission =
-    [
-        TGenerationSettingHolder(GenerationType = TGenerationType_FixedSizeByAlliance NumberLaunchBasedOnGenerationType = 1),
-        TMacroActionProductionSettingHolder(PoolModelList = [~/Pool_AirReco_Skirmish]),
-        AirRecoMissionLaunchSettingHolderTemplate(MaxAirplaneCountOnBattlefield = 1 TicksBetweenTwoLaunch = 60 TicksBetweenTwoMissions = 60),
-    ]
 )
+
+//-------------------------------------------------------------------------
+export Reco_Autogen is Template_Reco
+(
+    MinimumResourceForLaunch = ~/MinimumResourceForLaunch_Stage_1
+)
+
 //-------------------------------------------------------------------------
 
 // Pool Models
@@ -122,108 +131,6 @@ export Pool_Reco_Skirmish is TPoolModel
             "Infanterie_Reco",
             "Vehicule_Reco",
             "Helo_Reco",
-        ]
-    ),
-    ]
-)
-//-------------------------------------------------------------------------
-export Pool_AirReco_Skirmish is TPoolModel
-(
-    ModelList = [
-    TPoolElement(
-        DescriptorId = GUID:{e902f9e0-d39e-11e8-94bc-88d7f642f58e}
-        Required = true
-        Nb = 1
-        PriceComparisonMethod = EPriceComparatorType/Random
-        TagsPriority = [
-            "Avion_Reco",
-        ]
-    ),
-    ]
-)
-//-------------------------------------------------------------------------
-
-//-------------------------------------------------------------------------
-//--------------------------- SUPERCOMMANDER ------------------------------
-//-------------------------------------------------------------------------
-
-export SuperCommander is TMacroActionDescriptor_CorridorDynamicDefense_Specific
-(
-    ParametresDeMission =
-    [
-        TGenerationSettingHolder(GenerationType = TGenerationType_FixedSize NumberLaunchBasedOnGenerationType = 1),
-        TAirStrikeSettingHolder(Setting = ~/BasicAirstrikeSupport),
-        TArtilleryAmountSettingHolder(InMapArtilleryAmount = 1 OutMapArtilleryAmount = 0),
-        TSupportSettingHolder(SettingList = [Renfort_AT]),
-        TAvoidCorridorTagsSettingHolder(AvoidedCorridorTags = ["Filler"]),
-        TDefensePositionSettingHolder(IgnoreVisionForDefensePosition = true IgnoreEnemyDirectionForDefensePosition = true),
-        TMacroActionProductionSettingHolder(ProdProperties = [TProdProperty_LaunchAsSoonAsPossible]
-        PoolModelList = [~/Pool_SuperCommander]
-        TaggedPoolModelList =
-        (
-            [
-                (["AttackMain"], [~/Pool_SuperCommander]),
-            ]
-        )
-        PrioritizeCorridorsForTaggedPoolModels = true
-        LaunchASAP_RatioMin = 0.01 DisableReinforcement = true),
-        TIgnoreSafePathSettingHolder(), //on esquive pas la menace sur le chemin
-    ]
-)
-//-------------------------------------------------------------------------
-//Uniquement pour Breakthrough Defense
-private template GenBTDef_Template_Static_SuperCommander
-[
-    OrderedZoneWeightList = [],
-    DefensePointScoringFeatureValue = MAP[],
-]
-is TMacroActionDescriptor_CorridorDefense_Specific
-(
-    ParametresDeMission =
-    [
-        TGenerationSettingHolder(GenerationType = TGenerationType_FixedSize NumberLaunchBasedOnGenerationType = 1),
-        TAirStrikeSettingHolder(Setting = ~/BasicAirstrikeSupport),
-        TArtilleryAmountSettingHolder(InMapArtilleryAmount = 1 OutMapArtilleryAmount = 0),
-        TSupportSettingHolder(SettingList = [Renfort_AT]),
-        TAvoidCorridorTagsSettingHolder(AvoidedCorridorTags = ["Filler"]),
-        TMacroActionProductionSettingHolder(ProdProperties = [TProdProperty_LaunchAsSoonAsPossible] PoolModelList = [~/Pool_SuperCommander]
-            TaggedPoolModelList = ([(["AttackMain"], [~/Pool_SuperCommander]),]) PrioritizeCorridorsForTaggedPoolModels = true LaunchASAP_RatioMin = 0.01 DisableReinforcement = true),
-        TForcedPlacementSettingHolder(OrderedPrioritaryZoneWeightList = <OrderedZoneWeightList>),
-        TDefenseBehaviorSettingHolder(DefensePointScoringFeature = TDefensePointScoringFeature(DefensePointScoringValue = <DefensePointScoringFeatureValue> DefensePointPositioning = EDefensePointPositioningType/Defensive)),
-        TIgnoreSafePathSettingHolder(), //on esquive pas la menace sur le chemin
-    ]
-)
-
-//-------------------------------------------------------------------------
-export GenBTDef_Static_SuperCommander_FrontLane is GenBTDef_Template_Static_SuperCommander
-(
-    OrderedZoneWeightList = [1]
-    DefensePointScoringFeatureValue = ~/WeightDefensePointScoringFeatureMap
-)
-
-//-------------------------------------------------------------------------
-export GenBTDef_Static_SuperCommander_BackLane is GenBTDef_Template_Static_SuperCommander
-(
-    OrderedZoneWeightList = [2]
-    DefensePointScoringFeatureValue = ~/WeightDefensePointScoringFeatureMap
-)
-//-------------------------------------------------------------------------
-
-// Pool Models
-//-------------------------------------------------------------------------
-export Pool_SuperCommander is TPoolModel
-(
-    ModelList = [
-    TPoolElement(
-        DescriptorId = GUID:{ea368fee-e1d8-11e8-86d6-2c56dc4c150d}
-        Required = true
-        Nb = 1
-        IndexPriorityOverPrice = false
-        PriceComparisonMethod = EPriceComparatorType/Random
-        TagsPriority = [
-            "Char_SuperCMD",
-            "Vehicule_SuperCMD",
-            "Infanterie_SuperCMD",
         ]
     ),
     ]

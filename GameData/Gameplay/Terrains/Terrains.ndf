@@ -11,7 +11,6 @@ export DefaultTerrain is TGameplayTerrain
     DissimulationModifierGroundAir = 0
     DissimulationModifierGroundGround = 0
     HeightInMeters = 0
-    ImpactVision1 = false
     InflammabilityProbability = 0
     LocalizationToken = 'TER_DEF'
     Name = 'DefaultTerrain'
@@ -50,7 +49,6 @@ export ForetDense is TGameplayTerrain
     DissimulationModifierGroundAir = 20
     DissimulationModifierGroundGround = 24
     HeightInMeters = 11
-    ImpactVision1 = false
     InflammabilityProbability = 0.8
     LocalizationToken = 'TER_FOR_H'
     Name = 'ForetDense'
@@ -94,7 +92,6 @@ export ForetLegere is TGameplayTerrain
     DissimulationModifierGroundAir = 12
     DissimulationModifierGroundGround = 10
     HeightInMeters = 20
-    ImpactVision1 = false
     InflammabilityProbability = 0.6
     LocalizationToken = 'TER_FOR_L'
     Name = 'ForetLegere'
@@ -140,7 +137,6 @@ export PetitBatiment is TGameplayTerrain
     DissimulationModifierGroundAir = 10.5
     DissimulationModifierGroundGround = 10
     HeightInMeters = 8
-    ImpactVision1 = false
     InflammabilityProbability = 0.2
     LocalizationToken = 'TER_BUILD'
     Name = 'PetitBatiment'
@@ -185,11 +181,10 @@ export Batiment is TGameplayTerrain
     DissimulationModifierGroundAir = 10.5
     DissimulationModifierGroundGround = 10
     HeightInMeters = 8
-    ImpactVision1 = false
     InflammabilityProbability = 0.2
     LocalizationToken = 'TER_BUILD'
     Name = 'Batiment'
-    ObstructInsideAirSight = false
+    ObstructInsideAirSight = true
     ObstructInsideInfantrySight = true
     ObstructInsideVehicleSight = true
     SpeedModifierAllTerrainWheel = 0
@@ -229,7 +224,6 @@ export Ruin is TGameplayTerrain
     DissimulationModifierGroundAir = 10.5
     DissimulationModifierGroundGround = 40
     HeightInMeters = 8
-    ImpactVision1 = false
     InflammabilityProbability = 0.2
     LocalizationToken = 'TER_BUILD'
     Name = 'Ruin'
@@ -284,7 +278,6 @@ export Tranchee is TGameplayTerrain
     DissimulationModifierGroundAir = 1
     DissimulationModifierGroundGround = 1
     HeightInMeters = 1
-    ImpactVision1 = false
     InflammabilityProbability = 0
     LocalizationToken = 'TER_TRENCH'
     Name = 'Trench'
@@ -337,7 +330,6 @@ export Barbeles is TGameplayTerrain
     DissimulationModifierGroundAir = 0
     DissimulationModifierGroundGround = 0
     HeightInMeters = 8
-    ImpactVision1 = false
     InflammabilityProbability = 0
     LocalizationToken = 'TER_BWIRE'
     Name = 'TerrainBarbeles'
@@ -390,7 +382,6 @@ export NidMitrailleuse is TGameplayTerrain
     DissimulationModifierGroundAir = 1
     DissimulationModifierGroundGround = 1
     HeightInMeters = 1
-    ImpactVision1 = false
     InflammabilityProbability = 0
     LocalizationToken = 'TER_MGNEST'
     Name = 'GunnerNest'
@@ -423,7 +414,6 @@ export Bloqueur is TGameplayTerrain
     DissimulationModifierGroundAir = 0
     DissimulationModifierGroundGround = 0
     HeightInMeters = 0
-    ImpactVision1 = false
     InflammabilityProbability = 0
     LocalizationToken = 'TER_BLQ0'
     Name = 'Bloqueur'
@@ -456,7 +446,6 @@ export StrategicForest is TGameplayTerrain
     DissimulationModifierGroundAir = 0
     DissimulationModifierGroundGround = 0
     HeightInMeters = 0
-    ImpactVision1 = false
     InflammabilityProbability = 0.1
     LocalizationToken = 'TER_CEREAL'
     Name = 'StrategicForest'
@@ -489,7 +478,6 @@ export StrategicPlain is TGameplayTerrain
     DissimulationModifierGroundAir = 0
     DissimulationModifierGroundGround = 0
     HeightInMeters = 0
-    ImpactVision1 = false
     InflammabilityProbability = 0.1
     LocalizationToken = 'TER_CEREAL'
     Name = 'StrategicPlain'
@@ -522,7 +510,6 @@ export StrategicSemiUrban is TGameplayTerrain
     DissimulationModifierGroundAir = 0
     DissimulationModifierGroundGround = 0
     HeightInMeters = 0
-    ImpactVision1 = false
     InflammabilityProbability = 0.1
     LocalizationToken = 'TER_CEREAL'
     Name = 'StrategicSemiUrban'
@@ -556,7 +543,6 @@ export EauPeuProfonde is TGameplayTerrain
     DissimulationModifierGroundAir = 0
     DissimulationModifierGroundGround = 0
     HeightInMeters = 0
-    ImpactVision1 = false
     InflammabilityProbability = 0
     LocalizationToken = 'TER_WATE'
     Name = 'EauPeuProfonde'
@@ -610,7 +596,6 @@ export Urbain is TGameplayTerrain
     DissimulationModifierGroundAir = 40 //20
     DissimulationModifierGroundGround = 40 //20
     HeightInMeters = 4//8
-    ImpactVision1 = false
     InflammabilityProbability = 0.4
     LocalizationToken = 'TER_URBN'
     Name = 'Urbain'
@@ -643,7 +628,6 @@ export Rocher is TGameplayTerrain
     DissimulationModifierGroundAir = 0
     DissimulationModifierGroundGround = 0
     HeightInMeters = 0
-    ImpactVision1 = false
     InflammabilityProbability = 0.1
     LocalizationToken = 'TER_ROCK'
     Name = 'Rocher'
@@ -676,7 +660,6 @@ export SmokeHeavy is TGameplayTerrain
     DissimulationModifierGroundAir = 50
     DissimulationModifierGroundGround = 50
     HeightInMeters = 25
-    ImpactVision1 = true
     InflammabilityProbability = 0
     LocalizationToken = 'TER_SMOKEH'
     Name = 'HeavySmoke'
@@ -709,7 +692,6 @@ export SmokeLight is TGameplayTerrain
     DissimulationModifierGroundAir = 50
     DissimulationModifierGroundGround = 50
     HeightInMeters = 25
-    ImpactVision1 = true
     InflammabilityProbability = 0
     LocalizationToken = 'TER_SMOKEL'
     Name = 'LightSmoke'
@@ -742,7 +724,6 @@ export SmokeMedium is TGameplayTerrain
     DissimulationModifierGroundAir = 50
     DissimulationModifierGroundGround = 50
     HeightInMeters = 25
-    ImpactVision1 = true
     InflammabilityProbability = 0
     LocalizationToken = 'TER_SMOKEM'
     Name = 'MediumSmoke'
@@ -775,7 +756,6 @@ export EauProfonde is TGameplayTerrain
     DissimulationModifierGroundAir = 0
     DissimulationModifierGroundGround = 0
     HeightInMeters = 0
-    ImpactVision1 = false
     InflammabilityProbability = 0
     LocalizationToken = 'TER_DEEP_W'
     Name = 'EauProfonde'
@@ -808,7 +788,6 @@ export BloqueConstruction is TGameplayTerrain
     DissimulationModifierGroundAir = 0
     DissimulationModifierGroundGround = 0
     HeightInMeters = 0
-    ImpactVision1 = false
     InflammabilityProbability = 0
     LocalizationToken = 'TER_BLQCST'
     Name = 'BloqueConstruction'

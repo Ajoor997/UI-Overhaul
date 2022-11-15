@@ -260,7 +260,6 @@ template EndGameBattleInfosComponent
 
             Elements =
             [
-
                 // texte titre "points to reach"
                 BUCKListElementDescriptor
                 (
@@ -1177,6 +1176,122 @@ DebriefLevelXPBarXpGained is BUCKTextDescriptor
 
 //-------------------------------------------------------------------------------------
 
+EndGameExplanationForTacticFromStrategic is BUCKListDescriptor
+(
+    ElementName = "TacticFromStrategicEndGameExplanationContainer"
+
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        RelativeWidthHeight = [1.0, 0.0]
+    )
+    Axis = ~/ListAxis/Vertical
+
+    Elements =
+    [
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = BUCKTextDescriptor
+            (
+                ElementName = "EndGameReasonText"
+                ComponentFrame = TUIFramePropertyRTTI ()
+
+                ParagraphStyle = paragraphStyleTextLeftAlign
+                TextStyle = "Default"
+                HorizontalFitStyle = ~/FitStyle/FitToContent
+                VerticalFitStyle = ~/FitStyle/FitToContent
+                TypefaceToken = "Eurostyle"
+                BigLineAction = ~/BigLineAction/MultiLine
+                TextDico = ~/LocalisationConstantes/dico_interface_outgame
+                TextColor = "gris_load"
+                TextSize = "16"
+                TextPadding = TRTTILength4( Magnifiable = [0.0, 0.0, 0.0, 6.0] )
+            )
+        ),
+
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = BUCKTextDescriptor
+            (
+                ElementName = "EndGameVictoryTypeExplanationText"
+                ComponentFrame = TUIFramePropertyRTTI ()
+
+                ParagraphStyle = paragraphStyleTextLeftAlign
+                TextStyle = "Default"
+                HorizontalFitStyle = ~/FitStyle/FitToContent
+                VerticalFitStyle = ~/FitStyle/FitToContent
+                TypefaceToken = "Eurostyle"
+                BigLineAction = ~/BigLineAction/MultiLine
+                TextDico = ~/LocalisationConstantes/dico_interface_outgame
+                TextColor = "gris_load"
+                TextSize = "16"
+                TextPadding = TRTTILength4( Magnifiable = [0.0, 6.0, 0.0, 6.0] )
+            )
+        ),
+
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = BUCKTextDescriptor
+            (
+                ComponentFrame = TUIFramePropertyRTTI ()
+
+                ParagraphStyle = paragraphStyleTextLeftAlign
+                TextStyle = "Default"
+                HorizontalFitStyle = ~/FitStyle/FitToContent
+                VerticalFitStyle = ~/FitStyle/FitToContent
+                TypefaceToken = "Eurostyle"
+                BigLineAction = ~/BigLineAction/MultiLine
+                TextDico = ~/LocalisationConstantes/dico_interface_outgame
+                TextToken = 'EG_TFSCon'
+                TextColor = "gris_load"
+                TextSize = "16"
+                TextPadding = TRTTILength4( Magnifiable = [0.0, 6.0, 0.0, 0.0] )
+            )
+        ),
+
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = BUCKTextDescriptor
+            (
+                ElementName = "EndGameConsequenceOurForceText"
+                ComponentFrame = TUIFramePropertyRTTI ()
+
+                ParagraphStyle = paragraphStyleTextLeftAlign
+                TextStyle = "Default"
+                HorizontalFitStyle = ~/FitStyle/FitToContent
+                VerticalFitStyle = ~/FitStyle/FitToContent
+                TypefaceToken = "Eurostyle"
+                BigLineAction = ~/BigLineAction/MultiLine
+                TextDico = ~/LocalisationConstantes/dico_interface_outgame
+                TextColor = "gris_load"
+                TextSize = "16"
+                TextPadding = TRTTILength4( Magnifiable = [0.0, 0.0, 0.0, 6.0] )
+            )
+        ),
+
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = BUCKTextDescriptor
+            (
+                ElementName = "EndGameConsequenceEnemiesForceText"
+                ComponentFrame = TUIFramePropertyRTTI ()
+
+                ParagraphStyle = paragraphStyleTextLeftAlign
+                TextStyle = "Default"
+                HorizontalFitStyle = ~/FitStyle/FitToContent
+                VerticalFitStyle = ~/FitStyle/FitToContent
+                TypefaceToken = "Eurostyle"
+                BigLineAction = ~/BigLineAction/MultiLine
+                TextDico = ~/LocalisationConstantes/dico_interface_outgame
+                TextColor = "gris_load"
+                TextSize = "16"
+                TextPadding = TRTTILength4( Magnifiable = [0.0, 0.0, 0.0, 6.0] )
+            )
+        ),
+    ]
+)
+
+//-------------------------------------------------------------------------------------
+
 template DebriefHeader
 [
     TextToken : string,
@@ -1305,42 +1420,22 @@ private TacticalEndGameResultComponent is BUCKListDescriptor
         // elapsed time
         BUCKListElementDescriptor
         (
-                ComponentDescriptor = BUCKListDescriptor
-                (
-                    ComponentFrame = TUIFramePropertyRTTI ()
+            ComponentDescriptor = BUCKListDescriptor
+            (
+                ComponentFrame = TUIFramePropertyRTTI ()
 
-                    BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
-                    InterItemMargin = TRTTILength( Magnifiable = 15.0 )
+                BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
+                InterItemMargin = TRTTILength( Magnifiable = 15.0 )
 
-                    Axis = ~/ListAxis/Horizontal
-                    Elements =
-                    [
-                        BUCKListElementDescriptor
-                        (
-                            ComponentDescriptor = BUCKListElementDescriptor
-                            (
-                                ComponentDescriptor = BUCKTextDescriptor
-                                (
-                                    ComponentFrame = TUIFramePropertyRTTI ()
-
-                                    ParagraphStyle = paragraphStyleTextLeftAlign
-                                    TextStyle = "Default"
-                                    HorizontalFitStyle = ~/FitStyle/FitToContent
-                                    VerticalFitStyle = ~/FitStyle/FitToContent
-                                    TypefaceToken = "Eurostyle"
-                                    BigLineAction = ~/BigLineAction/MultiLine
-                                    TextToken = 'EG_ELAPSED'
-                                    TextDico = ~/LocalisationConstantes/dico_interface_outgame
-                                    TextColor = "gris_load"
-                                    TextSize = "20"
-                                )
-                            )
-                        ),
-                        BUCKListElementDescriptor
+                Axis = ~/ListAxis/Horizontal
+                Elements =
+                [
+                    BUCKListElementDescriptor
+                    (
+                        ComponentDescriptor = BUCKListElementDescriptor
                         (
                             ComponentDescriptor = BUCKTextDescriptor
                             (
-                                ElementName = 'Time'
                                 ComponentFrame = TUIFramePropertyRTTI ()
 
                                 ParagraphStyle = paragraphStyleTextLeftAlign
@@ -1349,54 +1444,54 @@ private TacticalEndGameResultComponent is BUCKListDescriptor
                                 VerticalFitStyle = ~/FitStyle/FitToContent
                                 TypefaceToken = "Eurostyle"
                                 BigLineAction = ~/BigLineAction/MultiLine
-
+                                TextToken = 'EG_ELAPSED'
                                 TextDico = ~/LocalisationConstantes/dico_interface_outgame
                                 TextColor = "gris_load"
                                 TextSize = "20"
                             )
-                        ),
-                    ]
-                )
+                        )
+                    ),
+                    BUCKListElementDescriptor
+                    (
+                        ComponentDescriptor = BUCKTextDescriptor
+                        (
+                            ElementName = 'Time'
+                            ComponentFrame = TUIFramePropertyRTTI ()
+
+                            ParagraphStyle = paragraphStyleTextLeftAlign
+                            TextStyle = "Default"
+                            HorizontalFitStyle = ~/FitStyle/FitToContent
+                            VerticalFitStyle = ~/FitStyle/FitToContent
+                            TypefaceToken = "Eurostyle"
+                            BigLineAction = ~/BigLineAction/MultiLine
+
+                            TextDico = ~/LocalisationConstantes/dico_interface_outgame
+                            TextColor = "gris_load"
+                            TextSize = "20"
+                        )
+                    ),
+                ]
+            )
         ),
         // battlefield
         BUCKListElementDescriptor
         (
-                ComponentDescriptor = BUCKListDescriptor
-                (
-                    ComponentFrame = TUIFramePropertyRTTI ()
+            ComponentDescriptor = BUCKListDescriptor
+            (
+                ComponentFrame = TUIFramePropertyRTTI ()
 
-                    BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
-                    InterItemMargin = TRTTILength( Magnifiable = 15.0 )
+                BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
 
-                    Axis = ~/ListAxis/Horizontal
-                    Elements =
-                    [
-                        BUCKListElementDescriptor
-                        (
-                            ComponentDescriptor = BUCKListElementDescriptor
-                            (
-                                ComponentDescriptor = BUCKTextDescriptor
-                                (
-                                    ComponentFrame = TUIFramePropertyRTTI ()
-
-                                    ParagraphStyle = paragraphStyleTextLeftAlign
-                                    TextStyle = "Default"
-                                    HorizontalFitStyle = ~/FitStyle/FitToContent
-                                    VerticalFitStyle = ~/FitStyle/FitToContent
-                                    TypefaceToken = "Eurostyle"
-                                    BigLineAction = ~/BigLineAction/MultiLine
-                                    TextToken = "GS_BATTLEF"
-                                    TextDico = ~/LocalisationConstantes/dico_interface_outgame
-                                    TextColor = "gris_load"
-                                    TextSize = "20"
-                                )
-                            )
-                        ),
-                        BUCKListElementDescriptor
+                Axis = ~/ListAxis/Horizontal
+                Elements =
+                [
+                    BUCKListElementDescriptor
+                    (
+                        ComponentDescriptor = BUCKListElementDescriptor
                         (
                             ComponentDescriptor = BUCKTextDescriptor
                             (
-                                ElementName = 'MapName'
+                                ElementName = 'MapNameTitle'
                                 ComponentFrame = TUIFramePropertyRTTI ()
 
                                 ParagraphStyle = paragraphStyleTextLeftAlign
@@ -1405,14 +1500,35 @@ private TacticalEndGameResultComponent is BUCKListDescriptor
                                 VerticalFitStyle = ~/FitStyle/FitToContent
                                 TypefaceToken = "Eurostyle"
                                 BigLineAction = ~/BigLineAction/MultiLine
-
-                                TextDico = ~/LocalisationConstantes/dico_maps
+                                TextToken = "GS_BATTLEF"
+                                TextDico = ~/LocalisationConstantes/dico_interface_outgame
                                 TextColor = "gris_load"
                                 TextSize = "20"
+                                TextPadding = TRTTILength4(Magnifiable = [0.0, 0.0, 15.0, 0.0])
                             )
-                        ),
-                    ]
-                )
+                        )
+                    ),
+                    BUCKListElementDescriptor
+                    (
+                        ComponentDescriptor = BUCKTextDescriptor
+                        (
+                            ElementName = 'MapName'
+                            ComponentFrame = TUIFramePropertyRTTI ()
+
+                            ParagraphStyle = paragraphStyleTextLeftAlign
+                            TextStyle = "Default"
+                            HorizontalFitStyle = ~/FitStyle/FitToContent
+                            VerticalFitStyle = ~/FitStyle/FitToContent
+                            TypefaceToken = "Eurostyle"
+                            BigLineAction = ~/BigLineAction/MultiLine
+
+                            TextDico = ~/LocalisationConstantes/dico_maps
+                            TextColor = "gris_load"
+                            TextSize = "20"
+                        )
+                    ),
+                ]
+            )
         ),
         BUCKListElementDescriptor
         (
@@ -1421,9 +1537,7 @@ private TacticalEndGameResultComponent is BUCKListDescriptor
                 TextColor = "SD2_Blanc184"
             )
         ),
-
     ]
-
 )
 
 
@@ -1613,13 +1727,13 @@ EngamePanelTab is BUCKContainerDescriptor
         ),
 
         // Top header (win/loss, elapsed time, map, etc.)
-        TacticalEndGameResultComponent,
+        ~/TacticalEndGameResultComponent,
 
         // TV screen
-        EndgameTVScreenDisplay,
+        ~/EndgameTVScreenDisplay,
 
         // scrolls
-        TacticalEndgameTabsContainer,
+        ~/TacticalEndgameTabsContainer,
 
         // Buttons
         //TacticalEndgameButtonsArea,
@@ -1746,19 +1860,19 @@ TacticalEndgameTabsContainer is BUCKSpecificScrollingContainerDescriptor
             [
                 BUCKListElementDescriptor
                 (
-                    ComponentDescriptor = TacticalEndgameScoreDetails
+                    ComponentDescriptor = ~/TacticalEndgameScoreDetails
                 ),
                 BUCKListElementDescriptor
                 (
-                    ComponentDescriptor = TacticalEndgameXPDetails
+                    ComponentDescriptor = ~/TacticalEndgameXPDetails
                 ),
                 BUCKListElementDescriptor
                 (
-                    ComponentDescriptor = TacticalEndgameProfileDetails
+                    ComponentDescriptor = ~/TacticalEndgameProfileDetails
                 ),
                 BUCKListElementDescriptor
                 (
-                    ComponentDescriptor = TacticalEndgameKillsDetails
+                    ComponentDescriptor = ~/TacticalEndgameKillsDetails
                 ),
             ]
         )
@@ -1781,6 +1895,10 @@ TacticalEndgameScoreDetails is BUCKListDescriptor
 
     Elements =
     [
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = ~/EndGameExplanationForTacticFromStrategic
+        ),
         BUCKListElementDescriptor
         (
             ComponentDescriptor = DebriefHeader
@@ -1883,8 +2001,8 @@ TacticalEndgameXPDetails is BUCKListDescriptor
         (
             ComponentDescriptor = DebriefXpLine
             (
-                LineName = 'Commands'
-                LegendToken = 'EG_COMMAND'
+                LineName = 'Conquest'
+                LegendToken = 'EG_CONQUES'
                 ModificatorToken = 'PLUSFORMAT'
                 ValueToken = 'FPERFORMAT'
             )
@@ -2613,7 +2731,7 @@ ScoreByTeamTitle is BUCKContainerDescriptor
             TextToken = "TWOVALFORM"
             ComponentFrame = TUIFramePropertyRTTI
             (
-                RelativeWidthHeight = [0.0, 1.0]
+                RelativeWidthHeight = [1.0, 1.0]
                 AlignementToFather = [0.0, 0.5]
                 AlignementToAnchor = [0.0, 0.5]
             )
@@ -2639,7 +2757,7 @@ ScoreByTeamTitle is BUCKContainerDescriptor
             TextToken = "EG_SBTS"
             ComponentFrame = TUIFramePropertyRTTI
             (
-                RelativeWidthHeight = [0.0, 1.0]
+                RelativeWidthHeight = [1.0, 1.0]
                 AlignementToFather = [0.5, 0.5]
                 AlignementToAnchor = [0.5, 0.5]
             )
@@ -2687,10 +2805,7 @@ TeamStatContainer is BUCKListDescriptor
 )
 
 //-------------------------------------------------------------------------------------
-template BUCKSpecificTacticalEndGameMainComponentDescriptor
-[
-    IsSoloScreen : bool = false
-] is WindowFrame
+BUCKSpecificTacticalEndGameMainComponentDescriptor is WindowFrame
 (
     ContentRelativeWidthHeight = [1.0, 1.0]
     ContentExtendWeight = 1.0
@@ -2708,7 +2823,7 @@ template BUCKSpecificTacticalEndGameMainComponentDescriptor
             )
             TextureToken = 'Outgame_fond_EndGame'
         ),
-        EngamePanelTab
+        ~/EngamePanelTab
     ]
 )
 
@@ -2718,20 +2833,20 @@ template BUCKSpecificTacticalEndGameMainComponentDescriptor
 
 UISpecificTacticalEndGameViewDescriptor is TUISpecificTacticalEndGameViewDescriptor
 (
-    MainComponentDescriptor = BUCKSpecificTacticalEndGameMainComponentDescriptor(IsSoloScreen = true)
+    MainComponentDescriptor = ~/BUCKSpecificTacticalEndGameMainComponentDescriptor
     MainComponentContainerUniqueName = "" // Permet d'indiquer l'endroit ou le composant doit s'insérer
 
-    AllegianceBlockColors = MAP
+    AllianceStyleBlockColors = MAP
     [
-        (EAllegiance/Otan, "playerHelper/Otan_line_Endgame"),
-        (EAllegiance/Pacte, "playerHelper/Pact_line"),
+        (EAllianceStyle/BLUFOR, "playerHelper/Otan_line_Endgame"),
+        (EAllianceStyle/REDFOR, "playerHelper/Pact_line"),
     ]
 
     ForceDico = ~/LocalisationConstantes/dico_interface_outgame
     ForceTokens = MAP
     [
-        (EAllegiance/Otan, "BLUFOR"),
-        (EAllegiance/Pacte, "REDFOR"),
+        (EAllianceStyle/BLUFOR, "BLUFOR"),
+        (EAllianceStyle/REDFOR, "REDFOR"),
     ]
 
     NationaliteDico = ~/LocalisationConstantes/dico_interface_outgame
@@ -2785,27 +2900,21 @@ UISpecificTacticalEndGameViewDescriptor is TUISpecificTacticalEndGameViewDescrip
         "EG_RCBB",  // Could be better
     ]
 
-    DefeatAnimation =
-    [
-        "UseOutGameTexture_DefeatAnimation_89",
-    ]
-
     WinLossDico = ~/LocalisationConstantes/dico_interface_outgame
     WinToken = "EG_won"
     LossToken = "EG_loss"
     DrawToken = "EG_draw"
     DrawExplanationToken = "EG_drawEx"
+    DrawTimeReachedToken = "EG_drawTL"
+
     WinTokenByGameEndingCondition = MAP
     [
         (~/EGameEndingCondition/ScoreVictory,           "EG_pointW"),
         (~/EGameEndingCondition/ScoreDefeat,            "EG_scDefW"),
         (~/EGameEndingCondition/PlayerDisconnected,     "EG_discW"),
         (~/EGameEndingCondition/Surrender,              "EG_surrW"),
-        (~/EGameEndingCondition/ObjectivePointCaptured, "EG_objCW"),
-        (~/EGameEndingCondition/AllZonesControled,      "EG_objW"),
-        (~/EGameEndingCondition/ArmyDestroyed,          "EG_armyW"),
         (~/EGameEndingCondition/NoMoreZone,             "EG_nozoneW"),
-        (~/EGameEndingCondition/Time,                   "EG_endTim"),
+        (~/EGameEndingCondition/Time,                   "EG_scWTL"),
     ]
     LossTokenByGameEndingCondition = MAP
     [
@@ -2813,11 +2922,8 @@ UISpecificTacticalEndGameViewDescriptor is TUISpecificTacticalEndGameViewDescrip
         (~/EGameEndingCondition/ScoreDefeat,            "EG_scDefL"),
         (~/EGameEndingCondition/PlayerDisconnected,     "EG_discL"),
         (~/EGameEndingCondition/Surrender,              "EG_surrL"),
-        (~/EGameEndingCondition/ObjectivePointCaptured, "EG_objCL"),
-        (~/EGameEndingCondition/AllZonesControled,      "EG_objL"),
-        (~/EGameEndingCondition/ArmyDestroyed,          "EG_armyL"),
         (~/EGameEndingCondition/NoMoreZone,             "EG_nozoneL"),
-        (~/EGameEndingCondition/Time,                   "EG_endTim"),
+        (~/EGameEndingCondition/Time,                   "EG_scLTL"),
     ]
     VictoryTokens = MAP
     [
@@ -2830,6 +2936,36 @@ UISpecificTacticalEndGameViewDescriptor is TUISpecificTacticalEndGameViewDescrip
         (~/EVictoryType/TotalVictory, "EG_TOTVICT"),
     ]
 
+    TacticFromStrategicEndGameReasonToken = MAP
+    [
+        (~/EGameEndingCondition/ScoreVictory,           "EG_TFSpoin"),
+        (~/EGameEndingCondition/ScoreDefeat,            "EG_TFSmora"),
+        (~/EGameEndingCondition/PlayerDisconnected,     "EG_TFSdisc"),
+        (~/EGameEndingCondition/Surrender,              "EG_TFSsurr"),
+        (~/EGameEndingCondition/NoMoreZone,             "EG_TFSnozo"),
+        (~/EGameEndingCondition/Time,                   "EG_TFStime"),
+    ]
+
+    TacticFromStrategicWinDetailToken = MAP
+    [
+        (~/EGameEndingCondition/ScoreVictory,           "EG_TFSpoEV"),
+        (~/EGameEndingCondition/ScoreDefeat,            "EG_TFSmoEV"),
+    ]
+
+    TacticFromStrategicLossDetailToken = MAP
+    [
+        (~/EGameEndingCondition/ScoreVictory,           "EG_TFSpoEL"),
+        (~/EGameEndingCondition/ScoreDefeat,            "EG_TFSmoEL"),
+    ]
+
+    // Tokens de terrain à mettre dans le dico MAPS.csv
+    TacticFromStrategicMapNameByStrategicTerrainType = MAP
+    [
+        (ETerrainType/StrategicForest, "FOREST"),
+        (ETerrainType/StrategicPlain, "PLAIN"),
+        (ETerrainType/StrategicSemiUrban, "SEMIURB"),
+    ]
+
     XpMainColor = "VertLogin"
     XpGainColor = "LDHintSolo_texte_or"
 
@@ -2838,22 +2974,6 @@ UISpecificTacticalEndGameViewDescriptor is TUISpecificTacticalEndGameViewDescrip
     ChallengeToken = "EG_chal"
     MultiToken = "EG_multi"
     SoloToken = "EG_solo"
-
-    VictoryAnimationList = MAP
-    [
-        (
-            EAllegiance/Otan,
-            [
-                "UseOutGameTexture_AlliesVictoryAnimation_89",
-            ]
-        ),
-        (
-            EAllegiance/Pacte,
-            [
-                "UseOutGameTexture_AxisVictoryAnimation_89",
-            ]
-        ),
-    ]
 
     FadedAnimation = TUIAnimFactorRTTI
     (

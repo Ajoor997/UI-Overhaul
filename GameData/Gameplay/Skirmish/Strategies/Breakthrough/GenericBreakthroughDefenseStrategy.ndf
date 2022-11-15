@@ -120,7 +120,6 @@ export GenBTDef_PhaseDeploiement is TSequenceGeneratorDescriptor
         ~/GenBTDef_Defense_Static_Adaptive_FrontLane,
 
         ~/GenBTDef_Defense_Static_AA_FrontLane,
-        ~/GenBTDef_Static_SuperCommander_FrontLane,
 
         ~/GenBTDef_Artillery_FrontLane,        // Artillerie pas chère                 //  80
 
@@ -217,7 +216,6 @@ export GenBTDef_Phase_BackLineDefense is TSequenceGeneratorDescriptor
         ~/Attack_Objectives,
 
         ~/GenBTDef_Defense_Static_AA_BackLane,
-        ~/GenBTDef_Static_SuperCommander_BackLane,
 
         ~/Artillery_Expensive,
 
@@ -269,8 +267,6 @@ export GenBTDef_Phase_StrikeBack is TSequenceGeneratorDescriptor
         ~/GenBTDef_Defense_Dynamic_Adaptive,  // Faire du code pour adapater le budget en fonction de l'income
         ~/GenBTDef_Defense_Dynamic_Adaptive,
         ~/Attack_Adaptive,
-
-        ~/SuperCommander,
 
         ~/Attack_Main,              // Plusieurs tanks pour un budget donné // 200
         ~/Artillery_Support,        // Artillerie pas chère                 //  80
@@ -332,14 +328,13 @@ GenBTDef_Defenses_Airstrike_Arti_Shuffle is
     ~/GenBTDef_Defense_Static_Adaptive,
     ~/GenBTDef_Defense_Static_AA,
     ~/GenBTDef_Defense_Static_Adaptive,
-    ~/AirReco,
     ~/Maintain_AirStrike,
     ~/Maintain_Artillery,
 ]
 
 GenBTDef_Scaling_Defense_FrontLane is
 [
-    ~/Reco,
+    ~/Reco_Autogen,
     ~/GenBTDef_Defense_Static_Adaptive_Autogen_FrontLane,
     ~/GenBTDef_Defense_Static_Adaptive_Autogen_FrontLane,
     ~/Airstrike_Defense_Autogen,
@@ -352,7 +347,7 @@ GenBTDef_Scaling_Defense_FrontLane is
 
 GenBTDef_Scaling_Defense is
 [
-    ~/Reco,
+    ~/Reco_Autogen,
     ~/GenBTDef_Defense_Dynamic_Adaptive_Autogen,
     ~/GenBTDef_Defense_Dynamic_Adaptive_Autogen,
     ~/Airstrike_Defense_Autogen,
@@ -365,7 +360,7 @@ GenBTDef_Scaling_Defense is
 
 GenBTDef_Scaling_Defense_Economic is
 [
-    ~/Reco,
+    ~/Reco_Autogen,
     ~/GenBTDef_Defense_Dynamic_Adaptive_Autogen_Economic,
     ~/GenBTDef_Defense_Dynamic_Adaptive_Autogen_Economic,
     ~/Airstrike_Defense_Autogen_Economic,
@@ -378,7 +373,7 @@ GenBTDef_Scaling_Defense_Economic is
 
 GenBTDef_Scaling is
 [
-    ~/Reco,
+    ~/Reco_Autogen,
     ~/Attack_Main_Autogen,
     ~/Attack_Adaptive_Autogen,
     ~/Attack_Adaptive_Autogen,

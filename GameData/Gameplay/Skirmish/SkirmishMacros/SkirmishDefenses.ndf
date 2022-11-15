@@ -300,7 +300,7 @@ is TMacroActionDescriptor_CaptureCommandZone_Specific
     (
         <CanTargetAlliance> == false ? []:
         [
-            TCanTargetAlliedSettingHolder(),
+            TCanTargetAlliedSettingHolder(LaunchOnlyIfHasAlly = true),
         ]
     )
 )

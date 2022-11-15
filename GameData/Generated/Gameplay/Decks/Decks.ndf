@@ -766,7 +766,7 @@ export Descriptor_Deck_UK_2nd_Infantry_multi is TDeckDescriptor
         TDeckPackDescription
         (
             ExperienceLevel = 2
-            DeckPack = ~/Descriptor_Deck_Pack_TOE_UK_2nd_Infantry_multi_DCA_Rapier_UK
+            DeckPack = ~/Descriptor_Deck_Pack_TOE_UK_2nd_Infantry_multi_DCA_Rapier_FSA_UK
             Transport = ~/Descriptor_Unit_Bedford_MJ_4t_trans_UK
         ),
         TDeckPackDescription
@@ -3057,6 +3057,42 @@ export Descriptor_Deck_RDA_KdA_Bezirk_Erfurt_multi is TDeckDescriptor
     ]
 )
 
+export Descriptor_Deck_RFA_2_PzGrenadier_multi_op_2_IA_3 is TDeckDescriptor
+(
+    DeckName = 'ONOVNKOCFC'
+    DeckIdentifier = 'op_2_IA_3'
+    DeckDivision = ~/Descriptor_Deck_Division_RFA_2_PzGrenadier_multi
+    DeckPackList =
+    [
+        TDeckPackDescription
+        (
+            ExperienceLevel = 2
+            DeckPack = ~/Descriptor_Deck_Pack_TOE_RFA_2_PzGrenadier_multi_TPZ_Fuchs_CMD_RFA
+        ),
+    ]
+    DeckCombatGroupList =
+    [
+    ]
+)
+
+export Descriptor_Deck_RFA_TerrKdo_Sud_multi_op_2_IA_1 is TDeckDescriptor
+(
+    DeckName = 'JVDSGUNXYC'
+    DeckIdentifier = 'op_2_IA_1'
+    DeckDivision = ~/Descriptor_Deck_Division_RFA_TerrKdo_Sud_multi
+    DeckPackList =
+    [
+        TDeckPackDescription
+        (
+            ExperienceLevel = 2
+            DeckPack = ~/Descriptor_Deck_Pack_TOE_RFA_TerrKdo_Sud_multi_M577_RFA
+        ),
+    ]
+    DeckCombatGroupList =
+    [
+    ]
+)
+
 export Descriptor_Deck_RFA_TerrKdo_Sud_multi is TDeckDescriptor
 (
     DeckName = 'NJBZGXXVJA'
@@ -3260,6 +3296,24 @@ export Descriptor_Deck_RFA_TerrKdo_Sud_multi is TDeckDescriptor
         (
             ExperienceLevel = 1
             DeckPack = ~/Descriptor_Deck_Pack_TOE_RFA_TerrKdo_Sud_multi_F4F_Phantom_II_HE1_RFA
+        ),
+    ]
+    DeckCombatGroupList =
+    [
+    ]
+)
+
+export Descriptor_Deck_RFA_TerrKdo_Sud_multi_op_2_IA_2 is TDeckDescriptor
+(
+    DeckName = 'XDPABGDMWS'
+    DeckIdentifier = 'op_2_IA_2'
+    DeckDivision = ~/Descriptor_Deck_Division_RFA_TerrKdo_Sud_multi
+    DeckPackList =
+    [
+        TDeckPackDescription
+        (
+            ExperienceLevel = 2
+            DeckPack = ~/Descriptor_Deck_Pack_TOE_RFA_TerrKdo_Sud_multi_Iltis_RFA
         ),
     ]
     DeckCombatGroupList =
@@ -3763,6 +3817,9 @@ private DeckList is TDeckDescriptorList
 
     DeckListForIdentifier =
     [
+        ~/Descriptor_Deck_RFA_2_PzGrenadier_multi_op_2_IA_3,
+        ~/Descriptor_Deck_RFA_TerrKdo_Sud_multi_op_2_IA_1,
+        ~/Descriptor_Deck_RFA_TerrKdo_Sud_multi_op_2_IA_2,
         ~/Descriptor_Deck_US_8th_Inf_multi_test_challenge,
         ~/Descriptor_Deck_US_3rd_Arm_multi_test_challenge_new,
         ~/Descriptor_Deck_SOV_79_Gds_Tank_multi_test_challenge_pack,

@@ -51,7 +51,6 @@ BUCKSpecificOutGameChatOneChannelMainComponentDescriptor is BUCKButtonDescriptor
             )
             TextStyle = "Default"
             TypefaceToken = "IBM"
-            UniformDrawer = $/UserInterface/UIUniformDrawer
 
             TextToken = ''
             TextDico = ~/LocalisationConstantes/dico_interface_outgame
@@ -60,7 +59,6 @@ BUCKSpecificOutGameChatOneChannelMainComponentDescriptor is BUCKButtonDescriptor
             TextSize = "14"
         )
     ]
-    UniformDrawer = $/UserInterface/UIUniformDrawer
 )
 
 UISpecificOutGameChatOneChannelViewDescriptor is TUISpecificOutGameChatOneChannelViewDescriptor

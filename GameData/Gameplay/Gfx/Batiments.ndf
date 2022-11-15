@@ -49,6 +49,7 @@ template template_UnitLevelBuildViewDescriptor
 export DefaultUnitLevelBuildViewDescriptor is template_UnitLevelBuildViewDescriptor
 (
     AdditionalMode = SDMode_Sticker + SDMode_StickerDynamic
+    StickersHandler = $/GFX/StickerProxy/DynamicStickersHandlerProxy
     UseAutoBatcher = false
 )
 

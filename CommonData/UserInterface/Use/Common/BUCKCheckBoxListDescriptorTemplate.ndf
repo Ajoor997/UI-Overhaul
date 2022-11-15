@@ -422,8 +422,6 @@ template BUCKCheckBoxListDescriptor
 
     SpotlightComponent : TBUCKContainerDescriptor = nil,
 
-    UniformDrawer : TUIUniformDrawer = $/UserInterface/UIUniformDrawer,
-
     HasBackground : bool = true,
     ItemListBackgroundBlockColorToken : string = 'SD2_BleuGris',
     BackgroundBlockColorToken : string = "",
@@ -500,7 +498,7 @@ is TBUCKCheckBoxListDescriptor
 
     SpotlightComponent = <SpotlightComponent>
 
-    UniformDrawer = <UniformDrawer>
+    UniformDrawer = $/UserInterface/UIUniformDrawer
 
     HasBackground = false
     BackgroundBlockColorToken = <BackgroundBlockColorToken>

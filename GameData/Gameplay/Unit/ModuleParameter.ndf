@@ -109,7 +109,7 @@ Parameter_ProductionAssociatedTransporter is 94
 Parameter_ProductionAssociatedSuperTransporter is 95
 Parameter_ProductionAssociatedTransportable is 96
 Parameter_ProductionAssociatedSubTransportable is 97
-Parameter_TeamAllegiance is 98
+Parameter_TeamAllianceStyle is 98
 Parameter_AirplaneLocation is 99
 Parameter_OriginalHP is 100
 Parameter_ShootingPointList is 101

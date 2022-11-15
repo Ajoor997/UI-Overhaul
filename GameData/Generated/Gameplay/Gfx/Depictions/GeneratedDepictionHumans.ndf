@@ -505,6 +505,30 @@ HumanSubDepictionsShowroom_ATteam_Milan_2_para_RFA is
         MeshDescriptor = MeshDescriptor_Servant_Fallschirm_D_RFA
     ),
 ]
+HumanSubDepictions_ATteam_Milan_2_para_UK is 
+[
+    SubDepiction_ATGMServantLeft
+    (
+        MeshDescriptorHigh = MeshDescriptor_Servant_G_UK
+        MeshDescriptorLow = MeshDescriptor_Servant_G_UK_LOW
+    ),
+    SubDepiction_ATGMServantRight
+    (
+        MeshDescriptorHigh = MeshDescriptor_Servant_D_UK
+        MeshDescriptorLow = MeshDescriptor_Servant_D_UK_LOW
+    ),
+]
+HumanSubDepictionsShowroom_ATteam_Milan_2_para_UK is 
+[
+    ShowroomSubDepiction_ATGMServantLeft
+    (
+        MeshDescriptor = MeshDescriptor_Servant_G_UK
+    ),
+    ShowroomSubDepiction_ATGMServantRight
+    (
+        MeshDescriptor = MeshDescriptor_Servant_D_UK
+    ),
+]
 HumanSubDepictions_ATteam_RCL_M40A1_RFA is 
 [
     SubDepiction_ATGMServantLeft
@@ -1002,6 +1026,30 @@ HumanSubDepictionsShowroom_DCA_M167_Vulcan_20mm_US is
         MeshDescriptor = MeshDescriptor_Servant_GI_Officer_D_US
     ),
 ]
+HumanSubDepictions_DCA_Rapier_FSA_UK is 
+[
+    SubDepiction_ServantLeft
+    (
+        MeshDescriptorHigh = MeshDescriptor_Servant_G_UK
+        MeshDescriptorLow = MeshDescriptor_Servant_G_UK_LOW
+    ),
+    SubDepiction_ServantRight
+    (
+        MeshDescriptorHigh = MeshDescriptor_Servant_D_UK
+        MeshDescriptorLow = MeshDescriptor_Servant_D_UK_LOW
+    ),
+]
+HumanSubDepictionsShowroom_DCA_Rapier_FSA_UK is 
+[
+    ShowroomSubDepiction_ServantLeft
+    (
+        MeshDescriptor = MeshDescriptor_Servant_G_UK
+    ),
+    ShowroomSubDepiction_ServantRight
+    (
+        MeshDescriptor = MeshDescriptor_Servant_D_UK
+    ),
+]
 HumanSubDepictions_DCA_Rapier_UK is 
 [
     SubDepiction_ServantLeft
@@ -1152,41 +1200,6 @@ HumanSubDepictionsShowroom_FH70_155mm_UK is
         MeshDescriptor = MeshDescriptor_Servant_D_UK
     ),
 ]
-HumanSubDepictions_Faun_Kraka_20mm_RFA is 
-[
-    SubDepiction_DriverUndeployed
-    (
-        MeshDescriptorHigh = MeshDescriptor_Driver_RFA
-        MeshDescriptorLow = MeshDescriptor_Driver_RFA_LOW
-    ),
-]
-HumanSubTurretDepictions_Faun_Kraka_20mm_RFA is 
-[
-    SubDepiction_GunnerDeployed
-    (
-        MeshDescriptorHigh = MeshDescriptor_Driver_RFA
-        MeshDescriptorLow = MeshDescriptor_Driver_RFA_LOW
-    ),
-]
-HumanSubDepictionsShowroom_Faun_Kraka_20mm_RFA is []
-HumanSubDepictions_Faun_Kraka_Log_RFA is 
-[
-    SubDepiction_Driver
-    (
-        MeshDescriptorHigh = MeshDescriptor_Driver_RFA
-        MeshDescriptorLow = MeshDescriptor_Driver_RFA_LOW
-    ),
-]
-HumanSubDepictionsShowroom_Faun_Kraka_Log_RFA is []
-HumanSubDepictions_Faun_Kraka_TOW_RFA is 
-[
-    SubDepiction_Driver
-    (
-        MeshDescriptorHigh = MeshDescriptor_Driver_RFA
-        MeshDescriptorLow = MeshDescriptor_Driver_RFA_LOW
-    ),
-]
-HumanSubDepictionsShowroom_Faun_Kraka_TOW_RFA is []
 HumanSubDepictions_Faun_kraka_RFA is 
 [
     SubDepiction_Driver
@@ -1362,30 +1375,6 @@ HumanSubDepictionsShowroom_HMGteam_AGS17_VDV_SOV is
         MeshDescriptor = MeshDescriptor_Servant_Spe_D_VDV
     ),
 ]
-HumanSubDepictions_HMGteam_KPVT_SOV is 
-[
-    SubDepiction_ATGMServantLeft
-    (
-        MeshDescriptorHigh = MeshDescriptor_Servant_G_SOV
-        MeshDescriptorLow = MeshDescriptor_Servant_G_SOV_LOW
-    ),
-    SubDepiction_ATGMServantRight
-    (
-        MeshDescriptorHigh = MeshDescriptor_Servant_D_SOV
-        MeshDescriptorLow = MeshDescriptor_Servant_D_SOV_LOW
-    ),
-]
-HumanSubDepictionsShowroom_HMGteam_KPVT_SOV is 
-[
-    ShowroomSubDepiction_ATGMServantLeft
-    (
-        MeshDescriptor = MeshDescriptor_Servant_G_SOV
-    ),
-    ShowroomSubDepiction_ATGMServantRight
-    (
-        MeshDescriptor = MeshDescriptor_Servant_D_SOV
-    ),
-]
 HumanSubDepictions_HMGteam_M2HB_AB_US is 
 [
     SubDepiction_ATGMServantLeft
@@ -1482,30 +1471,6 @@ HumanSubDepictionsShowroom_HMGteam_M2HB_para_FR is
         MeshDescriptor = MeshDescriptor_Servant_Para_NCO_D_FR
     ),
 ]
-HumanSubDepictions_HMGteam_M2HB_para_UK is 
-[
-    SubDepiction_ATGMServantLeft
-    (
-        MeshDescriptorHigh = MeshDescriptor_Servant_G_UK
-        MeshDescriptorLow = MeshDescriptor_Servant_G_UK_LOW
-    ),
-    SubDepiction_ATGMServantRight
-    (
-        MeshDescriptorHigh = MeshDescriptor_Servant_D_UK
-        MeshDescriptorLow = MeshDescriptor_Servant_D_UK_LOW
-    ),
-]
-HumanSubDepictionsShowroom_HMGteam_M2HB_para_UK is 
-[
-    ShowroomSubDepiction_ATGMServantLeft
-    (
-        MeshDescriptor = MeshDescriptor_Servant_G_UK
-    ),
-    ShowroomSubDepiction_ATGMServantRight
-    (
-        MeshDescriptor = MeshDescriptor_Servant_D_UK
-    ),
-]
 HumanSubDepictions_HMGteam_M60_AB_US is 
 [
     SubDepiction_ATGMServantLeft
@@ -1568,30 +1533,6 @@ HumanSubDepictions_HMGteam_MAG_UK is
     ),
 ]
 HumanSubDepictionsShowroom_HMGteam_MAG_UK is 
-[
-    ShowroomSubDepiction_ATGMServantLeft
-    (
-        MeshDescriptor = MeshDescriptor_Servant_G_UK
-    ),
-    ShowroomSubDepiction_ATGMServantRight
-    (
-        MeshDescriptor = MeshDescriptor_Servant_D_UK
-    ),
-]
-HumanSubDepictions_HMGteam_MAG_para_UK is 
-[
-    SubDepiction_ATGMServantLeft
-    (
-        MeshDescriptorHigh = MeshDescriptor_Servant_G_UK
-        MeshDescriptorLow = MeshDescriptor_Servant_G_UK_LOW
-    ),
-    SubDepiction_ATGMServantRight
-    (
-        MeshDescriptorHigh = MeshDescriptor_Servant_D_UK
-        MeshDescriptorLow = MeshDescriptor_Servant_D_UK_LOW
-    ),
-]
-HumanSubDepictionsShowroom_HMGteam_MAG_para_UK is 
 [
     ShowroomSubDepiction_ATGMServantLeft
     (
@@ -1672,30 +1613,6 @@ HumanSubDepictionsShowroom_HMGteam_Mk19_AB_US is
     ShowroomSubDepiction_ATGMServantRight
     (
         MeshDescriptor = MeshDescriptor_Servant_Airborne_D_US
-    ),
-]
-HumanSubDepictions_HMGteam_Mk19_US is 
-[
-    SubDepiction_ATGMServantLeft
-    (
-        MeshDescriptorHigh = MeshDescriptor_Servant_G_US
-        MeshDescriptorLow = MeshDescriptor_Servant_G_US_LOW
-    ),
-    SubDepiction_ATGMServantRight
-    (
-        MeshDescriptorHigh = MeshDescriptor_Servant_D_US
-        MeshDescriptorLow = MeshDescriptor_Servant_D_US_LOW
-    ),
-]
-HumanSubDepictionsShowroom_HMGteam_Mk19_US is 
-[
-    ShowroomSubDepiction_ATGMServantLeft
-    (
-        MeshDescriptor = MeshDescriptor_Servant_G_US
-    ),
-    ShowroomSubDepiction_ATGMServantRight
-    (
-        MeshDescriptor = MeshDescriptor_Servant_D_US
     ),
 ]
 HumanSubDepictions_HMGteam_NSV_DDR is 
@@ -2082,30 +1999,6 @@ HumanSubDepictionsShowroom_Howz_M46_130mm_DDR is
         MeshDescriptor = MeshDescriptor_Servant_D_DDR
     ),
 ]
-HumanSubDepictions_Howz_M46_130mm_SOV is 
-[
-    SubDepiction_ServantLeft
-    (
-        MeshDescriptorHigh = MeshDescriptor_Servant_G_SOV
-        MeshDescriptorLow = MeshDescriptor_Servant_G_SOV_LOW
-    ),
-    SubDepiction_ServantRight
-    (
-        MeshDescriptorHigh = MeshDescriptor_Servant_D_SOV
-        MeshDescriptorLow = MeshDescriptor_Servant_D_SOV_LOW
-    ),
-]
-HumanSubDepictionsShowroom_Howz_M46_130mm_SOV is 
-[
-    ShowroomSubDepiction_ServantLeft
-    (
-        MeshDescriptor = MeshDescriptor_Servant_G_SOV
-    ),
-    ShowroomSubDepiction_ServantRight
-    (
-        MeshDescriptor = MeshDescriptor_Servant_D_SOV
-    ),
-]
 HumanSubDepictions_Iltis_MILAN_RFA is 
 [
     SubDepiction_Driver
@@ -2151,6 +2044,15 @@ HumanSubDepictions_LandRover_CMD_UK is
     ),
 ]
 HumanSubDepictionsShowroom_LandRover_CMD_UK is []
+HumanSubDepictions_LandRover_MILAN_Para_UK is 
+[
+    SubDepiction_Driver
+    (
+        MeshDescriptorHigh = MeshDescriptor_Driver_Para_UK
+        MeshDescriptorLow = MeshDescriptor_Driver_Para_UK_LOW
+    ),
+]
+HumanSubDepictionsShowroom_LandRover_MILAN_Para_UK is []
 HumanSubDepictions_LandRover_MILAN_UK is 
 [
     SubDepiction_Driver
@@ -2187,6 +2089,15 @@ HumanSubDepictions_M1025_Humvee_AGL_US is
     ),
 ]
 HumanSubDepictionsShowroom_M1025_Humvee_AGL_US is []
+HumanSubDepictions_M1025_Humvee_AGL_nonPara_US is 
+[
+    SubDepiction_Driver
+    (
+        MeshDescriptorHigh = MeshDescriptor_Driver_US
+        MeshDescriptorLow = MeshDescriptor_Driver_US_LOW
+    ),
+]
+HumanSubDepictionsShowroom_M1025_Humvee_AGL_nonPara_US is []
 HumanSubDepictions_M1025_Humvee_CMD_para_US is 
 [
     SubDepiction_Driver
@@ -2534,20 +2445,6 @@ HumanSubDepictionsShowroom_Mortier_Tampella_120mm_RFA is
         MeshDescriptor = MeshDescriptor_Servant_D_RFA
     ),
 ]
-HumanSubDepictions_OT_62_TOPAS_JOD_POL is 
-[
-    SubDepiction_GunnerLeft
-    (
-        MeshDescriptorHigh = MeshDescriptor_Servant_G_VDV
-        MeshDescriptorLow = MeshDescriptor_Servant_G_VDV_LOW
-    ),
-    SubDepiction_GunnerRight
-    (
-        MeshDescriptorHigh = MeshDescriptor_Servant_Spe_D_VDV
-        MeshDescriptorLow = MeshDescriptor_Servant_Spe_D_VDV_LOW
-    ),
-]
-HumanSubDepictionsShowroom_OT_62_TOPAS_JOD_POL is []
 HumanSubDepictions_RCL_L6_Wombat_UK is 
 [
     SubDepiction_ATGMServantLeft
@@ -3087,6 +2984,7 @@ MAP[
     ("ATteam_Milan_2_UK", 2),
     ("ATteam_Milan_2_para_FR", 2),
     ("ATteam_Milan_2_para_RFA", 2),
+    ("ATteam_Milan_2_para_UK", 2),
     ("ATteam_RCL_M40A1_RFA", 2),
     ("ATteam_RCL_SPG9_DDR", 2),
     ("ATteam_RCL_SPG9_FJ_DDR", 2),
@@ -3110,14 +3008,12 @@ MAP[
     ("DCA_I_Hawk_US", 2),
     ("DCA_Javelin_LML_UK", 2),
     ("DCA_M167_Vulcan_20mm_US", 2),
+    ("DCA_Rapier_FSA_UK", 2),
     ("DCA_Rapier_UK", 2),
     ("DCA_ZU_23_2_DDR", 2),
     ("DCA_ZU_23_2_SOV", 2),
     ("FH70_155mm_RFA", 2),
     ("FH70_155mm_UK", 2),
-    ("Faun_Kraka_20mm_RFA", 1),
-    ("Faun_Kraka_Log_RFA", 1),
-    ("Faun_Kraka_TOW_RFA", 1),
     ("Faun_kraka_RFA", 1),
     ("GAZ_66B_SOV", 1),
     ("GAZ_66B_ZU_SOV", 3),
@@ -3128,20 +3024,16 @@ MAP[
     ("HMGteam_AGS17_DDR", 2),
     ("HMGteam_AGS17_SOV", 2),
     ("HMGteam_AGS17_VDV_SOV", 2),
-    ("HMGteam_KPVT_SOV", 2),
     ("HMGteam_M2HB_AB_US", 2),
     ("HMGteam_M2HB_FR", 2),
     ("HMGteam_M2HB_US", 2),
     ("HMGteam_M2HB_para_FR", 2),
-    ("HMGteam_M2HB_para_UK", 2),
     ("HMGteam_M60_AB_US", 2),
     ("HMGteam_M60_US", 2),
     ("HMGteam_MAG_UK", 2),
-    ("HMGteam_MAG_para_UK", 2),
     ("HMGteam_MG3_FJ_RFA", 2),
     ("HMGteam_MG3_RFA", 2),
     ("HMGteam_Mk19_AB_US", 2),
-    ("HMGteam_Mk19_US", 2),
     ("HMGteam_NSV_DDR", 2),
     ("HMGteam_NSV_SOV", 2),
     ("HMGteam_PKM_DDR", 2),
@@ -3158,16 +3050,17 @@ MAP[
     ("Howz_M101_105mm_RFA", 2),
     ("Howz_M102_105mm_US", 2),
     ("Howz_M46_130mm_DDR", 2),
-    ("Howz_M46_130mm_SOV", 2),
     ("Iltis_MILAN_RFA", 1),
     ("Iltis_RFA", 1),
     ("Iltis_reco_RFA", 1),
     ("Iltis_trans_RFA", 1),
     ("LandRover_CMD_UK", 1),
+    ("LandRover_MILAN_Para_UK", 1),
     ("LandRover_MILAN_UK", 1),
     ("LandRover_UK", 1),
     ("Lars_2_RFA", 1),
     ("M1025_Humvee_AGL_US", 1),
+    ("M1025_Humvee_AGL_nonPara_US", 1),
     ("M1025_Humvee_CMD_para_US", 1),
     ("M1025_Humvee_TOW_para_US", 1),
     ("M1025_Humvee_scout_US", 1),
@@ -3191,7 +3084,6 @@ MAP[
     ("Mortier_MORT61_120mm_para_FR", 2),
     ("Mortier_PM43_120mm_DDR", 2),
     ("Mortier_Tampella_120mm_RFA", 2),
-    ("OT_62_TOPAS_JOD_POL", 2),
     ("RCL_L6_Wombat_UK", 2),
     ("T813_DDR", 1),
     ("T813_trans_DDR", 1),
@@ -3291,6 +3183,8 @@ TransportedServantAlternatives is
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_Para_NCO_D_FR SelectorId = [ "ATteam_Milan_2_para_FR", "02" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_Fallschirm_G_RFA SelectorId = [ "ATteam_Milan_2_para_RFA", "01" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_Fallschirm_D_RFA SelectorId = [ "ATteam_Milan_2_para_RFA", "02" ] ),
+    TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_G_UK SelectorId = [ "ATteam_Milan_2_para_UK", "01" ] ),
+    TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_D_UK SelectorId = [ "ATteam_Milan_2_para_UK", "02" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_G_RFA SelectorId = [ "ATteam_RCL_M40A1_RFA", "01" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_D_RFA SelectorId = [ "ATteam_RCL_M40A1_RFA", "02" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_G_FJ_DDR SelectorId = [ "ATteam_RCL_SPG9_DDR", "01" ] ),
@@ -3332,6 +3226,8 @@ TransportedServantAlternatives is
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_D_UK SelectorId = [ "DCA_Javelin_LML_UK", "02" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_GI_spe_G_US SelectorId = [ "DCA_M167_Vulcan_20mm_US", "01" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_GI_Officer_D_US SelectorId = [ "DCA_M167_Vulcan_20mm_US", "02" ] ),
+    TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_G_UK SelectorId = [ "DCA_Rapier_FSA_UK", "01" ] ),
+    TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_D_UK SelectorId = [ "DCA_Rapier_FSA_UK", "02" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_G_UK SelectorId = [ "DCA_Rapier_UK", "01" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_D_UK SelectorId = [ "DCA_Rapier_UK", "02" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_G_DDR SelectorId = [ "DCA_ZU_23_2_DDR", "01" ] ),
@@ -3342,9 +3238,6 @@ TransportedServantAlternatives is
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_PzGrenadier_Officer_D_RFA SelectorId = [ "FH70_155mm_RFA", "02" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_G_UK SelectorId = [ "FH70_155mm_UK", "01" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_D_UK SelectorId = [ "FH70_155mm_UK", "02" ] ),
-    TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Driver_RFA SelectorId = [ "Faun_Kraka_20mm_RFA", "01" ] ),
-    TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Driver_RFA SelectorId = [ "Faun_Kraka_Log_RFA", "01" ] ),
-    TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Driver_RFA SelectorId = [ "Faun_Kraka_TOW_RFA", "01" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Driver_RFA SelectorId = [ "Faun_kraka_RFA", "01" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Driver_SOV SelectorId = [ "GAZ_66B_SOV", "01" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Driver_VdV_SOV SelectorId = [ "GAZ_66B_ZU_SOV", "01" ] ),
@@ -3362,8 +3255,6 @@ TransportedServantAlternatives is
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_D_SOV SelectorId = [ "HMGteam_AGS17_SOV", "02" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_G_VDV SelectorId = [ "HMGteam_AGS17_VDV_SOV", "01" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_Spe_D_VDV SelectorId = [ "HMGteam_AGS17_VDV_SOV", "02" ] ),
-    TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_G_SOV SelectorId = [ "HMGteam_KPVT_SOV", "01" ] ),
-    TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_D_SOV SelectorId = [ "HMGteam_KPVT_SOV", "02" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_Airborne_G_US SelectorId = [ "HMGteam_M2HB_AB_US", "01" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_Airborne_D_US SelectorId = [ "HMGteam_M2HB_AB_US", "02" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_G_FR SelectorId = [ "HMGteam_M2HB_FR", "01" ] ),
@@ -3372,24 +3263,18 @@ TransportedServantAlternatives is
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_D_US SelectorId = [ "HMGteam_M2HB_US", "02" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_Para_Sep_G_FR SelectorId = [ "HMGteam_M2HB_para_FR", "01" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_Para_NCO_D_FR SelectorId = [ "HMGteam_M2HB_para_FR", "02" ] ),
-    TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_G_UK SelectorId = [ "HMGteam_M2HB_para_UK", "01" ] ),
-    TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_D_UK SelectorId = [ "HMGteam_M2HB_para_UK", "02" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_Airborne_G_US SelectorId = [ "HMGteam_M60_AB_US", "01" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_Airborne_D_US SelectorId = [ "HMGteam_M60_AB_US", "02" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_G_US SelectorId = [ "HMGteam_M60_US", "01" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_D_US SelectorId = [ "HMGteam_M60_US", "02" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_G_UK SelectorId = [ "HMGteam_MAG_UK", "01" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_D_UK SelectorId = [ "HMGteam_MAG_UK", "02" ] ),
-    TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_G_UK SelectorId = [ "HMGteam_MAG_para_UK", "01" ] ),
-    TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_D_UK SelectorId = [ "HMGteam_MAG_para_UK", "02" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_Fallschirm_G_RFA SelectorId = [ "HMGteam_MG3_FJ_RFA", "01" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_Fallschirm_D_RFA SelectorId = [ "HMGteam_MG3_FJ_RFA", "02" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_G_RFA SelectorId = [ "HMGteam_MG3_RFA", "01" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_D_RFA SelectorId = [ "HMGteam_MG3_RFA", "02" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_Airborne_G_US SelectorId = [ "HMGteam_Mk19_AB_US", "01" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_Airborne_D_US SelectorId = [ "HMGteam_Mk19_AB_US", "02" ] ),
-    TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_G_US SelectorId = [ "HMGteam_Mk19_US", "01" ] ),
-    TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_D_US SelectorId = [ "HMGteam_Mk19_US", "02" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_G_DDR SelectorId = [ "HMGteam_NSV_DDR", "01" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_D_DDR SelectorId = [ "HMGteam_NSV_DDR", "02" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_G_SOV SelectorId = [ "HMGteam_NSV_SOV", "01" ] ),
@@ -3422,17 +3307,17 @@ TransportedServantAlternatives is
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_Airborne_D_US SelectorId = [ "Howz_M102_105mm_US", "02" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_G_DDR SelectorId = [ "Howz_M46_130mm_DDR", "01" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_D_DDR SelectorId = [ "Howz_M46_130mm_DDR", "02" ] ),
-    TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_G_SOV SelectorId = [ "Howz_M46_130mm_SOV", "01" ] ),
-    TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_D_SOV SelectorId = [ "Howz_M46_130mm_SOV", "02" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Driver_RFA SelectorId = [ "Iltis_MILAN_RFA", "01" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Driver_RFA SelectorId = [ "Iltis_RFA", "01" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Driver_RFA SelectorId = [ "Iltis_reco_RFA", "01" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Driver_RFA SelectorId = [ "Iltis_trans_RFA", "01" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Driver_UK SelectorId = [ "LandRover_CMD_UK", "01" ] ),
+    TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Driver_Para_UK SelectorId = [ "LandRover_MILAN_Para_UK", "01" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Driver_UK SelectorId = [ "LandRover_MILAN_UK", "01" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Driver_UK SelectorId = [ "LandRover_UK", "01" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Driver_RFA SelectorId = [ "Lars_2_RFA", "01" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Driver_US SelectorId = [ "M1025_Humvee_AGL_US", "01" ] ),
+    TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Driver_US SelectorId = [ "M1025_Humvee_AGL_nonPara_US", "01" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Driver_US SelectorId = [ "M1025_Humvee_CMD_para_US", "01" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Driver_US SelectorId = [ "M1025_Humvee_TOW_para_US", "01" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Driver_US SelectorId = [ "M1025_Humvee_scout_US", "01" ] ),
@@ -3466,8 +3351,6 @@ TransportedServantAlternatives is
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_D_DDR SelectorId = [ "Mortier_PM43_120mm_DDR", "02" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_G_RFA SelectorId = [ "Mortier_Tampella_120mm_RFA", "01" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_D_RFA SelectorId = [ "Mortier_Tampella_120mm_RFA", "02" ] ),
-    TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_G_VDV SelectorId = [ "OT_62_TOPAS_JOD_POL", "01" ] ),
-    TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_Spe_D_VDV SelectorId = [ "OT_62_TOPAS_JOD_POL", "02" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_G_UK SelectorId = [ "RCL_L6_Wombat_UK", "01" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Servant_D_UK SelectorId = [ "RCL_L6_Wombat_UK", "02" ] ),
     TDepictionDescriptor( MeshDescriptor = MeshDescriptor_Driver_RFA SelectorId = [ "T813_DDR", "01" ] ),

@@ -236,8 +236,6 @@ private SelectionPanel_nomsoldat is BUCKTextDescriptor
     TypefaceToken = "Eurostyle"
     BigLineAction = ~/BigLineAction/CutByDots
 
-    UniformDrawer = $/UserInterface/UIUniformDrawer
-
     TextDico = ~/LocalisationConstantes/dico_unites
 
     TextColor = "White"
@@ -346,7 +344,6 @@ private SelectionPanelStressStatus is BUCKContainerDescriptor
                         TypefaceToken = "UIMainFont"
                         BigLineAction = ~/BigLineAction/CutByDots
                         TextPadding = TRTTILength4( Magnifiable = [4.0, 4.0, 4.0, 4.0] )
-                        UniformDrawer = $/UserInterface/UIUniformDrawer
 
                         TextDico = ~/LocalisationConstantes/dico_interface_ingame
 
@@ -543,8 +540,6 @@ private SelectionPanelUnitName is BUCKTextDescriptor
     TypefaceToken = "Liberator"
     BigLineAction = ~/BigLineAction/CutByDots
 
-    UniformDrawer = $/UserInterface/UIUniformDrawer
-
     TextDico = ~/LocalisationConstantes/dico_unites
 
     TextColor = "White"
@@ -609,7 +604,6 @@ private ExperienceName is BUCKTextDescriptor
     TypefaceToken = "UIMainFont"
     BigLineAction = ~/BigLineAction/CutByDots
 
-    UniformDrawer = $/UserInterface/UIUniformDrawer
     HasBackground = false
 
     TextDico = ~/LocalisationConstantes/dico_interface_ingame
@@ -644,6 +638,7 @@ private PanelSelectionUnique_ListeDesArmes is BUCKListDescriptor
 
     Axis = ~/ListAxis/Horizontal
     InterItemMargin = TRTTILength( Magnifiable = 6.0 )
+    LastMargin = TRTTILength( Magnifiable = 6.0 )
     BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestBetweenFatherAndChildren
 
     // Weapon Buttons connected through C++
@@ -745,8 +740,6 @@ SelectionPanelUnitTypeName is BUCKTextDescriptor
     TypefaceToken = "UIMainFont"
     BigLineAction = ~/BigLineAction/CutByDots
 
-    UniformDrawer = $/UserInterface/UIUniformDrawer
-
     TextDico = ~/LocalisationConstantes/dico_interface_ingame
 
     TextColor = "White"
@@ -782,8 +775,6 @@ is BUCKButtonDescriptor
     )
 
     ElementName = <ElementName>
-    UniformDrawer = $/UserInterface/UIUniformDrawer
-
     IsClippable = true
 
     IsTogglable = false
@@ -851,7 +842,6 @@ is BUCKButtonDescriptor
             TextToken       = "ER_ROE"
 
             TypefaceToken   = "UIMainFont"
-            UniformDrawer   = $/UserInterface/UIUniformDrawer
         ),
 
         BUCKSpecificHintableArea

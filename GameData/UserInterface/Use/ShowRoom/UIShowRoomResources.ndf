@@ -47,14 +47,16 @@ ShowRoomResource is TUISpecificShowRoomResources
 
     DummyComponentForBlur = ~/DummyComponentForBlur
 
-    CountriesToShow = ["SOV","US","UK","FR","CAN","POL","DDR","RFA","BEL","NL","LUX"]
+    CountriesToShow = ["SOV","US","UK","FR","CAN","POL","DDR","RFA","NL","BEL","LUX","TCH"]
     AllianceToCountriesToShow = MAP [
-        (ENationalite/Axis, ["SOV","DDR","POL"]),
-        (ENationalite/Allied, ["US","UK","FR","RFA","CAN","BEL","NL","LUX"])
+        (ENationalite/Axis, ["SOV","DDR","POL","TCH"]),
+        (ENationalite/Allied, ["US","UK","FR","RFA","CAN","NL","BEL","LUX"])
     ]
 
     SpecificHidingViewDescriptor = ~/UISpecificHidingViewDescriptor
     DeckCreatorViewHelperDescriptor = ~/DeckCreatorScreenViewHelperDescriptor
+
+    CameraMoverManager = $/Camera/CameraMoverManager
 
     ShortcutUserInputLayer      = $/M3D/Input/UserInputLayerHandler/InputLayer_InGameShortcuts
 )

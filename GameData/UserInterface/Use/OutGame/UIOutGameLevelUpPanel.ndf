@@ -140,7 +140,6 @@ LevelUpResources is TBaseClass
             MagnifiableOffset = [73, 88]
             MagnifiableWidthHeight = [148, 21]
         )
-        UniformDrawer = $/UserInterface/UIUniformDrawer
         HasBorder = false
         BordersToDraw = ~/TBorderSide/All
         BorderLineColorToken = "Noir"

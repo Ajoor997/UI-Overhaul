@@ -28,8 +28,6 @@ template EditorGenericButton
 
     Mapping : TEugBMutablePBaseClass = nil,
 
-    UniformDrawer : TUIUniformDrawer = $/UserInterface/UIUniformDrawer,
-
     Components : LIST<TBUCKContainerDescriptor> = [],
 
     SpotlightComponent : TBUCKContainerDescriptor = nil,
@@ -67,7 +65,6 @@ is BUCKButtonDescriptor
             ParagraphStyle = <ParagraphStyle>
             TextStyle = "Default"
             TypefaceToken = "UIMainFont"
-            UniformDrawer = $/UserInterface/UIUniformDrawer
 
             TextToken = <TextToken>
             TextDico = <TextDico>
@@ -83,8 +80,6 @@ is BUCKButtonDescriptor
 
     IsFocusable = <IsFocusable>
     FocusMapping = <FocusMapping>
-
-    UniformDrawer = <UniformDrawer>
 
     SpotlightComponent = <SpotlightComponent>
 

@@ -74,18 +74,18 @@ TotalXPEvaluator is TFunctionDeclaration
 (
     Params = [ inVictoryLevelXP is TAlias(ExpectedType = 'unsigned'),
                inKillsBonusXP is TAlias(ExpectedType = 'unsigned'),
-               inCommandPointsBonusXP is TAlias(ExpectedType = 'unsigned'),
+               InConquestPointsBonusXP is TAlias(ExpectedType = 'unsigned'),
                inCasualtiesBonusXP is TAlias(ExpectedType = 'unsigned'),
                inTotalXpMultiplier is TAlias(ExpectedType = 'float') ]
 
     // D'après l'ODS : =E4+E6+E7+E8
-    Code = (inVictoryLevelXP + inKillsBonusXP + inCommandPointsBonusXP + inCasualtiesBonusXP) * inTotalXpMultiplier
+    Code = (inVictoryLevelXP + inKillsBonusXP + InConquestPointsBonusXP + inCasualtiesBonusXP) * inTotalXpMultiplier
 )
 
 // Ne pas toucher
 TotalXPEvaluation is TotalXPEvaluator[ TGetFromContext_U32(Name = 'InVictoryLevelXP' Variability = $/Variability/Fx),
                                        TGetFromContext_U32(Name = 'InKillsBonusXP' Variability = $/Variability/Fx),
-                                       TGetFromContext_U32(Name = 'InCommandPointsBonusXP' Variability = $/Variability/Fx),
+                                       TGetFromContext_U32(Name = 'InConquestPointsBonusXP' Variability = $/Variability/Fx),
                                        TGetFromContext_U32(Name = 'InCasualtiesBonusXP' Variability = $/Variability/Fx),
                                        TGetFromContext_Float(Name = 'InTotalXPMultiplier' Variability = $/Variability/Fx), ]
 

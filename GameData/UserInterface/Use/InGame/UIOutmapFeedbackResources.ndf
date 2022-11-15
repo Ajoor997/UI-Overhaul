@@ -74,8 +74,6 @@ UISpecificOutmapFeedbackResources is TUISpecificOutmapFeedbackResources
             AlignementToFather = [0.5, 0.45]
             AlignementToAnchor = [0.5, 0.45]
         )
-
-        UniformDrawer = $/UserInterface/UIUniformDrawer
         HasBorder = false
 
         Components =
@@ -89,8 +87,6 @@ UISpecificOutmapFeedbackResources is TUISpecificOutmapFeedbackResources
                     AlignementToFather = [0.5, 0.0]
                     AlignementToAnchor = [0.5, 0.0]
                 )
-                UniformDrawer = $/UserInterface/UIUniformDrawer
-
                 Transition0 = 0
                 Transition1 = 0.5
                 Transition2 = 0.5
@@ -125,8 +121,6 @@ UISpecificOutmapFeedbackResources is TUISpecificOutmapFeedbackResources
                 TypefaceToken = "UIMainFont"
                 BigLineAction = ~/BigLineAction/CutByDots
 
-                UniformDrawer = $/UserInterface/UIUniformDrawer
-
                 TextDico = ~/LocalisationConstantes/dico_interface_ingame
 
                 TextColor = "OutmapFeedback/Text"
@@ -157,8 +151,6 @@ UISpecificOutmapFeedbackResources is TUISpecificOutmapFeedbackResources
                 TypefaceToken = "UIMainFont"
                 BigLineAction = ~/BigLineAction/CutByDots
 
-                UniformDrawer = $/UserInterface/UIUniformDrawer
-
                 TextDico = ~/LocalisationConstantes/dico_interface_ingame
 
                 TextColor = "OutmapFeedback/Text"
@@ -188,8 +180,6 @@ UISpecificOutmapFeedbackResources is TUISpecificOutmapFeedbackResources
 
                 TypefaceToken = "UIMainFont"
                 BigLineAction = ~/BigLineAction/CutByDots
-
-                UniformDrawer = $/UserInterface/UIUniformDrawer
 
                 TextDico = ~/LocalisationConstantes/dico_interface_ingame
 

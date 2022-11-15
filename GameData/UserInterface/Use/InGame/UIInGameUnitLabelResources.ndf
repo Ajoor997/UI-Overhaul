@@ -26,10 +26,10 @@ SpecificInGameUnitLabelResources is TUISpecificUnitLabelResources
     // pour configurer il faut ouvrir les ajustables : label et agregate
     LabelInAggregatMagnifiableBox = [UnitLabelAggregationWidth, UnitLabelAggregationHeight]
     LabelMagnifiableBox = [80, 30]
-    RatioToLabelInAggregatMagnifiableBox = [0.5, 0.5]
-    RatioToLabelMagnifiableBox = [0.40, 0.5]
-    MagnifiableOffsetCenter = [27.0, 0.0]
-    MagnifiableOffsetAggregatCenter = [0.0, 0.0]
+    RatioToLabelInAggregatMagnifiableBox = [0.2, 0.4]
+    RatioToLabelMagnifiableBox = [0.20, 0.3]
+    MagnifiableOffsetCenter = [0.0, -37.0]
+    MagnifiableOffsetAggregatCenter = [0.0, -32.0]
 
     NbMaxAggregatedUnits = 12
 

@@ -51,6 +51,11 @@ template Template_Unit_FakeTarget
         TTargetDataModuleDescriptor
         (
         ),
+        TCameraShowroomModuleDescriptor
+        (
+            Token = 'Vehicle'
+            SpawnType = EShowroomSpawnType/Vehicle
+        ),
     ]
 )
 

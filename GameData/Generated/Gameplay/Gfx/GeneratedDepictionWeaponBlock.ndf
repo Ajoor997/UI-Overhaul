@@ -169,6 +169,14 @@ Weapon_MMG_AANF1_7_62mm is TCompositeHappening
         SFXWeapon_MMG_AANF1_7_62mm,
     ]
 )
+Weapon_SMOKE_Vehicle_Grenadex8 is TCompositeHappening
+(
+    SubHappenings = 
+    [
+        FXWeapon_SMOKE_Vehicle_Grenadex8,
+        SFXWeapon_SMOKE_Vehicle_Grenadex8,
+    ]
+)
 Weapon_ATGM_HOT2_x4 is TCompositeHappening
 (
     SubHappenings = 
@@ -191,14 +199,6 @@ Weapon_AutoCanon_HE_M693_F1_20mm is TCompositeHappening
     [
         FXWeapon_AutoCanon_HE_M693_F1_20mm,
         SFXWeapon_AutoCanon_HE_M693_F1_20mm,
-    ]
-)
-Weapon_SMOKE_Vehicle_Grenadex8 is TCompositeHappening
-(
-    SubHappenings = 
-    [
-        FXWeapon_SMOKE_Vehicle_Grenadex8,
-        SFXWeapon_SMOKE_Vehicle_Grenadex8,
     ]
 )
 Weapon_ATGM_MILAN is TCompositeHappening
@@ -697,6 +697,7 @@ Weapon_Gatling_M61_Vulcan_20mm_late_TOWED is TCompositeHappening
         SFXWeapon_Gatling_M61_Vulcan_20mm_late_TOWED,
     ]
 )
+Weapon_SAM_RAPIER_FSA_x4 is FXWeapon_SAM_RAPIER_FSA_x4
 Weapon_SAM_RAPIER_x4 is TCompositeHappening
 (
     SubHappenings = 
@@ -889,14 +890,6 @@ Weapon_ATGM_Swingfire_x2 is TCompositeHappening
         SFXWeapon_ATGM_Swingfire_x2,
     ]
 )
-Weapon_DCA_1_canon_FK20_20mm is TCompositeHappening
-(
-    SubHappenings = 
-    [
-        FXWeapon_DCA_1_canon_FK20_20mm,
-        SFXWeapon_DCA_1_canon_FK20_20mm,
-    ]
-)
 Weapon_DCA_2_canons_Oerlikon_GDF_35mm is TCompositeHappening
 (
     SubHappenings = 
@@ -911,14 +904,6 @@ Weapon_HMG_inf_7_62mm_AANF1 is TCompositeHappening
     [
         FXWeapon_HMG_inf_7_62mm_AANF1,
         SFXWeapon_HMG_inf_7_62mm_AANF1,
-    ]
-)
-Weapon_HMG_inf_14_5_mm_KPVT is TCompositeHappening
-(
-    SubHappenings = 
-    [
-        FXWeapon_HMG_inf_14_5_mm_KPVT,
-        SFXWeapon_HMG_inf_14_5_mm_KPVT,
     ]
 )
 Weapon_HMG_inf_12_7_mm_M2HB is TCompositeHappening
@@ -2049,12 +2034,12 @@ Weapon_AutoCanon_HE_T20_20mm is TCompositeHappening
         SFXWeapon_AutoCanon_HE_T20_20mm,
     ]
 )
-Weapon_SAM_Mistral is TCompositeHappening
+Weapon_Mistral is TCompositeHappening
 (
     SubHappenings = 
     [
-        FXWeapon_SAM_Mistral,
-        SFXWeapon_SAM_Mistral,
+        FXWeapon_Mistral,
+        SFXWeapon_Mistral,
     ]
 )
 Weapon_Mortier_81mm_61C is TCompositeHappening
@@ -2346,12 +2331,12 @@ Weapon_Gatling_JakB_12_7mm is TCompositeHappening
         SFXWeapon_Gatling_JakB_12_7mm,
     ]
 )
-Weapon_AA_R60_Vympel is TCompositeHappening
+Weapon_AA_R60_Vympel_helo is TCompositeHappening
 (
     SubHappenings = 
     [
-        FXWeapon_AA_R60_Vympel,
-        SFXWeapon_AA_R60_Vympel,
+        FXWeapon_AA_R60_Vympel_helo,
+        SFXWeapon_AA_R60_Vympel_helo,
     ]
 )
 Weapon_RocketAir_S5_57mm_x8 is TCompositeHappening
@@ -2507,7 +2492,14 @@ Weapon_GatlingAir_AP_GAU8_30mm is TCompositeHappening
         SFXWeapon_GatlingAir_AP_GAU8_30mm,
     ]
 )
-Weapon_AGM_AGM65D_Maverick is FXWeapon_AGM_AGM65D_Maverick
+Weapon_AGM_AGM65D_Maverick is TCompositeHappening
+(
+    SubHappenings = 
+    [
+        FXWeapon_AGM_AGM65D_Maverick,
+        SFXWeapon_AGM_AGM65D_Maverick,
+    ]
+)
 Weapon_AA_AIM9M_Sidewinder is TCompositeHappening
 (
     SubHappenings = 
@@ -2636,20 +2628,20 @@ Weapon_Bomb_Mk77_340kg_Napalm_x4 is TCompositeHappening
         SFXWeapon_Bomb_Mk77_340kg_Napalm_x4,
     ]
 )
-Weapon_Bomb_GBU_10_x4 is TCompositeHappening
+Weapon_Bomb_GBU_10_x2 is TCompositeHappening
 (
     SubHappenings = 
     [
-        FXWeapon_Bomb_GBU_10_x4,
-        SFXWeapon_Bomb_GBU_10_x4,
+        FXWeapon_Bomb_GBU_10_x2,
+        SFXWeapon_Bomb_GBU_10_x2,
     ]
 )
-Weapon_Bomb_GBU_12_x4 is TCompositeHappening
+Weapon_Bomb_GBU_12_x2 is TCompositeHappening
 (
     SubHappenings = 
     [
-        FXWeapon_Bomb_GBU_12_x4,
-        SFXWeapon_Bomb_GBU_12_x4,
+        FXWeapon_Bomb_GBU_12_x2,
+        SFXWeapon_Bomb_GBU_12_x2,
     ]
 )
 Weapon_AA_AIM7M_Sparrow is TCompositeHappening
@@ -2940,12 +2932,28 @@ Weapon_Bomb_FAB_500kg_x8 is TCompositeHappening
         SFXWeapon_Bomb_FAB_500kg_x8,
     ]
 )
+Weapon_GatlingAir_AP_Gsh_30_6_30mm is TCompositeHappening
+(
+    SubHappenings = 
+    [
+        FXWeapon_GatlingAir_AP_Gsh_30_6_30mm,
+        SFXWeapon_GatlingAir_AP_Gsh_30_6_30mm,
+    ]
+)
 Weapon_GatlingAir_Gsh_30_6_30mm is TCompositeHappening
 (
     SubHappenings = 
     [
         FXWeapon_GatlingAir_Gsh_30_6_30mm,
         SFXWeapon_GatlingAir_Gsh_30_6_30mm,
+    ]
+)
+Weapon_Bomb_KAB_500Kr_x2 is TCompositeHappening
+(
+    SubHappenings = 
+    [
+        FXWeapon_Bomb_KAB_500Kr_x2,
+        SFXWeapon_Bomb_KAB_500Kr_x2,
     ]
 )
 Weapon_AGM_Kh29T is TCompositeHappening
@@ -3130,14 +3138,6 @@ Weapon_AGM_Kh25ML is TCompositeHappening
     [
         FXWeapon_AGM_Kh25ML,
         SFXWeapon_AGM_Kh25ML,
-    ]
-)
-Weapon_GatlingAir_AP_Gsh_30_2_30mm_x2 is TCompositeHappening
-(
-    SubHappenings = 
-    [
-        FXWeapon_GatlingAir_AP_Gsh_30_2_30mm_x2,
-        SFXWeapon_GatlingAir_AP_Gsh_30_2_30mm_x2,
     ]
 )
 Weapon_Bomb_CLU_RBK_250kg_x6 is TCompositeHappening

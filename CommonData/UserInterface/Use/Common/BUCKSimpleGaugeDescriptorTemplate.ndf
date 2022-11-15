@@ -25,8 +25,6 @@ template BUCKSimpleGaugeValueDescriptor
 
     SpotlightComponent : TBUCKContainerDescriptor = nil,
 
-    UniformDrawer : TUIUniformDrawer = $/UserInterface/UIUniformDrawer,
-
     HasBackground : bool = false,
     BackgroundBlockColorToken : string = "",
 
@@ -84,8 +82,6 @@ template BUCKSimpleGaugeValueDescriptor
     ClipContent = <ClipContent>
 
     SpotlightComponent = <SpotlightComponent>
-
-    UniformDrawer = <UniformDrawer>
 
     HasBackground = <HasBackground>
     BackgroundBlockColorToken = <BackgroundBlockColorToken>
@@ -160,8 +156,6 @@ template BUCKSimpleGaugeDescriptor
 
     SpotlightComponent : TBUCKContainerDescriptor = nil,
 
-    UniformDrawer : TUIUniformDrawer = $/UserInterface/UIUniformDrawer,
-
     HasBackground : bool = false,
     BackgroundBlockColorToken : string = "",
 
@@ -224,8 +218,6 @@ template BUCKSimpleGaugeDescriptor
     ClipContent = <ClipContent>
 
     SpotlightComponent = <SpotlightComponent>
-
-    UniformDrawer = <UniformDrawer>
 
     HasBackground = <HasBackground>
     BackgroundBlockColorToken = <BackgroundBlockColorToken>

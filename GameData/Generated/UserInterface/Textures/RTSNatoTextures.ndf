@@ -40,6 +40,16 @@ Texture_RTS_H_mortar is TUIResourceTexture_Common
     FileName      = 'Assets\2D\Interface\UseInGame\LabelIcons\RTS\mortar.png'
 )
 
+Texture_infantry_nonIdentifie is TUIResourceTexture_Common
+(
+    FileName      = 'Assets\2D\Interface\UseInGame\LabelIcons\NATO\infantry_nonIdentifie.png'
+)
+
+Texture_RTS_H_infantry_nonIdentifie is TUIResourceTexture_Common
+(
+    FileName      = 'Assets\2D\Interface\UseInGame\LabelIcons\RTS\infantry_nonIdentifie.png'
+)
+
 Texture_reco_veh is TUIResourceTexture_Common
 (
     FileName      = 'Assets\2D\Interface\UseInGame\LabelIcons\NATO\reco_veh.png'
@@ -140,19 +150,9 @@ Texture_Infantry_half is TUIResourceTexture_Common
     FileName      = 'Assets\2D\Interface\UseInGame\LabelIcons\NATO\Infantry_half.png'
 )
 
-Texture_infantry_nonIdentifie is TUIResourceTexture_Common
-(
-    FileName      = 'Assets\2D\Interface\UseInGame\LabelIcons\NATO\infantry_nonIdentifie.png'
-)
-
 Texture_RTS_H_Infantry_half is TUIResourceTexture_Common
 (
     FileName      = 'Assets\2D\Interface\UseInGame\LabelIcons\RTS\Infantry_half.png'
-)
-
-Texture_RTS_H_infantry_nonIdentifie is TUIResourceTexture_Common
-(
-    FileName      = 'Assets\2D\Interface\UseInGame\LabelIcons\RTS\infantry_nonIdentifie.png'
 )
 
 Texture_AT is TUIResourceTexture_Common
@@ -273,6 +273,16 @@ Texture_transport_small is TUIResourceTexture_Common
 Texture_RTS_H_transport_small is TUIResourceTexture_Common
 (
     FileName      = 'Assets\2D\Interface\UseInGame\LabelIcons\RTS\transport_small.png'
+)
+
+Texture_HMG is TUIResourceTexture_Common
+(
+    FileName      = 'Assets\2D\Interface\UseInGame\LabelIcons\NATO\HMG.png'
+)
+
+Texture_RTS_H_HMG is TUIResourceTexture_Common
+(
+    FileName      = 'Assets\2D\Interface\UseInGame\LabelIcons\RTS\HMG.png'
 )
 
 Texture_AA_hel is TUIResourceTexture_Common
@@ -413,6 +423,8 @@ NATORTSAdditionalTextureBank is TBUCKToolAdditionalTextureBank
         ("Texture_RTS_H_howitzer", MAP [(~/ComponentState/Normal, ~/Texture_RTS_H_howitzer)]),
         ("Texture_mortar", MAP [(~/ComponentState/Normal, ~/Texture_mortar)]),
         ("Texture_RTS_H_mortar", MAP [(~/ComponentState/Normal, ~/Texture_RTS_H_mortar)]),
+        ("Texture_infantry_nonIdentifie", MAP [(~/ComponentState/Normal, ~/Texture_infantry_nonIdentifie)]),
+        ("Texture_RTS_H_infantry_nonIdentifie", MAP [(~/ComponentState/Normal, ~/Texture_RTS_H_infantry_nonIdentifie)]),
         ("Texture_reco_veh", MAP [(~/ComponentState/Normal, ~/Texture_reco_veh)]),
         ("Texture_RTS_H_reco_veh", MAP [(~/ComponentState/Normal, ~/Texture_RTS_H_reco_veh)]),
         ("Texture_AT_veh", MAP [(~/ComponentState/Normal, ~/Texture_AT_veh)]),
@@ -433,9 +445,7 @@ NATORTSAdditionalTextureBank is TBUCKToolAdditionalTextureBank
         ("Texture_RTS_H_CMD_tank", MAP [(~/ComponentState/Normal, ~/Texture_RTS_H_CMD_tank)]),
         ("Texture_RTS_H_ATGun", MAP [(~/ComponentState/Normal, ~/Texture_RTS_H_ATGun)]),
         ("Texture_Infantry_half", MAP [(~/ComponentState/Normal, ~/Texture_Infantry_half)]),
-        ("Texture_infantry_nonIdentifie", MAP [(~/ComponentState/Normal, ~/Texture_infantry_nonIdentifie)]),
         ("Texture_RTS_H_Infantry_half", MAP [(~/ComponentState/Normal, ~/Texture_RTS_H_Infantry_half)]),
-        ("Texture_RTS_H_infantry_nonIdentifie", MAP [(~/ComponentState/Normal, ~/Texture_RTS_H_infantry_nonIdentifie)]),
         ("Texture_AT", MAP [(~/ComponentState/Normal, ~/Texture_AT)]),
         ("Texture_RTS_H_AT", MAP [(~/ComponentState/Normal, ~/Texture_RTS_H_AT)]),
         ("Texture_HQ", MAP [(~/ComponentState/Normal, ~/Texture_HQ)]),
@@ -460,6 +470,8 @@ NATORTSAdditionalTextureBank is TBUCKToolAdditionalTextureBank
         ("Texture_RTS_H_reco_inf", MAP [(~/ComponentState/Normal, ~/Texture_RTS_H_reco_inf)]),
         ("Texture_transport_small", MAP [(~/ComponentState/Normal, ~/Texture_transport_small)]),
         ("Texture_RTS_H_transport_small", MAP [(~/ComponentState/Normal, ~/Texture_RTS_H_transport_small)]),
+        ("Texture_HMG", MAP [(~/ComponentState/Normal, ~/Texture_HMG)]),
+        ("Texture_RTS_H_HMG", MAP [(~/ComponentState/Normal, ~/Texture_RTS_H_HMG)]),
         ("Texture_AA_hel", MAP [(~/ComponentState/Normal, ~/Texture_AA_hel)]),
         ("Texture_hel_nonIdentifie", MAP [(~/ComponentState/Normal, ~/Texture_hel_nonIdentifie)]),
         ("Texture_RTS_H_AA_hel", MAP [(~/ComponentState/Normal, ~/Texture_RTS_H_AA_hel)]),

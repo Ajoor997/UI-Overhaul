@@ -1,5 +1,10 @@
 
-BUCKSpecificSelectionPanelPawnMainComponent is BUCKListDescriptor
+SelectionPawnPanelWidth is 373.0
+
+template BUCKSpecificSelectionPanelPawnMainComponent
+[
+    ContainsCubeAction : bool
+] is BUCKListDescriptor
 (
     ElementName = "SmartGroupsConfigurationMainPanel"
 
@@ -12,7 +17,7 @@ BUCKSpecificSelectionPanelPawnMainComponent is BUCKListDescriptor
     BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
 
     Axis  = ~/ListAxis/Horizontal
-    InterItemMargin = TRTTILength(Magnifiable = 15.0)
+    InterItemMargin = TRTTILength(Magnifiable = 0.0)
 
     Elements =
     [
@@ -20,96 +25,123 @@ BUCKSpecificSelectionPanelPawnMainComponent is BUCKListDescriptor
         (
             ComponentDescriptor = BUCKListDescriptor
             (
+                ElementName = "SmartGroupsConfigurationLeftList"
                 ComponentFrame = TUIFramePropertyRTTI
                 (
+                    MagnifiableWidthHeight = [~/SelectionPawnPanelWidth, 0.0]
                     AlignementToAnchor = [0.0, 1.0]
                     AlignementToFather = [0.0, 1.0]
                 )
 
                 Axis = ~/ListAxis/Vertical
-                BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
-
-                HidePointerEvents = true
-                IsDroppable = true
 
                 Elements =
-                [
-                    BUCKListElementDescriptor
-                    (
-                        ComponentDescriptor = ~/PawnDivisionInfosBanner
-                    ),
-                    BUCKListElementDescriptor
-                    (
-                        ComponentDescriptor = ~/PawnCharacteristicList
-                    ),
-
+                (
+                    <ContainsCubeAction> ? [
                     BUCKListElementDescriptor
                     (
                         ComponentDescriptor = BUCKContainerDescriptor
                         (
+                            UniqueName = "SpecificStrategicCubeActionViewMainContainer"
+                            ComponentFrame = TUIFramePropertyRTTI()
+                            FitStyle = ~/ContainerFitStyle/FitToContent
+                        )
+                    )] : []
+                ) +
+                [
+                    ,
+                    BUCKListElementDescriptor
+                    (
+                        ComponentDescriptor = BUCKListDescriptor
+                        (
+                            ElementName = "SmartGroupsConfigurationSubList"
                             ComponentFrame = TUIFramePropertyRTTI
                             (
-                                MagnifiableWidthHeight = [373.0, 0.0]
+                                MagnifiableWidthHeight = [~/SelectionPawnPanelWidth, 0.0]
                             )
 
-                            FitStyle = ~/ContainerFitStyle/FitToContentVertically
+                            Axis = ~/ListAxis/Vertical
 
-                            Components =
+                            HasBorder  = true
+                            BorderLineColorToken = 'SM_Noir'
+                            BorderThicknessToken = "1"
+
+                            HasBackground = true
+                            BackgroundBlockColorToken = 'SM_RifleGreen'
+
+                            HidePointerEvents = true
+
+                            Elements =
                             [
-                                BUCKContainerDescriptor
+                                BUCKListElementDescriptor
                                 (
-                                    ComponentFrame = TUIFramePropertyRTTI
-                                    (
-                                        RelativeWidthHeight = [1.0, 1.0]
-                                        AlignementToAnchor = [0.0, 0.0]
-                                        AlignementToFather = [0.0, 0.0]
-                                    )
-
-                                    HasBackground = true
-                                    BackgroundBlockColorToken = "VertMilitaire"
-                                    Components =
-                                    [
-                                        OmbrePanel(),
-                                    ]
+                                    ComponentDescriptor = ~/PawnDivisionInfosBanner
                                 ),
-                                BUCKTextureDescriptor
+                                BUCKListElementDescriptor
                                 (
-                                    ComponentFrame = TUIFramePropertyRTTI
+                                    ComponentDescriptor = BUCKContainerDescriptor
                                     (
-                                        RelativeWidthHeight = [1.0, 1.0]
+                                        ComponentFrame = TUIFramePropertyRTTI
+                                        (
+                                            AlignementToAnchor = [0.5, 0.0]
+                                            AlignementToFather = [0.5, 0.0]
+                                        )
+                                        FitStyle = ~/ContainerFitStyle/FitToContent
+                                        Components =
+                                        [
+                                            ~/PawnCharacteristicList
+                                        ]
                                     )
-                                    TextureDrawer  = 'ColorMultiply_Additive'
-                                    TextureToken =  'Outgame_fond_deckCreator_foreground'
                                 ),
-                                BUCKTextureDescriptor
+
+                                BUCKListElementDescriptor
                                 (
-                                    ComponentFrame = TUIFramePropertyRTTI
+                                    ComponentDescriptor = BUCKContainerDescriptor
                                     (
-                                        RelativeWidthHeight = [1.0, 1.0]
+                                        ComponentFrame = TUIFramePropertyRTTI
+                                        (
+                                            MagnifiableWidthHeight = [~/SelectionPawnPanelWidth, 0.0]
+                                        )
+
+                                        FitStyle = ~/ContainerFitStyle/FitToContentVertically
+
+                                        Components =
+                                        [
+                                            BUCKContainerDescriptor
+                                            (
+                                                ComponentFrame = TUIFramePropertyRTTI
+                                                (
+                                                    RelativeWidthHeight = [1.0, 1.0]
+                                                )
+
+                                                HasBackground = true
+                                                BackgroundBlockColorToken = "VertMilitaire"
+                                            ),
+
+                                            BUCKRackDescriptor
+                                            (
+                                                ElementName = "CombatGroupsTabRack"
+                                                ComponentFrame = TUIFramePropertyRTTI
+                                                (
+                                                    RelativeWidthHeight = [1.0, 0.0]
+                                                )
+
+                                                Axis = ~/ListAxis/Vertical
+
+                                                ChildFitToContent = true
+
+                                                FirstMargin = TRTTILength(Magnifiable = 10.0)
+                                                InterItemMargin = TRTTILength (Magnifiable = 8.0)
+                                                LastMargin = TRTTILength(Magnifiable = 10.0)
+
+                                                HasBackground = true
+                                                BackgroundBlockColorToken =  "SM_Grullo"
+                                                IsDroppable = true
+
+                                                BladeDescriptor = ~/CombatGroupsTabInStrategic
+                                            ),
+                                        ]
                                     )
-                                    TextureDrawer  = 'ColorMultiply_Additive'
-                                    TextureToken =  'Outgame_foreground_panelPawn'
-                                ),
-                                BUCKRackDescriptor
-                                (
-                                    ElementName = "CombatGroupsTabRack"
-                                    ComponentFrame = TUIFramePropertyRTTI
-                                    (
-                                        RelativeWidthHeight = [1.0, 0.0]
-                                    )
-
-                                    Axis = ~/ListAxis/Vertical
-
-                                    ChildFitToContent = true
-
-                                    FirstMargin = TRTTILength(Magnifiable = 10.0)
-                                    InterItemMargin = TRTTILength (Magnifiable = 8.0)
-                                    LastMargin = TRTTILength(Magnifiable = 10.0)
-
-                                    HasBackground = true
-                                    BackgroundBlockColorToken =  "SM_Grullo"
-
-                                    BladeDescriptor = ~/CombatGroupsTabInStrategic
                                 ),
                             ]
                         )
@@ -135,6 +167,7 @@ BUCKSpecificSelectionPanelPawnMainComponent is BUCKListDescriptor
                 Components =
                 [
                     // On envoit UISpecificStrategicSmartGroupsDisplayerViewDescriptor via cpp
+                    // et donc cet element : SmartGroupRackContainerStrategic
                 ]
             )
         ),
@@ -143,9 +176,9 @@ BUCKSpecificSelectionPanelPawnMainComponent is BUCKListDescriptor
 
 //-------------------------------------------------------------------------------------
 
-CombatGroupsTabInStrategic is BUCKButtonDescriptor
+CombatGroupsTabInStrategic is BUCKDraggableContainerDescriptor
 (
-    ElementName = "CombatGroupsTab"
+    ElementName = "CombatGroupsTabDraggable"
 
     ComponentFrame = TUIFramePropertyRTTI
     (
@@ -154,40 +187,55 @@ CombatGroupsTabInStrategic is BUCKButtonDescriptor
         AlignementToFather = [0.5, 0.0]
     )
 
-    RadioButtonManager = ~/GroupsTabManager
-    IsTogglable = true
-    LeftClickSound = ClickSound_page
-    HidePointerEvents = true
-    MaskEvents = true
+    PointerDistanceBeforeDrag = 5.0
 
     Components =
     [
-        PanelRoundedCorner
+        BUCKButtonDescriptor
         (
-            BackgroundBlockColorToken = 'SM_Feldgrau'
-            BorderLineColorToken = 'SM_RifleGreen'
-            Radius = 30
-        ),
+            ElementName = "CombatGroupsTab"
 
-        BUCKTextDescriptor
-        (
-            ElementName = "CombatGroupsTabText"
             ComponentFrame = TUIFramePropertyRTTI
             (
-                RelativeWidthHeight = [0.0, 1.0]
-                MagnifiableWidthHeight = [200.0, 0.0]
-                AlignementToFather  = [0.5, 0.5]
-                AlignementToAnchor  = [0.5, 0.5]
+                RelativeWidthHeight = [1.0, 1.0]
             )
 
-            ParagraphStyle = paragraphStyleTextCenter
-            TextStyle = "Default"
-            BigLineAction = ~/BigLineAction/ResizeFont
+            RadioButtonManager = ~/GroupsTabManager
+            IsTogglable = true
+            LeftClickSound = ~/ClickSound_page
+            HidePointerEvents = false
+            MaskEvents = false
 
-            TypefaceToken = "Eurostyle"
-            TextColor = "noir_SM_company"
-            TextSize = "12"
-        ),
+            Components =
+            [
+                PanelRoundedCorner
+                (
+                    BackgroundBlockColorToken = "SM_Feldgrau"
+                    BorderLineColorToken = "SM_RifleGreen"
+                    Radius = 5
+                ),
+
+                BUCKTextDescriptor
+                (
+                    ElementName = "CombatGroupsTabText"
+                    ComponentFrame = TUIFramePropertyRTTI
+                    (
+                        RelativeWidthHeight = [0.0, 1.0]
+                        MagnifiableWidthHeight = [200.0, 0.0]
+                        AlignementToFather  = [0.5, 0.5]
+                        AlignementToAnchor  = [0.5, 0.5]
+                    )
+
+                    ParagraphStyle = paragraphStyleTextCenter
+                    TextStyle = "Default"
+                    BigLineAction = ~/BigLineAction/ResizeFont
+
+                    TypefaceToken = "Eurostyle_Italic"
+                    TextColor = "SM_paleSilver"
+                    TextSize = "16"
+                ),
+            ]
+        )
     ]
 )
 
@@ -311,7 +359,9 @@ PawnName is BUCKListDescriptor
     Axis = ~/ListAxis/Vertical
     BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
 
-    LastMargin = TRTTILength( Magnifiable = 0.0 )
+    FirstMargin = TRTTILength( Magnifiable = 4.0 )
+    LastMargin = TRTTILength( Magnifiable = 4.0 )
+    InterItemMargin = TRTTILength (Magnifiable = 2)
 
     Elements =
     [
@@ -336,8 +386,6 @@ PawnName is BUCKListDescriptor
 
                 TypefaceToken = "Liberator"
                 BigLineAction = ~/BigLineAction/MultiLine
-
-                UniformDrawer = $/UserInterface/UIUniformDrawer
 
                 TextDico = ~/LocalisationConstantes/dico_unites
 
@@ -364,15 +412,13 @@ PawnName is BUCKListDescriptor
                 HorizontalFitStyle = ~/FitStyle/FitToContent
                 VerticalFitStyle = ~/FitStyle/FitToContent
 
-                TypefaceToken = "Eurostyle"
+                TypefaceToken = "Eurostyle_Italic"
                 BigLineAction = ~/BigLineAction/ResizeFont
-
-                UniformDrawer = $/UserInterface/UIUniformDrawer
 
                 TextDico = ~/LocalisationConstantes/dico_unites
 
-                TextColor = "Blanc"
-                TextSize = "14"
+                TextColor = "SM_paleSilver"
+                TextSize = "12"
             )
         ),
     ]
@@ -389,9 +435,7 @@ PawnCharacteristicList is BUCKListDescriptor
 
     Axis = ~/ListAxis/Horizontal
 
-    FirstMargin = TRTTILength (Magnifiable = 15.0)
     InterItemMargin = TRTTILength (Magnifiable = 10.0)
-    LastMargin = TRTTILength (Magnifiable = 7.0)
 
     HasBackground = true
     BackgroundBlockColorToken = 'SM_RifleGreen'
@@ -408,7 +452,7 @@ PawnCharacteristicList is BUCKListDescriptor
             ComponentDescriptor = DisplayAttackAndDefenseValueForPawn
             (
                 ElementName = "PowerValue"
-                TextureColorTokenForIcone = "SM_Noir"
+                TextureColorTokenForIcone = "SM_paleSilver" //"SM_Noir"
                 TextureToken = "UseStrategic_SelectionPanel_Attack"
                 TextColor = "SM_paleSilver"
                 TextToken = "AttStre"
@@ -419,7 +463,7 @@ PawnCharacteristicList is BUCKListDescriptor
             ComponentDescriptor = DisplayAttackAndDefenseValueForPawn
             (
                 ElementName = "ShieldValue"
-                TextureColorTokenForIcone = "BlancEquipe"
+                TextureColorTokenForIcone = "SM_paleSilver"
                 TextureToken = "UseStrategic_SelectionPanel_Defense"
                 TextColor = "SM_paleSilver"
                 TextToken = "DefStre"
@@ -430,7 +474,7 @@ PawnCharacteristicList is BUCKListDescriptor
             ComponentDescriptor = DisplayAttackAndDefenseValueForPawn
             (
                 ElementName = "FatigueValue"
-                TextureColorTokenForIcone = "Orange"
+                TextureColorTokenForIcone = "SM_paleSilver"
                 TextureToken = "UseStrategic_SelectionPanel_fatigue"
                 TextColor = "SM_paleSilver"
                 TextToken = "T_SLASH2"
@@ -441,7 +485,7 @@ PawnCharacteristicList is BUCKListDescriptor
             ComponentDescriptor = DisplayAttackAndDefenseValueForPawn
             (
                 ElementName = "ActionPointsValue"
-                TextureColorTokenForIcone = "Red"
+                TextureColorTokenForIcone = "SM_paleSilver"
                 TextureToken = "UseStrategic_SelectionPanel_PA"
                 TextColor = "SM_paleSilver"
                 TextToken = "T_SLASH2"
@@ -491,7 +535,7 @@ template DisplayAttackAndDefenseValueForPawn
             (
                 ComponentFrame = TUIFramePropertyRTTI
                 (
-                    MagnifiableWidthHeight = [25.0, 25.0]
+                    MagnifiableWidthHeight = [20.0, 20.0]
                 )
 
                 ResizeMode = ~/TextureResizeMode/UserDefined
@@ -526,10 +570,9 @@ template DisplayAttackAndDefenseValueForPawn
                 TypefaceToken = "Eurostyle"
                 BigLineAction = ~/BigLineAction/MultiLine
                 TextToken = <TextToken>
-                UniformDrawer = $/UserInterface/UIUniformDrawer
                 TextDico = ~/LocalisationConstantes/dico_interface_ingame
                 TextColor = <TextColor>
-                TextSize = "18"
+                TextSize = "16"
             )
         ),
     ]
@@ -540,14 +583,16 @@ template DisplayAttackAndDefenseValueForPawn
 template UISpecificSelectionPanelPawnViewDescriptorTemplate
 [
     MainComponentContainerUniqueName : string = "",
+    SmartGroupsDisplayerAlignment : float2 = [0.0, 1.0],
+    ContainsCubeAction : bool,
 ]
 is TUISpecificSelectionPanelPawnViewDescriptor
 (
     MainComponentContainerUniqueName = <MainComponentContainerUniqueName>
-    MainComponentDescriptor = ~/BUCKSpecificSelectionPanelPawnMainComponent
+    MainComponentDescriptor = BUCKSpecificSelectionPanelPawnMainComponent(ContainsCubeAction = <ContainsCubeAction>)
 
     SmartGroupsDisplayerDescriptor = UISpecificStrategicSmartGroupsDisplayerViewDescriptor
     (
-        Alignment = [0.0, 1.0]
+        Alignment = <SmartGroupsDisplayerAlignment>
     )
 )

@@ -157,9 +157,6 @@ export Easy_Phase_Command is TSequenceGeneratorDescriptor
         ~/Airstrike_Offense,
         ~/Airstrike_Defense,
 
-        ~/SuperCommander,
-
-
         //------------------------------
         // Défenses Avions Arti
         //------------------------------
@@ -176,7 +173,7 @@ export Easy_Phase_Command is TSequenceGeneratorDescriptor
 //Proche du scaling medium mais en plus gentil
 Easy_Scaling is
 [
-    ~/Reco,
+    ~/Reco_Autogen,
     ~/Attack_Adaptive_Autogen,
     ~/Defense_Dynamic_Adaptive_Autogen,
     ~/Defense_Dynamic_Adaptive_Autogen,
@@ -184,7 +181,6 @@ Easy_Scaling is
     ~/Defense_Dynamic_Adaptive_Autogen,
     ~/Defense_Static_AA_Autogen,
     ~/Airstrike_Offense_Autogen,
-    ~/Attack_Objectives_Autogen,
     ~/Artillery_Expensive_Autogen,
     ~/Airstrike_Assault_Autogen,
 ]

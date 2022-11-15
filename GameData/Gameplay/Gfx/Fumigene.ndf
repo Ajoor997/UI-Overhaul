@@ -31,33 +31,3 @@ FxFumigeneGhostWithParams is TActionCall
         ('Par_Fumigene_Alpha', Par_Fumigene_Alpha),
     ]
 )
-
-GfxFumigene is TTimelyReceiverFactoryCarrier
-(
-    DepictionTemplate = TDepictionTemplate
-    (
-        Scaler = CommonIdentityScaler
-        Selector = OnlyHighDepictionSelector
-        DepictionAlternatives = [
-            DepictionDescriptor_LOD_High(
-                MeshDescriptor = TResourceMultiMaterialMesh
-                (
-                    FileName = 'CommonData:/Assets/3D/Editor/FxBatiment.Ase2NdfBin'
-                    UsefulnessMask = CivMask/Common + TypeMask/Common
-                )
-            ),
-        ]
-        Actions = MAP
-        [
-            (
-                ['fumigene'],
-                TSequencingActionHappening( ActionDescriptor = FxFumigeneWithParams )
-            ),
-            (
-                ['fumigene_ghost'],
-                TSequencingActionHappening( ActionDescriptor = FxFumigeneGhostWithParams )
-            )
-        ]
-    )
-)
-

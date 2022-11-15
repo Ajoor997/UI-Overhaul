@@ -55,8 +55,6 @@ template WarningStandardComponent
                 TypefaceToken = "UIMainFont"
                 BigLineAction = ~/BigLineAction/MultiLine
 
-                UniformDrawer = $/UserInterface/UIUniformDrawer
-
                 TextColor = <TextColor>
                 TextSize = "SD2_Moyen"
 

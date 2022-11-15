@@ -64,8 +64,6 @@ OutGameSearchAutoMatchGameDescriptor is BUCKContainerDescriptor
                         )
 
                         TextStyle = "Default"
-
-                        UniformDrawer = $/UserInterface/UIUniformDrawer
                     )
                 ),
                 BUCKListElementDescriptor
@@ -119,8 +117,6 @@ OutGameSearchAutoMatchGameDescriptor is BUCKContainerDescriptor
                                     HorizontalFitStyle = ~/FitStyle/FitToContent
 
                                     TextStyle = "Default"
-
-                                    UniformDrawer = $/UserInterface/UIUniformDrawer
                                 )
                             ),
                             BUCKListElementDescriptor
@@ -146,8 +142,6 @@ OutGameSearchAutoMatchGameDescriptor is BUCKContainerDescriptor
                                     )
 
                                     TextStyle = "Default"
-
-                                    UniformDrawer = $/UserInterface/UIUniformDrawer
                                 )
                             ),
                         ]

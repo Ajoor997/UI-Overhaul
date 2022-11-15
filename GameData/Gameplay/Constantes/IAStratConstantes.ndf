@@ -329,20 +329,20 @@ export IAStratConstantes is TIAStratConstantesDescriptor_Specific
     //first moveOutRatio / second CaptureRatio
     CapturableCommandZoneMoveOutAndCapturePowerRatioForAIDifficulty = MAP
     [
-        (IADifficulty/AnyDifficulty, (0.8, 1.25)),
+        (IADifficulty/AnyDifficulty, (1.0, 1.5)),
         (IADifficulty/TresFacile, (1.0, 1.5)),         // On ne prend pas de risque, mais on perd aussi en réactivitée
         (IADifficulty/Facile, (1.0, 1.5)),
         (IADifficulty/Normal, (0.8, 1.25)),
-        (IADifficulty/Difficile, (0.8, 1.25)),
-        (IADifficulty/TresDifficile, (0.65, 1.1)),     // On prend plus de risque a partir de very hard
-        (IADifficulty/PlusDifficile, (0.65, 1.1)),
+        (IADifficulty/Difficile, (0.65, 1.25)),
+        (IADifficulty/TresDifficile, (0.65, 1.25)),     // On prend plus de risque a partir de very hard
+        (IADifficulty/PlusDifficile, (0.65, 1.25)),
     ]
 
     MinimumScoreRatioForStayInCommandZonePerIADifficulty = MAP
     [
         (IADifficulty/AnyDifficulty, 1.0),
         (IADifficulty/Normal, 0.8),
-        (IADifficulty/Difficile, 0.8),
+        (IADifficulty/Difficile, 0.7),
         (IADifficulty/TresDifficile, 0.7),     // On prend plus de risque a partir de very hard
         (IADifficulty/PlusDifficile, 0.7),
     ]

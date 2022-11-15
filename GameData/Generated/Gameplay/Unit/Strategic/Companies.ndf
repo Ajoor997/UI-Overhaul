@@ -11,7 +11,6 @@ export Descriptor_Company_TestPawn is TEntityDescriptor
             (
                 Default            = TTypeUnitModuleDescriptor
                 (
-                    TypeUnitValue                    = ETypeUnit/Undef
                     Nationalite                      = ENationalite/Allied
                     TypeUnitFormation                = 'Char'
                 )

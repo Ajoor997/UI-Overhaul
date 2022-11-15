@@ -16,6 +16,7 @@ private CreateButton is ConfirmButton
     TextSizeToken = '24'
     BorderThicknessToken = '3'
     LeftClickSound = SoundEvent_MultiCreateLobby
+    Mapping = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ENTER ) )
 )
 
 private LocCancelButton is ConfirmButton

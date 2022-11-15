@@ -51,8 +51,8 @@ is BUCKListDescriptor
                 [
                     PanelRoundedCorner
                     (
-                        BackgroundBlockColorToken = 'SM_DarkLava'
-                        BorderLineColorToken = 'SM_Ebony'
+                        BackgroundBlockColorToken = 'SM_Grullo'
+                        BorderLineColorToken = 'SM_Noir'
                         ),
                     BUCKSpecificHintableArea
                     (

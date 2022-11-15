@@ -2,7 +2,6 @@
 
 template DebriefTeamStatsMultiListContent
 [
-    ElementName : string = ""
 ]
 is BUCKListDescriptor
 (
@@ -22,7 +21,7 @@ is BUCKListDescriptor
         (
             ComponentDescriptor = BUCKMultiListContentElementDescriptor
             (
-                ElementName = "StatsAvatarMultiList" + <ElementName>
+                ElementName = "StatsAvatarMultiList"
 
                 ComponentFrame = TUIFramePropertyRTTI
                 (
@@ -35,7 +34,7 @@ is BUCKListDescriptor
                 [
                     BUCKSpecificAvatarDescriptor
                     (
-                        ElementName = "StatsAvatar" + <ElementName>
+                        ElementName = "StatsAvatar"
                         ComponentFrame = TUIFramePropertyRTTI
                         (
                             RelativeWidthHeight = [0.0, 1.0]
@@ -60,7 +59,7 @@ is BUCKListDescriptor
             ExtendWeight = 0.2
             ComponentDescriptor = BUCKMultiListContentElementDescriptor
             (
-                ElementName = "StatsPlayersMultiList" + <ElementName>
+                ElementName = "StatsPlayersMultiList"
 
                 ComponentFrame = TUIFramePropertyRTTI
                 (
@@ -71,7 +70,7 @@ is BUCKListDescriptor
                 [
                     BUCKButtonDescriptor
                     (
-                        ElementName = "StatsPlayersButton" + <ElementName>
+                        ElementName = "StatsPlayersButton"
                         ComponentFrame = TUIFramePropertyRTTI
                         (
                             RelativeWidthHeight = [1.0, 1.0]
@@ -81,7 +80,7 @@ is BUCKListDescriptor
                         [
                             BUCKSpecificTextWithHint
                             (
-                                ElementName = "StatsPlayers" + <ElementName>
+                                ElementName = "StatsPlayers"
                                 ComponentFrame = TUIFramePropertyRTTI
                                 (
                                     RelativeWidthHeight = [1.0, 1.0]
@@ -107,7 +106,7 @@ is BUCKListDescriptor
                                 TextPadding = TRTTILength4(Magnifiable = [20.0, 0.0, 0.0, 0.0])
 
                                 HasAutoHint = true
-                                AutoHintElementName = "StatsPlayersHint" + <ElementName>
+                                AutoHintElementName = "StatsPlayersHint"
                             ) // BUCKTextDescriptor
                         ]
                     ) // BUCKButtonDescriptor
@@ -119,7 +118,7 @@ is BUCKListDescriptor
         (
             ComponentDescriptor = BUCKMultiListContentElementDescriptor
             (
-                ElementName = "StatsAddFriendMultiList" + <ElementName>
+                ElementName = "StatsAddFriendMultiList"
 
                 ComponentFrame = TUIFramePropertyRTTI
                 (
@@ -132,7 +131,7 @@ is BUCKListDescriptor
                 [
                     BUCKButtonDescriptor
                     (
-                        ElementName = "StatsAddFriend" + <ElementName>
+                        ElementName = "StatsAddFriend"
                         ComponentFrame = TUIFramePropertyRTTI
                         (
                             RelativeWidthHeight = [0.0, 1.0]
@@ -145,7 +144,7 @@ is BUCKListDescriptor
                         [
                             BUCKTextureDescriptor
                             (
-                                ElementName = "AddFriendTexture" + <ElementName>
+                                ElementName = "AddFriendTexture"
                                 ComponentFrame = TUIFramePropertyRTTI
                                 (
                                     RelativeWidthHeight = [0.0, 1.0]
@@ -165,7 +164,7 @@ is BUCKListDescriptor
                             ),
                             BUCKTextDescriptor
                             (
-                                ElementName = "AddFriendText" + <ElementName>
+                                ElementName = "AddFriendText"
                                 ComponentFrame = TUIFramePropertyRTTI
                                 (
                                     RelativeWidthHeight = [0.0, 1.0]
@@ -195,13 +194,13 @@ is BUCKListDescriptor
                 ]
             )
         ),
-        // CommandPoints Best
+        // GameModePoints Best
         BUCKListElementDescriptor
         (
             ExtendWeight = 0.05
             ComponentDescriptor = BUCKMultiListContentElementDescriptor
             (
-                ElementName = "StatsCommandPointsMultiBestList" + <ElementName>
+                ElementName = "StatsGameModePointsMultiBestList"
 
                 ComponentFrame = TUIFramePropertyRTTI
                 (
@@ -214,7 +213,7 @@ is BUCKListDescriptor
                 [
                     BUCKTextureDescriptor
                     (
-                        ElementName = "CommandPointsBest" + <ElementName>
+                        ElementName = "GameModePointsBest"
                         ComponentFrame = TUIFramePropertyRTTI
                         (
                             RelativeWidthHeight = [0.0, 1.0]
@@ -236,7 +235,7 @@ is BUCKListDescriptor
                         [
                             BUCKSpecificHintableArea
                             (
-                                ElementName = "CommandPointsBestHint" + <ElementName>
+                                ElementName = "GameModePointsBestHint"
                                 DicoToken = ~/LocalisationConstantes/dico_interface_outgame
                             ),
                         ]
@@ -244,13 +243,13 @@ is BUCKListDescriptor
                 ]
             )
         ),
-        // CommandPoints
+        // Game mode Points
         BUCKListElementDescriptor
         (
             ExtendWeight = 0.1
             ComponentDescriptor = BUCKMultiListContentElementDescriptor
             (
-                ElementName = "StatsCommandPointsMultiList" + <ElementName>
+                ElementName = "StatsGameModePointsMultiList"
 
                 ComponentFrame = TUIFramePropertyRTTI
                 (
@@ -261,7 +260,7 @@ is BUCKListDescriptor
                 [
                     BUCKTextDescriptor
                     (
-                        ElementName = "StatsCommandPoints" + <ElementName>
+                        ElementName = "StatsGameModePoints"
                         ComponentFrame = TUIFramePropertyRTTI
                         (
                             RelativeWidthHeight = [1.0, 1.0]
@@ -292,7 +291,7 @@ is BUCKListDescriptor
             ExtendWeight = 0.05
             ComponentDescriptor = BUCKMultiListContentElementDescriptor
             (
-                ElementName = "StatsKillsMultiBestList" + <ElementName>
+                ElementName = "StatsKillsMultiBestList"
 
                 ComponentFrame = TUIFramePropertyRTTI
                 (
@@ -305,7 +304,7 @@ is BUCKListDescriptor
                 [
                     BUCKTextureDescriptor
                     (
-                        ElementName = "KillsBest" + <ElementName>
+                        ElementName = "KillsBest"
                         ComponentFrame = TUIFramePropertyRTTI
                         (
                             RelativeWidthHeight = [0.0, 1.0]
@@ -327,7 +326,7 @@ is BUCKListDescriptor
                         [
                             BUCKSpecificHintableArea
                             (
-                                ElementName = "KillsBestHint" + <ElementName>
+                                ElementName = "KillsBestHint"
                                 DicoToken = ~/LocalisationConstantes/dico_interface_outgame
                             ),
                         ]
@@ -341,7 +340,7 @@ is BUCKListDescriptor
             ExtendWeight = 0.1
             ComponentDescriptor = BUCKMultiListContentElementDescriptor
             (
-                ElementName = "StatsKillsMultiList" + <ElementName>
+                ElementName = "StatsKillsMultiList"
 
                 ComponentFrame = TUIFramePropertyRTTI
                 (
@@ -352,7 +351,7 @@ is BUCKListDescriptor
                 [
                     BUCKTextDescriptor
                     (
-                        ElementName = "StatsKills" + <ElementName>
+                        ElementName = "StatsKills"
                         ComponentFrame = TUIFramePropertyRTTI
                         (
                             RelativeWidthHeight = [1.0, 1.0]
@@ -383,7 +382,7 @@ is BUCKListDescriptor
             ExtendWeight = 0.05
             ComponentDescriptor = BUCKMultiListContentElementDescriptor
             (
-                ElementName = "StatsLossesMultiBestList" + <ElementName>
+                ElementName = "StatsLossesMultiBestList"
 
                 ComponentFrame = TUIFramePropertyRTTI
                 (
@@ -396,7 +395,7 @@ is BUCKListDescriptor
                 [
                     BUCKTextureDescriptor
                     (
-                        ElementName = "LossesBest" + <ElementName>
+                        ElementName = "LossesBest"
                         ComponentFrame = TUIFramePropertyRTTI
                         (
                             RelativeWidthHeight = [0.0, 1.0]
@@ -418,7 +417,7 @@ is BUCKListDescriptor
                         [
                             BUCKSpecificHintableArea
                             (
-                                ElementName = "LossesBestHint" + <ElementName>
+                                ElementName = "LossesBestHint"
                                 DicoToken = ~/LocalisationConstantes/dico_interface_outgame
                             ),
                         ]
@@ -432,7 +431,7 @@ is BUCKListDescriptor
             ExtendWeight = 0.1
             ComponentDescriptor = BUCKMultiListContentElementDescriptor
             (
-                ElementName = "StatsLossesMultiList" + <ElementName>
+                ElementName = "StatsLossesMultiList"
 
                 ComponentFrame = TUIFramePropertyRTTI
                 (
@@ -443,7 +442,7 @@ is BUCKListDescriptor
                 [
                     BUCKTextDescriptor
                     (
-                        ElementName = "StatsLosses" + <ElementName>
+                        ElementName = "StatsLosses"
                         ComponentFrame = TUIFramePropertyRTTI
                         (
                             RelativeWidthHeight = [1.0, 1.0]
@@ -474,7 +473,7 @@ is BUCKListDescriptor
         (
             ComponentDescriptor = BUCKMultiListContentElementDescriptor
             (
-                ElementName = "HiddenSortingCriterion" + <ElementName>
+                ElementName = "HiddenSortingCriterion"
 
                 ComponentFrame = TUIFramePropertyRTTI
                 (
@@ -485,7 +484,7 @@ is BUCKListDescriptor
                 [
                     BUCKContainerDescriptor
                     (
-                        ElementName = "DummyForHiddenSortingCriterion" + <ElementName>
+                        ElementName = "DummyForHiddenSortingCriterion"
                         ComponentFrame = TUIFramePropertyRTTI
                         (
                             MagnifiableWidthHeight = [0.0, 0.0]
@@ -501,11 +500,10 @@ is BUCKListDescriptor
 
 template DebriefTeamStatsContainer
 [
-    ElementName : string = ""
 ]
 is BUCKContainerDescriptor
 (
-    ElementName = "TeamStatsContainer" + <ElementName>
+    ElementName = "TeamStatsContainer"
 
     ComponentFrame = TUIFramePropertyRTTI
     (
@@ -521,7 +519,7 @@ is BUCKContainerDescriptor
 
     Components =
     [
-        DebriefTeamStatsMultiListContent( ElementName = <ElementName> ),
+        DebriefTeamStatsMultiListContent(),
     ]
 )
 
@@ -529,7 +527,6 @@ is BUCKContainerDescriptor
 
 template DebriefTeamStatsMultiListTitle
 [
-    ElementName : string = ""
 ]
 is BUCKListDescriptor
 (
@@ -550,7 +547,7 @@ is BUCKListDescriptor
         (
             ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
             (
-                ElementName = 'StatsAvatarMultiList' + <ElementName>
+                ElementName = 'StatsAvatarMultiList'
 
                 ComponentFrame = TUIFramePropertyRTTI
                 (
@@ -570,7 +567,7 @@ is BUCKListDescriptor
             ExtendWeight = 0.2
             ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
             (
-                ElementName = 'StatsPlayersMultiList' + <ElementName>
+                ElementName = 'StatsPlayersMultiList'
 
                 ComponentFrame = TUIFramePropertyRTTI
                 (
@@ -611,7 +608,7 @@ is BUCKListDescriptor
         (
             ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
             (
-                ElementName = 'StatsAddFriendMultiList' + <ElementName>
+                ElementName = 'StatsAddFriendMultiList'
 
                 ComponentFrame = TUIFramePropertyRTTI
                 (
@@ -626,13 +623,13 @@ is BUCKListDescriptor
                 Components = []
             )
         ),
-        // Command points Best
+        // Game mode points Best
         BUCKListElementDescriptor
         (
             ExtendWeight = 0.05
             ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
             (
-                ElementName = 'StatsCommandPointsMultiBestList' + <ElementName>
+                ElementName = 'StatsGameModePointsMultiBestList'
 
                 ComponentFrame = TUIFramePropertyRTTI
                 (
@@ -647,13 +644,13 @@ is BUCKListDescriptor
                 Components = []
             )
         ),
-        // Command points
+        // Game mode points
         BUCKListElementDescriptor
         (
             ExtendWeight = 0.1
             ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
             (
-                ElementName = 'StatsCommandPointsMultiList' + <ElementName>
+                ElementName = 'StatsGameModePointsMultiList'
 
                 ComponentFrame = TUIFramePropertyRTTI
                 (
@@ -667,6 +664,8 @@ is BUCKListDescriptor
                 [
                     BUCKSpecificTextWithHint
                     (
+                        ElementName = 'StatsGameModePointsTitleText'
+
                         ComponentFrame = TUIFramePropertyRTTI
                         (
                             RelativeWidthHeight = [1.0, 1.0]
@@ -682,10 +681,9 @@ is BUCKListDescriptor
                         TypefaceToken = TacticalEndgameTitleFont
                         TextSize = TacticalEndgameTitleFontSize
                         TextColor = 'GrisFoncePapier'
-                        TextToken = 'EG_COMMD'
                         TextDico = ~/LocalisationConstantes/dico_interface_outgame
                         HasAutoHint = true
-                        AutoHintElementName = "CommandTitleAutoHint" + <ElementName>
+                        AutoHintElementName = "GameModePointTitleAutoHint"
                     ),
                 ]
             )
@@ -696,7 +694,7 @@ is BUCKListDescriptor
             ExtendWeight = 0.05
             ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
             (
-                ElementName = 'StatsKillsMultiBestList' + <ElementName>
+                ElementName = 'StatsKillsMultiBestList'
 
                 ComponentFrame = TUIFramePropertyRTTI
                 (
@@ -717,7 +715,7 @@ is BUCKListDescriptor
             ExtendWeight = 0.1
             ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
             (
-                ElementName = 'StatsKillsMultiList' + <ElementName>
+                ElementName = 'StatsKillsMultiList'
 
                 ComponentFrame = TUIFramePropertyRTTI
                 (
@@ -750,7 +748,7 @@ is BUCKListDescriptor
                         TextToken = 'EG_KILLS'
                         TextDico = ~/LocalisationConstantes/dico_interface_outgame
                         HasAutoHint = true
-                        AutoHintElementName = "KillsTitleAutoHint" + <ElementName>
+                        AutoHintElementName = "KillsTitleAutoHint"
                     ),
                 ]
             )
@@ -761,7 +759,7 @@ is BUCKListDescriptor
             ExtendWeight = 0.05
             ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
             (
-                ElementName = 'StatsLossesMultiBestList' + <ElementName>
+                ElementName = 'StatsLossesMultiBestList'
 
                 ComponentFrame = TUIFramePropertyRTTI
                 (
@@ -782,7 +780,7 @@ is BUCKListDescriptor
             ExtendWeight = 0.1
             ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
             (
-                ElementName = 'StatsLossesMultiList' + <ElementName>
+                ElementName = 'StatsLossesMultiList'
 
                 ComponentFrame = TUIFramePropertyRTTI
                 (
@@ -814,7 +812,7 @@ is BUCKListDescriptor
                         TextToken = 'EG_LOSSES'
                         TextDico = ~/LocalisationConstantes/dico_interface_outgame
                         HasAutoHint = true
-                        AutoHintElementName = "LossesTitleAutoHint" + <ElementName>
+                        AutoHintElementName = "LossesTitleAutoHint"
                     ),
                 ]
             )
@@ -825,7 +823,7 @@ is BUCKListDescriptor
         (
             ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
             (
-                ElementName = "HiddenSortingCriterion" + <ElementName>
+                ElementName = "HiddenSortingCriterion"
 
                 ComponentFrame = TUIFramePropertyRTTI
                 (
@@ -837,7 +835,7 @@ is BUCKListDescriptor
                 [
                     BUCKContainerDescriptor
                     (
-                        ElementName = "DummyForHiddenSortingCriterion" + <ElementName>
+                        ElementName = "DummyForHiddenSortingCriterion"
                         ComponentFrame = TUIFramePropertyRTTI
                         (
                             MagnifiableWidthHeight = [0.0, 0.0]
@@ -853,11 +851,10 @@ is BUCKListDescriptor
 
 template DebriefTeamStatsMultiList
 [
-    ElementName : string = ""
 ]
 is BUCKMultiListDescriptor
 (
-    ElementName = "DebriefTeamStatsMultiList" + <ElementName>
+    ElementName = "DebriefTeamStatsMultiList"
     ComponentFrame = TUIFramePropertyRTTI
     (
         RelativeWidthHeight = [1.0, 0.0]
@@ -867,25 +864,25 @@ is BUCKMultiListDescriptor
 
     ColumnNames =
     [
-        "StatsAvatarMultiList" + <ElementName>,
-        "StatsPlayersMultiList" + <ElementName>,
-        "StatsAddFriendMultiList" + <ElementName>,
-        "StatsCommandPointsMultiBestList" + <ElementName>,
-        "StatsKillsMultiBestList" + <ElementName>,
-        "StatsLossesMultiBestList" + <ElementName>,
+        "StatsAvatarMultiList",
+        "StatsPlayersMultiList",
+        "StatsAddFriendMultiList",
+        "StatsGameModePointsMultiBestList",
+        "StatsKillsMultiBestList",
+        "StatsLossesMultiBestList",
     ]
 
     SortableColumnNames =
     [
-        "HiddenSortingCriterion" + <ElementName>,
+        "HiddenSortingCriterion",
     ]
 
-    RackName = "TeamStatsRack" + <ElementName>
+    RackName = "TeamStatsRack"
 
-    TitleDescriptor = DebriefTeamStatsMultiListTitle(ElementName = <ElementName>)
+    TitleDescriptor = DebriefTeamStatsMultiListTitle()
     ContentDescriptor = BUCKRackDescriptor
     (
-        ElementName = "TeamStatsRack" + <ElementName>
+        ElementName = "TeamStatsRack"
 
         ComponentFrame = TUIFramePropertyRTTI
         (
@@ -896,7 +893,7 @@ is BUCKMultiListDescriptor
         InterItemMargin = TRTTILength(Magnifiable = 2.0)
         LastMargin = TRTTILength(Magnifiable = 2.0)
 
-        BladeDescriptor = DebriefTeamStatsContainer(ElementName = <ElementName>)
+        BladeDescriptor = DebriefTeamStatsContainer()
     )
 )
 

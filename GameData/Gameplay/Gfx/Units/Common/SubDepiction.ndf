@@ -22,6 +22,17 @@ MeshDescriptor_Driver_UK_LOW is TResourceMultiMaterialMeshWithLod
     CivMask = CivMask/Common
 )
 
+MeshDescriptor_Driver_Para_UK is TResourceMultiMaterialMeshWithLod
+(
+    FileName = 'GameData:/Assets/3D/Units/UK/Infanterie/Paratroopers/Para_spe.Ase2NdfBin'
+    CivMask = CivMask/Common
+)
+MeshDescriptor_Driver_Para_UK_LOW is TResourceMultiMaterialMeshWithLod
+(
+    FileName = 'GameData:/Assets/3D/Units/UK/Infanterie/Paratroopers/Para_spe.Ase2NdfBin'
+    CivMask = CivMask/Common
+)
+
 MeshDescriptor_Driver_RFA is TResourceMultiMaterialMeshWithLod
 (
     FileName = 'GameData:Assets/3D/Units/US/Infanterie/GI/GI_1.Ase2NdfBin'

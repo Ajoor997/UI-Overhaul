@@ -118,3 +118,9 @@ Dico_UnitNames_HON is TLocalisationDicoResource
     FileName = "GameData:/Gameplay/Unit/Names/UNITNAMES_HON.csv"
     ModFileName = "GameData:/Gameplay/Unit/Names/UNITNAMES_HON.csv"
 )
+Dico_UnitNames_TCH is TLocalisationDicoResource
+(
+    DicoToken = "NAMES_TCH"
+    FileName = "GameData:/Gameplay/Unit/Names/UNITNAMES_CZ.csv"
+    ModFileName = "GameData:/Gameplay/Unit/Names/UNITNAMES_CZ.csv"
+)

@@ -1,16 +1,14 @@
 template TFeedbackRenderToolboxStyleDescriptorForBunker
 [
-    Thickness : float = 100.0,
     BorderColor : color,
     FillColor : color,
-    Effect : int = ~/FeedbackEffectMode/Solid
 ]
 is TFeedbackRenderToolboxStyleDescriptor
 (
-    Thickness = <Thickness>
+    Thickness = 100.0
     BorderColor = <BorderColor>
     FillColor = <FillColor>
-    Effect = <Effect>
+    Effect = ~/FeedbackEffectMode/Solid
 )
 
 DefenseResources is TDefenseResources
@@ -26,11 +24,19 @@ DefenseResources is TDefenseResources
 
     BunkerProductionWeaponFillInnerColor = [50, 180, 50, 60]
     BunkerProductionWeaponFillOuterColor = [0, 255, 0, 0]
-    BunkerProductionWeaponBorderStyleDescriptor = TFeedbackRenderToolboxStyleDescriptorForBunker(BorderColor = [80, 200, 70, 200]       FillColor = [80, 200, 70, 200] )
+    BunkerProductionWeaponBorderStyleDescriptor = TFeedbackRenderToolboxStyleDescriptorForBunker
+    (
+        BorderColor = [80, 200, 70, 200]
+        FillColor = [80, 200, 70, 200]
+    )
 
     BunkerSelectionWeaponFillInnerColor = [50, 180, 50, 30]
     BunkerSelectionWeaponFillOuterColor = [0, 255, 0, 0]
-    BunkerSelectionWeaponBorderStyleDescriptor = TFeedbackRenderToolboxStyleDescriptorForBunker(BorderColor = [80, 200, 70, 200]       FillColor = [80, 200, 70, 200] )
+    BunkerSelectionWeaponBorderStyleDescriptor = TFeedbackRenderToolboxStyleDescriptorForBunker
+    (
+        BorderColor = [80, 200, 70, 200]
+        FillColor = [80, 200, 70, 200]
+    )
 
     ValidGhostColors = TGhostColors(
         GhostColor = [9, 219, 30, 200]

@@ -30,7 +30,7 @@ private StrategicProductionMenuStrategicPointsContainer is BUCKListDescriptor
         (
             ComponentDescriptor = BUCKTextureDescriptor
             (
-                ElementName = "RequisitionPoints"
+                ElementName = "CommandPoints"
 
                 ComponentFrame = TUIFramePropertyRTTI
                 (
@@ -40,7 +40,7 @@ private StrategicProductionMenuStrategicPointsContainer is BUCKListDescriptor
                     AlignementToAnchor = [0.0, 0.5]
                 )
 
-                TextureToken = "UseInGame_RequisitionPoints"
+                TextureToken = "UseInGame_CommandPoints"
             )
         ),
         BUCKListElementDescriptor

@@ -788,6 +788,21 @@ Gfx_F15C_Eagle_AA_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
         ),
     ]
 )
+Gfx_F16C_LGB_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = Modele_F16C_LGB_US
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_F16C_LGB_US,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = Modele_F16C_LGB_US_train
+        ),
+    ]
+)
 Gfx_F16E_AA_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
 (
     MeshDescriptor = Modele_F16E_AA_US
@@ -1855,6 +1870,21 @@ Gfx_MiG_25RBF_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
         ShowroomLandingGear
         (
             MeshDescriptor = Modele_MiG_25RBF_SOV_train
+        ),
+    ]
+)
+Gfx_MiG_27K_LGB_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = Modele_MiG_27K_LGB_SOV
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_MiG_27K_LGB_SOV,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = Modele_MiG_27K_LGB_SOV_train
         ),
     ]
 )
@@ -3656,6 +3686,26 @@ Gfx_Tornado_IDS_RFA_Showroom_Autogen is ShowroomAerialDepictionTemplate
 Gfx_UH1D_RFA_Showroom_Autogen is ShowroomAerialDepictionTemplate
 (
     MeshDescriptor = Modele_UH1D_RFA
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = VECTOR[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = VECTOR[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_UH1D_Supply_NL_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = Modele_UH1D_Supply_NL
     Operators = 
     [
         DepictionOperator_Reset_Generic,

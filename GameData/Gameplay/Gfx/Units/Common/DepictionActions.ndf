@@ -801,57 +801,6 @@ DepictionAction_CriticalFX_Helicopter is MAP[]
     + DepictionAction_CriticalEffect_Helico_Computer_Down
     + DepictionAction_CriticalEffect_Helico_Crew
 
-
-
-
-
-// ****************************************************************************************************************************************
-// *** Chaleur ****************************************************************************************************************************
-// ****************************************************************************************************************************************
-
-DepictionAction_Heat_1 is MAP[
-    (
-        ['chaleur1'],
-        TIntroduceMobileHappening(
-            Anchor = 'fx_chaleur_01'
-            Happening = TSequencingActionHappening
-        (
-            ActionDescriptor = TActionCall( Action = $/VFX_Bank/FX_BANK_Binder_Chaleur_Simple )
-        )
-        )
-    )
-]
-
-DepictionAction_Heat_2 is MAP[
-    (
-        ['chaleur2'],
-        TIntroduceMobileHappening(
-            Anchor = 'fx_chaleur_02'
-            Happening = TSequencingActionHappening
-        (
-            ActionDescriptor = TActionCall( Action = $/VFX_Bank/FX_BANK_Binder_Chaleur_Simple )
-        )
-        )
-    )
-]
-
-DepictionAction_Heat_3 is MAP[
-    (
-        ['chaleur3'],
-        TIntroduceMobileHappening(
-            Anchor = 'fx_chaleur_03'
-            Happening = TSequencingActionHappening
-        (
-            ActionDescriptor = TActionCall( Action = $/VFX_Bank/FX_BANK_Binder_Chaleur_Simple )
-        )
-        )
-    )
-]
-
-DepictionAction_Heat_12 is DepictionAction_Heat_1 + DepictionAction_Heat_2
-DepictionAction_Heat_123 is DepictionAction_Heat_12 + DepictionAction_Heat_3
-
-
 // ****************************************************************************************************************************************
 // *** Avions *****************************************************************************************************************************
 // ****************************************************************************************************************************************

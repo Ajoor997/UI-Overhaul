@@ -313,6 +313,8 @@ private ReplayPanel is BUCKContainerDescriptor
                         ItemComponentBackgroundColor = "AirUnitMiniCard2"
 
                         MainTextHorizontalAlignment = UIText_Center
+                        ItemsTextColorToken = "Noir_option"
+                        //ItemComponentBackgroundColor = "DropdownBlanc"
                     )
                 ),
                 // Dummy

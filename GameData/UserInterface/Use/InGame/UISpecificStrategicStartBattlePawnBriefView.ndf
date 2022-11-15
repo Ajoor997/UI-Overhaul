@@ -185,6 +185,7 @@ BUCKSpecificStrategicStartBattlePawnBriefMainComponentDescriptor is BUCKButtonDe
             (
                 RelativeWidthHeight = [1.0, 0.0]
                 MagnifiableWidthHeight = [0.0, 18.0]
+                MagnifiableOffset = [0,18]
                 PixelWidthHeight = [-1.0, 0.0]
                 AlignementToFather = [0.5, 1.0]
                 AlignementToAnchor = [0.5, 1.0]

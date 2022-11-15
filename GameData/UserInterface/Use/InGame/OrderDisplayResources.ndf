@@ -1,5 +1,5 @@
 
-UIOrderDisplayResources is TUICommonOrderDisplayResources
+UIOrderDisplayResources is TTacticOrderDisplayResources
 (
     Camera                      = $/M3D/Camera/CameraPrincipale
     OrderDisplayUserInputLayer  = $/M3D/Input/UserInputLayerHandler/InputLayer_OrderDisplay

@@ -436,8 +436,6 @@ private OptionsWarningDescriptor is TScrollingDescriptor
                     TypefaceToken = "UIMainFont"
                     BigLineAction = ~/BigLineAction/MultiLine
 
-                    UniformDrawer = $/UserInterface/UIUniformDrawer
-
                     TextColor = "Noir"
                     TextSize = "Challenge/WarningTitle"
 
@@ -466,8 +464,6 @@ private OptionsWarningDescriptor is TScrollingDescriptor
 
                     TypefaceToken = "SevenSegments"
                     BigLineAction = ~/BigLineAction/MultiLine
-
-                    UniformDrawer = $/UserInterface/UIUniformDrawer
 
                     TextColor = "Noir"
                     TextSize = "Challenge/WarningContent"

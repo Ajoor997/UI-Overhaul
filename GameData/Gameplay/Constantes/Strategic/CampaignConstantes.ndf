@@ -15,6 +15,8 @@ StrategicCampaignConstantes is TStrategicCampaignConstantes
     KillOnMaxFatigueReached = ~/StrategicKillOnMaxFatigueReached
     AttackerFatigueGainAfterCombat = ~/StrategicBattleAttackerFatigueGainAfterBattle
     DefenderFatigueGainAfterCombat = ~/StrategicBattleDefenderFatigueGainAfterBattle
+    AttackerFatigueAdditionalGainAfterSurrender = 1
+    DefenderFatigueAdditionalGainAfterSurrender = 0
 
     PawnDissolutionFactor = 0.70 //Un pion est dissout après le combat si sa dernière compagnie est en dessous de X% de son effectif initial
     CompanyDissolutionFactor = 0.3 //Une compagnie est dissoute après le combat si elle est en dessous de X% de son effectif initial
@@ -39,7 +41,9 @@ StrategicCampaignConstantes is TStrategicCampaignConstantes
 
     //Regles du Tactique
     TacticalTimeLimit = 60
-    TacticalScoreLimit = 1000
+    TacticalScoreLimit = 2000
+    TacticalScoreLimitReachedVictoryLevelConstantes = ~/TacticFromStrategicScoreLimitReachedVictoryLevelConstantes
+    TacticalScoreDefeatMoralVictoryLevelConstantes = ~/TacticFromStrategicDefeatMoralVictoryLevelConstantes
 
     //----------
 
@@ -64,7 +68,7 @@ StrategicCampaignConstantes is TStrategicCampaignConstantes
     TextFeedbackDurationMin = 4
     TextFeedbackDurationMax = 4
 
-    UnitsToKilometersMultiplier = 0.000006 * Metre //000008
+    UnitsToKilometersMultiplier = 0.000004 * Metre //000008
 
     ShowDeathTextFeedback = false
 
@@ -84,7 +88,7 @@ StrategicCampaignConstantes is TStrategicCampaignConstantes
     // Possibilite de conserver un ordre sur plusieurs tours
     MultipleTurnOrdersActivated = false
 
-    PowerValuesBattleFactor = 0.003 //0.0045*1.2  // valeur du point de force dans l'affichage des pions et de la barre
+    PowerValuesBattleFactor = 0.003*0.2 //0.0045*1.2  // valeur du point de force dans l'affichage des pions et de la barre
     DigitToDisplayForAutoresolveUnitPower = 0
     DigitToDisplayForAutoresolveArmyRatio = 1
     DigitToDisplayForAutoresolveCombatAdvantage = 0
@@ -107,16 +111,16 @@ StrategicCampaignConstantes is TStrategicCampaignConstantes
     // doit correspondre au nombre de pion (cf. BattleNbMaxPawnByRole) plus 1 (pour le cas où on n'a pas de pions)
     DefaultStartingTicketsPointsByPawnNumber = MAP
     [
-        (ENationalite/Allied, [ 0, 17, 34, 45, 50, 55] ),
-        (ENationalite/Axis, [ 0, 17, 34, 45, 50, 55] ),
+        (ENationalite/Allied,   [ 0, 30, 40, 50, 50, 50] ),
+        (ENationalite/Axis,     [ 0, 30, 40, 50, 50, 50] ),
     ]
 
     // Le tableau de valeur contient l'income disponible en fonction du nombre de pions dans le battle plan, le nombre de cases dans le tableau
     // doit correspondre au nombre de pion (cf. BattleNbMaxPawnByRole) plus 1 (pour le cas où on n'a pas de pions)
     DefaultTicketsPointsIncomeByPawnNumber = MAP // points par minute
     [
-        (ENationalite/Allied, [ 0, 3, 6, 8, 10, 12]),
-        (ENationalite/Axis, [ 0, 3, 6, 8, 10, 12]),
+        (ENationalite/Allied,   [ 0, 3, 6, 8, 8, 8]),
+        (ENationalite/Axis,     [ 0, 3, 6, 8, 8, 8]),
     ]
 
     AerialBattleTicketsPoint = MAP
@@ -238,6 +242,20 @@ StrategicCampaignConstantes is TStrategicCampaignConstantes
 
     HideManual = true
 
-    BataillonMoralValue = 30
-    DefeatMoralPercentage = 0.2
+    BataillonMoralValue = 51
+    DefeatMoralPercentage = 0.01
+)
+
+TacticFromStrategicScoreLimitReachedVictoryLevelConstantes is TVictoryLevelConstantes
+(
+    PalierVictoireMineure = 0.1   // Ratio entre le score du vainqueur et le deuxieme meilleur score
+    PalierVictoireMajeure = 0.5  // Ratio entre le score du vainqueur et le deuxieme meilleur score
+    PalierVictoireTotale = 0.9   // Ratio entre le score du vainqueur et le deuxieme meilleur score
+)
+
+TacticFromStrategicDefeatMoralVictoryLevelConstantes is TVictoryLevelConstantes
+(
+    PalierVictoireMineure = 0.10   // Ratio entre le score du vainqueur et le deuxieme meilleur score
+    PalierVictoireMajeure = 0.50  // Ratio entre le score du vainqueur et le deuxieme meilleur score
+    PalierVictoireTotale = 0.80   // Ratio entre le score du vainqueur et le deuxieme meilleur score
 )

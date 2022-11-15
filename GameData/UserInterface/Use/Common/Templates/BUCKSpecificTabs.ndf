@@ -33,7 +33,6 @@ is BUCKWithTabsDescriptor
     HidePointerEvents = <HidePointerEvents>
 
     FitStyle = <FitStyle>
-    UniformDrawer = $/UserInterface/UIUniformDrawer
 
     TabsAndContent = <TabsAndContent>
 
@@ -162,7 +161,6 @@ is BUCKWithTabsDescriptor
     HidePointerEvents = <HidePointerEvents>
     InterMarginBetwwenTabsAndContent = TRTTILength(Magnifiable = 40.0)
     FitStyle = <FitStyle>
-    UniformDrawer = $/UserInterface/UIUniformDrawer
 
     TabsAndContent = <TabsAndContent>
 

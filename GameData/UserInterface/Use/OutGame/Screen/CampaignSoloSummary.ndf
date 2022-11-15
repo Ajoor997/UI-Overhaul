@@ -845,7 +845,6 @@ is BUCKListElementDescriptor
             )
         ]
 
-        UniformDrawer = $/UserInterface/UIUniformDrawer
         HasBorder = false
         BorderLineColorToken = "Resume/CadreDivisions"
         BorderThicknessToken = "1"
@@ -862,6 +861,8 @@ is BUCKListDescriptor
 (
     Axis = ~/ListAxis/Vertical
     FirstMargin = TRTTILength( Magnifiable = 50.0)
+    HasBackground = false
+    BackgroundBlockColorToken = 'Orange'
 
     ComponentFrame = TUIFramePropertyRTTI
     (
@@ -991,7 +992,6 @@ ListeDesElementsDansMission is BUCKListDescriptor
                         Axis = ~/ListAxis/Horizontal
                         BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
 
-                        UniformDrawer = $/UserInterface/UIUniformDrawer
                         HasBorder = false
                         BorderLineColorToken = "Resume/CadreDivisions"
                         BorderThicknessToken = "1"
@@ -1034,7 +1034,6 @@ ListeDesElementsDansMission is BUCKListDescriptor
                                     HorizontalFitStyle = ~/FitStyle/UserDefined
                                     VerticalFitStyle = ~/FitStyle/UserDefined
 
-                                    UniformDrawer = $/UserInterface/UIUniformDrawer
                                     HasBorder = false
                                     BorderLineColorToken = "Resume/CadreDivisions"
                                     BorderThicknessToken = "1"

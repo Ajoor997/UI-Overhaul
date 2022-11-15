@@ -191,7 +191,6 @@ is BUCKContainerDescriptor
                 TextToken = <TextToken>
                 TextDico = ~/LocalisationConstantes/dico_interface_ingame
 
-                UniformDrawer = $/UserInterface/UIUniformDrawer
                 HasBackground = true
 
                 TextColorIndex = <TextColorIndex>
@@ -210,7 +209,6 @@ template GenericPanelHUD_GradientComponent [
 is BUCKGradientDescriptor
 (
     ComponentFrame = TUIFramePropertyRTTI( RelativeWidthHeight = [1,1] )
-    UniformDrawer = $/UserInterface/UIUniformDrawer
 
     RelativeTransition0 = 1 - <VerticalPercentageHeight>
     RelativeTransition1 = 1
@@ -225,7 +223,6 @@ is BUCKGradientDescriptor
 NoGradientComponent_PanelHUD is BUCKContainerDescriptor
 (
     ComponentFrame = TUIFramePropertyRTTI( RelativeWidthHeight = [1,1] )
-    UniformDrawer = $/UserInterface/UIUniformDrawer
 )
 
 // Descipteur du block de contenu du Panel
@@ -253,7 +250,6 @@ is BUCKContainerDescriptor
         RelativeWidthHeight = (<LastExtendedWeight>) ? [0, 1] : [<RelativeWidth>, 0]
         MagnifiableWidthHeight = [<Width>, <Height>]
     )
-    UniformDrawer = $/UserInterface/UIUniformDrawer
     HasBackground = <HasBackground>
     BackgroundBlockColorToken = <BackgroundBlockColorToken>
 

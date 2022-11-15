@@ -138,7 +138,6 @@ is BUCKContainerDescriptor
 
                         TypefaceToken = "Liberator"
                         BigLineAction = ~/BigLineAction/CutByDots
-                        UniformDrawer = $/UserInterface/UIUniformDrawer
 
                         TextDico = ~/LocalisationConstantes/dico_interface_ingame
                         TextToken  = "UIP_VAL"
@@ -1632,8 +1631,6 @@ template AffichageTexteRotation
 ]
 is BUCKTextDescriptor
 (
-
-
     ComponentFrame = TUIFramePropertyRTTI
     (
         MagnifiableOffset = [-5.0, 5.0]
@@ -1657,7 +1654,6 @@ is BUCKTextDescriptor
     TypefaceToken = "Liberator"
     BigLineAction = ~/BigLineAction/MultiLine
 
-    UniformDrawer = $/UserInterface/UIUniformDrawer
 
     TextToken = <TextToken>
     TextDico = ~/LocalisationConstantes/dico_interface_ingame
@@ -1728,14 +1724,15 @@ is TUISpecificUnitInfoPanelViewDescriptor
 
         ("AttributeMaxDamages",       UnitInfoPanelAttribute(ElementName = "AttributeMaxDamages" Token = "UIPA_MXDMG" ValueToken = "UIP_VAL" HintToken = "HIP_MXDMG" Scale = Scale)),
         ("AttributeECM",              UnitInfoPanelAttribute(ElementName = "AttributeECM" Token = "UIPA_ECM" ValueToken = "UIP_PCT" HintToken = "HIP_ECM" Scale = Scale)),
-        ("AttributeTravelDuration",   UnitInfoPanelAttribute(ElementName = "AttributeTravelDuration" Token = "UIPA_TRJT" ValueToken = "UIP_VAL" HintToken = "HIP_TRJT" Scale = Scale)),
-        ("AttributeFuelMoveDuration", UnitInfoPanelAttribute(ElementName = "AttributeFuelMoveDuration" Token = "UIPA_AUTO" ValueToken = "UIP_VAL" HintToken = "HIP_ESS" Scale = Scale)),
+        ("AttributeTravelTime",   UnitInfoPanelAttribute(ElementName = "AttributeTravelTime" Token = "UIPA_TRTI" ValueToken = "UIP_S" HintToken = "HIP_TRTI" Scale = Scale)),
+        ("AttributeFuelMoveDuration", UnitInfoPanelAttribute(ElementName = "AttributeFuelMoveDuration" Token = "UIPA_AUTO" ValueToken = "UIP_S" HintToken = "HIP_FMD" Scale = Scale)),
 
-        ("AttributeProductionYear",   UnitInfoPanelAttribute(IsTransparent = true ElementName = "AttributeProductionYear" Token = "UIPA_PROD" ValueToken = "UIP_VAL" Scale = Scale)),
         ("AttributeAgility",          UnitInfoPanelAttribute(ElementName = "AttributeAgility" Token = "UIP_AGIL" ValueToken = "UIP_VAL" HintToken = "HIP_AGIL" Scale = Scale)),
-        ("AttributeCategory",         UnitInfoPanelAttribute(IsTransparent = true ElementName = "AttributeCategory" Token = "UIPA_CAT" Scale = Scale DicoToken = ~/LocalisationConstantes/dico_interface_outgame )),
 
         ("AttributeAdvanceDeployment",UnitInfoPanelAttribute(ElementName = "AttributeAdvanceDeployment" Token = "UIP_DPDST" ValueToken = "UIPW_METER" HintToken = "HIP_DPDST" Scale = Scale)),
+
+        ("EMPTY_SLOT1",                UnitInfoPanelAttribute(IsTransparent = true ElementName = "EMPTY_SLOT1" Token = "UIPA_CAT" Scale = Scale DicoToken = ~/LocalisationConstantes/dico_interface_outgame )),
+        ("EMPTY_SLOT2",                UnitInfoPanelAttribute(IsTransparent = true ElementName = "EMPTY_SLOT2" Token = "UIPA_CAT" Scale = Scale DicoToken = ~/LocalisationConstantes/dico_interface_outgame )),
 
     ]
 
@@ -1793,8 +1790,6 @@ is TUISpecificUnitInfoPanelViewDescriptor
     ]
 )
 
-// Note : 'AttributeCategory' and 'AttributeProductionYear' are hidden (see IsTransparent = true), and are only used to get empty cells in the final result
-
 //Penser à répliquer les modifications dans listeAffichageInfoUnit_HelicoDefault ci-dessous
 listeAffichageInfoUnit_Default is
 [
@@ -1809,13 +1804,13 @@ listeAffichageInfoUnit_VehiculeTransport is
     "AttributeMaxDamages","AttributeOptics", "AttributeStealth",
     "AttributeAmphibious","AttributeSpeed",  "AttributeRoadSpeed",
     "AttributeAutonomy","AttributeFuel","AttributeAdvanceDeployment",
-    "AttributeTransportSize", "AttributeCategory", "AttributeProductionYear",
+    "AttributeTransportSize", "EMPTY_SLOT1", "EMPTY_SLOT2",
 ]
 
 listeAffichageInfoUnit_Infanterie is
 [
     "AttributeStrength","AttributeOptics","AttributeStealth",
-    "AttributeAdvanceDeployment","AttributeSpeed", "AttributeCategory",
+    "AttributeAdvanceDeployment","AttributeSpeed", "EMPTY_SLOT1",
 ]
 
 //Penser à répliquer les modifications dans listeAffichageInfoUnit_HelicoSupply ci-dessous
@@ -1823,13 +1818,13 @@ listeAffichageInfoUnit_Supply is
 [
     "AttributeMaxDamages","AttributeOptics", "AttributeStealth",
     "AttributeAmphibious","AttributeSpeed",  "AttributeRoadSpeed",
-    "AttributeAdvanceDeployment", "AttributeSupply", "AttributeCategory",
+    "AttributeAdvanceDeployment", "AttributeSupply", "EMPTY_SLOT1",
 ]
 
 listeAffichageInfoUnit_Air is
 [
     "AttributeMaxDamages", "AttributeAirOptics", "AttributeECM", ,
-    "AttributeAgility","AttributeTravelDuration", "AttributeSpeed",
+    "AttributeAgility","AttributeTravelTime", "AttributeSpeed",
     "AttributeFuelMoveDuration", "AttributeFuel", "AttributeAdvanceDeployment",
 ]
 
@@ -1848,12 +1843,12 @@ listeAffichageInfoUnit_HelicoTransport is
     "AttributeMaxDamages","AttributeOptics", "AttributeStealth",
     "AttributeECM","AttributeSpeed",  "AttributeRoadSpeed",
     "AttributeAutonomy","AttributeFuel","AttributeAdvanceDeployment",
-    "AttributeTransportSize", "AttributeCategory", "AttributeProductionYear",
+    "AttributeTransportSize", "EMPTY_SLOT1", "EMPTY_SLOT2",
 ]
 
 listeAffichageInfoUnit_HelicoSupply is
 [
     "AttributeMaxDamages","AttributeOptics", "AttributeStealth",
     "AttributeECM","AttributeSpeed",  "AttributeRoadSpeed",
-    "AttributeAdvanceDeployment", "AttributeSupply", "AttributeCategory",
+    "AttributeAdvanceDeployment", "AttributeSupply", "EMPTY_SLOT1",
 ]

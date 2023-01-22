@@ -1,5 +1,0 @@
-
-commonLogicAccesser is TCommon3DLogicAccesser
-(
-    GameplayLogicManagerHandler       = $/UI/LogicManagers/InGameLogicManagerHandler
-)

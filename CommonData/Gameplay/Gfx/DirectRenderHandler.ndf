@@ -1,7 +1,0 @@
-
-directRenderHandler_default is TGFxInstanceDirectRenderHandler
-(
-    Scene = $/M3D/Scene/JustAfterShadingScene // c'est uniquement pour s'enregistrer dans un listexecutor
-)
-
-

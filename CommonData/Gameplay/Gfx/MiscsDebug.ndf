@@ -1,4 +1,0 @@
-
-#ifdef WIN32
-export EnableHelpF1 is True
-#endif

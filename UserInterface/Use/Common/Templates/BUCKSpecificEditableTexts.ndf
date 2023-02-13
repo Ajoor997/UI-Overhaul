@@ -29,8 +29,6 @@ template BUCKSpecificEditableTextDescriptor
 
     ClipContent : bool = false,
 
-    SpotlightComponent : TBUCKContainerDescriptor = nil,
-
     HasBackground : bool = false,
     BackgroundBlockColorToken : string = "InputField/Background",
 
@@ -91,8 +89,6 @@ is BUCKEditableTextDescriptor
     ChildFitToContent = <ChildFitToContent>
 
     ClipContent = <ClipContent>
-
-    SpotlightComponent = <SpotlightComponent>
 
     HasBackground = <HasBackground>
     BackgroundBlockColorToken = <BackgroundBlockColorToken>

@@ -44,9 +44,6 @@ SteelmanReinforcementButtonPanel is BUCKListDescriptor
                     MagnifiableOffset = [-10,0]
                 )
 
-                SpotlightComponent = SpotlightDescriptor()
-                SpotlightLayer = $/UserInterface/UILayer_2DInterfaceDropDown_OutGame
-
                 BladeDescriptor = ~/ReinforcementButton
                 Axis = ~/ListAxis/Horizontal
                 BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromFrameProperty

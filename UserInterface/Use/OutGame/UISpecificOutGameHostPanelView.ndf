@@ -137,10 +137,7 @@ BUCKSpecificOutGameHostPanelMainComponentDescriptor is BUCKListDescriptor
                                 )
 
                     ),
-                    BUCKListElementDescriptor
-                    (
-                        ComponentDescriptor = BUCKContainerDescriptor ( ComponentFrame = TUIFramePropertyRTTI (MagnifiableWidthHeight = [0,20]))
-                        ),
+                    BUCKListElementSpacer( Magnifiable = 20.0 ),
                     //-------------------------------------------------------------------------------------
                     BUCKListElementDescriptor
                     (
@@ -379,10 +376,7 @@ BUCKSpecificOutGameHostPanelMainComponentDescriptor is BUCKListDescriptor
                             )
                         )
                     ),
-                    BUCKListElementDescriptor
-                    (
-                        ComponentDescriptor = BUCKContainerDescriptor ( ComponentFrame = TUIFramePropertyRTTI (MagnifiableWidthHeight = [0,20]))
-                        ),
+                    BUCKListElementSpacer( Magnifiable = 20.0 ),
                     // ligne,
                     BUCKListElementDescriptor
                     (

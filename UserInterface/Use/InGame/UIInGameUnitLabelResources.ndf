@@ -60,7 +60,5 @@ SpecificInGameUnitLabelResources is TUISpecificUnitLabelResources
         ("smoke", ~/InGameUnitLabelUpdateFeedbackType/Smoke),
         ("artillerie", ~/InGameUnitLabelUpdateFeedbackType/Artillery),
     ]
-
-    CarriedUnitIconUnknow = "UseInGame_Transport_UNKNOW"
 )
 

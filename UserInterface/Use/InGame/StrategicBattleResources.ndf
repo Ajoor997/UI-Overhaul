@@ -18,7 +18,8 @@ StrategicBattleResources is TStrategicBattleResources
 
     //Pour un pion de support qui est mobilisé pour le combat
     BattlePlanningSupportInBattleGroupStyleDescriptor = TLineFeedbackStyleDescriptor(
-                                                    GeometryMode = ~/FeedbackGeometryMode/Border_AlwaysOnTop
+                                                    Border = true
+                                                    AlwaysOnTop = true
                                                     EffectMode = ~/FeedbackEffectMode/Solid
                                                     SelectedStyle = TFeedbackStyleDescriptor(
                                                                 Thickness = 4000.0
@@ -34,7 +35,8 @@ StrategicBattleResources is TStrategicBattleResources
                                                 )
     //Pour un pion de support qui n'est pas encore mobilisé pour le combat mais qui est disponible à l'ajout
     BattlePlanningSupportNotInBattleGroupStyleDescriptor = TLineFeedbackStyleDescriptor(
-                                                    GeometryMode = ~/FeedbackGeometryMode/Border_AlwaysOnTop
+                                                    Border = true
+                                                    AlwaysOnTop = true
                                                     EffectMode = ~/FeedbackEffectMode/Hatched
                                                     SelectedStyle = TFeedbackStyleDescriptor(
                                                                 Thickness = 1200.0
@@ -50,7 +52,8 @@ StrategicBattleResources is TStrategicBattleResources
                                                 )
     //Pour un pion classique qui est mobilisé pour le combat
     BattlePlanningPawnInBattleGroupStyleDescriptor = TArrowFeedbackStyleDescriptor(
-                                                    GeometryMode = ~/FeedbackGeometryMode/Border_Fill
+                                                    Border = true
+                                                    Fill = true
                                                     EffectMode = ~/FeedbackEffectMode/Solid
                                                     SelectedStyle = TFeedbackStyleDescriptor(
                                                                 Fill = [221, 30, 30, 180]
@@ -66,7 +69,8 @@ StrategicBattleResources is TStrategicBattleResources
                                                 )
     //Pour un pion classique qui est potentiellement attaquant en phase A
     BattlePlanningPotentialAttackerPawnStyleDescriptor = TArrowFeedbackStyleDescriptor(
-                                                    GeometryMode = ~/FeedbackGeometryMode/Border_Fill
+                                                    Border = true
+                                                    Fill = true
                                                     EffectMode = ~/FeedbackEffectMode/Solid
                                                     SelectedStyle = TFeedbackStyleDescriptor(
                                                                 Fill = [221, 30, 30, 90]
@@ -83,7 +87,8 @@ StrategicBattleResources is TStrategicBattleResources
 
     //Pour un pion de support EN COMBAT qui est mobilisé pour le combat
     FightingSupportPawnStyleDescriptor = TLineFeedbackStyleDescriptor(
-                                                    GeometryMode = ~/FeedbackGeometryMode/Border_AlwaysOnTop
+                                                    Border = true
+                                                    AlwaysOnTop = true
                                                     EffectMode = ~/FeedbackEffectMode/Solid
                                                     SelectedStyle = TFeedbackStyleDescriptor(
                                                                 Thickness = 4000.0
@@ -99,7 +104,8 @@ StrategicBattleResources is TStrategicBattleResources
                                                 )
     //Pour un pion fighter EN COMBAT qui est mobilisé pour le combat
     FightingFighterPawnStyleDescriptor = TArrowFeedbackStyleDescriptor(
-                                                    GeometryMode = ~/FeedbackGeometryMode/Border_Fill
+                                                    Border = true
+                                                    Fill = true
                                                     EffectMode = ~/FeedbackEffectMode/Solid
                                                     SelectedStyle = TFeedbackStyleDescriptor(
                                                                 Fill = [221, 30, 30, 180]

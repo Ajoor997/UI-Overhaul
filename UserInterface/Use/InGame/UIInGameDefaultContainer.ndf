@@ -135,9 +135,6 @@ template PanelRoundedCorner
     ClipContent : bool = false,
     IsClippable : bool = true,
 
-    SpotlightComponent : TBUCKContainerDescriptor = nil,
-    SpotlightLayer : TUILayer = nil,
-
     HasBackground : bool = true,
     BackgroundBlockColorToken : string = "H2_bleu_2",
     HasBorder : bool = true,

@@ -25,8 +25,6 @@ template BUCKTextDescriptor
     ClipContent : bool = false,
     IsClippable : bool = true,
 
-    SpotlightComponent : TBUCKContainerDescriptor = nil,
-
     HasBackground : bool = false,
     BackgroundBlockColorToken : string = "",
 
@@ -72,11 +70,6 @@ template BUCKTextDescriptor
     UnderlineColor : string = "",                                               // Couleur de l'underline
     UnderlineThickness : string = "",                                           // Taille de l'underline
 
-    SpotlightColor : string = "",                                               // Couleur du spotlight
-    SpotlightStrokeSize : float = 0.0,                                          // Taille max du glow du spotlight              | il faut généralement
-    SpotlightStrokeHardness : float = 0.0,                                      // Précision du découpage du glow               | ajuster ces 3 paramètres en même temps
-    SpotlightTextThickness : float = 0.0,                                       // Démarquage du texte par rapport au glow      | pour que ça rende bien
-
     HasAutoHint : bool = false,
     Hint : TBUCKHintableAreaDescriptor = nil,                                   // Hint du texte
 
@@ -113,8 +106,6 @@ is BUCKCommonTextDescriptor
 
     ClipContent = <ClipContent>
     IsClippable = <IsClippable>
-
-    SpotlightComponent = <SpotlightComponent>
 
     HasBackground = <HasBackground>
     BackgroundBlockColorToken = <BackgroundBlockColorToken>
@@ -153,11 +144,6 @@ is BUCKCommonTextDescriptor
     HasUnderline = <HasUnderline>
     UnderlineColor = <UnderlineColor>
     UnderlineThickness = <UnderlineThickness>
-
-    SpotlightColor = <SpotlightColor>
-    SpotlightStrokeSize = <SpotlightStrokeSize>
-    SpotlightStrokeHardness = <SpotlightStrokeHardness>
-    SpotlightTextThickness = <SpotlightTextThickness>
 
     Rotation = <Rotation>
     TextFormatScript = <TextFormatScript>

@@ -426,8 +426,6 @@ template BUCKCheckBoxListDescriptor
     ClipContent : bool = false,
     IsClippable :bool = true,
 
-    SpotlightComponent : TBUCKContainerDescriptor = nil,
-
     HasBackground : bool = true,
     ItemListBackgroundBlockColorToken : string = 'SD2_BleuGris',
     BackgroundBlockColorToken : string = "",
@@ -501,8 +499,6 @@ is TBUCKCheckBoxListDescriptor
 
     ClipContent = <ClipContent>
     IsClippable = <IsClippable>
-
-    SpotlightComponent = <SpotlightComponent>
 
     UniformDrawer = $/UserInterface/UIUniformDrawer
 

@@ -190,4 +190,5 @@ StrategicZoCResources is TUICommonZoCResources
     DisabledNoGoZone = ~/FeedbackDisabledNoGoZoneResource
     AirNoGoZone = ~/FeedbackAirNoGoZoneResource
     RecoZone = ~/FeedbackRecoZoneResource
+    WorldFloorProxy = $/M3D/Scene/WorldFloorForIAProxy
 )

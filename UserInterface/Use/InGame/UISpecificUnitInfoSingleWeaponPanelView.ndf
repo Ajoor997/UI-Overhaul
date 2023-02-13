@@ -318,40 +318,6 @@ is BUCKListDescriptor
                             TextSize = "12"
                         )
                     ),
-                    BUCKListElementDescriptor
-                    (
-                        ComponentDescriptor = BUCKTextDescriptor
-                        (
-                            ElementName = <ElementName> + "VeterancyText"
-                            ComponentFrame = TUIFramePropertyRTTI
-                            (
-                                MagnifiableWidthHeight = [0.0, 15.0]
-                                AlignementToAnchor = [0.0, 0.5]
-                                AlignementToFather = [0.0, 0.5]
-                            )
-
-                            ParagraphStyle = TParagraphStyleRTTI
-                            (
-                                Alignment = UIText_Left
-                                VerticalAlignment = UIText_VerticalCenter
-                                InterLine = 0
-                            )
-
-                            TextStyle = "Default"
-
-                            VerticalFitStyle = ~/FitStyle/UserDefined
-                            HorizontalFitStyle = ~/FitStyle/FitToContent
-
-                            TypefaceToken = "Liberator"
-                            BigLineAction = ~/BigLineAction/ResizeFont
-
-                            TextDico = ~/LocalisationConstantes/dico_interface_ingame
-                            TextToken = (<Plating> ? "" : "UIPW_VET")
-
-                            TextColor = "Green2"
-                            TextSize = "12"
-                        )
-                    )
                 ]
             )
         ),
@@ -387,7 +353,7 @@ is BUCKListDescriptor
                             // barre
                             BUCKListElementDescriptor
                             (
-                                ComponentDescriptor =  BUCKSimpleGaugeDescriptor
+                                ComponentDescriptor =  BUCKGaugeDescriptor
                                 (
                                     ElementName = <ElementName> + "Gauge"
 
@@ -417,7 +383,7 @@ is BUCKListDescriptor
 
                                     Components =
                                     [
-                                        BUCKSimpleGaugeValueDescriptor
+                                        BUCKGaugeValueDescriptor
                                         (
                                             ElementName = <ElementName> + 'VeteranceValue'
                                             ComponentFrame = TUIFramePropertyRTTI
@@ -431,7 +397,7 @@ is BUCKListDescriptor
                                             BackgroundBlockColorToken = "Fulda2_Orange100"
                                         ),
 
-                                        BUCKSimpleGaugeValueDescriptor
+                                        BUCKGaugeValueDescriptor
                                         (
                                             ElementName = <ElementName> + 'UntrainedValue'
                                             ComponentFrame = TUIFramePropertyRTTI
@@ -445,7 +411,7 @@ is BUCKListDescriptor
                                             BackgroundBlockColorToken = "VividRed"
                                         ),
 
-                                        BUCKSimpleGaugeValueDescriptor
+                                        BUCKGaugeValueDescriptor
                                         (
                                             ElementName = <ElementName> + 'Value'
                                             ComponentFrame = TUIFramePropertyRTTI
@@ -1122,6 +1088,9 @@ is TUISpecificUnitInfoSingleWeaponPanelViewDescriptor
     NoValueToken = "UIP_NOVAL"
     InfiniteToken = "UIP_INF"
     WeaponNameAndAmountToken = "UIPW_NUM"
+
+    // Attributes whose value is prefered when lower
+    SmallerIsBetterAttributes = ["WeaponAimingTime", "WeaponReloadTime", "WeaponSupplyCost"]
 
     // Configuration of the panel works like this:
     // (Damage type button name, [Attributes list])

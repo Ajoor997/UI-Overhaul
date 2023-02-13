@@ -82,7 +82,7 @@ private ReplayPanel is BUCKListDescriptor
 
                             Components =
                             [
-                                BUCKSimpleGaugeDescriptor
+                                BUCKGaugeDescriptor
                                 (
                                     ElementName = 'ReplaySlider'
                                     ComponentFrame = TUIFramePropertyRTTI
@@ -102,7 +102,7 @@ private ReplayPanel is BUCKListDescriptor
 
                                     Components =
                                     [
-                                        BUCKSimpleGaugeValueDescriptor
+                                        BUCKGaugeValueDescriptor
                                         (
                                             ElementName = 'GaugeProgression'
                                             ComponentFrame = TUIFramePropertyRTTI

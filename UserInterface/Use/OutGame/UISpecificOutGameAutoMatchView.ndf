@@ -412,10 +412,7 @@ BUCKSpecificOutGameAutoMatchMainComponentDescriptor is SpecificModaleWindowFrame
                     )
                 ),
                 //-------------------------------------------------------------------------------------
-                BUCKListElementDescriptor
-                (
-                    ComponentDescriptor = BUCKContainerDescriptor ( ComponentFrame = TUIFramePropertyRTTI (MagnifiableWidthHeight = [0,20]))
-                ),
+                BUCKListElementSpacer( Magnifiable = 20.0 ),
                 BUCKListElementDescriptor
                 (
                     ComponentDescriptor = BUCKTextDescriptor

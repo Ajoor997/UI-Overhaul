@@ -1,9 +1,9 @@
-template TFeedbackRenderToolboxStyleDescriptorForBunker
+template TPictographStyleDescriptorForBunker
 [
     BorderColor : color,
     FillColor : color,
 ]
-is TFeedbackRenderToolboxStyleDescriptor
+is TPictographStyleDescriptor
 (
     Thickness = 100.0
     BorderColor = <BorderColor>
@@ -24,7 +24,7 @@ DefenseResources is TDefenseResources
 
     BunkerProductionWeaponFillInnerColor = [50, 180, 50, 60]
     BunkerProductionWeaponFillOuterColor = [0, 255, 0, 0]
-    BunkerProductionWeaponBorderStyleDescriptor = TFeedbackRenderToolboxStyleDescriptorForBunker
+    BunkerProductionWeaponBorderStyleDescriptor = TPictographStyleDescriptorForBunker
     (
         BorderColor = [80, 200, 70, 200]
         FillColor = [80, 200, 70, 200]
@@ -32,7 +32,7 @@ DefenseResources is TDefenseResources
 
     BunkerSelectionWeaponFillInnerColor = [50, 180, 50, 30]
     BunkerSelectionWeaponFillOuterColor = [0, 255, 0, 0]
-    BunkerSelectionWeaponBorderStyleDescriptor = TFeedbackRenderToolboxStyleDescriptorForBunker
+    BunkerSelectionWeaponBorderStyleDescriptor = TPictographStyleDescriptorForBunker
     (
         BorderColor = [80, 200, 70, 200]
         FillColor = [80, 200, 70, 200]

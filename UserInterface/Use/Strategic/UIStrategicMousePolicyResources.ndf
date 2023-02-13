@@ -60,7 +60,7 @@ private MouseWidget_MultiSelectionStrategic is Template_HardwareMouseWidgetResou
     HardwareMouseCursorAnimation    = ~/MouseCurseur_MultiselectionStrategic
 )
 
-MouseWidget_StrategicSelectNeutralLand is Template_HardwareMouseWidgetResource_WithTerrainFeedback //Template_HardwareMouseWidgetResource_WithTerrainHint
+MouseWidget_StrategicSelectNeutralLand is Template_HardwareMouseWidgetResource_WithTerrainFeedback
 (
     StillTimeBeforeHintAppearance = 2
 
@@ -160,7 +160,7 @@ private PANumberMouseCursor is BUCKTextDescriptor
 )
 
 
-PAComponentMouseCursor is BUCKSimpleGaugeDescriptor
+PAComponentMouseCursor is BUCKGaugeDescriptor
 (
     ElementName = 'ActionPointsGauge'
 
@@ -184,7 +184,7 @@ PAComponentMouseCursor is BUCKSimpleGaugeDescriptor
 
     Components =
     [
-        BUCKSimpleGaugeValueDescriptor
+        BUCKGaugeValueDescriptor
         (
             ElementName = 'ActionPointGaugeComponent'
             ComponentFrame = TUIFramePropertyRTTI

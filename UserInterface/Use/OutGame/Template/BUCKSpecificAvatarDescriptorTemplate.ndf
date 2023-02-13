@@ -31,8 +31,6 @@ template BUCKSpecificAvatarDescriptor
     ClipContent : bool = false,
     IsClippable : bool = true,
 
-    SpotlightComponent : TBUCKContainerDescriptor = nil,
-
     HasBackground : bool = false,
     BackgroundBlockColorToken : string = "",
 
@@ -86,8 +84,6 @@ is TBUCKSpecificAvatarDescriptor
 
     ClipContent = <ClipContent>
     IsClippable = <IsClippable>
-
-    SpotlightComponent = <SpotlightComponent>
 
     UniformDrawer = $/UserInterface/UIUniformDrawer
 

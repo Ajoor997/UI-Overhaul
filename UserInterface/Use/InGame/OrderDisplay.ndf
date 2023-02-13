@@ -44,6 +44,7 @@ export OrderDisplayDrawer is TOrderDisplayDrawer
                             ]
     DefaultOrderDisplayDrawInfo = OrderDisplayDefault
     AltitudeMinToDrawDashLine = 100.0
+    WorldFloorProxy = $/M3D/Scene/WorldFloorForIAProxy
 )
 
 //------------------------------------------------------------------------------

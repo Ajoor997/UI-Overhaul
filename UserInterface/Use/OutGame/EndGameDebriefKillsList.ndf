@@ -1,7 +1,7 @@
 
 DebriefKillLineHeight is 40//37.0
 DebriefHeaderLineHeight is 30
-DebriefTimeWidth is 60
+DebriefTimeWidth is 50
 
 //-------------------------------------------------------------------------------------
 
@@ -38,9 +38,46 @@ private template DebriefKillUnitComponent
 
     HasBackground = false
     BackgroundBlockColorToken = "SD2_Gris80"
-    FirstMargin = TRTTILength(Magnifiable = 25.0)
+    FirstMargin = TRTTILength(Magnifiable = 5.0)
     Elements =
     [
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = BUCKContainerDescriptor
+            (
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    MagnifiableWidthHeight = [25.0, 25.0]
+                    AlignementToAnchor = [0.0, 0.5]
+                    AlignementToFather = [0.0, 0.5]
+                )
+
+                Components =
+                [
+                    BUCKSpecificAvatarDescriptor
+                    (
+                        ElementName =  <ElementName> + "Avatar"
+                        ComponentFrame = TUIFramePropertyRTTI
+                        (
+                            RelativeWidthHeight = [1.0, 1.0]
+                        )
+
+                        ResizeMode = ~/TextureResizeMode/FitToParentConservingRatio
+                        TextureFrame = TUIFramePropertyRTTI
+                        (
+                            AlignementToAnchor = [0.5, 0.5]
+                            AlignementToFather = [0.5, 0.5]
+                        )
+                    ),
+                    BUCKSpecificHintableArea
+                    (
+                        ElementName = <ElementName> + "AvatarHint"
+                        DicoToken = ~/LocalisationConstantes/dico_interface_outgame
+                    ),
+                ]
+            )
+        ),
+        BUCKListElementSpacer( Magnifiable = 2),
         BUCKListElementDescriptor
         (
             ComponentDescriptor = BUCKTextureDescriptor
@@ -49,7 +86,7 @@ private template DebriefKillUnitComponent
 
                 ComponentFrame = TUIFramePropertyRTTI
                 (
-                    MagnifiableWidthHeight = [25.0, 25.0]
+                    MagnifiableWidthHeight = [30.0, 30.0]
                     AlignementToAnchor = [0.0, 0.5]
                     AlignementToFather = [0.0, 0.5]
                 )
@@ -69,7 +106,7 @@ private template DebriefKillUnitComponent
                 ]
             )
         ),
-        BUCKListElementSpacer( Magnifiable = 10),
+        BUCKListElementSpacer( Magnifiable = 5),
         BUCKListElementDescriptor
         (
             ComponentDescriptor = BUCKContainerDescriptor
@@ -149,7 +186,7 @@ private template DebriefKillUnitComponent
                 ]
             )
         ),
-        BUCKListElementSpacer( Magnifiable = 20),
+        BUCKListElementSpacer( Magnifiable = 5),
         BUCKListElementDescriptor
         (
             ExtendWeight = 0.50
@@ -161,7 +198,7 @@ private template DebriefKillUnitComponent
                 )
 
                 Axis = ~/ListAxis/Horizontal
-                InterItemMargin = TRTTILength(Magnifiable = 10.0)
+                //InterItemMargin = TRTTILength(Magnifiable = 10.0)
 
                 Elements =
                 [
@@ -174,7 +211,7 @@ private template DebriefKillUnitComponent
                             ComponentFrame = TUIFramePropertyRTTI
                             (
                                 RelativeWidthHeight = [0.0, 1.0]
-                                MagnifiableWidthHeight = [156.0+120, 0.0]
+                                MagnifiableWidthHeight = [140.0+80, 0.0]
                             )
                             //HasBackground = true
                             BackgroundBlockColorToken = 'Orange'
@@ -198,14 +235,6 @@ private template DebriefKillUnitComponent
 
                             TextColor = "GrisTexte"
                             TextSize = TacticalEndgameKillLossUnitTextFontSize
-
-                            {Components =
-                                                        [
-                                                            BUCKSpecificHintableArea
-                                                            (
-                                                                ElementName = <ElementName> + 'UnitNameHint'
-                                                            ),
-                                                        ]}
                         )
                     ),
                 ]
@@ -222,47 +251,7 @@ private template DebriefKillUnitComponent
                 ComponentFrame = TUIFramePropertyRTTI
                 (
                     RelativeWidthHeight = [0.0, 1.0]
-                )
-
-                ParagraphStyle = TParagraphStyleRTTI
-                (
-                    Alignment = UIText_Left
-                    VerticalAlignment = UIText_VerticalCenter
-                    InterLine = 0
-                )
-
-                TextStyle = "Default"
-
-                HorizontalFitStyle = ~/FitStyle/FitToContent
-
-                TypefaceToken = TacticalEndgameKillLossTextFont
-                BigLineAction = ~/BigLineAction/CutByDots
-
-                TextDico = ~/LocalisationConstantes/dico_interface_ingame
-
-                TextColor = "GrisTexte" //(<ElementName> == "Left" ? "NatoTexte" : "PacteTexte")
-                TextSize = TacticalEndgameKillLossSoldierTextFontSize
-
-                {Components =
-                                [
-                                    BUCKSpecificHintableArea
-                                    (
-                                        ElementName = <ElementName> + 'SoldierNameHint'
-                                    ),
-                                ]}
-            )
-        ),
-
-        BUCKListElementDescriptor
-        (
-            ComponentDescriptor = BUCKTextDescriptor
-            (
-                ElementName = <ElementName> + 'PlayerName'
-
-                ComponentFrame = TUIFramePropertyRTTI
-                (
-                    MagnifiableWidthHeight = [1.0, 0.0]
-                    RelativeWidthHeight = [0.0, 1.0]
+                    MagnifiableWidthHeight = [120, 0.0]
                 )
 
                 ParagraphStyle = TParagraphStyleRTTI
@@ -281,16 +270,8 @@ private template DebriefKillUnitComponent
 
                 TextDico = ~/LocalisationConstantes/dico_interface_ingame
 
-                TextColor = "Blanc"
-                TextSize = TacticalEndgameKillLossPlayerTextFontSize
-
-                Components =
-                [
-                    BUCKSpecificHintableArea
-                    (
-                        ElementName = <ElementName> + 'PlayerNameHint'
-                    ),
-                ]
+                TextColor = "GrisTexte"
+                TextSize = TacticalEndgameKillLossSoldierTextFontSize
             )
         ),
     ]
@@ -432,8 +413,8 @@ private template DebriefKillOneKillerRack
             HasBackground = false
             HasBorder = true
             BordersToDraw = ~/TBorderSide/Top
-            BorderLineColorToken = "CyanFonceFulda"
-            BorderThicknessToken = "1"
+            BorderLineColorToken = "GrisTexte"
+            BorderThicknessToken = "2"
         )
     ]
 )

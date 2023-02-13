@@ -38,40 +38,6 @@ private DivisionBriefSelectionSelectButton is ConfirmButton
 )
 
 //-------------------------------------------------------------------------------------
-private SoloLaunchButton is ConfirmButton
-(
-    ElementName = 'SelectButton'
-    TextToken = 'DS_SELECT'
-    Mapping = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ENTER ) )
-    ButtonMagnifiableWidthHeight = [175.0, 35.0]
-    TextTypefaceToken = "Liberator"
-    // TextStyle = 'TextStyleEcranMoniteur_cyan'
-    TextColorToken = 'tampon_vert'
-    BorderLineColorToken = 'tampon_vert'
-    HasBackground = false
-    BackgroundBlockColorToken = 'loginBoutonBackground_cyan'
-    TextSizeToken = '32'
-    BorderThicknessToken = '3'
-    BigLineAction = ~/BigLineAction/ResizeFont
-    TextPadding = TRTTILength4( Magnifiable = [5.0, 0.0, 5.0, 0.0] )
-)
-
-private SoloQuitButton is ConfirmButton
-(
-    ElementName = 'BackButton'
-    TextToken = 'BTN_CLOSE'
-    Mapping = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ESCAPE ) )
-    ButtonMagnifiableWidthHeight = [175.0, 35.0]
-    TextTypefaceToken = "Liberator"
-    //TextStyle = 'TextStyleEcranMoniteur_gris'
-    TextColorToken = 'tampon_gris'
-    BorderLineColorToken = 'tampon_gris'
-    HasBackground = false
-    BackgroundBlockColorToken = 'loginBoutonBackground_cyan'
-    TextSizeToken = '32'
-    BorderThicknessToken = '3'
-)
-//-------------------------------------------------------------------------------------
 
 private DivisionBriefSelectionCloseButton is MenuActionButton
 (

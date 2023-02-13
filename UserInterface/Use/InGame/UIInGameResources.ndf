@@ -20,9 +20,13 @@ UIInGameResource is TUISpecificInGameResources
         ("SkirmishFromStrategicProductionMenu", UISpecificSkirmishProductionMenuViewDescriptor(IsFromStrategic = true)),
         ("MenuButtonDescriptor", ~/UISpecificMenuButtonViewDescriptor),
         ("UIUnitLabelAggregateViewDescriptor", ~/UISpecificInGameUnitLabelAggregateViewDescriptor),
-        ("InGameUnitLabel", UISpecificUnitLabelViewDescriptor()),
-        ("InGameUnitLabelForMultiSelection", UISpecificUnitLabelViewDescriptor(IsForMultiSelection = true)),
-        ("UISpecificUnitLabelAggregationViewDescriptor", ~/UISpecificUnitLabelAggregationViewDescriptor),
+        ("InGameUnitLabel", UISpecificUnitLabelViewDescriptor(DebugViewName = "InGameUnitLabelDebug")),
+        ("InGameUnitLabelDebug", ~/UISpecificUnitLabelDebugViewDescriptor),
+        ("InGameUnitLabelNameOnly", UISpecificUnitLabelViewDescriptorNameOnly(DebugViewName = "InGameUnitLabelNameOnlyDebug")),
+        ("InGameUnitLabelNameOnlyDebug", ~/UISpecificUnitLabelDebugViewDescriptorNameOnly),
+        ("InGameUnitLabelForMultiSelection", UISpecificUnitLabelViewDescriptor(IsForMultiSelection = true DebugViewName = "")),
+        ("UISpecificUnitLabelAggregation", ~/UISpecificUnitLabelAggregationViewDescriptor),
+        ("UISpecificUnitLabelAggregationNameOnly", ~/UISpecificUnitLabelAggregationViewNameOnlyDescriptor),
         ("UISpecificTacticCubeActionViewDescriptor", ~/UISpecificTacticCubeActionViewDescriptor),
         ("UISpecificTacticEngagementRulesViewDescriptor", ~/UISpecificTacticEngagementRulesViewDescriptor),
         ("UISpecificOpticalFieldViewDescriptor", ~/UISpecificOpticalFieldViewDescriptor),
@@ -49,7 +53,6 @@ UIInGameResource is TUISpecificInGameResources
     HUDResource                 = ~/InGameHUDResource
     LabelResource               = ~/SpecificInGameLabelResource
     LDHintResource              = ~/SpecificInGameLDHintResource
-    GhostResources              = ~/InGameGhostResources
     FlareLabelResources         = ~/CommonFlareLabelResources
     PlayerMissionLabelResources = ~/SpecificInGamePlayerMissionLabelResources
     GabaritResources            = ~/InGameGabaritResources
@@ -484,30 +487,3 @@ InGameMainContainerResource is TUICommonMainContainerResource
         ]
     )
 )
-
-//-------------------------------------------------------------------------------------
-
-InGameGhostResources is TUICommonInGameGhostResources
-(
-    MinRangeGabarit      = ~/TacticalFeedbackMinRangeGabaritResource
-    MaxRangeGabarit      = ~/TacticalFeedbackMaxRangeGabaritResource
-    CapacityRangeGabarit = ~/TacticalFeedbackCapacityGabaritResource
-
-    TypeFace = $/M3D/Typefaces/Typeface3D_Default
-    ParagrapheStyle = TParagraphStyleRTTI
-    (
-        Alignment         = UIText_Center
-        VerticalAlignment = UIText_VerticalCenter
-        InterLine         = 0
-    )
-    TextStyle = TTextStyleRTTI
-    (
-        FontSize    = 1
-        ColorBottom = [0, 0, 0, 0]
-        ColorUp     = [0, 0, 0, 0]
-        ColorStroke = [0, 0, 0, 0]
-        Stroke = false
-        AllowSmallFont = true
-    )
-)
-

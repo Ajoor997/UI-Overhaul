@@ -472,7 +472,6 @@ DivisionGrid is BUCKSpecificScrollingContainerDescriptor
                         AlignementToFather = [0.5, 0.5]
                         AlignementToAnchor = [0.5, 0.5]
                     )
-                    SpotlightComponent = SpotlightDescriptor()
                 )
             ]
         )
@@ -696,7 +695,6 @@ ListeDesUnitesDuDeck is BUCKListDescriptor
             (
                 RelativeWidthHeight = [1.0, 1.0]
             )
-            SpotlightComponent = SpotlightDescriptor()
         ),
     ]
 )
@@ -1572,7 +1570,7 @@ DeckCreatorScreenMainComponent is BUCKContainerDescriptor
         // barre supérieure
         DeckEditorTopBar(SelectedTab = ~/DeckEditorTab),
         // affichage des Panelinfos
-        ~/AnimationPanelUnitInfos,
+        AnimationPanelUnitInfos(),
         ~/TransportSelectionContainer,
         // bouton 'close' en bas à gauche
         ~/DeckEditorCloseButton,

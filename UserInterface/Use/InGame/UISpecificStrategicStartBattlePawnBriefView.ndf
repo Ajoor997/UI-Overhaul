@@ -159,7 +159,7 @@ BUCKSpecificStrategicStartBattlePawnBriefMainComponentDescriptor is BUCKButtonDe
             TypefaceToken = "UISecondFont"
 
             VerticalFitStyle = ~/FitStyle/UserDefined
-            BigLineAction = ~/BigLineAction/MultiLine
+            BigLineAction = ~/BigLineAction/CutByDots
 
             TextDico = ~/LocalisationConstantes/dico_unites
             TextSize = '12'

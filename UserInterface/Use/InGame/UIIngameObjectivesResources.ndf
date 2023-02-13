@@ -157,34 +157,22 @@ private CapturePointObjectiveLabel is TUIObjectiveLabelDescriptor
 
     ComponentDescriptor = ObjectiveLabel
     (
-        TitleSize = "ObjectiveLabel/CapturePoint/Title"
 
-        ContentSize = "ObjectiveLabel/CapturePoint/Content"
+        TitleTypeFace = 'Eurostyle_Heavy'
+        ContentTypeFace = 'Eurostyle'
+        TitleColor = "ObjectiveLabel/Primary/Title"
+        TitleSize = "17"
 
-        LabelMaxWidth = 300//300.0
+        ContentColor = "LDHintSolo_texte"
+        ContentSize = "12"
 
-        TitleMagnifiableMargins = [10, 1.0, 10, 1.0]
+        LabelMaxWidth = 300.0
 
         TextAlignment = UIText_Center
-        TextAlignementToFather = [0.0, 0.0]
-        TextAlignementToAnchor = [0.0, 0.0]
-
-        BackgroundComponent = BUCKContainerDescriptor
-        (
-            ElementName = "Background"
-            ComponentFrame = TUIFramePropertyRTTI
-            (
-                RelativeWidthHeight = [1.0, 1.0]
-            )
-
-            HasBorder = true
-            BorderLineColorToken = ""
-            BorderThicknessToken = "ObjectiveLabel/CapturePoint/Border"
-
-            HasBackground = true
-            BackgroundBlockColorToken = "ObjectiveLabel/CapturePoint/Background"
-        )
+        TextAlignementToFather = [0.5, 0.0]
+        TextAlignementToAnchor = [0.5, 0.0]
     )
+
 )
 
 private template ObjectiveLabelText

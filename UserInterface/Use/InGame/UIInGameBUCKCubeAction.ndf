@@ -297,8 +297,6 @@ is BUCKContainerDescriptor
     (
         MagnifiableWidthHeight = <Dimensions>
     )
-
-    SpotlightComponent = SpotlightDescriptor()
 )
 
 //-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+- //
@@ -351,8 +349,6 @@ InGameCubeActionWargame is BUCKListDescriptor
             ComponentDescriptor = ~/PanelCubeAction_Orders
         ),
     ]
-
-    SpotlightComponent = SpotlightDescriptor()
 )
 
 //-------------------------------------------------------------------------------------
@@ -490,41 +486,41 @@ private PanelCubeAction_Orders is BUCKListDescriptor
 
                     Elements =
                     [
-                        BUCKListElementDescriptor
-                        (
-                            ComponentDescriptor = PanelRoundedCorner
-                            (
-                                ComponentFrame = TUIFramePropertyRTTI
-                                (
-                                    RelativeWidthHeight = [0.0, 1.0]
-                                    MagnifiableWidthHeight = [~/CubeActionWargameSubActionPanel, 0.0]
-                                )
-                            )
-                        ),
+                        //BUCKListElementDescriptor
+                        //(
+                        //    ComponentDescriptor = PanelRoundedCorner
+                        //    (
+                        //        ComponentFrame = TUIFramePropertyRTTI
+                        //        (
+                        //            RelativeWidthHeight = [0.0, 1.0]
+                        //            MagnifiableWidthHeight = [~/CubeActionWargameSubActionPanel, 0.0]
+                        //        )
+                        //    )
+                        //),
 
-                        BUCKListElementDescriptor
-                        (
-                            ComponentDescriptor = PanelRoundedCorner
-                            (
-                                ComponentFrame = TUIFramePropertyRTTI
-                                (
-                                    RelativeWidthHeight = [0.0, 1.0]
-                                    MagnifiableWidthHeight = [~/CubeActionWargameSubActionPanel, 0.0]
-                                )
-                            )
-                        ),
+                        //BUCKListElementDescriptor
+                        //(
+                        //    ComponentDescriptor = PanelRoundedCorner
+                        //    (
+                        //        ComponentFrame = TUIFramePropertyRTTI
+                        //        (
+                        //            RelativeWidthHeight = [0.0, 1.0]
+                        //            MagnifiableWidthHeight = [~/CubeActionWargameSubActionPanel, 0.0]
+                        //        )
+                        //    )
+                        //),
 
-                        BUCKListElementDescriptor
-                        (
-                            ComponentDescriptor = PanelRoundedCorner
-                            (
-                                ComponentFrame = TUIFramePropertyRTTI
-                                (
-                                    RelativeWidthHeight = [0.0, 1.0]
-                                    MagnifiableWidthHeight = [~/CubeActionWargameSubActionPanel, 0.0]
-                                )
-                            )
-                        ),
+                        //BUCKListElementDescriptor
+                        //(
+                        //    ComponentDescriptor = PanelRoundedCorner
+                        //    (
+                        //        ComponentFrame = TUIFramePropertyRTTI
+                        //        (
+                        //            RelativeWidthHeight = [0.0, 1.0]
+                        //            MagnifiableWidthHeight = [~/CubeActionWargameSubActionPanel, 0.0]
+                        //        )
+                        //    )
+                        //),
                     ]
                 )
             ]

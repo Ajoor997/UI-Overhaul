@@ -37,8 +37,6 @@ template GenericPanelHUD [
     HasBackground,
 
     ClipContent = false,
-
-    SpotlightComponent : TBUCKContainerDescriptor = nil,
 ]
 is BUCKContainerDescriptor
 (
@@ -57,7 +55,6 @@ is BUCKContainerDescriptor
         MagnifiableOffset = <MagnifiableOffset>
     )
 
-    SpotlightComponent = <SpotlightComponent>
     ClipContent = <ClipContent>
 
     Components = [

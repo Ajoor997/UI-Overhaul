@@ -419,16 +419,15 @@ SmartGroupContainer is BUCKButtonDescriptor
 template SmartGroupEditorMainContainer
 [
     IsForChallenge : bool,
-]
-  is PanelRoundedCorner
+] is PanelRoundedCorner
 (
     ElementName = "SmartGroupEditorMainContainer"
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = (<IsForChallenge> ? [940.0, 350.0] : [1150.0, 350.0])
+        MagnifiableWidthHeight = [1150.0, 350.0]
         AlignementToFather = [0.0, 1.0]
         AlignementToAnchor = [0.0, 1.0]
-        MagnifiableOffset = (<IsForChallenge> ? [20.0, 0.0] : [200.0, 0.0])
+        MagnifiableOffset = [200.0, 0.0]
     )
 
     BackgroundBlockColorToken = "Transparent"
@@ -458,7 +457,7 @@ template SmartGroupEditorMainContainer
                     (
                         BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestBetweenFatherAndChildren
                         MarginSize = 0
-                        ShowPatternSelector = true
+                        IsForChallenge = <IsForChallenge>
                     )
                 ),
             ]
@@ -473,7 +472,7 @@ template SmartGroupsConfigurationMainPanel
 [
     BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild,
     MarginSize : float = 10.0,
-    ShowPatternSelector : bool = false,
+    IsForChallenge : bool,
 ] is BUCKListDescriptor
 (
     ElementName = "SmartGroupsConfigurationMainPanel"
@@ -583,7 +582,10 @@ template SmartGroupsConfigurationMainPanel
                             ),
                         ]
                     ),
-                ] + (<ShowPatternSelector> ?
+                ] + (<IsForChallenge> ?
+                [
+                    ~/LaunchChallengeButton
+                ] :
                 [
                     BUCKContainerDescriptor
                     (
@@ -601,7 +603,7 @@ template SmartGroupsConfigurationMainPanel
                             ~/PatternSelectorPanel
                         ]
                     ),
-                ] : [])
+                ])
                 +
                 [
                     BUCKTextureDescriptor
@@ -948,16 +950,12 @@ PatternSelectorPanel is BUCKListDescriptor
 template AnimationPanelSmartGroupe
 [
     IsForChallenge : bool,
-]
-is BUCKTranslationAnimatedContainerDescriptor
+] is BUCKTranslationAnimatedContainerDescriptor
 (
     ButtonNameForTrigger = 'AnimationPanelSmartGroupe'
     FramePropertyBeforeAnimation = TUIFramePropertyRTTI
     (
         RelativeWidthHeight = [1.0, 1.0]
-        // AlignementToAnchor = (<IsForChallenge> ? [0,1] : [0.5, 1.0])
-        // AlignementToFather = (<IsForChallenge> ? [0,1] : [0.5, 1.0])
-        MagnifiableOffset = (<IsForChallenge> ? [00.0, 0.0] : [0.0, 0.0] )
     )
 
     AnimationTotalDuration = 0.10
@@ -965,14 +963,12 @@ is BUCKTranslationAnimatedContainerDescriptor
     FramePropertyAfterAnimation = TUIFramePropertyRTTI
     (
         RelativeWidthHeight = [1.0, 1.0]
-        // AlignementToAnchor = (<IsForChallenge> ? [0,1] : [0.5, 1.0])
-        // AlignementToFather = (<IsForChallenge> ? [0,1] : [0.5, 1.0])
-        MagnifiableOffset = (<IsForChallenge> ? [10.0, 215.0] : [0.0, 270.0] )
+        MagnifiableOffset = [0.0, 270.0]
     )
 
     Components =
     [
-        SmartGroupEditorMainContainer(IsForChallenge = <IsForChallenge> )
+        SmartGroupEditorMainContainer(IsForChallenge = <IsForChallenge>)
     ]
 )
 
@@ -1009,8 +1005,8 @@ BoutonAfficherMasquerSmartGroupe is BUCKButtonDescriptor
             TextureColorToken = 'MarronPanel_noir_toggled2'
         ),
     ]
-
 )
+
 //-------------------------------------------------------------------------------------
 
 DeckCategoryList is BUCKContainerDescriptor
@@ -1173,6 +1169,7 @@ ChallengeDescriptionContainer is BUCKTranslationAnimatedContainerDescriptor
         MagnifiableWidthHeight = [750.0, 0.0]
         AlignementToAnchor = [0.0, 1.0]
         AlignementToFather = [0.0, 1.0]
+        MagnifiableOffset = [-1600.0, 0]
     )
 
     UseRewind = true
@@ -1183,25 +1180,23 @@ ChallengeDescriptionContainer is BUCKTranslationAnimatedContainerDescriptor
         MagnifiableWidthHeight = [750.0, 0.0]
         AlignementToAnchor = [0.0, 1.0]
         AlignementToFather = [0.0, 1.0]
-        // MagnifiableOffset = [1675.0, 0.0]
-        MagnifiableOffset = [-1600.0, 0]
     )
 
     Components =
     [
         BUCKTextureDescriptor
         (
+            ElementName = "ScenarioDescriptionBackgroundTexture"
             ComponentFrame = TUIFramePropertyRTTI
             (
                 MagnifiableWidthHeight = [1214.0, 806.0]
                 AlignementToFather = [0.5, 1.0]
                 AlignementToAnchor = [0.5, 1.0]
-                MagnifiableOffset = [595.0-148, 30.0]
+                MagnifiableOffset = [447.0, 30.0]
             )
             MagnifierMultiplication = 1.25
 
             TextureToken = "mission_dossierVide"
-            HidePointerEvents = true
 
             Components =
             [
@@ -1212,33 +1207,33 @@ ChallengeDescriptionContainer is BUCKTranslationAnimatedContainerDescriptor
                     ComponentFrame = TUIFramePropertyRTTI
                     (
                         RelativeWidthHeight = [1.0, 1.0]
+                        MagnifiableWidthHeight = [-30.0, 0.0]
                     )
 
                     IsTogglable = true
                     DefaultToggleValue = false
-                    RadioButtonManager =  nil
                     CannotDeselect = false
                     ForceEvents = false
+                    HidePointerEvents = true
 
                     LeftClickSound = ~/SoundEvent_ShowHideUnitInfoSheet
 
                     Components =
                     [
-
                         BUCKTextureDescriptor
                         (
                             ComponentFrame = TUIFramePropertyRTTI
                             (
                                 MagnifiableWidthHeight = [20.0, 20.0]
-                                AlignementToAnchor = [0.0, 0.0]
-                                AlignementToFather = [0.0, 0.0]
-                                MagnifiableOffset =  [27.0, 35.0]
+                                MagnifiableOffset =  [-25.0, 35.0]
+                                AlignementToFather = [1.0, 0.0]
+                                AlignementToAnchor = [1.0, 0.0]
                             )
 
                             TextureToken = 'showRoomTexture_minimize'
                             TextureColorToken = 'MarronPanel_noir_toggled2'
 
-                            Rotation = -90
+                            Rotation = 180
                         ),
                     ]
                 ),
@@ -1339,8 +1334,6 @@ ChallengeDescriptionContainer is BUCKTranslationAnimatedContainerDescriptor
 
 //-------------------------------------------------------------------------------------
 
-//-------------------------------------------------------------------------------------
-
 panelTitreChallenge is BUCKListDescriptor
 (
     ElementName = "panelTitreChallenge"
@@ -1358,7 +1351,6 @@ panelTitreChallenge is BUCKListDescriptor
 
     Elements =
     [
-
         BUCKListElementDescriptor
         (
             ComponentDescriptor = BUCKTextDescriptor
@@ -1385,33 +1377,25 @@ panelTitreChallenge is BUCKListDescriptor
 )
 
 //-------------------------------------------------------------------------------------
-DeckEditorCloseButtonRightAligned is MainBackButtonContainer
-(
-    AlignementToAnchor = [0.0, 1.0]
-    AlignementToFather = [0.0, 1.0]
-    MagnifiableOffset = [960.0, 0.0]
-    ButtonDefaultToken = "BTN_CLOSE"
-    BackgroundBlockColorToken = "boutonBack"
-    BackMapping = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ESCAPE ))
-)
 
 LaunchChallengeButton is ConfirmButton
 (
     ElementName = "LaunchChallengeButton"
     TextToken = "CLS_LAUNCH"
-    ButtonAlignementToAnchor = [0.0, 1.0]
-    ButtonAlignementToFather = [0.0, 1.0]
-    ButtonMagnifiableOffset = [960.0, -60.0]
     Mapping = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ENTER ) )
-    ButtonMagnifiableWidthHeight = [200.0, 90.0]
-    TextTypefaceToken = "Bombardier"
-    TextStyle = "Default"
-    TextColorToken = "loginBlanc"
-    BorderLineColorToken = "Cyan"
-    HasBackground = true
+    ButtonMagnifiableWidthHeight = [175.0, 35.0]
+    ButtonAlignementToAnchor = [1.0, 1.0]
+    ButtonAlignementToFather = [1.0, 1.0]
+    ButtonMagnifiableOffset = [-10.0, -10.0]
+    TextTypefaceToken = "Liberator"
+    TextColorToken = "tampon_vert"
+    BorderLineColorToken = "tampon_vert"
+    HasBackground = false
     BackgroundBlockColorToken = "loginBoutonBackground_cyan"
-    TextSizeToken = "30"
+    TextSizeToken = "32"
     BorderThicknessToken = "3"
+    BigLineAction = ~/BigLineAction/ResizeFont
+    TextPadding = TRTTILength4( Magnifiable = [5.0, 0.0, 5.0, 0.0] )
 )
 
 //-------------------------------------------------------------------------------------
@@ -1431,19 +1415,18 @@ template BUCKSpecificShowRoomGroupsDeckCreatorScreenMainComponentDescriptor
     Components =
     [
         DeckEditorTopBar(SelectedTab = ~/SmartGroupTab),
+        AnimationPanelSmartGroupe(IsForChallenge = <IsForChallenge>),
         ~/UnitListAnimatedContainer,
-        AnimationPanelSmartGroupe( IsForChallenge = <IsForChallenge> ),
-        ~/AnimationPanelUnitInfos,
     ] +
     (<IsForChallenge> ?
         [
-            ~/DeckEditorCloseButtonRightAligned,
-            ~/LaunchChallengeButton,
+            AnimationPanelUnitInfos(),
+
+            ~/DeckEditorCloseButton,
             ~/ChallengeDescriptionContainer,
-            // ~/panelTitreChallenge,
-            // ChallengeCloseButtonRightAligned
         ] :
         [
+            AnimationPanelUnitInfos(),
             ~/DeckEditorCloseButton,
         ]
     )

@@ -3,8 +3,6 @@ private SelectionPanelWidth is 370.0
 private StartBattleBoutonsList is BUCKListDescriptor
 (
     UniqueName = 'spotLightPanelStartBattleAction'
-    SpotlightComponent = SpotlightDescriptor()
-    SpotlightLayer = $/UserInterface/UILayer_2DInterfaceDropDown_OutGame
 
     ComponentFrame = TUIFramePropertyRTTI
     (
@@ -435,6 +433,9 @@ template Display2Columns
     TextToken1 : string,
     ElementName2 : string = '',
     TextToken2 : string,
+    TypefaceTokenToken2 : string = 'Eurostyle',
+    TextColorToken2 : string = "SM_paleSilver"
+
 ]
 is BUCKListDescriptor
 (
@@ -473,6 +474,9 @@ is BUCKListDescriptor
                 RelativeWidth = 0.0
                 MagnifiableWidth = 105.0
                 IsRightAligned = true
+                TypefaceToken = <TypefaceTokenToken2>
+                TextColor = <TextColorToken2>
+
             )
         ),
     ]
@@ -490,6 +494,8 @@ template TemplateTextStartBattle
     TypefaceToken : string = 'Eurostyle',
     IsTitre : bool = false,
     IsRightAligned : bool = false,
+    TextColor : string  = "SM_paleSilver"
+
 ]
  is BUCKTextDescriptor
 (
@@ -533,7 +539,7 @@ template TemplateTextStartBattle
 
     TextDico = ~/LocalisationConstantes/dico_interface_ingame
 
-    TextColor = "SM_paleSilver"
+    TextColor = <TextColor>
     TextSize = "16"
 )
 
@@ -560,6 +566,7 @@ private PanelInfosBataille is BUCKListDescriptor
             ComponentDescriptor = ~/TextStartBattleTitre
         ),
         //-------------------------------------------------------------------------------------
+        // type de terrain
         BUCKListElementDescriptor
         (
             ComponentDescriptor = TemplateTextStartBattle
@@ -579,9 +586,41 @@ private PanelInfosBataille is BUCKListDescriptor
                 ElementName2 = "TextTerrainTypeValue"
                 TextToken1 = "PrC_terr"
                 TextToken2 = "ter_type"
+                TypefaceTokenToken2 = 'Eurostyle_Heavy'
             )
         ),
-
+        //-------------------------------------------------------------------------------------
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = TemplateTextStartBattle
+            (
+                TypefaceToken = 'Eurostyle_Heavy'
+                TextToken = "strength"
+                IsTitre = true
+            )
+        ),
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = Display2Columns
+            (
+                ElementName = 'AttackPanel'
+                ElementName1 = 'AttackTitle'
+                ElementName2 = 'Attack'
+                TextToken1 = "Auto_AttF"
+                TextToken2 = "CatPow"
+            )
+        ),
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = Display2Columns
+            (
+                ElementName = 'DefensePanel'
+                ElementName1 = 'DefenseTitle'
+                ElementName2 = 'Defense'
+                TextToken1 = "Auto_DefF"
+                TextToken2 = "CatPow"
+            )
+        ),
         //-------------------------------------------------------------------------------------
         BUCKListElementDescriptor
         (
@@ -624,38 +663,7 @@ private PanelInfosBataille is BUCKListDescriptor
                 )
             )
         ),
-        //-------------------------------------------------------------------------------------
-        BUCKListElementDescriptor
-        (
-            ComponentDescriptor = TemplateTextStartBattle
-            (
-                TypefaceToken = 'Eurostyle_Heavy'
-                TextToken = "strength"
-                IsTitre = true
-            )
-        ),
-        BUCKListElementDescriptor
-        (
-            ComponentDescriptor = Display2Columns
-            (
-                ElementName = 'AttackPanel'
-                ElementName1 = 'AttackTitle'
-                ElementName2 = 'Attack'
-                TextToken1 = "Auto_AttF"
-                TextToken2 = "CatPow"
-            )
-        ),
-        BUCKListElementDescriptor
-        (
-            ComponentDescriptor = Display2Columns
-            (
-                ElementName = 'DefensePanel'
-                ElementName1 = 'DefenseTitle'
-                ElementName2 = 'Defense'
-                TextToken1 = "Auto_DefF"
-                TextToken2 = "CatPow"
-            )
-        ),
+        //------------------------- unités
         BUCKListElementDescriptor
         (
             ComponentDescriptor = TemplateTextStartBattle

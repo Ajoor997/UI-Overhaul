@@ -271,7 +271,7 @@ IconeUnite is BUCKContainerDescriptor
 )
 
 //-------------------------------------------------------------------------------------
-StateGauge is BUCKSimpleGaugeDescriptor
+StateGauge is BUCKGaugeDescriptor
 (
     ElementName = 'StateGauge'
 
@@ -291,7 +291,7 @@ StateGauge is BUCKSimpleGaugeDescriptor
 
     Components =
     [
-        BUCKSimpleGaugeValueDescriptor
+        BUCKGaugeValueDescriptor
         (
             ElementName = 'StateGaugeValue'
             ComponentFrame = TUIFramePropertyRTTI
@@ -309,7 +309,7 @@ StateGauge is BUCKSimpleGaugeDescriptor
             HintBodyToken = "HPD_UEXPB"
             HintExtendedToken = "HPD_UEXPE"
         ),
-        StatusUnite
+        StatusUnite,
     ]
 )
 //-------------------------------------------------------------------------------------

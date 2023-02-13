@@ -80,7 +80,7 @@ ChatTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "default",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (

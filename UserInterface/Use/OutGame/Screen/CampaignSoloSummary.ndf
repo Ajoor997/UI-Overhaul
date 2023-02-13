@@ -12,7 +12,8 @@ private template MissionDescriptionText
     RelativeWidthHeight : float2 = [1.0, 0.0],
     MagnifiableOffset : float2 = [0.0, 0.0],
     CouleurDuTrait : string = "Transparent",
-    TextDico : string = ~/LocalisationConstantes/dico_maps
+    TextDico : string = ~/LocalisationConstantes/dico_maps,
+    TextPadding : TRTTILength4 = TRTTILength4(Magnifiable = [20.0, 0.0, 20.0, 0.0])
 ]
 is BUCKTextDescriptor
 (
@@ -36,7 +37,7 @@ is BUCKTextDescriptor
     TextStyle = "Default"
     TypefaceToken = <TypefaceToken>
 
-    TextPadding = TRTTILength4(Magnifiable = [20.0, 0.0, 20.0, 0.0])
+    TextPadding = <TextPadding>
 
     TextDico = <TextDico>
     TextToken = <TextToken>
@@ -880,20 +881,14 @@ is BUCKSpecificScrollingContainerDescriptor
 
     Components =
     [
-        BUCKContainerDescriptor
+        MissionDescriptionText
         (
-            ElementName = "CampaignDescriptionContainer"
-            ComponentFrame = TUIFramePropertyRTTI
-            (
-                RelativeWidthHeight = [1.0, 0.0]
-            )
-
-            FitStyle = ~/ContainerFitStyle/FitToContentVertically
-
-            Components =
-            [
-                ~/AffichageDansOutgame
-            ]
+            ElementName = "TexteObjectifs"
+            MagnifiableOffset = [15.0, 0.0]
+            TextPadding = TRTTILength4(Magnifiable = [20,30,50,0])
+            Alignment = UIText_Left
+            TypefaceToken = "Eurostyle"
+            TextSize = '14'
         )
     ]
 )
@@ -901,6 +896,8 @@ is BUCKSpecificScrollingContainerDescriptor
 //-------------------------------------------------------------------------------------
 MissionElementsList is BUCKListDescriptor
 (
+    ElementName = "MissionElementsList"
+
     ComponentFrame = TUIFramePropertyRTTI
     (
         MagnifiableOffset = [15.0, 0.0]
@@ -918,6 +915,8 @@ MissionElementsList is BUCKListDescriptor
             (
                 ElementName = "TexteForcesEnPresence"
                 Alignment = UIText_Center
+                TypefaceToken = "Eurostyle"
+                TextSize = '14'
             )
         ),
 
@@ -927,7 +926,7 @@ MissionElementsList is BUCKListDescriptor
             (
                 ComponentFrame = TUIFramePropertyRTTI
                 (
-                    MagnifiableWidthHeight = [0.0, 100.0]
+                    MagnifiableWidthHeight = [0.0, 35.0]
                 )
             )
         ),
@@ -938,57 +937,18 @@ MissionElementsList is BUCKListDescriptor
             (
                 ElementName = "TextePresentationScenario"
                 Alignment = UIText_Left
+                TypefaceToken = "Eurostyle"
+                TextSize = '13'
             )
         ),
         BUCKListElementDescriptor
         (
             ComponentDescriptor = BUCKContainerDescriptor
             (
-                ComponentFrame = TUIFramePropertyRTTI ( MagnifiableWidthHeight = [0,60])
-            )
-        ),
-        BUCKListElementDescriptor
-        (
-            ComponentDescriptor = BUCKButtonDescriptor
-            (
-                // ElementName = "BoutonAnimationScenarioContainer"
                 ComponentFrame = TUIFramePropertyRTTI
                 (
-                    AlignementToAnchor = [0.5, 0.0]
-                    AlignementToFather = [0.5, 0.0]
+                    MagnifiableWidthHeight = [0.0, 60.0]
                 )
-
-                // FitStyle = ~/ContainerFitStyle/FitToContent
-
-
-                Components =
-                [
-                    BUCKTextDescriptor
-                    (
-                        ComponentFrame = TUIFramePropertyRTTI
-                        (
-                            AlignementToAnchor = [0.5, 0.0]
-                            AlignementToFather = [0.5, 0.0]
-
-                        )
-
-                        HasBorder = true
-                        BorderThicknessToken = '1'
-                        BorderLineColorToken = "MarronPanel_noir_toggled2"
-
-                        ParagraphStyle = paragraphStyleTextCenter
-                        TextStyle = "Default"
-                        TextPadding = TRTTILength4 ( Magnifiable = [5,5,5,5])
-                        HorizontalFitStyle = ~/FitStyle/FitToContent
-                        VerticalFitStyle = ~/FitStyle/FitToContent
-                        TypefaceToken = "Liberator"
-                        BigLineAction = ~/BigLineAction/MultiLine
-                        TextToken = 'cha_titre'
-                        TextDico = ~/LocalisationConstantes/dico_maps
-                        TextColor = "MarronPanel_noir_toggled2"
-                        TextSize = "25"
-                    )
-                ]
             )
         ),
         BUCKListElementDescriptor
@@ -1095,33 +1055,6 @@ MissionElementsList is BUCKListDescriptor
         ),
     ]
 )
-//-------------------------------------------------------------------------------------
-AffichageDansOutgame is BUCKListDescriptor
-(
-    ComponentFrame = TUIFramePropertyRTTI
-    (
-        MagnifiableOffset = [15.0, 0.0]
-        RelativeWidthHeight = [0.95, 0.0]
-    )
-
-    Axis = ~/ListAxis/Vertical
-    InterItemMargin = TRTTILength( Magnifiable = 5.0)
-
-    Elements =
-    [
-        BUCKListElementDescriptor
-        (
-            ComponentDescriptor = MissionDescriptionText
-            (
-                ElementName = "TexteObjectifs"
-                Alignment = UIText_Left
-                TypefaceToken = "Eurostyle"
-
-            )
-        ),
-
-    ]
-)
 
 //-------------------------------------------------------------------------------------
 
@@ -1130,7 +1063,7 @@ SummaryCampaignShowroom is BUCKSpecificScrollingContainerDescriptor
     ComponentFrame = TUIFramePropertyRTTI
     (
         RelativeWidthHeight = [1.0, 0.0]
-        MagnifiableWidthHeight = [0.0, 800.0]
+        MagnifiableWidthHeight = [0.0, 600.0]
         MagnifiableOffset = [0.0, 50.0]
     )
 
@@ -1147,21 +1080,7 @@ SummaryCampaignShowroom is BUCKSpecificScrollingContainerDescriptor
 
     Components =
     [
-        BUCKContainerDescriptor
-        (
-            ElementName = "CampaignDescriptionContainer"
-            ComponentFrame = TUIFramePropertyRTTI
-            (
-                RelativeWidthHeight = [1.0, 0.0]
-            )
-
-            FitStyle = ~/ContainerFitStyle/FitToContentVertically
-
-            Components =
-            [
-                ~/MissionElementsList
-            ]
-        )
+        ~/MissionElementsList
     ]
 )
 

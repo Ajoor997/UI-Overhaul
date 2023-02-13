@@ -29,6 +29,7 @@ SpecificInGameHUDTimePanelViewMainComponent is BUCKListDescriptor
     LastMargin = TRTTILength ( Magnifiable = 10)
     Axis = ~/ListAxis/Vertical
     BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
+
     Elements =
     [
         BUCKListElementDescriptor
@@ -71,7 +72,7 @@ private AffichageTempsEtVitesseEnTexte is BUCKListDescriptor
 
                 ComponentFrame = TUIFramePropertyRTTI
                 (
-                    RelativeWidthHeight = [1.0, 0.0]
+                    // RelativeWidthHeight = [1.0, 0.0]
                     MagnifiableWidthHeight = [0.0, 16.0]
                     AlignementToFather = [0.5, 0.0]
                     AlignementToAnchor = [0.5, 0.0]
@@ -85,7 +86,7 @@ private AffichageTempsEtVitesseEnTexte is BUCKListDescriptor
 
                 TextColor = "BlancEquipe"
 
-                HorizontalFitStyle = ~/FitStyle/UserDefined
+                HorizontalFitStyle = ~/FitStyle/FitToContent
                 VerticalFitStyle = ~/FitStyle/UserDefined
 
                 BigLineAction = ~/BigLineAction/ResizeFont
@@ -104,7 +105,7 @@ private AffichageTempsEtVitesseEnTexte is BUCKListDescriptor
                 ElementName = "GameSpeedText"
                 ComponentFrame = TUIFramePropertyRTTI
                 (
-                    RelativeWidthHeight = [1.0, 0.0]
+                    // RelativeWidthHeight = [1.0, 0.0]
                     MagnifiableWidthHeight = [0.0, 14.0]
                     AlignementToFather = [0.5, 0.0]
                     AlignementToAnchor = [0.5, 0.0]
@@ -118,7 +119,7 @@ private AffichageTempsEtVitesseEnTexte is BUCKListDescriptor
 
                 TextColor = "BlancEquipe"
 
-                HorizontalFitStyle = ~/FitStyle/UserDefined
+                HorizontalFitStyle = ~/FitStyle/FitToContent
                 VerticalFitStyle = ~/FitStyle/UserDefined
 
                 BigLineAction = ~/BigLineAction/ResizeFont

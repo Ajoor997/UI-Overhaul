@@ -26,8 +26,6 @@ is BUCKContainerDescriptor
             (CubeActionStrategicButtonDims[1] + CubeActionStrategicButtonSpacing[1]) * Coords[0]
         ]
     )
-
-    SpotlightComponent = SpotlightDescriptor()
 )
 
 StrategicCubeAction is GenericPanelHUD
@@ -53,9 +51,6 @@ StrategicCubeAction is GenericPanelHUD
         StrategicCubeActionButtonContainer( UniqueName=BUCKIdentifiers/IngameCubeActionButtonContainer4 Coords=[0,3] ),
         //OmbrePanel()
     ]
-
-    SpotlightComponent = SpotlightDescriptor()
-
 )
 
 // Elements utilises pour les fake boutons de cube action

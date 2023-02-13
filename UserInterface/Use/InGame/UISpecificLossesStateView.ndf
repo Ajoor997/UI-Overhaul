@@ -145,15 +145,10 @@ private template TeamCategory
 
             Axis = ListAxis/Vertical
             BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
-
-
+            FirstMargin = TRTTILength ( Magnifiable = 120)
 
             Elements =
             [
-                BUCKListElementDescriptor
-                (
-                    ComponentDescriptor = BUCKContainerDescriptor ( ComponentFrame = TUIFramePropertyRTTI (MagnifiableWidthHeight = [0,120]))
-                ),
                 BUCKListElementDescriptor
                 (
                     ComponentDescriptor = BUCKTextureDescriptor

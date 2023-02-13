@@ -286,8 +286,6 @@ template BUCKSpecificButton
     BorderLocalRenderLayer : int = 0,
     ForegroundLocalRenderLayer : int = 0,
 
-    SpotlightComponent : TBUCKContainerDescriptor = SpotlightDescriptor(),
-
     HasBackgroundTexture : bool = false,
     BackgroundTexture : string = "",
     BackgroundTextureFrameProperty : TUIFramePropertyRTTI = TUIFramePropertyRTTI(RelativeWidthHeight = [1.0, 1.0]),
@@ -358,8 +356,6 @@ is BUCKButtonDescriptor
 
     BackgroundLocalRenderLayer = <BackgroundLocalRenderLayer>
     BorderLocalRenderLayer = <BorderLocalRenderLayer>
-
-    SpotlightComponent = <SpotlightComponent>
 
     Components =
     [
@@ -557,8 +553,6 @@ template StandardButton
     TextLocalRenderLayer : int = 0,
     BorderLocalRenderLayer : int = 0,
     ForegroundLocalRenderLayer: int = 0,
-
-    //SpotlightComponent : TBUCKContainerDescriptor = SpotlightDescriptor(),
 ]
 is BUCKSpecificButton
 (
@@ -626,9 +620,9 @@ template ConfirmButton
 
     ButtonMagnifiableWidthHeight : float2 = DefaultButtonDims,
     ButtonRelativeWidthHeight : float2 = [0.0, 0.0],
-    ButtonMagnifiableOffset : float2 = [0,0],
-    ButtonAlignementToAnchor : float2 = [0,0],
-    ButtonAlignementToFather : float2 = [0,0],
+    ButtonMagnifiableOffset : float2 = [0.0,0.0],
+    ButtonAlignementToAnchor : float2 = [0.0,0.0],
+    ButtonAlignementToFather : float2 = [0.0,0.0],
 
     BigBorderBackgroundColorToken : string = "ConfirmButton/BigBorder",
     BorderLineColorToken : string = "ConfirmButton/Border",
@@ -955,8 +949,6 @@ template HUDButton
     BackgroundTexture : string = "StyleCockpitTexture_HUDButton",
     TextureColorToken : string = "",
     BackgroundTextureFrameProperty : TUIFramePropertyRTTI = TUIFramePropertyRTTI( RelativeWidthHeight = [1, 1] ),
-
-    SpotlightComponent : TBUCKContainerDescriptor = SpotlightDescriptor(),
 ]
 is BUCKButtonDescriptor
 (
@@ -1097,8 +1089,6 @@ is BUCKButtonDescriptor
 
     BackgroundLocalRenderLayer = <BackgroundLocalRenderLayer>
     BorderLocalRenderLayer = <BorderLocalRenderLayer>
-
-    SpotlightComponent = <SpotlightComponent>
 )
 
 /// A DEPRECIER
@@ -1161,8 +1151,6 @@ template HUDDarkButton
 
     BackgroundTexture : string = "",
     BackgroundTextureFrameProperty : TUIFramePropertyRTTI = TUIFramePropertyRTTI( RelativeWidthHeight = [1, 1] ),
-
-    SpotlightComponent : TBUCKContainerDescriptor = SpotlightDescriptor(),
 ]
 is HUDButton
 (
@@ -1218,8 +1206,6 @@ is HUDButton
 
     BackgroundTexture = <BackgroundTexture>
     BackgroundTextureFrameProperty = <BackgroundTextureFrameProperty>
-
-    SpotlightComponent = <SpotlightComponent>
 )
 //-------------------------------------------------------------------------------------
 // Bouton carré / rectangulaire simple
@@ -1247,7 +1233,6 @@ is BUCKButtonDescriptor
 (
     ElementName = <ElementName>
     UniqueName = <UniqueName>
-    SpotlightComponent = SpotlightDescriptor()
 
     ComponentFrame = TUIFramePropertyRTTI
     (
@@ -1317,7 +1302,6 @@ is BUCKButtonDescriptor
 (
     ElementName = <ElementName>
     UniqueName = <UniqueName>
-    SpotlightComponent = SpotlightDescriptor()
 
     ComponentFrame = TUIFramePropertyRTTI
     (

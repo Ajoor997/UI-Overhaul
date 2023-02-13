@@ -637,6 +637,7 @@ private PanelSelectionUnique_ListeDesArmes is BUCKListDescriptor
     ComponentFrame = TUIFramePropertyRTTI()
 
     Axis = ~/ListAxis/Horizontal
+    FirstMargin = TRTTILength( Magnifiable = 6.0 )
     InterItemMargin = TRTTILength( Magnifiable = 6.0 )
     LastMargin = TRTTILength( Magnifiable = 6.0 )
     BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestBetweenFatherAndChildren
@@ -679,7 +680,7 @@ private AffichagePV is BUCKGaugeDescriptor
 
     Components =
     [
-        BUCKSimpleGaugeValueDescriptor
+        BUCKGaugeValueDescriptor
         (
             ElementName = 'DamageGaugeValue'
 
@@ -691,10 +692,10 @@ private AffichagePV is BUCKGaugeDescriptor
             //Couleur des PV restants
             HasBackground = true
             BackgroundBlockColorToken = "CardHp_Mod"
-
             //Graduations des PV restants
-            GraduationThicknessToken = "1"
-            GraduationColorToken = "CardHpLine_Mod"
+            //GraduationThicknessToken = "1"
+            //GraduationColorToken = "CardHpLine_Mod"
+
         ),
         BUCKSpecificHintableArea
         (
@@ -760,7 +761,7 @@ is BUCKButtonDescriptor
     UniqueName = ""
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = [90.0, 0.0]
+        MagnifiableWidthHeight = [85.0, 0.0]
         RelativeWidthHeight = [0.0, 1.0]
     )
 
@@ -826,7 +827,7 @@ is BUCKButtonDescriptor
 
             BigLineAction   = ~/BigLineAction/BalancedMultiline
             TextColor       = "ButtonHUD/Text2_MOD"
-            TextSize        = "13"
+            TextSize        = "12"
 
             TextDico        = ~/LocalisationConstantes/dico_interface_ingame
             TextToken       = "ER_ROE"
@@ -871,7 +872,7 @@ template RoeShortcut
     ElementName = <Name> + "ShortcutContainer"
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = [90.0, 30.0]
+        MagnifiableWidthHeight = [100.0, 30.0]
         //RelativeWidthHeight = [1.0, 0.0]
     )
 

@@ -170,8 +170,6 @@ template BUCKSpecificOffMapButton
     TextLocalRenderLayer : int = 0,
     BorderLocalRenderLayer : int = 0,
     ForegroundLocalRenderLayer : int = 0,
-
-    SpotlightComponent : TBUCKContainerDescriptor = SpotlightDescriptor(),
 ]
 is BUCKContainerDescriptor
 (
@@ -215,8 +213,6 @@ is BUCKContainerDescriptor
     BackgroundLocalRenderLayer = <MainBackgroundLocalRenderLayer>
     BorderLocalRenderLayer = <BorderLocalRenderLayer>
 
-    SpotlightComponent = <SpotlightComponent>
-
     Components =
     [
         // Interior Button
@@ -254,7 +250,6 @@ DummyOffMapPanel is BUCKContainerDescriptor
 
 BUCKSpecificOffMapMainComponentDescriptor is BUCKContainerDescriptor
 (
-    UniqueName = "OffMapPanelContainer"
     ElementName = "Container"
 
     ComponentFrame = TUIFramePropertyRTTI
@@ -264,8 +259,6 @@ BUCKSpecificOffMapMainComponentDescriptor is BUCKContainerDescriptor
     )
 
     FitStyle = ~/ContainerFitStyle/FitToContentVertically
-
-    SpotlightComponent = SpotlightDescriptor()
 
     Components =
     [

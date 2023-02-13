@@ -215,12 +215,9 @@ MainLabelList is TBUCKLocalLayerContainerDescriptor
                             ~/CombatValue,
                             ~/NoSupplied,
 
-                            {~/terrain_urbain,
-                                                        ~/terrain_urbain2,
-                                                        ~/terrain_foret,
-                                                        ~/terrain_foret2,
-                                                        ~/terrain_plaine,
-                                                        ~/terrain_plaine2,}
+                            // ~/terrain_urbain,
+                            // ~/terrain_foret,
+                            // ~/terrain_plaine,
 
                             //~/CanAttack,
                             ~/DivisionLabel,
@@ -519,9 +516,9 @@ private  terrain_urbain is BUCKTextureDescriptor
     ElementName = 'Terrain_TerrainStrategicSemiUrban'
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = [75.0, 55.0]
-        AlignementToFather = [0.5,0.5]
-        AlignementToAnchor = [0.5,0.5]
+        MagnifiableWidthHeight = [20.0, 20.0]
+        AlignementToFather = [1,1]
+        AlignementToAnchor = [1,1]
     )
 
     TextureToken = 'UseStrategic_Labels_Terrain_TerrainUrbain'
@@ -533,7 +530,8 @@ private terrain_foret is BUCKTextureDescriptor
     ElementName = 'Terrain_TerrainStrategicForest'
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = [80.0, 55.0]
+        MagnifiableWidthHeight = [20.0, 20.0]
+
         AlignementToFather = [0.5,0.5]
         AlignementToAnchor = [0.5,0.5]
     )
@@ -547,7 +545,7 @@ private terrain_plaine is BUCKTextureDescriptor
     ElementName = 'Terrain_TerrainStrategicPlain'
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = [80.0, 55.0]
+        MagnifiableWidthHeight = [20.0, 20.0]
         AlignementToFather = [0.5,0.5]
         AlignementToAnchor = [0.5,0.5]
     )
@@ -736,52 +734,6 @@ private PANumber is BUCKTextDescriptor
     Components =
     [
         CanAttack,
-    ]
-)
-
-// -----------------------------------------------
-
-private PAComponent is BUCKSimpleGaugeDescriptor
-(
-    ElementName = 'ActionPointsGauge'
-
-    ComponentFrame = TUIFramePropertyRTTI
-    (
-        AlignementToFather = [0.5, 1.0]
-        AlignementToAnchor = [0.5, 0.0]
-        MagnifiableWidthHeight = [43.0, 6.0]
-    )
-
-    HasBackground = true
-    HasBorder = true
-    BorderLineColorToken = "PawnLabel/ActionPoints"
-    BorderThicknessToken = "PawnLabel/ActionPoints"
-    BackgroundBlockColorToken = "GrisLabelStrat"
-
-    DurationForGaugeFullChange = 0.5
-    GaugeMax = 4
-
-    GaugeComponentNames = ['ActionPointGaugeComponent']
-
-    Components =
-    [
-        BUCKSimpleGaugeValueDescriptor
-        (
-            ElementName = 'ActionPointGaugeComponent'
-            ComponentFrame = TUIFramePropertyRTTI
-            (
-                RelativeWidthHeight    = [0.0, 1.0]
-                AlignementToFather     = [0.0, 0.5]
-                AlignementToAnchor     = [0.0, 0.5]
-            )
-
-            HasBackground = true
-            BackgroundBlockColorToken = "LightGray80"
-
-            HasBorder = true
-            BorderLineColorToken = "SD2_Blanc184"
-            BorderThicknessToken = "PawnLabel/ActionPoints"
-        ),
     ]
 )
 

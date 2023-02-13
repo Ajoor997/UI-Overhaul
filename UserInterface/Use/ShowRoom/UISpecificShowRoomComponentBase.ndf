@@ -7,8 +7,7 @@ template UnitButtonPackDescriptor
     ShowAddUnitButton : bool = false,
     ShowRemoveUnitButton : bool = false,
     ForceEvents : bool = false
-]
-is UISpecificUnitButtonViewDescriptor
+] is UISpecificUnitButtonViewDescriptor
 (
     ComponentFrameAlignment = [0.0, 0.5]
 
@@ -38,27 +37,31 @@ is UISpecificUnitButtonViewDescriptor
 
 //-------------------------------------------------------------------------------------
 
-AnimationPanelUnitInfos is BUCKTranslationAnimatedContainerDescriptor
-(
-    ElementName = "AnimationPanelUnitInfos"
-    FramePropertyBeforeAnimation = TUIFramePropertyRTTI
+template AnimationPanelUnitInfos
+[
+    FramePropertyBeforeAnimation : TUIFramePropertyRTTI = TUIFramePropertyRTTI
     (
         RelativeWidthHeight = [1.0, 1.0]
         AlignementToAnchor = [0.5, 1.0]
         AlignementToFather = [0.5, 1.0]
-        MagnifiableOffset = [400,0]
-    )
+        MagnifiableOffset = [400.0, 0.0]
+    ),
+    FramePropertyAfterAnimation : TUIFramePropertyRTTI = TUIFramePropertyRTTI
+    (
+        RelativeWidthHeight = [1.0, 1.0]
+        AlignementToAnchor = [0.5, 1.0]
+        AlignementToFather = [0.5, 1.0]
+    ),
+] is BUCKTranslationAnimatedContainerDescriptor
+(
+    ElementName = "AnimationPanelUnitInfos"
+
+    FramePropertyBeforeAnimation = <FramePropertyBeforeAnimation>
 
     TriggerWhenSetVisible = true
     AnimationTotalDuration = 0.10
 
-    FramePropertyAfterAnimation = TUIFramePropertyRTTI
-    (
-        RelativeWidthHeight = [1.0, 1.0]
-        AlignementToAnchor = [0.5, 1.0]
-        AlignementToFather = [0.5, 1.0]
-
-    )
+    FramePropertyAfterAnimation = <FramePropertyAfterAnimation>
 
     Components =
     [

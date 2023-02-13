@@ -314,58 +314,6 @@ is BUCKContainerDescriptor
 )
 
 // -------------------------------------------------------------------------------------------------
-
-// Weapon status gauge (reloading, aiming, firing...)
-private JaugeDeTir is BUCKSimpleGaugeDescriptor
-(
-    ElementName = 'ReloadState'
-
-    ComponentFrame = TUIFramePropertyRTTI
-    (
-        RelativeWidthHeight = [1.0, 0.0]
-        MagnifiableWidthHeight = [0.0, 6.0]
-    )
-
-    GaugeValueMinSize = TRTTILength( Pixel = 1.0 )
-    DurationForGaugeFullChange = 1
-    GaugeMax = 100
-
-    GaugeComponentNames = ['ReloadStateGaugeValue']
-
-    Components =
-    [
-        BUCKContainerDescriptor
-        (
-            ComponentFrame = TUIFramePropertyRTTI
-            (
-                RelativeWidthHeight = [1.0, 1.0]
-                PixelWidthHeight = [-2.0, 0.0]
-            )
-
-            HasBackground = true
-            BackgroundBlockColorToken = "White_Mod"
-        ),
-
-        BUCKSimpleGaugeValueDescriptor
-        (
-            ElementName = 'ReloadStateGaugeValue'
-            ComponentFrame = TUIFramePropertyRTTI
-            (
-                RelativeWidthHeight = [1.0, 1.0]
-                PixelWidthHeight = [-4.0, -2.0]
-                AlignementToFather     = [0.0, 0.5]
-                AlignementToAnchor     = [0.0, 0.5]
-            )
-
-            HasBackground = true
-            BackgroundBlockColorToken = "CyanChrono"
-            //BackgroundBlockColorToken = "ButtonHUD/Text2_MOD"
-
-        ),
-    ]
-)
-
-// -------------------------------------------------------------------------------------------------
 // Icone pour les armes a Radar
 WeaponRadarIcon is BUCKTextureDescriptor
 (

@@ -96,7 +96,7 @@ private template AllianceScoreLine
 
                         Components =
                         [
-                            BUCKSimpleGaugeDescriptor
+                            BUCKGaugeDescriptor
                             (
                                 ElementName = <ElementName> + "Gauge"
 
@@ -121,7 +121,7 @@ private template AllianceScoreLine
 
                                 Components =
                                 [
-                                    BUCKSimpleGaugeValueDescriptor
+                                    BUCKGaugeValueDescriptor
                                     (
                                         ElementName = <ElementName> + "GaugeValue"
                                         ComponentFrame = TUIFramePropertyRTTI
@@ -374,7 +374,7 @@ BUCKSpecificHUDScorePlayerMainComponentDescriptor is BUCKContainerDescriptor
                         )
 
                         TextSize = "16"
-                        TextColor = "Cyan"
+                        TextColor = "White"
                         TextToken = ""
                         TextDico = ~/LocalisationConstantes/dico_interface_ingame
                         TypefaceToken = "IBM"
@@ -601,7 +601,7 @@ private PlayerScorePanelButton is BUCKContainerDescriptor
                         PanelRoundedCorner
                         (
                             BackgroundBlockColorToken = "BoutonTemps"
-                            BorderLineColorToken = "CouleurBordure_boutonShortcuts"
+                            BorderLineColorToken = "playersList_btn_MOD"
                         )
                     ]
                 ),
@@ -616,7 +616,7 @@ private PlayerScorePanelButton is BUCKContainerDescriptor
                     )
 
                     TextureToken = "icone_score"
-                    TextureColorToken = "CouleurTexture_boutonShortcuts"
+                    TextureColorToken = "White_MOD"
 
                     TextureFrame = TUIFramePropertyRTTI
                     (

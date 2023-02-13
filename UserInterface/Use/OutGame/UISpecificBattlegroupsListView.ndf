@@ -1114,9 +1114,6 @@ private BoutonsAction is BUCKListDescriptor
     ]
 )
 
-{BUCKListElementDescriptor( ComponentDescriptor = ~/SoloLaunchButton ),
-                        BUCKListElementDescriptor( ComponentDescriptor = MenuActionButtonSeparator()),
-                        BUCKListElementDescriptor( ComponentDescriptor = ~/SoloQuitButton ),}
 //--------------------------------------------------------
 
 private BoutonsDeck is BUCKListDescriptor

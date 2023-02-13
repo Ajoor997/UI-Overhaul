@@ -125,7 +125,7 @@ private HUBProfileLevelInformation is BUCKContainerDescriptor
 
                 BUCKListElementDescriptor
                 (
-                    ComponentDescriptor = BUCKSimpleGaugeDescriptor
+                    ComponentDescriptor = BUCKGaugeDescriptor
                     (
                         ElementName = "HUBAccueilProfileIdGauge"
 
@@ -146,15 +146,13 @@ private HUBProfileLevelInformation is BUCKContainerDescriptor
 
                         Components =
                         [
-                            BUCKSimpleGaugeValueDescriptor
+                            BUCKGaugeValueDescriptor
                             (
                                 ElementName = "HUBAccueilProfileIdGaugeValue"
                                 ComponentFrame = TUIFramePropertyRTTI
                                 (
                                     RelativeWidthHeight = [0.0, 1.0]
                                 )
-
-                                Value = 65
 
                                 HasBackground = true
                                 BackgroundBlockColorToken = "TexteProfileTitre"

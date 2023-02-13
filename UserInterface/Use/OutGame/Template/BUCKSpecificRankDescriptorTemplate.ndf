@@ -30,8 +30,6 @@ template BUCKSpecificRankDescriptor
 
     ClipContent : bool = false,
 
-    SpotlightComponent : TBUCKContainerDescriptor = nil,
-
     HasBackground : bool = false,
     BackgroundBlockColorToken : string = "",
 
@@ -84,8 +82,6 @@ is TBUCKSpecificRankDescriptor
     ChildFitToContent = <ChildFitToContent>
 
     ClipContent = <ClipContent>
-
-    SpotlightComponent = <SpotlightComponent>
 
     UniformDrawer = $/UserInterface/UIUniformDrawer
 

@@ -546,6 +546,8 @@ private ResultatDuCombatMainComponent is BUCKContainerDescriptor
                         TitleText = 'AR_RDF'
                         DefenseurText = 'AR_BONUS'
                         IsRapport = false
+                        TextSize = 'AutoResolve/Information'
+
                     )
                 ),
                 BUCKListElementDescriptor

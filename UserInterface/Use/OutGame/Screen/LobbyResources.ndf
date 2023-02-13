@@ -334,7 +334,7 @@ private DedicatedServerInfos is BUCKListDescriptor
         (
             ComponentDescriptor = ~/DedicatedServerInfosTitle
         ),
-        BUCKListElementDescriptor( ComponentDescriptor = BUCKContainerDescriptor(ComponentFrame = TUIFramePropertyRTTI(MagnifiableWidthHeight = [0.0, 2.0]) ) ),
+        BUCKListElementSpacer( Magnifiable = 2.0),
         BUCKListElementDescriptor
         (
             ComponentDescriptor = ~/DedicatedServerInfosLine1

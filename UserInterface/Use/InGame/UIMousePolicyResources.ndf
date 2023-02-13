@@ -498,40 +498,6 @@ is TUIMouseWidgetResource
 
 //--------------------------------------------------------
 
-template Template_HardwareMouseWidgetResource_WithTerrainHint
-[
-    HardwareMouseCursorAnimation : TMouseCursorAnimation = ~/MouseCursorAnimationDefault,
-    TerrainTypeToHintContent : Map<int, THintContentHolder> = MAP[],
-    HintDescriptor : TBUCKHintDescriptor = ~/HintInGameBUCKComponent,
-    StillTimeBeforeHintAppearance : float = 0.0,
-]
-is TUIMouseWidgetResource
-(
-    ModuleResourceList =
-    MAP
-    [
-        (
-            "CursorSetter",
-            TUIMouseWidgetSimpleCursorSetterModuleResource
-            (
-                HardwareMouseCursorAnimation = <HardwareMouseCursorAnimation>
-            )
-        ),
-        (
-            "HintModule",
-            TUIMouseWidgetTerrainHintModuleResource
-            (
-                TerrainTypeToHintContent = <TerrainTypeToHintContent>
-                HintDescriptor = <HintDescriptor>
-                StillTimeBeforeHintAppearance = <StillTimeBeforeHintAppearance>
-            )
-        ),
-    ]
-    UILayer = $/UserInterface/UILayer_2DInterface_InGame
-)
-
-//--------------------------------------------------------
-
 template Template_HardwareMouseWidgetResource_WithTerrainFeedback
 [
     RelativeTextPlacement = [0.5, 1.5],
@@ -1147,24 +1113,6 @@ private SpawnUnitArrowDescriptor is TUIPathDescriptor
 
 //--------------------------------------------------------
 
-DefenseLineMouseWidgetSelector is TBuildDefenseLineMouseWidgetSelector
-(
-    MouseWidgetList = MAP
-    [
-        (Cursor_Default          , ~/MouseWidget_AddDefensePoint),
-        (Cursor_OrderPlayer      , ~/MouseWidget_ValidateDefense),
-        (Cursor_OrderInvalid     , ~/MouseWidget_InvalidDefense),
-    ]
-
-    TextColorMap = MAP
-    [
-        (TextStyle_WithinRange  , "WidgetSelector/WithinRange"),
-        (TextStyle_Invalid      , "WidgetSelector/Invalid"),
-    ]
-)
-
-//--------------------------------------------------------
-
 InGameMousePolicyManagerResources is TUISpecificMousePolicyManagerResources
 (
     KeyBoardPresetUpdater   = $/KeyboardPreset/KeyboardPresetUpdater
@@ -1174,7 +1122,6 @@ InGameMousePolicyManagerResources is TUISpecificMousePolicyManagerResources
 
     MouseWidgetSelectorForGhost = "MouseWidgetSelector_Ghost"
     DefaultMouseWidgetSelector = "MouseWidgetSelectorDefault"
-    MouseWidgetSelectorForDefenseLine = "DefenseLineMouseWidgetSelector"
 
     MouseWidgetSelectorByName = MAP
     [
@@ -1225,10 +1172,6 @@ InGameMousePolicyManagerResources is TUISpecificMousePolicyManagerResources
         (
             "MouseWidgetSelectorDefault",
             ~/MouseWidgetSelectorDefault
-        ),
-        (
-            "DefenseLineMouseWidgetSelector",
-            ~/DefenseLineMouseWidgetSelector
         ),
     ]
 )

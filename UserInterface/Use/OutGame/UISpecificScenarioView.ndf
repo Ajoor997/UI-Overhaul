@@ -32,6 +32,7 @@ private ScenarioBriefDescriptor is BUCKButtonDescriptor
             (
                 RelativeWidthHeight = [1.0, 1.0]
             )
+
             HasBackground = true
             BackgroundBlockColorToken = "DivisionBrief/ButtonOverlay"
 
@@ -120,7 +121,7 @@ private Texte_Mission is BUCKListDescriptor
 
     FirstMargin = TRTTILength (Magnifiable = 10.0)
     InterItemMargin = TRTTILength (Magnifiable = 5.0)
-    LastMargin = TRTTILength (Magnifiable = 10)
+    LastMargin = TRTTILength (Magnifiable = 10.0)
 
     Elements =
     [
@@ -226,7 +227,10 @@ private Texte_Mission is BUCKListDescriptor
             ComponentDescriptor = BUCKMultiListContentElementDescriptor
             (
                 ElementName = "OperationDifficultyMultilist"
-                ComponentFrame = TUIFramePropertyRTTI( RelativeWidthHeight = [0.0, 1.0] )
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    RelativeWidthHeight = [0.0, 1.0]
+                )
                 FitStyle = ~/ContainerFitStyle/FitToContentHorizontally
 
                 Components =
@@ -314,16 +318,64 @@ private ScenarioBriefsRack is BUCKRackDescriptor
 
 //-------------------------------------------------------------------------------------
 
-private ScenarioDescriptionContainer is BUCKContainerDescriptor
+private template SoloLaunchButton
+[
+    ElementName : string = "SelectButton",
+    TextToken : string = "DS_SELECT",
+    TextDico : string = ~/LocalisationConstantes/dico_interface_outgame,
+] is ConfirmButton
 (
-    ElementName = "ScenarioDescription"
-    ComponentFrame = TUIFramePropertyRTTI
-    (
-        MagnifiableWidthHeight = [520.0,741.0]
-        MagnifiableOffset = [285.0, 25.0]
-        AlignementToFather = [0.5, 0.0]
-        AlignementToAnchor = [0.5, 0.0]
-    )
+    ElementName = <ElementName>
+    TextToken = <TextToken>
+    TextDico = <TextDico>
+    Mapping = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ENTER ) )
+    ButtonMagnifiableWidthHeight = [175.0, 35.0]
+    ButtonAlignementToAnchor = [0.5, 1.0]
+    ButtonAlignementToFather = [0.5, 1.0]
+    ButtonMagnifiableOffset = [0.0, -10.0]
+    TextTypefaceToken = "Liberator"
+    TextColorToken = "tampon_vert"
+    BorderLineColorToken = "tampon_vert"
+    HasBackground = false
+    BackgroundBlockColorToken = "loginBoutonBackground_cyan"
+    TextSizeToken = "32"
+    BorderThicknessToken = "3"
+    BigLineAction = ~/BigLineAction/ResizeFont
+    TextPadding = TRTTILength4( Magnifiable = [5.0, 0.0, 5.0, 0.0] )
+)
+
+private template SoloQuitButton
+[
+    TextToken : string = "BTN_CLOSE",
+] is ConfirmButton
+(
+    ElementName = "BackButton"
+    TextToken = <TextToken>
+    Mapping = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ESCAPE ) )
+    ButtonMagnifiableWidthHeight = [175.0, 35.0]
+    ButtonAlignementToAnchor = [0.5, 1.0]
+    ButtonAlignementToFather = [0.5, 1.0]
+    ButtonMagnifiableOffset = [0.0, -10.0]
+    TextTypefaceToken = "Liberator"
+    TextColorToken = "tampon_gris"
+    BorderLineColorToken = "tampon_gris"
+    HasBackground = false
+    BackgroundBlockColorToken = "loginBoutonBackground_cyan"
+    TextSizeToken = "32"
+    BorderThicknessToken = "3"
+)
+
+//-------------------------------------------------------------------------------------
+
+private template ScenarioDescriptionContainer
+[
+    ElementName : string,
+    ComponentFrame : TUIFramePropertyRTTI,
+    IsChallenge : bool,
+] is BUCKContainerDescriptor
+(
+    ElementName = <ElementName>
+    ComponentFrame = <ComponentFrame>
 
     Components =
     [
@@ -349,55 +401,37 @@ private ScenarioDescriptionContainer is BUCKContainerDescriptor
                     ElementName = "ScenarioDescriptionContainer"
                     ComponentFrame = TUIFramePropertyRTTI
                     (
-                        RelativeWidthHeight = [1.0, 0.0]
+                        RelativeWidthHeight = [1.0, 1.0]
                     )
 
-                    FitStyle = ~/ContainerFitStyle/FitToContentVertically
-
-                    // envoie ResumeCampagneTypeHistorique pour les challenge
+                    // envoie ResumeCampagneTypeHistorique ou ChallengeMoreDescriptionType pour les challenge
                     // envoie ResumeCampagneType3 pour campagne et tuto
                 ),
-                // liste des boutons
-                BUCKListDescriptor
+            ] + (<IsChallenge> ?
+            [
+                SoloLaunchButton
                 (
-                    ComponentFrame = TUIFramePropertyRTTI
-                    (
-                        AlignementToFather = [0.5, 1.0]
-                        AlignementToAnchor = [0.5, 1.0]
-                        MagnifiableWidthHeight = [0.0, 38.0]
-                        MagnifiableOffset =  [0.0, -2.0]
-                    )
-
-                    Axis = ~/ListAxis/Horizontal
-                    InterItemMargin = TRTTILength(Magnifiable = 10.0)
-                    LastMargin = TRTTILength(Magnifiable = 0.0)
-
-                    Elements =
-                    [
-                        BUCKListElementDescriptor
-                        (
-                            ExtendWeight = 0.5
-                            ComponentDescriptor = BUCKContainerDescriptor (ComponentFrame = TUIFramePropertyRTTI ())
-                        ),
-                        BUCKListElementDescriptor( ComponentDescriptor = ~/SoloLaunchButton ),
-                        BUCKListElementDescriptor( ComponentDescriptor = MenuActionButtonSeparator()),
-                        BUCKListElementDescriptor( ComponentDescriptor = ~/SoloQuitButton ),
-                        BUCKListElementDescriptor
-                        (
-                            ExtendWeight = 0.5
-                            ComponentDescriptor = BUCKContainerDescriptor (ComponentFrame = TUIFramePropertyRTTI ())
-                        ),
-                    ]
+                    ElementName = "ShowMissionDetailsButton"
                 ),
-            ]
+                SoloLaunchButton
+                (
+                    TextToken = "cha_titre"
+                    TextDico = ~/LocalisationConstantes/dico_maps
+                ),
+            ] :
+            [
+                SoloLaunchButton(),
+            ])
         )
     ]
 )
 
 //-------------------------------------------------------------------------------------
-template ScenarioListContainer
+
+private template ScenarioListContainer
 [
     ListTitle : string,
+    IsChallenge : bool,
     IsTutorial : bool
 ] is BUCKContainerDescriptor
 (
@@ -425,13 +459,26 @@ template ScenarioListContainer
             MagnifiableBottomLeftOffset = [6.0, 0.0]
             MagnifiableBottomRightOffset = [7.0, -5.0]
 
-            Components =
+            Components = (<IsChallenge> ?
+            [
+                BUCKContainerDescriptor
+                (
+                    ElementName = "ScenarioDetailsContainer"
+                    ComponentFrame = TUIFramePropertyRTTI
+                    (
+                        RelativeWidthHeight = [1.0, 1.0]
+                    )
+
+                    // Envoie ChallengeDescriptionType pour les challenge
+                ),
+            ] : []) +
             [
                 ScenarioMultiList
                 (
                     ListTitle = <ListTitle>
                     IsTutorial = <IsTutorial>
-                )
+                ),
+                SoloQuitButton(),
             ]
         ),
     ]
@@ -439,7 +486,7 @@ template ScenarioListContainer
 
 //-------------------------------------------------------------------------------------
 
-template ScenarioMultiList
+private template ScenarioMultiList
 [
     ListTitle : string,
     IsTutorial : bool
@@ -608,7 +655,6 @@ template ScenarioTitleContainer
     ]
 )
 
-
 //-------------------------------------------------------------------------------------
 
 ChallengeDoneColumnWidth is 60
@@ -750,15 +796,18 @@ private template BUCKSpecificScenarioMainComponentDescriptor
                 AlignementToFather = [0.5, 1.0]
             )
 
-            Components =
+            Components = []+ ((<GameType> == ~/GameChallenge) ?
+            [
+                ~/FullPanelPreviewMission,
+            ] :
             [
                 FullPanelLoadMission
                 (
                     ListTitle = (<GameType> == ~/GameCampaign) ? "tuto_list" : ((<GameType> == ~/GameStrategic) ? "str_list" : "op_list")
                     BackgroundTexture = (<GameType> == ~/GameCampaign) ? ~/TutorielMissionListBackground : ((<GameType> == ~/GameStrategic) ? ~/StrategicMissionListBackground : ~/ChallengeMissionListBackground)
-                    IsTutorial = (<GameType> == ~/GameCampaign) ? true : false
-                )
-            ]
+                    IsTutorial = (<GameType> == ~/GameCampaign)
+                ),
+            ])
         )
     ]
 )
@@ -767,39 +816,84 @@ template FullPanelLoadMission
 [
     BackgroundTexture : string,
     ListTitle : string,
-    IsTutorial : bool
-] is BUCKContainerDescriptor
+    IsTutorial : bool,
+] is BUCKTextureDescriptor
 (
     ElementName = "LoadMissionFullPanel"
     ComponentFrame = TUIFramePropertyRTTI
     (
-        RelativeWidthHeight = [1.0, 1.0]
+        MagnifiableWidthHeight = [1214.0, 806.0]
+        AlignementToFather = [0.5, 1.0]
+        AlignementToAnchor = [0.5, 1.0]
+        MagnifiableOffset = [0,25]
     )
+
+    TextureToken = <BackgroundTexture>
+    HidePointerEvents = true
 
     Components =
     [
-        BUCKTextureDescriptor
+        // page de gauche
+        ScenarioListContainer
         (
+            ListTitle = <ListTitle>
+            IsChallenge = false
+            IsTutorial = <IsTutorial>
+        ),
+        // page de droite
+        ScenarioDescriptionContainer
+        (
+            ElementName = "ScenarioDescription"
             ComponentFrame = TUIFramePropertyRTTI
             (
-                MagnifiableWidthHeight = [1214.0, 806.0]
-                AlignementToFather = [0.5, 1.0]
-                AlignementToAnchor = [0.5, 1.0]
+                MagnifiableWidthHeight = [520.0,741.0]
+                MagnifiableOffset = [285.0, 25.0]
+                AlignementToFather = [0.5, 0.0]
+                AlignementToAnchor = [0.5, 0.0]
             )
-            TextureToken = <BackgroundTexture>
-            HidePointerEvents = true
+            IsChallenge = false
+        ),
+    ]
+)
 
-            Components =
-            [
-                // page de gauche
-                ScenarioListContainer
-                (
-                    ListTitle = <ListTitle>
-                    IsTutorial = <IsTutorial>
-                ),
-                // page de droite
-                ScenarioDescriptionContainer,
-            ]
+//-------------------------------------------------------------------------------------
+
+FullPanelPreviewMission is BUCKTextureDescriptor
+(
+    ElementName = "FullPanelPreviewMission"
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [1214.0, 806.0]
+        AlignementToFather = [0.5, 1.0]
+        AlignementToAnchor = [0.5, 1.0]
+        MagnifiableOffset = [0,25]
+
+    )
+
+    TextureToken = ~/ChallengeMissionListBackground
+    HidePointerEvents = true
+
+    Components =
+    [
+        // page de gauche
+        ScenarioListContainer
+        (
+            ListTitle = "op_list"
+            IsTutorial = false
+            IsChallenge = true
+        ),
+        // page de droite
+        ScenarioDescriptionContainer
+        (
+            ElementName = "ScenarioMap"
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                MagnifiableWidthHeight = [520.0,741.0]
+                MagnifiableOffset = [285.0, 25.0]
+                AlignementToFather = [0.5, 0.0]
+                AlignementToAnchor = [0.5, 0.0]
+            )
+            IsChallenge = true
         ),
     ]
 )
@@ -815,4 +909,10 @@ template UISpecificScenarioViewDescriptor
 (
     MainComponentDescriptor = BUCKSpecificScenarioMainComponentDescriptor(GameType = <GameType> IsSubView = <IsSubView>)
     MainComponentContainerUniqueName = <ComponentContainerUniqueName> // Permet d'indiquer l'endroit ou le composant doit s'insérer
+
+    ChallengeDescriptionType = "SummaryCampaignShowroom" // Left page
+    ChallengeMoreDescriptionType = "ScenarioMapDescription" // Right page
+
+    CloseButtonText = "BTN_CLOSE"
+    BackButtonText = "BTN_BACK"
 )

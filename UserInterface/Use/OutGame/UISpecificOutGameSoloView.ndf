@@ -118,7 +118,7 @@ ListeDesActionsSolo is BUCKListDescriptor
             ComponentDescriptor = ThumbnailSoloDescriptor
             (
                 ElementName = "HUBScenarioButton"
-                TextToken = "SGP_OP"
+                TextToken = "CHALLENGE"
                 ForceEvents = true
                 Locked = true
                 LeftClickSound = SoundEvent_EnterSoloChallenge

@@ -3,11 +3,7 @@
 SmartGroupPanelHeadList is BUCKListDescriptor
 (
     ElementName = "SmartGroupPanelHeadList"
-    ComponentFrame = TUIFramePropertyRTTI
-    (
-        AlignementToFather = [0.0, 0.0]
-        AlignementToAnchor = [0.0, 0.0]
-    )
+    ComponentFrame = TUIFramePropertyRTTI()
 
     Axis = ~/ListAxis/Vertical
     BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
@@ -26,10 +22,7 @@ SmartGroupPanelHeadList is BUCKListDescriptor
             ComponentDescriptor = BUCKTextDescriptor
             (
                 ElementName = 'GroupName'
-                ComponentFrame = TUIFramePropertyRTTI
-                (
-                    MagnifiableWidthHeight = [0.0, 0.0]
-                )
+                ComponentFrame = TUIFramePropertyRTTI()
 
                 TextPadding = TRTTILength4(Magnifiable = [10.0, 0.0, 0.0, 0.0])
 
@@ -53,11 +46,8 @@ SmartGroupPanelHeadList is BUCKListDescriptor
             ComponentDescriptor = BUCKTextDescriptor
             (
                 ElementName = "NbUnits"
-                ComponentFrame = TUIFramePropertyRTTI
-                (
-                    AlignementToFather = [0.0, 0.0]
-                    AlignementToAnchor = [0.0, 0.0]
-                )
+                ComponentFrame = TUIFramePropertyRTTI()
+
                 TextPadding = TRTTILength4(Magnifiable = [10.0, 0.0, 0.0, 0.0])
                 ParagraphStyle = TParagraphStyleRTTI
                 (
@@ -105,9 +95,7 @@ template SmartGroupActionButton
 
     ComponentFrame = <ComponentFrame>
 
-    HasBorder = false
     IsTogglable = <IsTogglable>
-
     IsClippable = <IsClippable>
 
     Components =
@@ -204,31 +192,10 @@ SmartGroupLabelContainer is BUCKContainerDescriptor
         ),
         BUCKContainerDescriptor
         (
+            ElementName = "SmartGroupLabelContainer"
             ComponentFrame = TUIFramePropertyRTTI()
             FitStyle = ~/ContainerFitStyle/FitToContent
             ChildFitToContent = true
-
-            Components =
-            [
-                BUCKContainerDescriptor
-                (
-                    ElementName = "SmartGroupLabelContainer"
-                    ComponentFrame = TUIFramePropertyRTTI()
-                    FitStyle = ~/ContainerFitStyle/FitToContent
-                    ChildFitToContent = true
-                ),
-                BUCKContainerDescriptor
-                (
-                    ElementName = "ForegroundOverlay"
-                    ComponentFrame = TUIFramePropertyRTTI
-                    (
-                        RelativeWidthHeight = [1.0, 1.0]
-                    )
-
-                    HasBackground = true
-                    BackgroundBlockColorToken = "BoutonTemps"
-                )
-            ]
         ),
     ]
 )
@@ -237,9 +204,10 @@ SmartGroupLabelContainer is BUCKContainerDescriptor
 
 SmartGroupUnitGrid is BUCKSpecificScrollingContainerDescriptor
 (
-    ElementName = 'ScrollingContainer'
+    ElementName = "ScrollingContainer"
     ComponentFrame = TUIFramePropertyRTTI
     (
+        MagnifiableOffset = [0.0, -5.0]
         AlignementToAnchor = [0.0, 1.0]
         AlignementToFather = [0.0, 1.0]
     )
@@ -266,8 +234,8 @@ SmartGroupUnitGrid is BUCKSpecificScrollingContainerDescriptor
             MaxElementsPerDimension = [6, 0]
 
             FirstElementMargin = TRTTILength2(Magnifiable = [10.0, 0.0])
-            InterElementMargin = TRTTILength2( Magnifiable = [2.0, 2.0] )
-            LastElementMargin = TRTTILength2( Magnifiable = [10.0, 0.0] )
+            InterElementMargin = TRTTILength2(Magnifiable = [2.0, 2.0])
+            LastElementMargin = TRTTILength2(Magnifiable = [10.0, 0.0])
         )
     ]
 )
@@ -280,12 +248,12 @@ SmartGroupSelectionPanelMainPanel is BUCKListDescriptor
 
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = [0.0, 88.0]
+        MagnifiableWidthHeight = [0.0, 93.0]
     )
 
     Axis = ~/ListAxis/Horizontal
 
-    InterItemMargin = TRTTILength(Magnifiable = 0.0)
+    HidePointerEvents = true
 
     Elements =
     [
@@ -298,6 +266,7 @@ SmartGroupSelectionPanelMainPanel is BUCKListDescriptor
                 ComponentFrame = TUIFramePropertyRTTI
                 (
                     MagnifiableWidthHeight = [75.0, 25.0]
+                    MagnifiableOffset = [0.0, -5.0]
                     AlignementToFather = [0.0, 1.0]
                     AlignementToAnchor = [0.0, 1.0]
                 )
@@ -312,32 +281,6 @@ SmartGroupSelectionPanelMainPanel is BUCKListDescriptor
             ComponentDescriptor = ~/SmartGroupUnitGrid
         ),
     ]
-)
-
-//-------------------------------------------------------------------------------------
-
-BUCKSpecificSmartGroupSelectionPanelMainComponentDescriptor is BUCKListDescriptor
-(
-    ElementName = "SmartGroupSelectionPanelMainComponent"
-
-    ComponentFrame = TUIFramePropertyRTTI()
-
-    HidePointerEvents = true
-
-    Axis = ~/ListAxis/Vertical
-    BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
-
-    FirstMargin = TRTTILength(Magnifiable = 0.0)
-    InterItemMargin = TRTTILength(Magnifiable = 0.0)
-    LastMargin = TRTTILength(Magnifiable = 5.0)
-
-    Elements =
-    [
-        BUCKListElementDescriptor
-        (
-            ComponentDescriptor = ~/SmartGroupSelectionPanelMainPanel
-        )
-    ]
 
     BackgroundComponents =
     [
@@ -346,7 +289,7 @@ BUCKSpecificSmartGroupSelectionPanelMainComponentDescriptor is BUCKListDescripto
             BorderLineColorToken = "H2_bleu_2"
             BackgroundBlockColorToken = "H2_bleu_2_60p"
         ),
-        SmartGroupPanelHeadList
+        SmartGroupPanelHeadList,
     ]
 )
 
@@ -357,7 +300,7 @@ template UISpecificSmartGroupSelectionPanelViewDescriptor
     MainComponentContainerUniqueName : string,
 ] is TUISpecificSmartGroupSelectionPanelViewDescriptor
 (
-    MainComponentDescriptor = ~/BUCKSpecificSmartGroupSelectionPanelMainComponentDescriptor
+    MainComponentDescriptor = ~/SmartGroupSelectionPanelMainPanel
 
     MainComponentContainerUniqueName = <MainComponentContainerUniqueName> // Permet d'indiquer l'endroit ou le composant doit s'insérer
 

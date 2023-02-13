@@ -7,9 +7,70 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
     [
         //-------------------------------------------------------------------------------------
         // infos, victoire / defaite
+
+        (
+            "score_01",
+            TTFSCommand_StyleChange
+            (
+                Style = TTextStyleRTTI
+                (
+                    FontSize    = 1.0
+                    ColorBottom = [3,108,0,255]
+                    ColorUp     = [38,158,34,255]
+                    ColorStroke = [  0,   0,   0, 255]
+                    Stroke = false
+                    AllowSmallFont = true
+                )
+            )
+        ),
+        (
+            "score_02",
+            TTFSCommand_StyleChange
+            (
+                Style = TTextStyleRTTI
+                (
+                    FontSize    = 1.0
+                    ColorBottom = [38,158,34,255]
+                    ColorUp     = [38,158,34,255]
+                    ColorStroke = [  0,   0,   0, 255]
+                    Stroke = false
+                    AllowSmallFont = true
+                )
+            )
+        ),
+        (
+            "score_03",
+            TTFSCommand_StyleChange
+            (
+                Style = TTextStyleRTTI
+                (
+                    FontSize    = 1.0
+                    ColorBottom = [49,207,45,255]
+                    ColorUp     = [49,207,45,255]
+                    ColorStroke = [  0,   0,   0, 255]
+                    Stroke = false
+                    AllowSmallFont = true
+                )
+            )
+        ),
+        (
+            "score_04",
+            TTFSCommand_StyleChange
+            (
+                Style = TTextStyleRTTI
+                (
+                    FontSize    = 1.0
+                    ColorBottom = [183,172,41,255]
+                    ColorUp     = [183,172,41,255]
+                    ColorStroke = [  0,   0,   0, 255]
+                    Stroke = false
+                    AllowSmallFont = true
+                )
+            )
+        ),
         (
             "score_05",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -24,7 +85,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "pi0",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -39,7 +100,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "pi1",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -54,7 +115,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "pi2",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -69,7 +130,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "pi3",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -84,7 +145,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "win75",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -99,7 +160,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "win90",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -114,7 +175,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "Ewin50",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -129,7 +190,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "Ewin75",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -144,7 +205,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "Ewin90",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -161,7 +222,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         //-------------------------------------------------------------------------------------
         (
             "shint",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -176,7 +237,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "poor",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -191,7 +252,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "SemiTransp",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -206,7 +267,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "SemiTransp2",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -221,7 +282,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "U1",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -236,7 +297,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "default",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -251,7 +312,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "small",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -266,7 +327,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "dateSM",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -281,7 +342,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
          (
             "medium",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -296,7 +357,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
          (
             "up",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -312,7 +373,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
          (
             "transparent",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -330,7 +391,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "or", // BLANC PUR
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -345,7 +406,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "coloredtext1", // VERT FLUO
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -360,7 +421,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "coloredtext2", // GRIS
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -375,7 +436,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "coloredtext3", // ORANGE
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -393,7 +454,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "coloredtext4", // BLEU CIEL
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -411,7 +472,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "coloredtext5", // ORANGE - doublon
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -429,7 +490,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
          (
             "blue", // ROUGE
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -447,7 +508,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
          (
             "green", // ROUGE
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -465,7 +526,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
          (
             "lightgreen",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -483,7 +544,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
          (
             "magenta", // ROUGE
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -501,7 +562,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "red", // ROUGE
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -519,7 +580,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "Red", // ROUGE
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -537,7 +598,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "black", // ROUGE
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -555,7 +616,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "coloredtext6", // ROUGE
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -573,7 +634,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "coloredtext7", // VertPomme
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -591,7 +652,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "pricetext",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -606,7 +667,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "conquestincometext",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -620,7 +681,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "smallertitle",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -636,7 +697,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "hint",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -650,7 +711,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "stroked",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -666,7 +727,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         //-------------------------------------------------------------------------------------//
         (
             "gras",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -681,7 +742,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "bold",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -696,7 +757,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "gras1",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -711,7 +772,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "style1",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -726,7 +787,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "styleGreen",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -741,7 +802,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "grayed",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -756,7 +817,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "grayed2",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -771,7 +832,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "LightestGray",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -786,7 +847,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "arme",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -802,7 +863,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "bleuvariable",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -818,7 +879,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "date",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -834,7 +895,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "Arialbold",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -850,7 +911,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "styleYellow",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -865,7 +926,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "exposant",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -881,7 +942,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "turquoise",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -896,7 +957,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "cyan",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -911,7 +972,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "boldcyan",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -926,7 +987,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "style_armored",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -941,7 +1002,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "style_assault",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -956,7 +1017,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "style_artillery",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -971,7 +1032,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "styleTurquoise",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -986,7 +1047,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "styleGlacier",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -1001,7 +1062,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "styleOTAN",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -1016,7 +1077,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "stylePACT",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -1031,7 +1092,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "blueNATO",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -1046,7 +1107,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "redPACT",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -1061,7 +1122,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "stylered",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (
@@ -1076,7 +1137,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         (
             "styleblue",
-            TTFSCommand_StyleChangeRTTI
+            TTFSCommand_StyleChange
             (
                 Style = TTextStyleRTTI
                 (

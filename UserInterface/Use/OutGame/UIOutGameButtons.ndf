@@ -20,8 +20,6 @@ template ImageButton
     HintDico : string = ~/LocalisationConstantes/dico_interface_outgame,
     HintableAreaElementName : string = "",
 
-    SpotlightComponent : TBUCKContainerDescriptor = SpotlightDescriptor(),
-
     ChildFitToContent : bool = false,
 
     HasBorder : bool = true,
@@ -46,8 +44,6 @@ is BUCKButtonDescriptor
     FocusMapping = <FocusMapping>
 
     Mapping = <Mapping>
-
-    SpotlightComponent = <SpotlightComponent>
 
     ChildFitToContent = <ChildFitToContent>
 
@@ -112,8 +108,6 @@ template HUBButton
     HintExtendedToken : string = "",
     HintDico : string = ~/LocalisationConstantes/dico_interface_outgame,
     HintableAreaElementName : string = "",
-
-    SpotlightComponent : TBUCKContainerDescriptor = SpotlightDescriptor(),
 ]
 is BUCKButtonDescriptor
 (
@@ -135,8 +129,6 @@ is BUCKButtonDescriptor
     FocusMapping = <FocusMapping>
 
     Mapping = <Mapping>
-
-    SpotlightComponent = <SpotlightComponent>
 
     Components =
     [
@@ -239,8 +231,6 @@ template HUBActionButtonResizeWithMax
 
     HasAutoHint : bool = false,
     AutoHintElementName : string = "AutoHint",
-
-    SpotlightComponent : TBUCKContainerDescriptor = SpotlightDescriptor(),
 ]
 is BUCKButtonDescriptor
 (
@@ -267,8 +257,6 @@ is BUCKButtonDescriptor
 
     Mapping = <Mapping>
     LeftClickSound = <LeftClickSound>
-
-    SpotlightComponent = <SpotlightComponent>
 
     Components =
     [
@@ -348,8 +336,6 @@ template HUBActionButton
     HintExtendedToken : string = "",
     HintDico : string = ~/LocalisationConstantes/dico_interface_outgame,
     HintableAreaElementName : string = "",
-
-    SpotlightComponent : TBUCKContainerDescriptor = SpotlightDescriptor(),
 ]
 is BUCKButtonDescriptor
 (
@@ -375,8 +361,6 @@ is BUCKButtonDescriptor
 
     Mapping = <Mapping>
     LeftClickSound = <LeftClickSound>
-
-    SpotlightComponent = <SpotlightComponent>
 
     Components =
     [
@@ -446,8 +430,6 @@ template TURLButton
     HintExtendedToken : string = "",
     HintDico : string = ~/LocalisationConstantes/dico_interface_outgame,
     HintableAreaElementName : string = "",
-
-    SpotlightComponent : TBUCKContainerDescriptor = SpotlightDescriptor(),
 ]
 is BUCKButtonDescriptor
 (
@@ -470,8 +452,6 @@ is BUCKButtonDescriptor
     FocusMapping = <FocusMapping>
 
     Mapping = <Mapping>
-
-    SpotlightComponent = <SpotlightComponent>
 
     Components =
     [

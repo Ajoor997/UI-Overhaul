@@ -20,8 +20,6 @@ template Template_CircleDescriptor
 
 FeedbackLineOfSightDescriptor is TFeedbackLineOfSightDescriptor
 (
-    DistanceVisionMax = 10000 * Metre // distance d'affichache
-    TheoreticalMaxVision = 10000 * Metre // utilisé pour les calculs
     AnimationDuration = 0.05*6
 
     VisionOffset = DecalageParDefautDuPointDeVision
@@ -52,43 +50,62 @@ FeedbackLineOfSightDescriptor is TFeedbackLineOfSightDescriptor
             Thickness = 1000
             ShowDistanceText = true
             TextSize = 2000
-            Color = [216, 201, 181, 80]
+            Color = [129, 236, 239, 255]
          ),
         Template_CircleDescriptor(
             Radius = 500 * Metre div MultiplicateurMetreRTSVersDistanceFeedbackTactique
             Thickness = 1000
             ShowDistanceText = true
             TextSize = 2000
-            Color = [216, 201, 181, 80]
+            Color = [129, 236, 239, 128]
          ),
         Template_CircleDescriptor(
             Radius = 1000 * Metre div MultiplicateurMetreRTSVersDistanceFeedbackTactique
             Thickness = 1000
             ShowDistanceText = true
+			TextSize = 2000
+            Color = [127, 255, 117, 255]
          ),
         Template_CircleDescriptor(
             Radius = 1500 * Metre div MultiplicateurMetreRTSVersDistanceFeedbackTactique
             Thickness = 1000
             ShowDistanceText = true
             TextSize = 2000
-            Color = [216, 201, 181, 80]
+            Color = [250, 244, 23, 150]
          ),
         Template_CircleDescriptor(
             Radius = 2000 * Metre div MultiplicateurMetreRTSVersDistanceFeedbackTactique
             Thickness = 1200
             ShowDistanceText = true
+			TextSize = 2000
+			Color = [225, 148, 80, 150]
+	     ),
+        Template_CircleDescriptor(
+            Radius = 2275 * Metre div MultiplicateurMetreRTSVersDistanceFeedbackTactique
+            Thickness = 200
+            ShowDistanceText = true
+			TextSize = 500
+			Color = [225, 148, 80, 100]
          ),
         Template_CircleDescriptor(
             Radius = 2500 * Metre div MultiplicateurMetreRTSVersDistanceFeedbackTactique
             Thickness = 1000
             ShowDistanceText = true
             TextSize = 2000
+			Color = [255, 0, 0, 255]
+		 ),
+		Template_CircleDescriptor(
+            Radius = 2800 * Metre div MultiplicateurMetreRTSVersDistanceFeedbackTactique
+            Thickness = 300
+            ShowDistanceText = true
+            TextSize = 1000
+			Color = [191, 0, 255, 255]
          ),
     ]
 
     CircleOverrideDescriptor = TFeedbackLineOfSightCircleDescriptor(
                                     Radius = 3330 * Metre
-                                    Color = [236, 221, 201, 200]
+                                    Color = [0, 0, 0, 179]
                                     Thickness = 2000
                                     ShowText = true
                                     TextLayout = "Error %1: Si vous lisez ce message en jeu, c'est que quelqu'un à fait de la merde, et c'est surement moi ! (Frédéric M. 15/03/17)"
@@ -107,7 +124,7 @@ FeedbackLineOfSightDescriptor is TFeedbackLineOfSightDescriptor
                                 )
 
     RaysAngle = 70 * Degre
-    RayColor = [216, 201, 181, 127]
+    RayColor = [129, 236, 239, 255]
     RayThickness = 400*4
     RayStartDistanceStartFade = 500 * Metre //500
     RayStartDistanceEndFade = 800 * Metre //1000
@@ -123,28 +140,8 @@ FeedbackLineOfSightResource is TFeedbackLineOfSightResource
     Camera = $/M3D/Camera/CameraPrincipale
     World3D = $/M3D/Scene/DefaultWorld
     RenderLayer = TRenderLayerSelector(RenderLayerName = "Calque_3DLineOfSight")
-    WorldFloorUnitLoSProxy = $/M3D/Scene/WorldFloorUnitLoSProxy
     WorldFloorTerrainHeightProxy = $/M3D/Scene/WorldFloorTerrainHeightProxy
     MaterialGrid = $/M3D/Shader/Material3DLineOfSightGrid
 
     ShowAllWeaponsRanges = $/GUIOption/LoSShowAllWeapons
-
-    TerrainsGroups =
-    [
-        TFeedbackLineOfSightTerrainsGroup
-        (
-            TerrainTypes = [ ~/ETerrainType/ForetDense]
-            BlockOnEnterInsteadOfExit = false
-        ),
-        TFeedbackLineOfSightTerrainsGroup
-        (
-            TerrainTypes = [ ~/ETerrainType/Batiment]
-            BlockOnEnterInsteadOfExit = false
-        ),
-        TFeedbackLineOfSightTerrainsGroup
-        (
-            TerrainTypes = [ ~/ETerrainType/Ruin]
-            BlockOnEnterInsteadOfExit = false
-        ),
-    ]
 )

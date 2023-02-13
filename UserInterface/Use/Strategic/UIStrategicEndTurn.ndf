@@ -66,13 +66,8 @@ private BoutonNextTurn is BUCKButtonDescriptor
     (
         MagnifiableWidthHeight = [141, 40]
         MagnifiableOffset = [-20,0]
-
     )
 
-    SpotlightComponent = SpotlightDescriptor()
-    SpotlightLayer = $/UserInterface/UILayer_2DInterfaceDropDown_OutGame
-    //HasBackground = true
-    //FitStyle = ~/ContainerFitStyle/FitToContentHorizontally
     AreaShape = ~/AreaShape/Disc
 
     Components =
@@ -94,36 +89,32 @@ private BoutonNextTurn is BUCKButtonDescriptor
 
              Elements =
              [
-             // bouton
-             BUCKListElementDescriptor
-             (
-                ComponentDescriptor = BUCKTextureDescriptor
-                (
-                    ComponentFrame = TUIFramePropertyRTTI
+                 // bouton
+                 BUCKListElementDescriptor
+                 (
+                    ComponentDescriptor = BUCKTextureDescriptor
                     (
-                        MagnifiableWidthHeight = [28, 28]
-                        AlignementToAnchor = [0.0, 0.5]
-                        AlignementToFather = [0.0, 0.5]
-                    )
-
-                    TextureToken = "icone_nextTurn"
-                    TextureColorToken = 'SM_paleSilver'
-
-                )
-            ),
-             // text explicatif
-             BUCKListElementDescriptor
-             (
-                ComponentDescriptor = BUCKTextDescriptor
-                    (
-
                         ComponentFrame = TUIFramePropertyRTTI
                         (
-                            //MagnifiableWidthHeight = [200,50]
+                            MagnifiableWidthHeight = [28, 28]
+                            AlignementToAnchor = [0.0, 0.5]
+                            AlignementToFather = [0.0, 0.5]
+                        )
+
+                        TextureToken = "icone_nextTurn"
+                        TextureColorToken = 'SM_paleSilver'
+                    )
+                 ),
+                 // text explicatif
+                 BUCKListElementDescriptor
+                 (
+                    ComponentDescriptor = BUCKTextDescriptor
+                    (
+                        ComponentFrame = TUIFramePropertyRTTI
+                        (
                             AlignementToFather = [0,0.5]
                             AlignementToAnchor = [0,0.5]
                         )
-
 
                         ParagraphStyle = ~/LDHintParagraphStyleLeftAlignedExact
                         HorizontalFitStyle = ~/FitStyle/FitToContent
@@ -138,14 +129,14 @@ private BoutonNextTurn is BUCKButtonDescriptor
                         TextColor = 'SM_paleSilver'
                     )
                 )
-             ]
+            ]
             BackgroundComponents =
             [
                 PanelRoundedCorner
                 (
                     BackgroundBlockColorToken = 'SM_RifleGreen_75'
                     BorderLineColorToken = 'SM_Grullo'
-                    )
+                )
             ]
         ),
 

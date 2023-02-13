@@ -1,10 +1,10 @@
-template TFeedbackRenderToolboxStyleDescriptorForCommander
+template TPictographStyleDescriptorForCommander
 [
     BorderColor : color,
     FillColor : color,
     Effect : int = ~/FeedbackEffectMode/Solid
 ]
-is TFeedbackRenderToolboxStyleDescriptor
+is TPictographStyleDescriptor
 (
     Thickness = 800.0
     BorderColor = <BorderColor>
@@ -14,19 +14,7 @@ is TFeedbackRenderToolboxStyleDescriptor
 
 CommanderResources is TUISpecificCommanderResources
 (
-    CommanderSelectionArrowStyleDescriptor = TFeedbackRenderToolboxStyleDescriptorForCommander
-    (
-        BorderColor = [245, 230, 185, 190]
-        FillColor = [245, 230, 185, 190]
-        Effect = ~/FeedbackEffectMode/Solid //pas utilisé dans warno
-    )
-    SuperCommanderSelectionArrowStyleDescriptor = TFeedbackRenderToolboxStyleDescriptorForCommander
-    (
-        BorderColor = [235, 220, 140, 230]
-        FillColor = [235, 220, 140, 230]
-        Effect = ~/FeedbackEffectMode/Solid //pas utilisé dans warno
-    )
-    CommanderEffectAreaStyleDescriptor = TFeedbackRenderToolboxStyleDescriptorForCommander
+    CommanderEffectAreaStyleDescriptor = TPictographStyleDescriptorForCommander
     (
         BorderColor = [255, 255, 255, 64]
         FillColor = [255, 255, 255, 64]

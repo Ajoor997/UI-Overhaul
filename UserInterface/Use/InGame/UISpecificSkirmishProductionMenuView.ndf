@@ -1,6 +1,3 @@
-// -------------------------------------------------------------------------------------------------
-// BUCKSpecificSkirmishProductionMenuMainComponentDescriptor
-// -------------------------------------------------------------------------------------------------
 
 private SkirmishProductionMenuBarTextHorizontalOffset is -6.0
 // Skirmish Production Menu Container
@@ -14,7 +11,7 @@ template BUCKSpecificSkirmishProductionMenuMainComponentDescriptor
     ComponentFrame = TUIFramePropertyRTTI
     (
         RelativeWidthHeight = [1.0, 0.0]
-        MagnifiableWidthHeight = [-10.0, 0.0]
+        MagnifiableWidthHeight = [0.0, 0.0]
         AlignementToFather = [0.5, 0.0]
         AlignementToAnchor = [0.5, 0.0]
     )
@@ -38,6 +35,7 @@ template BUCKSpecificSkirmishProductionMenuMainComponentDescriptor
 
             FirstMargin = TRTTILength(Magnifiable = (<IsFromStrategic> ? 0 : 0))
             InterItemMargin = TRTTILength(Magnifiable = 10.0)
+
             LastMargin = TRTTILength(Magnifiable = 10.0)
 
             ChildFitToContent = true
@@ -78,7 +76,7 @@ private PanelInfoPartie is BUCKListDescriptor
     ElementName = "ListeDesRessources"
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = [45.0, 35.0]
+        MagnifiableWidthHeight = [55.0, 35.0]
     )
 
     Axis = ~/ListAxis/Horizontal
@@ -200,7 +198,7 @@ private PointsCommandement is BUCKListDescriptor
                             TextToken = "HPROD_CMDP"
 
                             TextColor = "Gold"
-                            TextSize = "18"
+                            TextSize = "20"
 
                             Hint = BUCKSpecificHintableArea
                             (
@@ -378,7 +376,7 @@ private template SectorGaugeValue
     ElementName : string,
     BackgroundBlockColorToken : string,
     TextColor : string = "UIPlayerSpecific/Grey/Primary",
-] is BUCKSimpleGaugeValueDescriptor
+] is BUCKGaugeValueDescriptor
 (
     ElementName = "SectorPointsGauge" + <ElementName>
     ComponentFrame = TUIFramePropertyRTTI
@@ -391,7 +389,6 @@ private template SectorGaugeValue
     HasBackground = true
     BackgroundBlockColorToken = <BackgroundBlockColorToken>
 
-    HasAutoTextValue = true
     ValueTextName = "SectorPointsGauge" + <ElementName> + "Text"
 
     Components =
@@ -548,7 +545,6 @@ private SkirmishProductionMenuCommandPointsAndIncomeContainer is BUCKSpecificBut
     ButtonMagnifiableOffset = [5.0, 5.0]
     ButtonMagnifiableWidthHeight=[170.0, 40.0]
 
-    Mapping = $/KeyboardOption/Mapping_MainMenu
     BackgroundBlockColorToken = "Transparent"
 )
 
@@ -728,7 +724,7 @@ private ProductionTypeSelectionList is BUCKListDescriptor
 
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableOffset = [40.0, 3]
+        MagnifiableOffset = [50.0, 3]
     )
 
     Axis = ~/ListAxis/Vertical
@@ -899,7 +895,7 @@ SkirmishProductionMenuCombatGroupButton is BUCKSpecificButton
     TextColorToken = "ButtonHUD/Text2_pawn"
     TextSizeToken = "14"
     ButtonRelativeWidthHeight = [0.0, 0.0]
-    ButtonMagnifiableWidthHeight = [158, 30.0]
+    ButtonMagnifiableWidthHeight = [150, 30.0]
     ButtonMagnifiableOffset = [0,-2]
     TextTypefaceToken = "Eurostyle_Italic"
     IsTogglable = true

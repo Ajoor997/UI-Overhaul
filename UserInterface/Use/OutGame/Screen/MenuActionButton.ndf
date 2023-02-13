@@ -10,9 +10,9 @@ is BUCKContainerDescriptor
 
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = [1.0 + 2*<MagnifiableHorizontalMargin>, 26.0]
-        AlignementToFather = [0,0.5]
-        AlignementToAnchor = [0,0.5]
+        MagnifiableWidthHeight = [1.0 + 2.0*<MagnifiableHorizontalMargin>, 26.0]
+        AlignementToFather = [0.0, 0.5]
+        AlignementToAnchor = [0.0, 0.5]
     )
 
     Components =
@@ -32,6 +32,8 @@ is BUCKContainerDescriptor
         ),
     ]
 )
+
+//-------------------------------------------------------------------------------------
 
 private MenuActionRadioButtonManager is TBUCKRadioButtonManager()
 
@@ -90,6 +92,7 @@ template MenuActionButton
                 AlignementToFather = [0.0, 0.5]
                 AlignementToAnchor = [0.0, 0.5]
             )
+
             InterItemMargin = TRTTILength( Magnifiable = 10.0 )
             Axis = ~/ListAxis/Horizontal
 
@@ -104,8 +107,8 @@ template MenuActionButton
                                 (
                                     RelativeWidthHeight = [0.0, 1.0]
                                     MagnifiableWidthHeight = [32.0, 0.0]
-                                    AlignementToFather = [0,0.5]
-                                    AlignementToAnchor = [0,0.5]
+                                    AlignementToFather = [0.0, 0.5]
+                                    AlignementToAnchor = [0.0, 0.5]
                                 )
                                 TextureToken = <Icone_Texture>
                                 TextureColorToken = 'Blanc_multi'
@@ -127,8 +130,8 @@ template MenuActionButton
                         )
                         ComponentFrame = TUIFramePropertyRTTI
                         (
-                            AlignementToFather = [0,0.5]
-                            AlignementToAnchor = [0,0.5]
+                            AlignementToFather = [0.0, 0.5]
+                            AlignementToAnchor = [0.0, 0.5]
                         )
 
                         HorizontalFitStyle = ~/FitStyle/FitToContent

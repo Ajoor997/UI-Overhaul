@@ -380,8 +380,6 @@ EngagementRulesPanel is BUCKListDescriptor
     [
         PanelRoundedCorner()
     ]
-
-    SpotlightComponent = SpotlightDescriptor()
 )
 //-------------------------------------------------------------------------------------
 EngagmentButtonSave is BUCKListDescriptor
@@ -476,7 +474,7 @@ private UISpecificTacticEngagementRulesViewDescriptor is TUISpecificEngagementRu
         LastMargin = TRTTILength( Magnifiable = 6.0)
 
         HasBackground = true
-        BackgroundBlockColorToken = 'TypeC'
+        BackgroundBlockColorToken = 'Transparent'
 
         Axis = ~/ListAxis/Horizontal
     )

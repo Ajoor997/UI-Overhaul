@@ -289,7 +289,7 @@ is BUCKButtonDescriptor
 
                 BUCKListElementDescriptor
                 (
-                    ComponentDescriptor = BUCKSimpleGaugeDescriptor
+                    ComponentDescriptor = BUCKGaugeDescriptor
                     (
                         ElementName = <ElementName> + "DownloadGauge"
 
@@ -301,6 +301,9 @@ is BUCKButtonDescriptor
                         )
 
                         GridAlign = true
+
+                        HasBackground = true
+                        BackgroundBlockColorToken = "Gray"
 
                         HasBorder = true
                         BorderThicknessToken = "1"
@@ -314,18 +317,7 @@ is BUCKButtonDescriptor
 
                         Components =
                         [
-                            BUCKContainerDescriptor
-                            (
-                                ComponentFrame = TUIFramePropertyRTTI
-                                (
-                                    RelativeWidthHeight = [1.0, 1.0]
-                                )
-
-                                HasBackground = true
-                                BackgroundBlockColorToken = "Gray"
-                            ),
-
-                            BUCKSimpleGaugeValueDescriptor
+                            BUCKGaugeValueDescriptor
                             (
                                 ElementName = <ElementName> + 'DownloadValue'
                                 ComponentFrame = TUIFramePropertyRTTI

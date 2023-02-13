@@ -10,8 +10,6 @@ PhasePanel is BUCKContainerDescriptor
         AlignementToAnchor = [1, 0]
     )
 
-    SpotlightComponent = SpotlightDescriptor()
-
     Components =
     [
         BUCKContainerDescriptor

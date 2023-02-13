@@ -1,6 +1,7 @@
 
+
 // Icône d'évacuation
-UnitLabelUnitEvacIconBUCKComponent is BUCKTextureDescriptor
+private DEBUG_UnitLabelUnitEvacIconBUCKComponent is BUCKTextureDescriptor
 (
     ElementName = "EvacuationIcon"
     ComponentFrame = TUIFramePropertyRTTI
@@ -17,7 +18,7 @@ UnitLabelUnitEvacIconBUCKComponent is BUCKTextureDescriptor
 
 //----------------------------------------------------------------------
 // Nom du joueur
-UnitLabelUnitPlayerNameBUCKComponent is BUCKTextDescriptor
+private DEBUG_UnitLabelUnitPlayerNameBUCKComponent is BUCKTextDescriptor
 (
     ElementName = "PlayerName"
     ComponentFrame = TUIFramePropertyRTTI
@@ -51,7 +52,7 @@ UnitLabelUnitPlayerNameBUCKComponent is BUCKTextDescriptor
 
 //----------------------------------------------------------------------
 // Nom de l'unité
-private template UnitLabelUnitNameBUCKComponent
+private template DEBUG_UnitLabelUnitNameBUCKComponent
 [
     Alignement : float2 = [0.0, 0.0],
     IsForMultiSelection : bool = false,
@@ -63,15 +64,13 @@ is BUCKTextDescriptor
     ElementName = <IsForCarriedUnit> ? 'CarriedUnitName' : 'UnitName'
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = <IsForMultiSelection> ? [50+30, 0.0] : [0.0, 0.0]
         AlignementToFather = <Alignement>
         AlignementToAnchor = <Alignement>
     )
 
     ParagraphStyle = TParagraphStyleRTTI
     (
-        //Alignment = UIText_Left
-        Alignment = <IsForMultiSelection> ? UIText_Center : UIText_Left
+        Alignment = UIText_Left
         VerticalAlignment = UIText_VerticalCenter
         InterLine = 0
     )
@@ -79,10 +78,9 @@ is BUCKTextDescriptor
     HasBackground = true
     BackgroundLocalRenderLayer = <LocalRenderLayer>
     LocalRenderLayer = <LocalRenderLayer> + 1
-    TextPadding = <IsForMultiSelection> ? TRTTILength4(Magnifiable = [0.0, 0.0, 0.0, 0.0]) : TRTTILength4(Magnifiable = [3.0, 1.0, 3.0, 1.0])
+    TextPadding = <IsForMultiSelection> ? TRTTILength4(Magnifiable = [3.0, 0.0, 3.0, 0.0]) : TRTTILength4(Magnifiable = [3.0, 1.0, 3.0, 1.0])
 
-    //HorizontalFitStyle = ~/FitStyle/FitToContent
-    HorizontalFitStyle = <IsForMultiSelection> ? ~/FitStyle/UserDefined : ~/FitStyle/FitToContent
+    HorizontalFitStyle = ~/FitStyle/FitToContent
     VerticalFitStyle = ~/FitStyle/FitToContent
 
     BigLineAction = ~/BigLineAction/CutByDots
@@ -91,22 +89,20 @@ is BUCKTextDescriptor
     TextStyle = "Default"
     TypefaceToken = "UISecondFont"
     TextColor = "Blanc"
-    TextSize = (<IsForCarriedUnit> ? "12" :  "14")
+    TextSize = (<IsForCarriedUnit> ? "10" :  "14")
 )
 
 //----------------------------------------------------------------------
 // Icône d'unité
 
-private LabelUnitIconWidthHeight is [36.0, 36.0]
+private DEBUG_LabelUnitIconWidthHeight is [36.0, 36.0]
 
-template UnitLabelUnitIcon [
-    IsForMultiSelection : bool,
-] is BUCKTextureDescriptor
+private DEBUG_UnitLabelUnitIcon is BUCKTextureDescriptor
 (
     ElementName = "UnitIcon"
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = ~/LabelUnitIconWidthHeight
+        MagnifiableWidthHeight = ~/DEBUG_LabelUnitIconWidthHeight
         AlignementToFather = [0.0, 0.5]
         AlignementToAnchor = [0.0, 0.5]
     )
@@ -114,9 +110,8 @@ template UnitLabelUnitIcon [
     HasBorder = false
     BorderThicknessToken = '2'
     BorderLineColorToken = 'Blanc'
-    BackgroundBlockColorToken = "TypeC_MOD"
     HasBackground = true
-    BackgroundLocalRenderLayer = 2
+    BackgroundLocalRenderLayer = 1
     LocalRenderLayer = 2
     ChildFitToContent = true
 
@@ -128,14 +123,13 @@ template UnitLabelUnitIcon [
     ClipTextureToComponent = true
 
     Components =
-    [   
-        UnitLabelCarriedUnitIcon(LocalRenderLayer = 3),
+    [
+        DEBUG_UnitLabelCarriedUnitIcon(LocalRenderLayer = 3),
         BUCKListDescriptor
         (
             ComponentFrame = TUIFramePropertyRTTI
             (
                 RelativeWidthHeight = [1.0, 0.0]
-                MagnifiableOffset = <IsForMultiSelection> ? [0.0, 0.0] : [0.0, 7.0]
                 AlignementToFather = [0.0, 1.0]
                 AlignementToAnchor = [0.0, 1.0]
             )
@@ -145,22 +139,22 @@ template UnitLabelUnitIcon [
 
             Elements =
             [
-                BUCKListElementDescriptor(ComponentDescriptor = UnitLabelHPGaugeBUCKComponent(LocalRenderLayer = 3)),
+                BUCKListElementDescriptor(ComponentDescriptor = DEBUG_UnitLabelUnitMoraleGaugeBUCKComponent(LocalRenderLayer = 3)),
                 BUCKListElementSpacer(Magnifiable = 1.0),
-                BUCKListElementDescriptor(ComponentDescriptor = UnitLabelUnitMoraleGaugeBUCKComponent(LocalRenderLayer = 3))
+                BUCKListElementDescriptor(ComponentDescriptor = DEBUG_UnitLabelHPGaugeBUCKComponent(LocalRenderLayer = 3))
             ]
         ),
-        UnitLabelUnitExperienceIconsBUCKComponent(LocalRenderLayer = 3),
-        UnitLabelSpecialtyIcon(LocalRenderLayer = 3),
-        RadarActivityIcon(LocalRenderLayer = 3),
-        SmartChipList(LocalRenderLayer = 3),
+        DEBUG_UnitLabelUnitExperienceIconsBUCKComponent(LocalRenderLayer = 3),
+        DEBUG_UnitLabelSpecialtyIcon(LocalRenderLayer = 3),
+        DEBUG_RadarActivityIcon(LocalRenderLayer = 3),
+        DEBUG_SmartChipList(LocalRenderLayer = 3),
     ]
 )
 
 //----------------------------------------------------------------------
 // Fond de l'étiquette
 // les couleurs (background et lignes) sont spécifiées directement dans PlayerUIHelper.ndf
-template UnitLabelBackground
+private template DEBUG_UnitLabelBackground
 [
     LocalRenderLayer : int,
     MagnifiableWidthHeight : float2 = [40.0, 40.0],
@@ -187,7 +181,6 @@ is BUCKSensibleAreaDescriptor
 
             BackgroundLocalRenderLayer = <LocalRenderLayer> - 1
             LocalRenderLayer = <LocalRenderLayer>
-            
             HasBorder = false
             BorderThicknessToken = "2"
             BorderLineColorToken = "Blanc"
@@ -206,7 +199,7 @@ is BUCKSensibleAreaDescriptor
 
 //----------------------------------------------------------------------
 // Icône de transport
-private template UnitLabelCarriedUnitIcon
+private template DEBUG_UnitLabelCarriedUnitIcon
 [
     LocalRenderLayer : int,
     MagnifiableOffset : float2 = [-3.0, 0.0]
@@ -226,7 +219,7 @@ is BUCKTextureDescriptor
 
 //----------------------------------------------------------------------
 // Icône de spécialité
-private template UnitLabelSpecialtyIcon
+private template DEBUG_UnitLabelSpecialtyIcon
 [
     LocalRenderLayer : int,
 ]
@@ -247,7 +240,7 @@ is BUCKTextureDescriptor
 
 // -------------------------------------------------------------------------------------------------
 // Icone pour les armes a Radar
-private template RadarActivityIcon
+private template DEBUG_RadarActivityIcon
 [
     LocalRenderLayer : int,
 ] is BUCKTextureDescriptor
@@ -274,7 +267,7 @@ private template RadarActivityIcon
 
 //----------------------------------------------------------------------
 // Text de Smart Order actif
-private template SmartOrderText
+private template DEBUG_SmartOrderText
 [
     LocalRenderLayer : int
 ]
@@ -310,7 +303,7 @@ is BUCKTextDescriptor
 
 //----------------------------------------------------------------------
 // Numéro de smart group
-private template SmartGroupText
+private template DEBUG_SmartGroupText
 [
     LocalRenderLayer : int
 ]
@@ -345,7 +338,7 @@ is BUCKTextDescriptor
 
 //----------------------------------------------------------------------
 
-private template SmartChipList
+private template DEBUG_SmartChipList
 [
     LocalRenderLayer : int
 ] is BUCKListDescriptor
@@ -363,18 +356,18 @@ private template SmartChipList
     [
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = SmartGroupText(LocalRenderLayer = <LocalRenderLayer>)
+            ComponentDescriptor = DEBUG_SmartGroupText(LocalRenderLayer = <LocalRenderLayer>)
         ),
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = SmartOrderText(LocalRenderLayer = <LocalRenderLayer>)
+            ComponentDescriptor = DEBUG_SmartOrderText(LocalRenderLayer = <LocalRenderLayer>)
         ),
     ]
 )
 
 //----------------------------------------------------------------------
 // Icône de couverture
-template UnitLabelCoverIcon
+private template DEBUG_UnitLabelCoverIcon
 [
     LocalRenderLayer : int,
     IsForMultiSelection : bool = false,
@@ -398,7 +391,7 @@ is BUCKTextureDescriptor
 
 //----------------------------------------------------------------------
 // Icône de rechargement
-template UnitLabelUnitReloadIconBUCKComponent
+private template DEBUG_UnitLabelUnitReloadIconBUCKComponent
 [
     MagnifiableOffset : float2 = [0.0, 0.0],
     LocalRenderLayer : int,
@@ -430,7 +423,7 @@ is BUCKChronoAnimatedTextureDescriptor
 
 //----------------------------------------------------------------------
 // Chronographe de sortie de district
-private template UnitLabelUnitLeavingDistrictChronoBUCKComponent
+private template DEBUG_UnitLabelUnitLeavingDistrictChronoBUCKComponent
 [
     MagnifiableOffset : float2 = [-70.0, 0.0],
     AlignementToFather : float2 = [0.0, 0.0],
@@ -462,15 +455,15 @@ is BUCKChronoAnimatedTextureDescriptor
 
 //----------------------------------------------------------------------
 
-private LabelSupplyGaugeWidthHeight is [4.0, 30.0]
+private DEBUG_LabelSupplyGaugeWidthHeight is [4.0, 30.0]
 
 //----------------------------------------------------------------------
-UnitLabelUnitSupplyExtraGaugeText is BUCKTextDescriptor
+private DEBUG_UnitLabelUnitSupplyExtraGaugeText is BUCKTextDescriptor
 (
     ElementName = "ExtraGaugesText"
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = ~/LabelSupplyGaugeWidthHeight
+        MagnifiableWidthHeight = ~/DEBUG_LabelSupplyGaugeWidthHeight
     )
 
     HorizontalFitStyle = ~/FitStyle/UserDefined
@@ -493,12 +486,12 @@ UnitLabelUnitSupplyExtraGaugeText is BUCKTextDescriptor
 
 //----------------------------------------------------------------------
 
-UnitLabelUnitSupplyGaugeBUCKComponent is BUCKSimpleGaugeDescriptor
+private DEBUG_UnitLabelUnitSupplyGaugeBUCKComponent is BUCKSimpleGaugeDescriptor
 (
     ElementName = "SupplyGauge"
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = ~/LabelSupplyGaugeWidthHeight
+        MagnifiableWidthHeight = ~/DEBUG_LabelSupplyGaugeWidthHeight
     )
 
     Axis = ~/ListAxis/Vertical
@@ -522,7 +515,7 @@ UnitLabelUnitSupplyGaugeBUCKComponent is BUCKSimpleGaugeDescriptor
 
 // -------------------------------------------------------------------------------------------------
 // Liste des icones additionnels
-private template OverlayIconContainer
+private template DEBUG_OverlayIconContainer
 [
     MagnifiableIconSize : float = 32.0,
     LocalRenderLayer : int,
@@ -538,20 +531,20 @@ private template OverlayIconContainer
 
     Components =
     [
-        OverlayIconWithChrono
+        DEBUG_OverlayIconWithChrono
         (
             ElementName = "LeavingDistrictIcon"
             TextureToken = 'icone_leave'
             TextureColorToken = 'Blanc220'
             MagnifiableWidthHeight = [<MagnifiableIconSize>, <MagnifiableIconSize>]
-            ChronoIconElement = UnitLabelUnitLeavingDistrictChronoBUCKComponent
+            ChronoIconElement = DEBUG_UnitLabelUnitLeavingDistrictChronoBUCKComponent
             (
                 MagnifiableOffset = [0.0, 0.0]
                 LocalRenderLayer = <LocalRenderLayer>
             )
             LocalRenderLayer = <LocalRenderLayer>
         ),
-        OverlayIcon
+        DEBUG_OverlayIcon
         (
             ElementName = "StunIcon"
             TextureToken = 'icone_stun'
@@ -559,14 +552,14 @@ private template OverlayIconContainer
             MagnifiableWidthHeight = [<MagnifiableIconSize>, <MagnifiableIconSize>]
             LocalRenderLayer = <LocalRenderLayer>
         ),
-        OverlayIcon
+        DEBUG_OverlayIcon
         (
             ElementName = "PinnedIcon"
             TextureToken = 'icone_pinned'
             MagnifiableWidthHeight = [<MagnifiableIconSize>, <MagnifiableIconSize>]
             LocalRenderLayer = <LocalRenderLayer>
         ),
-        OverlayIcon
+        DEBUG_OverlayIcon
         (
             ElementName = "RoutIcon"
             TextureToken = 'icone_rout'
@@ -578,7 +571,7 @@ private template OverlayIconContainer
 
 // -------------------------------------------------------------------------------------------------
 // Icone additionel
-private template OverlayIcon
+private template DEBUG_OverlayIcon
 [
     ElementName : string,
     TextureToken : string,
@@ -606,7 +599,7 @@ private template OverlayIcon
 )
 
 //----------------------------------------------------------------------
-private template OverlayIconWithChrono
+private template DEBUG_OverlayIconWithChrono
 [
     ElementName : string,
     TextureToken : string,
@@ -626,7 +619,7 @@ private template OverlayIconWithChrono
 
     Components =
     [
-        OverlayIcon
+        DEBUG_OverlayIcon
         (
             ElementName = <ElementName> + "_Texture"
             TextureToken = <TextureToken>
@@ -640,7 +633,7 @@ private template OverlayIconWithChrono
 
 //----------------------------------------------------------------------
 // Morale Gauge
-template UnitLabelUnitMoraleGaugeBUCKComponent
+private template DEBUG_UnitLabelUnitMoraleGaugeBUCKComponent
 [
     ElementName = "MoraleGauge",
     AlignementToFather : float2 = [0.5, 0.0],
@@ -651,8 +644,7 @@ template UnitLabelUnitMoraleGaugeBUCKComponent
     ElementName = <ElementName>
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = [36.0, 3.0]
-        //MagnifiableOffset = [0.0, -8.0]
+        MagnifiableWidthHeight = [32.0, 2.0]
         AlignementToFather = <AlignementToFather>
         AlignementToAnchor = <AlignementToAnchor>
     )
@@ -662,12 +654,11 @@ template UnitLabelUnitMoraleGaugeBUCKComponent
 
     FilledContentColorToken = "Blanc"
     GaugeMax = 1
-
 )
 
 //----------------------------------------------------------------------
 // Health point gauge
-private template UnitLabelHPGaugeBUCKComponent
+private template DEBUG_UnitLabelHPGaugeBUCKComponent
 [
     ElementName = "HPGauge",
     LocalRenderLayer,
@@ -677,7 +668,6 @@ private template UnitLabelHPGaugeBUCKComponent
     ComponentFrame = TUIFramePropertyRTTI
     (
         MagnifiableWidthHeight = [0.0, 4.0] //La largeur est calculée dans le code à partir de MagnifiableWidthOneHPLabelBlock
-        //MagnifiableOffset = [0.0, -5.0]
         AlignementToFather = [0.5, 0.0]
         AlignementToAnchor = [0.5, 0.0]
     )
@@ -691,41 +681,17 @@ private template UnitLabelHPGaugeBUCKComponent
 
     GraduationThicknessToken = "1"
     GraduationColorToken = "Noir"
-
-    FilledContentColorToken = "AppleGreen"
+    FilledContentColorToken = "White"
     GaugeMax = 1
-//|||||||
-//=======
-//
-//    Components =
-//    [
-//        BUCKSimpleGaugeValueDescriptor
-//        (
-//            ElementName = <ElementName> + "Value"
-//            ComponentFrame = TUIFramePropertyRTTI
-//            (
-//                RelativeWidthHeight = [0.0, 1.0]
-//                AlignementToFather     = [0.0, 0.5]
-//                AlignementToAnchor     = [0.0, 0.5]
-//            )
-//
-//            HasBackground = true
-//            BackgroundBlockColorToken = "AppleGreen"
-//
-//            BackgroundLocalRenderLayer = <LocalRenderLayer>+1
-//        ),
-//    ]
-//>>>>>>>
 )
 
 //----------------------------------------------------------------------
 // Nombre d'unités
-private template UnitLabelUnitCountIconBUCKComponent
+private template DEBUG_UnitLabelUnitCountIconBUCKComponent
 [
     Alignement : float2 = [0.0, 0.0],
     LocalRenderLayer : int,
     IsForCarriedUnit : bool = false,
-    IsForMultiSelection : bool = false,
 ]
 is BUCKTextDescriptor
 (
@@ -734,7 +700,6 @@ is BUCKTextDescriptor
     (
         AlignementToAnchor = <Alignement>
         AlignementToFather = <Alignement>
-        MagnifiableOffset = <IsForMultiSelection> ? [0.0, 50] : [0.0, 0.0]
     )
 
     ParagraphStyle = TParagraphStyleRTTI
@@ -746,25 +711,25 @@ is BUCKTextDescriptor
 
     LocalRenderLayer = <LocalRenderLayer>+1
 
-    HorizontalFitStyle = <IsForMultiSelection> ? ~/FitStyle/UserDefined : ~/FitStyle/FitToContent
-    VerticalFitStyle = <IsForMultiSelection> ? ~/FitStyle/UserDefined : ~/FitStyle/FitToContent
+    HorizontalFitStyle = ~/FitStyle/FitToContent
+    VerticalFitStyle = ~/FitStyle/FitToContent
 
     BigLineAction = ~/BigLineAction/ResizeFont
-    TextPadding =  <IsForMultiSelection> ? TRTTILength4(Magnifiable = [1.0, 1.0, 1.0, 1.0]) : TRTTILength4(Magnifiable = [1.0, 1.0, 2.0, 1.0])
-    HasBackground = <IsForMultiSelection> ? false : true
+    TextPadding = TRTTILength4(Magnifiable = [1.0, 1.0, 2.0, 1.0])
 
+    HasBackground = true
     BackgroundBlockColorToken = "SD2_Gris80"
     BackgroundLocalRenderLayer = <LocalRenderLayer>
 
     TextStyle = "LabelUnitNameStroke"
     TypefaceToken = "UISecondFont"
     TextColor = "Blanc"
-    TextSize = <IsForMultiSelection> ? ( <IsForCarriedUnit> ? "16" : "16") : ( <IsForCarriedUnit> ? "10" : "14")
+    TextSize = ( <IsForCarriedUnit> ? "10" : "14")
 )
 
 //----------------------------------------------------------------------
 // Icône d'experience
-private template UnitLabelUnitExperienceIconsBUCKComponent
+private template DEBUG_UnitLabelUnitExperienceIconsBUCKComponent
 [
     LocalRenderLayer : int,
     MagnifiableWidthHeight : float2 = [10.0, 10.0],
@@ -790,7 +755,7 @@ is BUCKTextureDescriptor
 
 //----------------------------------------------------------------------
 // Message de critiques
-UnitLabelUnitLeavingDistrictBUCKComponent is BUCKContainerDescriptor
+private DEBUG_UnitLabelUnitLeavingDistrictBUCKComponent is BUCKContainerDescriptor
 (
     ElementName = "LeavingDistrictComponent"
     ComponentFrame = TUIFramePropertyRTTI
@@ -852,7 +817,7 @@ UnitLabelUnitLeavingDistrictBUCKComponent is BUCKContainerDescriptor
 
             TextDico = ~/LocalisationConstantes/dico_interface_ingame
 
-            TextColor = "White"
+            TextColor = "Cyan"
             TextSize = "UnitLabel/TextElement"
 
             TextToken = "DIST_LEAVE"
@@ -860,7 +825,7 @@ UnitLabelUnitLeavingDistrictBUCKComponent is BUCKContainerDescriptor
             LocalRenderLayer = 2
         ),
 
-        UnitLabelUnitLeavingDistrictChronoBUCKComponent
+        DEBUG_UnitLabelUnitLeavingDistrictChronoBUCKComponent
         (
             MagnifiableOffset = [22.0, 0.0]
             AlignementToFather = [1.0, 1.0]
@@ -872,7 +837,7 @@ UnitLabelUnitLeavingDistrictBUCKComponent is BUCKContainerDescriptor
 
 //----------------------------------------------------------------------
 // Message de critiques
-UnitLabelUnitCriticalMessageBUCKComponent is BUCKContainerDescriptor
+private DEBUG_UnitLabelUnitCriticalMessageBUCKComponent is BUCKContainerDescriptor
 (
     ElementName = "CriticTitle"
     ComponentFrame = TUIFramePropertyRTTI
@@ -934,8 +899,7 @@ UnitLabelUnitCriticalMessageBUCKComponent is BUCKContainerDescriptor
 
             TextDico = ~/LocalisationConstantes/dico_interface_ingame
 
-            //TextColor = "UnitLabel/CriticTitle"
-            TextColor = "White"
+            TextColor = "UnitLabel/CriticTitle"
             TextSize = "UnitLabel/TextElement"
 
             LocalRenderLayer = 2
@@ -945,7 +909,7 @@ UnitLabelUnitCriticalMessageBUCKComponent is BUCKContainerDescriptor
 
 //----------------------------------------------------------------------
 
-private StandardLabelList is BUCKListDescriptor
+private DEBUG_StandardLabelList is BUCKListDescriptor
 (
     Axis = ~/ListAxis/Vertical
     BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
@@ -954,7 +918,7 @@ private StandardLabelList is BUCKListDescriptor
     [
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = UpperLabel(IsForMultiSelection = false)
+            ComponentDescriptor = ~/DEBUG_UpperLabel
         ),
         BUCKListElementDescriptor
         (
@@ -972,13 +936,13 @@ private StandardLabelList is BUCKListDescriptor
                 Components =
                 [
                     // Icône de couverture
-                    UnitLabelCoverIcon
+                    DEBUG_UnitLabelCoverIcon
                     (
                         IsForMultiSelection = false
                         LocalRenderLayer = 4
                     ),
 
-                    UnitLabelBackground
+                    DEBUG_UnitLabelBackground
                     (
                         LocalRenderLayer = 2
                     ),
@@ -986,72 +950,20 @@ private StandardLabelList is BUCKListDescriptor
             )
         ),
 
-        BUCKListElementDescriptor(ComponentDescriptor = ~/UnitLabelUnitLeavingDistrictBUCKComponent),
-        BUCKListElementDescriptor(ComponentDescriptor = ~/UnitLabelUnitCriticalMessageBUCKComponent),
-    ]
-)
-
-//----------------------------------------------------------------------
-
-private MultiSelectionLabelList is BUCKContainerDescriptor
-(
-    ComponentFrame = TUIFramePropertyRTTI
-    (
-       MagnifiableWidthHeight = [100.0, 80.0]
-    )
-
-    IsClippable = true
-
-    Components =
-    [
-        BUCKSensibleAreaDescriptor
-        (
-            ElementName = "BackgroundSensibleArea"
-
-            ComponentFrame = TUIFramePropertyRTTI
-            (
-                RelativeWidthHeight = [1.0, 1.0]
-            )
-
-            Components =
-            [
-                PanelRoundedCorner
-                (
-                    ComponentFrame = TUIFramePropertyRTTI
-                    (
-                        RelativeWidthHeight = [1.0, 1.0]
-                    )
-
-                    BackgroundLocalRenderLayer = 1
-                    BorderLocalRenderLayer = 1
-                    Radius = 3
-                    BackgroundBlockColorToken = 'BoutonTemps_CardSelection_MOD'
-                    BorderLineColorToken = 'BoutonTemps_Selection_MOD'
-                    HasBorder = false
-                ),
-            ]
-        ),
-        UpperLabel(IsForMultiSelection = true),
-        UnitLabelCoverIcon
-        (
-            IsForMultiSelection = false
-            LocalRenderLayer = 4
-        ),
+        BUCKListElementDescriptor(ComponentDescriptor = ~/DEBUG_UnitLabelUnitLeavingDistrictBUCKComponent),
+        BUCKListElementDescriptor(ComponentDescriptor = ~/DEBUG_UnitLabelUnitCriticalMessageBUCKComponent),
     ]
 )
 
 //----------------------------------------------------------------------
 // Composant principal
 
-private template UnitLabelUnitBUCKComponentDescriptor
-[
-    IsForMultiSelection : bool = false,
-] is BUCKLocalLayerContainerDescriptor
+private DEBUG_UnitLabelUnitBUCKComponentDescriptor is BUCKLocalLayerContainerDescriptor
 (
     ElementName = "LocalLayerContainer"
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableOffset  = (<IsForMultiSelection> ? [0.0, 0.0] : [0.0, 20.0])
+        MagnifiableOffset  = [0.0, 20.0]
         AlignementToFather = [0.5, 1.0]
         AlignementToAnchor = [0.5, 1.0]
     )
@@ -1061,17 +973,13 @@ private template UnitLabelUnitBUCKComponentDescriptor
 
     Components =
     [
-        (<IsForMultiSelection> ? ~/MultiSelectionLabelList : ~/StandardLabelList),
+        ~/DEBUG_StandardLabelList,
     ]
 )
 
 //-------------------------------------------------------------------------------------
 
-private template UnitIconAndRightLabel
-[
-    IsForMultiSelection : bool,
-]
-is BUCKSensibleAreaDescriptor
+private DEBUG_UnitIconAndRightLabel is BUCKSensibleAreaDescriptor
 (
     ElementName = "UnitIconSensibleArea"
 
@@ -1082,13 +990,10 @@ is BUCKSensibleAreaDescriptor
     )
 
     FitStyle = ~/ContainerFitStyle/FitToContent
-    MaskEvents = <IsForMultiSelection>
 
     Components =
-    [   
-        UnitLabelUnitIcon(IsForMultiSelection= <IsForMultiSelection>)
-    ] +
-    (!<IsForMultiSelection> ? [
+    [
+        ~/DEBUG_UnitLabelUnitIcon,
         BUCKListDescriptor
         (
             ComponentFrame = TUIFramePropertyRTTI
@@ -1106,25 +1011,24 @@ is BUCKSensibleAreaDescriptor
             [
                 BUCKListElementDescriptor
                 (
-                    ComponentDescriptor = ~/UnitLabelUnitSupplyGaugeBUCKComponent
+                    ComponentDescriptor = ~/DEBUG_UnitLabelUnitSupplyGaugeBUCKComponent
                 ),
                 BUCKListElementDescriptor
                 (
-                    ComponentDescriptor = ~/UnitLabelUnitSupplyExtraGaugeText
+                    ComponentDescriptor = ~/DEBUG_UnitLabelUnitSupplyExtraGaugeText
                 ),
                 BUCKListElementDescriptor
                 (
-                    ComponentDescriptor = ~/LabelFeedbackIcons
+                    ComponentDescriptor = ~/DEBUG_LabelFeedbackIcons
                 ),
             ]
         ),
-    ] : []
-    )
+    ]
 )
 
 //-------------------------------------------------------------------------------------
 
-private template LabelFeedbackIcon
+private template DEBUG_LabelFeedbackIcon
 [
     FeedbackTexture : string,
     FeedbackRefillTexture : string,
@@ -1143,7 +1047,7 @@ private template LabelFeedbackIcon
 
 //-------------------------------------------------------------------------------------
 
-LabelFeedbackIcons is TBUCKSpecificLabelFeedbackIconsDescriptor
+private DEBUG_LabelFeedbackIcons is TBUCKSpecificLabelFeedbackIconsDescriptor
 (
     ElementName = "FeedbackIcons"
     ComponentFrame = TUIFramePropertyRTTI
@@ -1161,7 +1065,7 @@ LabelFeedbackIcons is TBUCKSpecificLabelFeedbackIconsDescriptor
     AnimDuration = 1.0
     AnimMinAlpha = 50
 
-    IconEffectDescriptor = LabelFeedbackIcon
+    IconEffectDescriptor = DEBUG_LabelFeedbackIcon
     (
         FeedbackTexture = ""
         FeedbackRefillTexture = ""
@@ -1169,55 +1073,55 @@ LabelFeedbackIcons is TBUCKSpecificLabelFeedbackIconsDescriptor
 
     Icons = MAP
     [
-        (~/InGameUnitLabelUpdateFeedbackType/Fuel, LabelFeedbackIcon
+        (~/InGameUnitLabelUpdateFeedbackType/Fuel, DEBUG_LabelFeedbackIcon
             (
                 FeedbackTexture = "icone_fuel"
                 FeedbackRefillTexture = "icone_fuel_refill"
             )
         ),
-        (~/InGameUnitLabelUpdateFeedbackType/Life, LabelFeedbackIcon
+        (~/InGameUnitLabelUpdateFeedbackType/Life, DEBUG_LabelFeedbackIcon
             (
                 FeedbackTexture = "icone_life"
                 FeedbackRefillTexture = "icone_life_refill"
             )
         ),
-        (~/InGameUnitLabelUpdateFeedbackType/Bullets, LabelFeedbackIcon
+        (~/InGameUnitLabelUpdateFeedbackType/Bullets, DEBUG_LabelFeedbackIcon
             (
                 FeedbackTexture = "icone_bullets"
                 FeedbackRefillTexture = "icone_bullets_refill"
             )
         ),
-        (~/InGameUnitLabelUpdateFeedbackType/Missile, LabelFeedbackIcon
+        (~/InGameUnitLabelUpdateFeedbackType/Missile, DEBUG_LabelFeedbackIcon
             (
                 FeedbackTexture = "icone_missile"
                 FeedbackRefillTexture = "icone_missile_refill"
             )
         ),
-        (~/InGameUnitLabelUpdateFeedbackType/Shell, LabelFeedbackIcon
+        (~/InGameUnitLabelUpdateFeedbackType/Shell, DEBUG_LabelFeedbackIcon
             (
                 FeedbackTexture = "icone_shell"
                 FeedbackRefillTexture = "icone_shell_refill"
             )
         ),
-        (~/InGameUnitLabelUpdateFeedbackType/Smoke, LabelFeedbackIcon
+        (~/InGameUnitLabelUpdateFeedbackType/Smoke, DEBUG_LabelFeedbackIcon
             (
                 FeedbackTexture = "icone_shell"
                 FeedbackRefillTexture = "icone_shell_refill"
             )
         ),
-        (~/InGameUnitLabelUpdateFeedbackType/Flamethrower, LabelFeedbackIcon
+        (~/InGameUnitLabelUpdateFeedbackType/Flamethrower, DEBUG_LabelFeedbackIcon
             (
                 FeedbackTexture = "icone_shell"
                 FeedbackRefillTexture = "icone_shell_refill"
             )
         ),
-        (~/InGameUnitLabelUpdateFeedbackType/Grenade, LabelFeedbackIcon
+        (~/InGameUnitLabelUpdateFeedbackType/Grenade, DEBUG_LabelFeedbackIcon
             (
                 FeedbackTexture = "icone_shell"
                 FeedbackRefillTexture = "icone_shell_refill"
             )
         ),
-        (~/InGameUnitLabelUpdateFeedbackType/Artillery, LabelFeedbackIcon
+        (~/InGameUnitLabelUpdateFeedbackType/Artillery, DEBUG_LabelFeedbackIcon
             (
                 FeedbackTexture = "icone_shell"
                 FeedbackRefillTexture = "icone_shell_refill"
@@ -1228,9 +1132,8 @@ LabelFeedbackIcons is TBUCKSpecificLabelFeedbackIconsDescriptor
 
 //-------------------------------------------------------------------------------------
 // nom & nb unités d'infanterie
-private template UnitNameList
+private template DEBUG_UnitNameList
 [
-    IsForMultiSelection : bool = false,
     IsForCarriedUnit : bool = false,
     LocalRenderLayer : int,
 ] is BUCKListDescriptor
@@ -1246,25 +1149,22 @@ private template UnitNameList
 
     BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
 
-    FirstMargin = <IsForMultiSelection> ? TRTTILength(Magnifiable = 3.0) : TRTTILength(Magnifiable = 0.0)
     InterItemMargin = TRTTILength(Magnifiable = 0.0)
 
     Elements =
     [
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = UnitLabelUnitCountIconBUCKComponent
+            ComponentDescriptor = DEBUG_UnitLabelUnitCountIconBUCKComponent
             (
-                IsForMultiSelection = <IsForMultiSelection>
                 IsForCarriedUnit = <IsForCarriedUnit>
                 LocalRenderLayer = <LocalRenderLayer>
             )
         ),
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = UnitLabelUnitNameBUCKComponent
+            ComponentDescriptor = DEBUG_UnitLabelUnitNameBUCKComponent
             (
-                IsForMultiSelection = <IsForMultiSelection>
                 IsForCarriedUnit = <IsForCarriedUnit>
                 LocalRenderLayer = <LocalRenderLayer>
             )
@@ -1275,7 +1175,7 @@ private template UnitNameList
 //-------------------------------------------------------------------------------------
 
 // nom & nb unités d'infanterie
-template UnitNameListSensibleArea
+private template DEBUG_UnitNameListSensibleArea
 [
     ComponentFrame : TUIFramePropertyRTTI = TUIFramePropertyRTTI
     (
@@ -1298,9 +1198,8 @@ is BUCKSensibleAreaDescriptor
 
     Components =
     [
-        UnitNameList
+        DEBUG_UnitNameList
         (
-            IsForMultiSelection = false
             IsForCarriedUnit = <IsForCarriedUnit>
             LocalRenderLayer = <LocalRenderLayer>
         )
@@ -1308,71 +1207,41 @@ is BUCKSensibleAreaDescriptor
 )
 
 //-------------------------------------------------------------------------------------
-private template UpperLabel
-[
-    IsForMultiSelection : bool = false,
-]
-is BUCKListDescriptor
+private DEBUG_UpperLabel is BUCKListDescriptor
 (
     ElementName = "UpperLabel"
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = (<IsForMultiSelection> ? [100.0, 0.0] : [150.0, 0.0])
+        MagnifiableWidthHeight = [150.0, 0.0]
         AlignementToFather = [0.5, 0.0]
         AlignementToAnchor = [0.5, 0.0]
     )
 
     Axis = ~/ListAxis/Vertical
 
-    FirstMargin = (<IsForMultiSelection> ? TRTTILength (Magnifiable = 5.0) : TRTTILength (Magnifiable = 0.0))
-    InterItemMargin = TRTTILength(Magnifiable = 0.0)
-    LastMargin = (<IsForMultiSelection> ? TRTTILength (Magnifiable = 5.0) : TRTTILength (Magnifiable = 0.0))
-
     // Penser a modifier la taille en Pixel du LabelUnitBUCKComponent si on aggrandit ce composant !
     Elements =
     [
-        BUCKListElementDescriptor(ComponentDescriptor = ~/UnitLabelUnitEvacIconBUCKComponent),
-        BUCKListElementDescriptor(ComponentDescriptor = ~/UnitLabelUnitPlayerNameBUCKComponent),
-        BUCKListElementDescriptor(ComponentDescriptor = UnitLabelUnitReloadIconBUCKComponent(LocalRenderLayer = 1)),
+        BUCKListElementDescriptor(ComponentDescriptor = ~/DEBUG_UnitLabelUnitEvacIconBUCKComponent),
+        BUCKListElementDescriptor(ComponentDescriptor = ~/DEBUG_UnitLabelUnitPlayerNameBUCKComponent),
+        BUCKListElementDescriptor(ComponentDescriptor = DEBUG_UnitLabelUnitReloadIconBUCKComponent(LocalRenderLayer = 1)),
 
-        BUCKListElementDescriptor
-        (
-            ComponentDescriptor = (
-                <IsForMultiSelection> ? UnitNameList
-                (
-                    IsForMultiSelection = true
-                    IsForCarriedUnit = true
-                    LocalRenderLayer = 2
-                )
-                : UnitNameListSensibleArea
-                (
-                    IsForCarriedUnit = true
-                    LocalRenderLayer = 1
-                )
-            )
-        ),
         BUCKListElementDescriptor
         (
             ComponentDescriptor = BUCKContainerDescriptor
             (
                 ComponentFrame = TUIFramePropertyRTTI
                 (
-                    //MagnifiableWidthHeight = [100.0, 14.0]
+                    MagnifiableWidthHeight = [100.0, 14.0]
                     AlignementToFather = [0.5, 0.0]
                     AlignementToAnchor = [0.5, 0.0]
                 )
 
-                FitStyle = (<IsForMultiSelection> ? ~/ContainerFitStyle/FitToContent : ~/ContainerFitStyle/MaxBetweenUserDefinedAndContent)
-                //ClipContent = true
+                FitStyle = ~/ContainerFitStyle/MaxBetweenUserDefinedAndContent
+                ClipContent = true
                 Components =
                 [
-                    <IsForMultiSelection> ? UnitNameList
-                    (
-                        IsForMultiSelection = true
-                        IsForCarriedUnit = false
-                        LocalRenderLayer = 2
-                    )
-                    : UnitNameListSensibleArea
+                    DEBUG_UnitNameListSensibleArea
                     (
                         IsForCarriedUnit = false
                         LocalRenderLayer = 1
@@ -1382,43 +1251,31 @@ is BUCKListDescriptor
         ),
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = UnitIconAndRightLabel
+            ComponentDescriptor = ~/DEBUG_UnitIconAndRightLabel
+        ),
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor =
             (
-                IsForMultiSelection = <IsForMultiSelection>
+                DEBUG_UnitNameListSensibleArea
+                (
+                    IsForCarriedUnit = true
+                    LocalRenderLayer = 1
+                )
             )
         ),
-        //BUCKListElementDescriptor
-        //(
-        //    ComponentDescriptor =
-        //    (
-        //        <IsForMultiSelection> ? UnitNameList
-        //        (
-        //            IsForMultiSelection = true
-        //            IsForCarriedUnit = true
-        //            LocalRenderLayer = 2
-        //        )
-        //        : UnitNameListSensibleArea
-        //        (
-        //            IsForCarriedUnit = true
-        //            LocalRenderLayer = 1
-        //        )
-        //    )
-        //),
     ]
 )
 
 //-------------------------------------------------------------------------------------
-// L'etiquette
-private template UISpecificInGameUnitLabelViewDescriptor
+
+private template UISpecificInGameUnitLabelDebugViewDescriptor
 [
     MainComponentDescriptor : TBUCKContainerDescriptor,
-    DebugViewName : string,
 ]
-is TUISpecificInGameUnitLabelViewDescriptor
+is TUISpecificInGameUnitLabelDebugViewDescriptor
 (
-    MainComponentDescriptor = <MainComponentDescriptor>
-
-    DebugViewName = <DebugViewName>
+    MainComponentDescriptor =  <MainComponentDescriptor>
 
     // Animation Stealthed
     // Temps de durée d'un blink
@@ -1448,8 +1305,8 @@ is TUISpecificInGameUnitLabelViewDescriptor
 
     // HP value of each HP square.
     // If it equals 1, a 12 HP unit will display 12 HP squares on its label. It if equals 2, 6 HP squares will be displayed.
-    HPElementHealthValue = 1
-    MagnifiableWidthOneHPLabelBlock = 3.5
+    HPElementHealthValue = 2
+    MagnifiableWidthOneHPLabelBlock = 5.0
 
     NbMaxCharInExtraSupplyGauge = 5
     TokenFormatExtraSupplyGaugeWhenOverflow = "FMTSUPOVF"
@@ -1460,10 +1317,11 @@ is TUISpecificInGameUnitLabelViewDescriptor
         (ECoverTypeForInterface/Light, "CommonTexture_Couvert_Moyen"),
         (ECoverTypeForInterface/Batiment, "CommonTexture_Couvert_Lourd"),
     ]
+    DefaultCarriedUnitIcon          = "UseInGame_Transport_ARMORED"
+    CarriedUnitIconUnknow = "UseInGame_Transport_UNKNOW"
     DefaultSpecialtyIcon            = "Spec_bombes_1"
     AceBackgroundTexture            = "CommonTexture_Etiquette_Background_Ace"
     NormalBackgroundTexture         = "CommonTexture_Label_Background"
-    CarriedUnitIconUnknow = "UseInGame_Transport_UNKNOW"
 
     // Couleurs du reticule de visee
     AimingDefaultColor = "Cyan"
@@ -1511,14 +1369,8 @@ is TUISpecificInGameUnitLabelViewDescriptor
     ]
 )
 
-//-------------------------------------------------------------------------------------
-
-template UISpecificUnitLabelViewDescriptor
-[
-    IsForMultiSelection : bool = false,
-    DebugViewName : string,
-] is UISpecificInGameUnitLabelViewDescriptor
+UISpecificUnitLabelDebugViewDescriptor is UISpecificInGameUnitLabelDebugViewDescriptor
 (
-    MainComponentDescriptor = UnitLabelUnitBUCKComponentDescriptor(IsForMultiSelection = <IsForMultiSelection>)
-    DebugViewName = <DebugViewName>
+    MainComponentDescriptor =  ~/DEBUG_UnitLabelUnitBUCKComponentDescriptor
 )
+

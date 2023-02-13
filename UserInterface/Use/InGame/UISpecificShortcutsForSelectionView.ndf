@@ -27,8 +27,6 @@ template ShortcutButton
     DefaultToggleValue = false
     HasBorder = false
 
-    SpotlightComponent = SpotlightDescriptor()
-
     Components =
     [
         BUCKContainerDescriptor

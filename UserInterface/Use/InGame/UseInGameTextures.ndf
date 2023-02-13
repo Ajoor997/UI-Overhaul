@@ -473,7 +473,11 @@ UseInGame_AdditionalTextureBank is TBUCKToolAdditionalTextureBank
         ("UseInGame_TutorialsIcons_SizeX12_MouseLeftClickDragAndDrop",   MAP [(~/ComponentState/Normal, ~/UseInGame_TutorialsIcons_SizeX12_MouseLeftClickDragAndDrop)] ),
 
         //-------------------------------------------------------------------------------------
-        // animations
+        // Panel LoS
+        ("UseInGame_LoS_Bad",                        MAP [(~/ComponentState/Normal,  TUIResourceTexture_InGame( FileName = 'GameData:/Assets/2D/Interface/UseInGame/LabelIcons/RTS/Armor.png'))] ),
+        ("UseInGame_LoS_Mediocre",                        MAP [(~/ComponentState/Normal,  TUIResourceTexture_InGame( FileName = 'GameData:/Assets/2D/Interface/UseInGame/LabelIcons/RTS/appui.png'))] ),
+        ("UseInGame_LoS_Good",                        MAP [(~/ComponentState/Normal,  TUIResourceTexture_InGame( FileName = 'GameData:/Assets/2D/Interface/UseInGame/LabelIcons/RTS/Infantry.png'))] ),
+        ("UseInGame_LoS_Exceptional",                        MAP [(~/ComponentState/Normal,  TUIResourceTexture_InGame( FileName = 'GameData:/Assets/2D/Interface/UseInGame/LabelIcons/RTS/Infantry_half.png'))] ),
     ]
 )
 

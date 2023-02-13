@@ -1139,7 +1139,7 @@ ArmoryMainComponentDescriptor is BUCKContainerDescriptor
         ~/PanelArmurerieHaut,
         ~/ArmoryUnitListContainer,
         ~/BoutonMenuShowRoomArmory,
-        ~/AnimationPanelUnitInfos,
+        AnimationPanelUnitInfos(),
         BUCKContainerDescriptor
         (
             UniqueName = "BattlegroupsListForArmory"

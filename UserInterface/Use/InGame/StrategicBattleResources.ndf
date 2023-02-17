@@ -23,13 +23,11 @@ StrategicBattleResources is TStrategicBattleResources
                                                     EffectMode = ~/FeedbackEffectMode/Solid
                                                     SelectedStyle = TFeedbackStyleDescriptor(
                                                                 Thickness = 4000.0
-                                                                Border = [221, 30, 30, 180]
-                                                                Fill = [221, 30, 30, 180]
+                                                                Color = [221, 30, 30, 180]
                                                             )
                                                     UnselectedStyle = TFeedbackStyleDescriptor(
                                                                 Thickness = 4000.0
-                                                                Border = [221, 0, 0, 180]
-                                                                Fill = [221, 0, 0, 100]
+                                                                Color = [221, 0, 0, 180]
                                                             )
                                                     ParabolicArrowHeight = 25000.0
                                                 )
@@ -40,26 +38,22 @@ StrategicBattleResources is TStrategicBattleResources
                                                     EffectMode = ~/FeedbackEffectMode/Hatched
                                                     SelectedStyle = TFeedbackStyleDescriptor(
                                                                 Thickness = 1200.0
-                                                                Border = [54, 54, 54, 150]
-                                                                Fill = [208, 208, 208, 150]
+                                                                Color = [54, 54, 54, 150]
                                                             )
                                                     UnselectedStyle = TFeedbackStyleDescriptor(
                                                                 Thickness = 1200.0
-                                                                Border = [0, 0, 0, 0]
-                                                                Fill = [0, 0, 0, 0]
+                                                                Color = [0, 0, 0, 0]
                                                             )
                                                     ParabolicArrowHeight = 25000.0
                                                 )
     //Pour un pion classique qui est mobilisé pour le combat
     BattlePlanningPawnInBattleGroupStyleDescriptor = TArrowFeedbackStyleDescriptor(
-                                                    Border = true
-                                                    Fill = true
                                                     EffectMode = ~/FeedbackEffectMode/Solid
                                                     SelectedStyle = TFeedbackStyleDescriptor(
-                                                                Fill = [221, 30, 30, 180]
+                                                                Color = [221, 30, 30, 180]
                                                             )
                                                     UnselectedStyle = TFeedbackStyleDescriptor(
-                                                                Fill = [221, 0, 0, 180]
+                                                                Color = [221, 0, 0, 180]
                                                             )
                                                     ArrowTipLength = 3000
                                                     ArrowTipWidth = 3000
@@ -69,14 +63,12 @@ StrategicBattleResources is TStrategicBattleResources
                                                 )
     //Pour un pion classique qui est potentiellement attaquant en phase A
     BattlePlanningPotentialAttackerPawnStyleDescriptor = TArrowFeedbackStyleDescriptor(
-                                                    Border = true
-                                                    Fill = true
                                                     EffectMode = ~/FeedbackEffectMode/Solid
                                                     SelectedStyle = TFeedbackStyleDescriptor(
-                                                                Fill = [221, 30, 30, 90]
+                                                                Color = [221, 30, 30, 90]
                                                             )
                                                     UnselectedStyle = TFeedbackStyleDescriptor(
-                                                                Fill = [221, 0, 0, 90]
+                                                                Color = [221, 0, 0, 90]
                                                             )
                                                     ArrowTipLength = 3000
                                                     ArrowTipWidth = 3000
@@ -92,26 +84,22 @@ StrategicBattleResources is TStrategicBattleResources
                                                     EffectMode = ~/FeedbackEffectMode/Solid
                                                     SelectedStyle = TFeedbackStyleDescriptor(
                                                                 Thickness = 4000.0
-                                                                Border = [221, 30, 30, 180]
-                                                                Fill = [221, 30, 30, 180]
+                                                                Color = [221, 30, 30, 180]
                                                             )
                                                     UnselectedStyle = TFeedbackStyleDescriptor(
                                                                 Thickness = 4000.0
-                                                                Border = [221, 0, 0, 180]
-                                                                Fill = [221, 0, 0, 100]
+                                                                Color = [221, 0, 0, 180]
                                                             )
                                                     ParabolicArrowHeight = 25000.0
                                                 )
     //Pour un pion fighter EN COMBAT qui est mobilisé pour le combat
     FightingFighterPawnStyleDescriptor = TArrowFeedbackStyleDescriptor(
-                                                    Border = true
-                                                    Fill = true
                                                     EffectMode = ~/FeedbackEffectMode/Solid
                                                     SelectedStyle = TFeedbackStyleDescriptor(
-                                                                Fill = [221, 30, 30, 180]
+                                                                Color = [221, 30, 30, 180]
                                                             )
                                                     UnselectedStyle = TFeedbackStyleDescriptor(
-                                                                Fill = [221, 0, 0, 180]
+                                                                Color = [221, 0, 0, 180]
                                                             )
                                                     ArrowTipLength = 3000
                                                     ArrowTipWidth = 3000

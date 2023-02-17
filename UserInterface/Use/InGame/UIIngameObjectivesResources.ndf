@@ -319,45 +319,45 @@ is BUCKListDescriptor
                         )
                     )
                 ),
+        // note Alexis : on n'affiche plus la deuxième ligne d'objectif dans les étiquettes au mercredi 15 février 2023, pour simplifier la lecture
+        // BUCKListElementDescriptor
+        // (
+        //     ComponentDescriptor = BUCKContainerDescriptor
+        //     (
+        //         ElementName = "ContentContainer"
+        //         ComponentFrame = TUIFramePropertyRTTI
+        //         (
+        //             MagnifiableWidthHeight = [32.0, 8.0]
+        //             AlignementToFather = <TextAlignementToFather>
+        //             AlignementToAnchor = <TextAlignementToAnchor>
+        //         )
 
-        BUCKListElementDescriptor
-        (
-            ComponentDescriptor = BUCKContainerDescriptor
-            (
-                ElementName = "ContentContainer"
-                ComponentFrame = TUIFramePropertyRTTI
-                (
-                    MagnifiableWidthHeight = [32.0, 8.0]
-                    AlignementToFather = <TextAlignementToFather>
-                    AlignementToAnchor = <TextAlignementToAnchor>
-                )
+        //         FitStyle = ~/ContainerFitStyle/FitToContent
 
-                FitStyle = ~/ContainerFitStyle/FitToContent
+        //         Components =
+        //         [
+        //             ObjectiveLabelText
+        //             (
+        //                 ElementName = "Content"
 
-                Components =
-                [
-                    ObjectiveLabelText
-                    (
-                        ElementName = "Content"
+        //                 ComponentFrame = TUIFramePropertyRTTI
+        //                 (
+        //                     MagnifiableWidthHeight = [<LabelMaxWidth>, 0.0]
+        //                     AlignementToFather = [0.5, 0.0]
+        //                     AlignementToAnchor = [0.5, 0.0]
+        //                 )
+        //                 TextPadding = TRTTILength4( Magnifiable = [5,0,5,5] )
+        //                 TypefaceToken = <ContentTypeFace>
+        //                 TextSize = <ContentSize>
+        //                 TextColor = <ContentColor>
 
-                        ComponentFrame = TUIFramePropertyRTTI
-                        (
-                            MagnifiableWidthHeight = [<LabelMaxWidth>, 0.0]
-                            AlignementToFather = [0.5, 0.0]
-                            AlignementToAnchor = [0.5, 0.0]
-                        )
-                        TextPadding = TRTTILength4( Magnifiable = [5,0,5,5] )
-                        TypefaceToken = <ContentTypeFace>
-                        TextSize = <ContentSize>
-                        TextColor = <ContentColor>
+        //                 Alignment = <TextAlignment>
 
-                        Alignment = <TextAlignment>
-
-                        HorizontalFitStyle = ~/FitStyle/MinBetweenUserDefinedAndContent
-                    )
-                ]
-            )
-        ),
+        //                 HorizontalFitStyle = ~/FitStyle/MinBetweenUserDefinedAndContent
+        //             )
+        //         ]
+        //     )
+        // ),
     ]
 
     BackgroundComponents =

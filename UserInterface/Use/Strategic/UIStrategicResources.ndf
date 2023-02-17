@@ -534,12 +534,9 @@ private StrategicOrderDisplayDrawer is TStrategicOrderDisplayDrawer
         LineThickness = 10000
         ArrowLength = 5000
         ArrowWidth = 3000*2
-        ArrowLineWidthStart = 1200*2
-        ArrowLineWidthEnd = 1200*2
+        ArrowLineWidth = 1200*2
         ArrowFadeLength = 10000*2
-        ArrowBorderSizeFactor = 0
-        ArrowColorBorder = [19,85,106,255]
-        ArrowColorFill = [19,85,106,170]
+        ArrowColor = [19,85,106,170]
     )
 )
 

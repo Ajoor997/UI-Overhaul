@@ -317,8 +317,8 @@ unnamed TBUCKToolAdditionalTextureBank
                                                ( ~/ComponentState/Normal, ~/Outgame_transparent), ]),
 
         ("test_image_mission", MAP [(~/ComponentState/Normal, TUIResourceTexture_InGame(FileName = "GameData:/Assets/2D/Interface//UseOutGame/Missions/test_image_mission_2.png"))] ),
-        // ("challenge_defenseEnProfondeur", MAP [(~/ComponentState/Normal, TUIResourceTexture_InGame(FileName = "GameData:/Assets/2D/Interface//UseOutGame/Missions/defenseEnProfondeur.png"))] ),
-        ("challenge_defenseEnProfondeur", MAP [(~/ComponentState/Normal, TUIResourceTexture_InGame(FileName = "GameData:/Assets/2D/Interface//UseOutGame/Missions/defenseEnProfondeur2.png"))] ),
+        // ("challenge_BlackHorsesLastStand", MAP [(~/ComponentState/Normal, TUIResourceTexture_InGame(FileName = "GameData:/Assets/2D/Interface//UseOutGame/Missions/BlackHorsesLastStand.png"))] ),
+        ("challenge_BlackHorsesLastStand", MAP [(~/ComponentState/Normal, TUIResourceTexture_InGame(FileName = "GameData:/Assets/2D/Interface//UseOutGame/Missions/BlackHorsesLastStand2.png"))] ),
         ("Outgame_bandeNoireListeMission", MAP [( ~/ComponentState/Normal, ~/Outgame_bandeNoireListeMission), ]),
         ("Outgame_backgroundMultiScreen", MAP [( ~/ComponentState/Normal, ~/Outgame_backgroundMultiScreen), ]),
         //-------------------------------------------------------------------------------------

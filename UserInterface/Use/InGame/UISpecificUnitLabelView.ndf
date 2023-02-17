@@ -1128,15 +1128,8 @@ private template LabelFeedbackIcon
 [
     FeedbackTexture : string,
     FeedbackRefillTexture : string,
-] is TBUCKSpecificLabelFeedbackIconDescriptor
+] is TLabelFeedbackIconDescriptor
 (
-    ComponentFrame = TUIFramePropertyRTTI(MagnifiableWidthHeight = [24.0, 24.0])
-
-    IsClippable = true
-    TextureDrawer = "ColorMultiply"
-    TextureFrame = TUIFramePropertyRTTI(RelativeWidthHeight = [1.0, 1.0])
-    LocalRenderLayer = 1
-
     FeedbackTexture = <FeedbackTexture>
     FeedbackRefillTexture = <FeedbackRefillTexture>
 )
@@ -1146,26 +1139,17 @@ private template LabelFeedbackIcon
 LabelFeedbackIcons is TBUCKSpecificLabelFeedbackIconsDescriptor
 (
     ElementName = "FeedbackIcons"
-    ComponentFrame = TUIFramePropertyRTTI
-    (
-        MagnifiableOffset = [0.0, -4.0]
-    )
-
-    Axis = ~/ListAxis/Horizontal
-    InterItemMargin = TRTTILength(Magnifiable = 0.0)
-    FirstMargin = TRTTILength()
-    LastMargin = TRTTILength()
+    ComponentFrame = TUIFramePropertyRTTI()
 
     IsClippable = true
 
     AnimDuration = 1.0
     AnimMinAlpha = 50
 
-    IconEffectDescriptor = LabelFeedbackIcon
-    (
-        FeedbackTexture = ""
-        FeedbackRefillTexture = ""
-    )
+    TextureMagnifiableSize = [24.0, 24.0]
+
+    LocalRenderLayer = 1
+    TextureDrawer = "ColorMultiply"
 
     Icons = MAP
     [
@@ -1194,30 +1178,6 @@ LabelFeedbackIcons is TBUCKSpecificLabelFeedbackIconsDescriptor
             )
         ),
         (~/InGameUnitLabelUpdateFeedbackType/Shell, LabelFeedbackIcon
-            (
-                FeedbackTexture = "icone_shell"
-                FeedbackRefillTexture = "icone_shell_refill"
-            )
-        ),
-        (~/InGameUnitLabelUpdateFeedbackType/Smoke, LabelFeedbackIcon
-            (
-                FeedbackTexture = "icone_shell"
-                FeedbackRefillTexture = "icone_shell_refill"
-            )
-        ),
-        (~/InGameUnitLabelUpdateFeedbackType/Flamethrower, LabelFeedbackIcon
-            (
-                FeedbackTexture = "icone_shell"
-                FeedbackRefillTexture = "icone_shell_refill"
-            )
-        ),
-        (~/InGameUnitLabelUpdateFeedbackType/Grenade, LabelFeedbackIcon
-            (
-                FeedbackTexture = "icone_shell"
-                FeedbackRefillTexture = "icone_shell_refill"
-            )
-        ),
-        (~/InGameUnitLabelUpdateFeedbackType/Artillery, LabelFeedbackIcon
             (
                 FeedbackTexture = "icone_shell"
                 FeedbackRefillTexture = "icone_shell_refill"

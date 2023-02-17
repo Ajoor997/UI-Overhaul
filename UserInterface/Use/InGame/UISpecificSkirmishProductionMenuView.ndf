@@ -895,7 +895,7 @@ SkirmishProductionMenuCombatGroupButton is BUCKSpecificButton
     TextColorToken = "ButtonHUD/Text2_pawn"
     TextSizeToken = "14"
     ButtonRelativeWidthHeight = [0.0, 0.0]
-    ButtonMagnifiableWidthHeight = [150, 30.0]
+    ButtonMagnifiableWidthHeight = [105, 30.0]
     ButtonMagnifiableOffset = [0,-2]
     TextTypefaceToken = "Eurostyle_Italic"
     IsTogglable = true

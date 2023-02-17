@@ -2,18 +2,13 @@
 //A maintenir synchro avec WarGame\Code\Eugen\CPP\InterfaceSpecific\UISpecificUnitLabelFeedbackType.h
 InGameUnitLabelUpdateFeedbackType is TBaseClass
 (
-    Fuel is 0
-    Life is 1
-    Stress is 2
-    Bullets is 3
-    Missile is 4
-    Shell is 5
-    Smoke is 6
-    Flamethrower is 7
-    Grenade is 8
-    Artillery is 9
-    Supply is 10
-    Length is 11
+    Life is 0
+    Fuel is 1
+    Bullets is 2
+    Missile is 3
+    Shell is 4
+    Supply is 5
+    Length is 6
 )
 
 SpecificInGameUnitLabelResources is TUISpecificUnitLabelResources
@@ -56,9 +51,6 @@ SpecificInGameUnitLabelResources is TUISpecificUnitLabelResources
         ("balleaa", ~/InGameUnitLabelUpdateFeedbackType/Bullets),
         ("balledca", ~/InGameUnitLabelUpdateFeedbackType/Bullets),
         ("ap_missile", ~/InGameUnitLabelUpdateFeedbackType/Missile),
-        ("flamme", ~/InGameUnitLabelUpdateFeedbackType/Flamethrower),
-        ("smoke", ~/InGameUnitLabelUpdateFeedbackType/Smoke),
-        ("artillerie", ~/InGameUnitLabelUpdateFeedbackType/Artillery),
     ]
 )
 

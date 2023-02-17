@@ -139,6 +139,10 @@ Base_AdditionalTextureBank is TBUCKToolAdditionalTextureBank
                             (~/ComponentState/Normal, TUIResourceTexture_Common( FileName='GameData:/Assets/2D/Interface/UseOutGame/Next.png' )),
                             ] ),
 
+        ("texture_difficulty_expert",                               MAP [(~/ComponentState/Normal, TUIResourceTexture_Common( FileName='GameData:/Assets/2D/Interface/UseInGame/LDHint/difficulty_expert.png' ))]),
+        ("texture_difficulty_normal",                               MAP [(~/ComponentState/Normal, TUIResourceTexture_Common( FileName='GameData:/Assets/2D/Interface/UseInGame/LDHint/difficulty_normal.png' ))]),
+
+
         //-------------------------------------------------------------------------------------
         //traits
         ("Texture_Trait_Icon_wip",                          MAP [(~/ComponentState/Normal, TUIResourceTexture_Common( FileName='GameData:/Assets/2D/Interface/Common/traits/WIP.png' )), ] ),

@@ -538,7 +538,7 @@ template SmartGroupsConfigurationMainPanel
                         (
                             RelativeWidthHeight = [1.0, 1.0]
                         )
-                        TextureFrame = TUIFramePropertyRTTI(MagnifiableWidthHeight = [900.0, 1000.0])
+                        TextureFrame = TUIFramePropertyRTTI(MagnifiableWidthHeight = [1150.0, 1000.0])
                         ResizeMode = ~/TextureResizeMode/UserDefined
                         ClipTextureToComponent = true
                         TileTextureInComponent = true
@@ -612,7 +612,7 @@ template SmartGroupsConfigurationMainPanel
                         (
                             RelativeWidthHeight = [1.0, 1.0]
                         )
-                        TextureFrame   = TUIFramePropertyRTTI( MagnifiableWidthHeight = [1000.0, 1000.0] )
+                        TextureFrame   = TUIFramePropertyRTTI( MagnifiableWidthHeight = [1150.0, 1000.0] )
                         ResizeMode = ~/TextureResizeMode/UserDefined
                         ClipTextureToComponent = true
                         TileTextureInComponent = true

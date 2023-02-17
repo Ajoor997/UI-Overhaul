@@ -1202,6 +1202,7 @@ private AffichageHintNewbieArmory is PanelRoundedCorner
 
 MaxUnitsInDeckPerCategory is 10
 ArmoryUnitButtonRadioManager is TBUCKRadioButtonManager()
+DefaultDivisionFilterTag is "DEFAULT"
 
 ArmoryComponentDescriptor is TUISpecificShowRoomArmoryComponentDescriptor
 (
@@ -1245,7 +1246,7 @@ ArmoryComponentDescriptor is TUISpecificShowRoomArmoryComponentDescriptor
         UseInGame = true
     )
 
-    FilterTag = "DEFAULT"
+    DivisionFilterTag = ~/DefaultDivisionFilterTag
 
     FactoryDisplayOrder =
     [

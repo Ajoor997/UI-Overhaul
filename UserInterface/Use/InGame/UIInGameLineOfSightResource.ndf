@@ -22,6 +22,8 @@ FeedbackLineOfSightDescriptor is TFeedbackLineOfSightDescriptor
 (
     AnimationDuration = 0.05*6
 
+    RenderRange = 12000 * Metre
+    DefaultVisionRange = 10000 * Metre
     VisionOffset = DecalageParDefautDuPointDeVision
 
     BorderColor = [255, 255, 255, 255]

@@ -1,14 +1,12 @@
 template TPictographStyleDescriptorForCommander
 [
-    BorderColor : color,
-    FillColor : color,
+    Color : color,
     Effect : int = ~/FeedbackEffectMode/Solid
 ]
 is TPictographStyleDescriptor
 (
     Thickness = 800.0
-    BorderColor = <BorderColor>
-    FillColor = <FillColor>
+    Color = <Color>
     Effect = <Effect>
 )
 
@@ -16,8 +14,7 @@ CommanderResources is TUISpecificCommanderResources
 (
     CommanderEffectAreaStyleDescriptor = TPictographStyleDescriptorForCommander
     (
-        BorderColor = [255, 255, 255, 64]
-        FillColor = [255, 255, 255, 64]
+        Color = [255, 255, 255, 64]
         Effect = ~/FeedbackEffectMode/Dotted
     )
 )

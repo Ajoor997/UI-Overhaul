@@ -1995,6 +1995,7 @@ DeckCreatorScreenComponentDescriptor is TUISpecificShowRoomDeckCreatorScreenComp
     PatternNoTransportValueToken = "DES_DE_NOT"
 
     ReadOnlySmartGroupTabText = "HIGRPV_BTN"
+    UnitInfoPanelDivisionFilterTag = ~/DefaultDivisionFilterTag
 
     ShortcutsLayer = $/M3D/Input/UserInputLayerHandler/InputLayer_InGameShortcuts
 

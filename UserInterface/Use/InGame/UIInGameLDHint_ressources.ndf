@@ -257,18 +257,18 @@ SpecificInGameLDHintResource is TUICommonInGameLDHintResource
         // challenge
 
         ("titre" , TitreMissionFullscreen()),
-        ("titre_defenseEnProfondeur" , TitreMissionFullscreen
+        ("titre_BlackHorsesLastStand" , TitreMissionFullscreen
             (
                 ImageSize = [800,1038]
                 HasImage = true
                 TextureToken = 'challenge_11acr'
-                //VideoName = "GameData:/Assets/Videos/challenge/defenseEnProfondeur_Intro.webm"
+                //VideoName = "GameData:/Assets/Videos/challenge/BlackHorsesLastStand_Intro.webm"
             )
         ),
-        ("defenseEnProfondeur_01" ,    TitreChallenge2( TextureToken = 'defenseEnProfondeur_01' )),
-        ("defenseEnProfondeur_02" ,    TitreChallenge2 (TextureToken = 'defenseEnProfondeur_02' {VideoName = "GameData:/Assets/Videos/challenge/defenseEnProfondeur_02.webm"}   )),
-        ("defenseEnProfondeur_03" ,    TitreChallenge2 (TextureToken = 'defenseEnProfondeur_03' {VideoName = "GameData:/Assets/Videos/challenge/defenseEnProfondeur_03.webm"}   )),
-        ("defenseEnProfondeur_04" ,    TitreChallenge2 (TextureToken = 'defenseEnProfondeur_04' {VideoName = "GameData:/Assets/Videos/challenge/defenseEnProfondeur_04.webm" })),
+        ("BlackHorsesLastStand_01" ,    TitreChallenge2( TextureToken = 'BlackHorsesLastStand_01' )),
+        ("BlackHorsesLastStand_02" ,    TitreChallenge2 (TextureToken = 'BlackHorsesLastStand_02' {VideoName = "GameData:/Assets/Videos/challenge/BlackHorsesLastStand_02.webm"}   )),
+        ("BlackHorsesLastStand_03" ,    TitreChallenge2 (TextureToken = 'BlackHorsesLastStand_03' {VideoName = "GameData:/Assets/Videos/challenge/BlackHorsesLastStand_03.webm"}   )),
+        ("BlackHorsesLastStand_04" ,    TitreChallenge2 (TextureToken = 'BlackHorsesLastStand_04' {VideoName = "GameData:/Assets/Videos/challenge/BlackHorsesLastStand_04.webm" })),
 
 
         ( "challenge_test",                     challenge (TextureToken = 'challenge_test' )),
@@ -278,17 +278,19 @@ SpecificInGameLDHintResource is TUICommonInGameLDHintResource
         // Defense en profondeur
         ( "challenge_defense_1",             PORTRAIT_PauseAndTexture (TextureSteelman = 'challenge_defense_1' IsBriefing = true )),
 
-        // steamroller
-        ("titre_steamroller" , TitreMissionFullscreen
+        // RedJuggernaut
+        ("titre_RedJuggernaut" , TitreMissionFullscreen
             (
                 ImageSize = [1106*1.7,676*1.7]
                 HasImage = true
-                TextureToken = 'steamroller'
+                TextureToken = 'RedJuggernaut'
                 AnimationTotalDuration = 15
                 facteur_aggrandissement = 2
-                //VideoName = "GameData:/Assets/Videos/challenge/defenseEnProfondeur_Intro.webm"
+                //VideoName = "GameData:/Assets/Videos/challenge/BlackHorsesLastStand_Intro.webm"
             )
         ),
+        ( "RedJuggernaut_difficulty",               Difficulte (texture = 'RedJuggernaut' )),
+
         // steelbeast
 
         ("intro_steelbeast" ,    TitreMissionFullscreen (VideoName = "GameData:/Assets/Videos/challenge/steelbeast/Intro_Operation_Effets_TV_No_Music.webm" )),
@@ -420,12 +422,12 @@ UseInGame_AdditionalLDHintTextureBank is TBUCKToolAdditionalTextureBank
     ( "challenge_defense_1",        MAP [(~/ComponentState/Normal, TUIResourceTexture_InGame( FileName='GameData:/Assets/2D/Interface/UseInGame/LDHint/challenge/challenge_defense_1.png' ))] ),
     ( "challenge_11acr",        MAP [(~/ComponentState/Normal, TUIResourceTexture_InGame( FileName='GameData:/Assets/2D/Interface/UseInGame/LDHint/challenge/11ACR.png' ))] ),
 
-    ( "defenseEnProfondeur_01",        MAP [(~/ComponentState/Normal, TUIResourceTexture_InGame( FileName='GameData:/Assets/2D/Interface/UseInGame/LDHint/challenge/defenseEnProfondeur/39guard.png' ))] ),
-    ( "defenseEnProfondeur_02",        MAP [(~/ComponentState/Normal, TUIResourceTexture_InGame( FileName='GameData:/Assets/2D/Interface/UseInGame/LDHint/challenge/defenseEnProfondeur/a10.png' ))] ),
-    ( "defenseEnProfondeur_03",        MAP [(~/ComponentState/Normal, TUIResourceTexture_InGame( FileName='GameData:/Assets/2D/Interface/UseInGame/LDHint/challenge/defenseEnProfondeur/vkk.png' ))] ),
-    ( "defenseEnProfondeur_04",        MAP [(~/ComponentState/Normal, TUIResourceTexture_InGame( FileName='GameData:/Assets/2D/Interface/UseInGame/LDHint/challenge/defenseEnProfondeur/cmd.png' ))] ),
-    // steamroller
-    ( "steamroller",        MAP [(~/ComponentState/Normal, TUIResourceTexture_InGame( FileName='GameData:/Assets/2D/Interface/UseInGame/LDHint/challenge/steamroller.png' ))] ),
+    ( "BlackHorsesLastStand_01",        MAP [(~/ComponentState/Normal, TUIResourceTexture_InGame( FileName='GameData:/Assets/2D/Interface/UseInGame/LDHint/challenge/BlackHorsesLastStand/39guard.png' ))] ),
+    ( "BlackHorsesLastStand_02",        MAP [(~/ComponentState/Normal, TUIResourceTexture_InGame( FileName='GameData:/Assets/2D/Interface/UseInGame/LDHint/challenge/BlackHorsesLastStand/a10.png' ))] ),
+    ( "BlackHorsesLastStand_03",        MAP [(~/ComponentState/Normal, TUIResourceTexture_InGame( FileName='GameData:/Assets/2D/Interface/UseInGame/LDHint/challenge/BlackHorsesLastStand/vkk.png' ))] ),
+    ( "BlackHorsesLastStand_04",        MAP [(~/ComponentState/Normal, TUIResourceTexture_InGame( FileName='GameData:/Assets/2D/Interface/UseInGame/LDHint/challenge/BlackHorsesLastStand/cmd.png' ))] ),
+    // RedJuggernaut
+    ( "RedJuggernaut",        MAP [(~/ComponentState/Normal, TUIResourceTexture_InGame( FileName='GameData:/Assets/2D/Interface/UseInGame/LDHint/challenge/RedJuggernaut.png' ))] ),
     //-------------------------------------------------------------------------------------
     // Steelman
     //-------------------------------------------------------------------------------------

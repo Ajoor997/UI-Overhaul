@@ -106,7 +106,7 @@ template UnitLabelUnitIcon [
 
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = <IsForMultiSelection> ? [40.0, 36.0]: ~/LabelUnitIconWidthHeight
+        MagnifiableWidthHeight = ~/LabelUnitIconWidthHeight
         AlignementToFather = [0.0, 0.5]
         AlignementToAnchor = [0.0, 0.5]
     )

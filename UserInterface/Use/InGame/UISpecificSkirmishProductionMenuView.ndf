@@ -42,9 +42,13 @@ template BUCKSpecificSkirmishProductionMenuMainComponentDescriptor
 
             Elements =
             [   
+                //BUCKListElementDescriptor
+                //(
+                //    ComponentDescriptor = ~/PanelInfoPartie
+                //),
                 BUCKListElementDescriptor
                 (
-                    ComponentDescriptor = ~/PanelInfoPartie
+                    ComponentDescriptor = ~/DeploymentIncomeContainer
                 ),
                 BUCKListElementDescriptor
                 (
@@ -69,6 +73,39 @@ template BUCKSpecificSkirmishProductionMenuMainComponentDescriptor
     ]
 )
 
+private DeploymentIncomeContainer is BUCKListDescriptor(
+    ElementName = "DeploymentIncomeContainer"
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [5.0, 35.0]
+    )
+
+    Axis = ~/ListAxis/Horizontal
+
+    Elements =
+    [
+
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = ~/PanelInfoPartie
+        ),
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = ~/ProductionTypeSelectionList
+        ),
+        
+    ]
+
+    BackgroundComponents =
+    [
+        PanelRoundedCorner
+        (
+            BackgroundBlockColorToken = "DarkBlackLight_MOD"
+            BorderLineColorToken = "White_MOD"
+        )
+    ]
+)
+
 // -------------------------------------------------------------------------------------------------
 
 private PanelInfoPartie is BUCKListDescriptor
@@ -76,7 +113,7 @@ private PanelInfoPartie is BUCKListDescriptor
     ElementName = "ListeDesRessources"
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = [55.0, 35.0]
+        MagnifiableWidthHeight = [45.0, 35.0]
     )
 
     Axis = ~/ListAxis/Horizontal
@@ -97,19 +134,6 @@ private PanelInfoPartie is BUCKListDescriptor
                 ]
             )
         ),
-        BUCKListElementDescriptor
-        (
-            ComponentDescriptor = ~/ProductionTypeSelectionList
-        ),
-    ]
-
-    BackgroundComponents =
-    [
-        PanelRoundedCorner
-        (
-            BackgroundBlockColorToken = "DarkBlackLight_MOD"
-            BorderLineColorToken = "White_MOD"
-        )
     ]
 )
 
@@ -138,7 +162,7 @@ private PointsCommandement is BUCKListDescriptor
                 ElementName = "CommandPoints"
                 ComponentFrame = TUIFramePropertyRTTI
                 (
-                    MagnifiableWidthHeight = [00.0, 00.0]
+                    MagnifiableWidthHeight = [0.0, 0.0]
                     AlignementToFather = [0.0, 0.5]
                     AlignementToAnchor = [0.0, 0.5]
                 )
@@ -284,7 +308,7 @@ private ChronoPointCommandement is BUCKListDescriptor
             (
                 ComponentFrame = TUIFramePropertyRTTI
                 (
-                    MagnifiableWidthHeight = [00.0, 00.0]
+                    MagnifiableWidthHeight = [0.0, 0.0]
                     AlignementToFather = [0.0,1.0]
                     AlignementToAnchor = [0.0,1.0]
                 )
@@ -443,7 +467,7 @@ private NombreSecteur is BUCKListDescriptor
                 ComponentFrame = TUIFramePropertyRTTI
                 (
                     RelativeWidthHeight = [0.0, 1.0]
-                    MagnifiableWidthHeight = [30.0, 0.0]
+                    MagnifiableWidthHeight = [25.0, 0.0]
                     AlignementToFather = [0.0, 0.5]
                     AlignementToAnchor  = [0.0, 0.5]
                 )
@@ -724,7 +748,7 @@ private ProductionTypeSelectionList is BUCKListDescriptor
 
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableOffset = [50.0, 3]
+        MagnifiableOffset = [0.0, 3]
     )
 
     Axis = ~/ListAxis/Vertical
@@ -793,19 +817,17 @@ private SkirmishProductionMenuCategoryButtonRadioButtonManager is TBUCKRadioButt
 
 SkirmishProductionMenuCategoryButton is BUCKSpecificButton
 (
+    ElementName = "SkirmishProductionMenuCategoryButton"
+
     // style spécial pour ces boutons
     RoundedCorner = true
     BackgroundBlockColorToken  = ""
-
-
 
     TextColorToken = "ButtonHUD/Text2"
     TextSizeToken = "22"
     ButtonRelativeWidthHeight = [0.0, 0.0]
     ButtonMagnifiableWidthHeight = [55.0, 30.0]
     BigLineAction = ~/BigLineAction/ResizeFont
-
-
 
     IsTogglable = true
     RadioButtonManager = ~/SkirmishProductionMenuCategoryButtonRadioButtonManager
@@ -843,6 +865,8 @@ private SkirmishProductionMenuPawnButtonRadioButtonManager is TBUCKRadioButtonMa
 // boutons de production en Steelman
 SkirmishProductionMenuPawnButton is BUCKSpecificButton
 (
+    ElementName = "SkirmishProductionMenuPawnButton"
+
     RoundedCorner = true
     BackgroundBlockColorToken  = ""
     PanelRoundedCorner_BackgroundBlockColorToken = "BoutonTemps_pawn"
@@ -852,7 +876,7 @@ SkirmishProductionMenuPawnButton is BUCKSpecificButton
     TextSizeToken = "16"
     ButtonRelativeWidthHeight = [0.0, 0.0]
     ButtonMagnifiableWidthHeight = [158.0, 36.0]
-    ButtonMagnifiableOffset = [0,-5]
+    ButtonMagnifiableOffset = [0.0, -5.0]
 
     IsTogglable = true
     RadioButtonManager = ~/SkirmishProductionMenuPawnButtonRadioButtonManager
@@ -861,7 +885,8 @@ SkirmishProductionMenuPawnButton is BUCKSpecificButton
 
     OverrideTextElementName = true
     BigLineAction = ~/BigLineAction/MultiLine
-    TextPadding = TRTTILength4 ( Magnifiable = [5,2,0,5])
+    TextPadding = TRTTILength4 ( Magnifiable = [5.0, 2.0, 0.0, 5.0])
+
     HasText = true
     TextElementName = "ButtonTextElement"
 
@@ -877,7 +902,7 @@ SkirmishProductionMenuPawnButton is BUCKSpecificButton
     TextParagraphStyle = TParagraphStyleRTTI
     (
         Alignment = UIText_Center
-        VerticalAlignment = UIText_Up
+        VerticalAlignment = UIText_VerticalCenter
         InterLine = 0
     )
 )
@@ -888,6 +913,8 @@ private SkirmishProductionMenuCombatGroupButtonRadioButtonManager is TBUCKRadioB
 
 SkirmishProductionMenuCombatGroupButton is BUCKSpecificButton
 (
+    ElementName = "SkirmishProductionMenuCombatGroupButton"
+
     // style spécial pour ces boutons
     RoundedCorner = true
     BackgroundBlockColorToken  = ""
@@ -895,8 +922,8 @@ SkirmishProductionMenuCombatGroupButton is BUCKSpecificButton
     TextColorToken = "ButtonHUD/Text2_pawn"
     TextSizeToken = "14"
     ButtonRelativeWidthHeight = [0.0, 0.0]
-    ButtonMagnifiableWidthHeight = [105, 30.0]
-    ButtonMagnifiableOffset = [0,-2]
+    ButtonMagnifiableWidthHeight = [150, 30.0]
+    ButtonMagnifiableOffset = [0.0, -2.0]
     TextTypefaceToken = "Eurostyle_Italic"
     IsTogglable = true
     RadioButtonManager = ~/SkirmishProductionMenuCombatGroupButtonRadioButtonManager

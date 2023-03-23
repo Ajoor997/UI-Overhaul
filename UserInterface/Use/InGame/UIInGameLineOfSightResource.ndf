@@ -1,13 +1,13 @@
 
 template Template_CircleDescriptor
-         [
-             Radius,
-             Color = [220, 222, 221, 127],
-             Thickness = 700,
-             ShowDistanceText = false,
-             TextColor = [230, 230, 230, 255],
-             TextSize = 3500
-         ] is TFeedbackLineOfSightCircleDescriptor
+[
+    Radius,
+    Color = [220, 222, 221, 127],
+    Thickness = 700,
+    ShowDistanceText = false,
+    TextColor = [230, 230, 230, 255],
+    TextSize = 3500
+] is TFeedbackLineOfSightCircleDescriptor
 (
     Radius = <Radius>
     Color = <Color>
@@ -36,14 +36,15 @@ FeedbackLineOfSightDescriptor is TFeedbackLineOfSightDescriptor
     FillRadiusEndFade = 13000 * Metre //5500
 
     CircleDotDescriptor = TFeedbackLineOfSightCircleDescriptor(
-                                Radius = 250
-                                Color = [216, 201, 181, 127]
-                                Thickness = 650
-                                ShowText = false
-                                TextLayout = 'Nop %1'
-                                TextColor = [0, 0, 0, 0]
-                                TextSize = 0
-                            )
+        Radius = 400
+        Color = [216, 201, 181, 127]
+        Thickness = 650
+        ShowText = false
+        TextLayout = 'Nop %1'
+        TextColor = [0, 0, 0, 0]
+        TextSize = 0
+    )
+
 
     CirclesDescriptors =
     [
@@ -106,24 +107,24 @@ FeedbackLineOfSightDescriptor is TFeedbackLineOfSightDescriptor
     ]
 
     CircleOverrideDescriptor = TFeedbackLineOfSightCircleDescriptor(
-                                    Radius = 3330 * Metre
-                                    Color = [0, 0, 0, 179]
-                                    Thickness = 2000
-                                    ShowText = true
-                                    TextLayout = "Error %1: Si vous lisez ce message en jeu, c'est que quelqu'un à fait de la merde, et c'est surement moi ! (Frédéric M. 15/03/17)"
-                                    TextColor = [230, 230, 230, 255]
-                                    TextSize = 5000
-                                )
+        Radius = 3330 * Metre
+        Color = [0, 0, 0, 179]
+        Thickness = 2000
+        ShowText = true
+        TextLayout = "Error %1: Si vous lisez ce message en jeu, c'est que quelqu'un à fait de la merde, et c'est surement moi ! (Frédéric M. 15/03/17)"
+        TextColor = [230, 230, 230, 255]
+        TextSize = 5000
+    )
 
     DeactivatedCircleOverrideDescriptor = TFeedbackLineOfSightCircleDescriptor(
-                                    Radius = 3330 * Metre
-                                    Color = [150, 150, 150, 100]
-                                    Thickness = 1500
-                                    ShowText = true
-                                    TextLayout = "Error %1: Si vous lisez ce message en jeu, c'est que quelqu'un à fait de la merde, et c'est surement moi ! (Frédéric M. 15/03/17)"
-                                    TextColor = [150, 150, 150, 255]
-                                    TextSize = 5000
-                                )
+        Radius = 3330 * Metre
+        Color = [150, 150, 150, 100]
+        Thickness = 1500
+        ShowText = true
+        TextLayout = "Error %1: Si vous lisez ce message en jeu, c'est que quelqu'un à fait de la merde, et c'est surement moi ! (Frédéric M. 15/03/17)"
+        TextColor = [150, 150, 150, 255]
+        TextSize = 5000
+    )
 
     RaysAngle = 70 * Degre
     RayColor = [129, 236, 239, 255]

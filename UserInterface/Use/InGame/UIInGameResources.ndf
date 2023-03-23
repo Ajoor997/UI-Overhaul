@@ -44,6 +44,8 @@ UIInGameResource is TUISpecificInGameResources
         ("UIReinforcementLabelViewDescriptor", ~/UISpecificReinforcementLabelViewDescriptor),
         ("UICommandZoneLabelViewDescriptor", ~/UISpecificCommandZoneLabelViewDescriptor),
         ("ObjectiveViewDescriptor", ~/UISpecificInGameObjectiveBriefViewDescriptor),
+        ("MultiSelectionPanelViewDescriptor", ~/UISpecificHUDMultiSelectionPanelViewDescriptor),
+        ("SmartGroupSelectionPanelViewDescriptor", UISpecificSmartGroupSelectionPanelViewDescriptor(MainComponentContainerUniqueName = "UISpecificSmartGroupSelectionPanelView")),
     ]
 
     MainContainerResource       = ~/InGameMainContainerResource
@@ -160,45 +162,6 @@ InGameMainContainerResource is TUICommonMainContainerResource
                         )
                     ),
 
-
-
-                    BUCKListElementDescriptor
-                    (
-                        ComponentDescriptor = BUCKListDescriptor
-                        (
-                            ComponentFrame = TUIFramePropertyRTTI
-                            (
-                                MagnifiableOffset = [-7.5 , 5.0]
-                                MagnifiableWidthHeight = [0.0, 32.0]
-                                AlignementToFather = [1.0, 0.0]
-                                AlignementToAnchor = [1.0, 0.0]
-                            )
-                        
-                            Axis = ~/ListAxis/Horizontal
-                        
-                            Elements =
-                            [
-                                BUCKListElementDescriptor
-                                (
-                                    ComponentDescriptor = ~/NombreSecteur
-                                ),
-                            ]
-                        
-                            BackgroundComponents =
-                            [
-                                PanelRoundedCorner
-                                (
-                                    BackgroundBlockColorToken = "DarkBlackLight_MOD"
-                                    BorderLineColorToken = "White_MOD"
-                                )
-                            ]
-                        )
-                    ),
-                    
-
-                    
-
-
                     BUCKListElementDescriptor
                     (
                         ComponentDescriptor = BUCKListDescriptor
@@ -217,7 +180,36 @@ InGameMainContainerResource is TUICommonMainContainerResource
                             Elements =
                             [
 
+                                BUCKListElementDescriptor
+                                (
+                                    ComponentDescriptor = BUCKListDescriptor
+                                    (
+                                        ComponentFrame = TUIFramePropertyRTTI
+                                        (
+                                            MagnifiableOffset = [-10 , 0]
+                                            MagnifiableWidthHeight = [0.0, 32.0]
+                                            AlignementToFather = [1.0, 0.0]
+                                            AlignementToAnchor = [1.0, 0.0]
+                                        )
+                                    
+                                        Axis = ~/ListAxis/Horizontal
+                                    
+                                        Elements =
+                                        [
+                                            BUCKListElementDescriptor
+                                            (
+                                                ComponentDescriptor = ~/NombreSecteur
+                                            ),
+                                        ]
 
+                                        HasBackground = true
+                                        HasBorder = true
+                                        BackgroundBlockColorToken = 'MapContainer_MOD'
+                                        BorderLineColorToken = 'MapContainerBorder_MOD'
+                                        BorderThicknessToken = '1'
+                                    
+                                    )
+                                ),
                                 //MAP and events
                                 BUCKListElementDescriptor
                                 (
@@ -261,9 +253,6 @@ InGameMainContainerResource is TUICommonMainContainerResource
                                 ),
 
 
-
-
-
                                 // NOTE_MOD: Time Container
                                 BUCKListElementDescriptor
                                 (   
@@ -275,6 +264,7 @@ InGameMainContainerResource is TUICommonMainContainerResource
                                             AlignementToAnchor = [1.0, 0.0]
                                             AlignementToFather = [1.0, 0.0]
                                         )
+
 
                                         FitStyle = ~/ContainerFitStyle/FitToContent
                                     )

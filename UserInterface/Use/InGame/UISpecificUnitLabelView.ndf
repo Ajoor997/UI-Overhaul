@@ -70,7 +70,6 @@ is BUCKTextDescriptor
 
     ParagraphStyle = TParagraphStyleRTTI
     (
-        //Alignment = UIText_Left
         Alignment = <IsForMultiSelection> ? UIText_Center : UIText_Left
         VerticalAlignment = UIText_VerticalCenter
         InterLine = 0
@@ -81,7 +80,6 @@ is BUCKTextDescriptor
     LocalRenderLayer = <LocalRenderLayer> + 1
     TextPadding = <IsForMultiSelection> ? TRTTILength4(Magnifiable = [0.0, 0.0, 0.0, 0.0]) : TRTTILength4(Magnifiable = [3.0, 1.0, 3.0, 1.0])
 
-    //HorizontalFitStyle = ~/FitStyle/FitToContent
     HorizontalFitStyle = <IsForMultiSelection> ? ~/FitStyle/UserDefined : ~/FitStyle/FitToContent
     VerticalFitStyle = ~/FitStyle/FitToContent
 
@@ -99,43 +97,42 @@ is BUCKTextDescriptor
 
 private LabelUnitIconWidthHeight is [36.0, 36.0]
 
+//private UnitLabelUnitIcon is TBUCKSpecificLabelUnitIconDescriptor
 template UnitLabelUnitIcon [
     IsForMultiSelection : bool,
-] is BUCKTextureDescriptor
+] is TBUCKSpecificLabelUnitIconDescriptor
 (
     ElementName = "UnitIcon"
+
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = ~/LabelUnitIconWidthHeight
+        MagnifiableWidthHeight = <IsForMultiSelection> ? [40.0, 36.0]: ~/LabelUnitIconWidthHeight
         AlignementToFather = [0.0, 0.5]
         AlignementToAnchor = [0.0, 0.5]
     )
 
-    HasBorder = false
-    BorderThicknessToken = '2'
-    BorderLineColorToken = 'Blanc'
-    BackgroundBlockColorToken = "TypeC_MOD"
-    HasBackground = true
-    BackgroundLocalRenderLayer = 2
-    LocalRenderLayer = 2
+    RadarIconTextureName = "icone_PourPanelSelectionRdr"
+    RadarIconColorName = "Blanc220"
+
     ChildFitToContent = true
+    LocalRenderLayer = <IsForMultiSelection> ? 2 : 2
 
-    TextureFrame   = TUIFramePropertyRTTI
-    (
-        RelativeWidthHeight = [1.0, 1.0]
-    )
+    TextureDrawer = "ColorMultiply"
+    UniformDrawer = $/UserInterface/UIUniformDrawer
 
-    ClipTextureToComponent = true
+    HasBorder = false
+    BorderThicknessToken = "2"
+    BorderLineColorToken = "Blanc"
+    HasBackground = true
+    BackgroundLocalRenderLayer = <IsForMultiSelection> ? 2 : 1
 
     Components =
-    [   
-        UnitLabelCarriedUnitIcon(LocalRenderLayer = 3),
+    [
         BUCKListDescriptor
         (
             ComponentFrame = TUIFramePropertyRTTI
             (
                 RelativeWidthHeight = [1.0, 0.0]
-                MagnifiableOffset = <IsForMultiSelection> ? [0.0, 0.0] : [0.0, 7.0]
                 AlignementToFather = [0.0, 1.0]
                 AlignementToAnchor = [0.0, 1.0]
             )
@@ -145,14 +142,11 @@ template UnitLabelUnitIcon [
 
             Elements =
             [
-                BUCKListElementDescriptor(ComponentDescriptor = UnitLabelHPGaugeBUCKComponent(LocalRenderLayer = 3)),
+                BUCKListElementDescriptor(ComponentDescriptor = UnitLabelUnitMoraleGaugeBUCKComponent(LocalRenderLayer = 3)),
                 BUCKListElementSpacer(Magnifiable = 1.0),
-                BUCKListElementDescriptor(ComponentDescriptor = UnitLabelUnitMoraleGaugeBUCKComponent(LocalRenderLayer = 3))
+                BUCKListElementDescriptor(ComponentDescriptor = UnitLabelHPGaugeBUCKComponent(LocalRenderLayer = 3))
             ]
         ),
-        UnitLabelUnitExperienceIconsBUCKComponent(LocalRenderLayer = 3),
-        UnitLabelSpecialtyIcon(LocalRenderLayer = 3),
-        RadarActivityIcon(LocalRenderLayer = 3),
         SmartChipList(LocalRenderLayer = 3),
     ]
 )
@@ -187,7 +181,6 @@ is BUCKSensibleAreaDescriptor
 
             BackgroundLocalRenderLayer = <LocalRenderLayer> - 1
             LocalRenderLayer = <LocalRenderLayer>
-            
             HasBorder = false
             BorderThicknessToken = "2"
             BorderLineColorToken = "Blanc"
@@ -202,74 +195,6 @@ is BUCKSensibleAreaDescriptor
             ClipTextureToComponent = false
         )
     ]
-)
-
-//----------------------------------------------------------------------
-// Icône de transport
-private template UnitLabelCarriedUnitIcon
-[
-    LocalRenderLayer : int,
-    MagnifiableOffset : float2 = [-3.0, 0.0]
-]
-is BUCKTextureDescriptor
-(
-    ElementName = 'CarriedUnitIcon'
-    ComponentFrame = TUIFramePropertyRTTI
-    (
-        MagnifiableWidthHeight = [20.0, 20.0]
-    )
-
-    LocalRenderLayer = <LocalRenderLayer>
-
-    TextureFrame = TUIFramePropertyRTTI(RelativeWidthHeight = [1.0, 1.0])
-)
-
-//----------------------------------------------------------------------
-// Icône de spécialité
-private template UnitLabelSpecialtyIcon
-[
-    LocalRenderLayer : int,
-]
-is BUCKTextureDescriptor
-(
-    ElementName = "SpecialtyIcon"
-    ComponentFrame = TUIFramePropertyRTTI
-    (
-        MagnifiableWidthHeight = [10.0, 10.0]
-        AlignementToFather = [1.0, 1.0]
-        AlignementToAnchor = [1.0, 1.0]
-    )
-
-    LocalRenderLayer = <LocalRenderLayer>
-
-    TextureFrame = TUIFramePropertyRTTI(RelativeWidthHeight = [1.0, 1.0])
-)
-
-// -------------------------------------------------------------------------------------------------
-// Icone pour les armes a Radar
-private template RadarActivityIcon
-[
-    LocalRenderLayer : int,
-] is BUCKTextureDescriptor
-(
-    ElementName = "RadarIcon"
-    ComponentFrame = TUIFramePropertyRTTI
-    (
-        MagnifiableWidthHeight = [16.0, 16.0]
-        AlignementToFather     = [0.05, 0.95]
-        AlignementToAnchor     = [0.0, 1.0]
-    )
-
-    TextureFrame = TUIFramePropertyRTTI
-    (
-        RelativeWidthHeight    = [1.0, 1.0]
-        AlignementToFather     = [0.5, 0.5]
-        AlignementToAnchor     = [0.5, 0.5]
-    )
-
-    TextureToken = 'icone_PourPanelSelectionRdr'
-    TextureColorToken = 'Blanc220'
-    LocalRenderLayer = <LocalRenderLayer>
 )
 
 //----------------------------------------------------------------------
@@ -651,8 +576,7 @@ template UnitLabelUnitMoraleGaugeBUCKComponent
     ElementName = <ElementName>
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = [36.0, 3.0]
-        //MagnifiableOffset = [0.0, -8.0]
+        MagnifiableWidthHeight = [32.0, 2.0]
         AlignementToFather = <AlignementToFather>
         AlignementToAnchor = <AlignementToAnchor>
     )
@@ -662,7 +586,6 @@ template UnitLabelUnitMoraleGaugeBUCKComponent
 
     FilledContentColorToken = "Blanc"
     GaugeMax = 1
-
 )
 
 //----------------------------------------------------------------------
@@ -677,7 +600,6 @@ private template UnitLabelHPGaugeBUCKComponent
     ComponentFrame = TUIFramePropertyRTTI
     (
         MagnifiableWidthHeight = [0.0, 4.0] //La largeur est calculée dans le code à partir de MagnifiableWidthOneHPLabelBlock
-        //MagnifiableOffset = [0.0, -5.0]
         AlignementToFather = [0.5, 0.0]
         AlignementToAnchor = [0.5, 0.0]
     )
@@ -691,31 +613,8 @@ private template UnitLabelHPGaugeBUCKComponent
 
     GraduationThicknessToken = "1"
     GraduationColorToken = "Noir"
-
     FilledContentColorToken = "AppleGreen"
     GaugeMax = 1
-//|||||||
-//=======
-//
-//    Components =
-//    [
-//        BUCKSimpleGaugeValueDescriptor
-//        (
-//            ElementName = <ElementName> + "Value"
-//            ComponentFrame = TUIFramePropertyRTTI
-//            (
-//                RelativeWidthHeight = [0.0, 1.0]
-//                AlignementToFather     = [0.0, 0.5]
-//                AlignementToAnchor     = [0.0, 0.5]
-//            )
-//
-//            HasBackground = true
-//            BackgroundBlockColorToken = "AppleGreen"
-//
-//            BackgroundLocalRenderLayer = <LocalRenderLayer>+1
-//        ),
-//    ]
-//>>>>>>>
 )
 
 //----------------------------------------------------------------------
@@ -725,7 +624,6 @@ private template UnitLabelUnitCountIconBUCKComponent
     Alignement : float2 = [0.0, 0.0],
     LocalRenderLayer : int,
     IsForCarriedUnit : bool = false,
-    IsForMultiSelection : bool = false,
 ]
 is BUCKTextDescriptor
 (
@@ -734,7 +632,6 @@ is BUCKTextDescriptor
     (
         AlignementToAnchor = <Alignement>
         AlignementToFather = <Alignement>
-        MagnifiableOffset = <IsForMultiSelection> ? [0.0, 50] : [0.0, 0.0]
     )
 
     ParagraphStyle = TParagraphStyleRTTI
@@ -746,20 +643,20 @@ is BUCKTextDescriptor
 
     LocalRenderLayer = <LocalRenderLayer>+1
 
-    HorizontalFitStyle = <IsForMultiSelection> ? ~/FitStyle/UserDefined : ~/FitStyle/FitToContent
-    VerticalFitStyle = <IsForMultiSelection> ? ~/FitStyle/UserDefined : ~/FitStyle/FitToContent
+    HorizontalFitStyle = ~/FitStyle/FitToContent
+    VerticalFitStyle = ~/FitStyle/FitToContent
 
     BigLineAction = ~/BigLineAction/ResizeFont
-    TextPadding =  <IsForMultiSelection> ? TRTTILength4(Magnifiable = [1.0, 1.0, 1.0, 1.0]) : TRTTILength4(Magnifiable = [1.0, 1.0, 2.0, 1.0])
-    HasBackground = <IsForMultiSelection> ? false : true
+    TextPadding = TRTTILength4(Magnifiable = [1.0, 1.0, 2.0, 1.0])
 
+    HasBackground = true
     BackgroundBlockColorToken = "SD2_Gris80"
     BackgroundLocalRenderLayer = <LocalRenderLayer>
 
     TextStyle = "LabelUnitNameStroke"
     TypefaceToken = "UISecondFont"
     TextColor = "Blanc"
-    TextSize = <IsForMultiSelection> ? ( <IsForCarriedUnit> ? "16" : "16") : ( <IsForCarriedUnit> ? "10" : "14")
+    TextSize = ( <IsForCarriedUnit> ? "10" : "14")
 )
 
 //----------------------------------------------------------------------
@@ -934,8 +831,7 @@ UnitLabelUnitCriticalMessageBUCKComponent is BUCKContainerDescriptor
 
             TextDico = ~/LocalisationConstantes/dico_interface_ingame
 
-            //TextColor = "UnitLabel/CriticTitle"
-            TextColor = "White"
+            TextColor = "UnitLabel/CriticTitle"
             TextSize = "UnitLabel/TextElement"
 
             LocalRenderLayer = 2
@@ -997,7 +893,7 @@ private MultiSelectionLabelList is BUCKContainerDescriptor
 (
     ComponentFrame = TUIFramePropertyRTTI
     (
-       MagnifiableWidthHeight = [100.0, 80.0]
+        MagnifiableWidthHeight = [100.0, 80.0]
     )
 
     IsClippable = true
@@ -1085,7 +981,7 @@ is BUCKSensibleAreaDescriptor
     MaskEvents = <IsForMultiSelection>
 
     Components =
-    [   
+    [
         UnitLabelUnitIcon(IsForMultiSelection= <IsForMultiSelection>)
     ] +
     (!<IsForMultiSelection> ? [
@@ -1206,7 +1102,6 @@ private template UnitNameList
 
     BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
 
-    FirstMargin = <IsForMultiSelection> ? TRTTILength(Magnifiable = 3.0) : TRTTILength(Magnifiable = 0.0)
     InterItemMargin = TRTTILength(Magnifiable = 0.0)
 
     Elements =
@@ -1215,7 +1110,6 @@ private template UnitNameList
         (
             ComponentDescriptor = UnitLabelUnitCountIconBUCKComponent
             (
-                IsForMultiSelection = <IsForMultiSelection>
                 IsForCarriedUnit = <IsForCarriedUnit>
                 LocalRenderLayer = <LocalRenderLayer>
             )
@@ -1284,10 +1178,6 @@ is BUCKListDescriptor
 
     Axis = ~/ListAxis/Vertical
 
-    FirstMargin = (<IsForMultiSelection> ? TRTTILength (Magnifiable = 5.0) : TRTTILength (Magnifiable = 0.0))
-    InterItemMargin = TRTTILength(Magnifiable = 0.0)
-    LastMargin = (<IsForMultiSelection> ? TRTTILength (Magnifiable = 5.0) : TRTTILength (Magnifiable = 0.0))
-
     // Penser a modifier la taille en Pixel du LabelUnitBUCKComponent si on aggrandit ce composant !
     Elements =
     [
@@ -1297,33 +1187,17 @@ is BUCKListDescriptor
 
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = (
-                <IsForMultiSelection> ? UnitNameList
-                (
-                    IsForMultiSelection = true
-                    IsForCarriedUnit = true
-                    LocalRenderLayer = 2
-                )
-                : UnitNameListSensibleArea
-                (
-                    IsForCarriedUnit = true
-                    LocalRenderLayer = 1
-                )
-            )
-        ),
-        BUCKListElementDescriptor
-        (
             ComponentDescriptor = BUCKContainerDescriptor
             (
                 ComponentFrame = TUIFramePropertyRTTI
                 (
-                    //MagnifiableWidthHeight = [100.0, 14.0]
+                    MagnifiableWidthHeight = [100.0, 14.0]
                     AlignementToFather = [0.5, 0.0]
                     AlignementToAnchor = [0.5, 0.0]
                 )
 
-                FitStyle = (<IsForMultiSelection> ? ~/ContainerFitStyle/FitToContent : ~/ContainerFitStyle/MaxBetweenUserDefinedAndContent)
-                //ClipContent = true
+                FitStyle = (<IsForMultiSelection> ? ~/ContainerFitStyle/None : ~/ContainerFitStyle/MaxBetweenUserDefinedAndContent)
+                ClipContent = true
                 Components =
                 [
                     <IsForMultiSelection> ? UnitNameList
@@ -1347,23 +1221,23 @@ is BUCKListDescriptor
                 IsForMultiSelection = <IsForMultiSelection>
             )
         ),
-        //BUCKListElementDescriptor
-        //(
-        //    ComponentDescriptor =
-        //    (
-        //        <IsForMultiSelection> ? UnitNameList
-        //        (
-        //            IsForMultiSelection = true
-        //            IsForCarriedUnit = true
-        //            LocalRenderLayer = 2
-        //        )
-        //        : UnitNameListSensibleArea
-        //        (
-        //            IsForCarriedUnit = true
-        //            LocalRenderLayer = 1
-        //        )
-        //    )
-        //),
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor =
+            (
+                <IsForMultiSelection> ? UnitNameList
+                (
+                    IsForMultiSelection = true
+                    IsForCarriedUnit = true
+                    LocalRenderLayer = 2
+                )
+                : UnitNameListSensibleArea
+                (
+                    IsForCarriedUnit = true
+                    LocalRenderLayer = 1
+                )
+            )
+        ),
     ]
 )
 
@@ -1408,8 +1282,8 @@ is TUISpecificInGameUnitLabelViewDescriptor
 
     // HP value of each HP square.
     // If it equals 1, a 12 HP unit will display 12 HP squares on its label. It if equals 2, 6 HP squares will be displayed.
-    HPElementHealthValue = 1
-    MagnifiableWidthOneHPLabelBlock = 3.5
+    HPElementHealthValue = 2
+    MagnifiableWidthOneHPLabelBlock = 5.0
 
     NbMaxCharInExtraSupplyGauge = 5
     TokenFormatExtraSupplyGaugeWhenOverflow = "FMTSUPOVF"
@@ -1420,10 +1294,10 @@ is TUISpecificInGameUnitLabelViewDescriptor
         (ECoverTypeForInterface/Light, "CommonTexture_Couvert_Moyen"),
         (ECoverTypeForInterface/Batiment, "CommonTexture_Couvert_Lourd"),
     ]
-    DefaultSpecialtyIcon            = "Spec_bombes_1"
-    AceBackgroundTexture            = "CommonTexture_Etiquette_Background_Ace"
-    NormalBackgroundTexture         = "CommonTexture_Label_Background"
-    CarriedUnitIconUnknow = "UseInGame_Transport_UNKNOW"
+    DefaultSpecialtyIcon    = "Spec_bombes_1"
+    AceBackgroundTexture    = "CommonTexture_Etiquette_Background_Ace"
+    NormalBackgroundTexture = "CommonTexture_Label_Background"
+    CarriedUnitIconUnknown  = "UseInGame_Transport_UNKNOW"
 
     // Couleurs du reticule de visee
     AimingDefaultColor = "Cyan"

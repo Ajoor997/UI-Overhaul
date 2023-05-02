@@ -262,38 +262,27 @@ SpecificInGameLDHintResource is TUICommonInGameLDHintResource
                 ImageSize = [800,1038]
                 HasImage = true
                 TextureToken = 'challenge_11acr'
-                //VideoName = "GameData:/Assets/Videos/challenge/BlackHorsesLastStand_Intro.webm"
             )
         ),
         ("BlackHorsesLastStand_01" ,    TitreChallenge2( TextureToken = 'BlackHorsesLastStand_01' )),
-        ("BlackHorsesLastStand_02" ,    TitreChallenge2 (TextureToken = 'BlackHorsesLastStand_02' {VideoName = "GameData:/Assets/Videos/challenge/BlackHorsesLastStand_02.webm"}   )),
-        ("BlackHorsesLastStand_03" ,    TitreChallenge2 (TextureToken = 'BlackHorsesLastStand_03' {VideoName = "GameData:/Assets/Videos/challenge/BlackHorsesLastStand_03.webm"}   )),
-        ("BlackHorsesLastStand_04" ,    TitreChallenge2 (TextureToken = 'BlackHorsesLastStand_04' {VideoName = "GameData:/Assets/Videos/challenge/BlackHorsesLastStand_04.webm" })),
+        ("BlackHorsesLastStand_02" ,    TitreChallenge2 (TextureToken = 'BlackHorsesLastStand_02' )),
+        ("BlackHorsesLastStand_03" ,    TitreChallenge2 (TextureToken = 'BlackHorsesLastStand_03' )),
+        ("BlackHorsesLastStand_04" ,    TitreChallenge2 (TextureToken = 'BlackHorsesLastStand_04' )),
 
 
         ( "challenge_test",                     challenge (TextureToken = 'challenge_test' )),
         ( "challenge_test_armory0",             challenge (TextureToken = 'challenge_test_armory0' )),
         ( "challenge_test_armory1",             challenge (TextureToken = 'challenge_test_armory1' )),
 
-        // Defense en profondeur
+        // BlackHorsesLastStand
         ( "challenge_defense_1",             PORTRAIT_PauseAndTexture (TextureSteelman = 'challenge_defense_1' IsBriefing = true )),
+        ("panoramique" , CutscenePanoramique (VideoName = "GameData:Map/Scenario/challenge_BlackHorsesLastStand/Scripting/Videos/panoramique.webm" )),
 
         // RedJuggernaut
-        ("titre_RedJuggernaut" , TitreMissionFullscreen
-            (
-                ImageSize = [1106*1.7,676*1.7]
-                HasImage = true
-                TextureToken = 'RedJuggernaut'
-                AnimationTotalDuration = 15
-                facteur_aggrandissement = 2
-                //VideoName = "GameData:/Assets/Videos/challenge/BlackHorsesLastStand_Intro.webm"
-            )
-        ),
         ( "RedJuggernaut_difficulty",               Difficulte (texture = 'RedJuggernaut' )),
 
-        // steelbeast
+        // BackhandBlow
 
-        ("intro_steelbeast" ,    TitreMissionFullscreen (VideoName = "GameData:/Assets/Videos/challenge/steelbeast/Intro_Operation_Effets_TV_No_Music_No_Title.webm" )),
         ( "steelbeast_difficulty",               Difficulte (texture = 'Steelbeast_Last_Frame_No_Effects' )),
 
         //-------------------------------------------------------------------------------------
@@ -309,7 +298,10 @@ SpecificInGameLDHintResource is TUICommonInGameLDHintResource
         ( "Steelman_test_general2",             PORTRAIT_PauseAndTexture (TextureSteelman_FullScreen = 'Steelman_test_general2' )),
         ( "Steelman_test_regles",             PORTRAIT_PauseAndTexture (TextureSteelman = 'Steelman_test_regles' )),
 
-
+        // generaux vide
+        ( "general_DDR",             PORTRAIT_PauseAndTexture_Steelman (TextureSteelman_FullScreen = 'general_DDR' )),
+        ( "general_DDR_noPause",             PORTRAIT_PauseAndTexture_Steelman (TextureSteelman_FullScreen = 'general_DDR' HasButtons = false  )),
+        ( "general_US",             PORTRAIT_PauseAndTexture_Steelman (TextureSteelman_FullScreen = 'general_US' )),
         // tuto_1
         ( "Steelman_tuto_0",             PORTRAIT_PauseAndTexture_Steelman (TextureSteelman = 'Steelman_tuto_0' )),
         ( "Steelman_tuto_1",             PORTRAIT_PauseAndTexture_Steelman (TextureSteelman = 'Steelman_tuto_1' )),
@@ -464,6 +456,8 @@ UseInGame_AdditionalLDHintTextureBank is TBUCKToolAdditionalTextureBank
     ( "Steelman_tuto_2",        MAP [(~/ComponentState/Normal, TUIResourceTexture_InGame( FileName='GameData:/Assets/2D/Interface/UseStrategic/LDHint/tuto_1/tuto_2.png' ))] ),
     ( "Steelman_tuto_3",        MAP [(~/ComponentState/Normal, TUIResourceTexture_InGame( FileName='GameData:/Assets/2D/Interface/UseStrategic/LDHint/tuto_1/tuto_3.png' ))] ),
 
+    ( "general_DDR",        MAP [(~/ComponentState/Normal, TUIResourceTexture_InGame( FileName='GameData:/Assets/2D/Interface/UseStrategic/LDHint/general_DDR.png' ))] ),
+    ( "general_US",        MAP [(~/ComponentState/Normal, TUIResourceTexture_InGame( FileName='GameData:/Assets/2D/Interface/UseStrategic/LDHint/general_US.png' ))] ),
     // bad h.
     ( "bad_hersfeld_sov_01",        MAP [(~/ComponentState/Normal, TUIResourceTexture_InGame( FileName='GameData:/Assets/2D/Interface/UseStrategic/LDHint/bad_hersfeld/sov_01.png' ))] ),
     ( "bad_hersfeld_sov_02",        MAP [(~/ComponentState/Normal, TUIResourceTexture_InGame( FileName='GameData:/Assets/2D/Interface/UseStrategic/LDHint/bad_hersfeld/sov_02.png' ))] ),

@@ -52,15 +52,15 @@ FeedbackLineOfSightDescriptor is TFeedbackLineOfSightDescriptor
             Radius = 100 * Metre div MultiplicateurMetreRTSVersDistanceFeedbackTactique
             Thickness = 1000
             ShowDistanceText = true
-            TextSize = 2000
-            Color = [129, 236, 239, 255]
+            TextSize = 3500
+            Color = [216, 201, 181, 80]
          ),
         Template_CircleDescriptor(
             Radius = 500 * Metre div MultiplicateurMetreRTSVersDistanceFeedbackTactique
             Thickness = 1000
             ShowDistanceText = true
-            TextSize = 2000
-            Color = [129, 236, 239, 128]
+            TextSize = 3500
+            Color = [216, 201, 181, 80]
          ),
         Template_CircleDescriptor(
             Radius = 1000 * Metre div MultiplicateurMetreRTSVersDistanceFeedbackTactique
@@ -73,8 +73,8 @@ FeedbackLineOfSightDescriptor is TFeedbackLineOfSightDescriptor
             Radius = 1500 * Metre div MultiplicateurMetreRTSVersDistanceFeedbackTactique
             Thickness = 1000
             ShowDistanceText = true
-            TextSize = 2000
-            Color = [250, 244, 23, 150]
+            TextSize = 3500
+            Color = [216, 201, 181, 80]
          ),
         Template_CircleDescriptor(
             Radius = 2000 * Metre div MultiplicateurMetreRTSVersDistanceFeedbackTactique
@@ -94,15 +94,8 @@ FeedbackLineOfSightDescriptor is TFeedbackLineOfSightDescriptor
             Radius = 2500 * Metre div MultiplicateurMetreRTSVersDistanceFeedbackTactique
             Thickness = 1000
             ShowDistanceText = true
-            TextSize = 2000
-			Color = [255, 0, 0, 255]
-		 ),
-		Template_CircleDescriptor(
-            Radius = 2800 * Metre div MultiplicateurMetreRTSVersDistanceFeedbackTactique
-            Thickness = 300
-            ShowDistanceText = true
-            TextSize = 1000
-			Color = [191, 0, 255, 255]
+            TextSize = 3500
+
          ),
     ]
 

@@ -36,8 +36,7 @@ UIInGameResource is TUISpecificInGameResources
         ("UISpecificOffMapAirplaneViewDescriptor", ~/UISpecificOffMapAirplaneViewDescriptor),
         ("UISpecificOffMapArtilleryViewDescriptor", ~/UISpecificOffMapArtilleryViewDescriptor),
         ("UISpecificHUDScoreViewDescriptor", ~/UISpecificHUDScoreViewDescriptor),
-        ("UISpecificHUDScoreAllianceLeftViewDescriptor", UISpecificHUDScoreAllianceViewDescriptor(IsLeftSide = true)),
-        ("UISpecificHUDScoreAllianceRightViewDescriptor", UISpecificHUDScoreAllianceViewDescriptor(IsLeftSide = false)),
+        ("UISpecificHUDScoreAllianceViewDescriptor", ~/UISpecificHUDScoreAllianceViewDescriptor),
         ("UISpecificHUDScorePlayerViewDescriptor", ~/UISpecificHUDScorePlayerViewDescriptor),
         ("UIDisplayStartingInformationViewDescriptor", ~/UISpecificDisplayStartingInformationViewDescriptor),
         ("UIAutoDeployViewDescriptor", ~/UISpecificAutoDeployViewDescriptor),
@@ -46,6 +45,7 @@ UIInGameResource is TUISpecificInGameResources
         ("ObjectiveViewDescriptor", ~/UISpecificInGameObjectiveBriefViewDescriptor),
         ("MultiSelectionPanelViewDescriptor", ~/UISpecificHUDMultiSelectionPanelViewDescriptor),
         ("SmartGroupSelectionPanelViewDescriptor", UISpecificSmartGroupSelectionPanelViewDescriptor(MainComponentContainerUniqueName = "UISpecificSmartGroupSelectionPanelView")),
+        ("LDVideoViewDescriptor", ~/UIInGameLDVideoViewDescriptor),
     ]
 
     MainContainerResource       = ~/InGameMainContainerResource
@@ -73,8 +73,6 @@ UIInGameResource is TUISpecificInGameResources
     PositionEvents              = ~/MainPositionEvents
     MousePolicyManagerResources = ~/InGameMousePolicyManagerResources
     OptionManager               = $/GameOptionsInterface/GameOptionsInterfaceWrapper
-
-    SubtitleLayer               = $/UserInterface/UILayer_HintsAndSubtitles
 
     DefenseResources            = ~/DefenseResources
 
@@ -224,7 +222,7 @@ InGameMainContainerResource is TUICommonMainContainerResource
                                         Axis = ~/ListAxis/Horizontal
                                         BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
 
-                                        InterItemMargin = TRTTILength(Pixel = 10)
+                                        InterItemMargin = TRTTILength(Pixel = 80)
 
                                         Elements =
                                         [

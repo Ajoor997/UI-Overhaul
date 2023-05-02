@@ -1,9 +1,11 @@
 
+private ObjectiveBriefMainComponentWidth is 320.0
+
 BUCKSpecificInGameObjectiveBriefMainComponentDescriptor is BUCKListDescriptor
 (
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = [320.0, 0.0]
+        MagnifiableWidthHeight = [~/ObjectiveBriefMainComponentWidth, 0.0]
         AlignementToFather = [1.0, 0.0]
         AlignementToAnchor = [1.0, 0.0]
         MagnifiableOffset = [-10,0]
@@ -68,6 +70,13 @@ BUCKSpecificInGameObjectiveBriefMainComponentDescriptor is BUCKListDescriptor
     ]
 )
 
+private OneObjectiveWidthMarginLeft is 15.0
+private OneObjectiveWidthMarginRight is 4.0
+private OneObjectiveContentWidth is ~/ObjectiveBriefMainComponentWidth - ~/OneObjectiveWidthMarginLeft - ~/OneObjectiveWidthMarginRight
+private OneObjectiveCheckboxSize is 16.0
+private OneObjectiveSpaceBetwenCheckboxAndText is 10.0
+private OneObjectiveTextContentWidth is ~/OneObjectiveContentWidth - ~/OneObjectiveCheckboxSize - ~/OneObjectiveSpaceBetwenCheckboxAndText
+
 private ObjectivePanelOneObjectiveContent is BUCKListDescriptor
 (
     ComponentFrame = TUIFramePropertyRTTI
@@ -75,9 +84,9 @@ private ObjectivePanelOneObjectiveContent is BUCKListDescriptor
         RelativeWidthHeight = [0.0, 0.0]
     )
 
-    FirstMargin = TRTTILength(Magnifiable = 15.0)
-    InterItemMargin = TRTTILength(Magnifiable = 10.0)
-    LastMargin = TRTTILength(Magnifiable = 4.0)
+    FirstMargin = TRTTILength(Magnifiable = ~/OneObjectiveWidthMarginLeft)
+    InterItemMargin = TRTTILength(Magnifiable = ~/OneObjectiveSpaceBetwenCheckboxAndText)
+    LastMargin = TRTTILength(Magnifiable = ~/OneObjectiveWidthMarginRight)
     BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
 
     Axis = ~/ListAxis/Horizontal
@@ -91,7 +100,7 @@ private ObjectivePanelOneObjectiveContent is BUCKListDescriptor
                 ElementName = "ObjectiveCompletedCheckbox"
                 ComponentFrame = TUIFramePropertyRTTI
                 (
-                    MagnifiableWidthHeight = [16,16]
+                    MagnifiableWidthHeight = [~/OneObjectiveCheckboxSize, ~/OneObjectiveCheckboxSize]
                 )
                 BorderLineColorToken = "Objective/CheckboxBorder"
                 TextureColorToken = "Objective/CheckboxBorder"
@@ -103,9 +112,7 @@ private ObjectivePanelOneObjectiveContent is BUCKListDescriptor
             (
                 ComponentFrame = TUIFramePropertyRTTI
                 (
-                    RelativeWidthHeight = [1.0, 0.0]
-                    AlignementToFather = [0.5, 0.0]
-                    AlignementToAnchor = [0.5, 0.0]
+                    MagnifiableWidthHeight = [~/OneObjectiveTextContentWidth, 0.0]
                 )
 
                 FirstMargin = TRTTILength(Magnifiable = 2)
@@ -146,19 +153,12 @@ private ObjectivePanelOneObjectiveContent is BUCKListDescriptor
                             ComponentFrame = TUIFramePropertyRTTI
                             (
                                 RelativeWidthHeight = [1.0, 0.0]
-                                MagnifiableWidthHeight = [0,30]
                             )
 
-                            ParagraphStyle = TParagraphStyleRTTI
-                            (
-                                Alignment = UIText_Left
-                                VerticalAlignment = UIText_Up
-                                BigWordAction = ~/BigWordAction/BigWordNewLine
-                                InterLine = 0
-                            )
+                            ParagraphStyle = ~/LDHintParagraphStyleLeftAlignedExact
                             HorizontalFitStyle = ~/FitStyle/UserDefined
-                            VerticalFitStyle = ~/FitStyle/UserDefined
-                            BigLineAction = ~/BigLineAction/BalancedMultiline
+                            VerticalFitStyle = ~/FitStyle/FitToContent
+                            BigLineAction = ~/BigLineAction/MultiLine
                             TextStyle = 'Default'
                             TypefaceToken = "Eurostyle_Italic"
 
@@ -168,7 +168,6 @@ private ObjectivePanelOneObjectiveContent is BUCKListDescriptor
                     ),
                 ]
             )
-            ExtendWeight = 1.0
         ),
     ]
 )

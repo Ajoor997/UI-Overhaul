@@ -7,7 +7,7 @@ template BUCKSpecificMouseWidgetTextMainComponentDescriptor
     TextSize : string,
     PaddingX : float,
     TypeFace : string,
-    ParagraphStyle : TParagraphStyleRTTI = TParagraphStyleRTTI
+    ParagraphStyle : TParagraphStyle = TParagraphStyle
     (
         Alignment = UIText_Center
         VerticalAlignment = UIText_VerticalCenter
@@ -43,7 +43,7 @@ template UIMouseWidgetTextViewDescriptor
     TextSize : string = "MouseWidget/TextModule",
     PaddingX : float = 50.0,
     TypeFace : string = "UIMainFont",
-    ParagraphStyle : TParagraphStyleRTTI = TParagraphStyleRTTI
+    ParagraphStyle : TParagraphStyle = TParagraphStyle
     (
         Alignment = UIText_Center
         VerticalAlignment = UIText_VerticalCenter

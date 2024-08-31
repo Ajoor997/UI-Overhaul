@@ -1,7 +1,7 @@
 //-------------------------------------------------------------------------------------
 
 LobbyPlayerLineBackgroundWidth is 383.0
-LobbyPlayerLineIconWidth is 54.0
+LobbyPlayerLineIconWidth is 58
 LobbyPlayerLineIconSpacing is 4.0
 
 private PlayerLinePlayerIcon is BUCKSpecificAvatarDescriptor
@@ -121,11 +121,10 @@ private deckNameDescription is BUCKTextDescriptor
 
     ComponentFrame = TUIFramePropertyRTTI
     (
-        RelativeWidthHeight = [1.0, 0.0]
-        MagnifiableWidthHeight = [0.0, 32.0]
+        RelativeWidthHeight = [1.0, 1.0]
     )
 
-    ParagraphStyle = TParagraphStyleRTTI
+    ParagraphStyle = TParagraphStyle
     (
         Alignment = UIText_Left
         VerticalAlignment = UIText_VerticalCenter
@@ -152,8 +151,7 @@ private PlayerDeckButton is BUCKButtonDescriptor
 
     ComponentFrame = TUIFramePropertyRTTI
     (
-        RelativeWidthHeight = [1.0, 0.0]
-        MagnifiableWidthHeight = [0.0, 32.0]
+        RelativeWidthHeight = [1.0, 1.0]
     )
 
     HidePointerEvents = true
@@ -177,7 +175,7 @@ private PlayerLinePlayerDivision is BUCKTextureDescriptor
 
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = [32.0, 32.0]
+        MagnifiableWidthHeight = [37.0, 37.0]
     )
 
     TextureFrame = TUIFramePropertyRTTI(RelativeWidthHeight = [1.0, 1.0])
@@ -205,7 +203,7 @@ private OpenSlotButton is BUCKButtonDescriptor
 
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = [LobbyPlayerLineIconWidth, LobbyPlayerLineIconWidth]
+        MagnifiableWidthHeight = [LobbyPlayerLineIconWidth - 6, LobbyPlayerLineIconWidth - 6]
     )
 
     HasBackground = false
@@ -219,6 +217,7 @@ private OpenSlotButton is BUCKButtonDescriptor
         (
             ComponentFrame = TUIFramePropertyRTTI
             (
+                MagnifiableOffset = [0, 3]
                 RelativeWidthHeight = [1.0, 1.0]
             )
             TextureToken = 'bouton_ajout_ia'
@@ -228,25 +227,33 @@ private OpenSlotButton is BUCKButtonDescriptor
 
 //-------------------------------------------------------------------------------------
 
-private PlayerStateDropDown is BUCKSpecificDropdownDescriptor
+private IALevelDropDown is BUCKSpecificDropdownDescriptor
 (
-    ElementName = "StateDropDown"
+    ElementName = "IALevelDropDown"
 
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = [20.0, 20.0]
+        RelativeWidthHeight = [1.0, 0.0]
+        MagnifiableWidthHeight = [0.0, 20.0]
     )
 
     HasBorder = false
-    HasBackground = true
-    BackgroundBlockColorToken = 'Noir30'
+    HasBackground = false
 
-    MainTextColorToken = 'Transparent'
+    MainTextColorToken = "Blanc"
+    MainTextSizeToken = "14"
+    MainTextTypefaceToken = "Liberator"
+    MainTextStyle = "Default"
+    MainTextPadding = TRTTILength4( Magnifiable = [14.0, 0.0, 0.0, 0.0] )
+
     ShowArrow = false
     HidePointerEvents = true
     PointerEventsToAllow = ~/EAllowablePointerEventType/Move | ~/EAllowablePointerEventType/Button1
     ItemsTextColorToken = 'Noir_option'
     AlignFloatingPanelRight = false
+
+    FloatingListMagnifiableWidth  = 292.0
+
 
     Components =
     [
@@ -255,8 +262,9 @@ private PlayerStateDropDown is BUCKSpecificDropdownDescriptor
             ComponentFrame = TUIFramePropertyRTTI
             (
                 MagnifiableWidthHeight = [16.0, 16.0]
-                AlignementToAnchor = [0.5, 0.5]
-                AlignementToFather = [0.5, 0.5]
+                AlignementToAnchor = [0.0, 0.5]
+                AlignementToFather = [0.0, 0.5]
+                MagnifiableOffset = [2.0, 0.0]
             )
             TextureToken = 'lobby_dropdown_arrow'
             TextureColorToken = 'SD2_Blanc184'
@@ -321,7 +329,8 @@ BlocPrincipal is BUCKListDescriptor
                 )
 
                 HasBackground = true
-                BackgroundBlockColorToken = "Transparent"
+                // BackgroundBlockColorToken = "Orange"
+                // BackgroundBlockColorToken = "Transparent"
 
                 Components =
                 [
@@ -350,8 +359,8 @@ BlocPrincipal is BUCKListDescriptor
             ElementName = "BackgroundClosed"
             ComponentFrame = TUIFramePropertyRTTI
             (
-                MagnifiableWidthHeight = [LobbyPlayerLineBackgroundWidth+LobbyPlayerLineIconWidth+2.0*LobbyPlayerLineIconSpacing, 60.0] //BG size + icon + spacers
-                MagnifiableOffset = [-3.0, -3.0]
+                MagnifiableWidthHeight = [LobbyPlayerLineBackgroundWidth+LobbyPlayerLineIconWidth+2.0*LobbyPlayerLineIconSpacing, LobbyPlayerLineIconWidth + 6] //BG size + icon + spacers
+                MagnifiableOffset = [0, -3]
             )
             TextureToken = 'lobby_closed'
         ),
@@ -360,8 +369,8 @@ BlocPrincipal is BUCKListDescriptor
             ElementName = "BackgroundOpen"
             ComponentFrame = TUIFramePropertyRTTI
             (
-                MagnifiableWidthHeight = [LobbyPlayerLineBackgroundWidth, 60.0]
-                MagnifiableOffset = [0.0, -3.0]
+                MagnifiableWidthHeight = [LobbyPlayerLineBackgroundWidth, LobbyPlayerLineIconWidth + 6]
+                MagnifiableOffset = [0, -3]
             )
             TextureToken = 'lobby_ouvert'
         )
@@ -375,7 +384,7 @@ BlocPrincipal is BUCKListDescriptor
             ComponentFrame = TUIFramePropertyRTTI
             (
                 MagnifiableWidthHeight = [LobbyPlayerLineBackgroundWidth-LobbyPlayerLineIconWidth, 33.0]
-                MagnifiableOffset = [0.0, -3.0]
+                MagnifiableOffset = [0, -6]
 
                 AlignementToAnchor = [1.0, 1.0]
                 AlignementToFather = [1.0, 1.0]
@@ -397,8 +406,6 @@ LigneDuHaut is BUCKListDescriptor
     ComponentFrame = TUIFramePropertyRTTI
     (
         MagnifiableWidthHeight = [0.0, 20.0]
-        AlignementToFather = [1.0, 0.0]
-        AlignementToAnchor = [1.0, 0.0]
     )
 
     Axis = ~/ListAxis/Horizontal
@@ -407,7 +414,8 @@ LigneDuHaut is BUCKListDescriptor
     [
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = ~/PlayerStateDropDown
+            ExtendWeight = 1.0
+            ComponentDescriptor = ~/IALevelDropDown
         ),
         BUCKListElementDescriptor
         (
@@ -480,7 +488,7 @@ AddIAButton is BUCKButtonDescriptor
     [
         BUCKTextDescriptor
         (
-            ParagraphStyle = TParagraphStyleRTTI
+            ParagraphStyle = TParagraphStyle
             (
                 VerticalAlignment = ~/UIText_VerticalCenter
                 Alignment = ~/UIText_Center
@@ -510,7 +518,7 @@ OpenSlotText is BUCKTextDescriptor
     (
         RelativeWidthHeight = [1.0, 1.0]
     )
-    TextPadding = TRTTILength4(Magnifiable = [10.0, 0.0, 0.0, 0.0])
+    TextPadding = TRTTILength4(Magnifiable = [10.0, 4.0, 0.0, 0.0])
 
     BigLineAction = ~/BigLineAction/ResizeFont
     ParagraphStyle = ~/paragraphStyleTextLeftAlign
@@ -728,7 +736,7 @@ LigneDuBas is BUCKListDescriptor
 
     Axis = ~/ListAxis/Horizontal
     HasBackground = true
-    BackgroundBlockColorToken = 'Noir_lobby'
+    BackgroundBlockColorToken = 'Noir30'
 
     Elements =
     [

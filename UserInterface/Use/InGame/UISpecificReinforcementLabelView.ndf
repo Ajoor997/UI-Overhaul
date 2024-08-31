@@ -12,7 +12,7 @@ BUCKSpecificReinforcementLabelMainComponentDescriptor is BUCKTextDescriptor
 
     TextStyle = "Default"
 
-    ParagraphStyle = TParagraphStyleRTTI
+    ParagraphStyle = TParagraphStyle
     (
         Alignment         = UIText_Left
         VerticalAlignment = UIText_Up
@@ -33,35 +33,20 @@ BUCKSpecificReinforcementLabelMainComponentDescriptor is BUCKTextDescriptor
     TypefaceToken = "Liberator"
 )
 
-ReinforcementTextReferentiel is TLabelTransformationComposition
-(
-    Transformations =
-    [
-        TLabelTransformPostTranslateForArea
-        (
-            Translation = [0,0,0]
-        )
-    ]
-)
-
 UISpecificReinforcementLabelViewDescriptor is TUISpecificReinforcementLabelViewDescriptor
 (
     MainComponentDescriptor = ~/BUCKSpecificReinforcementLabelMainComponentDescriptor
     MainComponentContainerUniqueName = "" // Permet d'indiquer l'endroit ou le composant doit s'insérer
 
     UI3DLayer = $/UserInterface/UI3DLayer_General
-
-    LabelReferentiel = ~/ReinforcementTextReferentiel
-
     VisibilityRange = ~/AllInGameRanges/ZoomRenfortArrow
     FadeDuration = 0.5
 
-    OpacityControlByFloat = $/M3D/Shader/AreaFillOpacity
+    OpacityControlByFloat = $/M3D/Shader/AreaTextOpacity
 
     ReinforcementTokens =
     [
         "REINF_LAND", //Land
         "REINF_AIR", //Air
-        "REINF_SEA", //Maritime
     ]
 )

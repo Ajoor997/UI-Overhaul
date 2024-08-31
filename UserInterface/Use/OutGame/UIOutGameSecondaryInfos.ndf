@@ -2,7 +2,7 @@
 //                   Boutons d'Action                   //
 //-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+- //
 
-paragraphStyleTextRight is TParagraphStyleRTTI
+paragraphStyleTextRight is TParagraphStyle
 (
     Alignment = UIText_Center
     VerticalAlignment = UIText_VerticalCenter

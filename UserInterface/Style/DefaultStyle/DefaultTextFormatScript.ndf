@@ -12,14 +12,13 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "score_01",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.0
                     ColorBottom = [3,108,0,255]
                     ColorUp     = [38,158,34,255]
                     ColorStroke = [  0,   0,   0, 255]
                     Stroke = false
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -27,14 +26,13 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "score_02",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.0
                     ColorBottom = [38,158,34,255]
                     ColorUp     = [38,158,34,255]
                     ColorStroke = [  0,   0,   0, 255]
                     Stroke = false
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -42,14 +40,13 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "score_03",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.0
                     ColorBottom = [49,207,45,255]
                     ColorUp     = [49,207,45,255]
                     ColorStroke = [  0,   0,   0, 255]
                     Stroke = false
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -57,14 +54,13 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "score_04",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.0
                     ColorBottom = [183,172,41,255]
                     ColorUp     = [183,172,41,255]
                     ColorStroke = [  0,   0,   0, 255]
                     Stroke = false
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -72,14 +68,69 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "score_05",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.0
                     ColorBottom = [255,74,57,255]
                     ColorUp     = [255,74,57,255]
                     ColorStroke = [  0,   0,   0, 255]
                     Stroke = false
-                    AllowSmallFont = true
+                )
+            )
+        ),
+        (
+            "moral_color_bad_1",
+            TTFSCommand_StyleChange
+            (
+                Style = TTextStyle
+                (
+                    FontSize    = 1.0
+                    ColorBottom = [255,228,0,255]
+                    ColorUp     = [255,228,0,255]
+                    ColorStroke = [  0,   0,   0, 255]
+                    Stroke = false
+                )
+            )
+        ),
+        (
+            "moral_color_bad_2",
+            TTFSCommand_StyleChange
+            (
+                Style = TTextStyle
+                (
+                    FontSize    = 1.0
+                    ColorBottom = [255,156,0,255]
+                    ColorUp     = [255,156,0,255]
+                    ColorStroke = [  0,   0,   0, 255]
+                    Stroke = false
+                )
+            )
+        ),
+        (
+            "moral_color_bad_3",
+            TTFSCommand_StyleChange
+            (
+                Style = TTextStyle
+                (
+                    FontSize    = 1.0
+                    ColorBottom = [255,74,57,255]
+                    ColorUp     = [255,74,57,255]
+                    ColorStroke = [  0,   0,   0, 255]
+                    Stroke = false
+                )
+            )
+        ),
+        (
+            "moral_color_bad_4",
+            TTFSCommand_StyleChange
+            (
+                Style = TTextStyle
+                (
+                    FontSize    = 1.0
+                    ColorBottom = [61,21,17,255]
+                    ColorUp     = [61,21,17,255]
+                    ColorStroke = [  0,   0,   0, 255]
+                    Stroke = false
                 )
             )
         ),
@@ -87,14 +138,13 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "pi0",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.0
                     ColorBottom = [172,0,0,255]
                     ColorUp     = [172,0,0,255]
                     ColorStroke = [  0,   0,   0, 255]
                     Stroke = false
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -102,14 +152,13 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "pi1",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.0
                     ColorBottom = [255,190,0,255]
                     ColorUp     = [255,190,0,255]
                     ColorStroke = [  0,   0,   0, 255]
                     Stroke = false
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -117,14 +166,13 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "pi2",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.0
                     ColorBottom = [127,255,117,255]
                     ColorUp     = [127,255,117,255]
                     ColorStroke = [  0,   0,   0, 255]
                     Stroke = false
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -132,14 +180,13 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "pi3",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.0
                     ColorBottom = [67,255,255,255]
                     ColorUp     = [67,255,255,255]
                     ColorStroke = [  0,   0,   0, 255]
                     Stroke = false
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -147,14 +194,13 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "win75",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.0
                     ColorBottom = [255,168,69,255]
                     ColorUp     = [255,168,69,255]
                     ColorStroke = [  0,   0,   0, 255]
                     Stroke = false
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -162,14 +208,13 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "win90",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.0
                     ColorBottom = [255,168,0,255]
                     ColorUp     = [255,168,0,255]
                     ColorStroke = [  0,   0,   0, 255]
                     Stroke = false
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -177,14 +222,13 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "Ewin50",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.0
                     ColorBottom = [175, 121, 81, 255]
                     ColorUp     = [175, 121, 81, 255]
                     ColorStroke = [  0,   0,   0, 255]
                     Stroke = false
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -192,14 +236,13 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "Ewin75",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.0
                     ColorBottom = [175, 88, 23, 255]
                     ColorUp     = [175, 88, 23, 255]
                     ColorStroke = [  0,   0,   0, 255]
                     Stroke = false
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -207,14 +250,13 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "Ewin90",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.0
                     ColorBottom = [175, 39, 23, 255]
                     ColorUp     = [175, 39, 23, 255]
                     ColorStroke = [  0,   0,   0, 255]
                     Stroke = false
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -224,14 +266,13 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "shint",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.4
                     ColorBottom = [0, 255, 255, 255]
                     ColorUp     = [0, 255, 255, 255]
                     ColorStroke = [  0,   0,   0, 255]
                     Stroke = false
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -239,14 +280,13 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "poor",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.0
                     ColorBottom = [243, 84, 66, 255]
                     ColorUp     = [243, 84, 66, 255]
                     ColorStroke = [  0,   0,   0, 255]
                     Stroke = false
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -254,14 +294,13 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "SemiTransp",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 0.55
                     ColorBottom = [109, 111, 111, 180]
                     ColorUp     = [109, 111, 111, 180]
                     ColorStroke = [  0,   0,   0, 255]
                     Stroke = false
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -269,14 +308,13 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "SemiTransp2",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 0.4
                     ColorBottom = [125, 125, 125, 180]
                     ColorUp     = [125, 125, 125, 180]
                     ColorStroke = [  0,   0,   0, 255]
                     Stroke = false
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -284,14 +322,13 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "U1",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.0
                     ColorBottom = [135, 178, 196, 255]
                     ColorUp     = [135, 178, 196, 255]
                     ColorStroke = [  0,   0,   0, 255]
                     Stroke = false
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -299,14 +336,13 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "default",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.0
                     ColorBottom = [0, 0, 0, 0]
                     ColorUp     = [0, 0, 0, 0]
                     ColorStroke = [0, 0, 0, 0]
                     Stroke = false
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -314,14 +350,41 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "small",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 0.5
                     ColorBottom = [0, 0, 0, 0]
                     ColorUp     = [0, 0, 0, 0]
                     ColorStroke = [0, 0, 0, 0]
                     Stroke = false
-                    AllowSmallFont = true
+                )
+            )
+        ),
+        (
+            "large",
+            TTFSCommand_StyleChange
+            (
+                Style = TTextStyle
+                (
+                    FontSize    = 1.4
+                    ColorBottom = [0, 0, 0, 0]
+                    ColorUp     = [0, 0, 0, 0]
+                    ColorStroke = [0, 0, 0, 0]
+                    Stroke = false
+                )
+            )
+        ),
+        (
+            "large2",
+            TTFSCommand_StyleChange
+            (
+                Style = TTextStyle
+                (
+                    FontSize    = 1.25
+                    ColorBottom = [0, 0, 0, 0]
+                    ColorUp     = [0, 0, 0, 0]
+                    ColorStroke = [0, 0, 0, 0]
+                    Stroke = false
                 )
             )
         ),
@@ -329,14 +392,13 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "dateSM",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 0.65
                     ColorBottom = [0, 0, 0, 255]
                     ColorUp     = [0, 0, 0, 255]
                     ColorStroke = [  0,   0,   0, 255]
                     Stroke = false
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -344,14 +406,13 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "medium",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 0.7
                     ColorBottom = [0, 0, 0, 0]
                     ColorUp     = [0, 0, 0, 0]
                     ColorStroke = [0, 0, 0, 0]
                     Stroke = false
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -359,14 +420,13 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "up",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 0.7
                     ColorBottom = [0, 0, 0, 0]
                     ColorUp     = [0, 0, 0, 0]
                     ColorStroke = [0, 0, 0, 0]
                     Stroke = false
-                    AllowSmallFont = true
                     UpperCase = true
                 )
             )
@@ -375,7 +435,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "transparent",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 0.1
                     ColorBottom = [255,  35,  35, 0]
@@ -385,7 +445,6 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
                     StrokeSize = 0.6
                     StrokeHardness = 0.5
                     TextThickness = 0.45
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -393,14 +452,13 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "or", // BLANC PUR
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    =1
                     ColorBottom = JauneOrange
                     ColorUp     = JauneOrange
                     ColorStroke = [  0,   0,   0, 255]
                     Stroke = false
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -408,14 +466,13 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "coloredtext1", // VERT FLUO
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.0
                     ColorBottom = [127, 255, 117, 255] // BlockColor14
                     ColorUp     = [127, 255, 117, 255] // BlockColor14
                     ColorStroke = [  0,   0,   0, 255]
                     Stroke = false
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -423,14 +480,13 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "coloredtext2", // GRIS
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.0
                     ColorBottom = [192, 192, 192, 255]
                     ColorUp     = [192, 192, 192, 255]
                     ColorStroke = [  0,   0,   0, 255]
                     Stroke = false
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -438,7 +494,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "coloredtext3", // ORANGE
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.1
                     ColorBottom = [255, 180,   0, 255]
@@ -448,7 +504,6 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
                     StrokeSize = 0.6
                     StrokeHardness = 0.5
                     TextThickness = 0.2
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -456,7 +511,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "coloredtext4", // BLEU CIEL
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.1
                     ColorBottom = [130, 235, 255, 200]
@@ -466,7 +521,6 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
                     StrokeSize = 0.6
                     StrokeHardness = 0.5
                     TextThickness = 0.45
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -474,7 +528,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "coloredtext5", // ORANGE - doublon
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.1
                     ColorBottom = [255, 180,  10, 220]
@@ -484,7 +538,6 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
                     StrokeSize = 0.6
                     StrokeHardness = 0.5
                     TextThickness = 0.45
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -492,7 +545,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "blue", // ROUGE
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.1
                     ColorBottom = [135,178,196,255]
@@ -502,7 +555,6 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
                     StrokeSize = 0.6
                     StrokeHardness = 0.5
                     TextThickness = 0.45
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -510,7 +562,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "green", // ROUGE
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.1
                     ColorBottom = [0,200,0,255]
@@ -520,7 +572,6 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
                     StrokeSize = 0.6
                     StrokeHardness = 0.5
                     TextThickness = 0.45
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -528,7 +579,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "lightgreen",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.1
                     ColorBottom = [90,220,90,255]
@@ -538,7 +589,6 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
                     StrokeSize = 0.6
                     StrokeHardness = 0.5
                     TextThickness = 0.45
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -546,7 +596,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "magenta", // ROUGE
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.1
                     ColorBottom = [200,0,255,255]
@@ -556,7 +606,6 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
                     StrokeSize = 0.6
                     StrokeHardness = 0.5
                     TextThickness = 0.45
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -564,7 +613,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "red", // ROUGE
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.1
                     ColorBottom = [255,  35,  35, 220]
@@ -574,7 +623,6 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
                     StrokeSize = 0.6
                     StrokeHardness = 0.5
                     TextThickness = 0.45
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -582,7 +630,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "Red", // ROUGE
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.1
                     ColorBottom = [255,  35,  35, 220]
@@ -592,7 +640,6 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
                     StrokeSize = 0.6
                     StrokeHardness = 0.5
                     TextThickness = 0.45
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -600,7 +647,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "black", // ROUGE
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.1
                     ColorBottom = [20,  20,  20, 220]
@@ -610,7 +657,6 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
                     StrokeSize = 0.6
                     StrokeHardness = 0.5
                     TextThickness = 0.45
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -618,7 +664,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "coloredtext6", // ROUGE
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.1
                     ColorBottom = [255,  35,  35, 220]
@@ -628,7 +674,6 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
                     StrokeSize = 0.6
                     StrokeHardness = 0.5
                     TextThickness = 0.45
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -636,7 +681,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "coloredtext7", // VertPomme
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.0
                     ColorBottom = VertPomme
@@ -646,7 +691,6 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
                     StrokeSize = 0.6
                     StrokeHardness = 0.5
                     TextThickness = 0.45
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -654,14 +698,13 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "pricetext",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.0
                     ColorBottom = [255, 168,  69, 255]
                     ColorUp     = [255, 168,  69, 255]
                     ColorStroke = [  0,   0,   0, 255]
                     Stroke = false
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -669,13 +712,12 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "conquestincometext",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.0
                     ColorBottom = [0,   255,   0, 255]
                     ColorUp     = [0,   255,   0, 255]
                     Stroke = false
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -683,14 +725,13 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "smallertitle",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 0.8
                     ColorBottom = [0, 0, 0, 0]
                     ColorUp     = [0, 0, 0, 0]
                     ColorStroke = [0, 0, 0, 0]
                     Stroke = false
-                    AllowSmallFont = true
                 )
             )
 
@@ -699,13 +740,12 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "hint",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.0
                     ColorBottom = [225, 148, 80, 255]
                     ColorUp     = [225, 148, 80, 255]
                     Stroke = false
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -713,14 +753,13 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "stroked",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.0
                     ColorBottom = [0, 0, 0, 0]
                     ColorUp     = [0, 0, 0, 0]
                     ColorStroke = [0, 0, 0, 0]
                     Stroke = true
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -729,14 +768,13 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "gras",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.1
                     ColorBottom = [0, 0, 0, 0]
                     ColorUp     = [0, 0, 0, 0]
                     ColorStroke = [0, 0, 0, 0]
                     Stroke = false
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -744,14 +782,13 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "bold",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.1
                     ColorBottom = [0, 0, 0, 0]
                     ColorUp     = [0, 0, 0, 0]
                     ColorStroke = [0, 0, 0, 0]
                     Stroke = false
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -759,14 +796,13 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "gras1",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.3
                     ColorBottom = [0, 0, 0, 0]
                     ColorUp     = [0, 0, 0, 0]
                     ColorStroke = [0, 0, 0, 0]
                     Stroke = false
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -774,14 +810,13 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "style1",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.0
                     ColorBottom = [0, 0, 0, 0]
                     ColorUp     = [0, 0, 0, 0]
                     ColorStroke = [0, 0, 0, 0]
                     Stroke = false
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -789,14 +824,13 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "styleGreen",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.0
                     ColorBottom = [127, 255, 117, 255]
                     ColorUp     = [127, 255, 117, 255]
                     ColorStroke = [  0,   0,   0, 255]
                     Stroke = false
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -804,14 +838,13 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "grayed",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.0
                     ColorBottom = [214, 214, 214, 255] // = TextColor3
                     ColorUp     = [214, 214, 214, 255] // = TextColor3
                     ColorStroke = [  0,   0,   0, 255]
                     Stroke = false
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -819,14 +852,13 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "grayed2",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.0
                     ColorBottom = [117, 117, 117, 255] // = TextColor10
                     ColorUp     = [117, 117, 117, 255] // = TextColor10
                     ColorStroke = [  0,   0,   0, 255]
                     Stroke = false
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -834,14 +866,13 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "LightestGray",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.0
                     ColorBottom = [190, 190, 190, 255] // = LightestGray
                     ColorUp     = [190, 190, 190, 255] // = LightestGray
                     ColorStroke = [  0,   0,   0, 255]
                     Stroke = false
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -849,14 +880,13 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "arme",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.5//1.3
                     ColorBottom = [135,178,196,255] // = bleu variable
                     ColorUp     = [135,178,196,255] // = bleu variable
                     ColorStroke = [  0,   0,   0, 255]
                     Stroke = false
-                    AllowSmallFont = true
                 )
                 Typeface = $/M3D/Typefaces/Typeface_Main_OutGame
             )
@@ -865,14 +895,13 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "bleuvariable",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1//1.3
                     ColorBottom = [135,178,196,255] // = bleu variable
                     ColorUp     = [135,178,196,255] // = bleu variable
                     ColorStroke = [  0,   0,   0, 255]
                     Stroke = false
-                    AllowSmallFont = true
                 )
                 Typeface = $/M3D/Typefaces/Typeface_Main_OutGame
             )
@@ -881,14 +910,13 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "date",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.5//1.3
                     ColorBottom = [135,178,196,255] // = bleu variable
                     ColorUp     = [135,178,196,255] // = bleu variable
                     ColorStroke = [  0,   0,   0, 255]
                     Stroke = false
-                    AllowSmallFont = true
                 )
                 Typeface = $/M3D/Typefaces/Typeface_Main_OutGame
             )
@@ -897,14 +925,13 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "Arialbold",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.2
                     ColorBottom = [0, 0, 0, 0]
                     ColorUp     = [0, 0, 0, 0]
                     ColorStroke = [0, 0, 0, 0]
                     Stroke = false
-                    AllowSmallFont = true
                 )
                 Typeface = $/M3D/Typefaces/Typeface_Main_OutGame
             )
@@ -913,14 +940,13 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "styleYellow",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.0
                     ColorBottom = [251, 202,  30, 255]
                     ColorUp     = [251, 202,  30, 255]
                     ColorStroke = [  0,   0,   0, 255]
                     Stroke = false
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -928,7 +954,7 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "exposant",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     Offset      = [0,-5]
                     FontSize    = 0.6
@@ -936,7 +962,6 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
                     ColorUp     = [117, 255, 255, 255]
                     ColorStroke = [  0,   0,   0, 255]
                     Stroke = false
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -944,14 +969,13 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "turquoise",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.0
                     ColorBottom = [117, 255, 255, 255] // TextColor1
                     ColorUp     = [117, 255, 255, 255]
                     ColorStroke = [  0,   0,   0, 255]
                     Stroke = false
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -959,14 +983,13 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "cyan",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.0
                     ColorBottom = [117, 255, 255, 255] // TextColor1
                     ColorUp     = [117, 255, 255, 255]
                     ColorStroke = [  0,   0,   0, 255]
                     Stroke = false
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -974,14 +997,13 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "boldcyan",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.15
                     ColorBottom = [180, 255, 255, 255]
                     ColorUp     = [180, 255, 255, 255]
                     ColorStroke = [  0,   0,   0, 255]
                     Stroke = false
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -989,14 +1011,13 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "style_armored",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.0
                     ColorBottom = [216,151,60,255] // TextColor1
                     ColorUp     = [216,151,60,255]
                     ColorStroke = [  0,   0,   0, 255]
                     Stroke = false
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -1004,14 +1025,13 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "style_assault",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.0
                     ColorBottom = [200,195,177,255] // TextColor1
                     ColorUp     = [200,195,177,255]
                     ColorStroke = [  0,   0,   0, 255]
                     Stroke = false
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -1019,14 +1039,13 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "style_artillery",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.0
                     ColorBottom = [115,132,127,255] // TextColor1
                     ColorUp     = [115,132,127,255]
                     ColorStroke = [  0,   0,   0, 255]
                     Stroke = false
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -1034,14 +1053,13 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "styleTurquoise",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.0
                     ColorBottom = [117, 255, 255, 255] // TextColor1
                     ColorUp     = [117, 255, 255, 255]
                     ColorStroke = [  0,   0,   0, 255]
                     Stroke = false
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -1049,14 +1067,13 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "styleGlacier",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.0
                     ColorBottom = Glacier // TextColor1
                     ColorUp     = Glacier
                     ColorStroke = [  0,   0,   0, 255]
                     Stroke = false
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -1064,14 +1081,13 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "styleOTAN",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.0
                     ColorBottom = [ 81, 122, 140, 255]
                     ColorUp     = [ 81, 122, 140, 255]
                     ColorStroke = [  0,   0,   0, 255]
                     Stroke = false
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -1079,14 +1095,13 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "stylePACT",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.0
                     ColorBottom = [255,  84,  84, 255]
                     ColorUp     = [255,  84,  84, 255]
                     ColorStroke = [  0,   0,   0, 255]
                     Stroke = false
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -1094,14 +1109,13 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "blueNATO",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.0
                     ColorBottom = [0,  86, 177, 255]
                     ColorUp     = [0,  86, 177, 255]
                     ColorStroke = [  0,   0,   0, 255]
                     Stroke = false
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -1109,14 +1123,13 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "redPACT",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.0
                     ColorBottom = [177,  38,  38, 255]
                     ColorUp     = [177,  38,  38, 255]
                     ColorStroke = [  0,   0,   0, 255]
                     Stroke = false
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -1124,14 +1137,13 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "stylered",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.0
                     ColorBottom = [240,  10,  10, 255]
                     ColorUp     = [240,  10,  100, 255]
                     ColorStroke = [  0,   0,   0, 255]
                     Stroke = false
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -1139,14 +1151,13 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "styleblue",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.0
                     ColorBottom = [0, 177, 255, 255]
                     ColorUp     = [0, 177, 255, 255]
                     ColorStroke = [  0,   0,   0, 255]
                     Stroke = false
-                    AllowSmallFont = true
                 )
             )
         ),
@@ -1344,16 +1355,6 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         //-------------------------------------------------------------------------------------
         (
-            "starForExperience",
-            TTFSCommand_UISymbol
-            (
-                TextureToken = "CommonTexture_Etoile_Grande"
-                BBMin=[0, -0.8, 0]
-                BBMax=[1, 0.2, 0]
-                ShaderDescriptor = $/M3D/Shader/MaterialInterface2D_Blend
-            )
-        ),
-        (
             "conquestArea", //sector
             TTFSCommand_UISymbol
             (
@@ -1545,10 +1546,10 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             )
         ),
         (
-            "CombatRuleCaptureTheFlag",
+            "CombatRuleConquest",
             TTFSCommand_UISymbol
             (
-                TextureToken = "OutgameTexture_CaptureTheFlagTypeTexture2"
+                TextureToken = "OutgameTexture_ConquestTypeTexture2"
                 BBMin=[0.0, -1.3, 0]
                 BBMax=[3.55, 0.45, 0]
                 ShaderDescriptor = $/M3D/Shader/MaterialInterface2D_Blend
@@ -1579,16 +1580,6 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             TTFSCommand_UISymbol
             (
                 TextureToken = "OutgameTexture_Mode_EncounterBatte"
-                BBMin=[0.0, -1.3, 0]
-                BBMax=[3.55, 0.45, 0]
-                ShaderDescriptor = $/M3D/Shader/MaterialInterface2D_Blend
-            )
-        ),
-        (
-            "ModeCloserCombat",
-            TTFSCommand_UISymbol
-            (
-                TextureToken = "OutgameTexture_Mode_CloseQuarter"
                 BBMin=[0.0, -1.3, 0]
                 BBMax=[3.55, 0.45, 0]
                 ShaderDescriptor = $/M3D/Shader/MaterialInterface2D_Blend
@@ -1902,6 +1893,36 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
                 ShaderDescriptor = $/M3D/Shader/MaterialInterface2D_Blend
             )
         ),
+        (
+            "Steelman_terrain_urbain",
+            TTFSCommand_UISymbol
+            (
+                TextureToken = "Steelman_terrain_urbain"
+                BBMin=[0, -0.8, 0]
+                BBMax=[1, 0.2, 0]
+                ShaderDescriptor = $/M3D/Shader/MaterialInterface2D_Blend
+            )
+        ),
+        (
+            "Steelman_terrain_plaine",
+            TTFSCommand_UISymbol
+            (
+                TextureToken = "Steelman_terrain_plaine"
+                BBMin=[0, -0.8, 0]
+                BBMax=[1, 0.2, 0]
+                ShaderDescriptor = $/M3D/Shader/MaterialInterface2D_Blend
+            )
+        ),
+        (
+            "Steelman_terrain_foret",
+            TTFSCommand_UISymbol
+            (
+                TextureToken = "Steelman_terrain_foret"
+                BBMin=[0, -0.8, 0]
+                BBMax=[1, 0.2, 0]
+                ShaderDescriptor = $/M3D/Shader/MaterialInterface2D_Blend
+            )
+        ),
         //-------------------------------------------------------------------------------------//
         (
             "complex",
@@ -1928,18 +1949,6 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
 
         //-------------------------------------------------------------------------------------
         // icones pour AutoResolve
-        (
-            "stationary",
-            TTFSCommand_UISymbol
-            (
-                TextureToken = "UseStrategic_SelectionPanel_Deploy"
-                BBMin=[0, -1, 0]
-                BBMax=[1.5, 0.5, 0]
-                //BBMin=[-0.2, -0.8, 0]
-                //BBMax=[1, 0.3, 0]
-                ShaderDescriptor = $/M3D/Shader/MaterialInterface2D_Blend
-            )
-        ),
         (
             "assault",
             TTFSCommand_UISymbol
@@ -2012,7 +2021,197 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         ),
         //-------------------------------------------------------------------------------------
 
+        (
+            "US_1AD",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_US_1AD")
+        ),
+        (
+            "US_2AD",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_US_2AD")
+        ),
+        (
+            "US_3AD",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_US_3AD")
+        ),
+        (
+            "US_3ID",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_US_3ID")
+        ),
+        (
+            "US_8ID",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_US_8ID")
+        ),
+        (
+            "US_17AF",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_US_17AF")
+        ),
+        (
+            "US_11ACR",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_US_11ACR")
+        ),
+        (
+            "US_4ATAF",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_US_4ATAF")
+        ),
+        (
+            "US_2ATAF",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_US_2ATAF")
+        ),
+        (
+            "UK_3armoured",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_UK_3armoured")
+        ),
+        (
+            "UK_1AD",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_UK_1AD")
+        ),
+        (
+            "BEL_16mec",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_BEL_16mec")
+        ),
+        (
+            "BEL_1corps",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_BEL_1corps")
+        ),
+        (
+            "BEL_1_INFDIV",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_BEL_1_INFDIV")
+        ),
+        (
+            "RFA_26llb",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_RFA_26llb")
+        ),
+        (
+            "RFA_5PZ",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_RFA_5PZ")
+        ),
+        (
+            "RFA_2PZ",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_RFA_2PZ")
+        ),
+        (
+            "RFA_3PZ",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_RFA_3PZ")
+        ),
+        (
+            "RFA_12PZ",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_RFA_12PZ")
+        ),
+        (
+            "RFA_terrkdo",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_RFA_terrkdo")
+        ),
+        (
+            "RFA_2Luft",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_RFA_2Luft")
+        ),
+        (
+            "NL_1D",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_NL_1D")
+        ),
+        (
+            "NL_4D",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_NL_4D")
+        ),
+        (
+            "NL_KLu",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_NL_KLu")
+        ),
+        (
+            "DDR_7PZD",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_DDR_7PZD")
+        ),
+        (
+            "DDR_4MSD",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_DDR_4MSD")
+        ),
+        (
+            "DDR_11MSD",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_DDR_11MSD")
+        ),
+        (
+            "DDR_17MSD",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_DDR_17MSD")
+        ),
+        (
+            "DDR_19MSD",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_DDR_19MSD")
+        ),
+        (
+            "DDR_8MSD",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_DDR_8MSD")
+        ),
+        (
+            "DDR_9PZD",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_DDR_9PZD")
+        ),
+        (
+            "DDR_Luft",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_DDR_Luft")
+        ),
+        (
+            "SOV_18_ZRB",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_SOV_18_ZRB")
+        ),
+        (
+            "SOV_53_ZRB",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_SOV_53_ZRB")
+        ),
+        (
+            "SOV_27_GVMSD",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_SOV_27_GVMSD")
+        ),
+        (
+            "SOV_39_GVMSD",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_SOV_39_GVMSD")
+        ),
+        (
+            "SOV_57_GVMSD",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_SOV_57_GVMSD")
+        ),
+        (
+            "SOV_16_VA",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_SOV_16_VA")
+        ),
+        (
+            "SOV_35_GvDShB",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_SOV_35_GvDShB")
+        ),
+        (
+            "SOV_20_GVMD",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_SOV_20_GVMD")
+        ),
+        (
+            "SOV_79_GVTD",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_SOV_79_GVTD")
+        ),
+        (
+            "SOV_11_GVTD",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_SOV_11_GVTD")
+        ),
+        (
+            "SOV_9_TD",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_SOV_9_TD")
+        ),
+        (
+            "SOV_default",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_SOV_default")
+        ),
+        (
+            "SOV_guard",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_SOV_guard")
+        ),
+        //-------------------------------------------------------------------------------------
 
+
+        (
+            "NATO",
+            TemplateTFS_Flag(TextureToken = "CommonTexture_MotherCountryFlag_NATO_small")
+        ),
+        (
+            "PACT",
+            TemplateTFS_Flag(TextureToken = "CommonTexture_MotherCountryFlag_PACT_small")
+        ),
         (
             "TCH",
             TemplateTFS_Flag(TextureToken = "CommonTexture_MotherCountryFlag_TCH")
@@ -2036,6 +2235,10 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         (
             "RFA",
             TemplateTFS_Flag(TextureToken = "CommonTexture_MotherCountryFlag_RFA")
+        ),
+        (
+            "UK_RFA",
+            TemplateTFS_Flag(TextureToken = "CommonTexture_MotherCountryFlag_UK_RFA")
         ),
         (
             "DDR",
@@ -2093,6 +2296,15 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "GER",
             TemplateTFS_Flag(TextureToken = "CommonTexture_MotherCountryFlag_GERW")
         ),
+        (
+            "BEL",
+            TemplateTFS_Flag(TextureToken = "CommonTexture_MotherCountryFlag_BEL")
+        ),
+        (
+            "NL",
+            TemplateTFS_Flag(TextureToken = "CommonTexture_MotherCountryFlag_NL")
+        ),
+        //-------------------------------------------------------------------------------------
         (
             "ammo",
             TTFSCommand_UISymbol
@@ -2171,26 +2383,6 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             )
         ),
         (
-            "tuto_fortification",
-            TTFSCommand_UISymbol
-            (
-                TextureToken = "UseStrategic_Labels_Fortified"
-                BBMin=[0, -1, 0]
-                BBMax=[1.5, 0.5, 0]
-                ShaderDescriptor = $/M3D/Shader/MaterialInterface2D_Blend
-            )
-        ),
-        (
-            "tuto_fortificationEncours",
-            TTFSCommand_UISymbol
-            (
-                TextureToken = "UseStrategic_Labels_FortificationEnCours"
-                BBMin=[0, -1, 0]
-                BBMax=[1.5, 0.5, 0]
-                ShaderDescriptor = $/M3D/Shader/MaterialInterface2D_Blend
-            )
-        ),
-        (
             "tuto_hq",
             TTFSCommand_UISymbol
             (
@@ -2211,16 +2403,6 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             )
         ),
         (
-            "tuto_deployed",
-            TTFSCommand_UISymbol
-            (
-                TextureToken = "UseStrategic_Labels_Stationary"
-                BBMin=[0, -1, 0]
-                BBMax=[1.5, 0.5, 0]
-                ShaderDescriptor = $/M3D/Shader/MaterialInterface2D_Blend
-            )
-        ),
-        (
             "objectif",
             TTFSCommand_UISymbol
             (
@@ -2235,8 +2417,8 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             TTFSCommand_UISymbol
             (
                 TextureToken = "Icon_Locked"
-                BBMin=[0, -0.7, 0]
-                BBMax=[0.7, 0, 0]
+                BBMin=[0, -0.8, 0]
+                BBMax=[1, 0.2, 0]
                 ShaderDescriptor = $/M3D/Shader/MaterialInterface2D_Blend
             )
         ),

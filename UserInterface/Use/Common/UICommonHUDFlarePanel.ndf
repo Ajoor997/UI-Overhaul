@@ -1,6 +1,6 @@
 
 private FlaresButtonDims is [25.0, 25.0]
-private dimensionBoutonFlare is 25
+private dimensionBoutonFlare is 24
 
 //-------------------------------------------------------------------------------------
 template FlareButtonSupport
@@ -19,6 +19,7 @@ IsFromStrategic : bool = false
     TextureToken = 'textureFlareFireSupport'
     HintTitleToken = "HFL_SuppT"
     HintBodyToken = "HFL_SuppB"
+    TextureColorToken="White"
 
     Mapping = $/KeyboardOption/Mapping_FlareFireSupport
     IsTogglable = true
@@ -43,6 +44,7 @@ IsFromStrategic : bool = false
     HintTitleToken = "HFL_HELPT"
     HintBodyToken = "HFL_HELPB"
     HintExtendedToken = "HFL_HELPE"
+    TextureColorToken="White"
 
     Mapping = $/KeyboardOption/Mapping_FlareHelp
     IsTogglable = true
@@ -64,6 +66,7 @@ IsFromStrategic : bool = false
     TextureToken = 'textureFlareEnemySpotted'
     HintTitleToken = "HFL_recoT"
     HintBodyToken = "HFL_recoB"
+    TextureColorToken="White"
 
     Mapping = $/KeyboardOption/Mapping_FlareEnemySpotted
     IsTogglable = true
@@ -89,6 +92,7 @@ IsFromStrategic : bool = false
     HintTitleToken = "HFL_ATTACT"
     HintBodyToken = "HFL_ATTACB"
     HintExtendedToken = "HFL_ATTACE"
+    TextureColorToken="White"
 )
 //-------------------------------------------------------------------------------------
 template FlareButtonStrategyDefend
@@ -110,6 +114,7 @@ IsFromStrategic : bool = false
     HintTitleToken = "HFL_DEFENT"
     HintBodyToken = "HFL_DEFENB"
     HintExtendedToken = "HFL_DEFENE"
+    TextureColorToken="White"
 )
 //-------------------------------------------------------------------------------------
 template FlareButtonCustom
@@ -136,29 +141,24 @@ IsFromStrategic : bool = false
 //-------------------------------------------------------------------------------------
 template FlareCustomEditableText
 [
-
     IsFromStrategic : bool = false
-]
-
-is BUCKEditableTextDescriptor
+] is BUCKEditableTextDescriptor
 (
     ElementName = "FlareCustomEditableText"
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = [200.0, 20.0]
-        AlignementToFather = [0.0, 0.5]
-        AlignementToAnchor = [0.0, 0.5]
+        MagnifiableWidthHeight = [240.0, 24.0]
+        AlignementToAnchor = [0.5, 1.0]
+        AlignementToFather = [0.5, 0.0]
+        MagnifiableOffset = [0.0, -4.0]
     )
 
     HasBackground = true
-    BackgroundBlockColorToken = (<IsFromStrategic> == true ? "SM_RifleGreen_75" : "BoutonTemps")
+    BackgroundBlockColorToken = (<IsFromStrategic> == true ? "SM_RifleGreen_75" : "MOD_CustomFlareText")
 
     ClippingContainerFrameProperty = TUIFramePropertyRTTI
     (
         RelativeWidthHeight = [1.0, 1.0]
-        MagnifiableWidthHeight = [-6.0, -6.0]
-        AlignementToFather = [0.5, 0.5]
-        AlignementToAnchor = [0.5, 0.5]
     )
 
     TextSizeToken = "FlaresPanel/CustomFlare/EditableText"

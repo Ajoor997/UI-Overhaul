@@ -15,7 +15,6 @@ template BUCKSpecificTextWithHint
     GridAlign : bool = false,
 
     IsDroppable : bool = false,
-    ForegroundForDropBlockColor : string = "",
     BorderForDropLineColor : string = "",
     BorderForDropLineThicknessToken : string = "",
 
@@ -31,7 +30,6 @@ template BUCKSpecificTextWithHint
     BordersToDraw : int = ~/TBorderSide/Default,
     BorderThicknessToken : string = "",
     BorderLineColorToken : string = "",
-    BorderColorTokenBySide : LIST<PAIR<int, string>> = [],
 
     BackgroundLocalRenderLayer : int = 0,
     BorderLocalRenderLayer : int = 0,
@@ -39,7 +37,7 @@ template BUCKSpecificTextWithHint
     ComponentStateLocked : bool = false,
     // -- BUCKContainerDescriptor
 
-    ParagraphStyle : TParagraphStyleRTTI = TParagraphStyleRTTI(),               // Permet de définir comment va s'afficher le texte par rapport à son container
+    ParagraphStyle : TParagraphStyle = TParagraphStyle(),               // Permet de définir comment va s'afficher le texte par rapport à son container
                                                                                 // - (int) Alignment (Horizontal) (Globals.ndf)
                                                                                 // - (int) VerticalAlignment (Globals.ndf)
                                                                                 // - (int) BigWordAction (enum dans UICommonEnum.ndf)
@@ -48,7 +46,7 @@ template BUCKSpecificTextWithHint
                                                                                 // - (u32) MaxLine (nombre de lignes max si le texte passe en multilignes)
                                                                                 // - (bool) Balanced (fait en sorte d'avoir des lignes de même largeur)
 
-    TextStyle : string,                                                         // Token associé à un TTextStyleRTTI, qui permet de définir le style du texte
+    TextStyle : string,                                                         // Token associé à un TTextStyle, qui permet de définir le style du texte
 
     TypefaceToken : string = "",                                                // Token associé à une Typeface, qui permet de définir la/les font(s) pour dessiner ce texte
 
@@ -95,7 +93,6 @@ is BUCKTextDescriptor
     GridAlign = <GridAlign>
 
     IsDroppable = <IsDroppable>
-    ForegroundForDropBlockColor = <ForegroundForDropBlockColor>
     BorderForDropLineColor = <BorderForDropLineColor>
     BorderForDropLineThicknessToken = <BorderForDropLineThicknessToken>
 
@@ -111,7 +108,6 @@ is BUCKTextDescriptor
     BordersToDraw = <BordersToDraw>
     BorderThicknessToken = <BorderThicknessToken>
     BorderLineColorToken = <BorderLineColorToken>
-    BorderColorTokenBySide = <BorderColorTokenBySide>
 
     BackgroundLocalRenderLayer = <BackgroundLocalRenderLayer>
     LocalRenderLayer = <LocalRenderLayer>

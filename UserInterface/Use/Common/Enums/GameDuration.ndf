@@ -5,4 +5,5 @@ EGameDuration is TBaseClass
     Short           is 1
     Medium          is 2
     Long            is 3
+    VeryLong        is 4
 )

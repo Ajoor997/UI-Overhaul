@@ -4,25 +4,32 @@ BUCKSpecificStrategicObjectiveScoreMainComponentDescriptor is BUCKRackDescriptor
 
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = [0.0, 25.0]
+        MagnifiableWidthHeight = [0.0, 24.0]
         AlignementToFather = [0.0, 0.5]
         AlignementToAnchor = [0.0, 0.5]
     )
+    HidePointerEvents = true
     Axis = ~/ListAxis/Horizontal
 
     BladeDescriptor = BUCKListDescriptor
     (
         ComponentFrame = TUIFramePropertyRTTI
         (
-            MagnifiableWidthHeight = [0.0, 25.0]
+            MagnifiableWidthHeight = [0.0, 24.0]
 
         )
         Axis = ~/ListAxis/Horizontal
 
-        LastMargin = TRTTILength(Magnifiable = 50.0)
-
         Elements =
         [
+            BUCKListElementDescriptor
+            (
+            MinSize = TRTTILength( Magnifiable = 4.0 )
+                ComponentDescriptor = BUCKContainerDescriptor
+                (
+                    ComponentFrame = TUIFramePropertyRTTI()
+                )
+            ),
             BUCKListElementDescriptor
             (
                 ComponentDescriptor = BUCKTextureDescriptor
@@ -30,14 +37,18 @@ BUCKSpecificStrategicObjectiveScoreMainComponentDescriptor is BUCKRackDescriptor
                     ElementName = 'Flag'
                     ComponentFrame = TUIFramePropertyRTTI
                     (
-                        MagnifiableWidthHeight = [45.0, 20.0]
+                        MagnifiableWidthHeight = [42, 22]
                         AlignementToFather = [0.0, 0.5]
                         AlignementToAnchor = [0.0, 0.5]
 
                     )
 
-                    TextureFrame = TUIFramePropertyRTTI()
-                    ResizeMode = ~/TextureResizeMode/FitToParentConservingRatio
+                    TextureFrame = TUIFramePropertyRTTI
+                    (
+                        RelativeWidthHeight = [0.85, 0.85]
+                        AlignementToFather = [0.5, 0.5]
+                        AlignementToAnchor = [0.5, 0.5]
+                    )
                 )
             ),
             BUCKListElementDescriptor
@@ -47,25 +58,31 @@ BUCKSpecificStrategicObjectiveScoreMainComponentDescriptor is BUCKRackDescriptor
                     ElementName = 'Score'
                     ComponentFrame = TUIFramePropertyRTTI
                     (
-                        MagnifiableWidthHeight = [0.0, 20.0]
+                        MagnifiableWidthHeight = [66.0, 20.0]
                         AlignementToFather = [0.0, 0.5]
                         AlignementToAnchor = [0.0, 0.5]
                     )
-
-                    ParagraphStyle = ~/LDHintParagraphStyleLeftAlignedExact
-                    TextPadding = TRTTILength4(Magnifiable = [0.0, 0.0, 10.0, 0.0])
+                    ParagraphStyle = ~/LDHintParagraphStyleCentered
                     TextStyle = "Default"
 
-                    HorizontalFitStyle = ~/FitStyle/FitToContent
+                    HorizontalFitStyle = ~/FitStyle/UserDefined
                     VerticalFitStyle = ~/FitStyle/UserDefined
 
-                    TypefaceToken = "UIMainFont"
-                    BigLineAction = ~/BigLineAction/MultiLine
-
-                    TextColor = "SD2_Blanc184"
-                    TextSize = "15"
                     TextDico = ~/LocalisationConstantes/dico_interface_ingame
+                    TypefaceToken = "Eurostyle_Italic"
+                    TextColor = "SM_paleSilver"
+                    TextSize = "15"
                 )
+            )
+        ]
+        ForegroundComponents =
+        [
+            BUCKSpecificStrategicHintableArea
+            (
+                HintTitleToken = 'SM_scoret'
+                HintBodyToken = 'SM_scoreb'
+                HintExtendedToken = 'SM_scoree'
+                DicoToken = ~/LocalisationConstantes/dico_interface_ingame
             )
         ]
     )
@@ -75,4 +92,10 @@ UISpecificStrategicObjectiveScoreViewDescriptor is TUISpecificStrategicObjective
 (
     MainComponentDescriptor = ~/BUCKSpecificStrategicObjectiveScoreMainComponentDescriptor
     MainComponentContainerUniqueName = "StrategicGlobalObjectivesScoreContainer" // Permet d'indiquer l'endroit ou le composant doit s'insérer
+
+    NationaliteTextureTokens = MAP
+    [
+        (ENationalite/OTAN, "CommonTexture_MotherCountryFlag_NATO_small"),
+        (ENationalite/PACT, "CommonTexture_MotherCountryFlag_PACT_small"),
+    ]
 )

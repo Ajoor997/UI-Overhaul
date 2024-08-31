@@ -222,7 +222,7 @@ StrategicEndGamePanelMainInfosContainer is BUCKContainerDescriptor
                             AlignementToAnchor = [0.5, 0.0]
                         )
 
-                        ParagraphStyle = TParagraphStyleRTTI
+                        ParagraphStyle = TParagraphStyle
                         (
                             Alignment = UIText_Center
                             VerticalAlignment = UIText_VerticalCenter
@@ -283,7 +283,7 @@ is BUCKContainerDescriptor
                 AlignementToAnchor = [0.5, 0.0]
             )
 
-            ParagraphStyle = TParagraphStyleRTTI
+            ParagraphStyle = TParagraphStyle
             (
                 Alignment = UIText_Center
                 VerticalAlignment = UIText_VerticalCenter
@@ -352,7 +352,7 @@ is BUCKContainerDescriptor
 
             ChildFitToContent = true
 
-            ParagraphStyle = TParagraphStyleRTTI
+            ParagraphStyle = TParagraphStyle
             (
                 Alignment = UIText_Center
                 VerticalAlignment = UIText_VerticalCenter
@@ -1020,7 +1020,7 @@ is BUCKListDescriptor
                     MagnifiableWidthHeight = <MagnifiableWidthHeight>
                 )
 
-                ParagraphStyle = TParagraphStyleRTTI
+                ParagraphStyle = TParagraphStyle
                 (
                     Alignment = UIText_Left
                     VerticalAlignment = UIText_VerticalCenter
@@ -1064,7 +1064,7 @@ is BUCKListDescriptor
                     MagnifiableWidthHeight = [4.0, StrategicEndGamePanelLineMagnifiableHeight]
                 )
 
-                ParagraphStyle = TParagraphStyleRTTI
+                ParagraphStyle = TParagraphStyle
                 (
                     Alignment = UIText_Left
                     VerticalAlignment = UIText_VerticalCenter
@@ -1090,7 +1090,7 @@ is BUCKListDescriptor
                     MagnifiableWidthHeight = [(StrategicEndGamePanelMainContainerMagnifiableWidth * 0.5) - 30, StrategicEndGamePanelLineMagnifiableHeight]
                 )
 
-                ParagraphStyle = TParagraphStyleRTTI
+                ParagraphStyle = TParagraphStyle
                 (
                     Alignment = UIText_Left
                     VerticalAlignment = UIText_VerticalCenter

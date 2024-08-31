@@ -5,7 +5,7 @@ template TStrategicFeedbackUICommonGabaritDefinition
 [
     CircleThickness : float = 1.0,
     CircleColor : color,
-    TextStyle : TTextStyleRTTI,
+    TextStyle : TTextStyle,
 ]
 is TUICommonGabaritDefinition
 (
@@ -20,7 +20,7 @@ StrategicFeedbackAreaOfEffectRangeGabaritResource is TStrategicFeedbackUICommonG
 (
     CircleColor = [216,80,73,255]
     CircleThickness = 800.0 * 4
-    TextStyle       = TTextStyleRTTI
+    TextStyle       = TTextStyle
     (
         FontSize    = 16
         ColorBottom = [255,128, 0,255]
@@ -34,9 +34,9 @@ StrategicFeedbackAreaOfEffectRangeGabaritResource is TStrategicFeedbackUICommonG
 
 StrategicFeedbackAreaOfEffectRadiusGabaritResource is TStrategicFeedbackUICommonGabaritDefinition
 (
-    CircleColor = [160,250,250,255]
+    CircleColor = [40.0, 62.0, 62.0, 128.0]
     CircleThickness = 1.0
-    TextStyle       = TTextStyleRTTI
+    TextStyle       = TTextStyle
     (
         FontSize    = 16
         ColorBottom = [255,128, 0,255]
@@ -52,7 +52,7 @@ StrategicFeedbackSplashGabaritResource is TStrategicFeedbackUICommonGabaritDefin
 (
     CircleColor = [255,128, 0,96]
     CircleThickness = 1.0
-    TextStyle       = TTextStyleRTTI
+    TextStyle       = TTextStyle
     (
         FontSize    = 16
         ColorBottom = [255,128, 0,255]
@@ -68,7 +68,7 @@ StrategicFeedbackCapacityGabaritResource is TStrategicFeedbackUICommonGabaritDef
 (
     CircleColor = [128,128, 0,96]
     CircleThickness = 1.0
-    TextStyle       = TTextStyleRTTI
+    TextStyle       = TTextStyle
     (
         FontSize    = 16
         ColorBottom = [0,255, 0,255]
@@ -84,7 +84,7 @@ StrategicFeedbackDispersionGabaritResource is TStrategicFeedbackUICommonGabaritD
 (
     CircleColor = [255,0, 0,96]
     CircleThickness = 1.0
-    TextStyle       = TTextStyleRTTI
+    TextStyle       = TTextStyle
     (
         FontSize    = 16
         ColorBottom = [255,0, 0,255]
@@ -134,7 +134,7 @@ FeedbackRecoZoneResource is StrategicFeedbackUICommonZoCDefinition
 FeedbackGroundSupportResource is StrategicFeedbackUICommonZoCDefinition
 (
     ColorToken = 'GroundSupportZone'
-    Thickness = 600
+    Thickness = 1800
 )
 
 //-------------------------------------------------------------------------------------
@@ -159,5 +159,5 @@ StrategicZoCResources is TUICommonZoCResources
     AirNoGoZone = ~/FeedbackAirNoGoZoneResource
     RecoZone = ~/FeedbackRecoZoneResource
     GroundSupportZone = ~/FeedbackGroundSupportResource
-    WorldFloorProxy = $/M3D/Scene/WorldFloorForIAProxy
+    WorldFloorProxy = $/M3D/Scene/WorldFloorOutMapProxy
 )

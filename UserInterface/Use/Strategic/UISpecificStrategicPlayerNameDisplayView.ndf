@@ -1,72 +1,91 @@
 BUCKSpecificStrategicPlayerNameDisplayMainComponentDescriptor is BUCKContainerDescriptor
 (
+    ElementName = "StrategicPlayerNameDisplayMainComponent"
+
     ComponentFrame = TUIFramePropertyRTTI
     (
-        RelativeWidthHeight = [1,1]
+        RelativeWidthHeight = [1.0, 0.0]
+        MagnifiableWidthHeight = [0.0, 40.0]
     )
+
+    HasBackground = true
+    BackgroundBlockColorToken = 'SM_Feldgrau_75'
 
     Components =
     [
+        OmbrePanel(),
 
         BUCKListDescriptor
         (
-                ComponentFrame = TUIFramePropertyRTTI
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                AlignementToFather = [0.5, 0.0]
+                AlignementToAnchor = [0.5, 0.0]
+            )
+
+            BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
+            Axis = ~/ListAxis/Horizontal
+
+            HidePointerEvents = true
+            PointerEventsToAllow = ~/EAllowablePointerEventType/Scroll
+
+            Elements =
+            [
+                BUCKListElementDescriptor
                 (
-                        AlignementToFather = [0.5, 0.0]
-                        AlignementToAnchor = [0.5, 0.0]
+                    ComponentDescriptor = BUCKContainerDescriptor
+                    (
+                        UniqueName = "StrategicGlobalObjectivesScoreContainer"
+                        ComponentFrame = TUIFramePropertyRTTI
+                        (
+                            AlignementToFather = [0.0, 1.0]
+                            AlignementToAnchor = [0.0, 1.0]
+                            MagnifiableOffset = [0,-3]
+                        )
+
+                        FitStyle = ~/ContainerFitStyle/FitToContent
+                        HasBackground = true
+                        BackgroundBlockColorToken = 'SM_RifleGreen_75'
+                        // envoie BUCKSpecificStrategicObjectiveScoreMainComponentDescriptor
                     )
-                BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
-                //InterItemMargin = TRTTILength( Magnifiable = 6.0 )
-                LastMargin = TRTTILength( Magnifiable = 0.0 )
-                Axis = ~/ListAxis/Horizontal
-                Elements =
-                [
-                    BUCKListElementDescriptor
+                ),
+
+                BUCKListElementDescriptor
+                (
+                    ComponentDescriptor = BUCKContainerDescriptor
                     (
-                        ComponentDescriptor = BUCKTextDescriptor
-                        (
-                            MagnifierMultiplication = 1.5
-                            ElementName = "PlayerName"
-                            ComponentFrame = TUIFramePropertyRTTI ( MagnifiableWidthHeight = [110,25])
+                        UniqueName = "StrategicDateContainer"
+                        ComponentFrame = TUIFramePropertyRTTI()
 
+                        FitStyle = ~/ContainerFitStyle/FitToContent
+                        // envoie BUCKSpecificStrategicDateMainComponentDescriptor
+                    )
+                ),
 
-                            HorizontalFitStyle = ~/FitStyle/UserDefined
-                            VerticalFitStyle = ~/FitStyle/UserDefined
-                            TextPadding = TRTTILength4( Magnifiable = [10,5,10,5] )
-                            ParagraphStyle = ~/paragraphStyleTextCenter
-                            TextStyle = "Default"
-                            TypefaceToken = "Eurostyle_Italic"
-                            TextDico = ~/LocalisationConstantes/dico_interface_ingame
-                            TextSize = "14"
-                            TextColor = "SM_paleSilver"
+            ]
+        ),
+        BUCKTextDescriptor
+        (
+            ElementName = "PlayerName"
 
-                            HasBackground = true
-                            BackgroundBlockColorToken = 'SM_Feldgrau'
-                            HasBorder = true
-                            BorderThicknessToken = "1"
-                            BorderLineColorToken = "SM_Grullo"
-                            BordersToDraw =  ~/TBorderSide/Bottom
-
-                        )
-                    ),
-
-                    BUCKListElementDescriptor
-                    (
-                        ComponentDescriptor = BUCKContainerDescriptor
-                        (
-                            UniqueName = "StrategicDateContainer"
-                            ComponentFrame = TUIFramePropertyRTTI ()
-
-                            FitStyle = ~/ContainerFitStyle/FitToContent
-                            // envoie BUCKSpecificStrategicDateMainComponentDescriptor
-                        )
-                    ),
-
-                ]
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                MagnifiableWidthHeight = [224.0, 40.0]
+                AlignementToAnchor = [0.5, 0.0]
+                AlignementToFather = [0.5, 0.0]
+                MagnifiableOffset = [145.0, 0.0]
             )
 
 
-
+            HorizontalFitStyle = ~/FitStyle/UserDefined
+            VerticalFitStyle = ~/FitStyle/UserDefined
+            ParagraphStyle = ~/paragraphStyleTextCenter
+            TextStyle = "Default"
+            TypefaceToken = "Eurostyle_Italic"
+            TextDico = ~/LocalisationConstantes/dico_interface_ingame
+            TextSize = "22"
+            TextColor = "BlancEquipe"
+        )
     ]
 )
 

@@ -11,8 +11,8 @@ BUCKSpecificStrategicBattleOrderSubPanelMainComponentDescriptor is BUCKSpecificS
     (
         RelativeWidthHeight = [1.0, 1.0]
         MagnifiableWidthHeight = [-36.0, -16.0]
-        AlignementToAnchor = [0.5, 0.5]
-        AlignementToFather = [0.5, 0.5]
+        AlignementToAnchor = [0.5, 0.0]
+        AlignementToFather = [0.5, 0.0]
     )
 
     ExternalScrollbar = true
@@ -48,6 +48,8 @@ BUCKSpecificStrategicBattleOrderSubPanelMainComponentDescriptor is BUCKSpecificS
 
                 // voir ci-dessous pour ce qui envoyé
             )
+
+            TreeViewLineButtonDescriptor = TreeLineButton(LeftClickSound = ~/SoundEvent_TreeLineButtonSound)
         ),
     ]
 )
@@ -59,7 +61,7 @@ UISpecificStrategicBattleOrderSubPanelViewDescriptor is TUISpecificStrategicBatt
 (
     MainComponentDescriptor = ~/BUCKSpecificStrategicBattleOrderSubPanelMainComponentDescriptor
 
-    PawnLineViewDescriptor      = UISpecificStrategicBattleOrderPanelDefaultLineViewDescriptor( TitleTextDico = ~/LocalisationConstantes/dico_packs )
+    PawnLineViewDescriptor      = UISpecificStrategicBattleOrderPanelDefaultLineViewDescriptor( TitleTextDico = ~/LocalisationConstantes/dico_companies )
     CompanyLineViewDescriptor   = UISpecificStrategicBattleOrderPanelCompanyLineViewDescriptor( RadioButtonManager = ~/CompanyRadioButtonManager )
 
     CompanyRadioButtonManager = ~/CompanyRadioButtonManager

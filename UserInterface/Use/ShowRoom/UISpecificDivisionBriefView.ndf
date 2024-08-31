@@ -108,7 +108,7 @@ is BUCKListDescriptor
                             MagnifiableWidthHeight = [250.0, 0.0]
                         )
 
-                        ParagraphStyle = TParagraphStyleRTTI
+                        ParagraphStyle = TParagraphStyle
                         (
                             Alignment = UIText_Center
                             VerticalAlignment = UIText_VerticalCenter
@@ -221,7 +221,7 @@ private DivisionInfoDeckName is BUCKMultiListContentElementDescriptor
                 RelativeWidthHeight = [1.0, 1.0]
             )
 
-            ParagraphStyle = TParagraphStyleRTTI
+            ParagraphStyle = TParagraphStyle
             (
                 Alignment = UIText_Left
                 VerticalAlignment = ~/UIText_VerticalCenter
@@ -308,7 +308,7 @@ private DivisionPower is BUCKMultiListContentElementDescriptor
                 RelativeWidthHeight = [1.0, 1.0]
             )
 
-            ParagraphStyle = TParagraphStyleRTTI
+            ParagraphStyle = TParagraphStyle
             (
                 Alignment = UIText_Center
                 VerticalAlignment = UIText_VerticalCenter
@@ -422,14 +422,15 @@ is BUCKMultiListContentElementDescriptor
                 AlignementToAnchor = [0.5, 0.0]
             )
             ParagraphStyle = paragraphStyleTextCenter
-            TextStyle = "TextStyleEcranMoniteur"
+            TextStyle = "Default"
+            // TextStyle = "TextStyleEcranMoniteur"
 
             VerticalFitStyle = ~/FitStyle/UserDefined
             TypefaceToken = "IBM"
             BigLineAction = ~/BigLineAction/MultiLine
             TextToken = 'HINT_EX_SP'
             TextDico = ~/LocalisationConstantes/dico_interface_outgame
-            TextColor = "Blanc"
+            TextColor = "Multiliste_division_text"
             TextSize = "24"
 
             BackgroundBlockColorToken = 'Orange'
@@ -512,8 +513,8 @@ template UISpecificDivisionBriefViewDescriptor
     MainComponentDescriptor = <MainComponentDescriptor>
     MainComponentContainerUniqueName = <UniqueName>
 
-    AlliesTextureToken = "CommonTexture_MotherCountryFlag_NATO"
-    AxisTextureToken = "CommonTexture_MotherCountryFlag_WP"
+    AlliesTextureToken = "CommonTexture_MotherCountryFlag_NATO_small"
+    AxisTextureToken = "CommonTexture_MotherCountryFlag_PACT_small"
 
     PremadeBattlegroupTextColor = <PremadeBattlegroupTextColor>
     HasBattlegroup = <HasBattlegroup>

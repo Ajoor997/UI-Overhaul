@@ -45,7 +45,7 @@ BUCKSpecificLinkAccountMainComponentDescriptor is LoginTvContainer
                             MagnifiableWidthHeight = [0.0, 70.0]
                         )
 
-                        ParagraphStyle = TParagraphStyleRTTI
+                        ParagraphStyle = TParagraphStyle
                         (
                             VerticalAlignment = ~/UIText_VerticalCenter
                             Alignment = UIText_Center
@@ -130,15 +130,14 @@ BUCKSpecificLinkAccountMainComponentDescriptor is LoginTvContainer
                                 )
 
                                 ParagraphStyle = ~/paragraphStyleTextCenter
-                                TextStyle = "Default"
+                                TextStyle       = "Default"
+                                TypefaceToken   = "UISecondFont"
 
                                 TextColor       = "Rouge"
                                 TextSize        = "FeedbackTextInModal"
                                 TextDico        = ~/LocalisationConstantes/dico_interface_outgame
 
                                 BigLineAction = ~/BigLineAction/MultiLine
-
-                                TypefaceToken   = "Liberator"
                             ),
                         ]
                     )
@@ -191,7 +190,7 @@ BUCKSpecificLinkAccountMainComponentDescriptor is LoginTvContainer
                     ComponentDescriptor = LoginScreenMainButton
                     (
                         ElementName = "CancelButton"
-                        TextToken = 'BTN_CANCEL'
+                        TextToken = "BTN_CANCEL"
                         Mapping = TEugBMutablePBaseClass(Value = TUserInputMapping(KeyboardEventID = UserInputKeyboard/KEY_ESCAPE))
                     )
                 ),

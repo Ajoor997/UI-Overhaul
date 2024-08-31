@@ -7,9 +7,8 @@ DefaultButtonHUDDims is [170.0, 24.0]
 template BoutonFulda
 [
     BigLineAction : int = ~/BigLineAction/BalancedMultiline,
-    BackgroundColor : string = "ButtonHUD/Background2",
-    LineBorderColor : string = "ButtonHUD/Border",
-    BorderColor : string = "ButtonHUD/BigBorder",
+    BackgroundColor : string = "BoutonTemps",
+    LineBorderColor : string = "BoutonTemps",
     TextColor : string = "ButtonHUD/Text2",
     TextSize : string = "11",
     TextToken : string = "HUD_UNKN",
@@ -32,13 +31,6 @@ template BoutonFulda
     RadioButtonManager = <RadioButtonManager>
 
     ElementName = <ElementName>
-
-    HasBackground = false
-    BackgroundBlockColorToken = <BackgroundColor>
-
-    HasBorder = false
-    BorderThicknessToken = "1"
-    BorderLineColorToken = <LineBorderColor>
 
     IsTogglable = <IsTogglable>
     CannotDeselect = <IsTogglable>
@@ -63,8 +55,8 @@ template BoutonFulda
                 PanelRoundedCorner
                 (
                     Radius = 3
-                    BackgroundBlockColorToken = "BoutonTemps"
-                    BorderLineColorToken = "BoutonTemps"
+                    BackgroundBlockColorToken = <BackgroundColor>
+                    BorderLineColorToken = <LineBorderColor>
                 )
             ]
         ),
@@ -80,14 +72,11 @@ template BoutonFulda
                 AlignementToAnchor = [0.5, 0.5]
             )
 
-            ParagraphStyle = TParagraphStyleRTTI
+            ParagraphStyle = TParagraphStyle
             (
                 Alignment = UIText_Center
                 VerticalAlignment = UIText_VerticalCenter
             )
-
-            HasBackground = false
-            BackgroundBlockColorToken = <BackgroundColor>
 
             TextStyle = "Default"
 
@@ -118,9 +107,8 @@ template BoutonFulda_AvecIcone
     IsFromStrategic : bool = false,
     BackgroundColor : string = "ButtonHUD/Background2",
     LineBorderColor : string = "ButtonHUD/Border",
-    BorderColor : string = "ButtonHUD/BigBorder",
     TextureToken : string,
-    TextureColorToken : string = "ButtonHUD/Text2",
+    TextureColorToken : string = "MOD_White",
 
     HintTitleToken : string = "HUD_UNKN",
     HintBodyToken : string = "HUD_UNKN",
@@ -172,8 +160,8 @@ template BoutonFulda_AvecIcone
                 (
                     Radius = 3
                     NbOfPoints = 3
-                    BackgroundBlockColorToken = (<IsFromStrategic> == true ? "SM_RifleGreen_75" : "BoutonFlares")
-                    BorderLineColorToken = (<IsFromStrategic> == true ? "SM_Grullo" : "BoutonTemps")
+                    BackgroundBlockColorToken = (<IsFromStrategic> == true ? "SM_RifleGreen_75" : "MOD_BoutonFlares")
+                    BorderLineColorToken = (<IsFromStrategic> == true ? "SM_Grullo" : "MOD_White")
                 )
             ]
         ),
@@ -182,7 +170,7 @@ template BoutonFulda_AvecIcone
         (
             ComponentFrame = TUIFramePropertyRTTI
             (
-                MagnifiableWidthHeight = [24.0, 24.0]
+                MagnifiableWidthHeight = [20.0, 20.0]
                 AlignementToAnchor = [0.5, 0.5]
                 AlignementToFather = [0.5, 0.5]
                 )
@@ -224,8 +212,8 @@ template BUCKSpecificButton
     BorderThicknessToken : string = '1',
     FitStyle : int = ~/ContainerFitStyle/None,
 
-    PanelRoundedCorner_BorderLineColorToken : string = "BoutonTemps",
-    PanelRoundedCorner_BackgroundBlockColorToken : string = "BoutonTemps",
+    PanelRoundedCorner_BorderLineColorToken : string = "MOD_White",
+    PanelRoundedCorner_BackgroundBlockColorToken : string = "MOD_Button_STYLE8",
 
     Components : LIST<TBUCKContainerDescriptor> = [],
 
@@ -251,7 +239,7 @@ template BUCKSpecificButton
         AlignementToFather = [0.5, 0.5]
         AlignementToAnchor = [0.5, 0.5]
     ),
-    TextParagraphStyle : TParagraphStyleRTTI = ~/paragraphStyleTextCenter,
+    TextParagraphStyle : TParagraphStyle = ~/paragraphStyleTextCenter,
     TextPadding : TRTTILength4 = TRTTILength4(),
     TextSizeToken : string = "12",
     TextStyle : string = "Default",
@@ -262,12 +250,7 @@ template BUCKSpecificButton
     OverrideTextElementName : bool = false,
     BigLineAction : int = ~/BigLineAction/CutByDots,
 
-    HintTitleToken : string = "",
-    HintBodyToken : string = "",
-    HintExtendedToken : string = "",
-    HintDico : string = ~/LocalisationConstantes/dico_interface_ingame,
-    HintableAreaElementName : string = "",
-    UseInGameHintStyle : bool = true,
+    HintableAreaComponent : TBUCKHintableAreaDescriptor = nil,
 
     HoverSound : TSoundDescriptor = nil,
     LeftClickSound : TSoundDescriptor = nil,
@@ -275,8 +258,6 @@ template BUCKSpecificButton
     Mapping : TEugBMutablePBaseClass = nil,
     RequiredTags : LIST<string> = [],
     ForbiddenTags : LIST<string> = [],
-
-    BorderColorTokenBySide : LIST<PAIR<int, string>> = [],
 
     ForegroundTexture : string = "",
 
@@ -304,24 +285,6 @@ is BUCKButtonDescriptor
         MagnifiableOffset = <ButtonMagnifiableOffset>
         AlignementToAnchor = <ButtonAlignementToAnchor>
         AlignementToFather = <ButtonAlignementToFather>
-    )
-
-    // Hint
-    hintComponent is <UseInGameHintStyle> ?
-    BUCKSpecificHintableArea
-    (
-        ElementName = <HintableAreaElementName>
-        DicoToken = <HintDico>
-        HintTitleToken = <HintTitleToken>
-        HintBodyToken = <HintBodyToken>
-        HintExtendedToken = <HintExtendedToken>
-    ) : BUCKSpecificHintableArea
-    (
-        ElementName = <HintableAreaElementName>
-        DicoToken = <HintDico>
-        HintTitleToken = <HintTitleToken>
-        HintBodyToken = <HintBodyToken>
-        HintExtendedToken = <HintExtendedToken>
     )
 
     FitStyle = <FitStyle>
@@ -376,25 +339,12 @@ is BUCKButtonDescriptor
     ] +
     (<RoundedCorner> == true ?
     [
-        BUCKContainerDescriptor
+        PanelRoundedCorner
         (
-            ComponentFrame = TUIFramePropertyRTTI
-            (
-                RelativeWidthHeight = [1.0, 1.0]
-                AlignementToFather = [0.5, 0.5]
-                AlignementToAnchor = [0.5, 0.5]
-            )
-
-            Components =
-            [
-                PanelRoundedCorner
-                (
-                    Radius = 3
-                    BackgroundBlockColorToken = <PanelRoundedCorner_BackgroundBlockColorToken>
-                    BorderLineColorToken = <PanelRoundedCorner_BorderLineColorToken>
-                    RoundedVertexes = <RoundedVertexes>
-                )
-            ]
+            Radius = 3
+            BackgroundBlockColorToken = <PanelRoundedCorner_BackgroundBlockColorToken>
+            BorderLineColorToken = <PanelRoundedCorner_BorderLineColorToken>
+            RoundedVertexes = <RoundedVertexes>
         ),
     ] : []) +
     (<HasBackgroundTexture> | <BackgroundTexture> != "" ?
@@ -484,10 +434,7 @@ is BUCKButtonDescriptor
         ),
     ] +
 
-    (<HintTitleToken> != "" | <HintBodyToken> != "" | <HintExtendedToken> != "" | <HintableAreaElementName> != "" ?
-    [
-        hintComponent,
-    ] : [])
+    (<HintableAreaComponent> != nil ? [<HintableAreaComponent>] : [])
 )
 
 //-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+- //
@@ -510,8 +457,6 @@ template StandardButton
 
     Components : LIST<TBUCKContainerDescriptor> = [],
 
-    AllowMultipleInputsPerFrame : bool = false,
-
     Grayed : bool = false,
     IsFocusable : bool = false,
     IsTogglable : bool = false,
@@ -523,19 +468,14 @@ template StandardButton
     HasText : bool = true,
     // TextColorToken : string = "ButtonHUD",
     TextComponentFrame : TUIFramePropertyRTTI = TUIFramePropertyRTTI( RelativeWidthHeight = [1.0, 1.0] AlignementToFather = [0.5, 0.5] AlignementToAnchor = [0.5, 0.5] ),
-    TextParagraphStyle : TParagraphStyleRTTI = ~/paragraphStyleTextLeftAlign,
+    TextParagraphStyle : TParagraphStyle = ~/paragraphStyleTextLeftAlign,
     TextSizeToken : string = "12",
     TextStyle : string = "Default",
     TextToken : string = '',
     TextTypefaceToken : string = "UIMainFont",
     TextDico : string = ~/LocalisationConstantes/dico_interface_outgame,
 
-    HintTitleToken : string = "",
-    HintBodyToken : string = "",
-    HintExtendedToken : string = "",
-    HintDico : string = ~/LocalisationConstantes/dico_interface_outgame,
-    HintableAreaElementName : string = "",
-    UseInGameHintStyle : bool = true,
+    HintableAreaComponent : TBUCKHintableAreaDescriptor = nil,
 
     HoverSound : TSoundDescriptor = nil,
     LeftClickSound : TSoundDescriptor = nil,
@@ -543,8 +483,6 @@ template StandardButton
     Mapping : TEugBMutablePBaseClass = nil,
     RequiredTags : LIST<string> = [],
     ForbiddenTags : LIST<string> = [],
-
-    BorderColorTokenBySide : LIST<PAIR<int, string>> = [],
 
     ForegroundTexture : string = "",
 
@@ -584,12 +522,7 @@ is BUCKSpecificButton
     TextTypefaceToken = <TextTypefaceToken>
     TextDico = <TextDico>
 
-    HintTitleToken = <HintTitleToken>
-    HintBodyToken = <HintBodyToken>
-    HintExtendedToken = <HintExtendedToken>
-    HintDico = <HintDico>
-    HintableAreaElementName = <HintableAreaElementName>
-    UseInGameHintStyle = <UseInGameHintStyle>
+    HintableAreaComponent = <HintableAreaComponent>
 
     HoverSound = <HoverSound>
     LeftClickSound = <LeftClickSound>
@@ -597,8 +530,6 @@ is BUCKSpecificButton
     Mapping = <Mapping>
     RequiredTags = <RequiredTags>
     ForbiddenTags = <ForbiddenTags>
-
-    BorderColorTokenBySide = <BorderColorTokenBySide>
 
     ForegroundTexture = <ForegroundTexture>
 
@@ -635,8 +566,6 @@ template ConfirmButton
 
     RadioButtonManager : TBUCKRadioButtonManager = nil,
 
-    AllowMultipleInputsPerFrame : bool = false,
-
     Grayed : bool = false,
     IsFocusable : bool = false,
     IsTogglable : bool = false,
@@ -649,7 +578,7 @@ template ConfirmButton
     HasText : bool = true,
     TextColorToken : string = "ConfirmButton/BigBorder",
     TextComponentFrame : TUIFramePropertyRTTI = TUIFramePropertyRTTI( RelativeWidthHeight = [1.0, 1.0] AlignementToFather = [0.5, 0.5] AlignementToAnchor = [0.5, 0.5] ),
-    TextParagraphStyle : TParagraphStyleRTTI = ~/paragraphStyleTextCenter,
+    TextParagraphStyle : TParagraphStyle = ~/paragraphStyleTextCenter,
     TextSizeToken : string = "12",
     TextStyle : string = "Default",
     TextToken : string = '',
@@ -659,12 +588,7 @@ template ConfirmButton
     TextElementName : string = "TextElement",
     TextPadding : TRTTILength4 = TRTTILength4(),
 
-    HintTitleToken : string = "",
-    HintBodyToken : string = "",
-    HintExtendedToken : string = "",
-    HintDico : string = ~/LocalisationConstantes/dico_interface_outgame,
-    HintableAreaElementName : string = "",
-    UseInGameHintStyle : bool = true,
+    HintableAreaComponent : TBUCKHintableAreaDescriptor = nil,
 
     HoverSound : TSoundDescriptor = nil,
     LeftClickSound : TSoundDescriptor = nil,
@@ -674,8 +598,6 @@ template ConfirmButton
     ForbiddenTags : LIST<string> = [],
 
     BorderThicknessToken : string = "1",
-
-    BorderColorTokenBySide : LIST<PAIR<int, string>> = [],
 
     ForegroundTexture : string = "",
 
@@ -738,12 +660,7 @@ is BUCKSpecificButton
     BigLineAction = <BigLineAction>
     TextPadding = <TextPadding>
 
-    HintTitleToken = <HintTitleToken>
-    HintBodyToken = <HintBodyToken>
-    HintExtendedToken = <HintExtendedToken>
-    HintDico = <HintDico>
-    HintableAreaElementName = <HintableAreaElementName>
-    UseInGameHintStyle = <UseInGameHintStyle>
+    HintableAreaComponent = <HintableAreaComponent>
 
     HoverSound = <HoverSound>
     LeftClickSound = <LeftClickSound>
@@ -751,8 +668,6 @@ is BUCKSpecificButton
     Mapping = <Mapping>
     RequiredTags = <RequiredTags>
     ForbiddenTags = <ForbiddenTags>
-
-    BorderColorTokenBySide = <BorderColorTokenBySide>
 
     ForegroundTexture = <ForegroundTexture>
 
@@ -779,8 +694,6 @@ template CancelButton
 
     Components : LIST<TBUCKContainerDescriptor> = [],
 
-    AllowMultipleInputsPerFrame : bool = false,
-
     Grayed : bool = false,
     IsFocusable : bool = false,
     IsTogglable : bool = false,
@@ -789,7 +702,7 @@ template CancelButton
 
     HasText : bool = true,
     TextComponentFrame : TUIFramePropertyRTTI = TUIFramePropertyRTTI( RelativeWidthHeight = [1.0, 1.0] AlignementToFather = [0.5, 0.5] AlignementToAnchor = [0.5, 0.5] ),
-    TextParagraphStyle : TParagraphStyleRTTI = ~/paragraphStyleTextCenter,
+    TextParagraphStyle : TParagraphStyle = ~/paragraphStyleTextCenter,
     TextSizeToken : string = "12",
     TextStyle : string = "Default",
     TextToken : string = '',
@@ -799,12 +712,7 @@ template CancelButton
     OverrideTextElementName : bool = false,
     TextElementName : string = "TextElement",
 
-    HintTitleToken : string = "",
-    HintBodyToken : string = "",
-    HintExtendedToken : string = "",
-    HintDico : string = ~/LocalisationConstantes/dico_interface_outgame,
-    HintableAreaElementName : string = "",
-    UseInGameHintStyle : bool = true,
+    HintableAreaComponent : TBUCKHintableAreaDescriptor = nil,
 
     HoverSound : TSoundDescriptor = nil,
     LeftClickSound : TSoundDescriptor = nil,
@@ -812,8 +720,6 @@ template CancelButton
     Mapping : TEugBMutablePBaseClass = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ESCAPE ) ),
     RequiredTags : LIST<string> = [],
     ForbiddenTags : LIST<string> = [],
-
-    BorderColorTokenBySide : LIST<PAIR<int, string>> = [],
 
     ForegroundTexture : string = "",
 
@@ -853,12 +759,7 @@ is BUCKSpecificButton
     OverrideTextElementName = <OverrideTextElementName>
     TextElementName = <TextElementName>
 
-    HintTitleToken = <HintTitleToken>
-    HintBodyToken = <HintBodyToken>
-    HintExtendedToken = <HintExtendedToken>
-    HintDico = <HintDico>
-    HintableAreaElementName = <HintableAreaElementName>
-    UseInGameHintStyle = <UseInGameHintStyle>
+    HintableAreaComponent = <HintableAreaComponent>
 
     HoverSound = <HoverSound>
     LeftClickSound = <LeftClickSound>
@@ -866,8 +767,6 @@ is BUCKSpecificButton
     Mapping = <Mapping>
     RequiredTags = <RequiredTags>
     ForbiddenTags = <ForbiddenTags>
-
-    BorderColorTokenBySide = <BorderColorTokenBySide>
 
     ForegroundTexture = <ForegroundTexture>
 
@@ -906,7 +805,7 @@ template HUDButton
     HasText : bool = false,
     TextColorToken : string = "Fulda2_Orange100",
     TextComponentFrame : TUIFramePropertyRTTI = TUIFramePropertyRTTI( RelativeWidthHeight = [1.0, 1.0] AlignementToFather = [0.5, 0.5] AlignementToAnchor = [0.5, 0.5] ),
-    TextParagraphStyle : TParagraphStyleRTTI = ~/paragraphStyleTextCenter,
+    TextParagraphStyle : TParagraphStyle = ~/paragraphStyleTextCenter,
     TextSizeToken : string = "14",
     TextStyle : string = "Default",
     TextToken : string = '',
@@ -918,7 +817,6 @@ template HUDButton
     HintExtendedToken : string = "HUD_UNKN",
     HintDico : string = ~/LocalisationConstantes/dico_interface_ingame,
     HintableAreaElementName : string = "",
-    UseInGameHintStyle : bool = true,
 
     HoverSound : TSoundDescriptor = nil,
     LeftClickSound : TSoundDescriptor = nil,
@@ -935,8 +833,6 @@ template HUDButton
     OverBlockComponentStateLocked : bool = false,
     OverBlockColorToken : string = "",
     OverBlockTexture : string = "",
-
-    BorderColorTokenBySide : LIST<PAIR<int, string>> = [],
 
     ForegroundTexture : string = "StyleCockpitTexture_HUDButton_Light",
 
@@ -955,24 +851,6 @@ is BUCKButtonDescriptor
     ElementName = <ElementName>
     UniqueName = <UniqueName>
     ComponentFrame = <ComponentFrame>
-
-    // Hint
-    hintComponent is <UseInGameHintStyle> ?
-    BUCKSpecificHintableArea
-    (
-        ElementName = <HintableAreaElementName>
-        DicoToken = <HintDico>
-        HintTitleToken = <HintTitleToken>
-        HintBodyToken = <HintBodyToken>
-        HintExtendedToken = <HintExtendedToken>
-    ) : BUCKSpecificHintableArea
-    (
-        ElementName = <HintableAreaElementName>
-        DicoToken = <HintDico>
-        HintTitleToken = <HintTitleToken>
-        HintBodyToken = <HintBodyToken>
-        HintExtendedToken = <HintExtendedToken>
-    )
 
     Components =
     [
@@ -1058,7 +936,14 @@ is BUCKButtonDescriptor
 
     (<HintTitleToken> != "" | <HintBodyToken> != "" | <HintExtendedToken> != "" | <HintableAreaElementName> != "" ?
     [
-        hintComponent,
+        BUCKSpecificHintableArea
+        (
+            ElementName = <HintableAreaElementName>
+            DicoToken = <HintDico>
+            HintTitleToken = <HintTitleToken>
+            HintBodyToken = <HintBodyToken>
+            HintExtendedToken = <HintExtendedToken>
+        ),
     ] : [])
 
     AllowMultipleInputsPerFrame = <AllowMultipleInputsPerFrame>
@@ -1081,11 +966,6 @@ is BUCKButtonDescriptor
     HasBorder = <HasBorder>
     BorderLineColorToken = <BorderLineColorToken>
     BorderThicknessToken = <BorderThickness>
-
-    // BorderColorGrayedTokenBySide = <BorderColorGrayedTokenBySide>
-    // BorderColorHighlightedTokenBySide = <BorderColorHighlightedTokenBySide>
-    // BorderColorClickedTokenBySide = <BorderColorClickedTokenBySide>
-    BorderColorTokenBySide = <BorderColorTokenBySide>
 
     BackgroundLocalRenderLayer = <BackgroundLocalRenderLayer>
     BorderLocalRenderLayer = <BorderLocalRenderLayer>
@@ -1110,7 +990,7 @@ template HUDDarkButton
 
     HasText : bool = false,
     TextDico : string = ~/LocalisationConstantes/dico_interface_ingame,
-    TextParagraphStyle : TParagraphStyleRTTI = ~/paragraphStyleTextCenter,
+    TextParagraphStyle : TParagraphStyle = ~/paragraphStyleTextCenter,
     TextSizeToken : string = "SD2_Petit",
     TextStyle : string = "Default",
     TextToken : string = '',

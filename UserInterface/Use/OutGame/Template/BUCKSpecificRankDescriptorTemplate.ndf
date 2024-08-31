@@ -21,7 +21,6 @@ template BUCKSpecificRankDescriptor
     GridAlign : bool = false,
 
     IsDroppable : bool = false,
-    ForegroundForDropBlockColor : string = "",
     BorderForDropLineColor : string = "",
     BorderForDropLineThicknessToken : string = "",
 
@@ -37,7 +36,6 @@ template BUCKSpecificRankDescriptor
     BordersToDraw : int = ~/TBorderSide/Default,
     BorderThicknessToken : string = "",
     BorderLineColorToken : string = "",
-    BorderColorTokenBySide : LIST<PAIR<int, string>> = [],
 
     BackgroundLocalRenderLayer : int = 0,
     BorderLocalRenderLayer : int = 0,
@@ -74,7 +72,6 @@ is TBUCKSpecificRankDescriptor
     GridAlign = <GridAlign>
 
     IsDroppable = <IsDroppable>
-    ForegroundForDropBlockColor = <ForegroundForDropBlockColor>
     BorderForDropLineColor = <BorderForDropLineColor>
     BorderForDropLineThicknessToken = <BorderForDropLineThicknessToken>
 
@@ -92,7 +89,6 @@ is TBUCKSpecificRankDescriptor
     BordersToDraw = <BordersToDraw>
     BorderThicknessToken = <BorderThicknessToken>
     BorderLineColorToken = <BorderLineColorToken>
-    BorderColorTokenBySide = <BorderColorTokenBySide>
 
     BackgroundLocalRenderLayer = <BackgroundLocalRenderLayer>
     LocalRenderLayer = <LocalRenderLayer>

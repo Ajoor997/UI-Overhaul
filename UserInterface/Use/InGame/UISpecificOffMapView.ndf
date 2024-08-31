@@ -24,7 +24,7 @@ OffMapUnitTexture is BUCKContainerDescriptor
         BUCKSpecificHintableArea
         (
             ElementName = 'UnitTextureHint'
-            DicoToken = ~/LocalisationConstantes/dico_unites
+            DicoToken = ~/LocalisationConstantes/dico_units
             HintTitleToken = "UNKNOWN"
             HintBodyToken = "UNKNOWN"
             HintExtendedToken = "UNKNOWN"
@@ -47,7 +47,7 @@ OffMapUnitName is BUCKTextDescriptor
 
     TextStyle = "Default"
 
-    ParagraphStyle = TParagraphStyleRTTI
+    ParagraphStyle = TParagraphStyle
     (
         Alignment = UIText_Left
         VerticalAlignment = UIText_VerticalCenter
@@ -73,39 +73,6 @@ OffMapUnitName is BUCKTextDescriptor
     )
 )
 
-// -------------------------------------------------------------------------------------------------
-// Unit experience stars
-OffMapUnitExperience is BUCKTextDescriptor
-(
-    ElementName = "UnitExperience"
-
-    ComponentFrame = TUIFramePropertyRTTI
-    (
-        RelativeWidthHeight = [0,1]
-        AlignementToAnchor = [0.0, 0.5]
-        AlignementToFather = [0.0, 0.5]
-    )
-
-    TextStyle = "Default"
-
-    ParagraphStyle = TParagraphStyleRTTI
-    (
-        Alignment = UIText_Left
-        VerticalAlignment = UIText_VerticalCenter
-    )
-
-    BigLineAction = ~/BigLineAction/CutByDots
-
-    TextSize = "12"
-    TextColor = "ButtonHUD"
-    TextToken = ""
-    TextDico = ~/LocalisationConstantes/dico_interface_ingame
-    TypefaceToken = "UIMainFont"
-
-    HorizontalFitStyle = ~/FitStyle/FitToContent
-    VerticalFitStyle = ~/FitStyle/UserDefined
-)
-
 //--------------------------------------------------------------------------------------------------
 // Gauge displaying the unit state. Starts at 100, lowers and then replenishes, once the unit is ready again.
 
@@ -120,40 +87,16 @@ template BUCKSpecificOffMapButton
     ButtonMagnifiableOffset : float2 = [0.0, 0.0],
     ButtonAlignementToAnchor : float2 = [0.0, 0.0],
     ButtonAlignementToFather : float2 = [0.0, 0.0],
-    ComponentFrame : TUIFramePropertyRTTI = TUIFramePropertyRTTI(),
     HeightCoefficientToRemoveFromInteriorButtonWidth : float = 0.8, //Percentage of the button height removed from the button to create a rectangular shape
 
     Components : LIST<TBUCKContainerDescriptor> = [],
-
-    AllowMultipleInputsPerFrame : bool = false,
-
-    Grayed : bool = false,
-    IsTogglable : bool = false,
-    HidePointerEvents : bool = false,
-    MaskEvents : bool = true,
-
-    HasText : bool = false,
-    TextComponentFrame : TUIFramePropertyRTTI = TUIFramePropertyRTTI( RelativeWidthHeight = [0.75, 1.0] AlignementToFather = [0.5, 0.5] AlignementToAnchor = [0.5, 0.5] ),
-    TextParagraphStyle : TParagraphStyleRTTI = ~/paragraphStyleTextCenter,
-    TextSizeToken : string = "12",
-    TextStyle : string = "Default",
-    TextToken : string = '',
-    TextTypefaceToken : string = "UIMainFont",
-    TextDico : string = ~/LocalisationConstantes/dico_interface_ingame,
-    TextElementName : string = "TextElement",
-    OverrideTextElementName : bool = false,
 
     HintTitleToken : string = "HLB_BUTTOT",
     HintBodyToken : string = "HLB_BUTTOB",
     HintExtendedToken : string = "HLB_BUTTOE",
     HintDico : string = ~/LocalisationConstantes/dico_interface_ingame,
     HintableAreaElementName : string = "",
-    UseInGameHintStyle : bool = true,
 
-    HoverSound : TSoundDescriptor = nil,
-    LeftClickSound : TSoundDescriptor = nil,
-
-    Mapping : TEugBMutablePBaseClass = nil,
     RequiredTags : LIST<string> = [],
     ForbiddenTags : LIST<string> = [],
 
@@ -163,13 +106,9 @@ template BUCKSpecificOffMapButton
     MainBackgroundColorToken : string = "LighterGray",
     SecondBackgroundColorToken : string = "DarkGray",
 
-    BorderColorTokenBySide : LIST<PAIR<int, string>> = [],
-
     MainBackgroundLocalRenderLayer : int = 0,
     SecondBackgroundLocalRenderLayer : int = 0,
-    TextLocalRenderLayer : int = 0,
     BorderLocalRenderLayer : int = 0,
-    ForegroundLocalRenderLayer : int = 0,
 ]
 is BUCKContainerDescriptor
 (
@@ -182,22 +121,6 @@ is BUCKContainerDescriptor
         AlignementToAnchor = <ButtonAlignementToAnchor>
         AlignementToFather = <ButtonAlignementToFather>
     )
-    hintComponent is <UseInGameHintStyle> ?
-    BUCKSpecificHintableArea
-    (
-        ElementName = <HintableAreaElementName>
-        DicoToken = <HintDico>
-        HintTitleToken = <HintTitleToken>
-        HintBodyToken = <HintBodyToken>
-        HintExtendedToken = <HintExtendedToken>
-    ) : BUCKSpecificHintableArea
-    (
-        ElementName = <HintableAreaElementName>
-        DicoToken = <HintDico>
-        HintTitleToken = <HintTitleToken>
-        HintBodyToken = <HintBodyToken>
-        HintExtendedToken = <HintExtendedToken>
-    )
 
     RequiredTags = <RequiredTags>
     ForbiddenTags = <ForbiddenTags>
@@ -207,8 +130,6 @@ is BUCKContainerDescriptor
     BorderLineColorToken = <BorderLineColorToken>
 
     BackgroundBlockColorToken = <MainBackgroundColorToken>
-
-    BorderColorTokenBySide = <BorderColorTokenBySide>
 
     BackgroundLocalRenderLayer = <MainBackgroundLocalRenderLayer>
     BorderLocalRenderLayer = <BorderLocalRenderLayer>
@@ -236,7 +157,14 @@ is BUCKContainerDescriptor
 
     (<HintTitleToken> != "" | <HintBodyToken> != "" | <HintExtendedToken> != "" | <HintableAreaElementName> != "" ?
     [
-        hintComponent,
+        BUCKSpecificHintableArea
+        (
+            ElementName = <HintableAreaElementName>
+            DicoToken = <HintDico>
+            HintTitleToken = <HintTitleToken>
+            HintBodyToken = <HintBodyToken>
+            HintExtendedToken = <HintExtendedToken>
+        ),
     ] : [])
 )
 
@@ -263,8 +191,8 @@ BUCKSpecificOffMapMainComponentDescriptor is BUCKContainerDescriptor
     Components =
     [
         PanelRoundedCorner (
-            BackgroundBlockColorToken = "DarkBlackLight_MOD"
-            BorderLineColorToken = "White_MOD"
+            BackgroundBlockColorToken = "MOD_BoutonTemps2"
+            BorderLineColorToken = "MOD_White"
         ),
         BUCKListDescriptor
         (
@@ -298,7 +226,7 @@ BUCKSpecificOffMapMainComponentDescriptor is BUCKContainerDescriptor
                         HorizontalFitStyle = ~/FitStyle/FitToContent
                         VerticalFitStyle = ~/FitStyle/UserDefined
 
-                        TextColor       = "BlancEquipe"
+                        TextColor       = "MOD_White"
                         TextSize        = "16"
                         TextToken       = "TTL_OFFMAP"
                         TextDico        = ~/LocalisationConstantes/dico_interface_ingame

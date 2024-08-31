@@ -3,6 +3,8 @@ SpecificOutGameLoadingPanelResource is TUISpecificOutGameLoadingPanelResource
 (
     LoadingText = BUCKTypingTextDescriptor
     (
+        ElementName = "SpecificOutGameLoadingPanelTypingText"
+
         ComponentFrame = TUIFramePropertyRTTI
         (
             MagnifiableWidthHeight = [0.0, 40.0]
@@ -10,7 +12,7 @@ SpecificOutGameLoadingPanelResource is TUISpecificOutGameLoadingPanelResource
             AlignementToAnchor = [1.0, 1.0]
         )
 
-        ParagraphStyle = TParagraphStyleRTTI
+        ParagraphStyle = TParagraphStyle
         (
             Alignment         = UIText_Right
             VerticalAlignment = UIText_VerticalCenter
@@ -40,13 +42,10 @@ SpecificOutGameLoadingPanelResource is TUISpecificOutGameLoadingPanelResource
         "HintEd_01",
         "HintEd_02",
         "HintEd_03",
-        "HintEd_04",
-        "HintEd_05",
     ]
 
     DevHints = [
         "HNT_DT001",
-        "HNT_DT002",
         "HNT_DT003",
         "HNT_DT004",
         "HNT_DT005",
@@ -57,9 +56,61 @@ SpecificOutGameLoadingPanelResource is TUISpecificOutGameLoadingPanelResource
         "HNT_DT010",
         "HNT_DT011",
         "HNT_DT012",
+        "HNT_DT013",
+        "HNT_DT014",
     ]
 
     CommonHints = [
+        "Hint001",
+        "Hint002",
+        "Hint003",
+        "Hint004",
+        "Hint005",
+        "Hint006",
+        "Hint007",
+        "Hint008",
+        "Hint009",
+        "Hint010",
+        "Hint011",
+        "Hint012",
+        "Hint013",
+        "Hint014",
+        "Hint015",
+        "Hint016",
+        "Hint017",
+        "Hint018",
+        "Hint019",
+        "Hint020",
+        "Hint021",
+        "Hint022",
+        "Hint023",
+        "Hint024",
+        "Hint025",
+        "Hint026",
+        "Hint027",
+        "Hint028",
+        "Hint029",
+        "Hint030",
+        "Hint031",
+        "Hint032",
+        "Hint033",
+        "Hint034",
+        "Hint035",
+        "Hint036",
+        "Hint037",
+        "Hint038",
+        "Hint039",
+        "Hint040",
+        "Hint041",
+        "Hint042",
+        "Hint043",
+        "Hint044",
+        "Hint045",
+        "Hint046",
+        "Hint047",
+        "Hint048",
+        "Hint049",
+        "Hint050",
     ]
 
     LoadingComponents = BUCKContainerDescriptor
@@ -110,6 +161,19 @@ SpecificOutGameLoadingPanelResource is TUISpecificOutGameLoadingPanelResource
                     TUIResourceVideo ( VideoFile =  "GameData:/Assets/Videos/loading_screen_animated/Video_Loading_Screen_22_.webm"  DicoVideo =  ~/DicoVideoOutGame),
                     TUIResourceVideo ( VideoFile =  "GameData:/Assets/Videos/loading_screen_animated/Video_Loading_Screen_23_.webm"  DicoVideo =  ~/DicoVideoOutGame),
                     TUIResourceVideo ( VideoFile =  "GameData:/Assets/Videos/loading_screen_animated/Video_Loading_Screen_24_.webm"  DicoVideo =  ~/DicoVideoOutGame),
+                    TUIResourceVideo ( VideoFile =  "GameData:/Assets/Videos/loading_screen_animated/Video_Loading_Screen_25_.webm"  DicoVideo =  ~/DicoVideoOutGame),
+                    TUIResourceVideo ( VideoFile =  "GameData:/Assets/Videos/loading_screen_animated/Video_Loading_Screen_26_.webm"  DicoVideo =  ~/DicoVideoOutGame),
+                    TUIResourceVideo ( VideoFile =  "GameData:/Assets/Videos/loading_screen_animated/Video_Loading_Screen_27_.webm"  DicoVideo =  ~/DicoVideoOutGame),
+                    TUIResourceVideo ( VideoFile =  "GameData:/Assets/Videos/loading_screen_animated/Video_Loading_Screen_28_.webm"  DicoVideo =  ~/DicoVideoOutGame),
+                    TUIResourceVideo ( VideoFile =  "GameData:/Assets/Videos/loading_screen_animated/Video_Loading_Screen_29_.webm"  DicoVideo =  ~/DicoVideoOutGame),
+                    TUIResourceVideo ( VideoFile =  "GameData:/Assets/Videos/loading_screen_animated/Video_Loading_Screen_30_.webm"  DicoVideo =  ~/DicoVideoOutGame),
+                    TUIResourceVideo ( VideoFile =  "GameData:/Assets/Videos/loading_screen_animated/Video_Loading_Screen_31_.webm"  DicoVideo =  ~/DicoVideoOutGame),
+                    TUIResourceVideo ( VideoFile =  "GameData:/Assets/Videos/loading_screen_animated/Video_Loading_Screen_32_.webm"  DicoVideo =  ~/DicoVideoOutGame),
+                    TUIResourceVideo ( VideoFile =  "GameData:/Assets/Videos/loading_screen_animated/Video_Loading_Screen_33_.webm"  DicoVideo =  ~/DicoVideoOutGame),
+                    TUIResourceVideo ( VideoFile =  "GameData:/Assets/Videos/loading_screen_animated/Video_Loading_Screen_34_.webm"  DicoVideo =  ~/DicoVideoOutGame),
+                    TUIResourceVideo ( VideoFile =  "GameData:/Assets/Videos/loading_screen_animated/Video_Loading_Screen_35_.webm"  DicoVideo =  ~/DicoVideoOutGame),
+                    TUIResourceVideo ( VideoFile =  "GameData:/Assets/Videos/loading_screen_animated/Video_Loading_Screen_36_.webm"  DicoVideo =  ~/DicoVideoOutGame),
+                    TUIResourceVideo ( VideoFile =  "GameData:/Assets/Videos/loading_screen_animated/Video_Loading_Screen_37_.webm"  DicoVideo =  ~/DicoVideoOutGame),
                 ]
             ),
 
@@ -123,7 +187,7 @@ SpecificOutGameLoadingPanelResource is TUISpecificOutGameLoadingPanelResource
                     AlignementToAnchor = [0.5, 1.0]
                 )
 
-                ParagraphStyle = TParagraphStyleRTTI
+                ParagraphStyle = TParagraphStyle
                 (
                     Alignment = UIText_Center
                     VerticalAlignment = UIText_VerticalCenter

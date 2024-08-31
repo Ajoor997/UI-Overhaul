@@ -38,6 +38,7 @@ private template LoginScreenMainButton
     TextToken = <TextToken>
     TextTypefaceToken = "UISecondFont"
     ButtonMagnifiableWidthHeight = <ButtonMagnifiableWidthHeight>
+    ButtonMagnifiableOffset = <ButtonMagnifiableOffset>
 
     ButtonAlignementToAnchor = <ButtonAlignementToAnchor>
     ButtonAlignementToFather = <ButtonAlignementToFather>
@@ -57,16 +58,6 @@ private template LoginScreenMainButton
 private LoginModalConnectButtonDescriptor is LoginScreenMainButton
 (
     ElementName = "ConnectButton"
-    ButtonMagnifiableWidthHeight = [80.0, 25.0]
-    TextToken = 'BTN_CONNEC'
-    Mapping = TEugBMutablePBaseClass(Value = TUserInputMapping(KeyboardEventID = UserInputKeyboard/KEY_ENTER))
-)
-
-// -------------------------------------------------------------------------------------------------
-
-private AutoLoginModalConnectButtonDescriptor is LoginScreenMainButton
-(
-    ElementName = "AutoLoginConnectButton"
     ButtonMagnifiableWidthHeight = [80.0, 25.0]
     TextToken = 'BTN_CONNEC'
     Mapping = TEugBMutablePBaseClass(Value = TUserInputMapping(KeyboardEventID = UserInputKeyboard/KEY_ENTER))
@@ -97,7 +88,7 @@ private LoginModalCancelButtonDescriptor is LoginScreenMainButton
 (
     ElementName = "CancelButton"
     ButtonMagnifiableWidthHeight = [80.0, 25.0]
-    TextToken = 'BTN_CANCEL'
+    TextToken = "BTN_CANCEL"
 
 )
 
@@ -160,7 +151,7 @@ template LoginPanelLine
                     MagnifiableWidthHeight = [70.0, 0.0]
                 )
 
-                ParagraphStyle = TParagraphStyleRTTI
+                ParagraphStyle = TParagraphStyle
                 (
                     VerticalAlignment = ~/UIText_VerticalCenter
                     Alignment = UIText_Right
@@ -235,7 +226,7 @@ template LoginPanelLine
                 ComponentFrame = TUIFramePropertyRTTI
                 (
                     RelativeWidthHeight = [0.0, 1.0]
-                    MagnifiableWidthHeight = [150.0, 0.0]
+                    MagnifiableWidthHeight = [170.0, 0.0]
                 )
 
                 Components =
@@ -244,7 +235,7 @@ template LoginPanelLine
                     (
                         ElementName = <ElementName> + "Button"
                         ButtonRelativeWidthHeight = [0.0, 1.0]
-                        ButtonMagnifiableWidthHeight = [125.0, 0.0]
+                        ButtonMagnifiableWidthHeight = [140.0, 0.0]
                         TextToken = <TokenButton>
                         TextTypefaceToken = "UISecondFont"
                         TextColorToken = 'loginBlanc'
@@ -303,7 +294,7 @@ BUCKSpecificLoginMainComponentDescriptor is LoginTvContainer
                             AlignementToFather = [0.5, 0.0]
                         )
 
-                        ParagraphStyle = TParagraphStyleRTTI
+                        ParagraphStyle = TParagraphStyle
                         (
                             VerticalAlignment = ~/UIText_VerticalCenter
                             Alignment = UIText_Center
@@ -376,16 +367,19 @@ BUCKSpecificLoginMainComponentDescriptor is LoginTvContainer
                             RelativeWidthHeight = [1.0, 0.0]
                         )
 
-                        ParagraphStyle = TParagraphStyleRTTI
+                        ParagraphStyle = TParagraphStyle
                         (
                             VerticalAlignment = ~/UIText_VerticalCenter
                             Alignment = UIText_Center
                         )
 
                         VerticalFitStyle = ~/FitStyle/FitToContent
+                        BigLineAction = ~/BigLineAction/MultiLine
+
+                        TextPadding = TRTTILength4(Magnifiable = [25.0, 0.0, 25.0, 0.0])
 
                         TextStyle       = "Default"
-                        TypefaceToken   = "UIMainFont"
+                        TypefaceToken   = "UISecondFont"
 
                         TextColor       = "Rouge"
                         TextSize        = "16"
@@ -399,7 +393,7 @@ BUCKSpecificLoginMainComponentDescriptor is LoginTvContainer
             ComponentFrame = TUIFramePropertyRTTI
             (
                 MagnifiableWidthHeight = [0.0, 50.0]
-                MagnifiableOffset = [0.0, -50.0]
+                MagnifiableOffset = [0.0, 0.0]
                 AlignementToFather  = [0.5, 1.0]
                 AlignementToAnchor  = [0.5, 1.0]
             )
@@ -413,19 +407,6 @@ BUCKSpecificLoginMainComponentDescriptor is LoginTvContainer
                 BUCKListElementDescriptor(ComponentDescriptor = ~/LoginModalLinkButtonDescriptor),
                 BUCKListElementDescriptor(ComponentDescriptor = ~/LoginModalFirstConnexionButtonDescriptor),
             ]
-        ),
-        BUCKContainerDescriptor
-        (
-            ElementName = "AutoLoginButtonList"
-            ComponentFrame = TUIFramePropertyRTTI
-            (
-                AlignementToFather  = [0.5, 0.5]
-                AlignementToAnchor  = [0.5, 0.5]
-            )
-
-            FitStyle = ~/ContainerFitStyle/FitToContent
-
-            Components = [ ~/AutoLoginModalConnectButtonDescriptor ]
         ),
         LoginPanelMonitorForeground
 

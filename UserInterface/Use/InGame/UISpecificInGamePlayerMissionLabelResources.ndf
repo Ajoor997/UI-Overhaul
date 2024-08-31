@@ -7,6 +7,8 @@ SpecificInGamePlayerMissionLabelResources is TUISpecificPlayerMissionLabelResour
     PlayerMissionLabelMagnificationMultiplier = 1.0
     PlayerMissionUserInputLayer  = $/M3D/Input/UserInputLayerHandler/InputLayer_PlayerMission
 
+    FadeTime        = 0.5
+
     // Faire le lien avec PlayerMissionConstantes.ndf
     PlayerMissionLabelDescriptor = MAP
     [
@@ -20,21 +22,12 @@ SpecificInGamePlayerMissionLabelResources is TUISpecificPlayerMissionLabelResour
         ),
     ]
 
-    PlayerMissionLabelTransformation = TLabelTransformationComposition
+    PlayerMissionLabelTransformation = TLabelTransformPreTranslateFaceCamFakePerspective
     (
-        Transformations = [
-            TLabelTransformFaceCam
-            (
-                Camera = $/M3D/Camera/CameraPrincipale
-            ),
-            TLabelTransformFakePerspective
-            (
-                ScalePerAltitudeConstReso = 1.35
-                Camera = $/M3D/Camera/CameraPrincipale
-                Scene2D = $/M3D/Scene/Scene_2D_Interface
-                ConstnessFactor = 0
-            )
-        ]
+        ScalePerAltitudeConstReso = 1.35
+        Camera = $/M3D/Camera/CameraPrincipale
+        Scene2D = $/M3D/Scene/Scene_2D_Interface
+        ConstnessFactor = 0
     )
 )
 
@@ -43,8 +36,6 @@ private template PlayerMissionLabelDescriptor
     TextToken : string = "",
     IconTextureToken : string = "",
     IconSize : float2,
-    Margin : float = 3.0,
-    Largeur : float = 70.0,
 ]
 is  BUCKContainerDescriptor
 (
@@ -115,7 +106,7 @@ is BUCKTextDescriptor
     TextToken = <TextToken>
 
     ComponentFrame = <ComponentFrame>
-    ParagraphStyle = TParagraphStyleRTTI
+    ParagraphStyle = TParagraphStyle
     (
         Alignment         = <Alignment>
         VerticalAlignment = UIText_Up

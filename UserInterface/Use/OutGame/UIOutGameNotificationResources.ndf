@@ -1,4 +1,4 @@
-NotificationFrame_DefaultBackground is TUIResourceTexture_OutGame(FileName = "GameData:/Assets/2D/Interface/UseOutGame/fond_notification.png")
+NotificationFrame_DefaultBackground is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/UseOutGame/fond_notification.png")
 
 template NotificationFrame
 [
@@ -105,7 +105,7 @@ private NotificationAvatarTextFrame is NotificationFrame
                             RelativeWidthHeight = [0,0]
                         )
 
-                        ParagraphStyle = TParagraphStyleRTTI
+                        ParagraphStyle = TParagraphStyle
                         (
                             Alignment = UIText_Left
                             VerticalAlignment = UIText_VerticalCenter
@@ -139,7 +139,7 @@ private NotificationTextFrame is NotificationFrame
         (
             ElementName = "NotificationText"
 
-            ParagraphStyle = TParagraphStyleRTTI
+            ParagraphStyle = TParagraphStyle
             (
                 Alignment = UIText_Center
                 VerticalAlignment = UIText_VerticalCenter
@@ -169,5 +169,8 @@ NotificationPanelResource is TUISpecificOutGameNotificationPanelResource
     NotificationAvatarTextFrame = ~/NotificationAvatarTextFrame
     NotificationTextFrame = ~/NotificationTextFrame
     NotificationTextSizeToken = "InfoSecondaire"
-    MaxPlayerAndTeamNameSize = 10
+    PlayerNameMaxSize = 10
+
+    Layer = $/UserInterface/UILayer_2DInterfaceAboveBlur_OutGame
+    DisplayTime = 10.0
 )

@@ -4,11 +4,40 @@ MainMenuModCenterFontSize is "23"
 MainMenuArmoryFontSize is "25"
 
 //------------------------------------------------------------------------------
-private UIWelcomeNavBarViewDescriptor is UISpecificNavBarViewDescriptor
+private UIWelcomeQuitButton is BUCKButtonDescriptor
 (
-    MainComponentContainerUniqueName = "SpecificNavBarWelcomeDescriptorMainContainer"
-    BackMapping = nil
-    ButtonLeftClickSound = SoundEvent_QuitGame
+    ElementName = "QuitButton"
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [200.0, 60.0]
+        AlignementToAnchor = [0.5, 1.0]
+        AlignementToFather = [0.5, 1.0]
+    )
+    HasBackground = true
+    BackgroundBlockColorToken = "HUBOutGameNavBar/ButtonOverlay"
+    LeftClickSound = ~/SoundEvent_QuitGame
+
+    Components =
+    [
+        BUCKTextDescriptor
+        (
+            ParagraphStyle = TParagraphStyle
+            (
+                VerticalAlignment = ~/UIText_VerticalCenter
+                Alignment = ~/UIText_Center
+            )
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                RelativeWidthHeight = [1.0, 1.0]
+            )
+            TextColor = "ListeExcel/Cartouche"
+            TextSize  = "28"
+            TextStyle = "Default"
+            TypefaceToken = "UIMainFont"
+            TextDico = ~/LocalisationConstantes/dico_interface_outgame
+            TextToken = "AB_QUIT"
+        ),
+    ]
 )
 
 //------------------------------------------------------------------------------
@@ -59,7 +88,7 @@ private HUBProfileAvatar is BUCKListDescriptor
                 TypefaceToken = "UIMainFont"
 
                 TextStyle = "Default"
-                ParagraphStyle = TParagraphStyleRTTI
+                ParagraphStyle = TParagraphStyle
                 (
                     Alignment = UIText_Center
                     VerticalAlignment = UIText_VerticalCenter
@@ -113,7 +142,7 @@ private HUBProfileLevelInformation is BUCKContainerDescriptor
                         TypefaceToken = "Liberator"
 
                         TextStyle = "Default"
-                        ParagraphStyle = TParagraphStyleRTTI
+                        ParagraphStyle = TParagraphStyle
                         (
                             Alignment = UIText_Right
                             VerticalAlignment = UIText_VerticalCenter
@@ -179,7 +208,7 @@ private HUBProfileLevelInformation is BUCKContainerDescriptor
                         TypefaceToken = "Liberator"
 
                         TextStyle = "Default"
-                        ParagraphStyle = TParagraphStyleRTTI
+                        ParagraphStyle = TParagraphStyle
                         (
                             Alignment = UIText_Center
                             VerticalAlignment = UIText_VerticalCenter
@@ -227,7 +256,7 @@ private HUBProfileNameAndLevel is BUCKListDescriptor
                 TypefaceToken = "Liberator"
 
                 TextStyle = "Default"
-                ParagraphStyle = TParagraphStyleRTTI
+                ParagraphStyle = TParagraphStyle
                 (
                     Alignment = UIText_Center
                     VerticalAlignment = UIText_VerticalCenter
@@ -256,7 +285,7 @@ private HUBProfileNameAndLevel is BUCKListDescriptor
                 TypefaceToken = "Liberator"
 
                 TextStyle = "Default"
-                ParagraphStyle = TParagraphStyleRTTI
+                ParagraphStyle = TParagraphStyle
                 (
                     Alignment = UIText_Center
                     VerticalAlignment = UIText_VerticalCenter
@@ -285,7 +314,7 @@ private HUBProfileNameAndLevel is BUCKListDescriptor
                 TypefaceToken = "Liberator"
 
                 TextStyle = "Default"
-                ParagraphStyle = TParagraphStyleRTTI
+                ParagraphStyle = TParagraphStyle
                 (
                     Alignment = UIText_Center
                     VerticalAlignment = UIText_VerticalCenter
@@ -312,7 +341,7 @@ private HUBProfileNameAndLevel is BUCKListDescriptor
                 TypefaceToken = "Liberator"
 
                 TextStyle = "Default"
-                ParagraphStyle = TParagraphStyleRTTI
+                ParagraphStyle = TParagraphStyle
                 (
                     Alignment = UIText_Center
                     VerticalAlignment = UIText_VerticalCenter
@@ -388,7 +417,7 @@ template  BoutonMenuPrincipal
         BUCKTextDescriptor
         (
 
-            ParagraphStyle = TParagraphStyleRTTI ( VerticalAlignment = ~/UIText_VerticalCenter Alignment = ~/UIText_Center )
+            ParagraphStyle = TParagraphStyle ( VerticalAlignment = ~/UIText_VerticalCenter Alignment = ~/UIText_Center )
 
             ComponentFrame = TUIFramePropertyRTTI ( AlignementToFather = [0,0.5] AlignementToAnchor = [0,0.5] )
 
@@ -821,7 +850,7 @@ private MainOutGameWelcomeDescriptor is BUCKContainerDescriptor
 )
 //------------------------------------------------------------------------------
 
-private UISpecificOutGameWelcomeAndNavBarDescriptor is BUCKContainerDescriptor
+private UISpecificOutGameWelcomeDescriptor is BUCKContainerDescriptor
 (
     ComponentFrame = TUIFramePropertyRTTI
     (
@@ -830,16 +859,7 @@ private UISpecificOutGameWelcomeAndNavBarDescriptor is BUCKContainerDescriptor
     Components =
     [
         ~/MainOutGameWelcomeDescriptor,
-
-        BUCKContainerDescriptor
-        (
-            UniqueName = "SpecificNavBarWelcomeDescriptorMainContainer"
-            ComponentFrame = TUIFramePropertyRTTI
-            (
-                RelativeWidthHeight = [1.0, 0.05]
-                RelativeOffset = [0.0, 0.95]
-            )
-        ),
+        ~/UIWelcomeQuitButton,
     ]
 )
 
@@ -847,8 +867,7 @@ private UISpecificOutGameWelcomeAndNavBarDescriptor is BUCKContainerDescriptor
 
 UISpecificOutGameWelcomeViewDescriptor is TUISpecificOutGameWelcomeViewDescriptor
 (
-    MainComponentDescriptor = ~/UISpecificOutGameWelcomeAndNavBarDescriptor
-    NavBarViewDescriptor = ~/UIWelcomeNavBarViewDescriptor
+    MainComponentDescriptor = ~/UISpecificOutGameWelcomeDescriptor
     TextureNameBackgroundOnline = "Outgame_backgroundOfflineHomeScreen"
     TextureNameBackgroundOffline = "Outgame_backgroundOfflineHomeScreen"
     MainComponentContainerUniqueName = ""

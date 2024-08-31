@@ -17,11 +17,15 @@ template DeckListButton
     ElementName = <ElementName>
     TextToken = <TextToken>
 
-    HintableAreaElementName = <HintableAreaElementName>
-    HintTitleToken = <HintTitleToken>
-    HintBodyToken = <HintBodyToken>
-    HintExtendedToken = <HintExtendedToken>
-    HintDico = <HintDico>
+    HintableAreaComponent = BUCKSpecificHintableArea
+    (
+        ElementName = <HintableAreaElementName>
+        HintTitleToken = <HintTitleToken>
+        HintBodyToken = <HintBodyToken>
+        HintExtendedToken = <HintExtendedToken>
+        DicoToken = <HintDico>
+    )
+
     BigLineAction = <BigLineAction>
 
     ButtonMagnifiableWidthHeight = ~/DeckListButtonsDims
@@ -94,36 +98,6 @@ private DeckListPanelExportButton is DeckListButton
 
 //-------------------------------------------------------------------------------------
 
-template ModalButtonGris
-[
-    ElementName : string = '',
-    TextToken : string = '',
-    HintableAreaElementName : string = "",
-    HintTitleToken : string = "",
-    HintBodyToken : string = "",
-    HintExtendedToken : string = "",
-    HintDico : string = ~/LocalisationConstantes/dico_interface_outgame,
-    LeftClickSound : TSoundDescriptor = nil,
-
-] is ConfirmButton
-(
-    ElementName = <ElementName>
-    TextToken = <TextToken>
-
-    HintableAreaElementName = <HintableAreaElementName>
-    HintTitleToken = <HintTitleToken>
-    HintBodyToken = <HintBodyToken>
-    HintExtendedToken = <HintExtendedToken>
-    HintDico = <HintDico>
-
-    ButtonMagnifiableWidthHeight = ~/DeckListButtonsDims2
-    TextColorToken = 'Gris_boutonAction'
-    TextSizeToken = '18'
-    TextTypefaceToken = "Liberator"
-    HasBorder = false
-    LeftClickSound = <LeftClickSound>
-)
-
 private DeckListPanelImportButton is ConfirmButton
 (
     ElementName = 'ImportButton'
@@ -138,10 +112,14 @@ private DeckListPanelImportButton is ConfirmButton
     TextSizeToken = '26'
     BorderThicknessToken = '3'
 
-    HintTitleToken = "ODL_IMPOBT"
-    HintBodyToken = "ODL_IMPOBB"
-    HintExtendedToken = "ODL_IMPOBE"
-    HintDico = ~/LocalisationConstantes/dico_interface_outgame
+    HintableAreaComponent = BUCKSpecificHintableArea
+    (
+        HintTitleToken = "ODL_IMPOBT"
+        HintBodyToken = "ODL_IMPOBB"
+        HintExtendedToken = "ODL_IMPOBE"
+        DicoToken = ~/LocalisationConstantes/dico_interface_outgame
+    )
+
     LeftClickSound = SoundEvent_OpenImportDeckModal
 )
 
@@ -159,10 +137,13 @@ private DeckListPanelEditButton is ConfirmButton
     TextSizeToken = '26'
     BorderThicknessToken = '3'
 
-    HintTitleToken = "ODL_EDITBT"
-    HintBodyToken = "ODL_EDITBB"
-    HintExtendedToken = "ODL_EDITBE"
-    HintDico = ~/LocalisationConstantes/dico_interface_outgame
+    HintableAreaComponent = BUCKSpecificHintableArea
+    (
+        HintTitleToken = "ODL_EDITBT"
+        HintBodyToken = "ODL_EDITBB"
+        HintExtendedToken = "ODL_EDITBE"
+        DicoToken = ~/LocalisationConstantes/dico_interface_outgame
+    )
     LeftClickSound = SoundEvent_EditDeck
 )
 
@@ -180,10 +161,13 @@ private DeckListPanelViewButton is ConfirmButton
     TextSizeToken = '26'
     BorderThicknessToken = '3'
 
-    HintTitleToken = "ODL_VIEWBT"
-    HintBodyToken = "ODL_VIEWBB"
-    HintExtendedToken = "ODL_VIEWBE"
-    HintDico = ~/LocalisationConstantes/dico_interface_outgame
+    HintableAreaComponent = BUCKSpecificHintableArea
+    (
+        HintTitleToken = "ODL_VIEWBT"
+        HintBodyToken = "ODL_VIEWBB"
+        HintExtendedToken = "ODL_VIEWBE"
+        DicoToken = ~/LocalisationConstantes/dico_interface_outgame
+    )
     LeftClickSound = SoundEvent_ViewDeck
 )
 
@@ -205,24 +189,28 @@ private DeckListPanelCreateButton is ConfirmButton
     BigLineAction = ~/BigLineAction/ResizeFont
     TextPadding = TRTTILength4( Magnifiable = [5.0, 0.0, 5.0, 0.0] )
 
-    HintTitleToken = "ODL_CREABT"
-    HintBodyToken = "ODL_CREABB"
-    HintExtendedToken = "ODL_CREABE"
-    HintDico = ~/LocalisationConstantes/dico_interface_outgame
+    HintableAreaComponent = BUCKSpecificHintableArea
+    (
+        HintTitleToken = "ODL_CREABT"
+        HintBodyToken = "ODL_CREABB"
+        HintExtendedToken = "ODL_CREABE"
+        DicoToken = ~/LocalisationConstantes/dico_interface_outgame
+    )
     LeftClickSound = SoundEvent_OpenCreateDeckModal
 )
-
-
 
 private DeckListPanelSelectButton is ConfirmButton
 (
     ElementName = "SelectButton"
     TextToken = "NV_SELECT"
 
-    HintTitleToken = "ODL_SELEBT"
-    HintBodyToken = "ODL_SELEBB"
-    HintExtendedToken = "ODL_SELEBE"
-    HintDico = ~/LocalisationConstantes/dico_interface_outgame
+    HintableAreaComponent = BUCKSpecificHintableArea
+    (
+        HintTitleToken = "ODL_SELEBT"
+        HintBodyToken = "ODL_SELEBB"
+        HintExtendedToken = "ODL_SELEBE"
+        DicoToken = ~/LocalisationConstantes/dico_interface_outgame
+    )
     BigLineAction = ~/BigLineAction/ResizeFont
 
     ButtonMagnifiableWidthHeight = [400.0, 34.0]
@@ -277,63 +265,6 @@ DeckListBackButton is BUCKButtonDescriptor
 
 //-------------------------------------------------------------------------------------
 
-template ModalButtonCyan
-[
-    ElementName : string = '',
-    TextToken : string = '',
-    Mapping : TEugBMutablePBaseClass = nil,
-    ButtonAlignementToAnchor : float2 = [0,0],
-    ButtonAlignementToFather : float2 = [0,0],
-
-    IsFilled : bool
-] is ConfirmButton
-(
-    ElementName = <ElementName>
-    TextToken = <TextToken>
-    Mapping = <Mapping>
-    ButtonAlignementToAnchor = <ButtonAlignementToAnchor>
-    ButtonAlignementToFather = <ButtonAlignementToFather>
-
-    ButtonMagnifiableWidthHeight = [175.0, 35.0]
-    TextTypefaceToken = "UISecondFont"
-    TextStyle = 'TextStyleEcranMoniteur_cyan'
-    TextColorToken = 'loginBlanc'
-    BorderLineColorToken = <IsFilled> ? 'Cyan' : 'VertLogin'
-    HasBackground = true
-    BackgroundBlockColorToken = <IsFilled> ? 'loginBoutonBackground_cyan' : 'loginBoutonBackground_vert'
-    TextSizeToken = '24'
-    BorderThicknessToken = '3'
-)
-
-//Modale import deck
-private DeckListModalImportButton is ModalButtonCyan
-(
-    ElementName = 'ImportButton'
-    TextToken = 'AB_DCKIMPO'
-    IsFilled = true
-    Mapping = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ENTER ) )
-)
-
-//Modale export deck
-private DeckListModalExportOkButton is ModalButtonCyan
-(
-    ElementName = 'OkButton'
-    TextToken = 'BTN_OK'
-    IsFilled = true
-    Mapping = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ENTER ) )
-)
-
-//Modale creation deck
-private DeckListModalCancelButton is ModalButtonCyan
-(
-    ElementName = 'CancelButton'
-    TextToken = 'BTN_CANMAJ'
-    IsFilled = false
-    Mapping = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ESCAPE ) )
-)
-
-//-------------------------------------------------------------------------------------
-
 BattlegroupsBriefRadioManager is TBUCKRadioButtonManager()
 
 BattlegroupBriefDescriptorForSelection is BUCKSpecificDivisionBriefMainComponentDescriptor
@@ -341,35 +272,8 @@ BattlegroupBriefDescriptorForSelection is BUCKSpecificDivisionBriefMainComponent
     AlignementToAnchor = [0.0, 0.0]
     AlignementToFather = [0.0, 0.0]
     IsTogglable = true
-    CannotDeselect = true
-    RadioButtonManager = ~/BattlegroupsBriefRadioManager
+    RadioButtonManager = nil
     HasBattlegroup = true
-)
-
-private DeckErrorText is BUCKTextDescriptor
-(
-    ElementName = "DeckErrorText"
-
-    ComponentFrame = TUIFramePropertyRTTI
-    (
-        RelativeWidthHeight = [1.0, 0.0]
-        MagnifiableWidthHeight = [0.0, 20.0]
-    )
-
-    TextStyle = "TextStyleEcranMoniteur"
-    TypefaceToken = "IBM"
-    TextColor = 'Blanc'
-    TextSize = '24'
-    TextDico = ~/LocalisationConstantes/dico_interface_outgame
-    BigLineAction = ~/BigLineAction/MultiLine
-    VerticalFitStyle = ~/FitStyle/UserDefined
-    ParagraphStyle = TParagraphStyleRTTI
-    (
-        Alignment = ~/UIText_Center
-        VerticalAlignment = ~/UIText_VerticalCenter
-        Balanced = true
-        BigWordAction = ~/BigWordAction/BigWordNewLine
-    )
 )
 
 //-------------------------------------------------------------------------------------
@@ -413,25 +317,6 @@ BattlegroupBriefsScrollingContainer is BUCKSpecificScrollingContainerDescriptor
             ]
         ),
     ]
-)
-
-//-------------------------------------------------------------------------------------
-
-private DeckNameEditableText is BUCKEditableTextInputFieldDescriptor
-(
-    ElementName = "DeckNameEditableText"
-    ComponentFrame = TUIFramePropertyRTTI( MagnifiableWidthHeight = [350.0, 35.0] )
-)
-
-//-------------------------------------------------------------------------------------
-
-private DeckCodeEditableText is BUCKEditableTextInputFieldDescriptor
-(
-    ElementName = "DeckCodeEditableText"
-    TextStyle = 'TextStyleEcranMoniteur'
-    ComponentFrame = TUIFramePropertyRTTI( MagnifiableWidthHeight = [350.0, 35.0] )
-    MaxChars = 500
-    Flags = EditableTextFlag/ONE_LINE | EditableTextFlag/INPUT_DISABLED
 )
 
 //-------------------------------------------------------------------------------------
@@ -484,7 +369,7 @@ BUCKContainerDescriptor
 
                 HorizontalFitStyle = ~/FitStyle/UserDefined
                 VerticalFitStyle = ~/FitStyle/UserDefined
-                ParagraphStyle = TParagraphStyleRTTI
+                ParagraphStyle = TParagraphStyle
                 (
                     VerticalAlignment = ~/UIText_Up
                     Alignment = UIText_Left
@@ -763,7 +648,7 @@ private template DeckSimpleText
     BigLineAction = ~/BigLineAction/MultiLine
     VerticalFitStyle = ~/FitStyle/UserDefined
 
-    ParagraphStyle = TParagraphStyleRTTI
+    ParagraphStyle = TParagraphStyle
     (
         Alignment = ~/UIText_Left
         VerticalAlignment = ~/UIText_VerticalCenter
@@ -774,298 +659,91 @@ private template DeckSimpleText
 
 //-------------------------------------------------------------------------------------
 
-private DeckListModalImportDeckWindowFrame is SpecificModaleWindowFrame
+private DeckListModalImportDeckWindowFrame is SpecificModalWindow
 (
-    ComponentFrame = TUIFramePropertyRTTI
-    (
-        MagnifiableWidthHeight = [850.0, 0.0]
-        AlignementToAnchor = [0.5, 0.5]
-        AlignementToFather = [0.5, 0.5]
-    )
+    TitleToken = "DI_DCKIMPO"
 
-    ContentRelativeWidthHeight = [1.0, 0.0]
-    ContentMagnifiableWidthHeight = [0.0, 110.0]
-    TitleToken = 'DI_DCKIMPO'
-
-    ButtonList = []
-
-    ContentComponents =
+    ButtonList =
     [
-        BUCKListDescriptor
+        BUCKListElementDescriptor
         (
-            ComponentFrame = TUIFramePropertyRTTI
+            ComponentDescriptor = SpecificModalButton
             (
-                RelativeWidthHeight = [1.0, 0.0]
+                ElementName = "ImportButton"
+                TextToken = "AB_DCKIMPO"
+                IsFilled = true
+                Mapping = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ENTER ) )
             )
-
-            Axis = ~/ListAxis/Vertical
-
-            InterItemMargin = TRTTILength(Magnifiable = 10.0)
-
-            Elements =
-            [
-                // ligne ****
-                BUCKListElementDescriptor
-                (
-                    ComponentDescriptor = BUCKTextDescriptor
-                    (
-                        ComponentFrame = TUIFramePropertyRTTI
-                        (
-                            MagnifiableWidthHeight = [0.0, 20.0]
-                            AlignementToFather = [0.5, 0.0]
-                            AlignementToAnchor = [0.5, 0.0]
-                        )
-
-                        ParagraphStyle = paragraphStyleTextCenter
-                        TextStyle = "TextStyleEcranMoniteur"
-
-                        VerticalFitStyle = ~/FitStyle/UserDefined
-                        TypefaceToken = "IBM"
-                        BigLineAction = ~/BigLineAction/MultiLine
-                        TextToken = 'HINT_EX_SP'
-                        TextDico = ~/LocalisationConstantes/dico_interface_outgame
-                        TextColor = "Blanc"
-                        TextSize = "24"
-                    )
-
-                ),
-                BUCKListElementDescriptor
-                (
-                    ComponentDescriptor = BUCKContainerDescriptor
-                    (
-                        ComponentFrame = TUIFramePropertyRTTI (MagnifiableWidthHeight = [0.0, 20.0])
-                    )
-                ),
-                // text 1
-                BUCKListElementDescriptor
-                (
-                    ComponentDescriptor = BUCKListDescriptor
-                    (
-                        ComponentFrame = TUIFramePropertyRTTI
-                        (
-                            AlignementToAnchor = [0.5, 0.0]
-                            AlignementToFather = [0.5, 0.0]
-                        )
-
-                        Axis = ~/ListAxis/Horizontal
-                        BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
-
-                        Elements =
-                        [
-                            BUCKListElementDescriptor
-                            (
-                                ComponentDescriptor = DeckSimpleText
-                                (
-                                    ComponentFrame = TUIFramePropertyRTTI
-                                    (
-                                        MagnifiableWidthHeight = [225.0, 20.0]
-                                        AlignementToAnchor = [0.0, 0.5]
-                                        AlignementToFather = [0.0, 0.5]
-                                    )
-
-                                    TextToken = "ODL_DckCod"
-                                )
-                            ),
-                            BUCKListElementDescriptor
-                            (
-                                ComponentDescriptor = ~/DeckCodeEditableText
-                            ),
-                        ]
-                    )
-                ),
-                // texte 2
-                BUCKListElementDescriptor
-                (
-                    ComponentDescriptor = BUCKListDescriptor
-                    (
-                        ComponentFrame = TUIFramePropertyRTTI
-                        (
-                            AlignementToAnchor = [0.5, 0.0]
-                            AlignementToFather = [0.5, 0.0]
-                        )
-
-                        Axis = ~/ListAxis/Horizontal
-                        BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
-
-                        Elements =
-                        [
-                            BUCKListElementDescriptor
-                            (
-                                ComponentDescriptor = DeckSimpleText
-                                (
-                                    ComponentFrame = TUIFramePropertyRTTI
-                                    (
-                                        MagnifiableWidthHeight = [225.0, 20.0]
-                                        AlignementToAnchor = [0.0, 0.5]
-                                        AlignementToFather = [0.0, 0.5]
-                                    )
-
-                                    TextToken = "DC_DCKNAM"
-                                )
-                            ),
-                            BUCKListElementDescriptor
-                            (
-                                ComponentDescriptor = ~/DeckNameEditableText
-                            ),
-                        ]
-                    )
-                ),
-                BUCKListElementDescriptor
-                (
-                    ComponentDescriptor = ~/DeckErrorText
-                ),
-                // ligne ****
-                BUCKListElementDescriptor
-                (
-                    ComponentDescriptor = BUCKTextDescriptor
-                    (
-                        ComponentFrame = TUIFramePropertyRTTI
-                        (
-                            MagnifiableWidthHeight = [0.0, 20.0]
-                            AlignementToFather = [0.5, 0.0]
-                            AlignementToAnchor = [0.5, 0.0]
-                        )
-
-                        ParagraphStyle = paragraphStyleTextCenter
-                        TextStyle = "TextStyleEcranMoniteur"
-
-                        VerticalFitStyle = ~/FitStyle/UserDefined
-                        TypefaceToken = "IBM"
-                        BigLineAction = ~/BigLineAction/MultiLine
-                        TextToken = 'HINT_EX_SP'
-                        TextDico = ~/LocalisationConstantes/dico_interface_outgame
-                        TextColor = "Blanc"
-                        TextSize = "24"
-                    )
-                ),
-                BUCKListElementDescriptor
-                (
-                    ComponentDescriptor = BUCKContainerDescriptor
-                    (
-                        ComponentFrame = TUIFramePropertyRTTI
-                        (
-                            MagnifiableWidthHeight = [0.0, 20.0]
-                        )
-                    )
-                ),
-                BUCKListElementDescriptor
-                (
-                    ComponentDescriptor = BUCKListDescriptor
-                    (
-                        ComponentFrame = TUIFramePropertyRTTI
-                        (
-                            MagnifiableWidthHeight = [0.0, 20.0]
-                            AlignementToFather = [0.5, 0.0]
-                            AlignementToAnchor = [0.5, 0.0]
-                        )
-
-                        InterItemMargin = TRTTILength( Magnifiable = 20.0 )
-                        LastMargin = TRTTILength( Magnifiable = 0.0 )
-                        Axis = ~/ListAxis/Horizontal
-
-                        Elements =
-                        [
-                            BUCKListElementDescriptor( ComponentDescriptor = ~/DeckListModalImportButton ),
-                            BUCKListElementDescriptor( ComponentDescriptor = ~/DeckListModalCancelButton ),
-                        ]
-                    )
-                )
-            ]
         ),
-
-        BUCKTextureDescriptor
-        (
-            ComponentFrame = TUIFramePropertyRTTI
-            (
-                MagnifiableWidthHeight = [904.0, 732.0]
-                MagnifiableOffset = [0.0, -150.0]
-            )
-            TextureToken = 'Outgame_modale_foreground'
-            TextureDrawer = 'ColorMultiply_Additive'
-        )
+        BUCKListElementDescriptor(ComponentDescriptor = SpecificModalCancelButton)
     ]
 
-    AdditionalComponents =
+    ElementsList =
     [
-        BUCKTextureDescriptor
+        // ligne ****
+        BUCKListElementDescriptor
         (
-            ComponentFrame = TUIFramePropertyRTTI
+            ComponentDescriptor = SpecificModalDottedLine
+        ),
+        BUCKListElementSpacer(Magnifiable = 20.0),
+        // text 1
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = SpecificModalEditableText
             (
-                MagnifiableWidthHeight = [904.0, 732.0]
-                MagnifiableOffset = [0.0, -150.0]
+                TextToken = "ODL_DckCod"
+                HasText = true
+                EditableTextElementName = "DeckCodeEditableText"
+                Flags = EditableTextFlag/ONE_LINE | EditableTextFlag/INPUT_DISABLED
             )
-            TextureToken = 'Outgame_modale_fond'
-            TextureDrawer = 'MonochromeMonitorEffect'
+        ),
+        // texte 2
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = SpecificModalEditableText
+            (
+                TextToken = "DC_DCKNAM"
+                HasText = true
+                EditableTextElementName = "DeckNameEditableText"
+            )
+        ),
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = SpecificModalErrorText
+        ),
+        // ligne ****
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = SpecificModalDottedLine
         )
     ]
 )
 
 //-------------------------------------------------------------------------------------
 
-private DeckListModalExportDeckWindowFrame is SpecificModaleWindowFrame
+private DeckListModalExportDeckWindowFrame is SpecificModalWindow
 (
-    ComponentFrame = TUIFramePropertyRTTI
-    (
-        MagnifiableWidthHeight = [850.0, 0.0]
-        AlignementToAnchor = [0.5, 0.5]
-        AlignementToFather = [0.5, 0.5]
-    )
-
-    ContentRelativeWidthHeight = [1.0, 0.0]
-    ContentMagnifiableWidthHeight = [0.0, 110.0]
-    TitleToken = 'DI_DCKEXPO'
+    TitleToken = "DI_DCKEXPO"
 
     ButtonList =
     [
-        BUCKListElementDescriptor( ComponentDescriptor = ~/DeckListModalExportOkButton ),
-    ]
-
-    ContentComponents =
-    [
-        BUCKListDescriptor
+        BUCKListElementDescriptor
         (
-            ComponentFrame = TUIFramePropertyRTTI
+            ComponentDescriptor = SpecificModalButton
             (
-                RelativeWidthHeight = [1.0, 0.0]
+                ElementName = "OkButton"
+                TextToken = "BTN_OK"
+                Mapping = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ENTER ) )
+                IsFilled = true
             )
-
-            Axis = ~/ListAxis/Vertical
-
-            FirstMargin = TRTTILength(Magnifiable = 16.0)
-
-            Elements =
-            [
-                BUCKListElementDescriptor
-                (
-                    ComponentDescriptor = ~/DeckErrorText
-                ),
-            ]
-        ),
-
-        BUCKTextureDescriptor
-        (
-            ComponentFrame = TUIFramePropertyRTTI
-            (
-                MagnifiableWidthHeight = [904.0, 732.0]
-                MagnifiableOffset = [0.0, -150.0]
-            )
-            TextureToken = 'Outgame_modale_foreground'
-            TextureDrawer = 'ColorMultiply_Additive'
         )
     ]
 
-    AdditionalComponents =
+    ElementsList =
     [
-        BUCKTextureDescriptor
+        BUCKListElementDescriptor
         (
-            ComponentFrame = TUIFramePropertyRTTI
-            (
-                MagnifiableWidthHeight = [904.0, 732.0]
-                MagnifiableOffset = [0.0, -150.0]
-            )
-
-            TextureToken = 'Outgame_modale_fond'
-            TextureDrawer = 'MonochromeMonitorEffect'
+            ComponentDescriptor = SpecificModalText(ElementName = "ModalContent" TextToken = "DI_DCKCOP")
         )
     ]
 )
@@ -1455,7 +1133,7 @@ DeckOverviewInformationsHeadersFrame is BUCKContainerDescriptor
 
                         HorizontalFitStyle = ~/FitStyle/UserDefined
 
-                        ParagraphStyle = TParagraphStyleRTTI
+                        ParagraphStyle = TParagraphStyle
                         (
                             Alignment = UIText_Left
                             VerticalAlignment = UIText_Bottom
@@ -1485,7 +1163,7 @@ DeckOverviewInformationsHeadersFrame is BUCKContainerDescriptor
 
                         HorizontalFitStyle = ~/FitStyle/UserDefined
 
-                        ParagraphStyle = TParagraphStyleRTTI
+                        ParagraphStyle = TParagraphStyle
                         (
                             Alignment = UIText_Center
                             VerticalAlignment = UIText_Bottom
@@ -1515,7 +1193,7 @@ DeckOverviewInformationsHeadersFrame is BUCKContainerDescriptor
 
                         HorizontalFitStyle = ~/FitStyle/UserDefined
 
-                        ParagraphStyle = TParagraphStyleRTTI
+                        ParagraphStyle = TParagraphStyle
                         (
                             Alignment = UIText_Center
                             VerticalAlignment = UIText_Bottom
@@ -1545,7 +1223,7 @@ DeckOverviewInformationsHeadersFrame is BUCKContainerDescriptor
 
                         HorizontalFitStyle = ~/FitStyle/UserDefined
 
-                        ParagraphStyle = TParagraphStyleRTTI
+                        ParagraphStyle = TParagraphStyle
                         (
                             Alignment = UIText_Center
                             VerticalAlignment = UIText_Bottom
@@ -2016,10 +1694,10 @@ is TUISpecificBattlegroupsListViewDescriptor
     [
         EDefaultFactories/Logistic,
         EDefaultFactories/Infantry,
-        EDefaultFactories/Support,
+        EDefaultFactories/Art,
         EDefaultFactories/Tanks,
         EDefaultFactories/Recons,
-        EDefaultFactories/AT,
+        EDefaultFactories/DCA,
         EDefaultFactories/Helis,
         EDefaultFactories/Planes,
     ]
@@ -2040,11 +1718,11 @@ is TUISpecificBattlegroupsListViewDescriptor
     [
         (
             ENationalite/OTAN,
-            "CommonTexture_MotherCountryFlag_NATO"
+            "CommonTexture_MotherCountryFlag_NATO_small"
         ),
         (
             ENationalite/PACT,
-            "CommonTexture_MotherCountryFlag_WP"
+            "CommonTexture_MotherCountryFlag_PACT_small"
         ),
     ]
 
@@ -2056,10 +1734,6 @@ is TUISpecificBattlegroupsListViewDescriptor
 
     ModaleImportDeck = ~/DeckListModalImportDeckWindowFrame
     ModaleExportDeck = ~/DeckListModalExportDeckWindowFrame
-
-    ShowOverviewSound = ~/SoundEvent_ShowDeckOverview
-    HideOverviewSound = ~/SoundEvent_HideDeckOverview
-    ChangeOverviewSound = ~/SoundEvent_ChangeDeckOverview
 
     OverviewEmptyFieldPlaceholder = "CL_DEFVAL"
     OverviewUnitsPerLine = 7

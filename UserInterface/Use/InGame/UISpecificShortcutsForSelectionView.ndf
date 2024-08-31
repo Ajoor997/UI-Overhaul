@@ -2,18 +2,19 @@
 
 template ShortcutButton
 [
-    ElementName : string = '',
-    UniqueName : string = '',
-    TextureToken : string = '',
-    HintTitleToken : string = '',
-    HintBodyToken : string = '',
-    HintExtendedToken : string = '',
-    RelativeWidthHeight : float2 = [1.0, 1.0],
-    MagnifiableWidthHeight : float2 = [0.0, 0.0],
-    MagnifiableWidthHeightTexture : = [30.0, 30.0],
-    BackgroundBlockColorToken : string = "shortcutBtn_Mod",
-    BorderLineColorToken : string = "shortcutBtnBorder_Mod",
-
+    ElementName : string = "",
+    UniqueName : string = "",
+    SpotlightUniqueName : string = "",
+    TextureToken : string = "MOD_CouleurTexture_boutonShortcuts",
+    HintableAreaComponent : TBUCKHintableAreaDescriptor = nil,
+    MagnifiableWidthHeightTexture : float2 = [30.0, 30.0],
+    BackgroundBlockColorToken : string = "MOD_Button_STYLE5",
+    BorderLineColorToken : string = "MOD_None",
+    TextureColorToken : string  = "MOD_CouleurTexture_boutonShortcuts",
+    LeftClickSound : TSoundDescriptor = nil,
+    Mapping : TEugBMutablePBaseClass = nil,
+    Components : LIST<TBUCKContainerDescriptor> = [],
+    IsTogglable : bool = true
 ] is BUCKButtonDescriptor
 (
     ElementName = <ElementName>
@@ -23,9 +24,11 @@ template ShortcutButton
         MagnifiableWidthHeight = [52.0, 32.0]
     )
 
-    IsTogglable = true
+    IsTogglable = <IsTogglable>
     DefaultToggleValue = false
     HasBorder = false
+    LeftClickSound = <LeftClickSound>
+    Mapping = <Mapping>
 
     Components =
     [
@@ -59,36 +62,103 @@ template ShortcutButton
             )
 
             TextureToken = <TextureToken>
-            TextureColorToken = "CouleurTexture_boutonShortcuts"
+            TextureColorToken = <TextureColorToken>
 
-            Components =
-            [
-                 BUCKSpecificHintableArea
-                (
-                    DicoToken = ~/LocalisationConstantes/dico_interface_ingame
-                    HintTitleToken = <HintTitleToken>
-                    HintBodyToken = <HintBodyToken>
-                    HintExtendedToken = <HintExtendedToken>
-                )
-            ]
+            Components = (<HintableAreaComponent> != nil ? [<HintableAreaComponent>] : [])
         ),
-    ]
+
+    ] +
+    <Components>
+    + ( <SpotlightUniqueName> == "" ? []
+        : [
+            BUCKSpotlightDescriptor
+            (
+                UniqueName = <SpotlightUniqueName>
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    RelativeWidthHeight = [1.0, 1.0]
+                )
+            )
+        ]
+    )
+)
+
+template ShortcutButtonWithBaseHint
+[
+    ElementName : string = "",
+    TextureToken : string = "",
+    HintTitleToken : string = "",
+    HintBodyToken : string = "",
+    HintExtendedToken : string = "",
+    MagnifiableWidthHeightTexture : float2 = [30.0, 30.0],
+] is ShortcutButton
+(
+    ElementName = <ElementName>
+    MagnifiableWidthHeightTexture = <MagnifiableWidthHeightTexture>
+    TextureToken = <TextureToken>
+    TextureColorToken = "MOD_CouleurTexture_boutonShortcuts"
+
+    HintableAreaComponent = BUCKSpecificHintableArea
+    (
+        HintTitleToken = <HintTitleToken>
+        HintBodyToken = <HintBodyToken>
+        HintExtendedToken = <HintExtendedToken>
+        DicoToken = ~/LocalisationConstantes/dico_interface_ingame
+    )
+)
+
+template ShortcutButtonWithStrategicHint
+[
+    ElementName : string = "",
+    UniqueName : string = "",
+    SpotlightUniqueName : string = "",
+    TextureToken : string = "",
+    TextureColorToken : string = "CouleurTexture_boutonShortcutsStrategic",
+    HintTitleToken : string = "",
+    HintBodyToken : string = "",
+    BackgroundBlockColorToken : string = "BoutonTemps",
+    BorderLineColorToken : string = "CouleurBordure_boutonShortcuts",
+    LeftClickSound : TSoundDescriptor = nil,
+    MagnifiableWidthHeightTexture : float2 = [30.0, 30.0],
+    Mapping : TEugBMutablePBaseClass = nil,
+    Components : LIST<TBUCKContainerDescriptor> = [],
+    IsTogglable : bool = true
+] is ShortcutButton
+(
+    ElementName = <ElementName>
+    UniqueName = <UniqueName>
+    SpotlightUniqueName = <SpotlightUniqueName>
+    TextureToken = <TextureToken>
+    BackgroundBlockColorToken = <BackgroundBlockColorToken>
+    BorderLineColorToken = <BorderLineColorToken>
+    LeftClickSound = <LeftClickSound>
+    MagnifiableWidthHeightTexture = <MagnifiableWidthHeightTexture>
+    TextureColorToken = <TextureColorToken>
+    Mapping = <Mapping>
+
+    HintableAreaComponent = BUCKSpecificStrategicHintableArea
+    (
+        HintTitleToken = <HintTitleToken>
+        HintBodyToken = <HintBodyToken>
+        DicoToken = ~/LocalisationConstantes/dico_interface_ingame
+    )
+    Components = <Components>
+    IsTogglable = <IsTogglable>
 )
 
 //------------------------------------------------------------------------------
 
-OrderPanelPanelButton is ShortcutButton
+OrderPanelPanelButton is ShortcutButtonWithBaseHint
 (
     ElementName = 'OrdersFeedBackButton'
     TextureToken = "textureOrders"
     HintTitleToken = "HSL_ORDERT"
     HintBodyToken = "HSL_ORDERB"
-    MagnifiableWidthHeightTexture = [32.0, 32.0]
 )
 
 //------------------------------------------------------------------------------
 
-LoSPanelButton is ShortcutButton
+LoSPanelButton is ShortcutButtonWithBaseHint
 (
     ElementName = 'LoSFeedBackButton'
     TextureToken = "icone_los"
@@ -101,7 +171,7 @@ LoSPanelButton is ShortcutButton
 
 //------------------------------------------------------------------------------
 
-ChatShortcutButton is ShortcutButton
+ChatShortcutButton is ShortcutButtonWithBaseHint
 (
     ElementName = 'ChatButton'
     TextureToken = "icone_chat"
@@ -112,14 +182,14 @@ ChatShortcutButton is ShortcutButton
 
 //------------------------------------------------------------------------------
 
-HelpButton is ShortcutButton
+HelpButton is ShortcutButtonWithBaseHint
 (
     TextureToken = "textureOrders "
 )
 
 //------------------------------------------------------------------------------
 
-EngagementRulesButton is ShortcutButton
+EngagementRulesButton is ShortcutButtonWithBaseHint
 (
     ElementName = 'EngagementRulesButton'
     TextureToken = "icone_roe"
@@ -130,86 +200,229 @@ EngagementRulesButton is ShortcutButton
 
 //------------------------------------------------------------------------------
 
-DisplayStartingInformationButton is ShortcutButton
+DisplayStartingInformationButton is ShortcutButtonWithBaseHint
 (
     ElementName = 'StartingInformationButton'
     TextureToken = "icone_starting_information"
     HintTitleToken = "HSL_wrnt"
     HintBodyToken = "HSL_wrnb"
-    MagnifiableWidthHeightTexture = [32.0, 32.0]
 )
 
+UnusedButtonTextContainer is BUCKContainerDescriptor
+(
+    ElementName = "IdleUnitNumberTextButton"
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        AlignementToFather = [1.0, 0.0]
+        AlignementToAnchor = [0.5, 0.5]
+        MagnifiableWidthHeight = [24, 24]
+        MagnifiableOffset = [-2, 8]
+    )
+
+    Components =
+    [
+        PanelRoundedCorner
+        (
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                AlignementToFather = [0.0, 0.0]
+                AlignementToAnchor = [0.0, 0.0]
+                MagnifiableWidthHeight = [24, 24]
+                MagnifiableOffset = [0, 0]
+            )
+            BackgroundBlockColorToken = "SM_Feldgrau_NoToggle"
+            BorderLineColorToken = "SM_Grullo_NoToggle"
+            Radius = 12.0
+        ),
+        BUCKTextDescriptor
+        (
+            ElementName = "IdleUnitNumberText"
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                AlignementToFather =  [0.5, 0.5]
+                AlignementToAnchor  = [0.5, 0.5]
+            )
+
+            ParagraphStyle = TParagraphStyle
+            (
+                Alignment = UIText_Right
+                VerticalAlignment = UIText_VerticalCenter
+                InterLine = 0
+            )
+
+            TextStyle = "Default"
+
+            HorizontalFitStyle = ~/FitStyle/FitToContent
+            VerticalFitStyle = ~/FitStyle/FitToContent
+
+            TypefaceToken = "Eurostyle"
+            BigLineAction = ~/BigLineAction/ResizeFont
+
+            TextDico = ~/LocalisationConstantes/dico_interface_ingame
+            TextToken = "HPROD_CMDP"
+
+            TextColor = "CouleurTexture_boutonShortcutsStrategic_NoToggle"
+            TextSize = "12"
+        )
+    ]
+)
+
+UnusedUnitButton is ShortcutButtonWithStrategicHint
+(
+    ElementName = "NextIdleUnitButton"
+    UniqueName = 'StrategicHeader_BtnUnusedUnit'
+    SpotlightUniqueName = 'SpotLight_UnusedUnit'
+    TextureToken = "icone_idle_unit"
+    TextureColorToken = "CouleurTexture_boutonShortcutsStrategic_NoToggle"
+    HintTitleToken = "HNT_NEXTUT"
+    HintBodyToken = "HNT_NEXTUB"
+    BackgroundBlockColorToken = "SM_Feldgrau_NoToggle"
+    BorderLineColorToken = "SM_Grullo_NoToggle"
+    LeftClickSound = SoundEvent_SteelmanCampaignStatus
+    Mapping = $/KeyboardOption/Mapping_NextIdleUnit
+    Components = [~/UnusedButtonTextContainer]
+    IsTogglable = false
+)
+
+UnusedUnitContainer is BUCKContainerDescriptor
+(
+    ComponentFrame = TUIFramePropertyRTTI ( MagnifiableWidthHeight = [52.0, 32.0])
+    Components = [ ~/UnusedUnitButton, ]
+)
 //------------------------------------------------------------------------------
 // pour Steelman
 //------------------------------------------------------------------------------
-BoutonAffichageStrategicSituation is ShortcutButton
+BoutonAffichageStrategicSituation is ShortcutButtonWithStrategicHint
 (
-    MagnifiableWidthHeight = [32.0, 100 div 3]
-    RelativeWidthHeight = [0.0, 0.0]
     ElementName = 'BtnStrategicSituation'
     UniqueName = 'StrategicHeader_BtnStrategicSituation'
+    SpotlightUniqueName = 'SpotLight_SituationBtn'
     TextureToken = "UseStrategic_BoutonMission"
     HintTitleToken = "SSC_TITLE"
     HintBodyToken = "head_Osb"
     BackgroundBlockColorToken = "SM_Feldgrau"
     BorderLineColorToken = "SM_Grullo"
+    LeftClickSound = SoundEvent_SteelmanCampaignStatus
 )
 
-BoutonAffichageOrdreDeBataille is ShortcutButton
+BoutonAffichageOrdreDeBataille is ShortcutButtonWithStrategicHint
 (
-    MagnifiableWidthHeight = [32.0, 100 div 3]
-    RelativeWidthHeight = [0.0, 0.0]
     UniqueName = 'StrategicHeader_OrganisationBtn'
     ElementName = 'BtnOrganisation'
+    SpotlightUniqueName = 'SpotLight_OrganisationBtn'
     TextureToken = "UseStrategic_BoutonOrganisation"
     HintTitleToken = "SBO_TITL"
     HintBodyToken = "head_Obb"
     BackgroundBlockColorToken = "SM_Feldgrau"
     BorderLineColorToken = "SM_Grullo"
+    LeftClickSound = SoundEvent_SteelmanOrderOfBattle
 )
 
-BoutonAffichagePertes is ShortcutButton
+
+BoutonAffichagePertes is ShortcutButtonWithStrategicHint
 (
-    MagnifiableWidthHeight = [32.0, 100 div 3]
-    RelativeWidthHeight = [0.0, 0.0]
     UniqueName = 'StrategicHeader_BtnLossesState'
     ElementName = 'BtnLossesState'
+    SpotlightUniqueName = 'SpotLight_CasualtiesBtn'
     TextureToken = "UseStrategic_BoutonPertes"
     HintTitleToken = "SH_LOSS"
     HintBodyToken = "head_Lsb"
     BackgroundBlockColorToken = "SM_Feldgrau"
     BorderLineColorToken = "SM_Grullo"
+    LeftClickSound = SoundEvent_SteelmanCasualtiesList
 )
 
-BoutonAccelerationDuTemps is ShortcutButton
+BoutonAccelerationDuTemps is ShortcutButtonWithStrategicHint
 (
     ElementName = 'BtnGameSpeed'
-    MagnifiableWidthHeight = [32.0, 100 div 3]
-    RelativeWidthHeight = [0.0, 0.0]
     UniqueName = ''
+    SpotlightUniqueName = 'SpotLight_GameSpeedBtn'
     TextureToken = "vitesse03Strat"
     HintTitleToken = "sp_t"
     HintBodyToken = "sp_c"
     BackgroundBlockColorToken = "SM_Feldgrau"
     BorderLineColorToken = "SM_Grullo"
+    LeftClickSound = SoundEvent_SteelmanGameSpeed
 )
+
+BoutonChat is ShortcutButtonWithStrategicHint
+(
+    ElementName = 'ChatButton'
+    MagnifiableWidthHeightTexture = [52.0, 32.0]
+    UniqueName = ''
+    SpotlightUniqueName = 'SpotLight_GameChat'
+    TextureToken = "icone_chat"
+    HintTitleToken = "HSL_chatt"
+    HintBodyToken = "HSL_chatb"
+    BackgroundBlockColorToken = "SM_Feldgrau"
+    BorderLineColorToken = "SM_Grullo"
+    LeftClickSound = SoundEvent_SteelmanChat
+)
+
+//------------------------------------------------------------------------------
+// Spotlights Steelman
 //------------------------------------------------------------------------------
 
+SpotLight_SituationBtn is BUCKSpotlightDescriptor
+(
+    UniqueName = "SpotLight_SituationBtn"
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        RelativeWidthHeight = [1.0, 1.0]
+        AlignementToAnchor = [0.0, 0.0]
+        AlignementToFather = [0.0, 0.0]
+    )
+)
+
+SpotLight_OrganisationBtn is BUCKSpotlightDescriptor
+(
+    UniqueName = "SpotLight_OrganisationBtn"
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        RelativeWidthHeight = [1.0, 1.0]
+        AlignementToAnchor = [0.0, 0.0]
+        AlignementToFather = [0.0, 0.0]
+    )
+)
+
+SpotLight_CasualtiesBtn is BUCKSpotlightDescriptor
+(
+    UniqueName = "SpotLight_CasualtiesBtn"
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        RelativeWidthHeight = [1.0, 1.0]
+        AlignementToAnchor = [0.0, 0.0]
+        AlignementToFather = [0.0, 0.0]
+    )
+)
+
+SpotLight_GameSpeedBtn is BUCKSpotlightDescriptor
+(
+    UniqueName = "SpotLight_GameSpeedBtn"
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        RelativeWidthHeight = [1.0, 1.0]
+        AlignementToAnchor = [0.0, 0.0]
+        AlignementToFather = [0.0, 0.0]
+    )
+)
+
+//------------------------------------------------------------------------------
+// NOTE - bottom right corner 
 BUCKSpecificShortcutsForSelectionMainComponentDescriptor is PanelRoundedCorner
 (
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = [0.0, 50.0]
+        MagnifiableWidthHeight = [0.0, 40.0]
         MagnifiableOffset = [10.0, 5.0]
         AlignementToFather = [1.0, 0.0]
         AlignementToAnchor = [1.0, 0.0]
     )
 
-    RoundedVertexes = [true,true,false,false]
     FitStyle = ~/ContainerFitStyle/FitToContent
-    HasBackground = true
-    BackgroundBlockColorToken = 'Shortcuts_MOD'
-    HasBorder = false
+    // HasBackground = true
+    // BackgroundBlockColorToken = 'Transparent'
+    // HasBorder = false
     Components =
     [
         BUCKListDescriptor

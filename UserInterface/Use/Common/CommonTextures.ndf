@@ -36,15 +36,72 @@ CommonTexture_AdditionalTextureBank is TBUCKToolAdditionalTextureBank
         ("CommonTexture_MotherCountryFlag_JAP",  MAP [(~/ComponentState/Normal, ~/CommonTexture_MotherCountryFlag_JAP)]),
         ("CommonTexture_MotherCountryFlag_ANZ",  MAP [(~/ComponentState/Normal, ~/CommonTexture_MotherCountryFlag_ANZ)]),
         ("CommonTexture_MotherCountryFlag_HON",  MAP [(~/ComponentState/Normal, ~/CommonTexture_MotherCountryFlag_HON)]),
-        ("CommonTexture_MotherCountryFlag_AWP",  MAP [(~/ComponentState/Normal, ~/CommonTexture_MotherCountryFlag_POL)]),
         ("CommonTexture_MotherCountryFlag_FIN",  MAP [(~/ComponentState/Normal, ~/CommonTexture_MotherCountryFlag_FIN)]),
         ("CommonTexture_MotherCountryFlag_ROU",  MAP [(~/ComponentState/Normal, ~/CommonTexture_MotherCountryFlag_ROU)]),
-        ("CommonTexture_MotherCountryFlag_DDR",  MAP [(~/ComponentState/Normal, TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/Normal/RDA_FLAG.png"))]),
+        ("CommonTexture_MotherCountryFlag_DDR",  MAP [(~/ComponentState/Normal, TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/RDA_FLAG.png"))]),
+        ("CommonTexture_MotherCountryFlag_UK_RFA",  MAP [(~/ComponentState/Normal, TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/UK_RFA_FLAG.png"))]),
+
         ("CommonTexture_MotherCountryFlag_ESP",  MAP [(~/ComponentState/Normal, ~/CommonTexture_MotherCountryFlag_ESP)]),
+
+        // division
+        ("CommonTexture_division_US_1AD",  MAP [(~/ComponentState/Normal, TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Divisions/US_1AD.png"))]),
+        ("CommonTexture_division_US_2AD",  MAP [(~/ComponentState/Normal, TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Divisions/US_2AD.png"))]),
+        ("CommonTexture_division_US_3AD",  MAP [(~/ComponentState/Normal, TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Divisions/3rd_Armored_Division.png"))]),
+        ("CommonTexture_division_US_11ACR",  MAP [(~/ComponentState/Normal, TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Divisions/US_11ACR.png"))]),
+        ("CommonTexture_division_US_3ID",  MAP [(~/ComponentState/Normal, TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Divisions/US_3ID.png"))]),
+        ("CommonTexture_division_US_8ID",  MAP [(~/ComponentState/Normal, TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Divisions/US_8ID.png"))]),
+        ("CommonTexture_division_US_17AF",  MAP [(~/ComponentState/Normal, TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Divisions/US_17AF.png"))]),
+        ("CommonTexture_division_US_4ATAF",  MAP [(~/ComponentState/Normal, TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Divisions/US_4ATAF.png"))]),
+        ("CommonTexture_division_US_2ATAF",  MAP [(~/ComponentState/Normal, TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Divisions/US_2ATAF.png"))]),
+
+        ("CommonTexture_division_BEL_16mec",  MAP [(~/ComponentState/Normal, TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Divisions/BEL_16mec.png"))]),
+        ("CommonTexture_division_BEL_1_INFDIV",  MAP [(~/ComponentState/Normal, TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Divisions/BEL_1_Inf_Div.png"))]),
+        ("CommonTexture_division_BEL_1corps",  MAP [(~/ComponentState/Normal, TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Divisions/BEL_1_corps.png"))]),
+        ("CommonTexture_division_UK_3armoured",  MAP [(~/ComponentState/Normal, TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Divisions/UK_3armoured.png"))]),
+        ("CommonTexture_division_UK_1AD",  MAP [(~/ComponentState/Normal, TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Divisions/UK_1AD.png"))]),
+
+        ("CommonTexture_division_NL_1D",  MAP [(~/ComponentState/Normal, TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Divisions/NL_1D.png"))]),
+        ("CommonTexture_division_NL_4D",  MAP [(~/ComponentState/Normal, TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Divisions/NL_4D.png"))]),
+        ("CommonTexture_division_NL_KLu",  MAP [(~/ComponentState/Normal, TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Divisions/NL_KLu.png"))]),
+
+        ("CommonTexture_division_RFA_5PZ",  MAP [(~/ComponentState/Normal, TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Divisions/5_Panzerdivision_RFA.png"))]),
+        ("CommonTexture_division_RFA_2PZ",  MAP [(~/ComponentState/Normal, TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Divisions/2_Panzerdivision_RFA.png"))]),
+        ("CommonTexture_division_RFA_3PZ",  MAP [(~/ComponentState/Normal, TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Divisions/3_Panzerdivision_RFA.png"))]),
+        ("CommonTexture_division_RFA_12PZ",  MAP [(~/ComponentState/Normal, TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Divisions/12_Panzerdivision_RFA.png"))]),
+        ("CommonTexture_division_RFA_terrkdo",  MAP [(~/ComponentState/Normal, TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Divisions/RFA_TerrKdo_Sud.png"))]),
+        ("CommonTexture_division_RFA_26llb",  MAP [(~/ComponentState/Normal, TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Divisions/RFA_26llb.png"))]),
+        ("CommonTexture_division_RFA_2Luft",  MAP [(~/ComponentState/Normal, TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Divisions/RFA_2Luft.png"))]),
+
+        ("CommonTexture_division_DDR_4MSD",  MAP [(~/ComponentState/Normal, TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Divisions/DDR_4MSD.png"))]),
+        ("CommonTexture_division_DDR_11MSD",  MAP [(~/ComponentState/Normal, TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Divisions/DDR_11MSD.png"))]),
+        ("CommonTexture_division_DDR_17MSD",  MAP [(~/ComponentState/Normal, TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Divisions/DDR_17MSD.png"))]),
+        ("CommonTexture_division_DDR_9PZD",  MAP [(~/ComponentState/Normal, TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Divisions/DDR_9PZD.png"))]),
+        ("CommonTexture_division_DDR_8MSD",  MAP [(~/ComponentState/Normal, TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Divisions/DDR_8MSD.png"))]),
+        ("CommonTexture_division_DDR_19MSD",  MAP [(~/ComponentState/Normal, TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Divisions/DDR_19MSD.png"))]),
+        ("CommonTexture_division_DDR_7PZD",  MAP [(~/ComponentState/Normal, TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Divisions/DDR_7PZD.png"))]),
+        ("CommonTexture_division_DDR_Luft",  MAP [(~/ComponentState/Normal, TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Divisions/DDR_Luft.png"))]),
+
+        ("CommonTexture_division_SOV_57_GVMSD",  MAP [(~/ComponentState/Normal, TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Divisions/Blazon57th_gtd.png"))]),
+        ("CommonTexture_division_SOV_39_GVMSD",  MAP [(~/ComponentState/Normal, TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Divisions/SOV_39_GVMSD.png"))]),
+        ("CommonTexture_division_SOV_27_GVMSD",  MAP [(~/ComponentState/Normal, TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Divisions/SOV_27_GVMSD.png"))]),
+        ("CommonTexture_division_SOV_35_GvDShB",  MAP [(~/ComponentState/Normal, TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Divisions/SOV_35_GvDShB.png"))]),
+        ("CommonTexture_division_SOV_16_VA",  MAP [(~/ComponentState/Normal, TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Divisions/SOV_16_VA.png"))]),
+        ("CommonTexture_division_SOV_11_GVTD",  MAP [(~/ComponentState/Normal, TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Divisions/SOV_11_GVTD.png"))]),
+        ("CommonTexture_division_SOV_79_GVTD",  MAP [(~/ComponentState/Normal, TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Divisions/SOV_79_GVTD.png"))]),
+        ("CommonTexture_division_SOV_18_ZRB",  MAP [(~/ComponentState/Normal, TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Divisions/SOV_18_ZRB.png"))]),
+        ("CommonTexture_division_SOV_53_ZRB",  MAP [(~/ComponentState/Normal, TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Divisions/SOV_53_ZRB.png"))]),
+        ("CommonTexture_division_SOV_20_GVMD",  MAP [(~/ComponentState/Normal, TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Divisions/SOV_20_GVMD.png"))]),
+        ("CommonTexture_division_SOV_9_TD",  MAP [(~/ComponentState/Normal, TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Divisions/SOV_9_TD.png"))]),
+        ("CommonTexture_division_SOV_default",  MAP [(~/ComponentState/Normal, TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Divisions/SOV_default.png"))]),
+        ("CommonTexture_division_SOV_guard",  MAP [(~/ComponentState/Normal, TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/UseStrategic/Divisions/SOV_guard.png"))]),
+
+
         // fulda
-        ("CommonTexture_MotherCountryFlag_WP",  MAP [(~/ComponentState/Normal, ~/CommonTexture_MotherCountryFlag_WP)]),
-        ("CommonTexture_MotherCountryFlag_PACT",  MAP [(~/ComponentState/Normal, ~/CommonTexture_MotherCountryFlag_WP)]),
+        ("CommonTexture_MotherCountryFlag_PACT",  MAP [(~/ComponentState/Normal, ~/CommonTexture_MotherCountryFlag_PACT)]),
         ("CommonTexture_MotherCountryFlag_NATO",  MAP [(~/ComponentState/Normal, ~/CommonTexture_MotherCountryFlag_NATO)]),
+        ("CommonTexture_MotherCountryFlag_PACT_small",  MAP [(~/ComponentState/Normal, ~/CommonTexture_MotherCountryFlag_PACT_small)]),
+        ("CommonTexture_MotherCountryFlag_NATO_small",  MAP [(~/ComponentState/Normal, ~/CommonTexture_MotherCountryFlag_NATO_small)]),
+        ("CommonTexture_MotherCountryFlag_NoNation_small",  MAP [(~/ComponentState/Normal, ~/CommonTexture_MotherCountryFlag_NoNation_small)]),
 
         ("CommonTexture_PanelScore_Flag_Allies",    MAP [(~/ComponentState/Normal, ~/CommonTexture_PanelScore_Flag_Allies)]),
         ("CommonTexture_PanelScore_Flag_FIN",       MAP [(~/ComponentState/Normal, ~/CommonTexture_PanelScore_Flag_FIN)]),
@@ -86,36 +143,19 @@ CommonTexture_AdditionalTextureBank is TBUCKToolAdditionalTextureBank
                                                         (~/ComponentState/ToggleHighlighted, ~/CommonTexture_Label_background_enemy_select_hl)
                                                     ]),
 
-        ("CommonTexture_Etiquette_Background",      MAP [
-                                                        (~/ComponentState/Normal, ~/CommonTexture_Etiquette_Background),
-                                                        (~/ComponentState/Highlighted, ~/CommonTexture_Etiquette_Background),
-                                                        (~/ComponentState/Toggled, ~/CommonTexture_Etiquette_Background),
-                                                        (~/ComponentState/ToggleHighlighted, ~/CommonTexture_Etiquette_Background)
-                                                    ]),
-        ("CommonTexture_Etiquette_Background_Ace",  MAP [
-                                                        (~/ComponentState/Normal, ~/CommonTexture_Etiquette_Background_Ace),
-                                                        (~/ComponentState/Highlighted, ~/CommonTexture_Etiquette_Background_Ace),
-                                                        (~/ComponentState/Toggled, ~/CommonTexture_Etiquette_Background_Ace),
-                                                        (~/ComponentState/ToggleHighlighted, ~/CommonTexture_Etiquette_Background_Ace)
-                                                    ]),
-
         ("CommonTexture_SupressIcon",            MAP [(~/ComponentState/Normal, ~/CommonTexture_SupressIcon)]),
         ("CommonTexture_Etoile",                 MAP [(~/ComponentState/Normal, ~/CommonTexture_Etoile)]),
         ("CommonTexture_Etoile_Grande",          MAP [(~/ComponentState/Normal, ~/CommonTexture_Etoile_Grande)]),
         ("CommonTexture_Fond_AP",                MAP [(~/ComponentState/Normal, ~/CommonTexture_Fond_AP)]),
 
-        ("CommonTexture_Chevron_0",              MAP [
-                                                (~/ComponentState/Normal,   TUIResourceTexture_Common(FileName = 'GameData:/Assets/2D/Interface/Common/UnitsIcons/Experience/chevron0.png')),
-                                                ]),
-        ("CommonTexture_Chevron_1",              MAP [
-                                                (~/ComponentState/Normal,   TUIResourceTexture_Common(FileName = 'GameData:/Assets/2D/Interface/Common/UnitsIcons/Experience/chevron1.png')),
-                                                ]),
-        ("CommonTexture_Chevron_2",              MAP [
-                                                (~/ComponentState/Normal,   TUIResourceTexture_Common(FileName = 'GameData:/Assets/2D/Interface/Common/UnitsIcons/Experience/chevron2.png')),
-                                                ]),
-        ("CommonTexture_Chevron_3",              MAP [
-                                                (~/ComponentState/Normal,   TUIResourceTexture_Common(FileName = 'GameData:/Assets/2D/Interface/Common/UnitsIcons/Experience/chevron3.png')),
-                                                ]),
+        ("CommonTexture_Chevron_0",              MAP [(~/ComponentState/Normal,   TUIResourceTexture_Common(FileName = 'GameData:/Assets/2D/Interface/Common/UnitsIcons/Experience/chevron0.png')),]),
+        ("CommonTexture_Chevron_1",              MAP [(~/ComponentState/Normal,   TUIResourceTexture_Common(FileName = 'GameData:/Assets/2D/Interface/Common/UnitsIcons/Experience/chevron1.png')),]),
+        ("CommonTexture_Chevron_2",              MAP [(~/ComponentState/Normal,   TUIResourceTexture_Common(FileName = 'GameData:/Assets/2D/Interface/Common/UnitsIcons/Experience/chevron2.png')),]),
+        ("CommonTexture_Chevron_3",              MAP [(~/ComponentState/Normal,   TUIResourceTexture_Common(FileName = 'GameData:/Assets/2D/Interface/Common/UnitsIcons/Experience/chevron3.png')),]),
+
+        ("CommonTexture_Deck_Chevron_1",              MAP [(~/ComponentState/Normal,   TUIResourceTexture_Common(FileName = 'GameData:/Assets/2D/Interface/Common/UnitsIcons/Experience/Deck_chevron1.png')),]),
+        ("CommonTexture_Deck_Chevron_2",              MAP [(~/ComponentState/Normal,   TUIResourceTexture_Common(FileName = 'GameData:/Assets/2D/Interface/Common/UnitsIcons/Experience/Deck_chevron2.png')),]),
+        ("CommonTexture_Deck_Chevron_3",              MAP [(~/ComponentState/Normal,   TUIResourceTexture_Common(FileName = 'GameData:/Assets/2D/Interface/Common/UnitsIcons/Experience/Deck_chevron3.png')),]),
 
         ("CommonTexture_Camo",              MAP [
                                                 (~/ComponentState/Normal,   CommonTexture_Camo),
@@ -162,48 +202,57 @@ CommonTexture_AdditionalTextureBank is TBUCKToolAdditionalTextureBank
         ("trait_HEL",           MAP [ (~/ComponentState/Normal, TUIResourceTexture_Common( FileName='GameData:/Assets/2D/Interface/Common/traits/HEL.png' )), ] ),
         ("trait_SUP",           MAP [ (~/ComponentState/Normal, TUIResourceTexture_Common( FileName='GameData:/Assets/2D/Interface/Common/traits/SUP.png' )), ] ),
 
+        ("Steelman_terrain_plaine",           MAP [ (~/ComponentState/Normal, TUIResourceTexture_Common( FileName='GameData:/Assets/2D/Interface/UseStrategic/Icons/terrain_plaine.png' )), ] ),
+        ("Steelman_terrain_urbain",           MAP [ (~/ComponentState/Normal, TUIResourceTexture_Common( FileName='GameData:/Assets/2D/Interface/UseStrategic/Icons/terrain_urbain.png' )), ] ),
+        ("Steelman_terrain_foret",           MAP [ (~/ComponentState/Normal, TUIResourceTexture_Common( FileName='GameData:/Assets/2D/Interface/UseStrategic/Icons/TerrainForet.png' )), ] ),
+
+        ("no_transport_background",           MAP [ (~/ComponentState/Normal, TUIResourceTexture_Common( FileName='GameData:/Assets/2D/Interface/Common/UnitsIcons/no_transport.png' )), ] ),
+
+
     ]
 )
 
 // Flags
 
 // fulda
-CommonTexture_MotherCountryFlag_WP is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/Normal/WP_FLAG.png")
-CommonTexture_MotherCountryFlag_PACT is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/Normal/WP_FLAG.png")
-CommonTexture_MotherCountryFlag_NATO is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/Normal/NATO_FLAG.png")
+CommonTexture_MotherCountryFlag_PACT is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/WP_FLAG.png")
+CommonTexture_MotherCountryFlag_NATO is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/NATO_FLAG.png")
+CommonTexture_MotherCountryFlag_PACT_small is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/WP_FLAG_small.png")
+CommonTexture_MotherCountryFlag_NATO_small is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/NATO_FLAG_small.png")
+CommonTexture_MotherCountryFlag_NoNation_small is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/NO_NATION_FLAG_small.png")
 
-CommonTexture_MotherCountryFlag_TCH is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/Normal/CEZ_FLAG.png")
-CommonTexture_MotherCountryFlag_FR is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/Normal/FR_FLAG.png")
-CommonTexture_MotherCountryFlag_POL is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/Normal/POL_FLAG.png")
-CommonTexture_MotherCountryFlag_RFA is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/Normal/RFA_FLAG.png")
-CommonTexture_MotherCountryFlag_BEL is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/Normal/BEL_FLAG.png")
-CommonTexture_MotherCountryFlag_NL is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/Normal/NL_FLAG.png")
-CommonTexture_MotherCountryFlag_LUX is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/Normal/LUX_FLAG.png")
+CommonTexture_MotherCountryFlag_TCH is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/CEZ_FLAG.png")
+CommonTexture_MotherCountryFlag_FR is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/FR_FLAG.png")
+CommonTexture_MotherCountryFlag_POL is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/POL_FLAG.png")
+CommonTexture_MotherCountryFlag_RFA is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/RFA_FLAG.png")
+CommonTexture_MotherCountryFlag_BEL is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/BEL_FLAG.png")
+CommonTexture_MotherCountryFlag_NL is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/NL_FLAG.png")
+CommonTexture_MotherCountryFlag_LUX is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/LUX_FLAG.png")
 
-CommonTexture_MotherCountryFlag_UK is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/Normal/UK_FLAG.png")
-CommonTexture_MotherCountryFlag_SOV is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/Normal/SOV_FLAG.png")
-CommonTexture_MotherCountryFlag_tfs_SOV is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/Normal/SOV_FLAG_tfs.png")
-CommonTexture_MotherCountryFlag_US is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/Normal/US_FLAG.png")
-CommonTexture_MotherCountryFlag_CAN is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/Normal/CAN_FLAG.png")
-CommonTexture_MotherCountryFlag_DAN is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/Normal/DAN_FLAG.png")
-CommonTexture_MotherCountryFlag_SWE is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/Normal/SWE_FLAG.png")
-CommonTexture_MotherCountryFlag_NOR is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/Normal/NOR_FLAG.png")
-CommonTexture_MotherCountryFlag_FIN is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/Normal/FIN_FLAG.png")
-CommonTexture_MotherCountryFlag_ROU is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/Normal/ROU_FLAG.png")
+CommonTexture_MotherCountryFlag_UK is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/UK_FLAG.png")
+CommonTexture_MotherCountryFlag_SOV is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/SOV_FLAG.png")
+CommonTexture_MotherCountryFlag_tfs_SOV is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/SOV_FLAG_tfs.png")
+CommonTexture_MotherCountryFlag_US is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/US_FLAG.png")
+CommonTexture_MotherCountryFlag_CAN is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/CAN_FLAG.png")
+CommonTexture_MotherCountryFlag_DAN is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/DAN_FLAG.png")
+CommonTexture_MotherCountryFlag_SWE is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/SWE_FLAG.png")
+CommonTexture_MotherCountryFlag_NOR is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/NOR_FLAG.png")
+CommonTexture_MotherCountryFlag_FIN is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/FIN_FLAG.png")
+CommonTexture_MotherCountryFlag_ROU is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/ROU_FLAG.png")
 
-CommonTexture_MotherCountryFlag_NK is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/Normal/NK_FLAG.png")
-CommonTexture_MotherCountryFlag_ROK is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/Normal/ROK_FLAG.png")
-CommonTexture_MotherCountryFlag_CHI is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/Normal/CHI_FLAG.png")
-CommonTexture_MotherCountryFlag_JAP is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/Normal/JAP_FLAG.png")
-CommonTexture_MotherCountryFlag_ANZ is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/Normal/ANZ_FLAG.png")
-CommonTexture_MotherCountryFlag_HON is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/Normal/HON_FLAG.png")
-CommonTexture_MotherCountryFlag_GERW is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/Normal/RFA_FLAG.png")
-CommonTexture_MotherCountryFlag_ESP is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/Normal/ESP_FLAG.png")
-//CommonTexture_MotherCountryFlag_AWP is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/Normal/AWP_FLAG.png")
+CommonTexture_MotherCountryFlag_NK is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/NK_FLAG.png")
+CommonTexture_MotherCountryFlag_ROK is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/ROK_FLAG.png")
+CommonTexture_MotherCountryFlag_CHI is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/CHI_FLAG.png")
+CommonTexture_MotherCountryFlag_JAP is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/JAP_FLAG.png")
+CommonTexture_MotherCountryFlag_ANZ is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/ANZ_FLAG.png")
+CommonTexture_MotherCountryFlag_HON is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/HON_FLAG.png")
+CommonTexture_MotherCountryFlag_GERW is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/RFA_FLAG.png")
+CommonTexture_MotherCountryFlag_ESP is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/ESP_FLAG.png")
+//CommonTexture_MotherCountryFlag_AWP is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/AWP_FLAG.png")
 
-CommonTexture_PanelScore_Flag_Allies  is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/Normal/SOV_FLAG.png")
-CommonTexture_PanelScore_Flag_FIN  is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/Normal/FIN_FLAG.png")
-CommonTexture_PanelScore_Flag_ROU  is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/Normal/ROU_FLAG.png")
+CommonTexture_PanelScore_Flag_Allies  is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/SOV_FLAG.png")
+CommonTexture_PanelScore_Flag_FIN  is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/FIN_FLAG.png")
+CommonTexture_PanelScore_Flag_ROU  is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Flags/ROU_FLAG.png")
 
 // \Flags
 export CommonTexture_Spotlight_TopTileTexture is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Spotlight/ligne_top_1px.png")
@@ -215,14 +264,14 @@ export CommonTexture_Spotlight_CornerTexture_TopRight is TUIResourceTexture_Comm
 export CommonTexture_Spotlight_CornerTexture_BottomRight is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Spotlight/ligne_corner_bottom_right.png")
 export CommonTexture_Spotlight_CornerTexture_BottomLeft is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Spotlight/ligne_corner_bottom_left.png")
 
-export CommonTexture_Ombre_TopTileTexture is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Spotlight/ombre_top_1px.png")
-export CommonTexture_Ombre_BottomTileTexture is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Spotlight/ombre_bottom_1px.png")
-export CommonTexture_Ombre_LeftTileTexture is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Spotlight/ombre_left_1px.png")
-export CommonTexture_Ombre_RightTileTexture is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Spotlight/ombre_right_1px.png")
-export CommonTexture_Ombre_CornerTexture_TopLeft is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Spotlight/ombre_corner_top_left.png")
-export CommonTexture_Ombre_CornerTexture_TopRight is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Spotlight/ombre_corner_top_right.png")
-export CommonTexture_Ombre_CornerTexture_BottomRight is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Spotlight/ombre_corner_bottom_right.png")
-export CommonTexture_Ombre_CornerTexture_BottomLeft is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Spotlight/ombre_corner_bottom_left.png")
+export CommonTexture_Ombre_TopTileTexture is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Spotlight/ombre2/ombre_top_1px.png")
+export CommonTexture_Ombre_BottomTileTexture is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Spotlight/ombre2/ombre_bottom_1px.png")
+export CommonTexture_Ombre_LeftTileTexture is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Spotlight/ombre2/ombre_left_1px.png")
+export CommonTexture_Ombre_RightTileTexture is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Spotlight/ombre2/ombre_right_1px.png")
+export CommonTexture_Ombre_CornerTexture_TopLeft is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Spotlight/ombre2/ombre_corner_top_left.png")
+export CommonTexture_Ombre_CornerTexture_TopRight is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Spotlight/ombre2/ombre_corner_top_right.png")
+export CommonTexture_Ombre_CornerTexture_BottomRight is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Spotlight/ombre2/ombre_corner_bottom_right.png")
+export CommonTexture_Ombre_CornerTexture_BottomLeft is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Spotlight/ombre2/ombre_corner_bottom_left.png")
 
 export CommonTexture_Chanfrein_VerticalTileTexture is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Spotlight/chanfrein/ligne_verti_1px.png")
 export CommonTexture_Chanfrein_HorizontalTileTexture is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/Spotlight/chanfrein/ligne_horiz_1px.png")
@@ -265,14 +314,7 @@ CommonTexture_AvatarIATexture is TUIResourceTexture_Common(FileName = "GameData:
 // proxy pour quand on a pas accès a l'image via une API externe (steam, gog ...)
 unnamed TGamerPictureFallbacks
 (
-    DefaultTextureSources = MAP[
-        ("VirtualData/GamerPicture",
-         TResourceTexturePreloadTextureData( UsefulnessMask = CivMask/Common + TypeMask/Common FileName = "GameData:/Assets/2D/Interface/Common/Avatar/Default_Avatar.png" )),
-        ("VirtualData/SteamGamerPicture",
-         TResourceTexturePreloadTextureData( UsefulnessMask = CivMask/Common + TypeMask/Common FileName = "GameData:/Assets/2D/Interface/Common/Avatar/Default_Avatar.png" )),
-        ("VirtualData/GOGGamerPicture",
-         TResourceTexturePreloadTextureData( UsefulnessMask = CivMask/Common + TypeMask/Common FileName = "GameData:/Assets/2D/Interface/Common/Avatar/Default_Avatar.png" )),
-    ]
+    DefaultAvatarTexture = TResourceTexturePreloadTextureData( FileName = "GameData:/Assets/2D/Interface/Common/Avatar/Default_Avatar.png" )
 )
 
 //Debut avatar des IA referencés uniquement dans la config des serveurs dedies et pas dans le repro principal
@@ -309,9 +351,6 @@ CommonTexture_Label_Background_enemy_normal     is TUIResourceTexture_Common(Fil
 CommonTexture_Label_Background_enemy_select     is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/UnitsIcons/background_enemy_select.png")
 CommonTexture_Label_background_enemy_hl     is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/UnitsIcons/background_enemy_normal_hl.png")
 CommonTexture_Label_background_enemy_select_hl     is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/UnitsIcons/background_enemy_select_hl.png")
-
-CommonTexture_Etiquette_Background     is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/UnitsIcons/etiquette_grise.png")
-CommonTexture_Etiquette_Background_Ace is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/UnitsIcons/etiquette_gold.png")
 
 CommonTexture_Fond_Blindage   is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/UnitsIcons/blindage.png")
 CommonTexture_Fond_AP         is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/Common/UnitsIcons/cercle_AP.png")

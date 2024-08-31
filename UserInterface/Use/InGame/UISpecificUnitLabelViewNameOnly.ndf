@@ -1,70 +1,16 @@
 
-//----------------------------------------------------------------------
-
-private StandardLabelListNameOnly is BUCKListDescriptor
-(
-    Axis = ~/ListAxis/Vertical
-    BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
-
-    Elements =
-    [
-        BUCKListElementDescriptor
-        (
-            ComponentDescriptor = ~/UpperLabelNameOnly
-        ),
-        BUCKListElementDescriptor
-        (
-            ComponentDescriptor = BUCKContainerDescriptor
-            (
-                ComponentFrame = TUIFramePropertyRTTI
-                (
-                    MagnifiableWidthHeight = [40.0, 40.0]
-                    AlignementToAnchor = [0.5, 0.0]
-                    AlignementToFather = [0.5, 0.0]
-                )
-
-                IsClippable = false
-
-                Components =
-                [
-                    // Icône de couverture
-                    UnitLabelCoverIcon
-                    (
-                        IsForMultiSelection = false
-                        LocalRenderLayer = 4
-                    ),
-
-                    UnitLabelBackground
-                    (
-                        LocalRenderLayer = 2
-                    ),
-                ]
-            )
-        ),
-
-        BUCKListElementDescriptor(ComponentDescriptor = ~/UnitLabelUnitLeavingDistrictBUCKComponent),
-        BUCKListElementDescriptor(ComponentDescriptor = ~/UnitLabelUnitCriticalMessageBUCKComponent),
-    ]
-)
-
 //-------------------------------------------------------------------------------------
 
 private UnitLabelUnitBUCKComponentDescriptorNameOnly is BUCKLocalLayerContainerDescriptor
 (
     ElementName = "LocalLayerContainer"
-    ComponentFrame = TUIFramePropertyRTTI
-    (
-        MagnifiableOffset  = [0.0, 20.0]
-        AlignementToFather = [0.5, 1.0]
-        AlignementToAnchor = [0.5, 1.0]
-    )
 
-    FitStyle = ~/ContainerFitStyle/FitToContent
     NbLayersToLock = 6
 
     Components =
     [
-        ~/StandardLabelListNameOnly,
+        ~/UpperLabelNameOnly,
+        ~/UnitLabelBottomComponent,
     ]
 )
 
@@ -72,25 +18,22 @@ private UnitLabelUnitBUCKComponentDescriptorNameOnly is BUCKLocalLayerContainerD
 private UnitNameAndRightListNameOnly is BUCKContainerDescriptor
 (
     ElementName = "UnitNameAndRightListNameOnly"
-     ComponentFrame = TUIFramePropertyRTTI
-     (
+    ComponentFrame = TUIFramePropertyRTTI
+    (
         AlignementToFather = [0.5, 0.0]
         AlignementToAnchor = [0.5, 0.0]
-     )
+    )
 
     FitStyle = ~/ContainerFitStyle/FitToContent
     Components =
     [
-        UnitLabelUpperList
-        (
-            IsForMultiSelection = false
-            ChildFitToContent = true
-        ),
+        CurrentUnitLabelUpperList(ChildFitToContent = true),
         BUCKListDescriptor
         (
             ComponentFrame = TUIFramePropertyRTTI
             (
-                AlignementToFather = [1.0, 0.0]
+                AlignementToFather = [1.0, 0.5]
+                AlignementToAnchor = [0.0, 0.5]
                 MagnifiableWidthHeight = [0.0, 30.0]
             )
 
@@ -102,30 +45,33 @@ private UnitNameAndRightListNameOnly is BUCKContainerDescriptor
             [
                 BUCKListElementDescriptor
                 (
-                    ComponentDescriptor = ~/UnitLabelUnitSupplyGaugeBUCKComponent
+                    ComponentDescriptor = ~/UnitLabelUnitSupplyGauge
                 ),
                 BUCKListElementDescriptor
                 (
-                    ComponentDescriptor = ~/UnitLabelUnitSupplyExtraGaugeText
-                ),
-                BUCKListElementDescriptor
-                (
-                    ComponentDescriptor = ~/LabelFeedbackIcons
+                    ComponentDescriptor = LabelFeedbackIcons
+                    (
+                        ComponentFrame = TUIFramePropertyRTTI
+                        (
+                            AlignementToFather = [0.0, 0.5]
+                            AlignementToAnchor = [0.0, 0.5]
+                        )
+                    )
                 ),
             ]
         ),
     ]
 )
-
 //-------------------------------------------------------------------------------------
 private UpperLabelNameOnly is BUCKListDescriptor
 (
     ElementName = "UpperLabel"
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = [150.0, 0.0]
+        MagnifiableOffset  = [0.0, -20.0]
+        MagnifiableWidthHeight = [2000.0, 0.0]
         AlignementToFather = [0.5, 0.0]
-        AlignementToAnchor = [0.5, 0.0]
+        AlignementToAnchor = [0.5, 1.0]
     )
 
     Axis = ~/ListAxis/Vertical
@@ -139,29 +85,24 @@ private UpperLabelNameOnly is BUCKListDescriptor
         ),
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = UnitLabelUnitMoraleGaugeBUCKComponent
+            ComponentDescriptor = TMoraleGaugeDescriptor
             (
                 ElementName = "MoraleGauge"
+                Description = ~/MoraleAndHPGaugesDescription
                 LocalRenderLayer = 1
+                UniformDrawer = $/UserInterface/UIUniformDrawer
+                AlignementToFather = [0.5, 0.0]
+                AlignementToAnchor = [0.5, 0.0]
             )
         ),
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = UnitNameListSensibleArea
-            (
-                IsForCarriedUnit = true
-                LocalRenderLayer = 1
-            )
+            ComponentDescriptor = CarriedUnitNameList()
         ),
     ]
 )
-
-template UISpecificUnitLabelViewDescriptorNameOnly
-[
-    DebugViewName : string,
-]
-is UISpecificInGameUnitLabelViewDescriptor
+//-------------------------------------------------------------------------------------
+UISpecificUnitLabelViewDescriptorNameOnly is UISpecificInGameUnitLabelViewDescriptor
 (
     MainComponentDescriptor = ~/UnitLabelUnitBUCKComponentDescriptorNameOnly
-    DebugViewName = <DebugViewName>
 )

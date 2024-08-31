@@ -10,23 +10,24 @@ UIInGameResource is TUISpecificInGameResources
         ~/DefaultStyleGuide,
     ]
 
+    UnitReticleDescriptor = ~/UISpecificUnitLabelReticleDescriptor
+    LabelRackForAggregationDescriptor = ~/UISpecificInGameLabelRackForAggregation
+
     ViewDescriptors = MAP
     [
-        ("UISpecificIngameChatViewDescriptor", ~/UISpecificIngameChatViewDescriptor),
+        ("UISpecificIngameChatViewDescriptor", UISpecificIngameChatViewDescriptor(PanelColorStyle = "TacticPanel" ButtonColorStyle = "TacticButton_highlightable")),
         ("UISpecificInGameFlarePanelViewDescriptor", ~/UIInGameFlarePanelViewDescriptor),
         ("UISpecificIngameHUDTransportAndUnitsInfoViewDescriptor", ~/UISpecificInGameHUDTransportAndUnitsInfoViewDescriptor),
-        ("UISpecificUnitInfoPanelViewDescriptor", UISpecificUnitInfoPanelViewDescriptor( MainComponentFrame = TUIFramePropertyRTTI() )),
+        ("UISpecificUnitInfoPanelViewDescriptor", UISpecificUnitInfoPanelViewDescriptor()),
         ("SkirmishProductionMenu", UISpecificSkirmishProductionMenuViewDescriptor()),
         ("SkirmishFromStrategicProductionMenu", UISpecificSkirmishProductionMenuViewDescriptor(IsFromStrategic = true)),
-        ("MenuButtonDescriptor", ~/UISpecificMenuButtonViewDescriptor),
-        ("UIUnitLabelAggregateViewDescriptor", ~/UISpecificInGameUnitLabelAggregateViewDescriptor),
-        ("InGameUnitLabel", UISpecificUnitLabelViewDescriptor(DebugViewName = "InGameUnitLabelDebug")),
-        ("InGameUnitLabelDebug", ~/UISpecificUnitLabelDebugViewDescriptor),
-        ("InGameUnitLabelNameOnly", UISpecificUnitLabelViewDescriptorNameOnly(DebugViewName = "InGameUnitLabelNameOnlyDebug")),
-        ("InGameUnitLabelNameOnlyDebug", ~/UISpecificUnitLabelDebugViewDescriptorNameOnly),
-        ("InGameUnitLabelForMultiSelection", UISpecificUnitLabelViewDescriptor(IsForMultiSelection = true DebugViewName = "")),
+        ("InGameUnitLabel", ~/UISpecificUnitLabelViewDescriptor),
+        ("InGameUnitLabelNameOnly", ~/UISpecificUnitLabelViewDescriptorNameOnly),
+        ("InGameUnitLabelForMultiSelection", ~/UISpecificUnitLabelViewForMultiSelectionDescriptor),
         ("UISpecificUnitLabelAggregation", ~/UISpecificUnitLabelAggregationViewDescriptor),
         ("UISpecificUnitLabelAggregationNameOnly", ~/UISpecificUnitLabelAggregationViewNameOnlyDescriptor),
+        ("UISpecificUnitLabelSmartGroup", ~/UISpecificUnitLabelSmartGroupViewDescriptor),
+        ("UISpecificUnitLabelSmartGroupNameOnly", ~/UISpecificUnitLabelSmartGroupViewNameOnlyDescriptor),
         ("UISpecificTacticCubeActionViewDescriptor", ~/UISpecificTacticCubeActionViewDescriptor),
         ("UISpecificTacticEngagementRulesViewDescriptor", ~/UISpecificTacticEngagementRulesViewDescriptor),
         ("UISpecificOpticalFieldViewDescriptor", ~/UISpecificOpticalFieldViewDescriptor),
@@ -34,12 +35,13 @@ UIInGameResource is TUISpecificInGameResources
         ("UICommonHUDPingDisplayViewDescriptor", ~/UICommonHUDPingDisplayViewDescriptor),
         ("UISpecificOffMapViewDescriptor", ~/UISpecificOffMapViewDescriptor),
         ("UISpecificOffMapAirplaneViewDescriptor", ~/UISpecificOffMapAirplaneViewDescriptor),
-        ("UISpecificOffMapArtilleryViewDescriptor", ~/UISpecificOffMapArtilleryViewDescriptor),
         ("UISpecificHUDScoreViewDescriptor", ~/UISpecificHUDScoreViewDescriptor),
         ("UISpecificHUDScoreAllianceViewDescriptor", ~/UISpecificHUDScoreAllianceViewDescriptor),
         ("UISpecificHUDScorePlayerViewDescriptor", ~/UISpecificHUDScorePlayerViewDescriptor),
         ("UIDisplayStartingInformationViewDescriptor", ~/UISpecificDisplayStartingInformationViewDescriptor),
         ("UIAutoDeployViewDescriptor", ~/UISpecificAutoDeployViewDescriptor),
+        ("UILaunchBattleViewDescriptor", ~/UILaunchBattleViewDescriptor),
+        ("UIIdleUnitViewDescriptor", ~/UIIdleUnitViewDescriptor),
         ("UIReinforcementLabelViewDescriptor", ~/UISpecificReinforcementLabelViewDescriptor),
         ("UICommandZoneLabelViewDescriptor", ~/UISpecificCommandZoneLabelViewDescriptor),
         ("ObjectiveViewDescriptor", ~/UISpecificInGameObjectiveBriefViewDescriptor),
@@ -50,31 +52,30 @@ UIInGameResource is TUISpecificInGameResources
 
     MainContainerResource       = ~/InGameMainContainerResource
     ShortcutUserInputLayer      = $/M3D/Input/UserInputLayerHandler/InputLayer_InGameShortcuts
+    LDScriptUserInputLayer      =  $/M3D/Input/UserInputLayerHandler/InputLayer_LDScriptInterceptor
 
     CommonHUDResources          = ~/InGameHUDResource
     HUDResource                 = ~/InGameHUDResource
-    LabelResource               = ~/SpecificInGameLabelResource
-    LDHintResource              = ~/SpecificInGameLDHintResource
+    LabelResource               = ~/CommonLabelResource
     FlareLabelResources         = ~/CommonFlareLabelResources
     PlayerMissionLabelResources = ~/SpecificInGamePlayerMissionLabelResources
     GabaritResources            = ~/InGameGabaritResources
     UnitLabelResource           = ~/SpecificInGameUnitLabelResources
     OutmapFeedbackResource      = ~/UISpecificOutmapFeedbackResources
     FeedbackLineOfSightResource = ~/FeedbackLineOfSightResource
-    WarningPanelResources       = ~/WarningPanelResources
+    WarningPanelResources       = ~/WarningPanelInGameResources
     LabelsOnMapResources        = ~/InGameLabelsOnMapResources
-    ObjectivesResource          = ~/IngameObjectivesResources
+    ScriptedLabelResources      = ~/IngameScriptedLabelResources
     FeedbackManagerDescriptor   = ~/IngameFeedbackMessageManagerDescriptor
     GameRulesHelper             = ~/GameRulesHelper
     CorrectedShotRessources     = ~/InGameCorrectedShotFeedbackRessources
+    ReinforcementResource       = ~/ReinforcementResource
 
     SelectionHandlerInGameResources = ~/SelectionResources
     GroupSelectionReminderResources = ~/GroupSelectionReminder
     PositionEvents              = ~/MainPositionEvents
     MousePolicyManagerResources = ~/InGameMousePolicyManagerResources
     OptionManager               = $/GameOptionsInterface/GameOptionsInterfaceWrapper
-
-    DefenseResources            = ~/DefenseResources
 
     CommanderResources          = ~/CommanderResources
 
@@ -85,9 +86,10 @@ UIInGameResource is TUISpecificInGameResources
 
 //-------------------------------------------------------------------------------------
 
+IngameHUDRightFramesWidth is 320.0
+
 InGameMainContainerResource is TUICommonMainContainerResource
 (
-    RefMagnification = ~/RefMagnification
     ContentRefSize = [ 2134 , 1440 ]
     SafeBoxMin     = [  107 ,   80 ]
     SafeBoxSize    = ~/FullScreenSafeBoxSize
@@ -97,8 +99,7 @@ InGameMainContainerResource is TUICommonMainContainerResource
         ComponentFrame = TUIFramePropertyRTTI(RelativeWidthHeight = [1.0, 1.0])
 
         Components =
-        [   
-            // NOTE_MOD: AIR Container
+        [
             BUCKContainerDescriptor
             (
                 UniqueName = "SpecificOffMapViewMainContainer"
@@ -112,39 +113,57 @@ InGameMainContainerResource is TUICommonMainContainerResource
                 FitStyle = ~/ContainerFitStyle/FitToContent
             ),
 
+            // NOTE - Top Row
             BUCKContainerDescriptor
             (
                 UniqueName = "barre_du_haut"
                 ComponentFrame = TUIFramePropertyRTTI
                 (
                     RelativeWidthHeight = [1.0, 0.0]
-                    MagnifiableWidthHeight  = [0.0, 38.0]
-                    AlignementToAnchor = [0.5, 0.0]
-                    AlignementToFather = [0.5, 0.0]
+                    MagnifiableWidthHeight  = [0, 40.0]
+                    AlignementToAnchor = [0, 0.0]
+                    AlignementToFather = [0, 0.0]
+                    // MagnifiableOffset = [8,0]
                 )
 
                 HasBackground = false
-                BackgroundBlockColorToken = "H2_bleu_1"
-
-                Components =
-                [
-                    //~/PanelInfoPartie
-                ]
             ),
 
-            // NOTE_MOD: RIGHT SIDE CONTAINER (MAP+SCORE+TIME)
+            // ~/PanelInfoPartie,
+
             BUCKListDescriptor
             (
                 ComponentFrame = TUIFramePropertyRTTI
                 (
-                    MagnifiableOffset = [0.0 ,5.0]
-                    RelativeWidthHeight = [1.0, 0.0]
+                    MagnifiableOffset = [-8.0 ,0.0]
+
+                    MagnifiableWidthHeight = [IngameHUDRightFramesWidth, 0.0]
+                    AlignementToAnchor = [1.0, 0.0]
+                    AlignementToFather = [1.0, 0.0]
                 )
-                InterItemMargin = TRTTILength( Magnifiable = 5.0 )
+                InterItemMargin = TRTTILength( Magnifiable = 4.0 )
 
                 Axis = ~/ListAxis/Vertical
                 Elements =
                 [
+                    
+                    BUCKListElementDescriptor
+                    (
+                        ComponentDescriptor = BUCKContainerDescriptor
+                        (
+                            UniqueName = "PanelInfoPartie"
+                            ComponentFrame = TUIFramePropertyRTTI
+                            (
+                                RelativeWidthHeight = [1.0, 0.0]
+                            )
+
+                            FitStyle = ~/ContainerFitStyle/FitToContentVertically
+
+                            Components = [
+                                ~/PanelInfoPartie,
+                            ]
+                        )
+                    ),
                     BUCKListElementDescriptor
                     (
                         ComponentDescriptor = BUCKContainerDescriptor
@@ -159,115 +178,17 @@ InGameMainContainerResource is TUICommonMainContainerResource
                             FitStyle = ~/ContainerFitStyle/FitToContentVertically
                         )
                     ),
-
                     BUCKListElementDescriptor
                     (
-                        ComponentDescriptor = BUCKListDescriptor
+                        ComponentDescriptor = BUCKContainerDescriptor
                         (
+                            UniqueName = "UISpecificMiniMapInfoViewMainContainer"
                             ComponentFrame = TUIFramePropertyRTTI
                             (
-                                AlignementToFather = [1.0, 0.0]
-                                AlignementToAnchor = [1.0, 0.0]
+                                RelativeWidthHeight = [1.0, 0.0]
                             )
 
-                            Axis = ~/ListAxis/Vertical
-                            BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
-
-                            InterItemMargin = TRTTILength(Pixel = 0)
-
-                            Elements =
-                            [
-
-                                BUCKListElementDescriptor
-                                (
-                                    ComponentDescriptor = BUCKListDescriptor
-                                    (
-                                        ComponentFrame = TUIFramePropertyRTTI
-                                        (
-                                            MagnifiableOffset = [-10 , 0]
-                                            MagnifiableWidthHeight = [0.0, 32.0]
-                                            AlignementToFather = [1.0, 0.0]
-                                            AlignementToAnchor = [1.0, 0.0]
-                                        )
-                                    
-                                        Axis = ~/ListAxis/Horizontal
-                                    
-                                        Elements =
-                                        [
-                                            BUCKListElementDescriptor
-                                            (
-                                                ComponentDescriptor = ~/NombreSecteur
-                                            ),
-                                        ]
-
-                                        HasBackground = true
-                                        HasBorder = true
-                                        BackgroundBlockColorToken = 'MapContainer_MOD'
-                                        BorderLineColorToken = 'MapContainerBorder_MOD'
-                                        BorderThicknessToken = '1'
-                                    
-                                    )
-                                ),
-                                //MAP and events
-                                BUCKListElementDescriptor
-                                (
-                                    ComponentDescriptor = BUCKListDescriptor
-                                    (
-                                        ComponentFrame = TUIFramePropertyRTTI
-                                        (
-                                            AlignementToFather = [1.0, 0.0]
-                                            AlignementToAnchor = [1.0, 0.0]
-                                        )
-
-                                        Axis = ~/ListAxis/Horizontal
-                                        BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
-
-                                        InterItemMargin = TRTTILength(Pixel = 80)
-
-                                        Elements =
-                                        [
-                                            BUCKListElementDescriptor
-                                            (
-                                                ComponentDescriptor = BUCKContainerDescriptor
-                                                (
-                                                    UniqueName = "UISpecificHUDAlertPanelMainContainer"
-                                                    ComponentFrame = TUIFramePropertyRTTI()
-
-                                                    FitStyle = ~/ContainerFitStyle/FitToContent
-                                                )
-                                            ),
-                                            BUCKListElementDescriptor
-                                            (
-                                                ComponentDescriptor = BUCKContainerDescriptor
-                                                (
-                                                    UniqueName = "UISpecificMiniMapInfoViewMainContainer"
-                                                    ComponentFrame = TUIFramePropertyRTTI()
-                                                        
-                                                    FitStyle = ~/ContainerFitStyle/FitToContent
-                                                )
-                                            ),
-                                        ]
-                                    )
-                                ),
-
-
-                                // NOTE_MOD: Time Container
-                                BUCKListElementDescriptor
-                                (   
-                                    ComponentDescriptor = BUCKContainerDescriptor
-                                    (
-                                        UniqueName = "SpecificInGameHUDTimePanelViewMainContainer"
-                                        ComponentFrame = TUIFramePropertyRTTI
-                                        (
-                                            AlignementToAnchor = [1.0, 0.0]
-                                            AlignementToFather = [1.0, 0.0]
-                                        )
-
-
-                                        FitStyle = ~/ContainerFitStyle/FitToContent
-                                    )
-                                ),
-                            ]
+                            FitStyle = ~/ContainerFitStyle/FitToContentVertically
                         )
                     ),
                     BUCKListElementDescriptor
@@ -277,13 +198,53 @@ InGameMainContainerResource is TUICommonMainContainerResource
                             UniqueName = "UICommonFlarePanelViewMainContainer"
                             ComponentFrame = TUIFramePropertyRTTI
                             (
-                                AlignementToFather = [1.0, 0.0]
-                                AlignementToAnchor = [1.0, 0.0]
+                                RelativeWidthHeight = [1.0, 0.0]
                             )
 
-                            FitStyle = ~/ContainerFitStyle/FitToContent
+                            FitStyle = ~/ContainerFitStyle/FitToContentVertically
                         )
                     ),
+                    BUCKListElementDescriptor
+                    (
+                        ComponentDescriptor = BUCKContainerDescriptor
+                        (
+                            UniqueName = "SpecificInGameHUDTimePanelViewMainContainer"
+                            ComponentFrame = TUIFramePropertyRTTI
+                            (
+                                RelativeWidthHeight = [1.0, 0.0]
+                            )
+
+                            FitStyle = ~/ContainerFitStyle/FitToContentVertically
+                        )
+
+                    ),
+                
+                ]
+                
+                BackgroundComponents =
+                [
+                    PanelRoundedCorner(
+                        BackgroundBlockColorToken = "MOD_BoutonTemps2"
+                        BorderLineColorToken = "MOD_White"
+                    )
+                ]
+            ),
+
+            BUCKListDescriptor
+            (
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    MagnifiableOffset = [-8.0 ,480.0]
+
+                    MagnifiableWidthHeight = [IngameHUDRightFramesWidth, 0.0]
+                    AlignementToAnchor = [1.0, 0.0]
+                    AlignementToFather = [1.0, 0.0]
+                )
+                InterItemMargin = TRTTILength( Magnifiable = 4.0 )
+
+                Axis = ~/ListAxis/Vertical
+                Elements =
+                [
                     BUCKListElementDescriptor
                     (
                         ComponentDescriptor = BUCKContainerDescriptor
@@ -291,28 +252,27 @@ InGameMainContainerResource is TUICommonMainContainerResource
                             UniqueName = "SpecificInGameHUDScoreViewMainContainer"
                             ComponentFrame = TUIFramePropertyRTTI
                             (
-                                AlignementToAnchor = [1.0, 0.0]
-                                AlignementToFather = [1.0, 0.0]
+                                RelativeWidthHeight = [1.0, 0.0]
                             )
 
-                            FitStyle = ~/ContainerFitStyle/FitToContent
+                            FitStyle = ~/ContainerFitStyle/FitToContentVertically
                         )
                     ),
                 ]
             ),
-
+            
             BUCKContainerDescriptor
             (
-                UniqueName = "SpecificAutoDeployMainComponentDescriptor"
+                UniqueName = "SpecificLaunchBattleMainComponentDescriptor"
                 ComponentFrame = TUIFramePropertyRTTI
                 (
                     AlignementToFather = [0.5, 0.0]
                     AlignementToAnchor = [0.5, 0.0]
+
+                    MagnifiableOffset = [0.0, 78.0]
+                    MagnifiableWidthHeight = [DeploymentPhasePanelWidth, DeploymentPhasePanelHeight]
                 )
-
-                FitStyle = ~/ContainerFitStyle/FitToContent
             ),
-
             BUCKContainerDescriptor
             (
                 UniqueName = "SpecificDisplayStartingInformationMainComponentDescriptor"
@@ -336,12 +296,11 @@ InGameMainContainerResource is TUICommonMainContainerResource
 
                 Axis = ~/ListAxis/Vertical
 
-                FirstMargin = TRTTILength(Magnifiable = 5.0)
-                InterItemMargin = TRTTILength(Magnifiable = 5.0)
+                FirstMargin = TRTTILength(Magnifiable = 4.0)
+                InterItemMargin = TRTTILength(Magnifiable = 4.0)
 
                 Elements =
                 [
-
                     BUCKListElementDescriptor
                     (
                         ComponentDescriptor = BUCKContainerDescriptor
@@ -385,6 +344,7 @@ InGameMainContainerResource is TUICommonMainContainerResource
                 BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
 
                 LastMargin = TRTTILength(Magnifiable = 5.0)
+                InterItemMargin = TRTTILength(Magnifiable = 2.0)
 
                 Elements =
                 [

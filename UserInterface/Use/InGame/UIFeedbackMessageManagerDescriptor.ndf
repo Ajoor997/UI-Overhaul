@@ -18,7 +18,7 @@
 //     BaseFilterColorForMinimap = RGBA[255,0,0,255]
 //
 
-FeedbackParagraphStyle is TParagraphStyleRTTI
+FeedbackParagraphStyle is TParagraphStyle
 (
     Alignment         = UIText_Center
     VerticalAlignment = UIText_FirstBaseLine
@@ -190,7 +190,7 @@ OnLoadUnitOrder is TUIFeedbackDispatchedMessageDescriptor
 
 OnAssaultOrder is TUIFeedbackDispatchedMessageDescriptor
 (
-    UnitAcknow = TAcknowUnitAction_Assault
+    UnitAcknow = TAcknowUnitAction_Attack
     TimeBeforeRepeat = 10
     IsActiveForPlayer = true
 )
@@ -845,7 +845,7 @@ IngameFeedbackMessageManagerDescriptor is TUISpecificInGameFeedbackMessageManage
         ( FeedbackMessage_OnLoadUnitOrder, ~/OnLoadUnitOrder ),
         ( FeedbackMessage_OnAirplaneOutOfFuel, ~/OnAirplaneOutOfFuel ),
         ( FeedbackMessage_OnAirplaneOutOfAmmo, ~/OnAirplaneOutOfAmmo ),
-        ( FeedbackMessage_OnAssaultOrder, ~/OnAssaultOrder ),
+        ( FeedbackMessage_OnAssaultDistrictOrder, ~/OnAssaultOrder ),
         ( FeedbackMessage_OnStopOrder, ~/OnStopOrder ),
         ( FeedbackMessage_OnCapturedEnemyUnit, ~/OnCapturedEnemyUnit ),
         ( FeedbackMessage_OnUnitCapturedByEnemy, ~/OnUnitCapturedByEnemy ),
@@ -901,5 +901,4 @@ IngameFeedbackMessageManagerDescriptor is TUISpecificInGameFeedbackMessageManage
     ]
 
     Minimap_TimeBetweenPings = 1
-    BitchingBetty_TimeBetweenBitching = 2
 )

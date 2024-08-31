@@ -34,7 +34,7 @@ is BUCKListDescriptor
                     AlignementToAnchor = [0.0, 0.5]
                 )
 
-                ParagraphStyle = TParagraphStyleRTTI
+                ParagraphStyle = TParagraphStyle
                 (
                     VerticalAlignment = ~/UIText_VerticalCenter
                     Alignment = UIText_Right
@@ -121,7 +121,7 @@ template BUCKSpecificOutGameCreateAccountMainComponentDescriptor[
                             MagnifiableWidthHeight = [0.0, 15.0]
                         )
 
-                        ParagraphStyle = TParagraphStyleRTTI
+                        ParagraphStyle = TParagraphStyle
                         (
                             VerticalAlignment = ~/UIText_VerticalCenter
                             Alignment = UIText_Center
@@ -267,7 +267,7 @@ template BUCKSpecificOutGameCreateAccountMainComponentDescriptor[
                                             ElementName = "ToSCheckbox"
                                             ComponentFrame = TUIFramePropertyRTTI
                                             (
-                                                MagnifiableWidthHeight = [15,15]
+                                                MagnifiableWidthHeight = [15.0, 15.0]
                                                 AlignementToFather = [0.0, 0.5]
                                                 AlignementToAnchor = [0.0, 0.5]
                                             )
@@ -281,17 +281,16 @@ template BUCKSpecificOutGameCreateAccountMainComponentDescriptor[
                                             ComponentFrame = TUIFramePropertyRTTI
                                             (
                                                 RelativeWidthHeight = [1.0, 0.0]
+                                                MagnifiableWidthHeight = [0.0, 35.0]
                                                 AlignementToFather = [0.0, 0.5]
                                                 AlignementToAnchor = [0.0, 0.5]
                                             )
 
-                                            ParagraphStyle = TParagraphStyleRTTI
+                                            ParagraphStyle = TParagraphStyle
                                             (
                                                 VerticalAlignment = ~/UIText_VerticalCenter
                                                 Alignment = UIText_Left
                                             )
-
-                                            VerticalFitStyle = ~/FitStyle/FitToContent
 
                                             BigLineAction = ~/BigLineAction/MultiLine
 
@@ -376,7 +375,7 @@ template BUCKSpecificOutGameCreateAccountMainComponentDescriptor[
                                                 AlignementToAnchor = [0.0, 0.5]
                                             )
 
-                                            ParagraphStyle = TParagraphStyleRTTI
+                                            ParagraphStyle = TParagraphStyle
                                             (
                                                 VerticalAlignment = ~/UIText_VerticalCenter
                                                 Alignment = UIText_Left
@@ -413,7 +412,7 @@ template BUCKSpecificOutGameCreateAccountMainComponentDescriptor[
                             RelativeWidthHeight = [1.0, 0.0]
                         )
 
-                        ParagraphStyle = TParagraphStyleRTTI
+                        ParagraphStyle = TParagraphStyle
                         (
                             VerticalAlignment = ~/UIText_VerticalCenter
                             Alignment = UIText_Center
@@ -616,7 +615,7 @@ private affichageTermofUseEtPrivacy is BUCKListDescriptor
                             AlignementToAnchor = [0.0, 0.5]
                         )
 
-                        ParagraphStyle = TParagraphStyleRTTI
+                        ParagraphStyle = TParagraphStyle
                         (
                             VerticalAlignment = ~/UIText_VerticalCenter
                             Alignment = UIText_Left
@@ -661,7 +660,7 @@ private affichageTermofUseEtPrivacy is BUCKListDescriptor
                             AlignementToAnchor = [0.0, 0.5]
                         )
 
-                        ParagraphStyle = TParagraphStyleRTTI
+                        ParagraphStyle = TParagraphStyle
                         (
                             VerticalAlignment = ~/UIText_VerticalCenter
                             Alignment = UIText_Left

@@ -30,7 +30,7 @@ BUCKSpecificOutGameLobbyPlayerListMainComponentDescriptor is BUCKListDescriptor
             (
                 ComponentFrame = TUIFramePropertyRTTI
                 (
-                    MagnifiableWidthHeight = [383.0, 570.0]
+                    MagnifiableWidthHeight = [383.0, 604.0]
                 )
 
                 ExternalScrollbar = true
@@ -50,7 +50,7 @@ BUCKSpecificOutGameLobbyPlayerListMainComponentDescriptor is BUCKListDescriptor
                 [
                     BUCKRackDescriptor
                     (
-                        ElementName = 'Rack'
+                        ElementName = "Rack"
 
                         ComponentFrame = TUIFramePropertyRTTI
                         (
@@ -89,8 +89,8 @@ private SideInformation is BUCKContainerDescriptor
             )
             Axis = ~/ListAxis/Vertical
 
-            FirstMargin = TRTTILength(Magnifiable = 27.0)
-            InterItemMargin = TRTTILength(Magnifiable = 6.0)
+            FirstMargin = TRTTILength(Magnifiable = 47.0)
+            InterItemMargin = TRTTILength(Magnifiable = 10.0)
             LastMargin = TRTTILength(Magnifiable = 21.0)
 
             Elements =
@@ -99,7 +99,7 @@ private SideInformation is BUCKContainerDescriptor
                 (
                     ComponentDescriptor = BUCKTextDescriptor
                     (
-                        ElementName = 'NameAlliance'
+                        ElementName = "NameAlliance"
                         ComponentFrame = TUIFramePropertyRTTI
                         (
                             RelativeWidthHeight = [1.0, 0.0]
@@ -126,7 +126,7 @@ private SideInformation is BUCKContainerDescriptor
                 (
                     ComponentDescriptor = BUCKTextDescriptor
                     (
-                        ElementName = 'PlayerRatio'
+                        ElementName = "PlayerRatio"
                         ComponentFrame = TUIFramePropertyRTTI
                         (
                             RelativeWidthHeight = [1.0, 0.0]

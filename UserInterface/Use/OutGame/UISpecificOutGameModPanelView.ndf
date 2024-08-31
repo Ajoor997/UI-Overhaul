@@ -107,7 +107,7 @@ ModPanelMultiListTitle is BUCKListDescriptor
                         (
                             RelativeWidthHeight = [1.0, 1.0]
                         )
-                        ParagraphStyle = TParagraphStyleRTTI
+                        ParagraphStyle = TParagraphStyle
                         (
                             Alignment = ~/UIText_Center
                             VerticalAlignment = ~/UIText_VerticalCenter
@@ -149,7 +149,7 @@ ModPanelMultiListTitle is BUCKListDescriptor
                             AlignementToFather = [0.5, 0.0]
                             AlignementToAnchor = [0.5, 0.0]
                         )
-                        ParagraphStyle = TParagraphStyleRTTI
+                        ParagraphStyle = TParagraphStyle
                         (
                             Alignment = ~/UIText_Center
                             VerticalAlignment = ~/UIText_VerticalCenter
@@ -190,7 +190,7 @@ ModPanelMultiListTitle is BUCKListDescriptor
                             AlignementToFather = [0.5, 0.0]
                             AlignementToAnchor = [0.5, 0.0]
                         )
-                        ParagraphStyle = TParagraphStyleRTTI
+                        ParagraphStyle = TParagraphStyle
                         (
                             Alignment = ~/UIText_Center
                             VerticalAlignment = ~/UIText_VerticalCenter
@@ -230,7 +230,7 @@ ModPanelMultiListTitle is BUCKListDescriptor
                             AlignementToFather = [0.5, 0.0]
                             AlignementToAnchor = [0.5, 0.0]
                         )
-                        ParagraphStyle = TParagraphStyleRTTI
+                        ParagraphStyle = TParagraphStyle
                         (
                             Alignment = ~/UIText_Center
                             VerticalAlignment = ~/UIText_VerticalCenter
@@ -270,7 +270,7 @@ ModPanelMultiListTitle is BUCKListDescriptor
                             AlignementToFather = [0.5, 0.0]
                             AlignementToAnchor = [0.5, 0.0]
                         )
-                        ParagraphStyle = TParagraphStyleRTTI
+                        ParagraphStyle = TParagraphStyle
                         (
                             Alignment = ~/UIText_Center
                             VerticalAlignment = ~/UIText_VerticalCenter
@@ -308,7 +308,7 @@ ModPanelMultiListTitle is BUCKListDescriptor
                             AlignementToFather = [0.5, 0.0]
                             AlignementToAnchor = [0.5, 0.0]
                         )
-                        ParagraphStyle = TParagraphStyleRTTI
+                        ParagraphStyle = TParagraphStyle
                         (
                             Alignment = ~/UIText_Center
                             VerticalAlignment = ~/UIText_VerticalCenter
@@ -361,7 +361,7 @@ ModPanelMultiListLine is BUCKListDescriptor
                             AlignementToFather = [0.5, 0.0]
                             AlignementToAnchor = [0.5, 0.0]
                         )
-                        ParagraphStyle = TParagraphStyleRTTI
+                        ParagraphStyle = TParagraphStyle
                         (
                             Alignment = ~/UIText_Left
                             VerticalAlignment = ~/UIText_VerticalCenter
@@ -550,7 +550,7 @@ ModPanelMultiListLine is BUCKListDescriptor
                             AlignementToFather = [0.5, 0.0]
                             AlignementToAnchor = [0.5, 0.0]
                         )
-                        ParagraphStyle = TParagraphStyleRTTI
+                        ParagraphStyle = TParagraphStyle
                         (
                             Alignment = ~/UIText_Center
                             VerticalAlignment = ~/UIText_VerticalCenter
@@ -693,7 +693,7 @@ BUCKSpecificOutGameModPanelMainComponentDescriptor is WindowFrame
                 AlignementToAnchor = [0, 0.5]
             )
 
-            ParagraphStyle = TParagraphStyleRTTI
+            ParagraphStyle = TParagraphStyle
             (
                 Alignment = UIText_Center
                 VerticalAlignment = UIText_VerticalCenter
@@ -780,7 +780,7 @@ BUCKSpecificOutGameModPanelMainComponentDescriptor is WindowFrame
                             AlignementToFather = [0.0, 0.0]
                             AlignementToAnchor = [0.0, 0.0]
                         )
-                        ParagraphStyle = TParagraphStyleRTTI
+                        ParagraphStyle = TParagraphStyle
                         (
                             Alignment = ~/UIText_Center
                             VerticalAlignment = ~/UIText_VerticalCenter

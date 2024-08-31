@@ -13,38 +13,29 @@ template BUCKSpecificDropdownDescriptor
     BackgroundBlockColorToken : string = "Transparent",
 
     HasBorder : bool = true,
-    BordersToDraw : int = ~/TBorderSide/Default,
     BorderThicknessToken : string = "1",
     BorderLineColorToken : string = "menu_solo_liste_mission",
-    BorderColorTokenBySide : LIST<PAIR<int, string>> = [],
 
     HidePointerEvents : bool = false,
     PointerEventsToAllow : int = ~/EAllowablePointerEventType/None,
 
-    ComponentStateLocked : bool = true,
     IsForModale : bool = false,
 
-    FocusMapping : TEugBMutablePBaseClass = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ENTER ) ),
     ItemFocusable : bool = true,
-
-    MainTextElementName : string = "",
-    ItemTextElementName : string = "",
 
     FloatingListMagnifiableWidth : float = 250.0,
     FloatingListMagnifiableHeight : float = 200.0,
     FloatingListRelativeWidth : float = 0,
     FloatingListRelativeHeight: float = 0,
 
-    ItemDescriptor : TBUCKButtonDescriptor = nil,
     ItemComponentFrame : TUIFramePropertyRTTI = TUIFramePropertyRTTI(RelativeWidthHeight = [1.0, 1.0]),
     ItemComponentBackgroundColor : string = "Blanc",
-    ItemValues : LIST<PAIR<int, string>> = [],
-    ItemsDico : string = "",
     ItemsTextSizeToken : string = "14",
     ItemsTextColorToken : string = "ButtonHUD/Text2",
     ItemComponents : LIST<TBUCKContainerDescriptor> = [],
     ItemsTextTypefaceToken : string = "UIMainFont",
     ItemsTextPadding : TRTTILength4 = TRTTILength4(Magnifiable = [20.0, 5.0, 0.0, 5.0]),
+    ItemMagnifiableHeight : float = 30.0,
 
     Components : LIST<TBUCKContainerDescriptor> = [],
 
@@ -108,6 +99,7 @@ is BUCKDropdownDescriptor
     FloatingListElementName = BaseElementName + "DropDownInnerList"
     MainTextElementName = BaseElementName + "DropDownMainText"
     ItemTextElementName = BaseElementName + "DropDownItemText"
+    ItemTextHintableAreaName = BaseElementName + "HintableArea"
 
     HorizontalAlignmentRef is <AlignFloatingPanelRight> ? 1.0 : 0.0
 
@@ -145,7 +137,7 @@ is BUCKDropdownDescriptor
     (
         ComponentFrame = TUIFramePropertyRTTI
         (
-            MagnifiableWidthHeight = [0.0, 30]
+            MagnifiableWidthHeight = [0.0, <ItemMagnifiableHeight>]
             RelativeWidthHeight = [1.0, 0.0]
         )
 
@@ -170,7 +162,7 @@ is BUCKDropdownDescriptor
 
                 ComponentFrame = <ItemComponentFrame>
 
-                ParagraphStyle = TParagraphStyleRTTI
+                ParagraphStyle = TParagraphStyle
                 (
                     Alignment = <ItemTextHorizontalAlignment>
                     VerticalAlignment = UIText_VerticalCenter
@@ -183,6 +175,10 @@ is BUCKDropdownDescriptor
                 TextColor = <ItemsTextColorToken>
                 TextSize = <ItemsTextSizeToken>
             ),
+            BUCKSpecificHintableArea
+            (
+                ElementName = BaseElementName + "HintableArea"
+            )
         ] + <ItemComponents>
     )
 
@@ -194,7 +190,7 @@ is BUCKDropdownDescriptor
 
             ComponentFrame = <MainTextComponentFrame>
 
-            ParagraphStyle = TParagraphStyleRTTI
+            ParagraphStyle = TParagraphStyle
             (
                 Alignment = <MainTextHorizontalAlignment>
                 VerticalAlignment = UIText_VerticalCenter
@@ -244,7 +240,6 @@ is BUCKDropdownDescriptor
 template TScrollingDescriptor
 [
     ScrollingElementName : string = "",
-    HasScrollbars : bool = true,
     ComponentFrame : TUIFramePropertyRTTI,
     Component,
     BorderLineColorToken : string = '',
@@ -303,7 +298,6 @@ template DropdownFulda
     BordersToDraw : int = ~/TBorderSide/Default,
     BorderThicknessToken : string = "",
     BorderLineColorToken : string = "",
-    BorderColorTokenBySide : LIST<PAIR<int, string>> = [],
 
     HidePointerEvents : bool = false,
     PointerEventsToAllow : int = ~/EAllowablePointerEventType/None,
@@ -408,7 +402,7 @@ is BUCKDropdownDescriptor
         BorderThicknessToken = "1"
 
         HasBackground = true
-        BackgroundBlockColorToken = "Gray"
+        BackgroundBlockColorToken = "Fulda2_Orange100"
 
         Components =
         [
@@ -418,7 +412,7 @@ is BUCKDropdownDescriptor
 
                 ComponentFrame = <ItemComponentFrame>
 
-                ParagraphStyle = TParagraphStyleRTTI
+                ParagraphStyle = TParagraphStyle
                 (
                     Alignment = <ItemTextHorizontalAlignment>
                     VerticalAlignment = UIText_VerticalCenter
@@ -447,7 +441,7 @@ is BUCKDropdownDescriptor
                 MagnifiableOffset = [7.0, 0.0]
             )
 
-            ParagraphStyle = TParagraphStyleRTTI
+            ParagraphStyle = TParagraphStyle
             (
                 Alignment = <MainTextHorizontalAlignment>
                 VerticalAlignment = UIText_VerticalCenter
@@ -472,7 +466,7 @@ is BUCKDropdownDescriptor
 
             TextureToken = "StyleCockpitTexture_DropDownArrow"
             TextureFrame = TUIFramePropertyRTTI( RelativeWidthHeight = [1.0, 1.0] )
-            TextureColorToken = "White_MOD"
+            TextureColorToken = "Fulda2_Orange30"
         )
     ] + <Components>
 )

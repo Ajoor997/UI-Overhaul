@@ -1,153 +1,43 @@
-
-DamageTypeComponentConfigurations is
+template DamageComponentConfiguration
 [
-    TDamageComponentConfiguration
-    (
-        DamageType = "ap"
-        Button = "APButton"
-        AmmoText = "WeaponAPAmmoText"
-        CalibreText = "WeaponAPCalibreText"
+    Name : string,
+    AmmoText : string,
+    CalibreText : string,
+] is TDamageComponentConfiguration
+(
+    MainComponentName = <Name>
+    AmmoText = <AmmoText>
+    CalibreText = <CalibreText>
+)
+
+// -------------------------------------------------------------------------------------------------
+
+DamageTypeComponentConfigurations is MAP
+[
+    (-1,
+        DamageComponentConfiguration
+        (
+            Name = "StandardAmmo"
+            AmmoText = "WeaponStandardAmmoText"
+            CalibreText = "WeaponStandardAmmoCalibreText"
+        )
     ),
-    TDamageComponentConfiguration
-    (
-        DamageType = "he"
-        Button = "HEButton"
-        AmmoText = "WeaponHEAmmoText"
-        CalibreText = "WeaponHECalibreText"
+    (DamageFamily_flamme,
+        DamageComponentConfiguration
+        (
+            Name = "Flame"
+            AmmoText = "WeaponFlameAmmoText"
+            CalibreText = "WeaponFlameCalibreText"
+        )
     ),
-    TDamageComponentConfiguration
-    (
-        DamageType = "he_autocanon"
-        Button = "HEAutoCanonButton"
-        AmmoText = "WeaponHEAutoCanonAmmoText"
-        CalibreText = "WeaponHEAutoCanonCalibreText"
+    (DamageFamily_smoke,
+        DamageComponentConfiguration
+        (
+            Name = "Smoke"
+            AmmoText = "WeaponSmokeAmmoText"
+            CalibreText = "WeaponSmokeCalibreText"
+        )
     ),
-    TDamageComponentConfiguration
-    (
-        DamageType = "howz"
-        Button = "HOWZAPButton"
-        AmmoText = "WeaponHowzAPAmmoText"
-        CalibreText = "WeaponHowzAPCalibreText"
-    ),
-    TDamageComponentConfiguration
-    (
-        DamageType = "cac"
-        Button = "APCRButton"
-        AmmoText = "WeaponAPCRAmmoText"
-        CalibreText = "WeaponAPCRCalibreText"
-    ),
-    TDamageComponentConfiguration
-    (
-        DamageType = "heat"
-        Button = "HEATButton"
-        AmmoText = "WeaponHEATAmmoText"
-        CalibreText = "WeaponHEATCalibreText"
-    ),
-    TDamageComponentConfiguration
-    (
-        DamageType = "hesap"
-        Button = "HESAPButton"
-        AmmoText = "WeaponHESAPAmmoText"
-        CalibreText = "WeaponHESAPCalibreText"
-    ),
-    TDamageComponentConfiguration
-    (
-        DamageType = "balle"
-        Button = "BulletButton"
-        AmmoText = "WeaponBulletAmmoText"
-        CalibreText = "WeaponBulletCalibreText"
-    ),
-    TDamageComponentConfiguration
-    (
-        DamageType = "fmballe"
-        Button = "BulletAAButton"
-        AmmoText = "WeaponBulletAAAmmoText"
-        CalibreText = "WeaponBulletAACalibreText"
-    ),
-    TDamageComponentConfiguration
-    (
-        DamageType = "balledca"
-        Button = "BulletDCAButton"
-        AmmoText = "WeaponBulletDCAAmmoText"
-        CalibreText = "WeaponBulletDCACalibreText"
-    ),
-    TDamageComponentConfiguration
-    (
-        DamageType = "howz_bombe"
-        Button = "RocketHEButton"
-        AmmoText = "WeaponRocketHEAmmoText"
-        CalibreText = "WeaponRocketHECalibreText"
-    ),
-    TDamageComponentConfiguration
-    (
-        DamageType = "roquette_ap"
-        Button = "RocketAPButton"
-        AmmoText = "WeaponRocketAPAmmoText"
-        CalibreText = "WeaponRocketAPCalibreText"
-    ),
-    TDamageComponentConfiguration
-    (
-        DamageType = "ap_missile"
-        Button = "APMissileButton"
-        AmmoText = "WeaponAPMissileAmmoText"
-        CalibreText = "WeaponAPMissileCalibreText"
-    ),
-    TDamageComponentConfiguration
-    (
-        DamageType = "superhe"
-        Button = "RocketFragButton"
-        AmmoText = "WeaponRocketFragAmmoText"
-        CalibreText = "WeaponRocketFragCalibreText"
-    ),
-    TDamageComponentConfiguration
-    (
-        DamageType = "bombe"
-        Button = "BombButton"
-        AmmoText = "WeaponBombAmmoText"
-        CalibreText = "WeaponBombCalibreText"
-    ),
-    TDamageComponentConfiguration
-    (
-        DamageType = "cluster_ap"
-        Button = "ClusterAPButton"
-        AmmoText = "WeaponClusterAPAmmoText"
-        CalibreText = "WeaponClusterAPCalibreText"
-    ),
-    TDamageComponentConfiguration
-    (
-        DamageType = "cluster"
-        Button = "ClusterHEButton"
-        AmmoText = "WeaponClusterHEAmmoText"
-        CalibreText = "WeaponClusterHECalibreText"
-    ),
-    TDamageComponentConfiguration
-    (
-        DamageType = "napalm"
-        Button = "NapalmButton"
-        AmmoText = "WeaponNapalmAmmoText"
-        CalibreText = "WeaponNapalmCalibreText"
-    ),
-    TDamageComponentConfiguration
-    (
-        DamageType = "flamme"
-        Button = "FlameButton"
-        AmmoText = "WeaponFlameAmmoText"
-        CalibreText = "WeaponFlameCalibreText"
-    ),
-    TDamageComponentConfiguration
-    (
-        DamageType = "smoke"
-        Button = "SmokeButton"
-        AmmoText = "WeaponSmokeAmmoText"
-        CalibreText = "WeaponSmokeCalibreText"
-    ),
-    TDamageComponentConfiguration
-    (
-        DamageType = "missile_he"
-        Button = "MissileHEButton"
-        AmmoText = "WeaponMissileHEAmmoText"
-        CalibreText = "WeaponMissileHECalibreText"
-    )
 ]
 
 // -------------------------------------------------------------------------------------------------
@@ -190,7 +80,7 @@ template WeaponDamageTypeTitle
                     MagnifiableWidthHeight = [0.0, 15.0]
                 )
 
-                ParagraphStyle = TParagraphStyleRTTI
+                ParagraphStyle = TParagraphStyle
                 (
                     Alignment = UIText_Left
                     VerticalAlignment = UIText_VerticalCenter
@@ -222,13 +112,10 @@ template WeaponDamageTypeTitle
 template WeaponDamageTypeAttribute
 [
     ElementName : string,
-    Plating : bool = false,
     Token : string,
     ValueToken : string,
     HintToken : string = "",
     MagnifiableWidth : float = SingleWeaponColumnWidth,
-    AlignementToFather : float2 = [0.5, 0.0],
-    AlignementToAnchor : float2 = [0.5, 0.0],
     MagnifiableOffset : float2 =  [0.0, -1.0],
     HasBackground : bool = false,
     BackgroundBlockColorToken : string = 'MarronPanel_fonce',
@@ -296,7 +183,7 @@ is BUCKListDescriptor
                                 AlignementToFather = [0.0, 0.5]
                             )
 
-                            ParagraphStyle = TParagraphStyleRTTI
+                            ParagraphStyle = TParagraphStyle
                             (
                                 Alignment = UIText_Left
                                 VerticalAlignment = UIText_VerticalCenter
@@ -394,7 +281,7 @@ is BUCKListDescriptor
                                             )
 
                                             HasBackground = true
-                                            BackgroundBlockColorToken = "Fulda2_Orange100"
+                                            BackgroundBlockColorToken = "veteranceValueBonus"
                                         ),
 
                                         BUCKGaugeValueDescriptor
@@ -470,7 +357,7 @@ is BUCKListDescriptor
                                         MagnifiableOffset = <MagnifiableOffset>
                                     )
 
-                                    ParagraphStyle = TParagraphStyleRTTI
+                                    ParagraphStyle = TParagraphStyle
                                     (
                                         Alignment = UIText_Left
                                         VerticalAlignment = UIText_Bottom
@@ -555,7 +442,7 @@ is BUCKListDescriptor
                     MagnifiableWidthHeight = [0.0, 28.0]
                 )
 
-                ParagraphStyle = TParagraphStyleRTTI
+                ParagraphStyle = TParagraphStyle
                 (
                     Alignment = UIText_Center
                     VerticalAlignment = UIText_VerticalCenter
@@ -565,7 +452,7 @@ is BUCKListDescriptor
                 Hint = BUCKSpecificHintableArea
                 (
                     ElementName = 'WeaponTitleHint'
-                    DicoToken = ~/LocalisationConstantes/dico_unites
+                    DicoToken = ~/LocalisationConstantes/dico_units
                 )
 
                 TextStyle = "Default"
@@ -573,7 +460,7 @@ is BUCKListDescriptor
                 VerticalFitStyle = ~/FitStyle/UserDefined
                 HorizontalFitStyle = ~/FitStyle/UserDefined
 
-                TextDico = ~/LocalisationConstantes/dico_unites
+                TextDico = ~/LocalisationConstantes/dico_units
                 HasBackground = true
                 BackgroundBlockColorToken = "MarronPanel_fonce"
                 TypefaceToken = "Liberator"
@@ -1088,42 +975,18 @@ is TUISpecificUnitInfoSingleWeaponPanelViewDescriptor
     NoValueToken = "UIP_NOVAL"
     InfiniteToken = "UIP_INF"
     WeaponNameAndAmountToken = "UIPW_NUM"
+    WeaponBigStatTextToken = "UIPW_THSD"
 
     // Attributes whose value is prefered when lower
     SmallerIsBetterAttributes = ["WeaponAimingTime", "WeaponReloadTime", "WeaponSupplyCost"]
 
     // Configuration of the panel works like this:
-    // (Damage type button name, [Attributes list])
     // The attributes will pile up horizontally first in the grid
-    DamageTypeConfiguration = MAP
-    [
-        //("APButton",      ["WeaponAP", "WeaponDamage", "WeaponSuppress", "WeaponAreaOfEffect", "", "WeaponAccuracy", "WeaponRange", "", "WeaponRateOfFire", "WeaponTraverseSpeed"]),
-        ("APButton",            listeAffichage),
-        ("HOWZAPButton",        listeAffichage),
-        ("APHEButton",          listeAffichage),
-        ("HEButton",            listeAffichage),
-        ("HEAutoCanonButton",   listeAffichage),
-        ("APCRButton",          listeAffichage),
-        ("HEATButton",          listeAffichage),
-        ("HESAPButton",         listeAffichage),
-        ("BulletButton",        listeAffichage),
-        ("BulletAAButton",      listeAffichage),
-        ("BulletDCAButton",     listeAffichage),
-        ("RocketHEButton",      listeAffichage),
-        ("RocketAPButton",      listeAffichage),
-        ("RocketFragButton",    listeAffichage),
-        ("BombButton",          listeAffichage),
-        ("ClusterAPButton",     listeAffichage),
-        ("ClusterHEButton",     listeAffichage),
-        ("APMissileButton",     listeAffichage),
-        ("FlameButton",         listeAffichage),
-        ("NapalmButton",        listeAffichage),
-        ("SmokeButton",         listeAffichage),
-        ("MissileHEButton",     listeAffichage),
-    ]
+    DamageTypeConfiguration = listeAffichage
 
     ValueTextColors = ~/InfoPanelValuesColors
     DamageTypeComponents = ~/DamageTypeComponentConfigurations
+
     MergeDamageTypes = true
 )
 

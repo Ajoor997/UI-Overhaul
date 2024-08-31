@@ -46,7 +46,7 @@ is BUCKTextDescriptor
     (
         RelativeWidthHeight = [1.0, 1.0]
     )
-    ParagraphStyle = TParagraphStyleRTTI
+    ParagraphStyle = TParagraphStyle
     (
         Alignment = <Alignment>
         VerticalAlignment = ~/UIText_VerticalCenter
@@ -181,7 +181,7 @@ private template LeaderboardMultiSimplifiedListContent
                             RelativeWidthHeight = [1.0, 1.0]
                         )
 
-                        ParagraphStyle = TParagraphStyleRTTI
+                        ParagraphStyle = TParagraphStyle
                         (
                             Alignment = UIText_Center
                             VerticalAlignment = UIText_VerticalCenter
@@ -249,7 +249,7 @@ private template LeaderboardMultiSimplifiedListContent
                             RelativeWidthHeight = [1.0, 1.0]
                         )
 
-                        ParagraphStyle = TParagraphStyleRTTI
+                        ParagraphStyle = TParagraphStyle
                         (
                             Alignment = UIText_Left
                             VerticalAlignment = UIText_VerticalCenter
@@ -440,7 +440,7 @@ private LeaderboardListHeader is BUCKListDescriptor
                 (
                 )
 
-                ParagraphStyle = TParagraphStyleRTTI
+                ParagraphStyle = TParagraphStyle
                 (
                     Alignment = ~/UIText_Center
                     VerticalAlignment = ~/UIText_VerticalCenter
@@ -567,7 +567,7 @@ private Titre_Leaderboard is BUCKTextDescriptor
         MagnifiableWidthHeight = [0,17]
     )
 
-    ParagraphStyle = TParagraphStyleRTTI
+    ParagraphStyle = TParagraphStyle
     (
         Alignment = UIText_Left
         VerticalAlignment = UIText_VerticalCenter

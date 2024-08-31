@@ -59,7 +59,7 @@ AlertLine is BUCKContainerDescriptor
                 AlignementToAnchor = [1.0, 0.0]
             )
 
-            ParagraphStyle = TParagraphStyleRTTI
+            ParagraphStyle = TParagraphStyle
             (
                 Alignment = UIText_Right
                 VerticalAlignment = UIText_VerticalCenter
@@ -106,7 +106,6 @@ BUCKSpecificHUDAlertPanelMainComponentDescriptor is BUCKListDescriptor
         MagnifiableWidthHeight = [~/AlertLineWidth, 0.0]
         AlignementToFather = [1.0, 0.0]
         AlignementToAnchor = [1.0, 0.0]
-        MagnifiableOffset = [40,0]
     )
 
     Axis = ~/ListAxis/Vertical
@@ -124,8 +123,9 @@ UISpecificHUDAlertPanelViewDescriptor is TUISpecificHUDAlertPanelViewDescriptor
 
     AlertLineDescriptor = ~/AlertLine
     EmptyLineDescriptor = ~/EmptyLine
-    MaxLineNb = MinimapMagnifiableSize div AlertLineHeight - 1
-    LineDisplayDuration = 60
+    MinimapMagnifiableSize = MinimapMagnifiableSize
+    AlertLineHeight = AlertLineHeight
+    LineDisplayDuration = 20
 
     //------------------------------------------------------------------------------
     // Les messages sont définies dans AlertMessageType.ndf

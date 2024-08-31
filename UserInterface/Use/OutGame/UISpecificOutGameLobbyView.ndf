@@ -10,14 +10,14 @@ template OneOption
     Components : LIST<TBUCKContainerDescriptor> = [],
     ItemsTextPadding : TRTTILength4 = TRTTILength4(Magnifiable = [20.0, 5.0, 0.0, 5.0]),
     MainTextPadding : TRTTILength4 = TRTTILength4(Magnifiable = [0.0, 0.0, 0.0, 0.0]),
-    FloatingListMagnifiableHeight : float = 250.0
+    FloatingListMagnifiableHeight : float = 250.0,
 ]
 is BUCKListDescriptor
 (
     ElementName = <ElementName>
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = [0.0, 34.0]
+        MagnifiableWidthHeight = [0.0, 33.0]
     )
 
     Axis = ~/ListAxis/Horizontal
@@ -36,7 +36,7 @@ is BUCKListDescriptor
 
                 TextStyle = "Default"
 
-                ParagraphStyle = TParagraphStyleRTTI
+                ParagraphStyle = TParagraphStyle
                 (
                     Alignment = UIText_Right
                     VerticalAlignment = UIText_VerticalCenter
@@ -71,7 +71,7 @@ is BUCKListDescriptor
                 )
                 OpenUpward = true
                 HasBorder = false
-                BackgroundBlockColorToken = 'deck_lobby'
+                HasBackground = true // color set by code
                 ArrowTextureToken = 'outgame_dropdown_lobby'
                 MainTextColorToken = 'Blanc'
                 ArrowMagnifiableWidthHeight = [34.0, 34.0]
@@ -100,7 +100,7 @@ MainListLobby is BUCKListDescriptor
 
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = [0.0, 760.0]
+        MagnifiableWidthHeight = [0.0, 828.0]
         MagnifiableOffset = [23.0, 185.0 - LobbyVerticalOffset]
         AlignementToAnchor = [0.0, 1.0]
         AlignementToFather = [0.0, 1.0]
@@ -137,6 +137,7 @@ MainListLobby is BUCKListDescriptor
                 )
 
                 Axis = ~/ListAxis/Vertical
+                InterItemMargin = TRTTILength( Magnifiable = 2.0 )
 
                 Elements =
                 [
@@ -163,7 +164,7 @@ private template PlayersNumberText
         MagnifiableWidthHeight = [0.0, 0.0]
     )
 
-    ParagraphStyle = TParagraphStyleRTTI
+    ParagraphStyle = TParagraphStyle
     (
         Alignment = UIText_Right
         VerticalAlignment = UIText_VerticalCenter
@@ -195,6 +196,7 @@ GameOptions is BUCKListElementDescriptor
         )
 
         Axis = ~/ListAxis/Vertical
+        InterItemMargin = TRTTILength( Magnifiable = 1.0 )
 
         Elements =
         [
@@ -205,22 +207,22 @@ GameOptions is BUCKListElementDescriptor
                     ComponentFrame = TUIFramePropertyRTTI
                     (
                         RelativeWidthHeight = [1.0, 0.0]
-                        MagnifiableWidthHeight = [0.0, 40.0]
+                        MagnifiableWidthHeight = [0.0, 32.0]
                     )
 
                     TextStyle = "Default"
 
-                    ParagraphStyle = TParagraphStyleRTTI
+                    ParagraphStyle = TParagraphStyle
                     (
                         Alignment = UIText_Left
-                        VerticalAlignment = UIText_VerticalCenter
+                        VerticalAlignment = UIText_Up
                     )
 
                     TextToken = "OP_PARAMS"
                     TextSize = "20"
                     TextColor = "White"
 
-                    TextPadding = TRTTILength4(Magnifiable = [10.0, 0.0, 20.0, 0.0])
+                    TextPadding = TRTTILength4(Magnifiable = [10.0, 4.0, 20.0, 0.0])
 
                     TextDico = ~/LocalisationConstantes/dico_interface_outgame
                     TypefaceToken = "Liberator"
@@ -228,6 +230,9 @@ GameOptions is BUCKListElementDescriptor
                     BigLineAction = ~/BigLineAction/CutByDots
                     HorizontalFitStyle = ~/FitStyle/UserDefined
                     VerticalFitStyle = ~/FitStyle/UserDefined
+
+                    HasBackground = true
+                    BackgroundBlockColorToken = "game_option_lobby"
                 )
             ),
 
@@ -243,7 +248,7 @@ GameOptions is BUCKListElementDescriptor
 
                     Axis = ~/ListAxis/Vertical
 
-                    FirstMargin = TRTTILength( Magnifiable = 0.0 )
+                    FirstMargin = TRTTILength( Magnifiable = 1.0 )
                     InterItemMargin = TRTTILength( Magnifiable = 1.0 )
 
                     Elements =
@@ -261,7 +266,7 @@ GameOptions is BUCKListElementDescriptor
                                     HintBodyToken = "GS_BATTLEB"
                                     HintExtendedToken = "GS_BATTLEE"
                                 )
-                                FloatingListMagnifiableHeight = 700
+                                FloatingListMagnifiableHeight = 500
                                 ItemsTextPadding = TRTTILength4(Magnifiable = [45.0, 5.0, 0.0, 5.0])
                                 MainTextPadding = TRTTILength4(Magnifiable = [40.0, 5.0, 0.0, 5.0])
 
@@ -352,6 +357,29 @@ GameOptions is BUCKListElementDescriptor
                                 ]
                             )
                         ),
+                        BUCKListElementDescriptor
+                        (
+                            ComponentDescriptor = OneOption
+                            (
+                                TextToken = "GS_UPKEEP"
+                                ElementName = "OptionUpkeep"
+
+                                Hint = BUCKSpecificHintableArea
+                                (
+                                    DicoToken = ~/LocalisationConstantes/dico_interface_outgame
+                                    HintBodyToken = "GS_UPKEEPB"
+                                    HintExtendedToken = "GS_UPKEEPE"
+                                )
+                            )
+                        ),
+                        BUCKListElementDescriptor
+                        (
+                            ComponentDescriptor = OneOption
+                            (
+                                TextToken = "GS_LIGHTEV"
+                                ElementName = "OptionEnvironmentSettings"
+                            )
+                        ),
                         // combat rules
                         BUCKListElementDescriptor
                         (
@@ -365,31 +393,6 @@ GameOptions is BUCKListElementDescriptor
                                     DicoToken = ~/LocalisationConstantes/dico_interface_outgame
                                     HintBodyToken = "GS_CMBRLDB"
                                     HintExtendedToken = "GS_CMBRLEE"
-                                )
-                            )
-                        ),
-                        // difficulty ?? contre l'ia?
-                        BUCKListElementDescriptor
-                        (
-                            ComponentDescriptor = OneOption
-                            (
-                                TextToken = "GS_DIFFICU"
-                                ElementName = "OptionDifficulty"
-                            )
-                        ),
-                        // en mode attaque / défense ?
-                        BUCKListElementDescriptor
-                        (
-                            ComponentDescriptor = OneOption
-                            (
-                                TextToken = "GS_BKTSIDE"
-                                ElementName = "OptionBreakthroughSide"
-
-                                Hint = BUCKSpecificHintableArea
-                                (
-                                    DicoToken = ~/LocalisationConstantes/dico_interface_outgame
-                                    HintBodyToken = "GS_BKTSIDB"
-                                    HintExtendedToken = "GS_BKTSIEE"
                                 )
                             )
                         ),
@@ -420,7 +423,6 @@ GameOptions is BUCKListElementDescriptor
                                 (
                                     DicoToken = ~/LocalisationConstantes/dico_interface_outgame
                                     HintBodyToken = "GS_STARTRB"
-
                                 )
                             )
                         ),
@@ -459,21 +461,6 @@ GameOptions is BUCKListElementDescriptor
                         (
                             ComponentDescriptor = OneOption
                             (
-                                TextToken = "GS_TIMELIM"
-                                ElementName = "OptionTimeLimit"
-
-                                Hint = BUCKSpecificHintableArea
-                                (
-                                    DicoToken = ~/LocalisationConstantes/dico_interface_outgame
-                                    HintBodyToken = "GS_TIMELIB"
-                                    HintExtendedToken = "HintTL"
-                                )
-                            )
-                        ),
-                        BUCKListElementDescriptor
-                        (
-                            ComponentDescriptor = OneOption
-                            (
                                 TextToken = "GS_LOSSDE"
                                 ElementName = "OptionLossThreshold"
 
@@ -482,6 +469,21 @@ GameOptions is BUCKListElementDescriptor
                                     DicoToken = ~/LocalisationConstantes/dico_interface_outgame
                                     HintBodyToken = "GS_LOSSDB"
                                     HintExtendedToken = "GS_LOSSEE"
+                                )
+                            )
+                        ),
+                        BUCKListElementDescriptor
+                        (
+                            ComponentDescriptor = OneOption
+                            (
+                                TextToken = "GS_TIMELIM"
+                                ElementName = "OptionTimeLimit"
+
+                                Hint = BUCKSpecificHintableArea
+                                (
+                                    DicoToken = ~/LocalisationConstantes/dico_interface_outgame
+                                    HintBodyToken = "GS_TIMELIB"
+                                    HintExtendedToken = "HintTL"
                                 )
                             )
                         ),
@@ -515,6 +517,7 @@ GameOptions is BUCKListElementDescriptor
                                 ]
                             )
                         ),
+
                         // OptionAccessibility ?? en multi ?
                         BUCKListElementDescriptor
                         (
@@ -675,7 +678,7 @@ BUCKSpecificOutGameLobbyMainComponentDescriptor is  BUCKContainerDescriptor
             FramePropertyBeforeAnimation = TUIFramePropertyRTTI
             (
                 RelativeWidthHeight = [1.0, 1.0]
-                AlignementToAnchor = [0.5, 0.3]
+                AlignementToAnchor = [0.5, 0.366]
                 AlignementToFather = [0.5, 1.0]
             )
 
@@ -709,7 +712,7 @@ BUCKSpecificOutGameLobbyMainComponentDescriptor is  BUCKContainerDescriptor
 
 //-------------------------------------------------------------------------------------
 
-LobbyVerticalOffset is 27.0
+LobbyVerticalOffset is 28.0
 
 FullPanelLobby is BUCKContainerDescriptor
 (
@@ -725,20 +728,31 @@ FullPanelLobby is BUCKContainerDescriptor
 
     Components =
     [
+        // This item ensures the pointer events are blocked
+        // It is shorter than the background texture, tu ensure the BACK button is still accessible when the lobby is hidden
+        BUCKContainerDescriptor
+        (
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                MagnifiableWidthHeight = [1479.0, 728.0]
+                AlignementToFather = [0.0, 1.0]
+                AlignementToAnchor = [0.0, 1.0]
+                MagnifiableOffset = [0.0, 74.0 - LobbyVerticalOffset]
+            )
+            HidePointerEvents = true
+        ),
         BUCKTextureDescriptor
         (
             ComponentFrame = TUIFramePropertyRTTI
             (
-                MagnifiableWidthHeight = [1479.0, 695.0]
+                MagnifiableWidthHeight = [1479.0, 763.0]
                 AlignementToFather = [0.0, 1.0]
                 AlignementToAnchor = [0.0, 1.0]
                 MagnifiableOffset = [0.0, 74.0 - LobbyVerticalOffset]
             )
             TextureToken = 'Texture_dossier_triple_lobby'
-
-            HidePointerEvents = true
         ),
-        ~/ShowHideButton,
+        LobbyTopTabContent(MagnifiableOffset = [290.0, 392.0 - LobbyVerticalOffset]),
         ~/MainListLobby,
         BUCKTextureDescriptor
         (
@@ -779,103 +793,141 @@ FullPanelLobby is BUCKContainerDescriptor
 
 //-------------------------------------------------------------------------------------
 
-ShowHideButton is BUCKButtonDescriptor
+template LobbyTopTabContent
+[
+    MagnifiableOffset : float2 = [0.0, 0.0],
+] is BUCKButtonDescriptor
 (
     ElementName = "ShowHideButton"
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = [50.0, 0.0]
-        MagnifiableOffset = [5.0, 520.0 - LobbyVerticalOffset]
+        MagnifiableWidthHeight = [491.0, 36.0]
+        MagnifiableOffset = <MagnifiableOffset>
     )
-
-    FitStyle = ~/FitStyle/FitToContent
 
     Components =
     [
-        BUCKListDescriptor
+        BUCKTextureDescriptor
         (
             ComponentFrame = TUIFramePropertyRTTI
             (
-                MagnifiableWidthHeight = [50.0, 0.0]
+                RelativeWidthHeight = [1.0, 1.0]
             )
-            Axis = ~/ListAxis/Vertical
+            TextureFrame = TUIFramePropertyRTTI
+            (
+                RelativeWidthHeight = [1.0, 1.0]
+            )
+            TextureToken = "mission_dossierVide_Onglet"
+        ),
+        // Inside tab area
+        BUCKContainerDescriptor
+        (
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                RelativeWidthHeight = [1.0, 0.0]
+                MagnifiableWidthHeight = [-60.0, 24.0]
+                MagnifiableOffset = [0.0, -2.0]
+                AlignementToAnchor = [0.5, 1.0]
+                AlignementToFather = [0.5, 1.0]
+            )
 
-            Elements =
+            Components =
             [
-                BUCKListElementDescriptor
+                ShowHideArrow,
+                BUCKTextDescriptor
                 (
-                    ComponentDescriptor = BUCKTextDescriptor
+                    ElementName = "GameNameText"
+                    ComponentFrame = TUIFramePropertyRTTI
                     (
-                        ElementName = "ShowHideText"
-                        ComponentFrame = TUIFramePropertyRTTI
-                        (
-                            RelativeWidthHeight = [1.0, 0.0]
-                            MagnifiableWidthHeight = [0.0, 25.0]
-                            AlignementToFather = [0.5, 0.0]
-                            AlignementToAnchor = [0.5, 0.0]
-                        )
-
-                        TextStyle = "Default"
-
-                        ParagraphStyle = TParagraphStyleRTTI
-                        (
-                            Alignment = UIText_Center
-                            VerticalAlignment = UIText_Up
-                        )
-
-                        TextToken = ""
-                        TextSize = "18"
-                        TextColor = "Lobby/ShowHideButton"
-                        TextDico = ~/LocalisationConstantes/dico_interface_outgame
-                        TypefaceToken = "Liberator"
-
-                        BigLineAction = ~/BigLineAction/ResizeFont
-                        HorizontalFitStyle = ~/FitStyle/UserDefined
-                        VerticalFitStyle = ~/FitStyle/UserDefined
+                        RelativeWidthHeight = [1.0, 1.0]
+                        MagnifiableWidthHeight = [-50.0, 0.0] // To ensure the game name never overlaps the show/hide arrow
+                        AlignementToAnchor = [0.5, 0.0]
+                        AlignementToFather = [0.5, 0.0]
                     )
-                ),
-                BUCKListElementDescriptor
-                (
-                    ComponentDescriptor = BUCKTextureDescriptor
+
+                    ParagraphStyle = TParagraphStyle
                     (
-                        ElementName = 'ShowArrowTexture'
-
-                        ComponentFrame = TUIFramePropertyRTTI
-                        (
-                            MagnifiableWidthHeight = [32.0, 32.0]
-                            AlignementToAnchor = [0.5, 0.0]
-                            AlignementToFather = [0.5, 0.0]
-                        )
-
-                        TextureToken = "show_hide_arrow"
-                        TextureColorToken = "Lobby/ShowHideButton"
+                        Alignment = UIText_Center
+                        VerticalAlignment = UIText_VerticalCenter
                     )
-                ),
-                BUCKListElementDescriptor
-                (
-                    ComponentDescriptor = BUCKTextureDescriptor
-                    (
-                        ElementName = 'HideArrowTexture'
 
-                        ComponentFrame = TUIFramePropertyRTTI
-                        (
-                            MagnifiableWidthHeight = [32.0, 32.0]
-                            AlignementToAnchor = [0.5, 0.0]
-                            AlignementToFather = [0.5, 0.0]
-                        )
+                    TextSize = "20"
+                    TextColor = "Blanc_multi"
+                    TextDico = ~/LocalisationConstantes/dico_interface_outgame
+                    TextStyle = "Default"
+                    TypefaceToken = "Courrier"
 
-                        Rotation = 180
-                        TextureToken = "show_hide_arrow"
-                        TextureColorToken = "Lobby/ShowHideButton"
-                    )
-                ),
-            ] // Elements
-        )
-    ] // Components
+                    BigLineAction = ~/BigLineAction/ResizeFont
+                    HorizontalFitStyle = ~/FitStyle/UserDefined
+                    VerticalFitStyle = ~/FitStyle/UserDefined
+                )
+            ]
+        ),
+    ]
 )
 
 //-------------------------------------------------------------------------------------
 
+ShowHideArrow is BUCKContainerDescriptor
+(
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [20.0, 20.0]
+        AlignementToAnchor = [0.0, 0.5]
+        AlignementToFather = [0.0, 0.5]
+    )
+
+    Components =
+    [
+        BUCKTextureDescriptor
+        (
+            ElementName = 'ShowArrowTexture'
+
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                RelativeWidthHeight = [1.0, 1.0]
+            )
+
+            TextureToken = "show_hide_arrow"
+            TextureColorToken = "Blanc_multi"
+
+            Components =
+            [
+                BUCKSpecificHintableArea
+                (
+                    DicoToken = ~/LocalisationConstantes/dico_interface_outgame
+                    HintBodyToken = "LBY_SHOW"
+                )
+            ]
+        ),
+        BUCKTextureDescriptor
+        (
+            ElementName = 'HideArrowTexture'
+
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                RelativeWidthHeight = [1.0, 1.0]
+            )
+
+            Rotation = 180
+            TextureToken = "show_hide_arrow"
+            TextureColorToken = "Blanc_multi"
+
+            Components =
+            [
+                BUCKSpecificHintableArea
+                (
+                    DicoToken = ~/LocalisationConstantes/dico_interface_outgame
+                    HintBodyToken = "LBY_HIDE"
+                )
+            ]
+        ),
+    ]
+)
+
+//-------------------------------------------------------------------------------------
+
+// Modal needs to be updated to WARNO style when it will be possible to show it
 ModaleConfirmUseDlcContentWindowFrame is SpecificModaleWindowFrame
 (
     ContentMagnifiableWidthHeight = [550.0, 150.0]
@@ -927,4 +979,25 @@ UISpecificOutGameLobbyViewDescriptor is TUISpecificOutGameLobbyViewDescriptor
 
     UnknownMapOverview = "OutgameTexture_UnknownMap"
     LobbyDedicatedComponent = ~/DedicatedServerInfos
+
+    ComponentsToAutoUpdateBackgroundColors =
+    [
+        "OptionBattleFieldDropDown",
+        "OptionEnvironmentSettingsDropDown",
+        "OptionCombatRuleDropDown",
+        "OptionOppositionDropDown",
+        "OptionStartResDropDown",
+        "OptionIncomeDropDown",
+        "OptionConquestPointDropDown",
+        "OptionLossThresholdDropDown",
+        "OptionTimeLimitDropDown",
+        "OptionUpkeepDropDown",
+        "OptionAccessibilityDropDown",
+    ]
+
+    BackgroundOptionColors =
+    [
+        "even_option_lobby",
+        "odd_option_lobby",
+    ]
 )

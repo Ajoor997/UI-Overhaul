@@ -32,7 +32,7 @@ is BUCKListElementDescriptor
             RelativeWidthHeight = [1.0, 0.0]
         )
 
-        ParagraphStyle = TParagraphStyleRTTI
+        ParagraphStyle = TParagraphStyle
         (
             Alignment = ~/UIText_Left
         )
@@ -44,7 +44,7 @@ is BUCKListElementDescriptor
         TextStyle = 'Default'
         TypefaceToken = "UISecondFont"
         TextSize = '50'
-        TextDico = ~/LocalisationConstantes/dico_briefing
+        TextDico = ~/LocalisationConstantes/dico_manual
         TextColor = 'SD2_BleuVariable'
         TextToken = <TextToken>
     )
@@ -63,7 +63,7 @@ is BUCKListElementDescriptor
             RelativeWidthHeight = [1, 0]
         )
 
-        ParagraphStyle = TParagraphStyleRTTI
+        ParagraphStyle = TParagraphStyle
         (
             Alignment = ~/UIText_Left
         )
@@ -75,7 +75,7 @@ is BUCKListElementDescriptor
         TextStyle = 'Default'
         TypefaceToken = "UISecondFont"
         TextSize = '42'
-        TextDico = ~/LocalisationConstantes/dico_briefing
+        TextDico = ~/LocalisationConstantes/dico_manual
         TextColor = 'SD2_BleuVariable'
         TextToken = <TextToken>
     )
@@ -95,7 +95,7 @@ is BUCKListElementDescriptor
             RelativeWidthHeight = [1, 0]
         )
 
-        ParagraphStyle = TParagraphStyleRTTI
+        ParagraphStyle = TParagraphStyle
         (
             Alignment = ~/UIText_Left
         )
@@ -107,7 +107,7 @@ is BUCKListElementDescriptor
         TextStyle = 'Default'
         TypefaceToken = "UISecondFont"
         TextSize = '24'
-        TextDico = ~/LocalisationConstantes/dico_briefing
+        TextDico = ~/LocalisationConstantes/dico_manual
         TextColor = 'SD2_BleuVariable'
         TextToken = <TextToken>
     )
@@ -128,7 +128,7 @@ is BUCKListElementDescriptor
             RelativeWidthHeight = [1, 0]
         )
 
-        ParagraphStyle = TParagraphStyleRTTI
+        ParagraphStyle = TParagraphStyle
         (
             Alignment = ~/UIText_Left
             //VerticalAlignment = ~/UIText_VerticalCenter
@@ -141,7 +141,7 @@ is BUCKListElementDescriptor
         TextStyle = 'Default'
         TypefaceToken = "UIMainFont"
         TextSize = '20'
-        TextDico = ~/LocalisationConstantes/dico_briefing
+        TextDico = ~/LocalisationConstantes/dico_manual
         TextColor = 'SD2_BlancPur'
         TextToken = <TextToken>
     )
@@ -349,7 +349,7 @@ is BUCKTextDescriptor
         MagnifiableWidthHeight = [<Width>, <Height>]
     )
 
-    ParagraphStyle = TParagraphStyleRTTI
+    ParagraphStyle = TParagraphStyle
     (
         Alignment = UIText_Left
         VerticalAlignment = UIText_VerticalCenter
@@ -360,7 +360,7 @@ is BUCKTextDescriptor
     FitStyle = ~/FitStyle/UserDefined
     TypefaceToken = "UIMainFont"
     BigLineAction = ~/BigLineAction/CutByDots
-    TextDico = ~/LocalisationConstantes/dico_briefing
+    TextDico = ~/LocalisationConstantes/dico_manual
     TextToken = <TextToken>
     TextSize = '16'
     TextColor = <TextColor>
@@ -1200,7 +1200,7 @@ template Intercalaire
 template TexteManuelElementDescriptor
 [
     TextToken : string = '',
-    ParagraphStyle : TParagraphStyleRTTI = TParagraphStyleRTTI
+    ParagraphStyle : TParagraphStyle = TParagraphStyle
     (
         Alignment = UIText_Left
         VerticalAlignment = UIText_VerticalCenter
@@ -1237,7 +1237,7 @@ is BUCKListElementDescriptor
         TypefaceToken = "Eurostyle"
         BigLineAction = ~/BigLineAction/MultiLine
         TextToken = <TextToken>
-        TextDico = ~/LocalisationConstantes/dico_briefing
+        TextDico = ~/LocalisationConstantes/dico_manual
         TextColor = (<HasBackground> ? 'Blanc' : 'MarronPanel_noir')
         TextSize = <TextSize>
 
@@ -1283,7 +1283,7 @@ template GameManualTab
 
             TextPadding = TRTTILength4( Magnifiable = [7.0, 2.0, 2.0, 2.0] )
 
-            ParagraphStyle = TParagraphStyleRTTI
+            ParagraphStyle = TParagraphStyle
             (
                 Alignment = UIText_Center
                 VerticalAlignment = UIText_VerticalCenter
@@ -1297,7 +1297,7 @@ template GameManualTab
             TypefaceToken = "Liberator"
             BigLineAction = ~/BigLineAction/MultiLine
             TextToken = <TextToken>
-            TextDico = ~/LocalisationConstantes/dico_briefing
+            TextDico = ~/LocalisationConstantes/dico_manual
             TextColor = "MarronPanel_noir"
             TextSize = "12"
 
@@ -1412,5 +1412,5 @@ BUCKTutorialGuideMainComponentDescriptor is WindowFrame
 TutorialGuideViewDescriptor is TTutorialGuideViewDescriptor
 (
     MainComponentDescriptor = ~/BUCKTutorialGuideMainComponentDescriptor
-    MainComponentContainerUniqueName = "SoloPanelViewDescriptor" // Permet d'indiquer l'endroit ou le composant doit s'insérer
+    MainComponentContainerUniqueName = "SubMenuPanelViewDescriptor" // Permet d'indiquer l'endroit ou le composant doit s'insérer
 )

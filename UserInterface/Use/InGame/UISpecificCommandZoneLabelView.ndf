@@ -54,7 +54,7 @@ BUCKSpecificCommandZoneLabelMainComponentDescriptor is BUCKListDescriptor
                 ComponentFrame = TUIFramePropertyRTTI
                 (
                     RelativeWidthHeight = [0.0, 0.0]
-                    MagnifiableWidthHeight = [10000.0, 0.0]
+                    MagnifiableWidthHeight = [5000.0, 0.0]
                     AlignementToFather = [0.0, 0.5]
                     AlignementToAnchor = [0.0, 0.5]
                 )
@@ -82,7 +82,7 @@ BUCKSpecificCommandZoneLabelMainComponentDescriptor is BUCKListDescriptor
                 HorizontalFitStyle = ~/FitStyle/FitToContent
                 VerticalFitStyle = ~/FitStyle/FitToContent
 
-                TextSize = "25000"
+                TextSize = "17000"
                 TextColor = "TransparentWhite"
 
                 TextDico = ~/LocalisationConstantes/dico_interface_ingame
@@ -99,22 +99,11 @@ BUCKSpecificCommandZoneLabelMainComponentDescriptor is BUCKListDescriptor
                 ComponentFrame = TUIFramePropertyRTTI
                 (
                     RelativeWidthHeight = [0.0, 0.0]
-                    MagnifiableWidthHeight = [10000.0, 0.0]
+                    MagnifiableWidthHeight = [5000.0, 0.0]
                     AlignementToFather = [0.0, 0.5]
                     AlignementToAnchor = [0.0, 0.5]
                 )
             )
-        ),
-    ]
-)
-
-CommandZoneLabelReferentiel is TLabelTransformationComposition
-(
-    Transformations =
-    [
-        TLabelTransformPostTranslateForArea
-        (
-            Translation = [0,0,0]
         ),
     ]
 )
@@ -125,17 +114,14 @@ UISpecificCommandZoneLabelViewDescriptor is TUISpecificCommandZoneLabelViewDescr
     MainComponentContainerUniqueName = "" // Permet d'indiquer l'endroit ou le composant doit s'insérer
 
     UI3DLayer = $/UserInterface/UI3DLayer_General
-
-    LabelReferentiel = ~/CommandZoneLabelReferentiel
-
     VisibilityRange = ~/AllInGameRanges/ZoomCommandArea
     FadeDuration = 0.5
 
-    OpacityControlByFloat = $/M3D/Shader/AreaFillOpacity
+    OpacityControlByFloat = $/M3D/Shader/AreaTextOpacity
 
     TokenFormatCommandPointsByCombatRule = MAP
     [
-        (CombatRule/CaptureTheFlag,  "FRM_CNQ_AR"),
+        (CombatRule/Conquest,        "FRM_CNQ_AR"),
         (CombatRule/Destruction,     "FRM_COM_AR")
     ]
 )

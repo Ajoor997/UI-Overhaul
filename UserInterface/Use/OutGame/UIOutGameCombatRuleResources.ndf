@@ -81,7 +81,7 @@ CombatRuleResources is TUIOutGameCombatRuleResources
             HintBody = 'HCR_CTF'
             GameRoomListIconComponent = CombatRuleDecorationComponent
             (
-                TextureToken = "OutgameTexture_CaptureTheFlagTypeTexture"
+                TextureToken = "OutgameTexture_ConquestTypeTexture"
                 HintTitle = "GRL_CTFT"
                 HintBody = "GRL_CTFB"
                 HintExtended = "GRL_CTFE"

@@ -16,7 +16,7 @@ BUCKSpecificOutGameChatMessageMainComponentDescriptor is BUCKTextDescriptor
     HorizontalFitStyle = ~/FitStyle/FitToParent
     VerticalFitStyle = ~/FitStyle/FitToContent
 
-    ParagraphStyle = TParagraphStyleRTTI
+    ParagraphStyle = TParagraphStyle
     (
         Alignment = UIText_Left
         VerticalAlignment = UIText_VerticalCenter

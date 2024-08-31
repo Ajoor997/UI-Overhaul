@@ -1,48 +1,44 @@
 
-MinimapMagnifiableSize is 320
+MinimapMagnifiableSize is 310.0
 
-BUCKSpecificMiniMapInfoMainComponentDescriptor is BUCKListDescriptor
+BUCKSpecificMiniMapInfoMainComponentDescriptor is BUCKContainerDescriptor
 (
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableOffset = [-10.0, 0.0]
-        AlignementToFather = [1.0, 0.0]
-        AlignementToAnchor = [1.0, 0.0]
+        MagnifiableWidthHeight = [MinimapMagnifiableSize, MinimapMagnifiableSize] //Doit être carré
+        AlignementToFather = [0.5, 0.0]
+        AlignementToAnchor = [0.5, 0.0]
     )
 
-    Axis = ~/ListAxis/Vertical
-    BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
-    InterItemMargin = TRTTILength(Magnifiable = 1.0)
-    Elements =
+    HidePointerEvents = true
+    Components =
     [
-
-        BUCKListElementDescriptor
+        //PanelRoundedCorner
+        //(
+        //    ComponentFrame = TUIFramePropertyRTTI
+        //    (
+        //        RelativeWidthHeight = [0.0, 1.0]
+        //        MagnifiableWidthHeight = [IngameHUDRightFramesWidth, 0.0]
+        //        AlignementToFather = [0.5, 0.0]
+        //        AlignementToAnchor = [0.5, 0.0]
+        //    )
+        //    BackgroundBlockColorToken = "MOD_BoutonTemps2"
+        //    BorderLineColorToken = "MOD_White"
+        //    RoundedVertexes = [true, true, false, false]
+        //),
+        ~/MinimapPanelDescriptor, // MUST BE A SQUARE!!!,
+        BUCKContainerDescriptor
         (
-            ComponentDescriptor = BUCKContainerDescriptor
+            UniqueName = "UISpecificHUDAlertPanelMainContainer"
+            ComponentFrame = TUIFramePropertyRTTI
             (
-                ComponentFrame = TUIFramePropertyRTTI
-                (
-                    MagnifiableWidthHeight = [MinimapMagnifiableSize, MinimapMagnifiableSize] //Doit être carré
-                    AlignementToFather = [1.0, 0.0]
-                    AlignementToAnchor = [1.0, 0.0]
-                )
-
-                HidePointerEvents = true
-
-                HasBackground = true
-                HasBorder = true
-                BackgroundBlockColorToken = 'DarkBlackLight_MOD'
-                BorderLineColorToken = 'White_MOD'
-                BorderThicknessToken = '1'
-
-                Components =
-                [
-                    ~/MinimapPanelDescriptor, // MUST BE A SQUARE!!!,
-                ]
+                AlignementToFather = [0.0, 0.0]
+                AlignementToAnchor = [1.0, 0.0]
             )
-        ),
-    ]
 
+            FitStyle = ~/ContainerFitStyle/FitToContent
+        )
+    ]
 )
 
 UISpecificMiniMapInfoViewDescriptor is TUISpecificMiniMapInfoViewDescriptor

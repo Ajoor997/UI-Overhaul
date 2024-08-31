@@ -14,7 +14,6 @@ UISpecificOutmapFeedbackResources is TUISpecificOutmapFeedbackResources
     EcartementEntreCerclesExterieurs = 1750.0
     EpaisseurDesTraitsExterieurs = 400.0
     TailleRelativeDeLaZoneRemplie = 0.55 // Entre 0 et 1 proportion de partie blanche/partie vide
-    NomreDeMotifsExterieurs = 24
     CouleurExterieure = [  235,   235,   235, 125] // alpha 15
 
     //---------------------------------------------------------------------------------------//
@@ -23,7 +22,6 @@ UISpecificOutmapFeedbackResources is TUISpecificOutmapFeedbackResources
     EcartementEntreCerclesInterieurs = 1750.0
     EpaisseurDesTraitsInterieurs = 400.0
     PositionAnneauInterieur = 0.6// Entre 0 et 1 par rapport au rayon de vision
-    NomreDeMotifsInterieurs = 36
     CouleurInterieure = [  235,   235,   235, 30] // 10
 
     //---------------------------------------------------------------------------------------//
@@ -107,7 +105,7 @@ UISpecificOutmapFeedbackResources is TUISpecificOutmapFeedbackResources
                     AlignementToAnchor = [0.5, 0.0]
                 )
 
-                ParagraphStyle = TParagraphStyleRTTI
+                ParagraphStyle = TParagraphStyle
                 (
                     Alignment = UIText_Center
                     VerticalAlignment = UIText_VerticalCenter
@@ -137,7 +135,7 @@ UISpecificOutmapFeedbackResources is TUISpecificOutmapFeedbackResources
                     AlignementToAnchor = [0.5, 0.5]
                 )
 
-                ParagraphStyle = TParagraphStyleRTTI
+                ParagraphStyle = TParagraphStyle
                 (
                     Alignment = UIText_Center
                     VerticalAlignment = UIText_VerticalCenter
@@ -167,7 +165,7 @@ UISpecificOutmapFeedbackResources is TUISpecificOutmapFeedbackResources
                     AlignementToAnchor = [0.5, 1.0]
                 )
 
-                ParagraphStyle = TParagraphStyleRTTI
+                ParagraphStyle = TParagraphStyle
                 (
                     Alignment = UIText_Center
                     VerticalAlignment = UIText_VerticalCenter

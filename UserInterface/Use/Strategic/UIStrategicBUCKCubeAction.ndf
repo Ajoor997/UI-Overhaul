@@ -104,7 +104,7 @@ is TCommonInGameCubeActionButtonDescriptor
                //MagnifiableOffset = [-3.0, 0.0]
             )
 
-            ParagraphStyle = TParagraphStyleRTTI
+            ParagraphStyle = TParagraphStyle
             (
                 Alignment = UIText_Center
                 VerticalAlignment = UIText_VerticalCenter
@@ -128,7 +128,7 @@ is TCommonInGameCubeActionButtonDescriptor
             UniformDrawer   = $/UserInterface/UIUniformDrawer
         ),
 
-        BUCKSpecificHintableArea
+        BUCKSpecificStrategicHintableArea
         (
             DicoToken = <HintDico>
             HintTitleToken = <HintTitleToken>
@@ -176,7 +176,7 @@ template StrategicEmptySecondaryCubeActionButton
                 MagnifiableOffset = [-3.0, 0.0]
             )
 
-            ParagraphStyle = TParagraphStyleRTTI
+            ParagraphStyle = TParagraphStyle
             (
                 Alignment = UIText_Center
                 VerticalAlignment = UIText_VerticalCenter
@@ -199,7 +199,7 @@ template StrategicEmptySecondaryCubeActionButton
             UniformDrawer   = $/UserInterface/UIUniformDrawer
         ),
 
-        BUCKSpecificHintableArea
+        BUCKSpecificStrategicHintableArea
         (
             DicoToken = ~/LocalisationConstantes/dico_interface_ingame
             HintTitleToken = "HUD_UNKN"
@@ -221,19 +221,5 @@ template StrategicSecondaryCubeActionPanel
 
     InterElementMargin = TRTTILength2( Magnifiable = [10.0, 5.0] )
 
-    GridElements = MAP
-    [
-        {([0, 0], StrategicEmptySecondaryCubeActionButton(
-                    MagnifiableOffset = [
-                        0.0,
-                        0.0
-                    ]
-                )),
-                ([0, 1], StrategicEmptySecondaryCubeActionButton(
-                    MagnifiableOffset = [
-                        0.0,
-                        0.0
-                    ]
-                )),}
-    ] + <ContentComponents>
+    GridElements = <ContentComponents>
 )

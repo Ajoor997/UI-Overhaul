@@ -1,39 +1,8 @@
 
 // -------------------------------------------------------------------------------------------------
 
-// Unit texture + Unit name + specialty + experience
-OffMapAirplaneMainContent is BUCKContainerDescriptor
-(
-    ElementName = "OffMapAirplaneMainContent"
-    ComponentFrame = TUIFramePropertyRTTI( RelativeWidthHeight = [1.0, 1.0] )
-
-    Components =
-    [
-        BUCKListDescriptor
-        (
-            ComponentFrame = TUIFramePropertyRTTI( RelativeWidthHeight = [0.0, 1.0] )
-
-            Axis = ~/ListAxis/Horizontal
-            FirstMargin = TRTTILength( Magnifiable = 12.0 )
-            LastMargin = TRTTILength( Magnifiable = 12.0 )
-            InterItemMargin = TRTTILength( Magnifiable = 10.0 )
-
-            Elements =
-            [
-                BUCKListElementDescriptor
-                (
-                    ComponentDescriptor = ~/OffMapArtillerySpecialtyTexture
-                ),
-                BUCKListElementDescriptor
-                (
-                    ComponentDescriptor = ~/OffMapUnitExperience
-                ),
-            ]
-        ),
-    ]
-)
-
 OffMapAirplaneComponentDimension is [111.0, 72.0]
+OffMapAirplaneRadioButton is TBUCKRadioButtonManager()
 
 BUCKSpecificOffMapAirplaneMainComponentDescriptor is BUCKSpecificOffMapButton
 (
@@ -41,13 +10,8 @@ BUCKSpecificOffMapAirplaneMainComponentDescriptor is BUCKSpecificOffMapButton
 
     ButtonWidthHeight = ~/OffMapAirplaneComponentDimension
     HeightCoefficientToRemoveFromInteriorButtonWidth = 0.4
-    MainBackgroundColorToken = 'AitcardOutLine_MOD'
-    BorderLineColorToken = 'AitcardOutLine_MOD'
-    IsTogglable = true
-
-    HintTitleToken = ""
-    HintBodyToken = ""
-    HintExtendedToken = ""
+    MainBackgroundColorToken = 'MOD_BoutonTemps'
+    BorderLineColorToken = 'MOD_White3'
 
     Components =
     [
@@ -59,19 +23,19 @@ BUCKSpecificOffMapAirplaneMainComponentDescriptor is BUCKSpecificOffMapButton
             ButtonAlignementToFather = [0.0, 0.5]
             ButtonAlignementToAnchor = [0.0, 0.5]
 
-            BorderLineColorToken = "BoutonTemps"
-            BigBorderBackgroundColorToken = "BoutonTemps"
-            BackgroundBlockColorToken  = "BoutonTemps"
+            BorderLineColorToken = "MOD_White3"
+            BigBorderBackgroundColorToken = "MOD_BoutonTemps"
+            BackgroundBlockColorToken  = "MOD_BoutonTemps"
             TextColorToken = "ButtonHUD/Text2"
+
             IsTogglable = true
-            //HasBackground = true
             HasBorder = true
 
             Components =
             [
-                     ~/OffMapAirplaneMainContent,
-                     IconeUnite,
-                    BlocNom_status_jauge,
+                ~/IconeUnite,
+                ~/BlocNom_status_jauge,
+                ~/AirplaneXP,
             ]
         ),
         // bouton EVAC
@@ -87,7 +51,7 @@ BUCKSpecificOffMapAirplaneMainComponentDescriptor is BUCKSpecificOffMapButton
 
             IsTogglable = true
 
-            RadioButtonManager = ~/ArtilleryRadioButton
+            RadioButtonManager = ~/OffMapAirplaneRadioButton
 
             Components =
             [
@@ -95,13 +59,13 @@ BUCKSpecificOffMapAirplaneMainComponentDescriptor is BUCKSpecificOffMapButton
                 (
                     ComponentFrame = TUIFramePropertyRTTI
                     (
-                        RelativeWidthHeight = [1,1]
+                        RelativeWidthHeight = [1.0, 1.0]
                     )
 
                     TextureToken = 'icone_evacuation'
                     TextureFrame = TUIFramePropertyRTTI
                     (
-                        RelativeWidthHeight = [1, 1]
+                        RelativeWidthHeight = [1.0, 1.0]
                         AlignementToFather = [0.5, 0.5]
                         AlignementToAnchor = [0.5, 0.5]
                     )
@@ -110,7 +74,6 @@ BUCKSpecificOffMapAirplaneMainComponentDescriptor is BUCKSpecificOffMapButton
 
                 BUCKSpecificHintableArea
                 (
-
                     DicoToken = ~/LocalisationConstantes/dico_interface_ingame
                     HintTitleToken = "HOM_EVAT"
                     HintBodyToken = "HOM_EVAB"
@@ -119,9 +82,41 @@ BUCKSpecificOffMapAirplaneMainComponentDescriptor is BUCKSpecificOffMapButton
             ]
         )
     ]
-
 )
+
 //-------------------------------------------------------------------------------------
+
+AirplaneXP is BUCKTextureDescriptor
+(
+    ElementName = "XPTexture"
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = XPStarMagnifiableWitdhHeight
+        AlignementToFather = [1.0, 0.0]
+        AlignementToAnchor = [1.0, 0.0]
+        MagnifiableOffset = [-3.0, 3.0]
+    )
+
+    TextureFrame = TUIFramePropertyRTTI( RelativeWidthHeight = [1.0, 1.0] )
+
+    HasBackground = true
+    BackgroundBlockColorToken = "bleuNavy_fonce"
+
+    // Hint
+    Components =
+    [
+         BUCKSpecificHintableArea
+        (
+            DicoToken = ~/LocalisationConstantes/dico_interface_ingame
+            HintTitleToken = "HPD_UEXPT"
+            HintBodyToken = "HPD_UEXPB"
+            HintExtendedToken = "HPD_UEXPE"
+        )
+    ]
+)
+
+//-------------------------------------------------------------------------------------
+
 BlocNom_status_jauge is BUCKListDescriptor
 (
     ElementName = 'BlocNom_status_jauge'
@@ -132,10 +127,11 @@ BlocNom_status_jauge is BUCKListDescriptor
         AlignementToAnchor  = [0.0, 1.0]
         AlignementToFather  = [0.0, 1.0]
     )
+
     Axis = ~/ListAxis/Vertical
+
     Elements =
     [
-
         BUCKListElementDescriptor
         (
             ComponentDescriptor = ~/StateGauge
@@ -146,7 +142,6 @@ BlocNom_status_jauge is BUCKListDescriptor
             ComponentDescriptor = ~/NomUnite
         ),
     ]
-
 )
 
 //-------------------------------------------------------------------------------------
@@ -162,7 +157,7 @@ StatusUnite is BUCKTextDescriptor
         AlignementToFather = [0.5, 0.0]
     )
 
-    ParagraphStyle = TParagraphStyleRTTI
+    ParagraphStyle = TParagraphStyle
     (
         Alignment = UIText_Center
         VerticalAlignment = UIText_VerticalCenter
@@ -182,19 +177,20 @@ StatusUnite is BUCKTextDescriptor
 
     TextDico = ~/LocalisationConstantes/dico_interface_ingame
 
-    TextColor = "White_MOD"
-    TextSize = "13"
+    TextColor = "Blanc"
+    TextSize = "14"
 
     Hint = BUCKSpecificHintableArea
     (
         ElementName = "StateHint"
         DicoToken = ~/LocalisationConstantes/dico_interface_ingame
         HintTitleToken = "HOM_STATT"
-        HintBodyToken = "HOM_STATB"
         HintExtendedToken = "HOM_STATE"
     )
 )
+
 //-------------------------------------------------------------------------------------
+
 NomUnite is BUCKTextDescriptor
 (
     ElementName = "UnitName"
@@ -206,10 +202,10 @@ NomUnite is BUCKTextDescriptor
     )
 
     HasBackground = true
-    BackgroundBlockColorToken = 'OffMapUnitButtonName_MOD'
+    BackgroundBlockColorToken = 'MOD_OffMapUnitButtonName'
     TextStyle = "Default"
 
-    ParagraphStyle = TParagraphStyleRTTI
+    ParagraphStyle = TParagraphStyle
     (
         Alignment = UIText_Center
         VerticalAlignment = UIText_VerticalCenter
@@ -218,7 +214,8 @@ NomUnite is BUCKTextDescriptor
     BigLineAction = ~/BigLineAction/CutByDots
 
     TextSize = "12"
-    TextColor = "BlancEquipe_MOD"
+    TextColor = "MOD_Dark"
+
     TextToken = ""
     TextDico = ~/LocalisationConstantes/dico_interface_ingame
     TypefaceToken = "UIMainFont"
@@ -234,7 +231,9 @@ NomUnite is BUCKTextDescriptor
         HintExtendedToken = "HOM_UNNAME"
     )
 )
+
 //-------------------------------------------------------------------------------------
+
 IconeUnite is BUCKContainerDescriptor
 (
     ElementName = "IconeUnite"
@@ -246,23 +245,19 @@ IconeUnite is BUCKContainerDescriptor
         AlignementToAnchor = [0.0, 0.5]
     )
 
-
-
     Components =
     [
         BUCKTextureDescriptor
         (
             ElementName = 'UnitTexture'
             ComponentFrame = TUIFramePropertyRTTI( RelativeWidthHeight = [1.0, 1.0] )
-
             TextureFrame   = TUIFramePropertyRTTI( RelativeWidthHeight = [1.0, 1.0] )
-            //TextureColorToken = "Fulda2_Orange100"
         ),
 
         BUCKSpecificHintableArea
         (
             ElementName = 'UnitTextureHint'
-            DicoToken = ~/LocalisationConstantes/dico_unites
+            DicoToken = ~/LocalisationConstantes/dico_units
             HintTitleToken = "UNKNOWN"
             HintBodyToken = "UNKNOWN"
             HintExtendedToken = "UNKNOWN"
@@ -271,6 +266,7 @@ IconeUnite is BUCKContainerDescriptor
 )
 
 //-------------------------------------------------------------------------------------
+
 StateGauge is BUCKGaugeDescriptor
 (
     ElementName = 'StateGauge'
@@ -287,7 +283,7 @@ StateGauge is BUCKGaugeDescriptor
     GaugeMax = 100
 
     HasBackground = true
-    BackgroundBlockColorToken = 'airplane_StateGaugeValue_MOD'
+    BackgroundBlockColorToken = 'MOD_TypeC'
 
     Components =
     [
@@ -300,21 +296,18 @@ StateGauge is BUCKGaugeDescriptor
             )
 
             HasBackground = true
-            BackgroundBlockColorToken = "airplane_StateGaugeValueLoader_MOD"
+            BackgroundBlockColorToken = "MOD_Fulda2_Orange100"
         ),
-        BUCKSpecificHintableArea
-        (
-            DicoToken = ~/LocalisationConstantes/dico_interface_ingame
-            HintTitleToken = "HPD_UEXPT"
-            HintBodyToken = "HPD_UEXPB"
-            HintExtendedToken = "HPD_UEXPE"
-        ),
-        StatusUnite,
+        ~/StatusUnite,
     ]
 )
+
 //-------------------------------------------------------------------------------------
+
 UISpecificOffMapAirplaneViewDescriptor is TUISpecificOffMapAirplaneViewDescriptor
 (
     MainComponentDescriptor = ~/BUCKSpecificOffMapAirplaneMainComponentDescriptor
     MainComponentContainerUniqueName = "" // Permet d'indiquer l'endroit ou le composant doit s'insérer
+
+    ExperienceTextureTokens = ["CommonTexture_Chevron_1", "CommonTexture_Chevron_2", "CommonTexture_Chevron_3"]
 )

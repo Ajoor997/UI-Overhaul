@@ -47,7 +47,6 @@ template MenuActionButton
     ForceEvents : boolean = false,
     TextColor : string = "Blanc_multi",
     TextSize : string = "16",
-    TextureColorToken : string = '',
     ForbiddenTags : LIST<string> = [],
     HintTitleToken : string = '',
     HintExtendedToken : string = '',
@@ -123,7 +122,7 @@ template MenuActionButton
                     ComponentDescriptor = BUCKTextDescriptor
                     (
                         ElementName = <TextElementName>
-                        ParagraphStyle = TParagraphStyleRTTI
+                        ParagraphStyle = TParagraphStyle
                         (
                             VerticalAlignment = ~/UIText_VerticalCenter
                             Alignment = ~/UIText_Center

@@ -6,7 +6,6 @@ template TContainerDarkStyle
     Components : LIST<TBUCKContainerDescriptor> = [],
     ElementName : string = '',
     UniqueName : string = '',
-    FitStyle : int = ~/ContainerFitStyle/None,
     ShowLightTexture : bool = true,
     HidePointerEvents : bool = true,
     HasInternalBorders : bool = false,
@@ -113,21 +112,9 @@ template PanelRoundedCorner
     // ++ BUCKContainerDescriptor
     ElementName : string = "",
     UniqueName : string = "",
-    RequiredTags : LIST<string> = [],
-    ForbiddenTags : LIST<string> = [],
     ComponentFrame : TUIFramePropertyRTTI = TUIFramePropertyRTTI ( RelativeWidthHeight = [1.0, 1.0] ),
 
     MagnifierMultiplication : float = 0.0,
-
-    PointerEventsToAllow : int = ~/EAllowablePointerEventType/None,
-    HidePointerEvents : bool = false,
-
-    GridAlign : bool = false,
-
-    IsDroppable : bool = false,
-    ForegroundForDropBlockColor : string = "",
-    BorderForDropLineColor : string = "",
-    BorderForDropLineThicknessToken : string = "",
 
     FitStyle : int = ~/ContainerFitStyle/None,
     ChildFitToContent : bool = false,
@@ -135,17 +122,17 @@ template PanelRoundedCorner
     ClipContent : bool = false,
     IsClippable : bool = true,
 
+    HidePointerEvents : bool = false,
+
     HasBackground : bool = true,
-    BackgroundBlockColorToken : string = "H2_bleu_2",
+    BackgroundBlockColorToken : string = "MOD_BoutonTemps2",
     HasBorder : bool = true,
     BorderThicknessToken : string = '1',
-    BorderLineColorToken :string = "H2_bleu_2",
-    BorderColorTokenBySide : LIST<PAIR<int, string>> = [],
+    BorderLineColorToken :string = "MOD_White",
 
     BackgroundLocalRenderLayer : int = 0,
     BorderLocalRenderLayer : int = 0,
 
-    ComponentStateLocked : bool = false,
     Components = [],
     // -- BUCKContainerDescriptor
 
@@ -157,7 +144,9 @@ is BUCKPolygonDescriptor
 (
     MagnifierMultiplication = <MagnifierMultiplication>
     ElementName = <ElementName>
+    UniqueName = <UniqueName>
     ComponentFrame = <ComponentFrame>
+
 
     PolygonShape = PolygonShapeRoundedContainer
     (
@@ -167,6 +156,10 @@ is BUCKPolygonDescriptor
     )
 
     FitStyle = <FitStyle>
+    ChildFitToContent = <ChildFitToContent>
+
+    ClipContent = <ClipContent>
+    IsClippable = <IsClippable>
 
     HidePointerEvents = <HidePointerEvents>
 

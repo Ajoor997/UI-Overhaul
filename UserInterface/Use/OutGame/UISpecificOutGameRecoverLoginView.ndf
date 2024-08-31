@@ -45,10 +45,11 @@ template EcranGaucheTextEditable
                         )
                         HorizontalFitStyle = ~/FitStyle/MinBetweenUserDefinedAndContent
 
-                        ParagraphStyle = TParagraphStyleRTTI
+                        ParagraphStyle = TParagraphStyle
                         (
                             VerticalAlignment = ~/UIText_VerticalCenter
                             Alignment = UIText_Right
+                            InterLine = -0.2
                         )
 
                         TextStyle       = "TextStyleEcranMoniteur"
@@ -152,7 +153,7 @@ BUCKSpecificOutGameRecoverLoginMainComponentDescriptor is LoginTvContainer
                             AlignementToFather = [0.5, 0.0]
                         )
 
-                        ParagraphStyle = TParagraphStyleRTTI
+                        ParagraphStyle = TParagraphStyle
                         (
                             VerticalAlignment = ~/UIText_VerticalCenter
                             Alignment = UIText_Center
@@ -190,7 +191,7 @@ BUCKSpecificOutGameRecoverLoginMainComponentDescriptor is LoginTvContainer
                             AlignementToFather = [0.5, 0.0]
                         )
 
-                        ParagraphStyle = TParagraphStyleRTTI
+                        ParagraphStyle = TParagraphStyle
                         (
                             VerticalAlignment = ~/UIText_VerticalCenter
                             Alignment = UIText_Center

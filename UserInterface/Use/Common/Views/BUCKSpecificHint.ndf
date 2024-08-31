@@ -4,7 +4,7 @@ private HintInGameMaxMagnifiableWidth is 430.0
 // -------------------------------------------------------------------------------------------------
 // -------------------------------------------------------------------------------------------------
 
-private HintParagraphStyle is TParagraphStyleRTTI
+private HintParagraphStyle is TParagraphStyle
 (
     Alignment         = UIText_Left
     VerticalAlignment = UIText_Up
@@ -144,10 +144,11 @@ private HintInGameExtendedTextBUCKComponent is BUCKContainerDescriptor
     (
         MagnifiableWidthHeight = [0.0, 0.0]
     )
+
     HasBorder = false
-            BorderLineColorToken = 'BlancEquipe'
-            BorderThicknessToken = '1'
-            BordersToDraw = ~/TBorderSide/Top
+    BorderLineColorToken = 'BlancEquipe'
+    BorderThicknessToken = '1'
+    BordersToDraw = ~/TBorderSide/Top
     FitStyle = ~/ContainerFitStyle/FitToContent
 
     Components =
@@ -162,7 +163,7 @@ private HintInGameExtendedTextBUCKComponent is BUCKContainerDescriptor
                 AlignementToAnchor = [0.5, 0.0]
             )
 
-            ParagraphStyle = TParagraphStyleRTTI
+            ParagraphStyle = TParagraphStyle
             (
                 Alignment         = UIText_Left
                 VerticalAlignment = UIText_Up
@@ -189,7 +190,11 @@ private HintInGameExtendedTextBUCKComponent is BUCKContainerDescriptor
 // -------------------------------------------------------------------------------------------------
 
 // Composant du hint
-private HintInGameBUCKComponent is HintBUCKComponent
+private template HintInGameBUCKComponent
+[
+    BackgroundBlockColorToken : string = "hint_fond_meilleureLecture",
+    BorderLineColorToken : string = "H2_bleu_2",
+] is HintBUCKComponent
 (
     ComponentFrame = TUIFramePropertyRTTI
     (
@@ -215,10 +220,10 @@ private HintInGameBUCKComponent is HintBUCKComponent
 
     ListBackgroundComponents =
     [
-
         PanelRoundedCorner
         (
-            BackgroundBlockColorToken = "hint_fond_meilleureLecture"
+            BackgroundBlockColorToken = <BackgroundBlockColorToken>
+            BorderLineColorToken = <BorderLineColorToken>
             Radius = 5
             RoundedVertexes = [true, true, true,true]
         ),
@@ -234,6 +239,7 @@ private HintInGameBUCKComponent is HintBUCKComponent
 template BUCKSpecificHintableArea
 [
     ElementName : string = "",
+    UniqueName : string = "",
 
     ForbiddenTags : list<string> = [],
 
@@ -249,6 +255,7 @@ template BUCKSpecificHintableArea
 is HintableAreaBUCKComponent
 (
     ElementName = <ElementName>
+    UniqueName = <UniqueName>
 
     ForbiddenTags = <ForbiddenTags>
 
@@ -257,6 +264,6 @@ is HintableAreaBUCKComponent
     HintBodyToken = <HintBodyToken>
     HintExtendedToken = <HintExtendedToken>
 
-    HintStandardBUCKComponent = ~/HintInGameBUCKComponent
+    HintStandardBUCKComponent = HintInGameBUCKComponent()
     HintSpecificBUCKComponent = <HintSpecificBUCKComponent>
 )

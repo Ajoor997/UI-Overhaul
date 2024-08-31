@@ -26,9 +26,6 @@ BUCKSpecificOutGameChatOneChannelMainComponentDescriptor is BUCKButtonDescriptor
         (
             ElementName = "ChannelButtonHintableArea"
             DicoToken = ~/LocalisationConstantes/dico_interface_outgame
-            HintTitleToken = ""
-            HintBodyToken = ""
-            HintExtendedToken = ""
         ),
         BUCKTextDescriptor
         (
@@ -43,7 +40,7 @@ BUCKSpecificOutGameChatOneChannelMainComponentDescriptor is BUCKButtonDescriptor
                 AlignementToAnchor = [0.0, 0.5]
             )
 
-            ParagraphStyle = TParagraphStyleRTTI
+            ParagraphStyle = TParagraphStyle
             (
                 Alignment = UIText_Left
                 VerticalAlignment = UIText_VerticalCenter

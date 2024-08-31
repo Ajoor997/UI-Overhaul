@@ -56,7 +56,7 @@ OutGameSearchAutoMatchGameDescriptor is BUCKContainerDescriptor
                         TextDico = ~/LocalisationConstantes/dico_interface_outgame
                         TypefaceToken = "UIMainFont"
 
-                        ParagraphStyle = TParagraphStyleRTTI
+                        ParagraphStyle = TParagraphStyle
                         (
                             Alignment = UIText_Center
                             VerticalAlignment = UIText_Bottom
@@ -107,7 +107,7 @@ OutGameSearchAutoMatchGameDescriptor is BUCKContainerDescriptor
                                     TextDico = ~/LocalisationConstantes/dico_interface_outgame
                                     TypefaceToken = "UIMainFont"
 
-                                    ParagraphStyle = TParagraphStyleRTTI
+                                    ParagraphStyle = TParagraphStyle
                                     (
                                         Alignment = UIText_Left
                                         VerticalAlignment = UIText_VerticalCenter
@@ -135,7 +135,7 @@ OutGameSearchAutoMatchGameDescriptor is BUCKContainerDescriptor
                                     TextDico = ~/LocalisationConstantes/dico_interface_outgame
                                     TypefaceToken = "UIMainFont"
 
-                                    ParagraphStyle = TParagraphStyleRTTI
+                                    ParagraphStyle = TParagraphStyle
                                     (
                                         Alignment = UIText_Right
                                         VerticalAlignment = UIText_VerticalCenter

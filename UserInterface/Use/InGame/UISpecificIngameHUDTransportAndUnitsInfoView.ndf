@@ -103,7 +103,7 @@ BUCKSpecificInGameHUDTransportAndUnitsInfoMainComponentDescriptor is BUCKContain
             ElementName = 'DisplayList'
             ComponentFrame = TUIFramePropertyRTTI
             (
-                MagnifiableOffset = [0.0, -15.0]
+                MagnifiableOffset = [-1.0, 12.0]
             )
 
             Axis = ~/ListAxis/Horizontal

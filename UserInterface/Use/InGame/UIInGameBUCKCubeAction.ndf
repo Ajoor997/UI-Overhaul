@@ -14,12 +14,21 @@ template CubeActionButton
     BigLineAction : int,
     BackgroundColor : string = "Fulda2_BoutonCubeAction",
     BorderColor : string = "ButtonHUD/BigBorder",
-    TextColor : string = "ButtonHUD/Text2",
+    TextColor : string = "MOD_BUTTON_TEXT_STYLE1",
     TextSize : string = "18",
-
-    BackgroundBlockColorToken : string = "BoutonTemps",
-    BorderLineColorToken : string = "BoutonTemps",
+    HasBorder : bool = false,
+    BackgroundBlockColorToken : string = "MOD_Button_STYLE1",
+    BorderLineColorToken : string = "MOD_White",
     RoundedVertexes : LIST< bool > = [true, true, true, true], // le 1er est en bas à gauche
+
+    HintableAreaComponent : TBUCKHintableAreaDescriptor = BUCKSpecificHintableArea
+    (
+        ElementName = "CubeActionHintableArea"
+        DicoToken = ~/LocalisationConstantes/dico_interface_ingame
+        HintTitleToken = "HUD_UNKN"
+        HintBodyToken = "HUD_UNKN"
+        HintExtendedToken = "HUD_UNKN"
+    ),
 
 ] is TCommonInGameCubeActionButtonDescriptor
 (
@@ -50,20 +59,19 @@ template CubeActionButton
             BorderLineColorToken = <BorderLineColorToken>
             RoundedVertexes = <RoundedVertexes>
         ),
-
         BUCKTextDescriptor
         (
             ElementName = "CubeActionButtonText"
 
             ComponentFrame = TUIFramePropertyRTTI
             (
-                RelativeWidthHeight = [1.0, 1.0]
+                RelativeWidthHeight = [0.9, 0.9]
                 MagnifiableWidthHeight = [-6.0, -6.0]
                 AlignementToFather = [0.5, 0.5]
                 AlignementToAnchor = [0.5, 0.5]
             )
 
-            ParagraphStyle = TParagraphStyleRTTI
+            ParagraphStyle = TParagraphStyle
             (
                 Alignment = UIText_Center
                 VerticalAlignment = UIText_VerticalCenter
@@ -71,8 +79,11 @@ template CubeActionButton
 
             )
 
-            HasBackground = false
-            BackgroundBlockColorToken = <BackgroundColor>
+            HasBorder = <HasBorder>
+            BorderLineColorToken = 'ButtonHUD/Text2'
+            BorderThicknessToken = '1'
+            HasBackground = true
+            BackgroundBlockColorToken = 'bouton_cubeAction'
 
             TextStyle = "Default"
 
@@ -85,16 +96,9 @@ template CubeActionButton
             TextDico        = ~/LocalisationConstantes/dico_interface_outgame
             TypefaceToken   = "Liberator"
         ),
+    ] +
 
-        BUCKSpecificHintableArea
-        (
-            ElementName = "CubeActionHintableArea"
-            DicoToken = ~/LocalisationConstantes/dico_interface_ingame
-            HintTitleToken = "HUD_UNKN"
-            HintBodyToken = "HUD_UNKN"
-            HintExtendedToken = "HUD_UNKN"
-        ),
-    ]
+    (<HintableAreaComponent> != nil ? [<HintableAreaComponent>] : [])
 )
 
 //------------------------------------------------------------------------
@@ -137,8 +141,8 @@ template CubeActionToggleButton
                 AlignementToAnchor = [0.5, 0.5]
             )
             Radius = 3
-            BackgroundBlockColorToken = "BoutonTemps"
-            BorderLineColorToken = "BoutonTemps"
+            BackgroundBlockColorToken = "MOD_Button_STYLE2"
+            BorderLineColorToken = "MOD_White"
         ),
 
         BUCKTextDescriptor
@@ -153,7 +157,7 @@ template CubeActionToggleButton
                 AlignementToAnchor = [0.5, 0.5]
             )
 
-            ParagraphStyle = TParagraphStyleRTTI
+            ParagraphStyle = TParagraphStyle
             (
                 Alignment = UIText_Center
                 VerticalAlignment = UIText_VerticalCenter
@@ -165,7 +169,7 @@ template CubeActionToggleButton
             VerticalFitStyle = ~/FitStyle/UserDefined
 
             BigLineAction   = <BigLineAction>
-            TextColor       = "ButtonHUD/Text2"
+            TextColor       = "MOD_White"
             TextSize        = <TextSize>
             TextDico        = ~/LocalisationConstantes/dico_interface_outgame
 
@@ -235,7 +239,7 @@ CubeActionEmptyButton is TCommonInGameCubeActionButtonDescriptor
                 AlignementToAnchor = [0.5, 0.5]
             )
 
-            ParagraphStyle = TParagraphStyleRTTI
+            ParagraphStyle = TParagraphStyle
             (
                 Alignment = UIText_Center
                 VerticalAlignment = UIText_VerticalCenter
@@ -372,7 +376,7 @@ private template PanelCubeAction_Title
     HorizontalFitStyle = ~/FitStyle/UserDefined
     VerticalFitStyle = ~/FitStyle/UserDefined
 
-    TextColor       = "BlancEquipe"
+    TextColor       = "MOD_White"
     TextSize        = "16"
     TextToken       = <TextToken>
     TextDico        = ~/LocalisationConstantes/dico_interface_ingame
@@ -469,6 +473,8 @@ private PanelCubeAction_Orders is BUCKListDescriptor
     [
         PanelRoundedCorner
         (
+            BackgroundBlockColorToken = "MOD_BoutonTemps2"
+            BorderLineColorToken = "MOD_White"
             Components =
             [
                 BUCKListDescriptor
@@ -497,7 +503,7 @@ private PanelCubeAction_Orders is BUCKListDescriptor
                         //        )
                         //    )
                         //),
-
+                        //
                         //BUCKListElementDescriptor
                         //(
                         //    ComponentDescriptor = PanelRoundedCorner
@@ -509,7 +515,7 @@ private PanelCubeAction_Orders is BUCKListDescriptor
                         //        )
                         //    )
                         //),
-
+                        //
                         //BUCKListElementDescriptor
                         //(
                         //    ComponentDescriptor = PanelRoundedCorner
@@ -577,7 +583,7 @@ private PanelCubeAction_SmartOrders is BUCKListDescriptor
                             HorizontalFitStyle = ~/FitStyle/FitToContent
                             VerticalFitStyle = ~/FitStyle/UserDefined
 
-                            TextColor       = "BlancEquipe"
+                            TextColor       = "MOD_White"
                             TextSize        = "16"
                             TextToken       = "SCA_TITLE"
                             TextDico        = ~/LocalisationConstantes/dico_interface_ingame
@@ -617,7 +623,10 @@ private PanelCubeAction_SmartOrders is BUCKListDescriptor
 
     BackgroundComponents =
     [
-        PanelRoundedCorner()
+        PanelRoundedCorner(
+            BackgroundBlockColorToken = "MOD_BoutonTemps2"
+            BorderLineColorToken = "MOD_White"
+        )
     ]
 )
 
@@ -631,8 +640,16 @@ private UISpecificTacticCubeActionViewDescriptor is TUISpecificCubeActionViewDes
     [
         (~/TacticCubeActionFunctionType/Orders, CubeActionButton(BigLineAction = ~/BigLineAction/BalancedMultiline)),
         (~/TacticCubeActionFunctionType/TogglableOrders, CubeActionToggleButton(TextSize = '18' BigLineAction = ~/BigLineAction/BalancedMultiline)),
-        (~/TacticCubeActionFunctionType/SmartOrders, CubeActionButton( TextSize = '18' BigLineAction = ~/BigLineAction/BalancedMultiline)),
+        (~/TacticCubeActionFunctionType/SmartOrders, CubeActionButton(TextSize = '18' BigLineAction = ~/BigLineAction/BalancedMultiline)),
     ]
 
     EmptyButtonTemplateDescriptor  = ~/CubeActionEmptyButton
+
+    SpotlightDescriptor = BUCKSpotlightDescriptor
+    (
+        ComponentFrame = TUIFramePropertyRTTI
+        (
+            RelativeWidthHeight = [1.0, 1.0]
+        )
+    )
 )

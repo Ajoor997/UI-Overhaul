@@ -80,7 +80,7 @@ ConfigPanelMappingButton is BUCKSpecificButton
     HasText = true
     OverrideTextElementName = true
     TextElementName = "MappingText"
-    TextParagraphStyle = TParagraphStyleRTTI
+    TextParagraphStyle = TParagraphStyle
                 (
                     Alignment = UIText_Left
                     VerticalAlignment = UIText_VerticalCenter
@@ -101,7 +101,7 @@ CreditsSubCategoryTitle is BUCKTextDescriptor
         MagnifiableWidthHeight = [0.0, 30.0]
     )
 
-    ParagraphStyle = TParagraphStyleRTTI
+    ParagraphStyle = TParagraphStyle
     (
         Alignment = UIText_Center
         VerticalAlignment = UIText_Bottom
@@ -128,7 +128,7 @@ CreditsPeopleCategoryTitle is BUCKTextDescriptor
         MagnifiableWidthHeight = [0.0, 30.0]
     )
 
-    ParagraphStyle = TParagraphStyleRTTI
+    ParagraphStyle = TParagraphStyle
     (
         Alignment = UIText_Center
         VerticalAlignment = UIText_VerticalCenter
@@ -156,7 +156,7 @@ CreditsNameEntry is BUCKTextDescriptor
         MagnifiableWidthHeight = [0.0, 30.0]
     )
 
-    ParagraphStyle = TParagraphStyleRTTI
+    ParagraphStyle = TParagraphStyle
     (
         Alignment = UIText_Center
         VerticalAlignment = UIText_VerticalCenter
@@ -265,7 +265,7 @@ ConfigPanelMultiListLine is BUCKStateUpdaterDescriptor
                                     MagnifiableOffset = [0,5]
                                 )
 
-                                ParagraphStyle = TParagraphStyleRTTI
+                                ParagraphStyle = TParagraphStyle
                                 (
                                     Alignment = UIText_Right
                                     VerticalAlignment = UIText_VerticalCenter
@@ -357,7 +357,7 @@ ConfigPanelMultiListLine is BUCKStateUpdaterDescriptor
                                         MagnifiableWidthHeight = [50.0, 0.0]
                                     )
 
-                                    ParagraphStyle = TParagraphStyleRTTI
+                                    ParagraphStyle = TParagraphStyle
                                     (
                                         Alignment = UIText_Left
                                         VerticalAlignment = UIText_VerticalCenter
@@ -463,7 +463,7 @@ private PrivacyPoliciesScrollingDescriptor is BUCKContainerDescriptor
                                 MagnifiableWidthHeight = [0.0, 45.0]
                             )
 
-                            ParagraphStyle = TParagraphStyleRTTI
+                            ParagraphStyle = TParagraphStyle
                             (
                                 Alignment = UIText_Center
                                 VerticalAlignment = UIText_VerticalCenter
@@ -496,7 +496,7 @@ private PrivacyPoliciesScrollingDescriptor is BUCKContainerDescriptor
                                 MagnifiableWidthHeight = [ -10.0, 0.0 ]
                             )
 
-                            ParagraphStyle = TParagraphStyleRTTI
+                            ParagraphStyle = TParagraphStyle
                             (
                                 Alignment = UIText_Left
                                 VerticalAlignment = UIText_VerticalCenter
@@ -990,7 +990,6 @@ FondPanelNavigation is BUCKTextureDescriptor
 BUCKSpecificOutGameOptionMainComponentDescriptor is WindowFrameContainer
 (
     ElementName = "OutgameOptionMainComponent"
-    ContentExtendWeight = 1.0
     ContentRelativeWidthHeight = [1.0, 1.0]
     TitleToken =  ''
     HasBackground = false

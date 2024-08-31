@@ -1,5 +1,5 @@
 
-private VideoSubtitleParagraphStyle is TParagraphStyleRTTI
+private VideoSubtitleParagraphStyle is TParagraphStyle
 (
     Alignment         = UIText_Center
     VerticalAlignment = UIText_Bottom

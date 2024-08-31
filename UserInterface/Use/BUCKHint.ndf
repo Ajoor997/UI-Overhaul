@@ -2,7 +2,7 @@
 template HintTitleTextBUCKComponent
 [
     ComponentFrame : TUIFramePropertyRTTI = nil,
-    ParagraphStyle : TParagraphStyleRTTI = nil,
+    ParagraphStyle : TParagraphStyle = nil,
     TextStyle : string = "Default",
     TextPadding : TRTTILength4 = TRTTILength4(),
 
@@ -47,7 +47,7 @@ is BUCKTextDescriptor
 template HintBodyTextBUCKComponent
 [
     ComponentFrame : TUIFramePropertyRTTI = nil,
-    ParagraphStyle : TParagraphStyleRTTI = nil,
+    ParagraphStyle : TParagraphStyle = nil,
     TextStyle : string = "Default",
     TextPadding : TRTTILength4 = TRTTILength4(),
 
@@ -86,7 +86,7 @@ is BUCKTextDescriptor
 template HintSeparatorTextBUCKComponent
 [
     ComponentFrame : TUIFramePropertyRTTI = nil,
-    ParagraphStyle : TParagraphStyleRTTI = nil,
+    ParagraphStyle : TParagraphStyle = nil,
     TextStyle : string = "Default",
     TextPadding : TRTTILength4 = TRTTILength4(),
 
@@ -130,7 +130,7 @@ is BUCKTextDescriptor
 template HintExtendedTextBUCKComponent
 [
     ComponentFrame : TUIFramePropertyRTTI = nil,
-    ParagraphStyle : TParagraphStyleRTTI = nil,
+    ParagraphStyle : TParagraphStyle = nil,
     TextStyle : string = "Default",
     TextPadding : TRTTILength4 = TRTTILength4(),
 
@@ -276,6 +276,7 @@ is BUCKHintDescriptor
 template HintableAreaBUCKComponent
 [
     ElementName : string = "",
+    UniqueName : string = "",
 
     ForbiddenTags : list<string> = [],
 
@@ -294,6 +295,7 @@ template HintableAreaBUCKComponent
 is BUCKHintableAreaDescriptor
 (
     ElementName = <ElementName>
+    UniqueName = <UniqueName>
     ComponentFrame = TUIFramePropertyRTTI
     (
         RelativeWidthHeight = [1.0, 1.0]

@@ -33,7 +33,7 @@ SmartGroupPanelHeadList is BUCKListDescriptor
                 HorizontalFitStyle = ~/FitStyle/FitToContent
                 VerticalFitStyle = ~/FitStyle/FitToContent
 
-                TextColor       = "BlancEquipe"
+                TextColor       = "MOD_White"
                 TextSize        = "16"
                 TextToken       = "SGR_CUSTM"
                 TextDico        = ~/LocalisationConstantes/dico_interface_ingame
@@ -49,7 +49,7 @@ SmartGroupPanelHeadList is BUCKListDescriptor
                 ComponentFrame = TUIFramePropertyRTTI()
 
                 TextPadding = TRTTILength4(Magnifiable = [10.0, 0.0, 0.0, 0.0])
-                ParagraphStyle = TParagraphStyleRTTI
+                ParagraphStyle = TParagraphStyle
                 (
                     Alignment = UIText_Center
                     VerticalAlignment = UIText_VerticalCenter
@@ -84,8 +84,8 @@ template SmartGroupActionButton
         MagnifiableWidthHeight = [75.0, 25.0]
     ),
     TextToken : string,
-    ReinforceBackgroundBlockColorToken : string = "BoutonTemps",
-    ReinforceBorderLineColorToken : string = "BoutonTemps",
+    ReinforceBackgroundBlockColorToken : string = "MOD_Button_STYLE1",
+    ReinforceBorderLineColorToken : string = "MOD_White",
     IsTogglable : bool,
     HasHintableArea : bool,
     IsClippable : bool = true,
@@ -131,7 +131,7 @@ template SmartGroupActionButton
                 AlignementToAnchor = [0.5, 0.5]
             )
 
-            ParagraphStyle = TParagraphStyleRTTI
+            ParagraphStyle = TParagraphStyle
             (
                 Alignment = UIText_Center
                 VerticalAlignment = UIText_VerticalCenter
@@ -289,11 +289,7 @@ SmartGroupSelectionPanelMainPanel is BUCKListDescriptor
 
     BackgroundComponents =
     [
-        PanelRoundedCorner
-        (
-            BorderLineColorToken = "H2_bleu_2"
-            BackgroundBlockColorToken = "H2_bleu_2_60p"
-        ),
+        PanelRoundedCorner(),
         SmartGroupPanelHeadList,
     ]
 )

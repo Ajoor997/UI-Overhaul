@@ -42,7 +42,7 @@ private CheckBoxComponent is BUCKSensibleAreaDescriptor
             HorizontalFitStyle = ~/FitStyle/FitToContent
             VerticalFitStyle = ~/FitStyle/FitToParent
 
-            ParagraphStyle = TParagraphStyleRTTI
+            ParagraphStyle = TParagraphStyle
             (
                 VerticalAlignment = ~/UIText_VerticalCenter
             )
@@ -151,7 +151,7 @@ template CheckBoxFilters
                         HorizontalFitStyle = ~/FitStyle/FitToContent
                         VerticalFitStyle = ~/FitStyle/FitToParent
 
-                        ParagraphStyle = TParagraphStyleRTTI
+                        ParagraphStyle = TParagraphStyle
                         (
                             VerticalAlignment = ~/UIText_VerticalCenter
                         )

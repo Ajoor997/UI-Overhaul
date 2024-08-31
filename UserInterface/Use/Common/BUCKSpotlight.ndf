@@ -27,7 +27,6 @@ template BUCKSpotlightDescriptor
     GridAlign : bool = false,
 
     IsDroppable : bool = false,
-    ForegroundForDropBlockColor : string = "",
     BorderForDropLineColor : string = "",
     BorderForDropLineThicknessToken : string = "",
 
@@ -44,7 +43,6 @@ template BUCKSpotlightDescriptor
     BordersToDraw : int = ~/TBorderSide/Default,
     BorderThicknessToken : string = "",
     BorderLineColorToken : string = "",
-    BorderColorTokenBySide : LIST<PAIR<int, string>> = [],
 
     BackgroundLocalRenderLayer : int = 0,
     BorderLocalRenderLayer : int = 0,
@@ -70,7 +68,6 @@ is TBUCKSpotlightDescriptor
     GridAlign = <GridAlign>
 
     IsDroppable = <IsDroppable>
-    ForegroundForDropBlockColor = <ForegroundForDropBlockColor>
     BorderForDropLineColor = <BorderForDropLineColor>
     BorderForDropLineThicknessToken = <BorderForDropLineThicknessToken>
 
@@ -89,7 +86,6 @@ is TBUCKSpotlightDescriptor
     BordersToDraw = <BordersToDraw>
     BorderThicknessToken = <BorderThicknessToken>
     BorderLineColorToken = <BorderLineColorToken>
-    BorderColorTokenBySide = <BorderColorTokenBySide>
 
     BackgroundLocalRenderLayer = <BackgroundLocalRenderLayer>
     BorderLocalRenderLayer = <BorderLocalRenderLayer>

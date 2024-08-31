@@ -73,7 +73,7 @@ template SmartGroupProductionButton
                             AlignementToAnchor = [0.0, 0.5]
                         )
 
-                        ParagraphStyle = TParagraphStyleRTTI
+                        ParagraphStyle = TParagraphStyle
                         (
                             Alignment = UIText_Left
                             VerticalAlignment = UIText_VerticalCenter
@@ -120,7 +120,7 @@ template SmartGroupProductionButton
                             AlignementToAnchor = [0.0, 0.5]
                         )
 
-                        ParagraphStyle = TParagraphStyleRTTI
+                        ParagraphStyle = TParagraphStyle
                         (
                             Alignment = UIText_Left
                             VerticalAlignment = UIText_VerticalCenter

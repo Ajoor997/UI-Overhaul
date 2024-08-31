@@ -86,14 +86,13 @@ ChatTextFormatScript is TTextFormatScriptRTTI
             "default",
             TTFSCommand_StyleChange
             (
-                Style = TTextStyleRTTI
+                Style = TTextStyle
                 (
                     FontSize    = 1.0
                     ColorBottom = [0, 0, 0, 0]
                     ColorUp     = [0, 0, 0, 0]
                     ColorStroke = [0, 0, 0, 0]
                     Stroke = false
-                    AllowSmallFont = true
                 )
             )
         ),

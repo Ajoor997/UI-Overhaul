@@ -1,90 +1,78 @@
 private interstice is 4.0
-public UnitLabelAggregationWidth is ~/LabelUnitIconWidthHeight[0] + interstice
-public UnitLabelAggregationHeight is ~/LabelUnitIconWidthHeight[1] + interstice
+public UnitLabelAggregationWidth is ~/LabelUnitIconSize + interstice
+public UnitLabelAggregationHeight is ~/LabelUnitIconSize + interstice
 private AggregationLocalLayerAdditionalHeight is 24.0
 
 //----------------------------------------------------------------------
-
-private UnitLabelAggregationViewDescriptor is BUCKSensibleAreaDescriptor
+// Icône d'évacuation
+UnitLabelUnitEvacIconBUCKComponent is BUCKTextureDescriptor
 (
-    ElementName = "UnitIconSensibleArea"
+    ElementName = "EvacuationIcon"
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [23.0, 23.0]
+        AlignementToFather = [0.5, 0.0]
+        AlignementToAnchor = [0.5, 0.0]
+    )
 
+    TextureFrame = TUIFramePropertyRTTI(RelativeWidthHeight = [1.0, 1.0])
+    TextureToken = "icone_evacuation"
+    LocalRenderLayer = 1
+)
+//----------------------------------------------------------------------
+private UnitLabelAggregationViewDescriptor is BUCKLocalLayerContainerDescriptor
+(
+    ElementName = "LocalLayerContainer"
     ComponentFrame = TUIFramePropertyRTTI
     (
         MagnifiableWidthHeight = [UnitLabelAggregationWidth, UnitLabelAggregationHeight]
-        MagnifiableOffset = [0.0, ~/LabelUnitIconWidthHeight[1] * -1.0]
+        MagnifiableOffset = [0.0, ~/LabelUnitIconSize * -1.0]
     )
+
+    NbLayersToLock = 7
 
     Components =
     [
-        BUCKLocalLayerContainerDescriptor
+        TBUCKSpecificLabelUnitIconForAggregationDescriptor
         (
-            ElementName = "LocalLayerContainer"
+            ElementName = "UnitIcon"
             ComponentFrame = TUIFramePropertyRTTI
             (
-                RelativeWidthHeight = [1.0, 1.0]
-                MagnifiableWidthHeight = [-interstice, -interstice + ~/AggregationLocalLayerAdditionalHeight]
-                AlignementToFather = [0.5, 0.5]
-                AlignementToAnchor = [0.5, 0.5]
+                MagnifiableWidthHeight = [ ~/LabelUnitIconSize, ~/LabelUnitIconSize ]
+                AlignementToFather = [0.5, 0.0]
+                AlignementToAnchor = [0.5, 0.0]
             )
 
-            NbLayersToLock = 7
+            TextureDrawer = "ColorMultiply"
+            UniformDrawer = $/UserInterface/UIUniformDrawer
 
-            Components =
-            [
-                BUCKListDescriptor
-                (
-                    ComponentFrame = TUIFramePropertyRTTI
-                    (
-                        RelativeWidthHeight = [0.0, 0.0]
-                        AlignementToFather = [0.5, 0.5]
-                        AlignementToAnchor = [0.5, 0.5]
-                    )
+            HasBackground = true
+            LocalRenderLayer = 2
+            BackgroundLocalRenderLayer = 1
+            OverlayLocalRenderLayer = 4
+            TerrainIconMagnifiableSize = 40
 
-                    Axis = ~/ListAxis/Vertical
-                    BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
-
-                    Elements =
-                    [
-                        BUCKListElementDescriptor(ComponentDescriptor = ~/AggregatedUnitLabelUnitIcon),
-                        BUCKListElementDescriptor
-                        (
-                            ComponentDescriptor = UnitNameListSensibleArea
-                            (
-                                ComponentFrame = TUIFramePropertyRTTI
-                                (
-                                    AlignementToFather = [0.5, 0.0]
-                                    AlignementToAnchor = [0.5, 0.0]
-                                )
-                                IsForCarriedUnit = true
-                                LocalRenderLayer = 1
-                            )
-                        ),
-                    ]
-
-                    ForegroundComponents =
-                    [
-                        UnitLabelUpperList
-                        (
-                            ComponentFrame = TUIFramePropertyRTTI
-                            (
-                                AlignementToFather = [0.5, 0.0]
-                                AlignementToAnchor = [0.5, 1.0]
-                            )
-                            IsForMultiSelection = false
-                        ),
-                    ]
-                ),
-                UnitLabelCoverIcon
-                (
-                    LocalRenderLayer = 5
-                ),
-            ]
-        )
+            MoraleAndHPGaugesDescription = ~/MoraleAndHPGaugesDescription
+            SmartChipDescription = ~/SmartChipDescription
+            LeavingDistrictChronoDescription = ~/LeavingDistrictChronoDescription
+        ),
+        CurrentUnitLabelUpperList
+        (
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                AlignementToFather = [0.5, 0.0]
+                AlignementToAnchor = [0.5, 1.0]
+            )
+        ),
+        CarriedUnitNameList(
+            ComponentFrame = TUIFramePropertyRTTI(
+                MagnifiableOffset = [0.0, ~/LabelUnitIconSize]
+                AlignementToFather = [0.5, 0.0]
+                AlignementToAnchor = [0.5, 0.0]
+            )
+        ),
     ]
 )
-
-
 //----------------------------------------------------------------------
 
 private UnitLabelAggregationViewNameOnlyDescriptor is BUCKLocalLayerContainerDescriptor
@@ -92,11 +80,13 @@ private UnitLabelAggregationViewNameOnlyDescriptor is BUCKLocalLayerContainerDes
     ElementName = "LocalLayerContainer"
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableOffset = [0.0, ~/LabelUnitIconWidthHeight[1] * -1.0]
+        MagnifiableOffset = [0.0, ~/LabelUnitIconSize * -1.0]
+        AlignementToFather = [0.5, 0.0]
+        AlignementToAnchor = [0.5, 0.0]
     )
 
     FitStyle = ~/ContainerFitStyle/FitToContent
-    NbLayersToLock = 4
+    NbLayersToLock = 6
 
     Components =
     [
@@ -117,195 +107,110 @@ private UnitLabelAggregationViewNameOnlyDescriptor is BUCKLocalLayerContainerDes
             [
                 BUCKListElementDescriptor
                 (
-                    ComponentDescriptor = UnitLabelUpperList(IsForMultiSelection = false)
+                    ComponentDescriptor = CurrentUnitLabelUpperList()
                 ),
                 BUCKListElementDescriptor
                 (
-                    ComponentDescriptor = UnitNameListSensibleArea
+                    ComponentDescriptor = TSmartChipListDescriptor
                     (
-                        ComponentFrame = TUIFramePropertyRTTI
-                        (
-                            AlignementToFather = [0.5, 0.0]
-                            AlignementToAnchor = [0.5, 0.0]
-                        )
-                        IsForCarriedUnit = true
-                        LocalRenderLayer = 1
-                    )
-                ),
-                BUCKListElementDescriptor
-                (
-                    ComponentDescriptor = UnitGroupCount
-                    (
-                        ComponentFrame = TUIFramePropertyRTTI
-                        (
-                            AlignementToFather = [0.5, 0.0]
-                            AlignementToAnchor = [0.5, 0.0]
-                        )
+                        UniformDrawer = $/UserInterface/UIUniformDrawer
+                        ElementName = "SmartChipList"
+
+                        Description = ~/SmartChipDescription
+
+                        AlignementToFather = [0.5, 0.0]
+                        AlignementToAnchor = [0.5, 0.0]
                         LocalRenderLayer = 2
                     )
                 )
             ]
         ),
-        UnitLabelCoverIcon
-        (
-            LocalRenderLayer = 3
-        ),
     ]
 )
-
 //----------------------------------------------------------------------
-
-private AggregatedUpperLabel is BUCKListDescriptor
+// Nom du joueur
+UnitLabelUnitPlayerNameBUCKComponent is BUCKTextDescriptor
 (
-    ElementName = 'UpperLabel'
-
+    ElementName = "PlayerName"
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = [150.0, 0.0]
-        MagnifiableOffset = [0.0, 0.0]
         AlignementToFather = [0.5, 0.0]
-        AlignementToAnchor = [0.5, 1.0]
+        AlignementToAnchor = [0.5, 0.0]
     )
 
-    Axis = ~/ListAxis/Vertical
-
-    Elements =
-    [
-        BUCKListElementDescriptor(ComponentDescriptor = ~/UnitLabelUnitEvacIconBUCKComponent),
-        BUCKListElementDescriptor(ComponentDescriptor = ~/UnitLabelUnitPlayerNameBUCKComponent),
-        BUCKListElementDescriptor
-        (
-            ComponentDescriptor = UnitLabelUnitReloadIconBUCKComponent
-            (
-                MagnifiableOffset = [0.0, 0.0]
-                LocalRenderLayer = 1
-            )
-        ),
-
-        BUCKListElementDescriptor
-        (
-            ComponentDescriptor = UnitNameListSensibleArea
-            (
-                IsForCarriedUnit = false
-                LocalRenderLayer = 1
-            )
-        ),
-    ]
-)
-
-
-//----------------------------------------------------------------------
-// Nombre de groupes d'unités
-template UnitGroupCount
-[
-    ComponentFrame : TUIFramePropertyRTTI,
-    LocalRenderLayer : int,
-] is BUCKTextDescriptor
-(
-    ElementName = "UnitGroupCount"
-    ComponentFrame = <ComponentFrame>
-    LocalRenderLayer = <LocalRenderLayer> + 1
-
-    ParagraphStyle = TParagraphStyleRTTI
+    ParagraphStyle = TParagraphStyle
     (
         Alignment = UIText_Center
         VerticalAlignment = UIText_VerticalCenter
         InterLine = 0
     )
 
-    TextStyle = "Default"
-    TypefaceToken = "UISecondFont"
-    TextPadding = TRTTILength4(Magnifiable = [2.0, 1.0, 3.0, 1.0])
+    TextStyle = "PlayerName"
+    HasBackground = false
+    TextPadding = TRTTILength4(Magnifiable = [1.0, 1.0, 1.0, 1.0])
     HorizontalFitStyle = ~/FitStyle/FitToContent
     VerticalFitStyle = ~/FitStyle/FitToContent
 
-    TextColor = "Blanc"
-    TextSize = "14"
+    TypefaceToken = "UIMainFont"
+    BigLineAction = ~/BigLineAction/CutByDots
 
-    Components =
-    [
-        PanelRoundedCorner
-        (
-            BackgroundBlockColorToken = "Noir"
-            BorderLineColorToken = "Gris_pi"
-            Radius = 3
-            BackgroundLocalRenderLayer = <LocalRenderLayer>
-            BorderLocalRenderLayer = <LocalRenderLayer>
-        )
-    ]
+    TextDico = ~/LocalisationConstantes/dico_interface_ingame
+
+    TextColor = "Fulda_Turquoise"
+    TextSize = "20"
+    LocalRenderLayer = 1
 )
-
-//----------------------------------------------------------------------
-private AggregatedUnitLabelUnitIcon is TBUCKSpecificLabelUnitIconDescriptor
+//-------------------------------------------------------------------------------------
+// L'etiquette aggregée
+private template UISpecificInGameUnitLabelViewForAggregationDescriptor
+[
+    MainComponentDescriptor : TBUCKContainerDescriptor,
+]
+is TUISpecificInGameUnitLabelViewForAggregationDescriptor
 (
-    ElementName = "UnitIcon"
-    ComponentFrame = TUIFramePropertyRTTI
-    (
-        MagnifiableWidthHeight = ~/LabelUnitIconWidthHeight
-        AlignementToFather = [0.5, 0.0]
-        AlignementToAnchor = [0.5, 0.0]
-    )
+    MainComponentDescriptor = <MainComponentDescriptor>
 
-    TextureDrawer = "ColorMultiply"
-    UniformDrawer = $/UserInterface/UIUniformDrawer
+    ExperienceTexturesResources     = ~/ExperienceTexturesResources
 
-    HasBorder = false
-    BorderThicknessToken = '2'
-    BorderLineColorToken = 'Blanc'
-    HasBackground = true
-    LocalRenderLayer = 2
-    BackgroundLocalRenderLayer = 1
+    // Animation Concealed
+    // Temps de durée d'un blink
+    AnimConcealedBlinkDuration = 2.0
+    // Animation Panicked
+    // Temps de durée d'un blink
+    AnimPanickedBlinkDuration = 1.5
+    // Animation Shaken
+    // Temps de pause entre les séries de blink (0 => pas de pause)
+    AnimShakenPauseTime = 3.0
+    // Temps de durée d'un blink
+    AnimShakenBlinkDuration = 1.5
+    // Nombre de blinks par série (-1 => infini)
+    AnimShakenNbBlinks = 3
+    // Alpha Minimum atteint pour les animation de "suppress"
+    SuppressAnimAlphaMinimum = 20
+    // Alpha Minimum atteint pour l'animation "cachée"
+    ConcealedAnimAlphaMinimum = 20
 
-    Components =
-    [
-        BUCKListDescriptor
-        (
-            ComponentFrame = TUIFramePropertyRTTI
-            (
-                RelativeWidthHeight = [1.0, 0.0]
-                AlignementToFather = [0.0, 1.0]
-                AlignementToAnchor = [0.0, 1.0]
-            )
+    // Textures
+    NormalBackgroundTexture = "CommonTexture_Label_Background"
+    CarriedUnitIconUnknown  = "UseInGame_Transport_UNKNOW"
 
-            Axis = ~/ListAxis/Vertical
-            InterItemMargin = TRTTILength(Magnifiable = 0.1)
-
-            Elements =
-            [
-                BUCKListElementDescriptor(ComponentDescriptor = OverlayIconContainer(LocalRenderLayer = 4)),
-                BUCKListElementDescriptor(ComponentDescriptor = UnitLabelUnitMoraleGaugeBUCKComponent(LocalRenderLayer = 3)),
-                BUCKListElementSpacer(Magnifiable = 1.0),
-                BUCKListElementDescriptor(ComponentDescriptor = UnitLabelHPGaugeBUCKComponent(LocalRenderLayer = 3))
-            ]
-
-            ForegroundComponents =
-            [
-                UnitGroupCount
-                (
-                    ComponentFrame = TUIFramePropertyRTTI
-                    (
-                        AlignementToFather = [0.5, 1.0]
-                        AlignementToAnchor = [0.5, 1.0]
-                    )
-                    LocalRenderLayer = 2
-                )
-            ]
-        ),
-        SmartChipList(LocalRenderLayer = 3),
-    ]
+    // Overlay Icon
+    RoutTexture            = 'icone_rout'
+    PinnedTexture          = 'icone_pinned'
+    StunTexture            = 'icone_stun'
+    LeavingDistrictTexture = 'icone_leave'
+    RoutTextureColorToken            = "Rouge"
+    PinnedTextureColorToken          = "Rouge"
+    StunTextureColorToken            = 'Blanc220'
+    LeavingDistrictTextureColorToken = 'Blanc220'
 )
-
 //----------------------------------------------------------------------
-
 // L'etiquette
-UISpecificUnitLabelAggregationViewDescriptor is UISpecificInGameUnitLabelViewDescriptor
+UISpecificUnitLabelAggregationViewDescriptor is UISpecificInGameUnitLabelViewForAggregationDescriptor
 (
     MainComponentDescriptor = ~/UnitLabelAggregationViewDescriptor
-    DebugViewName = ""
 )
-
-UISpecificUnitLabelAggregationViewNameOnlyDescriptor is UISpecificInGameUnitLabelViewDescriptor
+UISpecificUnitLabelAggregationViewNameOnlyDescriptor is UISpecificInGameUnitLabelViewForAggregationDescriptor
 (
     MainComponentDescriptor = ~/UnitLabelAggregationViewNameOnlyDescriptor
-    DebugViewName = ""
 )

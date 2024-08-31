@@ -28,18 +28,19 @@ private DissimulationButton is TBUCKButtonDescriptor
             )
 
             Radius = 3
-            BackgroundBlockColorToken = "BoutonTemps"
-            BorderLineColorToken = "BoutonTemps"
+            BackgroundBlockColorToken = "MOD_Button_STYLE1"
+            BorderLineColorToken = "MOD_White"
         ),
 
         BUCKListDescriptor
         (
             Axis = ~/ListAxis/Vertical
-            BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
+            BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromFrameProperty
             LastMargin = TRTTILength(Magnifiable = 10.0)
 
             ComponentFrame = TUIFramePropertyRTTI
             (
+                RelativeWidthHeight = [1.0, 0.0]
                 AlignementToFather = [0.5, 0.5]
                 AlignementToAnchor = [0.5, 0.5]
             )
@@ -50,38 +51,24 @@ private DissimulationButton is TBUCKButtonDescriptor
                 BUCKListElementDescriptor
                 (
                     ExtendWeight = 3.0
-                    ComponentDescriptor = BUCKContainerDescriptor
+                    ComponentDescriptor = BUCKTextureDescriptor
                     (
+                        ElementName = "DissimulationButtonTexture"
+
                         ComponentFrame = TUIFramePropertyRTTI
                         (
-                            RelativeWidthHeight = [0.0, 1.0]
+                            RelativeWidthHeight = [1.0, 1.0]
                             AlignementToFather = [0.5, 0.5]
                             AlignementToAnchor = [0.5, 0.5]
                         )
 
-                        Components =
-                        [
-                            BUCKTextureDescriptor
-                            (
-                                ElementName = "DissimulationButtonTexture"
+                        TextureFrame = TUIFramePropertyRTTI
+                        (
+                            AlignementToFather = [0.5, 0.5]
+                            AlignementToAnchor = [0.5, 0.5]
+                        )
 
-                                ComponentFrame = TUIFramePropertyRTTI
-                                (
-                                    RelativeWidthHeight = [1.0, 1.0]
-                                    AlignementToFather = [0.5, 0.5]
-                                    AlignementToAnchor = [0.5, 0.5]
-                                )
-
-                                TextureFrame = TUIFramePropertyRTTI
-                                (
-                                    RelativeWidthHeight = [0.0, 0.0]
-                                    AlignementToFather = [0.5, 0.5]
-                                    AlignementToAnchor = [0.5, 0.5]
-                                )
-
-                                ResizeMode = ~/TextureResizeMode/VerticalFitToParent
-                            )
-                        ]
+                        ResizeMode = ~/TextureResizeMode/FitToParentConservingRatio
                     )
                 ),
 
@@ -98,7 +85,7 @@ private DissimulationButton is TBUCKButtonDescriptor
                             AlignementToAnchor = [0.5, 0.5]
                         )
 
-                        ParagraphStyle = TParagraphStyleRTTI
+                        ParagraphStyle = TParagraphStyle
                         (
                             Alignment = UIText_Center
                             VerticalAlignment = UIText_VerticalCenter
@@ -156,7 +143,7 @@ OpticalFieldPanel is BUCKListDescriptor
                 HorizontalFitStyle = ~/FitStyle/UserDefined
                 VerticalFitStyle = ~/FitStyle/UserDefined
 
-                TextColor       = "BlancEquipe"
+                TextColor       = "MOD_White"
                 TextSize        = "16"
                 TextToken       = "OF_TITLE"
                 TextDico        = ~/LocalisationConstantes/dico_interface_ingame

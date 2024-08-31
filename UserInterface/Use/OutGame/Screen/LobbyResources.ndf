@@ -20,20 +20,6 @@ private GameRoomPanelSwitchPrivacyButton is boutonAvecSeparateur
     HintExtendedToken = "GS_ACCESSE"
 )
 
-private GameRoomPanelViewFixedDeckButton is StandardButton
-(
-    ElementName = 'FixedDeckButton'
-    TextToken = 'CB_VIEWDCK'
-    TextDico = ~/LocalisationConstantes/dico_interface_outgame
-
-    RequiredTags = [ "ScenarioWithFixedDecks" ]
-
-    HintTitleToken = "OLB_VIEWDT"
-    HintBodyToken = "OLB_VIEWDB"
-    HintExtendedToken = "OLB_VIEWDE"
-    HintDico = ~/LocalisationConstantes/dico_interface_outgame
-)
-
 private GameRoomPanelAddFriendButton is boutonAvecSeparateur
 (
     ElementName = 'AddFriendButton'
@@ -42,7 +28,6 @@ private GameRoomPanelAddFriendButton is boutonAvecSeparateur
     HintTitleToken = "OLB_ADDFDT"
     HintBodyToken = "OLB_ADDFDB"
     HintExtendedToken = "OLB_ADDFDE"
-
 )
 
 private GameRoomPanelLaunchButton is boutonAvecSeparateur
@@ -89,7 +74,6 @@ template boutonAvecSeparateur
     ForceEvents : boolean = false,
     TextColor : string = "Blanc_multi",
     TextSize : string = "16",
-    TextureColorToken : string = '',
     ForbiddenTags : LIST<string> = [],
     HintTitleToken : string = '',
     HintExtendedToken : string = '',
@@ -170,7 +154,7 @@ template boutonAvecSeparateur
                     ComponentDescriptor = BUCKTextDescriptor
                     (
                         ElementName = <TextElementName>
-                        ParagraphStyle = TParagraphStyleRTTI
+                        ParagraphStyle = TParagraphStyle
                         (
                             VerticalAlignment = ~/UIText_VerticalCenter
                             Alignment = ~/UIText_Center
@@ -219,7 +203,6 @@ LobbyButtonList is
     BUCKListElementDescriptor( ComponentDescriptor = ~/GameRoomPanelLaunchButton ),
     BUCKListElementDescriptor( ComponentDescriptor = ~/GameRoomPanelInviteCodeButton ),
     BUCKListElementDescriptor( ComponentDescriptor = ~/GameRoomPanelSwitchPrivacyButton ),
-    BUCKListElementDescriptor( ComponentDescriptor = ~/GameRoomPanelViewFixedDeckButton ),
     BUCKListElementDescriptor( ComponentDescriptor = ~/GameRoomPanelAddFriendButton ),
     BUCKListElementDescriptor( ComponentDescriptor = ~/GameRoomPanelLeaveButton ),
     BUCKListElementDescriptor( ComponentDescriptor = ~/GameRoomPanelCancelButton ),
@@ -246,7 +229,7 @@ private DedicatedServerInfosTitle is BUCKTextDescriptor
     TextDico = ~/LocalisationConstantes/dico_interface_outgame
     TypefaceToken = "UIMainFont"
 
-    ParagraphStyle = TParagraphStyleRTTI
+    ParagraphStyle = TParagraphStyle
     (
         Alignment = UIText_Center
         VerticalAlignment = UIText_VerticalCenter
@@ -271,7 +254,7 @@ private DedicatedServerInfosLine1 is BUCKTextDescriptor
     TextDico = ~/LocalisationConstantes/dico_interface_outgame
     TypefaceToken = "UIMainFont"
 
-    ParagraphStyle = TParagraphStyleRTTI
+    ParagraphStyle = TParagraphStyle
     (
         Alignment = UIText_Center
         VerticalAlignment = UIText_VerticalCenter
@@ -296,7 +279,7 @@ private DedicatedServerInfosLine2 is BUCKTextDescriptor
     TextDico = ~/LocalisationConstantes/dico_interface_outgame
     TypefaceToken = "Liberator"
 
-    ParagraphStyle = TParagraphStyleRTTI
+    ParagraphStyle = TParagraphStyle
     (
         Alignment = UIText_Center
         VerticalAlignment = UIText_VerticalCenter
@@ -476,38 +459,16 @@ private OptionsWarningDescriptor is TScrollingDescriptor
 )
 
 // -------------------------------------------------------------------------------------------------
-// FriendPanelConfirmButton
-// -------------------------------------------------------------------------------------------------
-private FriendPanelConfirmButton is ModalButtonCyan
-(
-    ElementName = "ConfirmButton"
-    TextToken = 'BTN_CONFIR'
-    Mapping = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ENTER ) )
-    IsFilled = true
-)
 
-// -------------------------------------------------------------------------------------------------
-// FriendPanelCancelButton
-// -------------------------------------------------------------------------------------------------
-private FriendPanelCancelButton is ModalButtonCyan
+private FriendInviteModalDescriptor is SpecificModalWindow
 (
-    ElementName = "CancelButton"
-    TextToken = 'BTN_CANCEL'
-    Mapping = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ESCAPE ) )
-    IsFilled = false
-)
-
-// -------------------------------------------------------------------------------------------------
-
-private FriendInviteModalDescriptor is SpecificModaleWindowFrame
-(
-    ContentMagnifiableWidthHeight = [848.0, 520.0]
-    TitleToken = 'T_INVITE'
+    TitleToken = "T_INVITE"
+    ContentMagnifiableWidthHeight = [0.0, 520.0]
 
     ButtonList =
     [
-        BUCKListElementDescriptor( ComponentDescriptor = ~/FriendPanelConfirmButton ),
-        BUCKListElementDescriptor( ComponentDescriptor = ~/FriendPanelCancelButton ),
+        BUCKListElementDescriptor(ComponentDescriptor = SpecificModalConfirmButton),
+        BUCKListElementDescriptor(ComponentDescriptor = SpecificModalCancelButton)
     ]
 )
 

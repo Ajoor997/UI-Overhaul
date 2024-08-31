@@ -146,7 +146,8 @@ template BUCKSpecific_Fulda_WithTabsComponentDescriptor
 
     RedefinedTabsContainer : TBUCKContainerDescriptor = nil,
 
-    CanReselectTabs : bool = false
+    CanReselectTabs : bool = false,
+    ShowTabsFirst : bool = false,
 ]
 is BUCKWithTabsDescriptor
 (
@@ -159,64 +160,18 @@ is BUCKWithTabsDescriptor
     BackgroundBlockColorToken = <BackgroundBlockColorToken>
 
     HidePointerEvents = <HidePointerEvents>
-    InterMarginBetwwenTabsAndContent = TRTTILength(Magnifiable = 40.0)
+    InterMarginBetwwenTabsAndContent = TRTTILength(Magnifiable = 51.0)
     FitStyle = <FitStyle>
 
     TabsAndContent = <TabsAndContent>
 
     TabsListBackgroundColorToken = ""
     RedefinedTabsContainer = <RedefinedTabsContainer>
+    Axis = ~/ListAxis/Horizontal
 
     CanReselectTabs = <CanReselectTabs>
 
     IsFocusable = true
+    ShowTabsFirst = <ShowTabsFirst>
 )
 
-//-------------------------------------------------------------------------------------
-
-{ //Ci dessous un exemple a se servir pour la suite !
-TestComponent is TOutGameComponentWithTabs
-(
-    MagnifiableWidthHeight = [600, 400]
-
-    TabsAndContent = [
-        (
-            BUCKSpecificOneTabComponentDescriptor
-            (
-                HorizontalFitStyle = ~/FitStyle/FitToContent
-                TextToken = "CP_REMPASS"
-            ),
-            BUCKSpecificButton
-            (
-                ButtonAlignementToFather = [0.5, 0.5]
-                TextToken = "EVAC_BINGO"
-            )
-        ),
-        (
-            BUCKSpecificOneTabComponentDescriptor
-            (
-                HorizontalFitStyle = ~/FitStyle/UserDefined
-                TextToken = "CP_LINKACC"
-            ),
-            BUCKSpecificButton
-            (
-                ButtonAlignementToFather = [0.5, 0.5]
-                TextToken = "EVAC_WINCH"
-            )
-        ),
-        (
-            BUCKSpecificOneTabComponentDescriptor
-            (
-                UniqueName = "GogoPenguin"
-                HorizontalFitStyle = ~/FitStyle/UserDefined
-                TextToken = "CP_LINKACC"
-            ),
-            BUCKSpecificButton
-            (
-                ButtonAlignementToFather = [0.5, 0.5]
-                TextToken = "EVAC_WINCH"
-            )
-        ),
-    ]
-)
-}

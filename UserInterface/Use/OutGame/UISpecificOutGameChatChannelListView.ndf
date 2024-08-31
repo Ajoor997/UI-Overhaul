@@ -129,7 +129,7 @@ private Titre_channel is BUCKContainerDescriptor
                         TypefaceToken = "IBM"
                         TextStyle = "Default"
 
-                        ParagraphStyle = TParagraphStyleRTTI
+                        ParagraphStyle = TParagraphStyle
                         (
                             Alignment = UIText_Right
                             VerticalAlignment = UIText_VerticalCenter
@@ -159,7 +159,7 @@ private Titre_channel is BUCKContainerDescriptor
                         TypefaceToken = "IBM"
                         TextStyle = "Default"
 
-                        ParagraphStyle = TParagraphStyleRTTI
+                        ParagraphStyle = TParagraphStyle
                         (
                             Alignment = UIText_Right
                             VerticalAlignment = UIText_VerticalCenter
@@ -188,7 +188,7 @@ private Titre_channel is BUCKContainerDescriptor
                         TypefaceToken = "IBM"
                         TextStyle = "Default"
 
-                        ParagraphStyle = TParagraphStyleRTTI
+                        ParagraphStyle = TParagraphStyle
                         (
                             Alignment = UIText_Left
                             VerticalAlignment = UIText_VerticalCenter

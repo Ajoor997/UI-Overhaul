@@ -394,7 +394,7 @@ AffichageGround is BUCKListDescriptor
                     MagnifiableOffset = [10.0, 0.0]
                 )
 
-                ParagraphStyle = TParagraphStyleRTTI
+                ParagraphStyle = TParagraphStyle
                 (
                     Alignment = UIText_Left
                     VerticalAlignment = UIText_VerticalCenter
@@ -457,7 +457,7 @@ is BUCKListDescriptor
             (
                 ComponentFrame = TUIFramePropertyRTTI()
 
-                ParagraphStyle = TParagraphStyleRTTI
+                ParagraphStyle = TParagraphStyle
                 (
                     Alignment = UIText_Left
                     VerticalAlignment = UIText_VerticalCenter
@@ -521,7 +521,7 @@ template titreWarno
             RelativeWidthHeight = [1.0, 0.0]
         )
 
-        ParagraphStyle = TParagraphStyleRTTI
+        ParagraphStyle = TParagraphStyle
         (
             Alignment = UIText_Left
             VerticalAlignment = UIText_VerticalCenter
@@ -645,7 +645,7 @@ private template DisplayStartingInformationTeamContainer
                 )
 
                 TextStyle = "Default"
-                ParagraphStyle = TParagraphStyleRTTI
+                ParagraphStyle = TParagraphStyle
                 (
                     Alignment = UIText_Left
                     VerticalAlignment = UIText_VerticalCenter

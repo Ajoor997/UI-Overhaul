@@ -46,7 +46,7 @@ BUCKSpecificConnectingPanelMainComponentDescriptor is LoginTvContainer
                             MagnifiableWidthHeight = [0.0, 150.0]
                         )
 
-                        ParagraphStyle = TParagraphStyleRTTI
+                        ParagraphStyle = TParagraphStyle
                         (
                             VerticalAlignment = ~/UIText_VerticalCenter
                             Alignment = UIText_Center
@@ -130,38 +130,6 @@ BUCKSpecificConnectingPanelMainComponentDescriptor is LoginTvContainer
                                 ComponentDescriptor = BUCKContainerDescriptor(ComponentFrame = TUIFramePropertyRTTI())
                             ),
                         ]
-                    )
-                ),
-            ]
-        ),
-        BUCKListDescriptor
-        (
-            ElementName = "ConnectingPanelButtonList"
-            ComponentFrame = TUIFramePropertyRTTI
-            (
-                MagnifiableWidthHeight = [0.0, 50.0]
-                MagnifiableOffset = [0.0, -50.0]
-                AlignementToFather  = [0.5, 1.0]
-                AlignementToAnchor  = [0.5, 1.0]
-            )
-
-            Axis = ~/ListAxis/Horizontal
-            InterItemMargin = TRTTILength(Magnifiable = 5.0)
-
-            Elements =
-            [
-                BUCKListElementDescriptor
-                (
-                    ComponentDescriptor = CancelButton
-                    (
-                        ElementName = "CancelButton"
-                        TextToken = 'BTN_CANCEL'
-
-                        Mapping = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ESCAPE ) )
-
-                        HintTitleToken = ""
-                        HintBodyToken = ""
-                        HintDico = ~/LocalisationConstantes/dico_interface_outgame
                     )
                 ),
             ]

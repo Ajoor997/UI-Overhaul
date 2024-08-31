@@ -53,6 +53,52 @@ is BUCKListDescriptor
                 ]
             )
         ),
+        // Emblem
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = BUCKMultiListContentElementDescriptor
+            (
+                ElementName = "StatsEmblemMultiList"
+
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    RelativeWidthHeight = [0.0, 1.0]
+                )
+
+                FitStyle = ~/ContainerFitStyle/FitToContentHorizontally
+
+                Components =
+                [
+                    BUCKTextureDescriptor
+                    (
+                        ElementName = "StatsEmblem"
+                        ComponentFrame = TUIFramePropertyRTTI
+                        (
+                            RelativeWidthHeight = [0.0, 1.0]
+                            MagnifiableWidthHeight = [37.0, 0.0]
+                            AlignementToAnchor = [0.5, 0.5]
+                            AlignementToFather = [0.5, 0.5]
+                        )
+
+                        ResizeMode = ~/TextureResizeMode/FitToParentConservingRatio
+                        TextureFrame = TUIFramePropertyRTTI
+                        (
+                            AlignementToAnchor = [0.5, 0.5]
+                            AlignementToFather = [0.5, 0.5]
+                        )
+
+                        Components =
+                        [
+                            BUCKSpecificHintableArea
+                            (
+                                ElementName = "StatsEmblemHint"
+                                DicoToken = ~/LocalisationConstantes/dico_interface_outgame
+                            )
+                        ]
+                    )
+                ]
+            )
+        ),
         // Player
         BUCKListElementDescriptor
         (
@@ -86,7 +132,7 @@ is BUCKListDescriptor
                                     RelativeWidthHeight = [1.0, 1.0]
                                 )
 
-                                ParagraphStyle = TParagraphStyleRTTI
+                                ParagraphStyle = TParagraphStyle
                                 (
                                     Alignment = UIText_Left
                                     VerticalAlignment = UIText_VerticalCenter
@@ -96,7 +142,7 @@ is BUCKListDescriptor
                                 BigLineAction = ~/BigLineAction/CutByDots
 
                                 TextStyle = "Default"
-                                TypefaceToken = TacticalEndgameScoreTextFont
+                                TypefaceToken = "Eurostyle_Medium"
 
                                 TextDico = ~/LocalisationConstantes/dico_interface_outgame
 
@@ -173,7 +219,7 @@ is BUCKListDescriptor
                                     AlignementToFather = [0.5, 0.5]
                                 )
 
-                                ParagraphStyle = TParagraphStyleRTTI
+                                ParagraphStyle = TParagraphStyle
                                 (
                                     Alignment = UIText_Center
                                     VerticalAlignment = UIText_VerticalCenter
@@ -197,7 +243,7 @@ is BUCKListDescriptor
         // GameModePoints Best
         BUCKListElementDescriptor
         (
-            ExtendWeight = 0.05
+            ExtendWeight = 0.02
             ComponentDescriptor = BUCKMultiListContentElementDescriptor
             (
                 ElementName = "StatsGameModePointsMultiBestList"
@@ -211,35 +257,8 @@ is BUCKListDescriptor
 
                 Components =
                 [
-                    BUCKTextureDescriptor
-                    (
-                        ElementName = "GameModePointsBest"
-                        ComponentFrame = TUIFramePropertyRTTI
-                        (
-                            RelativeWidthHeight = [0.0, 1.0]
-                            MagnifiableWidthHeight = [50.0, 0.0]
-                            AlignementToAnchor = [0.5, 0.5]
-                            AlignementToFather = [0.5, 0.5]
-                        )
 
-                        ResizeMode = ~/TextureResizeMode/FitToParentConservingRatio
-                        TextureFrame = TUIFramePropertyRTTI
-                        (
-                            AlignementToAnchor = [0.5, 0.5]
-                            AlignementToFather = [0.5, 0.5]
-                        )
-
-                        TextureToken = 'Outgame_BestScore'
-
-                        Components =
-                        [
-                            BUCKSpecificHintableArea
-                            (
-                                ElementName = "GameModePointsBestHint"
-                                DicoToken = ~/LocalisationConstantes/dico_interface_outgame
-                            ),
-                        ]
-                    ),
+                    Icone_BestScore(ElementName = "GameModePointsBest")
                 ]
             )
         ),
@@ -266,7 +285,7 @@ is BUCKListDescriptor
                             RelativeWidthHeight = [1.0, 1.0]
                         )
 
-                        ParagraphStyle = TParagraphStyleRTTI
+                        ParagraphStyle = TParagraphStyle
                         (
                             Alignment = UIText_Left
                             VerticalAlignment = UIText_VerticalCenter
@@ -275,7 +294,7 @@ is BUCKListDescriptor
                         BigLineAction = ~/BigLineAction/CutByDots
 
                         TextStyle = "Default"
-                        TypefaceToken = TacticalEndgameScoreTextFont
+                        TypefaceToken = "Eurostyle"
 
                         TextDico = ~/LocalisationConstantes/dico_interface_outgame
 
@@ -288,7 +307,7 @@ is BUCKListDescriptor
         // Kills Best
         BUCKListElementDescriptor
         (
-            ExtendWeight = 0.05
+            ExtendWeight = 0.02
             ComponentDescriptor = BUCKMultiListContentElementDescriptor
             (
                 ElementName = "StatsKillsMultiBestList"
@@ -302,35 +321,7 @@ is BUCKListDescriptor
 
                 Components =
                 [
-                    BUCKTextureDescriptor
-                    (
-                        ElementName = "KillsBest"
-                        ComponentFrame = TUIFramePropertyRTTI
-                        (
-                            RelativeWidthHeight = [0.0, 1.0]
-                            MagnifiableWidthHeight = [50.0, 0.0]
-                            AlignementToAnchor = [0.5, 0.5]
-                            AlignementToFather = [0.5, 0.5]
-                        )
-
-                        ResizeMode = ~/TextureResizeMode/FitToParentConservingRatio
-                        TextureFrame = TUIFramePropertyRTTI
-                        (
-                            AlignementToAnchor = [0.5, 0.5]
-                            AlignementToFather = [0.5, 0.5]
-                        )
-
-                        TextureToken = 'Outgame_BestScore'
-
-                        Components =
-                        [
-                            BUCKSpecificHintableArea
-                            (
-                                ElementName = "KillsBestHint"
-                                DicoToken = ~/LocalisationConstantes/dico_interface_outgame
-                            ),
-                        ]
-                    ),
+                    Icone_BestScore(ElementName = "KillsBest")
                 ]
             )
         ),
@@ -357,7 +348,7 @@ is BUCKListDescriptor
                             RelativeWidthHeight = [1.0, 1.0]
                         )
 
-                        ParagraphStyle = TParagraphStyleRTTI
+                        ParagraphStyle = TParagraphStyle
                         (
                             Alignment = UIText_Left
                             VerticalAlignment = UIText_VerticalCenter
@@ -366,7 +357,7 @@ is BUCKListDescriptor
                         BigLineAction = ~/BigLineAction/CutByDots
 
                         TextStyle = "Default"
-                        TypefaceToken = TacticalEndgameScoreTextFont
+                        TypefaceToken = "Eurostyle"
 
                         TextDico = ~/LocalisationConstantes/dico_interface_outgame
 
@@ -379,7 +370,7 @@ is BUCKListDescriptor
         // Losses Best
         BUCKListElementDescriptor
         (
-            ExtendWeight = 0.05
+            ExtendWeight = 0.02
             ComponentDescriptor = BUCKMultiListContentElementDescriptor
             (
                 ElementName = "StatsLossesMultiBestList"
@@ -393,35 +384,7 @@ is BUCKListDescriptor
 
                 Components =
                 [
-                    BUCKTextureDescriptor
-                    (
-                        ElementName = "LossesBest"
-                        ComponentFrame = TUIFramePropertyRTTI
-                        (
-                            RelativeWidthHeight = [0.0, 1.0]
-                            MagnifiableWidthHeight = [50.0, 0.0]
-                            AlignementToAnchor = [0.5, 0.5]
-                            AlignementToFather = [0.5, 0.5]
-                        )
-
-                        ResizeMode = ~/TextureResizeMode/FitToParentConservingRatio
-                        TextureFrame = TUIFramePropertyRTTI
-                        (
-                            AlignementToAnchor = [0.5, 0.5]
-                            AlignementToFather = [0.5, 0.5]
-                        )
-
-                        TextureToken = 'Outgame_BestScore'
-
-                        Components =
-                        [
-                            BUCKSpecificHintableArea
-                            (
-                                ElementName = "LossesBestHint"
-                                DicoToken = ~/LocalisationConstantes/dico_interface_outgame
-                            ),
-                        ]
-                    ),
+                    Icone_BestScore(ElementName = "LossesBest")
                 ]
             )
         ),
@@ -448,7 +411,7 @@ is BUCKListDescriptor
                             RelativeWidthHeight = [1.0, 1.0]
                         )
 
-                        ParagraphStyle = TParagraphStyleRTTI
+                        ParagraphStyle = TParagraphStyle
                         (
                             Alignment = UIText_Left
                             VerticalAlignment = UIText_VerticalCenter
@@ -457,7 +420,70 @@ is BUCKListDescriptor
                         BigLineAction = ~/BigLineAction/CutByDots
 
                         TextStyle = "Default"
-                        TypefaceToken = TacticalEndgameScoreTextFont
+                        TypefaceToken = "Eurostyle"
+
+                        TextDico = ~/LocalisationConstantes/dico_interface_outgame
+
+                        TextColor = "GrisTexte"
+                        TextSize = TacticalEndgameScoreTextFontSize
+                    )
+                ]
+            )
+        ),
+        // Kill Ratio Best
+        BUCKListElementDescriptor
+        (
+            ExtendWeight = 0.02
+            ComponentDescriptor = BUCKMultiListContentElementDescriptor
+            (
+                ElementName = "StatsKillRatioMultiBestList"
+
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    RelativeWidthHeight = [0.0, 1.0]
+                )
+
+                FitStyle = ~/ContainerFitStyle/FitToContentHorizontally
+
+                Components =
+                [
+                    Icone_BestScore(ElementName = "KillRatioBest")
+                ]
+            )
+        ),
+        // Kill Ratio
+        BUCKListElementDescriptor
+        (
+            ExtendWeight = 0.1
+            ComponentDescriptor = BUCKMultiListContentElementDescriptor
+            (
+                ElementName = "StatsKillRatioMultiList"
+
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    RelativeWidthHeight = [1.0, 1.0]
+                )
+
+                Components =
+                [
+                    BUCKTextDescriptor
+                    (
+                        ElementName = "StatsKillRatio"
+                        ComponentFrame = TUIFramePropertyRTTI
+                        (
+                            RelativeWidthHeight = [1.0, 1.0]
+                        )
+
+                        ParagraphStyle = TParagraphStyle
+                        (
+                            Alignment = UIText_Left
+                            VerticalAlignment = UIText_VerticalCenter
+                        )
+
+                        BigLineAction = ~/BigLineAction/CutByDots
+
+                        TextStyle = "Default"
+                        TypefaceToken = "Eurostyle"
 
                         TextDico = ~/LocalisationConstantes/dico_interface_outgame
 
@@ -497,6 +523,48 @@ is BUCKListDescriptor
 )
 
 //-------------------------------------------------------------------------------------
+Icone_BestScore_Size is 30
+
+template Icone_BestScore
+[
+
+ElementName : string
+
+]
+
+is BUCKTextureDescriptor
+(
+    ElementName = <ElementName>
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        // RelativeWidthHeight = [0.0, 1.0]
+        MagnifiableWidthHeight = [Icone_BestScore_Size, Icone_BestScore_Size]
+        AlignementToAnchor = [0.5, 0.5]
+        AlignementToFather = [0.5, 0.5]
+    )
+
+    ResizeMode = ~/TextureResizeMode/FitToParentConservingRatio
+    TextureFrame = TUIFramePropertyRTTI
+    (
+        AlignementToAnchor = [0.5, 0.5]
+        AlignementToFather = [0.5, 0.5]
+    )
+
+    TextureToken = 'Outgame_BestScore'
+    // TextureColorToken = "Noir"
+    TextureColorToken = "GrisTexteHighlightable"
+
+
+    // Components =
+    // [
+    //     BUCKSpecificHintableArea
+    //     (
+    //         ElementName = "LossesBestHint"
+    //         DicoToken = ~/LocalisationConstantes/dico_interface_outgame
+    //     ),
+    // ]
+)
+//-------------------------------------------------------------------------------------
 
 template DebriefTeamStatsContainer
 [
@@ -532,7 +600,7 @@ is BUCKListDescriptor
 (
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = [0.0, 25.0]
+        MagnifiableWidthHeight = [0.0, 40.0]
     )
 
     //HasBackground = true
@@ -548,6 +616,25 @@ is BUCKListDescriptor
             ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
             (
                 ElementName = 'StatsAvatarMultiList'
+
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    RelativeWidthHeight = [0.0, 1.0]
+                    MagnifiableWidthHeight = [37.0, 0.0]
+                )
+
+                SortingType = ~/MultiListSorting/Integer
+                ShowCheckbox = false
+                HidePointerEvents = true
+                Components = []
+            )
+        ),
+        // Emblem
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
+            (
+                ElementName = 'StatsEmblemMultiList'
 
                 ComponentFrame = TUIFramePropertyRTTI
                 (
@@ -585,7 +672,7 @@ is BUCKListDescriptor
                         (
                             RelativeWidthHeight = [1.0, 1.0]
                         )
-                        ParagraphStyle = TParagraphStyleRTTI
+                        ParagraphStyle = TParagraphStyle
                         (
                             Alignment = ~/UIText_Left
                             VerticalAlignment = ~/UIText_VerticalCenter
@@ -626,7 +713,7 @@ is BUCKListDescriptor
         // Game mode points Best
         BUCKListElementDescriptor
         (
-            ExtendWeight = 0.05
+            ExtendWeight = 0.02
             ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
             (
                 ElementName = 'StatsGameModePointsMultiBestList'
@@ -634,7 +721,7 @@ is BUCKListDescriptor
                 ComponentFrame = TUIFramePropertyRTTI
                 (
                     RelativeWidthHeight = [0.0, 1.0]
-                    MagnifiableWidthHeight = [50.0, 0.0]
+                    MagnifiableWidthHeight = [Icone_BestScore_Size, 0.0]
                 )
 
                 SortingType = ~/MultiListSorting/Integer
@@ -671,7 +758,7 @@ is BUCKListDescriptor
                             RelativeWidthHeight = [1.0, 1.0]
                             MagnifiableOffset = [0.0, 0.0]
                         )
-                        ParagraphStyle = TParagraphStyleRTTI
+                        ParagraphStyle = TParagraphStyle
                         (
                             Alignment = ~/UIText_Left
                             VerticalAlignment = ~/UIText_VerticalCenter
@@ -691,7 +778,7 @@ is BUCKListDescriptor
         // Kills Best
         BUCKListElementDescriptor
         (
-            ExtendWeight = 0.05
+            ExtendWeight = 0.02
             ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
             (
                 ElementName = 'StatsKillsMultiBestList'
@@ -699,7 +786,7 @@ is BUCKListDescriptor
                 ComponentFrame = TUIFramePropertyRTTI
                 (
                     RelativeWidthHeight = [0.0, 1.0]
-                    MagnifiableWidthHeight = [50.0, 0.0]
+                    MagnifiableWidthHeight = [Icone_BestScore_Size, 0.0]
                 )
 
                 SortingType = ~/MultiListSorting/Integer
@@ -735,7 +822,7 @@ is BUCKListDescriptor
                             RelativeWidthHeight = [1.0, 1.0]
                             MagnifiableOffset = [0.0, 0.0]
                         )
-                        ParagraphStyle = TParagraphStyleRTTI
+                        ParagraphStyle = TParagraphStyle
                         (
                             Alignment = ~/UIText_Left
                             VerticalAlignment = ~/UIText_VerticalCenter
@@ -756,7 +843,7 @@ is BUCKListDescriptor
         // Losses Best
         BUCKListElementDescriptor
         (
-            ExtendWeight = 0.05
+            ExtendWeight = 0.02
             ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
             (
                 ElementName = 'StatsLossesMultiBestList'
@@ -764,7 +851,7 @@ is BUCKListDescriptor
                 ComponentFrame = TUIFramePropertyRTTI
                 (
                     RelativeWidthHeight = [0.0, 1.0]
-                    MagnifiableWidthHeight = [50.0, 0.0]
+                    MagnifiableWidthHeight = [Icone_BestScore_Size, 0.0]
                 )
 
                 SortingType = ~/MultiListSorting/Integer
@@ -799,7 +886,7 @@ is BUCKListDescriptor
                             RelativeWidthHeight = [1.0, 1.0]
                             MagnifiableOffset = [0.0, 0.0]
                         )
-                        ParagraphStyle = TParagraphStyleRTTI
+                        ParagraphStyle = TParagraphStyle
                         (
                             Alignment = ~/UIText_Left
                             VerticalAlignment = ~/UIText_VerticalCenter
@@ -813,6 +900,70 @@ is BUCKListDescriptor
                         TextDico = ~/LocalisationConstantes/dico_interface_outgame
                         HasAutoHint = true
                         AutoHintElementName = "LossesTitleAutoHint"
+                    ),
+                ]
+            )
+        ),
+        // Kill ratio Best
+        BUCKListElementDescriptor
+        (
+            ExtendWeight = 0.02
+            ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
+            (
+                ElementName = 'StatsKillRatioMultiBestList'
+
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    RelativeWidthHeight = [0.0, 1.0]
+                    MagnifiableWidthHeight = [Icone_BestScore_Size, 0.0]
+                )
+
+                SortingType = ~/MultiListSorting/Integer
+                ShowCheckbox = false
+
+                HidePointerEvents = true
+                Components = []
+            )
+        ),
+        // Kill ratio
+        BUCKListElementDescriptor
+        (
+            ExtendWeight = 0.1
+            ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
+            (
+                ElementName = 'StatsKillRatioMultiList'
+
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    RelativeWidthHeight = [1.0, 1.0]
+                )
+
+                HidePointerEvents = true
+                SortingType = ~/MultiListSorting/Integer
+                ShowCheckbox = false
+                Components =
+                [
+                    BUCKSpecificTextWithHint
+                    (
+                        ComponentFrame = TUIFramePropertyRTTI
+                        (
+                            RelativeWidthHeight = [1.0, 1.0]
+                            MagnifiableOffset = [0.0, 0.0]
+                        )
+                        ParagraphStyle = TParagraphStyle
+                        (
+                            Alignment = ~/UIText_Left
+                            VerticalAlignment = ~/UIText_VerticalCenter
+                            BigWordAction = ~/BigWordAction/BigWordNewLine
+                        )
+                        TextStyle = 'Default'
+                        TypefaceToken = TacticalEndgameTitleFont
+                        TextSize = TacticalEndgameTitleFontSize
+                        TextColor = 'GrisFoncePapier'
+                        TextToken = 'EG_UPRR'
+                        TextDico = ~/LocalisationConstantes/dico_interface_outgame
+                        HasAutoHint = true
+                        AutoHintElementName = "KillRatioTitleAutoHint"
                     ),
                 ]
             )
@@ -865,11 +1016,13 @@ is BUCKMultiListDescriptor
     ColumnNames =
     [
         "StatsAvatarMultiList",
+        "StatsEmblemMultiList",
         "StatsPlayersMultiList",
         "StatsAddFriendMultiList",
         "StatsGameModePointsMultiBestList",
         "StatsKillsMultiBestList",
         "StatsLossesMultiBestList",
+        "StatsKillRatioMultiBestList",
     ]
 
     SortableColumnNames =
@@ -889,9 +1042,9 @@ is BUCKMultiListDescriptor
             RelativeWidthHeight = [1.0, 0.0]
         )
 
-        FirstMargin = TRTTILength(Magnifiable = 5.0)
+        // FirstMargin = TRTTILength(Magnifiable = 5.0)
         InterItemMargin = TRTTILength(Magnifiable = 2.0)
-        LastMargin = TRTTILength(Magnifiable = 2.0)
+        LastMargin = TRTTILength(Magnifiable = 20.0)
 
         BladeDescriptor = DebriefTeamStatsContainer()
     )

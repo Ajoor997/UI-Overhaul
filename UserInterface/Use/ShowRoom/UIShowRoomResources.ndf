@@ -26,7 +26,7 @@ ShowRoomResource is TUISpecificShowRoomResources
 
     ViewDescriptors = MAP
     [
-        ("UISpecificUnitInfoPanelViewDescriptor", UISpecificUnitInfoPanelViewDescriptor(MainComponentFrame = TUIFramePropertyRTTI() IsShowRoom = true)),
+        ("UISpecificUnitInfoPanelViewDescriptor", UISpecificUnitInfoPanelViewDescriptor(IsShowRoom = true)),
         ("ArmoryComponentDescriptor", ~/ArmoryComponentDescriptor),
         ("DeckCreatorScreenComponentDescriptor", ~/DeckCreatorScreenComponentDescriptor),
         ("UISpecificShowRoomGroupsDeckCreatorScreenViewDescriptor", UISpecificShowRoomGroupsDeckCreatorScreenViewDescriptor(IsForChallenge = false)),
@@ -41,12 +41,11 @@ ShowRoomResource is TUISpecificShowRoomResources
     ]
 
     GroupSelectionReminderResources = ~/GroupSelectionReminder
-    LabelResource                   = ~/SpecificInGameLabelResource
+    LabelResource                   = ~/CommonLabelResource
     MainContainerResource           = ~/ShowRoomMainContainerResource
     MousePolicyManagerResources     = nil
 
-    LDHintResource                  = ~/SpecificInGameLDHintResource
-    WarningPanelResources           = ~/WarningPanelResources
+    WarningPanelResources           = ~/WarningPanelInGameResources
 
     WarnOnMultiplayerDeckNotFilled  = true
 
@@ -66,12 +65,12 @@ ShowRoomResource is TUISpecificShowRoomResources
 
     CameraMoverManager = $/Camera/CameraMoverManager
 
-    ShortcutUserInputLayer      = $/M3D/Input/UserInputLayerHandler/InputLayer_InGameShortcuts
+    ShortcutUserInputLayer = $/M3D/Input/UserInputLayerHandler/InputLayer_InGameShortcuts
+    LDScriptUserInputLayer =  $/M3D/Input/UserInputLayerHandler/InputLayer_LDScriptInterceptor
 )
 
 ShowRoomMainContainerResource is TUICommonMainContainerResource
 (
-    RefMagnification = ~/RefMagnification
     ContentRefSize = [ 2134 , 1440 ]
     SafeBoxMin     = [  107 ,   80 ]
     SafeBoxSize    = ~/FullScreenSafeBoxSize

@@ -60,10 +60,11 @@ ServeurType is BUCKListDescriptor
             (
                 ComponentFrame = TUIFramePropertyRTTI(RelativeWidthHeight = [1.0, 1.0])
 
-                ParagraphStyle = TParagraphStyleRTTI
+                ParagraphStyle = TParagraphStyle
                 (
                     Alignment = UIText_Left
                     VerticalAlignment = UIText_VerticalCenter
+                    BigWordAction = ~/BigWordAction/BigWordNewLine
                     InterLine = 0.1
                 )
 
@@ -87,10 +88,11 @@ ServeurType is BUCKListDescriptor
             (
                 ElementName = "LobbyName"
                 ComponentFrame = TUIFramePropertyRTTI(RelativeWidthHeight = [1.0, 1.0])
-                ParagraphStyle = TParagraphStyleRTTI
+                ParagraphStyle = TParagraphStyle
                 (
                     Alignment = UIText_Center
                     VerticalAlignment = UIText_VerticalCenter
+                    BigWordAction = ~/BigWordAction/BigWordNewLine
                     InterLine = 0.1
                 )
 
@@ -130,7 +132,7 @@ ServeurNombreDeJoueurs is BUCKListDescriptor
             (
                 ComponentFrame = TUIFramePropertyRTTI(RelativeWidthHeight = [1.0, 1.0])
 
-                ParagraphStyle = TParagraphStyleRTTI
+                ParagraphStyle = TParagraphStyle
                 (
                     Alignment = UIText_Left
                     VerticalAlignment = UIText_VerticalCenter
@@ -168,7 +170,7 @@ ServeurNombreDeJoueurs is BUCKListDescriptor
                         (
                             ElementName = "PlayerNumber"
                             ComponentFrame = TUIFramePropertyRTTI ()
-                            ParagraphStyle = TParagraphStyleRTTI
+                            ParagraphStyle = TParagraphStyle
                             (
                                 Alignment = UIText_Center
                                 VerticalAlignment = UIText_VerticalCenter
@@ -194,7 +196,7 @@ ServeurNombreDeJoueurs is BUCKListDescriptor
                     (
                         ComponentDescriptor = BUCKTextDescriptor
                         (
-                            ParagraphStyle = TParagraphStyleRTTI
+                            ParagraphStyle = TParagraphStyle
                             (
                                 Alignment = UIText_Center
                                 VerticalAlignment = UIText_VerticalCenter
@@ -223,7 +225,7 @@ ServeurNombreDeJoueurs is BUCKListDescriptor
                     (
                         ComponentDescriptor = BUCKTextDescriptor
                         (
-                            ParagraphStyle = TParagraphStyleRTTI
+                            ParagraphStyle = TParagraphStyle
                             (
                                 Alignment = UIText_Center
                                 VerticalAlignment = UIText_VerticalCenter
@@ -277,7 +279,7 @@ BUCKSpecificMultiLobbyShortcutsMainComponentDescriptor is BUCKContainerDescripto
                 AlignementToAnchor = [0.5, 0]
             )
 
-            ParagraphStyle = TParagraphStyleRTTI
+            ParagraphStyle = TParagraphStyle
             (
                 Alignment = UIText_Left
                 VerticalAlignment = UIText_VerticalCenter
@@ -335,7 +337,7 @@ UISpecificMultiLobbyShortcutsViewDescriptor is TUISpecificMultiLobbyShortcutsVie
             NumberOfPlayers = 20
             InitMoney       = 1500
             UseAutofill     = false
-            CombatRule      = ~/CombatRule/CaptureTheFlag
+            CombatRule      = ~/CombatRule/Conquest
         ),
         TLobbyNDFDescriptor
         (
@@ -343,7 +345,7 @@ UISpecificMultiLobbyShortcutsViewDescriptor is TUISpecificMultiLobbyShortcutsVie
             NumberOfPlayers = 20
             InitMoney       = 1000
             UseAutofill = false
-            CombatRule      = ~/CombatRule/CaptureTheFlag
+            CombatRule      = ~/CombatRule/Conquest
         ),
     ]
 )

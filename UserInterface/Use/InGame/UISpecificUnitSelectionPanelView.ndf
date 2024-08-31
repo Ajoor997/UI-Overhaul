@@ -1,4 +1,5 @@
 
+// Note bottom center container of weapons
 PanelDeSelectionUnique is BUCKListDescriptor
 (
     ElementName = 'SelectionPanelAndWeaponButtons'
@@ -8,6 +9,7 @@ PanelDeSelectionUnique is BUCKListDescriptor
         AlignementToFather = [0.5, 0.0]
         AlignementToAnchor = [0.5, 0.0]
     )
+
     HidePointerEvents = true
     Axis = ~/ListAxis/Horizontal
     FirstMargin = TRTTILength (Magnifiable = 0.0)
@@ -20,11 +22,6 @@ PanelDeSelectionUnique is BUCKListDescriptor
         (
             ComponentDescriptor = ~/PanelSelectionUnique_Nom
         ),
-        // Weapon buttons
-        BUCKListElementDescriptor
-        (
-            ComponentDescriptor = ~/PanelSelectionUnique_ListeDesArmes
-        ),
          // RoE
         BUCKListElementDescriptor
         (
@@ -33,15 +30,18 @@ PanelDeSelectionUnique is BUCKListDescriptor
                 ElementName = "PanelSelectionUnique_RoeShortcuts"
                 UniqueName = "PanelSelectionUniqueRoeShortcuts"
 
-                ComponentFrame = TUIFramePropertyRTTI
-                (
-                    //MagnifiableWidthHeight  = [200.0, 120.0]
-                )
+                ComponentFrame = TUIFramePropertyRTTI()
+
                 FitStyle = ~/ContainerFitStyle/FitToContent
 
                 // envoie PanelSelectionUnique_RoeShortcutsContainer
 
             )
+        ),
+        // Weapon buttons
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = ~/PanelSelectionUnique_ListeDesArmes
         ),
     ]
 
@@ -49,22 +49,22 @@ PanelDeSelectionUnique is BUCKListDescriptor
     [
         PanelRoundedCorner
         (
-            Radius = 10
-            BackgroundBlockColorToken = 'UnitLabelInfo_Mod'
-            BorderLineColorToken = 'White_Mod'
+            Radius = 8
+            BackgroundBlockColorToken = 'MOD_TypeC'
+            BorderLineColorToken = "MOD_White"
         )
     ]
 )
 
 //-------------------------------------------------------------------------------------
-private largeurPaneldetailUnit is 170.0
+private largeurPaneldetailUnit is 168.0
 // Main container for selection panel button
 PanelSelectionUnique_Nom is BUCKButtonDescriptor
 (
     ElementName = "SelectionPanelButton"
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight  = [largeurPaneldetailUnit, 120.0]
+        MagnifiableWidthHeight  = [~/largeurPaneldetailUnit, 120.0]
         AlignementToAnchor = [0.0, 0.5]
         AlignementToFather = [0.0, 0.5]
     )
@@ -76,9 +76,9 @@ PanelSelectionUnique_Nom is BUCKButtonDescriptor
     [
         PanelRoundedCorner
         (
-            Radius = 10
-            BorderLineColorToken = "White_Mod"
-            BackgroundBlockColorToken = "UnitLabelInfo_Mod"
+            Radius = 8
+            BorderLineColorToken = "MOD_White2"
+            BackgroundBlockColorToken = 'MOD_Dark'
             RoundedVertexes = [true, true, false, false]
         ),
         BUCKListDescriptor
@@ -89,8 +89,7 @@ PanelSelectionUnique_Nom is BUCKButtonDescriptor
             )
 
             Axis = ~/ListAxis/Vertical
-
-            InterItemMargin = TRTTILength( Magnifiable = 2.0 )
+            FirstMargin = TRTTILength( Magnifiable = 4.0)
 
             Elements =
             [
@@ -99,15 +98,15 @@ PanelSelectionUnique_Nom is BUCKButtonDescriptor
                 (
                     ComponentDescriptor = ~/SelectionPanelUnitTypeName
                 ),
-                // affichage PV
-                BUCKListElementDescriptor
-                (
-                    ComponentDescriptor = ~/AffichagePV
-                ),
                 // Nom du chef + CarriedUnit
                 BUCKListElementDescriptor
                 (
                     ComponentDescriptor = ~/NomDefamilleEtCarriedUnit
+                ),
+                // affichage PV
+                BUCKListElementDescriptor
+                (
+                    ComponentDescriptor = ~/AffichagePV
                 ),
                 // interstice
                 BUCKListElementDescriptor
@@ -116,14 +115,25 @@ PanelSelectionUnique_Nom is BUCKButtonDescriptor
                     (
                         ComponentFrame = TUIFramePropertyRTTI
                         (
-                            MagnifiableWidthHeight = [0.0, 5.0]
+                            MagnifiableWidthHeight = [0.0, 4.0]
                         )
-                    )
+                     )
                 ),
                 // Expérience & status
                 BUCKListElementDescriptor
                 (
                     ComponentDescriptor = ~/SelectionPanelStressStatus
+                ),
+                // interstice
+                BUCKListElementDescriptor
+                (
+                    ComponentDescriptor = BUCKContainerDescriptor
+                    (
+                        ComponentFrame = TUIFramePropertyRTTI
+                        (
+                            MagnifiableWidthHeight = [0.0, 4.0]
+                        )
+                    )
                 ),
                 // Fuel
                 BUCKListElementDescriptor
@@ -141,7 +151,7 @@ private NomDefamilleEtCarriedUnit is BUCKContainerDescriptor
     ComponentFrame = TUIFramePropertyRTTI
     (
         RelativeWidthHeight = [1.0, 0.0]
-        MagnifiableWidthHeight = [0.0, 20.0]
+        MagnifiableWidthHeight = [0.0, 24.0]
     )
 
     Components =
@@ -157,9 +167,11 @@ private NomDefamilleEtCarriedUnit is BUCKContainerDescriptor
                 AlignementToAnchor = [1.0, 0.0]
             )
 
-            InterItemMargin = TRTTILength(Magnifiable = 6.0)
-            LastMargin = TRTTILength(Magnifiable = 10.0)
+            FirstMargin = TRTTILength(Magnifiable = 8.0)
+            InterItemMargin = TRTTILength(Magnifiable = 8.0)
+            LastMargin = TRTTILength(Magnifiable = 8.0)
             Axis = ~/ListAxis/Horizontal
+
             Elements =
             [
                 // ExpérienceName
@@ -222,7 +234,7 @@ private SelectionPanel_nomsoldat is BUCKTextDescriptor
         AlignementToAnchor = [0.5, 0.5]
     )
 
-    ParagraphStyle = TParagraphStyleRTTI
+    ParagraphStyle = TParagraphStyle
     (
         Alignment = UIText_Center
         VerticalAlignment = UIText_VerticalCenter
@@ -236,7 +248,7 @@ private SelectionPanel_nomsoldat is BUCKTextDescriptor
     TypefaceToken = "Eurostyle"
     BigLineAction = ~/BigLineAction/CutByDots
 
-    TextDico = ~/LocalisationConstantes/dico_unites
+    TextDico = ~/LocalisationConstantes/dico_units
 
     TextColor = "White"
     TextSize = "14"
@@ -255,24 +267,29 @@ private SelectionPanel_nomsoldat is BUCKTextDescriptor
 
 private SelectionPanelStressStatus is BUCKContainerDescriptor
 (
+    ElementName = "StressStatusContainer"
     ComponentFrame = TUIFramePropertyRTTI
     (
         RelativeWidthHeight = [1.0, 0.0]
-        MagnifiableWidthHeight = [-8.0, 20.0]
+        MagnifiableWidthHeight = [-8.0, 24.0]
         AlignementToFather  = [0.5, 0.0]
         AlignementToAnchor  = [0.5, 0.0]
     )
 
+    // HasBackground = true
+    BackgroundBlockColorToken = 'Orange'
     Components =
     [
         BUCKListDescriptor
         (
             ComponentFrame = TUIFramePropertyRTTI
             (
-                AlignementToFather  = [0.5, 0.0]
-                AlignementToAnchor  = [0.5, 0.0]
+                AlignementToFather  = [0.5, 0.5]
+                AlignementToAnchor  = [0.5, 0.5]
             )
-
+            HasBackground = true
+            BackgroundBlockColorToken = 'Red'
+            BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
             Axis = ~/ListAxis/Horizontal
 
             Elements =
@@ -282,18 +299,21 @@ private SelectionPanelStressStatus is BUCKContainerDescriptor
                 (
                     ComponentDescriptor = BUCKTextDescriptor
                     (
-                        ComponentFrame = TUIFramePropertyRTTI()
-
-                        ParagraphStyle = TParagraphStyleRTTI
+                        ComponentFrame = TUIFramePropertyRTTI
                         (
-                            Alignment = UIText_Left
+                            MagnifiableWidthHeight = [72,16]
+                            )
+
+                        ParagraphStyle = TParagraphStyle
+                        (
+                            Alignment = UIText_Center
                             VerticalAlignment = UIText_VerticalCenter
                             InterLine = 0
                         )
 
                         TextStyle = "Default"
-                        HorizontalFitStyle = ~/FitStyle/FitToContent
-                        VerticalFitStyle = ~/FitStyle/FitToContent
+                        HorizontalFitStyle = ~/FitStyle/UserDefined
+                        VerticalFitStyle = ~/FitStyle/UserDefined
 
                         TypefaceToken =   "Liberator"
                         BigLineAction = ~/BigLineAction/CutByDots
@@ -301,7 +321,7 @@ private SelectionPanelStressStatus is BUCKContainerDescriptor
                         TextDico = ~/LocalisationConstantes/dico_interface_ingame
                         TextToken = "ST_MORAL"
                         TextPadding = TRTTILength4(Magnifiable = [4.0, 4.0, 4.0, 4.0])
-                        TextColor = "BlancEquipe"
+                        TextColor = "MOD_White"
                         TextSize = "12"
 
                         // Hints
@@ -317,6 +337,9 @@ private SelectionPanelStressStatus is BUCKContainerDescriptor
                             PanelRoundedCorner
                             (
                                 RoundedVertexes = [true, true, false, false]
+                                BackgroundBlockColorToken = 'MOD_Dark'
+                                BorderLineColorToken = "MOD_White"
+                                Radius = 4
                             )
                         ]
                     )
@@ -328,9 +351,13 @@ private SelectionPanelStressStatus is BUCKContainerDescriptor
                     (
                         ElementName = 'StressStatus'
 
-                        ComponentFrame = TUIFramePropertyRTTI()
+                        ComponentFrame = TUIFramePropertyRTTI
+                        (
+                            MagnifiableWidthHeight = [72,16]
 
-                        ParagraphStyle = TParagraphStyleRTTI
+                            )
+
+                        ParagraphStyle = TParagraphStyle
                         (
                             Alignment = UIText_Center
                             VerticalAlignment = UIText_VerticalCenter
@@ -339,8 +366,8 @@ private SelectionPanelStressStatus is BUCKContainerDescriptor
 
                         TextStyle = "Default"
 
-                        HorizontalFitStyle = ~/FitStyle/FitToContent
-                        VerticalFitStyle   = ~/FitStyle/FitToContent
+                        HorizontalFitStyle = ~/FitStyle/UserDefined
+                        VerticalFitStyle   = ~/FitStyle/UserDefined
                         TypefaceToken = "UIMainFont"
                         BigLineAction = ~/BigLineAction/CutByDots
                         TextPadding = TRTTILength4( Magnifiable = [4.0, 4.0, 4.0, 4.0] )
@@ -361,6 +388,10 @@ private SelectionPanelStressStatus is BUCKContainerDescriptor
                             PanelRoundedCorner
                             (
                                 RoundedVertexes = [false, false, true, true]
+                                BackgroundBlockColorToken = 'MOD_Dark'
+                                BorderLineColorToken = "MOD_White"
+                                Radius = 4
+
                             )
                         ]
                     )
@@ -378,7 +409,7 @@ private AffichageFuel is BUCKContainerDescriptor
     ComponentFrame = TUIFramePropertyRTTI
     (
         RelativeWidthHeight = [1.0, 0.0]
-        MagnifiableWidthHeight = [-8.0, 15.0]
+        MagnifiableWidthHeight = [0, 16.0]
         AlignementToFather  = [0.5, 0.0]
         AlignementToAnchor  = [0.5, 0.0]
     )
@@ -389,13 +420,13 @@ private AffichageFuel is BUCKContainerDescriptor
         (
             ComponentFrame = TUIFramePropertyRTTI
             (
-                RelativeWidthHeight = [1.0, 0.0]
+                RelativeWidthHeight = [0.0, 1.0]
                 AlignementToFather  = [0.5, 0.0]
                 AlignementToAnchor  = [0.5, 0.0]
             )
 
-        Axis = ~/ListAxis/Vertical
-        FirstMargin = TRTTILength(Magnifiable = 2)
+        Axis = ~/ListAxis/Horizontal
+        InterItemMargin = TRTTILength(Magnifiable = 2)
         Elements =
         [
             BUCKListElementDescriptor
@@ -404,11 +435,11 @@ private AffichageFuel is BUCKContainerDescriptor
                 (
                     ComponentFrame = TUIFramePropertyRTTI
                     (
-                        AlignementToAnchor = [0.5, 0.0]
-                        AlignementToFather = [0.5, 0.0]
+                        // AlignementToAnchor = [0.5, 0.0]
+                        // AlignementToFather = [0.5, 0.0]
                     )
 
-                    ParagraphStyle = TParagraphStyleRTTI
+                    ParagraphStyle = TParagraphStyle
                     (
                         Alignment = UIText_Center
                         VerticalAlignment = UIText_VerticalCenter
@@ -443,11 +474,11 @@ private AffichageFuel is BUCKContainerDescriptor
                     ElementName = 'RemainingFuel'
                     ComponentFrame = TUIFramePropertyRTTI
                     (
-                        AlignementToAnchor = [0.5, 0.0]
-                        AlignementToFather = [0.5, 0.0]
+                        // AlignementToAnchor = [0.5, 0.0]
+                        // AlignementToFather = [0.5, 0.0]
                     )
 
-                    ParagraphStyle = TParagraphStyleRTTI
+                    ParagraphStyle = TParagraphStyle
                     (
                         Alignment = UIText_Center
                         VerticalAlignment = UIText_VerticalCenter
@@ -500,18 +531,7 @@ private SelectionPanelUnitDivisionIcon is BUCKTextureDescriptor
         RelativeWidthHeight = [1.0, 1.0]
     )
 
-    Components =
-    [
-        // Hints
-         BUCKSpecificHintableArea
-         (
-             DicoToken = ~/LocalisationConstantes/dico_interface_ingame
-             // Hints à créer
-             HintTitleToken = ""
-             HintBodyToken = ""
-             HintExtendedToken = ""
-         )
-    ]
+    // Hints à créer
 )
 
 // -------------------------------------------------------------------------------------------------
@@ -525,7 +545,7 @@ private SelectionPanelUnitName is BUCKTextDescriptor
         RelativeWidthHeight = [1.0, 0.0]
     )
 
-    ParagraphStyle = TParagraphStyleRTTI
+    ParagraphStyle = TParagraphStyle
     (
         Alignment = UIText_Center
         VerticalAlignment = UIText_VerticalCenter
@@ -540,7 +560,7 @@ private SelectionPanelUnitName is BUCKTextDescriptor
     TypefaceToken = "Liberator"
     BigLineAction = ~/BigLineAction/CutByDots
 
-    TextDico = ~/LocalisationConstantes/dico_unites
+    TextDico = ~/LocalisationConstantes/dico_units
 
     TextColor = "White"
     TextSize = "16"
@@ -590,7 +610,7 @@ private ExperienceName is BUCKTextDescriptor
         AlignementToAnchor = [0.0, 0.5]
     )
 
-    ParagraphStyle = TParagraphStyleRTTI
+    ParagraphStyle = TParagraphStyle
     (
         Alignment = UIText_Center
         VerticalAlignment = UIText_VerticalCenter
@@ -637,9 +657,8 @@ private PanelSelectionUnique_ListeDesArmes is BUCKListDescriptor
     ComponentFrame = TUIFramePropertyRTTI()
 
     Axis = ~/ListAxis/Horizontal
-    FirstMargin = TRTTILength( Magnifiable = 6.0 )
-    InterItemMargin = TRTTILength( Magnifiable = 6.0 )
-    LastMargin = TRTTILength( Magnifiable = 6.0 )
+    InterItemMargin = TRTTILength( Magnifiable = 4.0 )
+    LastMargin = TRTTILength( Magnifiable = 4.0 )
     BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestBetweenFatherAndChildren
 
     // Weapon Buttons connected through C++
@@ -655,7 +674,7 @@ private AffichagePV is BUCKGaugeDescriptor
 
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = [largeurPaneldetailUnit-20.0, 10.0]
+        MagnifiableWidthHeight = [largeurPaneldetailUnit-16.0, 8.0]
         AlignementToAnchor = [0.5, 0.0]
         AlignementToFather = [0.5, 0.0]
     )
@@ -663,18 +682,19 @@ private AffichagePV is BUCKGaugeDescriptor
     //Bordure de la jauge
     HasBorder = true
     BorderThicknessToken = "1"
-    BorderLineColorToken = "CardHpLine_Mod"
+    BorderLineColorToken = "MOD_Dark"
 
     //Une graduation tous les X PV
     GraduationStep = 1
 
     //Couleur des PV perdus
+    // Hp Container
     HasBackground = true
-    BackgroundBlockColorToken = "CardHpLight_Mod"
+    BackgroundBlockColorToken = "MOD_Fulda_BleuNoir"
 
     //Graduations des PV perdus
     GraduationThicknessToken = "1"
-    GraduationColorToken = "CardHpLine_Mod"
+    GraduationColorToken = "MOD_Dark"
 
     GaugeComponentNames = ['DamageGaugeValue']
 
@@ -687,15 +707,12 @@ private AffichagePV is BUCKGaugeDescriptor
             ComponentFrame = TUIFramePropertyRTTI
             (
                 RelativeWidthHeight = [0.0, 1.0]
+                // MagnifiableWidthHeight = [0,8]
             )
 
             //Couleur des PV restants
             HasBackground = true
-            BackgroundBlockColorToken = "CardHp_Mod"
-            //Graduations des PV restants
-            //GraduationThicknessToken = "1"
-            //GraduationColorToken = "CardHpLine_Mod"
-
+            BackgroundBlockColorToken = "MOD_White"
         ),
         BUCKSpecificHintableArea
         (
@@ -710,13 +727,14 @@ private AffichagePV is BUCKGaugeDescriptor
 
 SelectionPanelUnitTypeName is BUCKTextDescriptor
 (
-    ElementName = 'UnitType'
+    ElementName = "UnitType"
     ComponentFrame = TUIFramePropertyRTTI
     (
         RelativeWidthHeight = [1.0, 0.0]
+        MagnifiableWidthHeight = [0.0, 24.0]
     )
 
-    ParagraphStyle = TParagraphStyleRTTI
+    ParagraphStyle = TParagraphStyle
     (
         Alignment = UIText_Center
         VerticalAlignment = UIText_VerticalCenter
@@ -726,10 +744,10 @@ SelectionPanelUnitTypeName is BUCKTextDescriptor
     TextStyle = "Default"
 
     HorizontalFitStyle = ~/FitStyle/UserDefined
-    VerticalFitStyle = ~/FitStyle/FitToContent
-    TextPadding = TRTTILength4 (Magnifiable = [6.0,6.0,6.0,2.0])
+    VerticalFitStyle = ~/FitStyle/UserDefined
+    TextPadding = TRTTILength4 (Magnifiable = [8.0,0.0,8.0,0.0])
     TypefaceToken = "UIMainFont"
-    BigLineAction = ~/BigLineAction/CutByDots
+    BigLineAction = ~/BigLineAction/ResizeFont
 
     TextDico = ~/LocalisationConstantes/dico_interface_ingame
 
@@ -746,24 +764,25 @@ SelectionPanelUnitTypeName is BUCKTextDescriptor
 
 // ---------------------------------------------------------------------------------------------------
 
+// NOTE - ROE buttons
 template ShortcutButtonDescriptor
 [
     ElementName : string = "",
     ElementName_texture : string = "",
+    ComponentFrame : TUIFramePropertyRTTI = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [88.0, 0.0]
+        RelativeWidthHeight = [0.0, 1.0]
+    ),
     HintTitleToken : string = "HUD_UNKN",
     HintBodyToken : string = "HUD_UNKN",
     HintExtendedToken : string = "HUD_UNKN",
     TextureToken : string,
-
 ]
 is BUCKButtonDescriptor
 (
     UniqueName = ""
-    ComponentFrame = TUIFramePropertyRTTI
-    (
-        MagnifiableWidthHeight = [85.0, 0.0]
-        RelativeWidthHeight = [0.0, 1.0]
-    )
+    ComponentFrame = <ComponentFrame>
 
     ElementName = <ElementName>
     IsClippable = true
@@ -790,9 +809,9 @@ is BUCKButtonDescriptor
             [
                 PanelRoundedCorner
                 (
-                    Radius = 3
-                    BackgroundBlockColorToken = "ShortcutButton_MOD"
-                    BorderLineColorToken = "TypeC_MOD"
+                    Radius = 4
+                    BackgroundBlockColorToken = "MOD_ROEBUTTON"
+                    BorderLineColorToken = "MOD_White"
                 )
             ]
         ),
@@ -803,32 +822,28 @@ is BUCKButtonDescriptor
             ComponentFrame = TUIFramePropertyRTTI
             (
                 RelativeWidthHeight = [1.0, 1.0]
-                MagnifiableWidthHeight = [-23,0]
-                MagnifiableOffset = [23.0, 0.0]
+                MagnifiableWidthHeight = [-28.0, 0.0]
+                MagnifiableOffset = [28.0, 0.0]
                 AlignementToFather = [0.0, 0.5]
                 AlignementToAnchor = [0.0, 0.5]
             )
 
-            ParagraphStyle = TParagraphStyleRTTI
+            ParagraphStyle = TParagraphStyle
             (
                 Alignment = UIText_Left
                 VerticalAlignment = UIText_VerticalCenter
-                //BigWordAction   = ~/BigWordAction/BigWordCut
             )
 
-            HasBackground = false
-            BackgroundBlockColorToken = "ButtonHUD/Background2"
             ClipContent = true
             TextStyle = "Default"
 
             HorizontalFitStyle = ~/FitStyle/UserDefined
             VerticalFitStyle = ~/FitStyle/UserDefined
 
+            BigLineAction   = ~/BigLineAction/MultiLine
 
-            BigLineAction   = ~/BigLineAction/BalancedMultiline
-            TextColor       = "ButtonHUD/Text2_MOD"
-            TextSize        = "12"
-
+            TextColor       = "MOD_Dark"
+            TextSize        = "14"
             TextDico        = ~/LocalisationConstantes/dico_interface_ingame
             TextToken       = "ER_ROE"
 
@@ -848,10 +863,10 @@ is BUCKButtonDescriptor
             ElementName = <ElementName_texture>
             ComponentFrame = TUIFramePropertyRTTI
             (
-                MagnifiableWidthHeight = [20.0, 20.0]
+                MagnifiableWidthHeight = [16.0, 16.0]
                 AlignementToAnchor = [0.0, 0.5]
                 AlignementToFather = [0.0, 0.5]
-                MagnifiableOffset = [2,0]
+                MagnifiableOffset = [8.0, 0.0]
             )
 
             TextureToken = <TextureToken>
@@ -867,69 +882,39 @@ template RoeShortcut
     TextureToken : string,
     HintTitleToken : string,
     HintBodyToken : string,
-] is BUCKContainerDescriptor
+] is ShortcutButtonDescriptor
 (
-    ElementName = <Name> + "ShortcutContainer"
+    ElementName = <Name> + "ShortcutButton"
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = [100.0, 30.0]
-        //RelativeWidthHeight = [1.0, 0.0]
+        MagnifiableWidthHeight = [88.0, 32.0]
     )
 
-    Components =
-    [
-        BUCKListDescriptor
-        (
-            ElementName = <Name> + "ShortcutList"
-            ComponentFrame = TUIFramePropertyRTTI
-            (
-                //MagnifiableWidthHeight = [0.0, 20.0]
-                RelativeWidthHeight = [0.0, 1.0]
-            )
-
-            Axis = ~/ListAxis/Horizontal
-            Elements =
-            [
-                // Move
-                BUCKListElementDescriptor
-                (
-                    ComponentDescriptor = ShortcutButtonDescriptor
-                    (
-                        ElementName = <Name> + "ShortcutButton"
-                        TextureToken = <TextureToken>
-                        ElementName_texture = <Name> + "ShortcutTexture"
-                        HintTitleToken = <HintTitleToken>
-                        HintBodyToken = <HintBodyToken>
-
-                    )
-                ),
-            ]
-        )
-    ]
+    TextureToken = <TextureToken>
+    ElementName_texture = <Name> + "ShortcutTexture"
+    HintTitleToken = <HintTitleToken>
+    HintBodyToken = <HintBodyToken>
 )
 
 // ---------------------------------------------------------------------------------------------------
 
 // list container for the roe shorctus
-private PanelSelectionUnique_RoeShortcuts is PanelRoundedCorner
+private PanelSelectionUnique_RoeShortcuts is BUCKContainerDescriptor
 (
     ElementName = "PanelSelectionUnique_RoeShortcutsContainer"
 
     ComponentFrame = TUIFramePropertyRTTI
     (
-        //RelativeWidthHeight = [1.0, 0.0]
-        MagnifiableWidthHeight = [0.0, 120.0]
-        //AlignementToAnchor = [0.5, 0.5]
-        //AlignementToFather = [0.5, 0.5]
+        MagnifiableWidthHeight = [120.0, 120.0]
     )
-    HasBackground = true
-    BackgroundBlockColorToken = "UnitLabelInfo_Mod"
-    Radius = 10
-    HasBorder = true
-    BorderLineColorToken = "White_Mod"
-    RoundedVertexes = [false, false, true, true]
 
-    FitStyle = ~/ContainerFitStyle/FitToContentHorizontally
+    HasBackground = true
+    BackgroundBlockColorToken = "MOD_TypeC"
+
+    HasBorder = true
+    BorderLineColorToken = "MOD_White"
+
+    FitStyle = ~/ContainerFitStyle/MaxBetweenUserDefinedAndContentHorizontally
 
     Components =
     [
@@ -937,27 +922,23 @@ private PanelSelectionUnique_RoeShortcuts is PanelRoundedCorner
         (
             ComponentFrame = TUIFramePropertyRTTI
             (
-                RelativeWidthHeight = [0, 1.0]
+                MagnifiableWidthHeight = [0.0, 24.0]
+                AlignementToAnchor = [0.5, 0.0]
+                AlignementToFather = [0.5, 0.0]
             )
             FitStyle = ~/ContainerFitStyle/FitToContentHorizontally
-            ParagraphStyle = TParagraphStyleRTTI
+            ParagraphStyle = TParagraphStyle
             (
-                Alignment = UIText_Left
-                VerticalAlignment = UIText_Up
+                Alignment = UIText_Center
+                VerticalAlignment = UIText_VerticalCenter
                 InterLine = 0
             )
-
-            {Hint = BUCKSpecificHintableArea
-                        (
-                            ElementName = 'WeaponTypeHint'
-                            DicoToken = ~/LocalisationConstantes/dico_unites
-                        )}
 
             TextStyle = "Default"
             TextToken = 'ER_TITLE'
             VerticalFitStyle = ~/FitStyle/UserDefined
             HorizontalFitStyle = ~/FitStyle/FitToContent
-            TextPadding = TRTTILength4 (Magnifiable = [5,5,5,5])
+            // TextPadding = TRTTILength4 (Magnifiable = [8.0, 0.0, 8.0, 0.0])
             TextDico = ~/LocalisationConstantes/dico_interface_ingame
 
             TypefaceToken = "Liberator"
@@ -968,22 +949,17 @@ private PanelSelectionUnique_RoeShortcuts is PanelRoundedCorner
 
             Components =
             [
-
-
                 BUCKGridDescriptor
                 (
                     ElementName = 'RoeShortcutList'
                     ComponentFrame = TUIFramePropertyRTTI
                     (
-
-                        AlignementToAnchor = [0.0, 0.5]
-                        AlignementToFather = [0.0, 0.5]
-
+                        MagnifiableOffset = [0,12]
                     )
 
-                    FirstElementMargin = TRTTILength2( Magnifiable = [5.0, 10.0])
-                    InterElementMargin    = TRTTILength2 (Magnifiable = [0.0, 0.0])
-                    LastElementMargin = TRTTILength2( Magnifiable = [5, 0.0])
+                    FirstElementMargin = TRTTILength2(Magnifiable = [4.0, 8.0])
+                    InterElementMargin = TRTTILength2 (Magnifiable = [0.0, 0.0])
+                    LastElementMargin = TRTTILength2(Magnifiable = [4.0, 0.0])
 
                     GridElements = MAP
 
@@ -1011,6 +987,14 @@ private PanelSelectionUnique_RoeShortcuts is PanelRoundedCorner
                                 TextureToken = "ROE_foot"
                                 HintTitleToken = 'ROE_foot_t'
                                 HintBodyToken = 'ROE_foot_b'
+                            )
+                        ),
+                         ([0,3], RoeShortcut
+                            (
+                                Name = "RoeResale"
+                                TextureToken = "ROE_sell"
+                                HintTitleToken = 'ROE_sell_t'
+                                HintBodyToken = 'ROE_sell_b'
                             )
                         ),
                          ([1,0], RoeShortcut
@@ -1046,19 +1030,13 @@ private PanelSelectionUnique_RoeShortcuts is PanelRoundedCorner
                             )
                         ),
 
-                        ([3,1], RoeShortcut
-                            (
-                                Name = "RoeResale"
-                                TextureToken = "ROE_sell"
-                                HintTitleToken = 'ROE_sell_t'
-                                HintBodyToken = 'ROE_sell_b'
-                            )
-                        ),
+
 
                     ]
                 )
             ]
         ),
+
     ]
 )
 
@@ -1079,6 +1057,7 @@ UISpecificUnitSelectionPanelViewDescriptor is TUISpecificUnitSelectionPanelViewD
 
     WeaponPanelExtendWeight = 1.0
     WeaponPanelMinSize = TRTTILength( Magnifiable = 132.0 )
+    MaxNbWeaponToShow = ~/MaxNbWeaponToShowInUI
 
     UnknownValueToken = "UK_VAL"
     UnknownValueDicoToken = ~/LocalisationConstantes/dico_interface_ingame
@@ -1089,23 +1068,6 @@ UISpecificUnitSelectionPanelViewDescriptor is TUISpecificUnitSelectionPanelViewD
         "CommonTexture_Chevron_1",
         "CommonTexture_Chevron_2",
         "CommonTexture_Chevron_3",
-    ]
-
-    ExperienceNameTokens =
-    [
-        "DES_UE_VE0",
-        "DES_UE_VE1",
-        "DES_UE_VE2",
-        "DES_UE_VE3",
-    ]
-
-    ExperienceHintTokens =
-    [
-        // ("TitleToken", "BodyToken")
-        ("DES_UE_VE0", "pi_ve0"),
-        ("DES_UE_VE1", "pi_ve1"),
-        ("DES_UE_VE2", "pi_ve2"),
-        ("DES_UE_VE3", "pi_ve3"),
     ]
 
     HintTitleBySuppressValue = MAP

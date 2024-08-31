@@ -49,7 +49,7 @@ is BUCKContainerDescriptor
                 RelativeWidthHeight = [1.0, 1.0]
             )
 
-            ParagraphStyle = TParagraphStyleRTTI
+            ParagraphStyle = TParagraphStyle
             (
                 Alignment = UIText_Center
                 VerticalAlignment = UIText_VerticalCenter
@@ -77,8 +77,6 @@ private template BUCKSpecificStrategicBattleOrderPanelLineMainComponentDescripto
     MagnifiableHeight : float,
     HasBackground : bool,
     BackgroundBlockColorToken : string = "SD2_Gris80",
-    CellBackgroundColor : string = "Steelman_Background_BoutonOrdreDeBataille",
-    TextColor : string,
     Components : LIST<TBUCKContainerDescriptor>,
     Grayed : bool,
     IsTogglable : bool,
@@ -99,6 +97,7 @@ is BUCKButtonDescriptor
     IsTogglable = <IsTogglable>
     CannotDeselect = <CannotDeselect>
     RadioButtonManager = <RadioButtonManager>
+    LeftClickSound = ~/SoundEvent_SteelmanOOBLine
 
     Components =
     [
@@ -142,10 +141,8 @@ template UISpecificStrategicBattleOrderPanelLineViewDescriptor
 [
     MagnifiableHeight : float,
     HasBackground : bool,
-    TextColor : string,
     BackgroundBlockColorToken : string,
     Components : LIST<TBUCKContainerDescriptor>,
-    CellBackgroundColor : string = "Steelman_Background_BoutonOrdreDeBataille",
     Grayed : bool,
     IsTogglable : bool = false,
     CannotDeselect : bool = false,
@@ -158,13 +155,11 @@ is TUISpecificStrategicBattleOrderPanelLineViewDescriptor
         MagnifiableHeight = <MagnifiableHeight>
         HasBackground = <HasBackground>
         BackgroundBlockColorToken = <BackgroundBlockColorToken>
-        TextColor = <TextColor>
         Components = <Components>
         Grayed = <Grayed>
         IsTogglable = <IsTogglable>
         CannotDeselect = <CannotDeselect>
         RadioButtonManager = <RadioButtonManager>
-        CellBackgroundColor = <CellBackgroundColor>
     )
 )
 
@@ -229,7 +224,7 @@ is UISpecificStrategicBattleOrderPanelLineViewDescriptor
                             RelativeWidthHeight = [0.0, 1.0]
                         )
 
-                        ParagraphStyle = TParagraphStyleRTTI
+                        ParagraphStyle = TParagraphStyle
                         (
                             Alignment = UIText_Center
                             VerticalAlignment = UIText_VerticalCenter
@@ -259,15 +254,13 @@ is UISpecificStrategicBattleOrderPanelLineViewDescriptor
 template UISpecificStrategicBattleOrderPanelDefaultLineViewDescriptor
 [
     TitleTextDico : string,
-    TextColor : string = "SD2_Blanc184"
 ]
 is UISpecificStrategicBattleOrderPanelLineViewDescriptor
 (
     MagnifiableHeight = 38.0
     HasBackground = true
+    // BackgroundBlockColorToken = "Steelman_Background_BoutonOrdreDeBataille"
     BackgroundBlockColorToken = "Steelman_Background_BoutonOrdreDeBataille"
-    CellBackgroundColor = 'Steelman_Background_BoutonOrdreDeBataille'
-    TextColor = <TextColor>
     Grayed = false
     Components =
     [
@@ -285,7 +278,19 @@ is UISpecificStrategicBattleOrderPanelLineViewDescriptor
 
             Elements =
             [
-
+                BUCKListElementDescriptor
+                (
+                    ComponentDescriptor = BUCKTextureDescriptor
+                    (
+                        ComponentFrame = TUIFramePropertyRTTI
+                        (
+                            MagnifiableWidthHeight = [16.0, 38.0]
+                            AlignementToAnchor = [0.0, 0.5]
+                            AlignementToFather = [0.0, 0.5]
+                        )
+                        TextureToken = 'UseStrategic_oob_L'
+                    )
+                ),
                 BUCKListElementDescriptor
                 (
                     ComponentDescriptor = BUCKTextureDescriptor
@@ -314,10 +319,10 @@ is UISpecificStrategicBattleOrderPanelLineViewDescriptor
                         (
                             AlignementToAnchor = [0.0, 0.5]
                             AlignementToFather = [0.0, 0.5]
-                            MagnifiableWidthHeight = [200,0]
+                            // MagnifiableWidthHeight = [190,0]
                         )
 
-                        ParagraphStyle = TParagraphStyleRTTI
+                        ParagraphStyle = TParagraphStyle
                         (
                             Alignment = UIText_Left
                             VerticalAlignment = UIText_VerticalCenter
@@ -334,8 +339,10 @@ is UISpecificStrategicBattleOrderPanelLineViewDescriptor
 
                         TextDico = <TitleTextDico>
 
-                        TextColor = "BlancEquipe"
+                        TextColor = "Blanc"
                         TextSize = "14"
+
+
                     )
                 ),
                 BUCKListElementDescriptor
@@ -363,6 +370,13 @@ is UISpecificStrategicBattleOrderPanelLineViewDescriptor
                                 )
                                 TextureToken = 'SelectPawn_oob'
                                 TextureColorToken = 'SM_SelectPawn_oob'
+                            ),
+                            BUCKSpecificStrategicHintableArea
+                            (
+                                HintTitleToken = 'SBO_zoomt'
+                                HintBodyToken = 'SBO_zoomb'
+                                // HintExtendedToken = <HintExtendedToken>
+                                DicoToken = ~/LocalisationConstantes/dico_interface_ingame
                             )
                         ]
                     )
@@ -411,8 +425,6 @@ template UISpecificStrategicBattleOrderPanelCompanyLineViewDescriptor
     MagnifiableHeight = 38.0
     HasBackground = false
     BackgroundBlockColorToken = ""
-    CellBackgroundColor = 'SD2_Gris80'
-    TextColor = "SD2_BleuVariable"
     Grayed = false
     IsTogglable = true
     CannotDeselect = true
@@ -451,8 +463,8 @@ template UISpecificStrategicBattleOrderPanelCompanyLineViewDescriptor
                     TextStyle = "Default"
                     BigLineAction = ~/BigLineAction/ResizeFont
 
-                    TypefaceToken = "Eurostyle"
-                    TextColor = "SD2_Blanc184"
+                    TypefaceToken = "Eurostyle_Italic"
+                    TextColor = "BlancEquipe"
                     TextSize = "14"
                 ),
             ]

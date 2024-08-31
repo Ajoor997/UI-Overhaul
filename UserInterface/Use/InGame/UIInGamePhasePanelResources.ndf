@@ -57,7 +57,7 @@ PhasePanel is BUCKContainerDescriptor
 
                     BigLineAction = ~/BigLineAction/CutByDots
                     TextStyle = "Default"
-                    ParagraphStyle = TParagraphStyleRTTI
+                    ParagraphStyle = TParagraphStyle
                     (
                         Alignment = UIText_Center
                         VerticalAlignment = UIText_VerticalCenter
@@ -98,7 +98,7 @@ PhasePanel is BUCKContainerDescriptor
 
                     BigLineAction = ~/BigLineAction/CutByDots
                     TextStyle = "Default"
-                    ParagraphStyle = TParagraphStyleRTTI
+                    ParagraphStyle = TParagraphStyle
                     (
                         Alignment = UIText_Center
                         VerticalAlignment = UIText_VerticalCenter
